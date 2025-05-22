@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global styles for gyoseishoshi-learning */
 html,
 body {
   padding: 0;
@@ -19,30 +20,104 @@ a {
   box-sizing: border-box;
 }
 
-.unit-content h2 {
-  @apply text-2xl font-bold text-gray-900 mt-8 mb-4;
+/* Custom styles for Japanese text */
+.japanese-text {
+  line-height: 1.8;
+  letter-spacing: 0.02em;
 }
 
-.unit-content h3 {
-  @apply text-xl font-bold text-gray-800 mt-6 mb-3;
+/* Audio player custom styles */
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.unit-content h4 {
-  @apply text-lg font-bold text-gray-700 mt-4 mb-2;
+/* Progress tracker styles */
+.progress-circle {
+  transition: stroke-dashoffset 0.3s ease;
 }
 
-.unit-content p {
-  @apply my-3 text-gray-700;
+/* Content typography enhancements */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  color: #1f2937;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.unit-content ul {
-  @apply list-disc pl-6 my-3 text-gray-700;
+.markdown-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-.unit-content li {
-  @apply mb-1;
+.markdown-content ul,
+.markdown-content ol {
+  margin-bottom: 1.5rem;
 }
 
-.unit-content strong {
-  @apply font-bold text-gray-900;
+.markdown-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Unit navigation styles */
+.unit-nav-button {
+  transition: all 0.2s ease;
+}
+
+.unit-nav-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Loading animation */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Study progress indicators */
+.progress-bar {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  transform: translateY(-1px);
+}
+
+/* Card styles */
+.card-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
