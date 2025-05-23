@@ -28,7 +28,9 @@
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.0",
     "remark-gfm": "^4.0.0",
-    "formidable": "^3.5.4"
+    "formidable": "^3.5.4",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
