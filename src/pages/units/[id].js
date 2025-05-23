@@ -9,6 +9,8 @@ import UnitContent from '../../components/units/UnitContent';
 import AudioPlayer from '../../components/units/AudioPlayer';
 import ProgressTracker from '../../components/units/ProgressTracker';
 import RelatedUnits from '../../components/units/RelatedUnits';
+import FileManager from '../../components/units/FileManager';
+import FileUploadModal from '../../components/units/FileUploadModal';
 
 // Dynamically import content service to avoid SSR issues
 const contentService = dynamic(() => import('../../lib/contentService'), { ssr: false });
@@ -22,6 +24,8 @@ export default function UnitDetail() {
   const [progress, setProgress] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const [showAudio, setShowAudio] = useState(false);
+  const [showUploadModal, setShowUploadModal] = useState(false);
+  const [filesUpdated, setFilesUpdated] = useState(0);
 
   useEffect(() => {
     if (id) {
@@ -135,6 +139,11 @@ export default function UnitDetail() {
       console.error('Error completing unit:', error);
       alert('完了の記録に失敗しました。');
     }
+  };
+
+  const handleUploadSuccess = (data) => {
+    console.log('Upload successful:', data);
+    setFilesUpdated(prev => prev + 1); // FileManagerの再読み込みをトリガー
   };
 
   const getDifficultyLabel = (difficulty) => {
@@ -288,6 +297,15 @@ export default function UnitDetail() {
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
+              {/* File Manager */}
+              <div className="mb-6">
+                <FileManager 
+                  unitId={id} 
+                  onUploadClick={() => setShowUploadModal(true)}
+                  key={filesUpdated} // FileManagerを再レンダリング
+                />
+              </div>
+
               {/* Navigation */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-6">
                 <h3 className="font-semibold text-gray-900 mb-4">ナビゲーション</h3>
@@ -321,6 +339,14 @@ export default function UnitDetail() {
 
         <Footer />
       </div>
+
+      {/* File Upload Modal */}
+      <FileUploadModal 
+        unitId={id}
+        isOpen={showUploadModal}
+        onClose={() => setShowUploadModal(false)}
+        onUploadSuccess={handleUploadSuccess}
+      />
     </>
   );
 }
