@@ -1,27 +1,55 @@
-const fs = require('fs');
+const fs = require('fs').promises;
 const path = require('path');
 
-// 必要なディレクトリを作成する関数
-function createDirectories() {
+async function setup() {
+  console.log('🔧 Setting up project directories...');
+
   const directories = [
-    path.join(process.cwd(), 'content'),
-    path.join(process.cwd(), 'content/units'),
-    path.join(process.cwd(), 'public/pdf'),
-    path.join(process.cwd(), 'public/audio')
+    'content',
+    'content/units',
+    'public/audio',
+    'public/pdf',
+    'temp'
   ];
 
-  directories.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-      console.log(`✓ Created directory: ${dir}`);
-    } else {
-      console.log(`✓ Directory already exists: ${dir}`);
+  for (const dir of directories) {
+    const dirPath = path.join(process.cwd(), dir);
+    try {
+      await fs.mkdir(dirPath, { recursive: true });
+      console.log(`✅ Created directory: ${dir}`);
+    } catch (error) {
+      if (error.code === 'EEXIST') {
+        console.log(`📁 Directory already exists: ${dir}`);
+      } else {
+        console.error(`❌ Error creating directory ${dir}:`, error);
+      }
     }
-  });
+  }
+
+  // Create .gitignore entries for dynamic content
+  const gitignorePath = path.join(process.cwd(), '.gitignore');
+  const gitignoreContent = `
+# Dynamic content directories
+/temp
+/public/audio/*.mp3
+/public/audio/*.wav
+/public/audio/*.m4a
+/public/audio/*.ogg
+/public/pdf/*.pdf
+/content/units/*.meta.json
+`;
+
+  try {
+    const existingContent = await fs.readFile(gitignorePath, 'utf-8').catch(() => '');
+    if (!existingContent.includes('# Dynamic content directories')) {
+      await fs.appendFile(gitignorePath, gitignoreContent);
+      console.log('✅ Updated .gitignore');
+    }
+  } catch (error) {
+    console.error('❌ Error updating .gitignore:', error);
+  }
+
+  console.log('✨ Setup completed!');
 }
 
-// 初期化スクリプト実行
-console.log('🔧 Setting up directory structure for content management...\n');
-createDirectories();
-console.log('\n✨ Setup complete! You can now start the development server.');
-console.log('Run: npm run dev');
+setup().catch(console.error);
