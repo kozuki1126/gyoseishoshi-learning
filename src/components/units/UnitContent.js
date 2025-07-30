@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle, Lightbulb, BookOpen, ArrowRight, FileText, ExternalLink } from 'lucide-react';
 
 export default function UnitContent({ content, onComplete, isCompleted = false }) {
