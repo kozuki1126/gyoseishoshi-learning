@@ -1,0 +1,262 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ユーザーモデル
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  username  String?
+  password  String
+  firstName String?
+  lastName  String?
+  avatar    String?
+  role      UserRole @default(STUDENT)
+  
+  // メタデータ
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastLogin DateTime?
+  
+  // リレーション
+  progress      UserProgress[]
+  studySessions StudySession[]
+  files         File[]
+  
+  @@map("users")
+}
+
+// 科目モデル
+model Subject {
+  id             String       @id
+  name           String
+  description    String
+  category       String
+  difficulty     Difficulty
+  estimatedHours Int
+  color          String
+  icon           String
+  orderIndex     Int          @default(0)
+  
+  // フラグ
+  isActive       Boolean      @default(true)
+  
+  // メタデータ
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+  
+  // リレーション
+  units          Unit[]
+  userProgress   UserProgress[]
+  
+  @@map("subjects")
+}
+
+// 学習ユニットモデル
+model Unit {
+  id              String     @id
+  title           String
+  description     String?
+  type            UnitType
+  difficulty      Difficulty
+  estimatedTime   Int        // 分単位
+  orderIndex      Int        @default(0)
+  
+  // コンテンツ関連
+  hasAudio        Boolean    @default(false)
+  audioUrl        String?
+  pdfUrl          String?
+  
+  // フラグ
+  isActive        Boolean    @default(true)
+  isPublished     Boolean    @default(false)
+  
+  // メタデータ  
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  
+  // リレーション
+  subject         Subject    @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  subjectId       String
+  content         Content?
+  userProgress    UserProgress[]
+  studySessions   StudySession[]
+  
+  @@map("units")
+  @@index([subjectId, orderIndex])
+}
+
+// コンテンツ詳細モデル
+model Content {
+  id           String          @id @default(cuid())
+  introduction String?
+  conclusion   String?
+  keyPoints    String[]        // JSON配列として保存
+  
+  // メタデータ
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+  
+  // リレーション
+  unit         Unit            @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  unitId       String          @unique
+  sections     ContentSection[]
+  
+  @@map("contents")
+}
+
+// コンテンツセクションモデル
+model ContentSection {
+  id          String             @id @default(cuid())
+  title       String
+  content     String
+  orderIndex  Int                @default(0)
+  
+  // メタデータ
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+  
+  // リレーション
+  parentContent Content          @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  contentId     String
+  subsections   ContentSubsection[]
+  
+  @@map("content_sections")
+  @@index([contentId, orderIndex])
+}
+
+// コンテンツサブセクションモデル
+model ContentSubsection {
+  id         String         @id @default(cuid())
+  title      String
+  content    String
+  orderIndex Int            @default(0)
+  
+  // メタデータ
+  createdAt  DateTime       @default(now())
+  updatedAt  DateTime       @updatedAt
+  
+  // リレーション
+  section    ContentSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  sectionId  String
+  
+  @@map("content_subsections")
+  @@index([sectionId, orderIndex])
+}
+
+// ユーザー進捗モデル
+model UserProgress {
+  id             String   @id @default(cuid())
+  
+  // 進捗データ
+  completed      Boolean  @default(false)
+  score          Int?     // 0-100
+  timeSpent      Int      @default(0) // 分単位
+  attempts       Int      @default(0)
+  lastAccessed   DateTime @default(now())
+  
+  // メタデータ
+  startedAt      DateTime @default(now())
+  completedAt    DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  // リレーション
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         String
+  subject        Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  subjectId      String
+  unit           Unit     @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  unitId         String
+  
+  @@map("user_progress")
+  @@unique([userId, unitId])
+  @@index([userId, subjectId])
+}
+
+// 学習セッションモデル（詳細な学習履歴）
+model StudySession {
+  id         String   @id @default(cuid())
+  
+  // セッションデータ
+  startedAt  DateTime @default(now())
+  endedAt    DateTime?
+  duration   Int?     // 分単位
+  deviceType String?  // web, mobile, etc.
+  
+  // メタデータ
+  createdAt  DateTime @default(now())
+  
+  // リレーション
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId     String
+  unit       Unit     @relation(fields: [unitId], references: [id], onDelete: Cascade)
+  unitId     String
+  
+  @@map("study_sessions")
+  @@index([userId, startedAt])
+}
+
+// ファイル管理モデル
+model File {
+  id           String   @id @default(cuid())
+  filename     String
+  originalName String
+  mimetype     String
+  size         Int
+  path         String
+  url          String?
+  
+  // ファイル分類
+  category     FileCategory
+  isPublic     Boolean  @default(false)
+  
+  // メタデータ
+  uploadedAt   DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // リレーション
+  uploader     User     @relation(fields: [uploaderId], references: [id], onDelete: Cascade)
+  uploaderId   String
+  
+  @@map("files")
+  @@index([category, uploadedAt])
+}
+
+// Enumeration Types
+enum UserRole {
+  STUDENT
+  INSTRUCTOR
+  ADMIN
+}
+
+enum Difficulty {
+  BEGINNER
+  INTERMEDIATE
+  ADVANCED
+}
+
+enum UnitType {
+  LECTURE
+  PRACTICE
+  EXAM
+  QUIZ
+}
+
+enum FileCategory {
+  AUDIO
+  PDF
+  IMAGE
+  VIDEO
+  DOCUMENT
+  OTHER
+}
