@@ -19,7 +19,14 @@
     "start": "next start",
     "lint": "next lint",
     "setup": "node setup.js",
-    "postinstall": "npm run setup"
+    "postinstall": "npm run setup",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:seed": "node prisma/seed.js",
+    "db:reset": "prisma migrate reset",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -30,12 +37,22 @@
     "remark-gfm": "^4.0.0",
     "formidable": "^3.5.4",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "@prisma/client": "^5.15.1",
+    "pg": "^8.12.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5"
+    "tailwindcss": "^3.3.5",
+    "prisma": "^5.15.1",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/pg": "^8.11.6",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "typescript": "^5.5.3"
   },
   "repository": {
     "type": "git",
