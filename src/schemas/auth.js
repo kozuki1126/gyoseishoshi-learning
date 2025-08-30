@@ -1,389 +1,487 @@
 /**
- * Authentication Validation Schemas
+ * Authentication Input Validation Schemas
  * 
- * Comprehensive Zod schemas for authentication-related input validation.
- * Provides type-safe validation with detailed error messages and
- * security-focused rules to prevent common authentication attacks.
+ * Comprehensive validation schemas for all authentication-related inputs
+ * using the validator library for security-focused validation rules.
+ * Prevents injection attacks, ensures data integrity, and provides
+ * detailed error messages in Japanese for better user experience.
  * 
  * Security Features:
- * - Strong password requirements
- * - Email format validation
- * - Input length limits to prevent DoS
- * - Character whitelist for usernames
- * - Rate limiting validation
- * 
- * Usage:
- *   import { loginSchema, registerSchema } from '@/schemas/auth';
- *   const result = loginSchema.safeParse(requestData);
+ * - Email format validation with domain whitelist support
+ * - Password strength requirements
+ * - Username sanitization and validation
+ * - XSS protection for all text inputs
+ * - Rate limiting friendly error messages
  */
 
-const { z } = require('zod');
 const validator = require('validator');
-
-// Security constants
-const PASSWORD_MIN_LENGTH = 8;
-const PASSWORD_MAX_LENGTH = 128;
-const EMAIL_MAX_LENGTH = 254; // RFC 5321 limit
-const NAME_MAX_LENGTH = 100;
-const USERNAME_MAX_LENGTH = 50;
-
-// Common validation patterns
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const STRONG_PASSWORD_PATTERN = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/;
-const SAFE_USERNAME_PATTERN = /^[a-zA-Z0-9_-]+$/;
-
-// Japanese name pattern (allows hiragana, katakana, kanji)
-const JAPANESE_NAME_PATTERN = /^[ひらがなカタカナ漢字a-zA-Z\s　]+$/u;
+const xss = require('xss');
 
 /**
- * Custom validation functions
+ * Validation error class for structured error handling
  */
-const customValidators = {
+class ValidationError extends Error {
+  constructor(message, field = null, code = 'VALIDATION_ERROR') {
+    super(message);
+    this.name = 'ValidationError';
+    this.field = field;
+    this.code = code;
+    this.statusCode = 400;
+  }
+}
+
+/**
+ * Password strength validation configuration
+ */
+const PASSWORD_REQUIREMENTS = {
+  minLength: 8,
+  maxLength: 128,
+  requireUppercase: true,
+  requireLowercase: true,
+  requireNumbers: true,
+  requireSpecialChars: false, // Optional for user convenience
+  forbiddenPatterns: [
+    /password/i,
+    /123456/,
+    /qwerty/i,
+    /admin/i,
+    /user/i,
+    /test/i
+  ]
+};
+
+/**
+ * Email domain whitelist (optional - can be configured via environment)
+ */
+const ALLOWED_EMAIL_DOMAINS = process.env.ALLOWED_EMAIL_DOMAINS 
+  ? process.env.ALLOWED_EMAIL_DOMAINS.split(',').map(d => d.trim())
+  : null; // null = allow all domains
+
+/**
+ * XSS sanitization options
+ */
+const XSS_OPTIONS = {
+  whiteList: {}, // No HTML tags allowed in auth fields
+  stripIgnoreTag: true,
+  stripIgnoreTagBody: ['script', 'style', 'iframe'],
+  css: false
+};
+
+/**
+ * Base validation functions
+ */
+const ValidationUtils = {
   /**
-   * Validate email using comprehensive checks
+   * Sanitize and validate string input
+   * @param {string} input - Input string
+   * @param {object} options - Validation options
+   * @returns {string} - Sanitized string
    */
-  email: (email) => {
-    if (!email || typeof email !== 'string') return false;
-    if (email.length > EMAIL_MAX_LENGTH) return false;
+  sanitizeString(input, options = {}) {
+    if (typeof input !== 'string') {
+      throw new ValidationError('入力は文字列である必要があります', options.field);
+    }
     
-    // Basic pattern check
-    if (!EMAIL_PATTERN.test(email)) return false;
+    // XSS sanitization
+    const sanitized = xss(input.trim(), XSS_OPTIONS);
     
-    // Use validator.js for additional checks
-    if (!validator.isEmail(email, {
-      allow_utf8_local_part: false,
-      require_tld: true,
-      allow_ip_domain: false
-    })) return false;
+    // Length validation
+    if (options.minLength && sanitized.length < options.minLength) {
+      throw new ValidationError(
+        `${options.fieldName || 'この項目'}は${options.minLength}文字以上である必要があります`,
+        options.field
+      );
+    }
     
-    // Check for suspicious patterns
-    const suspiciousPatterns = [
-      /\.{2,}/, // Multiple consecutive dots
-      /^\./, // Starting with dot
-      /\.$/, // Ending with dot
-      /@.*@/, // Multiple @ symbols
-      /[<>()[\]\\,;:\s@"]/ // Invalid characters
-    ];
+    if (options.maxLength && sanitized.length > options.maxLength) {
+      throw new ValidationError(
+        `${options.fieldName || 'この項目'}は${options.maxLength}文字以下である必要があります`,
+        options.field
+      );
+    }
     
-    return !suspiciousPatterns.some(pattern => pattern.test(email));
+    // Pattern validation
+    if (options.pattern && !options.pattern.test(sanitized)) {
+      throw new ValidationError(
+        options.patternError || `${options.fieldName || 'この項目'}の形式が正しくありません`,
+        options.field
+      );
+    }
+    
+    // Forbidden patterns
+    if (options.forbiddenPatterns) {
+      for (const pattern of options.forbiddenPatterns) {
+        if (pattern.test(sanitized)) {
+          throw new ValidationError(
+            options.forbiddenError || `${options.fieldName || 'この項目'}に使用できない文字が含まれています`,
+            options.field
+          );
+        }
+      }
+    }
+    
+    return sanitized;
   },
 
   /**
-   * Validate strong password
+   * Validate email address
+   * @param {string} email - Email address
+   * @returns {string} - Normalized email
    */
-  strongPassword: (password) => {
-    if (!password || typeof password !== 'string') return false;
-    if (password.length < PASSWORD_MIN_LENGTH) return false;
-    if (password.length > PASSWORD_MAX_LENGTH) return false;
+  validateEmail(email) {
+    const sanitized = this.sanitizeString(email, {
+      field: 'email',
+      fieldName: 'メールアドレス',
+      maxLength: 254
+    });
     
-    // Check for required character types
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasNumbers = /\d/.test(password);
-    const hasSpecialChars = /[@$!%*?&]/.test(password);
+    // Email format validation
+    if (!validator.isEmail(sanitized)) {
+      throw new ValidationError('有効なメールアドレスを入力してください', 'email');
+    }
     
-    const requiredTypes = [hasLowerCase, hasUpperCase, hasNumbers, hasSpecialChars];
-    const validTypes = requiredTypes.filter(Boolean).length;
+    // Normalize email
+    const normalized = validator.normalizeEmail(sanitized, {
+      gmail_lowercase: true,
+      gmail_remove_dots: false,
+      outlookdotcom_lowercase: true,
+      yahoo_lowercase: true
+    });
     
-    return validTypes >= 3; // At least 3 of 4 types required
+    if (!normalized) {
+      throw new ValidationError('メールアドレスの形式が正しくありません', 'email');
+    }
+    
+    // Domain whitelist check
+    if (ALLOWED_EMAIL_DOMAINS) {
+      const domain = normalized.split('@')[1];
+      if (!ALLOWED_EMAIL_DOMAINS.includes(domain)) {
+        throw new ValidationError(
+          `許可されていないメールドメインです。許可ドメイン: ${ALLOWED_EMAIL_DOMAINS.join(', ')}`,
+          'email'
+        );
+      }
+    }
+    
+    return normalized;
   },
 
   /**
-   * Check for common weak passwords
+   * Validate password strength
+   * @param {string} password - Password
+   * @returns {string} - Validated password
    */
-  notCommonPassword: (password) => {
-    const commonPasswords = [
-      'password', 'password123', '123456', '123456789', 'qwerty',
-      'abc123', 'password1', 'admin', 'letmein', 'welcome',
-      'monkey', '1234567890', 'dragon', 'master', 'shadow'
-    ];
+  validatePassword(password) {
+    if (typeof password !== 'string') {
+      throw new ValidationError('パスワードは文字列である必要があります', 'password');
+    }
     
-    return !commonPasswords.some(common => 
-      password.toLowerCase().includes(common.toLowerCase())
-    );
+    // Length validation
+    if (password.length < PASSWORD_REQUIREMENTS.minLength) {
+      throw new ValidationError(
+        `パスワードは${PASSWORD_REQUIREMENTS.minLength}文字以上である必要があります`,
+        'password'
+      );
+    }
+    
+    if (password.length > PASSWORD_REQUIREMENTS.maxLength) {
+      throw new ValidationError(
+        `パスワードは${PASSWORD_REQUIREMENTS.maxLength}文字以下である必要があります`,
+        'password'
+      );
+    }
+    
+    // Character requirements
+    if (PASSWORD_REQUIREMENTS.requireUppercase && !/[A-Z]/.test(password)) {
+      throw new ValidationError('パスワードには大文字を含める必要があります', 'password');
+    }
+    
+    if (PASSWORD_REQUIREMENTS.requireLowercase && !/[a-z]/.test(password)) {
+      throw new ValidationError('パスワードには小文字を含める必要があります', 'password');
+    }
+    
+    if (PASSWORD_REQUIREMENTS.requireNumbers && !/\d/.test(password)) {
+      throw new ValidationError('パスワードには数字を含める必要があります', 'password');
+    }
+    
+    if (PASSWORD_REQUIREMENTS.requireSpecialChars && !/[!@#$%^&*()_+\-=\[\]{}|;:,.<>?]/.test(password)) {
+      throw new ValidationError('パスワードには特殊文字を含める必要があります', 'password');
+    }
+    
+    // Forbidden patterns
+    for (const pattern of PASSWORD_REQUIREMENTS.forbiddenPatterns) {
+      if (pattern.test(password)) {
+        throw new ValidationError('パスワードに使用できない文字列が含まれています', 'password');
+      }
+    }
+    
+    return password;
   },
 
   /**
-   * Validate Japanese name
+   * Validate username
+   * @param {string} username - Username
+   * @returns {string} - Sanitized username
    */
-  japaneseName: (name) => {
-    if (!name || typeof name !== 'string') return false;
-    return JAPANESE_NAME_PATTERN.test(name);
+  validateUsername(username) {
+    return this.sanitizeString(username, {
+      field: 'username',
+      fieldName: 'ユーザー名',
+      minLength: 3,
+      maxLength: 50,
+      pattern: /^[a-zA-Z0-9_-]+$/,
+      patternError: 'ユーザー名は英数字、アンダースコア、ハイフンのみ使用できます',
+      forbiddenPatterns: [
+        /^admin$/i,
+        /^root$/i,
+        /^system$/i,
+        /^test$/i,
+        /^user$/i
+      ],
+      forbiddenError: 'このユーザー名は使用できません'
+    });
   },
 
   /**
-   * Validate safe username
+   * Validate name (display name)
+   * @param {string} name - Display name
+   * @returns {string} - Sanitized name
    */
-  safeUsername: (username) => {
-    if (!username || typeof username !== 'string') return false;
-    if (username.length > USERNAME_MAX_LENGTH) return false;
-    return SAFE_USERNAME_PATTERN.test(username);
+  validateName(name) {
+    return this.sanitizeString(name, {
+      field: 'name',
+      fieldName: '名前',
+      minLength: 1,
+      maxLength: 100,
+      pattern: /^[a-zA-Z0-9\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF\s_-]+$/,
+      patternError: '名前には日本語、英数字、スペース、アンダースコア、ハイフンのみ使用できます'
+    });
   }
 };
 
 /**
- * Base email schema with comprehensive validation
+ * Authentication schema validators
  */
-const emailSchema = z.string()
-  .min(1, { message: 'メールアドレスは必須です' })
-  .max(EMAIL_MAX_LENGTH, { message: `メールアドレスは${EMAIL_MAX_LENGTH}文字以内で入力してください` })
-  .refine(customValidators.email, {
-    message: '有効なメールアドレスを入力してください'
-  });
-
-/**
- * Base password schema with security requirements
- */
-const passwordSchema = z.string()
-  .min(PASSWORD_MIN_LENGTH, { 
-    message: `パスワードは${PASSWORD_MIN_LENGTH}文字以上で入力してください` 
-  })
-  .max(PASSWORD_MAX_LENGTH, { 
-    message: `パスワードは${PASSWORD_MAX_LENGTH}文字以内で入力してください` 
-  })
-  .refine(customValidators.strongPassword, {
-    message: 'パスワードは大文字、小文字、数字、特殊文字のうち3種類以上を含む必要があります'
-  })
-  .refine(customValidators.notCommonPassword, {
-    message: 'より安全なパスワードを設定してください'
-  });
-
-/**
- * Name validation schema for Japanese users
- */
-const nameSchema = z.string()
-  .min(1, { message: '氏名は必須です' })
-  .max(NAME_MAX_LENGTH, { message: `氏名は${NAME_MAX_LENGTH}文字以内で入力してください` })
-  .refine(customValidators.japaneseName, {
-    message: '氏名にはひらがな、カタカナ、漢字、英字のみ使用できます'
-  });
-
-/**
- * Username schema for optional usernames
- */
-const usernameSchema = z.string()
-  .min(3, { message: 'ユーザー名は3文字以上で入力してください' })
-  .max(USERNAME_MAX_LENGTH, { message: `ユーザー名は${USERNAME_MAX_LENGTH}文字以内で入力してください` })
-  .refine(customValidators.safeUsername, {
-    message: 'ユーザー名には英数字、ハイフン、アンダースコアのみ使用できます'
-  });
-
-/**
- * Login schema - basic authentication
- */
-const loginSchema = z.object({
-  email: emailSchema,
-  password: z.string()
-    .min(1, { message: 'パスワードは必須です' })
-    .max(PASSWORD_MAX_LENGTH, { message: 'パスワードが長すぎます' }),
-  rememberMe: z.boolean().optional().default(false),
-  captcha: z.string().optional() // For future captcha integration
-});
-
-/**
- * Registration schema - comprehensive user creation
- */
-const registerSchema = z.object({
-  email: emailSchema,
-  password: passwordSchema,
-  confirmPassword: z.string(),
-  firstName: nameSchema,
-  lastName: nameSchema,
-  username: usernameSchema.optional(),
-  acceptTerms: z.boolean()
-    .refine(val => val === true, {
-      message: '利用規約への同意が必要です'
-    }),
-  acceptPrivacy: z.boolean()
-    .refine(val => val === true, {
-      message: 'プライバシーポリシーへの同意が必要です'
-    }),
-  marketingEmails: z.boolean().optional().default(false),
-  captcha: z.string().optional()
-}).refine(data => data.password === data.confirmPassword, {
-  message: 'パスワードが一致しません',
-  path: ['confirmPassword']
-});
-
-/**
- * Password reset request schema
- */
-const forgotPasswordSchema = z.object({
-  email: emailSchema,
-  captcha: z.string().optional()
-});
-
-/**
- * Password reset confirmation schema
- */
-const resetPasswordSchema = z.object({
-  token: z.string()
-    .min(1, { message: 'リセットトークンは必須です' })
-    .max(500, { message: 'リセットトークンが無効です' }),
-  password: passwordSchema,
-  confirmPassword: z.string()
-}).refine(data => data.password === data.confirmPassword, {
-  message: 'パスワードが一致しません',
-  path: ['confirmPassword']
-});
-
-/**
- * Password change schema (for logged-in users)
- */
-const changePasswordSchema = z.object({
-  currentPassword: z.string()
-    .min(1, { message: '現在のパスワードは必須です' }),
-  newPassword: passwordSchema,
-  confirmNewPassword: z.string()
-}).refine(data => data.newPassword === data.confirmNewPassword, {
-  message: '新しいパスワードが一致しません',
-  path: ['confirmNewPassword']
-}).refine(data => data.currentPassword !== data.newPassword, {
-  message: '新しいパスワードは現在のパスワードと異なる必要があります',
-  path: ['newPassword']
-});
-
-/**
- * Profile update schema
- */
-const updateProfileSchema = z.object({
-  firstName: nameSchema.optional(),
-  lastName: nameSchema.optional(),
-  username: usernameSchema.optional(),
-  bio: z.string()
-    .max(500, { message: '自己紹介は500文字以内で入力してください' })
-    .optional(),
-  website: z.string()
-    .url({ message: '有効なURLを入力してください' })
-    .optional()
-    .or(z.literal('')),
-  phone: z.string()
-    .regex(/^[\d-+().\s]+$/, { message: '有効な電話番号を入力してください' })
-    .max(20, { message: '電話番号は20文字以内で入力してください' })
-    .optional(),
-  notifications: z.object({
-    email: z.boolean().optional(),
-    push: z.boolean().optional(),
-    marketing: z.boolean().optional()
-  }).optional()
-});
-
-/**
- * Email verification schema
- */
-const verifyEmailSchema = z.object({
-  token: z.string()
-    .min(1, { message: '認証トークンは必須です' })
-    .max(500, { message: '認証トークンが無効です' }),
-  email: emailSchema.optional()
-});
-
-/**
- * Two-factor authentication setup schema
- */
-const twoFactorSetupSchema = z.object({
-  secret: z.string()
-    .min(1, { message: '2FAシークレットは必須です' }),
-  token: z.string()
-    .regex(/^\d{6}$/, { message: '6桁の認証コードを入力してください' }),
-  backupCodes: z.array(z.string()).optional()
-});
-
-/**
- * Two-factor authentication verification schema
- */
-const twoFactorVerifySchema = z.object({
-  token: z.string()
-    .regex(/^\d{6}$/, { message: '6桁の認証コードを入力してください' }),
-  rememberDevice: z.boolean().optional().default(false)
-});
-
-/**
- * Admin user creation schema
- */
-const adminCreateUserSchema = z.object({
-  email: emailSchema,
-  firstName: nameSchema,
-  lastName: nameSchema,
-  role: z.enum(['admin', 'editor', 'user'], {
-    errorMap: () => ({ message: '有効な権限を選択してください' })
-  }),
-  isActive: z.boolean().optional().default(true),
-  sendWelcomeEmail: z.boolean().optional().default(true)
-});
-
-/**
- * Validation helper functions
- */
-const validationHelpers = {
+const AuthSchemas = {
   /**
-   * Validate and sanitize authentication data
-   * @param {object} schema - Zod schema
-   * @param {object} data - Data to validate
-   * @returns {object} - Validation result
+   * Login validation schema
+   * @param {object} data - Login data
+   * @returns {object} - Validated data
    */
-  validate(schema, data) {
-    const result = schema.safeParse(data);
+  login(data) {
+    const errors = [];
+    const validated = {};
     
-    if (!result.success) {
-      const errors = result.error.errors.reduce((acc, error) => {
-        const field = error.path.join('.');
-        acc[field] = error.message;
-        return acc;
-      }, {});
-      
-      return {
-        success: false,
-        errors,
-        data: null
-      };
+    try {
+      validated.email = ValidationUtils.validateEmail(data.email);
+    } catch (error) {
+      errors.push(error);
     }
     
-    return {
-      success: true,
-      errors: {},
-      data: result.data
-    };
+    try {
+      // For login, we don't validate password strength (user might have old password)
+      if (!data.password || typeof data.password !== 'string' || data.password.length === 0) {
+        throw new ValidationError('パスワードを入力してください', 'password');
+      }
+      validated.password = data.password;
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Remember me flag (optional)
+    if (data.rememberMe !== undefined) {
+      validated.rememberMe = Boolean(data.rememberMe);
+    }
+    
+    if (errors.length > 0) {
+      const combinedError = new ValidationError('入力値にエラーがあります');
+      combinedError.errors = errors;
+      throw combinedError;
+    }
+    
+    return validated;
   },
 
   /**
-   * Get user-friendly error message
-   * @param {object} errors - Validation errors
-   * @returns {string} - Formatted error message
+   * Registration validation schema
+   * @param {object} data - Registration data
+   * @returns {object} - Validated data
    */
-  getErrorMessage(errors) {
-    const errorMessages = Object.values(errors);
-    return errorMessages.length > 0 ? errorMessages[0] : '入力データが無効です';
+  register(data) {
+    const errors = [];
+    const validated = {};
+    
+    try {
+      validated.email = ValidationUtils.validateEmail(data.email);
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    try {
+      validated.password = ValidationUtils.validatePassword(data.password);
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Password confirmation
+    try {
+      if (data.password !== data.confirmPassword) {
+        throw new ValidationError('パスワードが一致しません', 'confirmPassword');
+      }
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Optional username
+    if (data.username) {
+      try {
+        validated.username = ValidationUtils.validateUsername(data.username);
+      } catch (error) {
+        errors.push(error);
+      }
+    }
+    
+    // Optional display name
+    if (data.name) {
+      try {
+        validated.name = ValidationUtils.validateName(data.name);
+      } catch (error) {
+        errors.push(error);
+      }
+    }
+    
+    // Terms acceptance (required)
+    if (!data.acceptTerms) {
+      errors.push(new ValidationError('利用規約に同意していただく必要があります', 'acceptTerms'));
+    }
+    validated.acceptTerms = Boolean(data.acceptTerms);
+    
+    if (errors.length > 0) {
+      const combinedError = new ValidationError('入力値にエラーがあります');
+      combinedError.errors = errors;
+      throw combinedError;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * Password reset request validation
+   * @param {object} data - Reset request data
+   * @returns {object} - Validated data
+   */
+  passwordResetRequest(data) {
+    const validated = {};
+    
+    try {
+      validated.email = ValidationUtils.validateEmail(data.email);
+    } catch (error) {
+      throw error;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * Password reset validation
+   * @param {object} data - Reset data
+   * @returns {object} - Validated data
+   */
+  passwordReset(data) {
+    const errors = [];
+    const validated = {};
+    
+    // Reset token validation
+    try {
+      if (!data.token || typeof data.token !== 'string' || data.token.length < 32) {
+        throw new ValidationError('無効なリセットトークンです', 'token');
+      }
+      validated.token = data.token.trim();
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    try {
+      validated.password = ValidationUtils.validatePassword(data.password);
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Password confirmation
+    try {
+      if (data.password !== data.confirmPassword) {
+        throw new ValidationError('パスワードが一致しません', 'confirmPassword');
+      }
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    if (errors.length > 0) {
+      const combinedError = new ValidationError('入力値にエラーがあります');
+      combinedError.errors = errors;
+      throw combinedError;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * Password change validation (for authenticated users)
+   * @param {object} data - Password change data
+   * @returns {object} - Validated data
+   */
+  passwordChange(data) {
+    const errors = [];
+    const validated = {};
+    
+    // Current password
+    try {
+      if (!data.currentPassword || typeof data.currentPassword !== 'string') {
+        throw new ValidationError('現在のパスワードを入力してください', 'currentPassword');
+      }
+      validated.currentPassword = data.currentPassword;
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    try {
+      validated.newPassword = ValidationUtils.validatePassword(data.newPassword);
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Password confirmation
+    try {
+      if (data.newPassword !== data.confirmPassword) {
+        throw new ValidationError('新しいパスワードが一致しません', 'confirmPassword');
+      }
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    // Ensure new password is different
+    try {
+      if (data.currentPassword === data.newPassword) {
+        throw new ValidationError('新しいパスワードは現在のパスワードと異なる必要があります', 'newPassword');
+      }
+    } catch (error) {
+      errors.push(error);
+    }
+    
+    if (errors.length > 0) {
+      const combinedError = new ValidationError('入力値にエラーがあります');
+      combinedError.errors = errors;
+      throw combinedError;
+    }
+    
+    return validated;
   }
 };
 
 module.exports = {
-  // Main schemas
-  loginSchema,
-  registerSchema,
-  forgotPasswordSchema,
-  resetPasswordSchema,
-  changePasswordSchema,
-  updateProfileSchema,
-  verifyEmailSchema,
-  twoFactorSetupSchema,
-  twoFactorVerifySchema,
-  adminCreateUserSchema,
-  
-  // Base schemas for reuse
-  emailSchema,
-  passwordSchema,
-  nameSchema,
-  usernameSchema,
-  
-  // Validation helpers
-  validationHelpers,
-  customValidators,
-  
-  // Constants for external use
-  PASSWORD_MIN_LENGTH,
-  PASSWORD_MAX_LENGTH,
-  EMAIL_MAX_LENGTH,
-  NAME_MAX_LENGTH,
-  USERNAME_MAX_LENGTH
+  AuthSchemas,
+  ValidationUtils,
+  ValidationError,
+  PASSWORD_REQUIREMENTS,
+  XSS_OPTIONS
 };
