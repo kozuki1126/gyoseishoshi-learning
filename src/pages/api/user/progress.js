@@ -62,7 +62,7 @@ export default async function handler(req, res) {
 
       users[userIndex].progress[unitId] = {
         completed: completed || false,
-        score: score || null,
+        score: typeof score === 'number' ? score : null,
         timeSpent: timeSpent || 0,
         lastAccessed: new Date().toISOString(),
         ...(users[userIndex].progress[unitId] || {})
