@@ -1,564 +1,509 @@
 /**
- * XSS Protection Utilities
+ * XSS Protection Utility Functions
  * 
- * Comprehensive XSS (Cross-Site Scripting) protection utilities
- * for the 行政書士 learning platform. Provides multiple layers
- * of protection against various XSS attack vectors.
+ * Comprehensive Cross-Site Scripting (XSS) protection utilities that provide
+ * multiple layers of defense against various XSS attack vectors including
+ * stored, reflected, and DOM-based XSS attacks.
  * 
  * Security Features:
- * - HTML sanitization with DOMPurify
+ * - HTML sanitization with customizable whitelists
+ * - CSS injection prevention
+ * - JavaScript event handler removal
+ * - URL validation and sanitization
  * - Content Security Policy helpers
- * - Input validation and filtering
- * - Context-aware output encoding
- * - Japanese text-specific protections
- * - Rich text editor safety
+ * - Input validation and output encoding
  * 
  * Usage:
- *   import { sanitizeHTML, validateInput } from '@/utils/xssProtection';
- *   const safeHTML = sanitizeHTML(userInput);
+ *   const { sanitizeHtml, validateUrl, encodeOutput } = require('./xssProtection');
+ *   const safeContent = sanitizeHtml(userInput, 'strict');
  */
 
 const xss = require('xss');
 const validator = require('validator');
 
-// Custom XSS filter options for educational content
-const XSS_OPTIONS = {
-  // Allowed HTML tags for educational content
-  whiteList: {
-    // Text formatting
-    'p': ['class', 'style'],
-    'br': [],
-    'strong': ['class'],
-    'b': ['class'],
-    'em': ['class'],
-    'i': ['class'],
-    'u': ['class'],
-    'span': ['class', 'style'],
-    'div': ['class', 'style'],
-    
-    // Headings
-    'h1': ['class', 'style'],
-    'h2': ['class', 'style'], 
-    'h3': ['class', 'style'],
-    'h4': ['class', 'style'],
-    'h5': ['class', 'style'],
-    'h6': ['class', 'style'],
-    
-    // Lists
-    'ul': ['class', 'style'],
-    'ol': ['class', 'style'],
-    'li': ['class', 'style'],
-    
-    // Links (with restrictions)
-    'a': ['href', 'title', 'class', 'target', 'rel'],
-    
-    // Images (with restrictions)
-    'img': ['src', 'alt', 'title', 'width', 'height', 'class', 'style'],
-    
-    // Tables for legal content
-    'table': ['class', 'style'],
-    'thead': ['class'],
-    'tbody': ['class'],
-    'tr': ['class', 'style'],
-    'td': ['class', 'style', 'colspan', 'rowspan'],
-    'th': ['class', 'style', 'colspan', 'rowspan'],
-    
-    // Code blocks for legal citations
-    'code': ['class'],
-    'pre': ['class'],
-    
-    // Blockquotes for legal quotes
-    'blockquote': ['class', 'style', 'cite'],
-    
-    // Horizontal rules
-    'hr': ['class', 'style']
+/**
+ * XSS protection configuration profiles
+ */
+const XSS_PROFILES = {
+  // Ultra-strict: No HTML allowed (for usernames, titles, etc.)
+  strict: {
+    whiteList: {},
+    stripIgnoreTag: true,
+    stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed', 'applet'],
+    allowCommentTag: false,
+    css: false
   },
   
-  // Custom attribute filters
-  onTagAttr: function (tag, name, value, isWhiteAttr) {
-    // Allow only safe href values
-    if (tag === 'a' && name === 'href') {
-      // Only allow http(s) and relative URLs
-      if (!/^(https?:\/\/|\/|#)/.test(value)) {
-        return name + '="#"';
-      }
-      // Prevent javascript: and data: URLs
-      if (/^(javascript|data|vbscript):/i.test(value)) {
-        return name + '="#"';
-      }
-    }
-    
-    // Restrict image sources
-    if (tag === 'img' && name === 'src') {
-      // Only allow http(s) and relative URLs for images
-      if (!/^(https?:\/\/|\/|data:image\/(png|jpe?g|gif|webp);base64,)/.test(value)) {
-        return '';
-      }
-      // Check for data URL size limit (prevent DoS)
-      if (value.startsWith('data:') && value.length > 100000) {
-        return '';
-      }
-    }
-    
-    // Restrict inline styles
-    if (name === 'style') {
-      // Remove dangerous CSS properties
-      const dangerousCSSProps = [
-        'expression',
-        'javascript',
-        'vbscript',
-        'behavior',
-        'binding',
-        '@import',
-        'position\s*:\s*fixed',
-        'position\s*:\s*absolute'
-      ];
-      
-      const safeCSSValue = dangerousCSSProps.reduce((val, prop) => {
-        const regex = new RegExp(prop, 'gi');
-        return val.replace(regex, '');
-      }, value);
-      
-      return name + '="' + safeCSSValue + '"';
-    }
-    
-    // Set secure defaults for links
-    if (tag === 'a' && name === 'target' && value === '_blank') {
-      return name + '="_blank" rel="noopener noreferrer"';
-    }
-    
-    return isWhiteAttr ? name + '="' + value + '"' : '';
-  },
-  
-  // Strip dangerous tags completely
-  stripIgnoreTag: true,
-  stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed', 'link', 'meta'],
-  
-  // Custom CSS filter
-  css: {
+  // Basic: Allow minimal formatting (for comments, descriptions)
+  basic: {
     whiteList: {
-      'color': true,
-      'background-color': true,
-      'font-size': true,
-      'font-weight': true,
-      'font-family': true,
-      'text-align': true,
-      'text-decoration': true,
-      'margin': true,
-      'margin-top': true,
-      'margin-bottom': true,
-      'margin-left': true,
-      'margin-right': true,
-      'padding': true,
-      'padding-top': true,
-      'padding-bottom': true,
-      'padding-left': true,
-      'padding-right': true,
-      'border': true,
-      'border-width': true,
-      'border-color': true,
-      'border-style': true,
-      'width': true,
-      'height': true,
-      'max-width': true,
-      'max-height': true
+      'p': [],
+      'br': [],
+      'strong': [],
+      'b': [],
+      'em': [],
+      'i': [],
+      'u': [],
+      'span': ['class']
+    },
+    stripIgnoreTag: true,
+    stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed', 'applet'],
+    allowCommentTag: false,
+    css: false
+  },
+  
+  // Educational: Allow educational content formatting
+  educational: {
+    whiteList: {
+      'p': [],
+      'br': [],
+      'div': ['class'],
+      'span': ['class'],
+      'h1': [], 'h2': [], 'h3': [], 'h4': [], 'h5': [], 'h6': [],
+      'ul': [], 'ol': [], 'li': [],
+      'strong': [], 'b': [], 'em': [], 'i': [], 'u': [],
+      'code': ['class'],
+      'pre': ['class'],
+      'blockquote': [],
+      'a': ['href', 'title', 'target', 'rel'],
+      'table': [], 'thead': [], 'tbody': [], 'tr': [], 'td': [], 'th': [],
+      'mark': [],
+      'del': [], 's': [],
+      'ins': [],
+      'sup': [], 'sub': []
+    },
+    stripIgnoreTag: true,
+    stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed', 'applet', 'form', 'input', 'button'],
+    allowCommentTag: false,
+    css: {
+      // Allow only safe CSS properties
+      whiteList: {
+        'color': true,
+        'background-color': true,
+        'font-weight': true,
+        'font-style': true,
+        'text-decoration': true,
+        'text-align': true
+      }
+    },
+    onIgnoreTagAttr: function (tag, name, value, isWhiteAttr) {
+      // Allow data-* attributes for educational content
+      if (name.substr(0, 5) === 'data-') {
+        return name + '="' + xss.escapeAttrValue(value) + '"';
+      }
+      return '';
+    },
+    onTag: function (tag, html, options) {
+      // Additional validation for links
+      if (tag === 'a') {
+        const hrefMatch = html.match(/href="([^"]+)"/);
+        if (hrefMatch) {
+          const url = hrefMatch[1];
+          // Only allow safe protocols
+          if (!url.match(/^(https?:\/\/|\/|#|mailto:)/)) {
+            return ''; // Remove unsafe links
+          }
+        }
+      }
+      return html;
     }
   }
-};
-
-// Stricter options for user comments and basic text
-const STRICT_XSS_OPTIONS = {
-  whiteList: {
-    'p': [],
-    'br': [],
-    'strong': [],
-    'b': [],
-    'em': [],
-    'i': [],
-    'u': [],
-    'span': [],
-    'a': ['href', 'title'],
-    'blockquote': []
-  },
-  stripIgnoreTag: true,
-  stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed']
 };
 
 /**
- * XSS Protection Class
+ * Common XSS attack patterns for detection
  */
-class XSSProtection {
-  constructor() {
-    this.customXSS = new xss.FilterXSS(XSS_OPTIONS);
-    this.strictXSS = new xss.FilterXSS(STRICT_XSS_OPTIONS);
-  }
+const XSS_ATTACK_PATTERNS = [
+  // Script tags and variations
+  /<script[\s\S]*?>[\s\S]*?<\/script>/gi,
+  /<script[\s\S]*?>/gi,
+  /javascript:/gi,
+  /vbscript:/gi,
+  /data:text\/html/gi,
+  /data:application\/javascript/gi,
+  
+  // Event handlers
+  /\bon\w+\s*=/gi,
+  /onclick/gi,
+  /onload/gi,
+  /onerror/gi,
+  /onmouseover/gi,
+  /onfocus/gi,
+  /onblur/gi,
+  
+  // Expression and evaluation
+  /expression\s*\(/gi,
+  /eval\s*\(/gi,
+  /Function\s*\(/gi,
+  /setTimeout/gi,
+  /setInterval/gi,
+  
+  // Style injection
+  /style\s*=.*expression/gi,
+  /style\s*=.*javascript/gi,
+  /style\s*=.*vbscript/gi,
+  
+  // Meta refresh
+  /<meta[\s\S]*?http-equiv[\s\S]*?refresh/gi,
+  
+  // Object and embed tags
+  /<(object|embed|applet|iframe)[\s\S]*?>/gi,
+  
+  // Form injection
+  /<form[\s\S]*?>/gi,
+  /<input[\s\S]*?>/gi,
+  
+  // Import and link injection
+  /@import/gi,
+  /link[\s\S]*?href/gi
+];
 
+/**
+ * URL validation patterns
+ */
+const SAFE_URL_PATTERNS = {
+  // Allow only safe protocols
+  SAFE_PROTOCOLS: /^(https?:\/\/|\/|#|mailto:)/,
+  
+  // Block dangerous protocols
+  DANGEROUS_PROTOCOLS: /^(javascript:|vbscript:|data:|file:|ftp:)/i,
+  
+  // Common XSS in URLs
+  URL_XSS_PATTERNS: [
+    /javascript:/gi,
+    /vbscript:/gi,
+    /data:text\/html/gi,
+    /data:application\/javascript/gi,
+    /%3cscript/gi,
+    /%3c%2fscript/gi,
+    /&lt;script/gi,
+    /&lt;/script/gi
+  ]
+};
+
+/**
+ * XSS Protection utility functions
+ */
+const XSSProtection = {
   /**
-   * Sanitize HTML content for educational materials
-   * @param {string} html - HTML content to sanitize
+   * Sanitize HTML content based on protection profile
+   * @param {string} input - Raw HTML input
+   * @param {string} profile - Protection profile (strict, basic, educational)
+   * @param {object} customOptions - Custom XSS options to override profile
    * @returns {string} - Sanitized HTML
    */
-  sanitizeHTML(html) {
-    if (!html || typeof html !== 'string') {
+  sanitizeHtml(input, profile = 'basic', customOptions = {}) {
+    if (!input || typeof input !== 'string') {
       return '';
     }
     
-    // Pre-process to handle Japanese content properly
-    const preprocessed = this.preprocessContent(html);
+    const options = XSS_PROFILES[profile];
+    if (!options) {
+      throw new Error(`Unknown XSS protection profile: ${profile}`);
+    }
+    
+    // Merge custom options
+    const finalOptions = { ...options, ...customOptions };
+    
+    // Pre-processing: normalize input
+    let processed = input
+      .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
+      .replace(/\r\n/g, '\n') // Normalize line endings
+      .trim();
     
     // Apply XSS filtering
-    return this.customXSS.process(preprocessed);
-  }
+    const sanitized = xss(processed, finalOptions);
+    
+    // Post-processing validation
+    this.validateSanitizedContent(sanitized);
+    
+    return sanitized;
+  },
 
   /**
-   * Strict sanitization for user comments and basic text
-   * @param {string} html - HTML content to sanitize
-   * @returns {string} - Sanitized HTML
+   * Validate that sanitized content doesn't contain XSS patterns
+   * @param {string} content - Sanitized content
+   * @throws {Error} - If malicious patterns detected
    */
-  sanitizeUserContent(html) {
-    if (!html || typeof html !== 'string') {
-      return '';
+  validateSanitizedContent(content) {
+    // Double-check that no obvious XSS patterns remain
+    for (const pattern of XSS_ATTACK_PATTERNS.slice(0, 5)) { // Check most dangerous patterns
+      if (pattern.test(content)) {
+        throw new Error('コンテンツに危険な要素が残っています');
+      }
+    }
+  },
+
+  /**
+   * Detect potential XSS attacks in input
+   * @param {string} input - Raw input
+   * @returns {Array} - Array of detected attack patterns
+   */
+  detectXSSAttempts(input) {
+    if (!input || typeof input !== 'string') {
+      return [];
     }
     
-    const preprocessed = this.preprocessContent(html);
-    return this.strictXSS.process(preprocessed);
-  }
-
-  /**
-   * Sanitize plain text input
-   * @param {string} text - Plain text to sanitize
-   * @returns {string} - Sanitized text
-   */
-  sanitizeText(text) {
-    if (!text || typeof text !== 'string') {
-      return '';
-    }
+    const detectedPatterns = [];
     
-    return validator.escape(text);
-  }
-
-  /**
-   * Preprocess content to handle Japanese text and common issues
-   * @param {string} content - Content to preprocess
-   * @returns {string} - Preprocessed content
-   */
-  preprocessContent(content) {
-    if (!content) return '';
-    
-    // Remove null bytes and control characters
-    let cleaned = content.replace(/\x00/g, '').replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/g, '');
-    
-    // Normalize Unicode characters (important for Japanese text)
-    cleaned = cleaned.normalize('NFC');
-    
-    // Remove hidden Unicode characters that could be used for attacks
-    const hiddenChars = [
-      '\u200B', // Zero-width space
-      '\u200C', // Zero-width non-joiner
-      '\u200D', // Zero-width joiner
-      '\u2060', // Word joiner
-      '\uFEFF'  // Zero-width no-break space
-    ];
-    
-    hiddenChars.forEach(char => {
-      cleaned = cleaned.replace(new RegExp(char, 'g'), '');
+    XSS_ATTACK_PATTERNS.forEach((pattern, index) => {
+      if (pattern.test(input)) {
+        detectedPatterns.push({
+          pattern: pattern.toString(),
+          index,
+          type: this.getPatternType(index)
+        });
+      }
     });
     
-    // Remove suspicious comment patterns
-    cleaned = cleaned.replace(/<!--[\s\S]*?-->/g, '');
-    
-    // Remove CDATA sections (can be used for XSS)
-    cleaned = cleaned.replace(/<!\[CDATA\[[\s\S]*?\]\]>/g, '');
-    
-    return cleaned;
-  }
+    return detectedPatterns;
+  },
+
+  /**
+   * Get pattern type based on index
+   * @param {number} index - Pattern index
+   * @returns {string} - Pattern type description
+   */
+  getPatternType(index) {
+    if (index <= 5) return 'script injection';
+    if (index <= 12) return 'event handler injection';
+    if (index <= 17) return 'expression evaluation';
+    if (index <= 20) return 'style injection';
+    if (index <= 22) return 'meta refresh';
+    if (index <= 24) return 'object/embed injection';
+    if (index <= 26) return 'form injection';
+    return 'import/link injection';
+  },
 
   /**
    * Validate and sanitize URLs
    * @param {string} url - URL to validate
+   * @param {boolean} allowRelative - Allow relative URLs
    * @returns {string|null} - Sanitized URL or null if invalid
    */
-  sanitizeURL(url) {
+  validateUrl(url, allowRelative = true) {
     if (!url || typeof url !== 'string') {
       return null;
     }
     
-    // Remove whitespace and control characters
-    const cleanURL = url.trim().replace(/[\x00-\x20]/g, '');
+    // Trim and normalize
+    url = url.trim();
     
-    // Check for dangerous protocols
-    const dangerousProtocols = /^(javascript|data|vbscript|file|about):/i;
-    if (dangerousProtocols.test(cleanURL)) {
+    if (url.length === 0) {
       return null;
     }
     
-    // Only allow http, https, and relative URLs
-    if (!/^(https?:\/\/|\/|#|mailto:)/.test(cleanURL)) {
+    // Check for dangerous protocols first
+    if (SAFE_URL_PATTERNS.DANGEROUS_PROTOCOLS.test(url)) {
       return null;
     }
     
-    // Validate URL format
-    if (cleanURL.startsWith('http')) {
-      try {
-        new URL(cleanURL);
-        return validator.escape(cleanURL);
-      } catch {
+    // Check for URL-based XSS
+    for (const pattern of SAFE_URL_PATTERNS.URL_XSS_PATTERNS) {
+      if (pattern.test(url)) {
         return null;
       }
     }
     
-    return validator.escape(cleanURL);
-  }
-
-  /**
-   * Sanitize filename for safe display
-   * @param {string} filename - Filename to sanitize
-   * @returns {string} - Sanitized filename
-   */
-  sanitizeFilename(filename) {
-    if (!filename || typeof filename !== 'string') {
-      return 'unnamed';
+    // Validate with validator library
+    if (url.startsWith('http://') || url.startsWith('https://')) {
+      if (!validator.isURL(url, {
+        protocols: ['http', 'https'],
+        require_protocol: true,
+        require_valid_protocol: true,
+        allow_underscores: false,
+        allow_trailing_dot: false,
+        allow_protocol_relative_urls: false
+      })) {
+        return null;
+      }
+    } else if (url.startsWith('mailto:')) {
+      const email = url.substring(7);
+      if (!validator.isEmail(email)) {
+        return null;
+      }
+    } else if (allowRelative && (url.startsWith('/') || url.startsWith('#'))) {
+      // Relative URLs - basic validation
+      if (url.includes('..') || url.includes('//')) {
+        return null; // Prevent path traversal
+      }
+    } else {
+      return null; // Reject unrecognized URL format
     }
     
-    // Remove path traversal patterns
-    let clean = filename.replace(/\.\.[/\\]/g, '');
-    
-    // Remove dangerous characters
-    clean = clean.replace(/[<>:"|?*\x00-\x1f]/g, '');
-    
-    // Escape HTML entities
-    clean = validator.escape(clean);
-    
-    // Limit length
-    return clean.substring(0, 100);
-  }
+    return url;
+  },
 
   /**
-   * Sanitize search query
-   * @param {string} query - Search query to sanitize
-   * @returns {string} - Sanitized query
+   * Encode output for safe display in HTML
+   * @param {string} input - Input to encode
+   * @param {string} context - Context (html, attribute, javascript, css)
+   * @returns {string} - Encoded output
    */
-  sanitizeSearchQuery(query) {
-    if (!query || typeof query !== 'string') {
-      return '';
-    }
-    
-    // Remove HTML tags completely from search
-    let clean = query.replace(/<[^>]*>/g, '');
-    
-    // Remove script-like patterns
-    clean = clean.replace(/(javascript|vbscript|on\w+\s*=)/gi, '');
-    
-    // Normalize whitespace
-    clean = clean.replace(/\s+/g, ' ').trim();
-    
-    // Limit length
-    return clean.substring(0, 500);
-  }
-
-  /**
-   * Context-aware output encoding
-   * @param {string} value - Value to encode
-   * @param {string} context - Output context (html, attribute, js, css, url)
-   * @returns {string} - Encoded value
-   */
-  encodeForContext(value, context = 'html') {
-    if (!value || typeof value !== 'string') {
+  encodeOutput(input, context = 'html') {
+    if (!input || typeof input !== 'string') {
       return '';
     }
     
     switch (context) {
       case 'html':
-        return validator.escape(value);
-        
+        return input
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#x27;')
+          .replace(/\//g, '&#x2F;');
+          
       case 'attribute':
-        return validator.escape(value).replace(/"/g, '&quot;').replace(/'/g, '&#x27;');
-        
-      case 'js':
-        return value.replace(/\\/g, '\\\\')
-                   .replace(/'/g, "\\'")
-                   .replace(/"/g, '\\"')
-                   .replace(/\n/g, '\\n')
-                   .replace(/\r/g, '\\r')
-                   .replace(/\u2028/g, '\\u2028')
-                   .replace(/\u2029/g, '\\u2029')
-                   .replace(/</g, '\\u003c')
-                   .replace(/>/g, '\\u003e');
-        
+        return input
+          .replace(/&/g, '&amp;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#x27;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
+          
+      case 'javascript':
+        return input
+          .replace(/\\/g, '\\\\')
+          .replace(/"/g, '\\"')
+          .replace(/'/g, "\\'")
+          .replace(/\n/g, '\\n')
+          .replace(/\r/g, '\\r')
+          .replace(/\t/g, '\\t')
+          .replace(/\f/g, '\\f')
+          .replace(/\v/g, '\\v')
+          .replace(/\0/g, '\\0')
+          .replace(/</g, '\\u003c')
+          .replace(/>/g, '\\u003e');
+          
       case 'css':
-        return value.replace(/[<>"'&]/g, (match) => {
-          const codes = { '<': '\\003c', '>': '\\003e', '"': '\\0022', "'": '\\0027', '&': '\\0026' };
-          return codes[match] || match;
-        });
-        
-      case 'url':
-        return encodeURIComponent(value);
+        return input.replace(/[<>"'&\\/]/g, '\\$&');
         
       default:
-        return validator.escape(value);
-    }
-  }
-
-  /**
-   * Generate Content Security Policy
-   * @param {object} options - CSP options
-   * @returns {string} - CSP header value
-   */
-  generateCSP(options = {}) {
-    const defaults = {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      imgSrc: ["'self'", "data:", "https:"],
-      fontSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'"],
-      mediaSrc: ["'self'"],
-      objectSrc: ["'none'"],
-      frameSrc: ["'self'"],
-      baseUri: ["'self'"],
-      formAction: ["'self'"],
-      upgradeInsecureRequests: true
-    };
-    
-    const config = { ...defaults, ...options };
-    
-    const directives = Object.entries(config)
-      .filter(([key, value]) => key !== 'upgradeInsecureRequests' && value)
-      .map(([key, value]) => {
-        const directive = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-        return `${directive} ${Array.isArray(value) ? value.join(' ') : value}`;
-      });
-    
-    if (config.upgradeInsecureRequests) {
-      directives.push('upgrade-insecure-requests');
-    }
-    
-    return directives.join('; ');
-  }
-
-  /**
-   * Validate rich text content from editors
-   * @param {string} content - Rich text content
-   * @param {object} options - Validation options
-   * @returns {object} - Validation result
-   */
-  validateRichText(content, options = {}) {
-    const maxLength = options.maxLength || 50000;
-    const allowedTags = options.allowedTags || Object.keys(XSS_OPTIONS.whiteList);
-    
-    if (!content || typeof content !== 'string') {
-      return { valid: false, error: 'コンテンツが空です' };
-    }
-    
-    if (content.length > maxLength) {
-      return { valid: false, error: `コンテンツが長すぎます（最大${maxLength}文字）` };
-    }
-    
-    // Check for suspicious patterns
-    const suspiciousPatterns = [
-      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-      /<iframe\b[^>]*>/gi,
-      /javascript:/gi,
-      /on\w+\s*=/gi,
-      /expression\s*\(/gi
-    ];
-    
-    for (const pattern of suspiciousPatterns) {
-      if (pattern.test(content)) {
-        return { valid: false, error: '危険なコンテンツが検出されました' };
-      }
-    }
-    
-    // Sanitize and return cleaned content
-    const sanitized = this.sanitizeHTML(content);
-    
-    return {
-      valid: true,
-      sanitized,
-      originalLength: content.length,
-      sanitizedLength: sanitized.length
-    };
-  }
-}
-
-// Create singleton instance
-const xssProtection = new XSSProtection();
-
-/**
- * Convenience functions for common use cases
- */
-const xssHelpers = {
-  /**
-   * Sanitize user input based on type
-   */
-  sanitizeInput(input, type = 'text') {
-    switch (type) {
-      case 'html':
-        return xssProtection.sanitizeHTML(input);
-      case 'user-content':
-        return xssProtection.sanitizeUserContent(input);
-      case 'text':
-        return xssProtection.sanitizeText(input);
-      case 'url':
-        return xssProtection.sanitizeURL(input);
-      case 'filename':
-        return xssProtection.sanitizeFilename(input);
-      case 'search':
-        return xssProtection.sanitizeSearchQuery(input);
-      default:
-        return xssProtection.sanitizeText(input);
+        throw new Error(`Unknown encoding context: ${context}`);
     }
   },
 
   /**
-   * Batch sanitize multiple inputs
+   * Generate Content Security Policy header value
+   * @param {object} options - CSP configuration options
+   * @returns {string} - CSP header value
    */
-  sanitizeBatch(inputs, types = {}) {
-    const result = {};
+  generateCSP(options = {}) {
+    const defaultCSP = {
+      'default-src': ["'self'"],
+      'script-src': ["'self'", "'unsafe-inline'"], // Consider removing unsafe-inline in production
+      'style-src': ["'self'", "'unsafe-inline'", 'fonts.googleapis.com'],
+      'img-src': ["'self'", 'data:', 'https:'],
+      'font-src': ["'self'", 'fonts.gstatic.com'],
+      'connect-src': ["'self'"],
+      'frame-src': ["'none'"],
+      'object-src': ["'none'"],
+      'base-uri': ["'self'"],
+      'form-action': ["'self'"],
+      'frame-ancestors': ["'none'"],
+      'upgrade-insecure-requests': []
+    };
     
-    for (const [key, value] of Object.entries(inputs)) {
-      const type = types[key] || 'text';
-      result[key] = this.sanitizeInput(value, type);
+    const csp = { ...defaultCSP, ...options };
+    
+    return Object.entries(csp)
+      .map(([directive, sources]) => {
+        if (sources.length === 0) {
+          return directive;
+        }
+        return `${directive} ${sources.join(' ')}`;
+      })
+      .join('; ');
+  },
+
+  /**
+   * Validate user input against XSS patterns
+   * @param {string} input - User input
+   * @param {string} fieldName - Field name for error messages
+   * @returns {object} - Validation result
+   */
+  validateInput(input, fieldName = '入力') {
+    const result = {
+      isValid: true,
+      sanitized: '',
+      errors: [],
+      warnings: []
+    };
+    
+    if (!input || typeof input !== 'string') {
+      result.errors.push(`${fieldName}は文字列である必要があります`);
+      result.isValid = false;
+      return result;
+    }
+    
+    // Detect XSS attempts
+    const xssAttempts = this.detectXSSAttempts(input);
+    
+    if (xssAttempts.length > 0) {
+      result.isValid = false;
+      result.errors.push(`${fieldName}に不正なコンテンツが含まれています`);
+      
+      // Log security event (in real implementation, use proper logger)
+      console.warn('XSS attempt detected:', {
+        field: fieldName,
+        patterns: xssAttempts.map(a => a.type),
+        input: input.substring(0, 100) + '...' // Log only first 100 chars
+      });
+      
+      return result;
+    }
+    
+    // Sanitize with basic profile
+    try {
+      result.sanitized = this.sanitizeHtml(input, 'basic');
+      
+      // Check if sanitization removed content
+      if (result.sanitized.length < input.length * 0.8) {
+        result.warnings.push(`${fieldName}の一部のコンテンツが安全性のため削除されました`);
+      }
+      
+    } catch (error) {
+      result.isValid = false;
+      result.errors.push(`${fieldName}の処理中にエラーが発生しました`);
     }
     
     return result;
   },
 
   /**
-   * Check if content is safe
+   * Create middleware for automatic XSS protection
+   * @param {object} options - Middleware options
+   * @returns {Function} - Express middleware function
    */
-  isSafe(content) {
-    if (!content || typeof content !== 'string') return true;
-    
-    const dangerous = [
-      /<script/gi,
-      /javascript:/gi,
-      /on\w+\s*=/gi,
-      /<iframe/gi,
-      /expression\s*\(/gi
-    ];
-    
-    return !dangerous.some(pattern => pattern.test(content));
+  createMiddleware(options = {}) {
+    return (req, res, next) => {
+      const { profile = 'basic', fields = [] } = options;
+      
+      // Sanitize specified fields in request body
+      if (req.body && typeof req.body === 'object') {
+        for (const field of fields) {
+          if (req.body[field] && typeof req.body[field] === 'string') {
+            try {
+              req.body[field] = this.sanitizeHtml(req.body[field], profile);
+            } catch (error) {
+              return res.status(400).json({
+                error: `入力フィールド '${field}' に不正なコンテンツが含まれています`,
+                code: 'XSS_PROTECTION_ERROR'
+              });
+            }
+          }
+        }
+      }
+      
+      // Add CSP header
+      const csp = this.generateCSP(options.csp);
+      res.setHeader('Content-Security-Policy', csp);
+      
+      next();
+    };
   }
 };
 
-module.exports = {
-  // Main XSS protection instance
-  xssProtection,
-  
-  // Convenience helpers
-  xssHelpers,
-  
-  // Direct access to common functions
-  sanitizeHTML: xssProtection.sanitizeHTML.bind(xssProtection),
-  sanitizeText: xssProtection.sanitizeText.bind(xssProtection),
-  sanitizeURL: xssProtection.sanitizeURL.bind(xssProtection),
-  sanitizeFilename: xssProtection.sanitizeFilename.bind(xssProtection),
-  encodeForContext: xssProtection.encodeForContext.bind(xssProtection),
-  generateCSP: xssProtection.generateCSP.bind(xssProtection),
-  validateRichText: xssProtection.validateRichText.bind(xssProtection),
-  
-  // Configuration
-  XSS_OPTIONS,
-  STRICT_XSS_OPTIONS
-};
+module.exports = XSSProtection;
