@@ -1,528 +1,523 @@
 /**
- * Content Management Validation Schemas
+ * Content Input Validation Schemas
  * 
- * Comprehensive Zod schemas for content-related input validation
- * specifically designed for the 行政書士 (Administrative Scrivener) 
- * learning platform. Handles educational content, course materials,
- * and learning progress tracking.
+ * Validation schemas for educational content, including lessons, quizzes,
+ * and user-generated content. Ensures content integrity and prevents
+ * malicious content injection while maintaining educational quality.
  * 
  * Security Features:
- * - Content length limits to prevent DoS
- * - HTML/Markdown sanitization rules
- * - File attachment validation
- * - User-generated content filtering
- * - SEO and metadata validation
- * 
- * Usage:
- *   import { unitSchema, courseSchema } from '@/schemas/content';
- *   const result = unitSchema.safeParse(requestData);
+ * - Markdown content validation and sanitization
+ * - HTML tag whitelist for educational content
+ * - File metadata validation
+ * - Quiz and question format validation
+ * - User comment and feedback sanitization
  */
 
-const { z } = require('zod');
 const validator = require('validator');
-
-// Content security constants
-const TITLE_MAX_LENGTH = 200;
-const DESCRIPTION_MAX_LENGTH = 1000;
-const CONTENT_MAX_LENGTH = 50000; // 50KB of text content
-const TAG_MAX_LENGTH = 50;
-const MAX_TAGS = 20;
-const SLUG_MAX_LENGTH = 100;
-const META_DESCRIPTION_MAX_LENGTH = 160;
-const SEARCH_KEYWORDS_MAX_LENGTH = 500;
-
-// Legal subject areas for 行政書士 exam
-const LEGAL_SUBJECTS = [
-  'constitutional-law',      // 憲法
-  'administrative-law',      // 行政法
-  'civil-law',              // 民法
-  'commercial-law',         // 商法
-  'basic-legal-studies',    // 基礎法学
-  'general-knowledge',      // 一般知識等
-  'administrative-writing', // 文章理解
-  'practical-application'   // 実務
-];
-
-const CONTENT_TYPES = [
-  'text',           // テキスト
-  'video',          // 動画
-  'audio',          // 音声
-  'quiz',           // クイズ
-  'exercise',       // 演習問題
-  'case-study',     // 事例研究
-  'reference'       // 参考資料
-];
-
-const DIFFICULTY_LEVELS = [
-  'beginner',       // 初級
-  'intermediate',   // 中級
-  'advanced',       // 上級
-  'expert'          // 専門級
-];
-
-const CONTENT_STATUS = [
-  'draft',          // 下書き
-  'review',         // 査読中
-  'published',      // 公開済み
-  'archived',       // アーカイブ
-  'deleted'         // 削除済み
-];
+const xss = require('xss');
 
 /**
- * Custom validation functions for content
+ * Content-specific XSS options (more permissive than auth)
  */
-const contentValidators = {
-  /**
-   * Validate URL slug format
-   */
-  slug: (slug) => {
-    if (!slug || typeof slug !== 'string') return false;
-    const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-    return slugPattern.test(slug) && slug.length <= SLUG_MAX_LENGTH;
+const CONTENT_XSS_OPTIONS = {
+  whiteList: {
+    // Text formatting
+    'p': [],
+    'br': [],
+    'span': ['class'],
+    'div': ['class'],
+    
+    // Headings
+    'h1': [], 'h2': [], 'h3': [], 'h4': [], 'h5': [], 'h6': [],
+    
+    // Lists
+    'ul': [], 'ol': [], 'li': [],
+    
+    // Text styling
+    'strong': [], 'b': [], 'em': [], 'i': [], 'u': [],
+    'code': ['class'], 'pre': ['class'],
+    
+    // Links (with restrictions)
+    'a': ['href', 'title', 'target', 'rel'],
+    
+    // Tables
+    'table': ['class'], 'thead': [], 'tbody': [], 'tr': [], 'td': [], 'th': [],
+    
+    // Blockquotes
+    'blockquote': [],
+    
+    // Educational content
+    'mark': [], // For highlighting
+    'del': [], 's': [], // For corrections
+    'ins': [], // For additions
+    'sup': [], 'sub': [], // For mathematical content
+    
+    // Media (with strict validation)
+    'img': ['src', 'alt', 'width', 'height', 'class'],
+    'audio': ['controls', 'src'],
+    'video': ['controls', 'width', 'height', 'src']
   },
-
-  /**
-   * Validate HTML content (basic safety check)
-   */
-  safeHTML: (html) => {
-    if (!html || typeof html !== 'string') return false;
-    
-    // Check for dangerous patterns
-    const dangerousPatterns = [
-      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
-      /<iframe\b[^>]*>/gi,
-      /<object\b[^>]*>/gi,
-      /<embed\b[^>]*>/gi,
-      /<link\b[^>]*>/gi,
-      /<meta\b[^>]*>/gi,
-      /javascript:/gi,
-      /data:.*base64/gi,
-      /on\w+\s*=/gi // Event handlers
-    ];
-    
-    return !dangerousPatterns.some(pattern => pattern.test(html));
+  
+  stripIgnoreTag: true,
+  stripIgnoreTagBody: ['script', 'style', 'iframe', 'object', 'embed'],
+  
+  onIgnoreTagAttr: (tag, name, value) => {
+    // Allow data attributes for educational content
+    if (name.startsWith('data-')) {
+      return `${name}="${xss.escapeAttrValue(value)}"`;
+    }
+    // Allow style for specific educational formatting
+    if (name === 'style' && ['span', 'div', 'p'].includes(tag)) {
+      // Basic style validation (color, font-weight, etc.)
+      const allowedStyles = /^(color|font-weight|font-style|text-decoration|background-color):\s*[^;]+;?\s*$/;
+      if (allowedStyles.test(value)) {
+        return `style="${xss.escapeAttrValue(value)}"`;
+      }
+    }
+    return '';
   },
-
-  /**
-   * Validate Markdown content
-   */
-  safeMarkdown: (markdown) => {
-    if (!markdown || typeof markdown !== 'string') return false;
-    
-    // Basic Markdown validation - no HTML injection
-    const dangerousPatterns = [
-      /<script/gi,
-      /<iframe/gi,
-      /javascript:/gi,
-      /data:.*base64/gi
-    ];
-    
-    return !dangerousPatterns.some(pattern => pattern.test(markdown));
-  },
-
-  /**
-   * Validate Japanese text content
-   */
-  japaneseText: (text) => {
-    if (!text || typeof text !== 'string') return true; // Optional content
-    
-    // Allow Japanese characters, English, numbers, and common punctuation
-    const validPattern = /^[ひらがなカタカナ漢字a-zA-Z0-9\s\n\r\t.,!?()（）「」『』【】〜ー・：；／\-_+=*#@%&\[\]{}|\\'"<>]+$/u;
-    return validPattern.test(text);
+  
+  onTag: (tag, html, options) => {
+    // Additional validation for links
+    if (tag === 'a') {
+      const hrefMatch = html.match(/href="([^"]+)"/);
+      if (hrefMatch) {
+        const url = hrefMatch[1];
+        // Only allow http/https links and relative paths
+        if (!url.match(/^(https?:\/\/|\/|#)/)) {
+          return ''; // Remove unsafe links
+        }
+      }
+    }
+    return html;
   }
 };
 
 /**
- * Base content schemas
+ * File type validation configurations
  */
-const titleSchema = z.string()
-  .min(1, { message: 'タイトルは必須です' })
-  .max(TITLE_MAX_LENGTH, { message: `タイトルは${TITLE_MAX_LENGTH}文字以内で入力してください` })
-  .refine(contentValidators.japaneseText, {
-    message: 'タイトルに無効な文字が含まれています'
-  });
-
-const descriptionSchema = z.string()
-  .max(DESCRIPTION_MAX_LENGTH, { 
-    message: `説明文は${DESCRIPTION_MAX_LENGTH}文字以内で入力してください` 
-  })
-  .refine(contentValidators.japaneseText, {
-    message: '説明文に無効な文字が含まれています'
-  })
-  .optional();
-
-const slugSchema = z.string()
-  .min(1, { message: 'URLスラッグは必須です' })
-  .refine(contentValidators.slug, {
-    message: 'URLスラッグは小文字の英数字とハイフンのみ使用できます'
-  });
-
-const tagsSchema = z.array(
-  z.string()
-    .min(1, { message: 'タグは空にできません' })
-    .max(TAG_MAX_LENGTH, { message: `タグは${TAG_MAX_LENGTH}文字以内で入力してください` })
-    .refine(contentValidators.japaneseText, {
-      message: 'タグに無効な文字が含まれています'
-    })
-)
-  .max(MAX_TAGS, { message: `タグは${MAX_TAGS}個まで設定できます` })
-  .optional()
-  .default([]);
+const ALLOWED_FILE_TYPES = {
+  document: {
+    extensions: ['.pdf', '.doc', '.docx'],
+    mimeTypes: [
+      'application/pdf',
+      'application/msword',
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    ],
+    maxSize: 10 * 1024 * 1024 // 10MB
+  },
+  audio: {
+    extensions: ['.mp3', '.wav', '.m4a', '.ogg'],
+    mimeTypes: [
+      'audio/mpeg',
+      'audio/wav',
+      'audio/x-wav',
+      'audio/mp4',
+      'audio/ogg'
+    ],
+    maxSize: 50 * 1024 * 1024 // 50MB
+  },
+  image: {
+    extensions: ['.jpg', '.jpeg', '.png', '.gif', '.webp'],
+    mimeTypes: [
+      'image/jpeg',
+      'image/png',
+      'image/gif',
+      'image/webp'
+    ],
+    maxSize: 5 * 1024 * 1024 // 5MB
+  }
+};
 
 /**
- * Legal subject validation
+ * Content validation utilities
  */
-const subjectSchema = z.enum(LEGAL_SUBJECTS, {
-  errorMap: () => ({ message: '有効な法律科目を選択してください' })
-});
-
-/**
- * Content type validation
- */
-const contentTypeSchema = z.enum(CONTENT_TYPES, {
-  errorMap: () => ({ message: '有効なコンテンツタイプを選択してください' })
-});
-
-/**
- * Difficulty level validation
- */
-const difficultySchema = z.enum(DIFFICULTY_LEVELS, {
-  errorMap: () => ({ message: '有効な難易度を選択してください' })
-});
-
-/**
- * Content status validation
- */
-const statusSchema = z.enum(CONTENT_STATUS, {
-  errorMap: () => ({ message: '有効なステータスを選択してください' })
-});
-
-/**
- * Learning unit schema - core content structure
- */
-const unitSchema = z.object({
-  title: titleSchema,
-  slug: slugSchema,
-  description: descriptionSchema,
-  subject: subjectSchema,
-  contentType: contentTypeSchema,
-  difficulty: difficultySchema,
-  status: statusSchema.optional().default('draft'),
-  
-  // Content data
-  content: z.string()
-    .min(1, { message: 'コンテンツ本文は必須です' })
-    .max(CONTENT_MAX_LENGTH, { 
-      message: `コンテンツ本文は${CONTENT_MAX_LENGTH}文字以内で入力してください` 
-    })
-    .refine(contentValidators.safeMarkdown, {
-      message: 'コンテンツに無効または危険な内容が含まれています'
-    }),
-    
-  // Metadata
-  tags: tagsSchema,
-  estimatedMinutes: z.number()
-    .int()
-    .min(1, { message: '学習時間は1分以上で設定してください' })
-    .max(600, { message: '学習時間は600分以下で設定してください' })
-    .optional(),
-    
-  // SEO metadata
-  metaTitle: z.string()
-    .max(60, { message: 'メタタイトルは60文字以内で入力してください' })
-    .optional(),
-  metaDescription: z.string()
-    .max(META_DESCRIPTION_MAX_LENGTH, { 
-      message: `メタ説明は${META_DESCRIPTION_MAX_LENGTH}文字以内で入力してください` 
-    })
-    .optional(),
-    
-  // Ordering and relationships
-  order: z.number().int().min(0).optional().default(0),
-  prerequisiteIds: z.array(z.string()).optional().default([]),
-  
-  // Publishing settings
-  publishedAt: z.date().optional(),
-  scheduledAt: z.date().optional(),
-  
-  // Accessibility
-  hasAudio: z.boolean().optional().default(false),
-  hasVideo: z.boolean().optional().default(false),
-  hasQuiz: z.boolean().optional().default(false),
-  
-  // Learning objectives
-  objectives: z.array(
-    z.string()
-      .min(1, { message: '学習目標は空にできません' })
-      .max(200, { message: '学習目標は200文字以内で入力してください' })
-  ).optional().default([])
-});
-
-/**
- * Course schema - collection of units
- */
-const courseSchema = z.object({
-  title: titleSchema,
-  slug: slugSchema,
-  description: descriptionSchema,
-  subject: subjectSchema,
-  difficulty: difficultySchema,
-  status: statusSchema.optional().default('draft'),
-  
-  // Course structure
-  units: z.array(z.string()) // Array of unit IDs
-    .min(1, { message: 'コースには最低1つのユニットが必要です' })
-    .optional()
-    .default([]),
-    
-  // Course metadata
-  tags: tagsSchema,
-  estimatedHours: z.number()
-    .min(0.5, { message: '推定学習時間は0.5時間以上で設定してください' })
-    .max(100, { message: '推定学習時間は100時間以下で設定してください' })
-    .optional(),
-    
-  // Pricing (for premium content)
-  isPremium: z.boolean().optional().default(false),
-  price: z.number()
-    .min(0, { message: '価格は0円以上で設定してください' })
-    .max(100000, { message: '価格は100,000円以下で設定してください' })
-    .optional(),
-    
-  // SEO metadata
-  metaTitle: z.string().max(60).optional(),
-  metaDescription: z.string().max(META_DESCRIPTION_MAX_LENGTH).optional(),
-  
-  // Course image
-  thumbnailUrl: z.string()
-    .url({ message: '有効なサムネイル画像URLを入力してください' })
-    .optional(),
-    
-  // Instructor information
-  instructorId: z.string().optional(),
-  instructorNotes: z.string()
-    .max(1000, { message: '講師ノートは1000文字以内で入力してください' })
-    .optional()
-});
-
-/**
- * Quiz question schema
- */
-const quizQuestionSchema = z.object({
-  question: z.string()
-    .min(10, { message: '問題文は10文字以上で入力してください' })
-    .max(500, { message: '問題文は500文字以内で入力してください' })
-    .refine(contentValidators.japaneseText, {
-      message: '問題文に無効な文字が含まれています'
-    }),
-    
-  type: z.enum(['multiple-choice', 'true-false', 'fill-blank', 'essay'], {
-    errorMap: () => ({ message: '有効な問題タイプを選択してください' })
-  }),
-  
-  choices: z.array(
-    z.string()
-      .min(1, { message: '選択肢は空にできません' })
-      .max(200, { message: '選択肢は200文字以内で入力してください' })
-  ).optional(),
-  
-  correctAnswer: z.string()
-    .min(1, { message: '正解は必須です' }),
-    
-  explanation: z.string()
-    .max(1000, { message: '解説は1000文字以内で入力してください' })
-    .optional(),
-    
-  points: z.number()
-    .int()
-    .min(1, { message: '配点は1点以上で設定してください' })
-    .max(10, { message: '配点は10点以下で設定してください' })
-    .optional()
-    .default(1),
-    
-  difficulty: difficultySchema,
-  subject: subjectSchema,
-  tags: tagsSchema
-});
-
-/**
- * Quiz schema
- */
-const quizSchema = z.object({
-  title: titleSchema,
-  description: descriptionSchema,
-  subject: subjectSchema,
-  difficulty: difficultySchema,
-  
-  questions: z.array(quizQuestionSchema)
-    .min(1, { message: 'クイズには最低1問が必要です' })
-    .max(50, { message: 'クイズは50問以下で作成してください' }),
-    
-  timeLimit: z.number()
-    .int()
-    .min(60, { message: '制限時間は60秒以上で設定してください' })
-    .max(7200, { message: '制限時間は2時間以下で設定してください' })
-    .optional(),
-    
-  passingScore: z.number()
-    .min(0, { message: '合格点は0点以上で設定してください' })
-    .max(100, { message: '合格点は100点以下で設定してください' })
-    .optional()
-    .default(70),
-    
-  allowRetake: z.boolean().optional().default(true),
-  showResults: z.boolean().optional().default(true),
-  tags: tagsSchema
-});
-
-/**
- * User progress schema
- */
-const progressSchema = z.object({
-  unitId: z.string().min(1, { message: 'ユニットIDは必須です' }),
-  userId: z.string().min(1, { message: 'ユーザーIDは必須です' }),
-  
-  status: z.enum(['not-started', 'in-progress', 'completed'], {
-    errorMap: () => ({ message: '有効な進捗状態を選択してください' })
-  }),
-  
-  progressPercentage: z.number()
-    .min(0)
-    .max(100)
-    .optional()
-    .default(0),
-    
-  timeSpent: z.number()
-    .int()
-    .min(0, { message: '学習時間は0秒以上で設定してください' })
-    .optional()
-    .default(0),
-    
-  lastAccessedAt: z.date().optional(),
-  completedAt: z.date().optional(),
-  
-  // Quiz results
-  quizScore: z.number()
-    .min(0)
-    .max(100)
-    .optional(),
-  quizAttempts: z.number()
-    .int()
-    .min(0)
-    .optional()
-    .default(0),
-    
-  // Notes and bookmarks
-  notes: z.string()
-    .max(2000, { message: 'ノートは2000文字以内で入力してください' })
-    .optional(),
-  bookmarks: z.array(z.number().int().min(0)).optional().default([])
-});
-
-/**
- * Search schema
- */
-const searchSchema = z.object({
-  query: z.string()
-    .min(1, { message: '検索キーワードは必須です' })
-    .max(SEARCH_KEYWORDS_MAX_LENGTH, { 
-      message: `検索キーワードは${SEARCH_KEYWORDS_MAX_LENGTH}文字以内で入力してください` 
-    })
-    .refine(contentValidators.japaneseText, {
-      message: '検索キーワードに無効な文字が含まれています'
-    }),
-    
-  subjects: z.array(subjectSchema).optional(),
-  contentTypes: z.array(contentTypeSchema).optional(),
-  difficulty: difficultySchema.optional(),
-  tags: z.array(z.string()).optional(),
-  
-  // Pagination
-  page: z.number().int().min(1).optional().default(1),
-  limit: z.number().int().min(1).max(100).optional().default(20),
-  
-  // Sorting
-  sortBy: z.enum(['relevance', 'date', 'title', 'difficulty'], {
-    errorMap: () => ({ message: '有効なソート条件を選択してください' })
-  }).optional().default('relevance'),
-  sortOrder: z.enum(['asc', 'desc']).optional().default('desc')
-});
-
-/**
- * Content validation helpers
- */
-const contentValidationHelpers = {
+const ContentValidationUtils = {
   /**
-   * Validate content data
+   * Sanitize educational content with appropriate XSS filtering
+   * @param {string} content - Raw content
+   * @param {object} options - Validation options
+   * @returns {string} - Sanitized content
    */
-  validate(schema, data) {
-    const result = schema.safeParse(data);
-    
-    if (!result.success) {
-      const errors = result.error.errors.reduce((acc, error) => {
-        const field = error.path.join('.');
-        acc[field] = error.message;
-        return acc;
-      }, {});
-      
-      return {
-        success: false,
-        errors,
-        data: null
-      };
+  sanitizeContent(content, options = {}) {
+    if (typeof content !== 'string') {
+      throw new Error('コンテンツは文字列である必要があります');
     }
     
+    // Basic length validation
+    if (options.maxLength && content.length > options.maxLength) {
+      throw new Error(`コンテンツは${options.maxLength}文字以下である必要があります`);
+    }
+    
+    if (options.minLength && content.trim().length < options.minLength) {
+      throw new Error(`コンテンツは${options.minLength}文字以上である必要があります`);
+    }
+    
+    // XSS sanitization with educational content support
+    const sanitized = xss(content, CONTENT_XSS_OPTIONS);
+    
+    return sanitized;
+  },
+
+  /**
+   * Validate markdown content
+   * @param {string} markdown - Markdown content
+   * @returns {string} - Validated markdown
+   */
+  validateMarkdown(markdown) {
+    if (!markdown || typeof markdown !== 'string') {
+      throw new Error('マークダウンコンテンツが無効です');
+    }
+    
+    // Check for potentially malicious markdown patterns
+    const maliciousPatterns = [
+      /javascript:/gi,
+      /data:text\/html/gi,
+      /vbscript:/gi,
+      /onload=/gi,
+      /onerror=/gi,
+      /onclick=/gi
+    ];
+    
+    for (const pattern of maliciousPatterns) {
+      if (pattern.test(markdown)) {
+        throw new Error('マークダウンに不正な内容が含まれています');
+      }
+    }
+    
+    return markdown.trim();
+  },
+
+  /**
+   * Validate file metadata
+   * @param {object} file - File object
+   * @param {string} category - File category (document, audio, image)
+   * @returns {object} - Validated file data
+   */
+  validateFile(file, category) {
+    if (!file || !file.name || !file.size) {
+      throw new Error('ファイル情報が不正です');
+    }
+    
+    const config = ALLOWED_FILE_TYPES[category];
+    if (!config) {
+      throw new Error(`サポートされていないファイルカテゴリです: ${category}`);
+    }
+    
+    // File size validation
+    if (file.size > config.maxSize) {
+      const maxSizeMB = Math.round(config.maxSize / (1024 * 1024));
+      throw new Error(`ファイルサイズは${maxSizeMB}MB以下である必要があります`);
+    }
+    
+    // File extension validation
+    const ext = file.name.toLowerCase().slice(file.name.lastIndexOf('.'));
+    if (!config.extensions.includes(ext)) {
+      throw new Error(`許可されていないファイル形式です。許可形式: ${config.extensions.join(', ')}`);
+    }
+    
+    // MIME type validation
+    if (file.type && !config.mimeTypes.includes(file.type)) {
+      throw new Error(`許可されていないファイルタイプです`);
+    }
+    
+    // Sanitize filename
+    const sanitizedName = file.name.replace(/[^a-zA-Z0-9\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF._-]/g, '');
+    
     return {
-      success: true,
-      errors: {},
-      data: result.data
+      name: sanitizedName,
+      size: file.size,
+      type: file.type,
+      category,
+      extension: ext
     };
   },
 
   /**
-   * Sanitize content for safe storage
+   * Validate quiz question
+   * @param {object} question - Question object
+   * @returns {object} - Validated question
    */
-  sanitizeContent(content) {
-    if (typeof content !== 'string') return content;
+  validateQuizQuestion(question) {
+    const errors = [];
+    const validated = {};
     
-    // Basic sanitization - remove potential XSS vectors
-    return content
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^>]*>/gi, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '');
+    // Question text
+    try {
+      validated.question = this.sanitizeContent(question.question, {
+        minLength: 10,
+        maxLength: 1000,
+        fieldName: '問題文'
+      });
+    } catch (error) {
+      errors.push(error.message);
+    }
+    
+    // Question type
+    const allowedTypes = ['multiple-choice', 'true-false', 'short-answer', 'essay'];
+    if (!allowedTypes.includes(question.type)) {
+      errors.push(`問題タイプが無効です。許可タイプ: ${allowedTypes.join(', ')}`);
+    } else {
+      validated.type = question.type;
+    }
+    
+    // Options (for multiple choice)
+    if (question.type === 'multiple-choice') {
+      if (!question.options || !Array.isArray(question.options) || question.options.length < 2) {
+        errors.push('選択肢は2つ以上必要です');
+      } else {
+        validated.options = question.options.map((option, index) => {
+          try {
+            return this.sanitizeContent(option, {
+              minLength: 1,
+              maxLength: 200,
+              fieldName: `選択肢${index + 1}`
+            });
+          } catch (error) {
+            errors.push(`選択肢${index + 1}: ${error.message}`);
+            return option;
+          }
+        });
+        
+        // Correct answer validation
+        if (typeof question.correctAnswer !== 'number' || 
+            question.correctAnswer < 0 || 
+            question.correctAnswer >= question.options.length) {
+          errors.push('正解の選択肢が無効です');
+        } else {
+          validated.correctAnswer = question.correctAnswer;
+        }
+      }
+    }
+    
+    // True/False validation
+    if (question.type === 'true-false') {
+      if (typeof question.correctAnswer !== 'boolean') {
+        errors.push('正誤問題の正解は true または false である必要があります');
+      } else {
+        validated.correctAnswer = question.correctAnswer;
+      }
+    }
+    
+    // Short answer validation
+    if (question.type === 'short-answer') {
+      try {
+        validated.correctAnswer = this.sanitizeContent(question.correctAnswer, {
+          minLength: 1,
+          maxLength: 100,
+          fieldName: '正解'
+        });
+      } catch (error) {
+        errors.push(error.message);
+      }
+    }
+    
+    // Explanation (optional)
+    if (question.explanation) {
+      try {
+        validated.explanation = this.sanitizeContent(question.explanation, {
+          maxLength: 2000,
+          fieldName: '解説'
+        });
+      } catch (error) {
+        errors.push(error.message);
+      }
+    }
+    
+    // Difficulty level
+    const allowedDifficulties = ['beginner', 'intermediate', 'advanced'];
+    if (question.difficulty && !allowedDifficulties.includes(question.difficulty)) {
+      errors.push(`難易度が無効です。許可レベル: ${allowedDifficulties.join(', ')}`);
+    } else {
+      validated.difficulty = question.difficulty || 'intermediate';
+    }
+    
+    if (errors.length > 0) {
+      const error = new Error('問題の検証に失敗しました');
+      error.errors = errors;
+      throw error;
+    }
+    
+    return validated;
+  }
+};
+
+/**
+ * Content validation schemas
+ */
+const ContentSchemas = {
+  /**
+   * Lesson content validation
+   * @param {object} data - Lesson data
+   * @returns {object} - Validated lesson data
+   */
+  lesson(data) {
+    const errors = [];
+    const validated = {};
+    
+    // Title validation
+    try {
+      validated.title = ContentValidationUtils.sanitizeContent(data.title, {
+        minLength: 5,
+        maxLength: 200,
+        fieldName: 'レッスンタイトル'
+      });
+    } catch (error) {
+      errors.push(error.message);
+    }
+    
+    // Description validation
+    if (data.description) {
+      try {
+        validated.description = ContentValidationUtils.sanitizeContent(data.description, {
+          maxLength: 1000,
+          fieldName: 'レッスン説明'
+        });
+      } catch (error) {
+        errors.push(error.message);
+      }
+    }
+    
+    // Content validation (markdown)
+    try {
+      validated.content = ContentValidationUtils.validateMarkdown(data.content);
+    } catch (error) {
+      errors.push(error.message);
+    }
+    
+    // Subject validation
+    const allowedSubjects = [
+      'constitutional-law', 'administrative-law', 'civil-law', 
+      'commercial-law', 'general-knowledge'
+    ];
+    if (!allowedSubjects.includes(data.subject)) {
+      errors.push(`科目が無効です。許可科目: ${allowedSubjects.join(', ')}`);
+    } else {
+      validated.subject = data.subject;
+    }
+    
+    // Unit number validation
+    if (typeof data.unitNumber !== 'number' || data.unitNumber < 1) {
+      errors.push('ユニット番号は1以上の整数である必要があります');
+    } else {
+      validated.unitNumber = data.unitNumber;
+    }
+    
+    // Tags validation (optional)
+    if (data.tags && Array.isArray(data.tags)) {
+      validated.tags = data.tags.map(tag => {
+        return ContentValidationUtils.sanitizeContent(tag, {
+          maxLength: 50,
+          fieldName: 'タグ'
+        });
+      }).filter(tag => tag.length > 0);
+    }
+    
+    if (errors.length > 0) {
+      const error = new Error('レッスンの検証に失敗しました');
+      error.errors = errors;
+      throw error;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * Quiz validation
+   * @param {object} data - Quiz data
+   * @returns {object} - Validated quiz data
+   */
+  quiz(data) {
+    const errors = [];
+    const validated = {};
+    
+    // Quiz title
+    try {
+      validated.title = ContentValidationUtils.sanitizeContent(data.title, {
+        minLength: 5,
+        maxLength: 200,
+        fieldName: 'クイズタイトル'
+      });
+    } catch (error) {
+      errors.push(error.message);
+    }
+    
+    // Questions validation
+    if (!data.questions || !Array.isArray(data.questions) || data.questions.length === 0) {
+      errors.push('クイズには少なくとも1つの問題が必要です');
+    } else {
+      validated.questions = [];
+      data.questions.forEach((question, index) => {
+        try {
+          const validatedQuestion = ContentValidationUtils.validateQuizQuestion(question);
+          validated.questions.push(validatedQuestion);
+        } catch (error) {
+          errors.push(`問題${index + 1}: ${error.message}`);
+          if (error.errors) {
+            errors.push(...error.errors.map(e => `問題${index + 1}: ${e}`));
+          }
+        }
+      });
+    }
+    
+    // Time limit (optional, in minutes)
+    if (data.timeLimit) {
+      if (typeof data.timeLimit !== 'number' || data.timeLimit < 1 || data.timeLimit > 180) {
+        errors.push('制限時間は1分から180分の間で設定してください');
+      } else {
+        validated.timeLimit = data.timeLimit;
+      }
+    }
+    
+    if (errors.length > 0) {
+      const error = new Error('クイズの検証に失敗しました');
+      error.errors = errors;
+      throw error;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * User comment validation
+   * @param {object} data - Comment data
+   * @returns {object} - Validated comment data
+   */
+  comment(data) {
+    const validated = {};
+    
+    // Comment content
+    validated.content = ContentValidationUtils.sanitizeContent(data.content, {
+      minLength: 1,
+      maxLength: 2000,
+      fieldName: 'コメント'
+    });
+    
+    // Rating (optional, 1-5 stars)
+    if (data.rating) {
+      if (typeof data.rating !== 'number' || data.rating < 1 || data.rating > 5) {
+        throw new Error('評価は1から5の間で設定してください');
+      }
+      validated.rating = data.rating;
+    }
+    
+    return validated;
+  },
+
+  /**
+   * File upload validation
+   * @param {object} file - File data
+   * @param {string} category - File category
+   * @returns {object} - Validated file data
+   */
+  file(file, category) {
+    return ContentValidationUtils.validateFile(file, category);
   }
 };
 
 module.exports = {
-  // Main schemas
-  unitSchema,
-  courseSchema,
-  quizSchema,
-  quizQuestionSchema,
-  progressSchema,
-  searchSchema,
-  
-  // Base schemas
-  titleSchema,
-  descriptionSchema,
-  slugSchema,
-  tagsSchema,
-  subjectSchema,
-  contentTypeSchema,
-  difficultySchema,
-  statusSchema,
-  
-  // Validation helpers
-  contentValidationHelpers,
-  contentValidators,
-  
-  // Constants
-  LEGAL_SUBJECTS,
-  CONTENT_TYPES,
-  DIFFICULTY_LEVELS,
-  CONTENT_STATUS,
-  TITLE_MAX_LENGTH,
-  DESCRIPTION_MAX_LENGTH,
-  CONTENT_MAX_LENGTH
+  ContentSchemas,
+  ContentValidationUtils,
+  CONTENT_XSS_OPTIONS,
+  ALLOWED_FILE_TYPES
 };
