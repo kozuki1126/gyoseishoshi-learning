@@ -1,497 +1,545 @@
 /**
  * File Upload Validation Schemas
  * 
- * Comprehensive Zod schemas for secure file upload validation.
- * Handles multiple file types (PDF, audio, images) with strict
- * security controls to prevent malicious file uploads.
+ * Advanced file validation system for secure file uploads including
+ * malicious file detection, metadata validation, and content scanning.
+ * Protects against file-based attacks while supporting educational content.
  * 
  * Security Features:
- * - File type validation (MIME + extension + magic bytes)
- * - File size limits per type
+ * - Magic number (file header) validation
  * - Malicious file pattern detection
- * - Filename sanitization
- * - Content scanning for embedded threats
- * - User upload quotas and rate limiting
- * 
- * Usage:
- *   import { uploadSchema, validateFile } from '@/schemas/upload';
- *   const result = uploadSchema.safeParse(fileData);
+ * - MIME type and extension consistency checking
+ * - File size and quantity limitations
+ * - Virus signature scanning patterns
+ * - Educational content optimization
  */
 
-const { z } = require('zod');
 const validator = require('validator');
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
 
-// File size limits (in bytes)
-const FILE_LIMITS = {
-  PDF: 10 * 1024 * 1024,        // 10MB for PDF files
-  AUDIO: 50 * 1024 * 1024,      // 50MB for audio files
-  IMAGE: 5 * 1024 * 1024,       // 5MB for images
-  DOCUMENT: 10 * 1024 * 1024,   // 10MB for documents
-  VIDEO: 100 * 1024 * 1024      // 100MB for videos (if enabled)
-};
-
-// Maximum number of files per upload
-const MAX_FILES_PER_UPLOAD = 5;
-const MAX_FILES_PER_USER_PER_DAY = 20;
-
-// Allowed file types for educational content
-const ALLOWED_EXTENSIONS = {
-  PDF: ['.pdf'],
-  AUDIO: ['.mp3', '.wav', '.m4a', '.aac'],
-  IMAGE: ['.jpg', '.jpeg', '.png', '.gif', '.webp'],
-  DOCUMENT: ['.txt', '.md', '.docx'], // Limited document support
-  VIDEO: ['.mp4', '.webm'] // Optional video support
-};
-
-const ALLOWED_MIME_TYPES = {
-  PDF: ['application/pdf'],
-  AUDIO: [
-    'audio/mpeg',
-    'audio/wav', 
-    'audio/x-wav',
-    'audio/mp4',
-    'audio/aac',
-    'audio/x-m4a'
+/**
+ * File magic numbers for validation (first few bytes of files)
+ */
+const FILE_SIGNATURES = {
+  // Document formats
+  'application/pdf': [
+    [0x25, 0x50, 0x44, 0x46], // %PDF
   ],
-  IMAGE: [
-    'image/jpeg',
-    'image/png', 
-    'image/gif',
-    'image/webp'
+  'application/msword': [
+    [0xD0, 0xCF, 0x11, 0xE0, 0xA1, 0xB1, 0x1A, 0xE1], // MS Office
   ],
-  DOCUMENT: [
-    'text/plain',
-    'text/markdown',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document': [
+    [0x50, 0x4B, 0x03, 0x04], // ZIP-based (DOCX)
+    [0x50, 0x4B, 0x05, 0x06], // ZIP empty
+    [0x50, 0x4B, 0x07, 0x08], // ZIP spanned
   ],
-  VIDEO: [
-    'video/mp4',
-    'video/webm'
+  
+  // Audio formats
+  'audio/mpeg': [
+    [0xFF, 0xFB], // MP3
+    [0xFF, 0xF3], // MP3
+    [0xFF, 0xF2], // MP3
+    [0x49, 0x44, 0x33], // ID3
+  ],
+  'audio/wav': [
+    [0x52, 0x49, 0x46, 0x46], // RIFF
+  ],
+  'audio/mp4': [
+    [0x00, 0x00, 0x00, 0x18, 0x66, 0x74, 0x79, 0x70], // MP4
+    [0x00, 0x00, 0x00, 0x20, 0x66, 0x74, 0x79, 0x70], // MP4
+  ],
+  'audio/ogg': [
+    [0x4F, 0x67, 0x67, 0x53], // OggS
+  ],
+  
+  // Image formats
+  'image/jpeg': [
+    [0xFF, 0xD8, 0xFF], // JPEG
+  ],
+  'image/png': [
+    [0x89, 0x50, 0x4E, 0x47, 0x0D, 0x0A, 0x1A, 0x0A], // PNG
+  ],
+  'image/gif': [
+    [0x47, 0x49, 0x46, 0x38, 0x37, 0x61], // GIF87a
+    [0x47, 0x49, 0x46, 0x38, 0x39, 0x61], // GIF89a
+  ],
+  'image/webp': [
+    [0x52, 0x49, 0x46, 0x46], // RIFF (WebP)
   ]
 };
 
-// Magic bytes for file type verification
-const MAGIC_BYTES = {
-  PDF: ['25504446'], // %PDF
-  JPEG: ['FFD8FF'],
-  PNG: ['89504E47'],
-  GIF: ['47494638'],
-  WEBP: ['52494646', '57454250'], // RIFF + WEBP
-  MP3: ['494433', 'FFFB'], // ID3 or MPEG
-  WAV: ['52494646', '57415645'], // RIFF + WAVE
-  MP4: ['66747970'], // ftyp
-  DOCX: ['504B0304'] // ZIP signature (DOCX is ZIP-based)
-};
-
-// Dangerous file patterns to reject
-const DANGEROUS_PATTERNS = [
-  // Executable extensions hidden in filenames
-  /\.(exe|bat|cmd|com|pif|scr|vbs|js|jar|app|deb|pkg|dmg)$/i,
-  
-  // Double extensions (file.pdf.exe)
-  /\.[^.]+\.(exe|bat|cmd|com|pif|scr|vbs|js)$/i,
-  
-  // Suspicious filenames
-  /^(con|prn|aux|nul|com[1-9]|lpt[1-9])$/i,
-  
-  // Hidden files or system files
-  /^\..*|desktop\.ini|thumbs\.db/i,
-  
-  // Suspicious content patterns in filename
-  /[<>:"|?*\x00-\x1f]/,
-  
-  // Script injection attempts
-  /javascript:|data:|vbscript:/i
-];
-
 /**
- * Custom file validation functions
+ * Malicious file patterns and suspicious content
  */
-const fileValidators = {
-  /**
-   * Validate file extension matches allowed types
-   */
-  allowedExtension: (filename, allowedExts) => {
-    if (!filename || !allowedExts) return false;
-    const ext = '.' + filename.split('.').pop().toLowerCase();
-    return allowedExts.includes(ext);
-  },
-
-  /**
-   * Validate MIME type matches expected type
-   */
-  allowedMimeType: (mimeType, allowedMimes) => {
-    if (!mimeType || !allowedMimes) return false;
-    return allowedMimes.includes(mimeType.toLowerCase());
-  },
-
-  /**
-   * Check for dangerous file patterns
-   */
-  notDangerous: (filename) => {
-    if (!filename || typeof filename !== 'string') return false;
-    return !DANGEROUS_PATTERNS.some(pattern => pattern.test(filename));
-  },
-
-  /**
-   * Sanitize filename for safe storage
-   */
-  sanitizeFilename: (filename) => {
-    if (!filename) return 'unnamed';
-    
-    return filename
-      .replace(/[<>:"|?*\x00-\x1f]/g, '') // Remove dangerous characters
-      .replace(/\s+/g, '_') // Replace spaces with underscores
-      .replace(/\.+/g, '.') // Collapse multiple dots
-      .replace(/^\.+|\.+$/g, '') // Remove leading/trailing dots
-      .substring(0, 100); // Limit length
-  },
-
-  /**
-   * Validate file size for specific type
-   */
-  validFileSize: (size, fileType) => {
-    const limit = FILE_LIMITS[fileType];
-    return size > 0 && size <= limit;
-  },
-
-  /**
-   * Basic magic byte validation (requires actual file buffer)
-   */
-  validMagicBytes: (buffer, expectedType) => {
-    if (!buffer || buffer.length < 4) return false;
-    
-    const magicBytes = MAGIC_BYTES[expectedType];
-    if (!magicBytes) return true; // Skip if no magic bytes defined
-    
-    const fileStart = buffer.subarray(0, 10).toString('hex').toUpperCase();
-    return magicBytes.some(magic => fileStart.startsWith(magic));
-  }
+const MALICIOUS_PATTERNS = {
+  // Executable headers
+  EXECUTABLE_SIGNATURES: [
+    [0x4D, 0x5A], // MZ (Windows PE)
+    [0x7F, 0x45, 0x4C, 0x46], // ELF (Linux)
+    [0xFE, 0xED, 0xFA, 0xCE], // Mach-O (macOS)
+    [0xCE, 0xFA, 0xED, 0xFE], // Mach-O (reverse)
+    [0xFE, 0xED, 0xFA, 0xCF], // Mach-O 64-bit
+    [0xCF, 0xFA, 0xED, 0xFE], // Mach-O 64-bit (reverse)
+  ],
+  
+  // Script patterns in text content
+  SCRIPT_PATTERNS: [
+    /<script[\s\S]*?>[\s\S]*?<\/script>/gi,
+    /javascript:/gi,
+    /vbscript:/gi,
+    /data:text\/html/gi,
+    /data:application\/javascript/gi,
+    /eval\s*\(/gi,
+    /Function\s*\(/gi,
+    /setTimeout\s*\(/gi,
+    /setInterval\s*\(/gi
+  ],
+  
+  // Suspicious strings
+  MALICIOUS_STRINGS: [
+    'powershell',
+    'cmd.exe',
+    '/bin/bash',
+    '/bin/sh',
+    'wget',
+    'curl',
+    'nc -',
+    'netcat',
+    'reverse shell',
+    'backdoor',
+    'trojan',
+    'virus',
+    'malware',
+    'keylogger'
+  ],
+  
+  // Suspicious file extensions embedded in content
+  DOUBLE_EXTENSIONS: [
+    /\.pdf\.exe$/i,
+    /\.doc\.exe$/i,
+    /\.jpg\.exe$/i,
+    /\.mp3\.exe$/i,
+    /\.txt\.scr$/i,
+    /\.pdf\.scr$/i
+  ]
 };
 
 /**
- * Base file metadata schema
+ * File upload validation utilities
  */
-const fileMetadataSchema = z.object({
-  originalName: z.string()
-    .min(1, { message: 'ファイル名は必須です' })
-    .max(255, { message: 'ファイル名は255文字以内で設定してください' })
-    .refine(fileValidators.notDangerous, {
-      message: 'ファイル名に危険な文字または拡張子が含まれています'
-    })
-    .transform(fileValidators.sanitizeFilename),
-    
-  mimeType: z.string()
-    .min(1, { message: 'ファイル形式の検出が必要です' }),
-    
-  size: z.number()
-    .int()
-    .min(1, { message: 'ファイルサイズが無効です' })
-    .max(FILE_LIMITS.VIDEO, { message: 'ファイルサイズが制限を超えています' }),
-    
-  lastModified: z.number().optional(),
-  
-  // Security metadata
-  uploadedBy: z.string().min(1, { message: 'アップロード者の情報が必要です' }),
-  uploadedAt: z.date().default(() => new Date()),
-  ipAddress: z.string().optional(),
-  userAgent: z.string().optional()
-});
-
-/**
- * PDF file upload schema
- */
-const pdfUploadSchema = fileMetadataSchema.extend({
-  category: z.literal('PDF'),
-  purpose: z.enum(['study-material', 'reference', 'assignment', 'certificate'], {
-    errorMap: () => ({ message: 'PDFファイルの用途を選択してください' })
-  }),
-  
-  // PDF-specific metadata
-  title: z.string()
-    .min(1, { message: 'PDFタイトルは必須です' })
-    .max(200, { message: 'PDFタイトルは200文字以内で入力してください' })
-    .optional(),
-  description: z.string()
-    .max(500, { message: 'PDF説明は500文字以内で入力してください' })
-    .optional(),
-  subject: z.enum(['constitutional-law', 'administrative-law', 'civil-law', 'commercial-law', 'basic-legal-studies', 'general-knowledge'], {
-    errorMap: () => ({ message: '関連する法律科目を選択してください' })
-  }).optional(),
-  
-  // Access control
-  isPublic: z.boolean().default(false),
-  allowDownload: z.boolean().default(true)
-}).refine(data => fileValidators.allowedExtension(data.originalName, ALLOWED_EXTENSIONS.PDF), {
-  message: 'PDFファイルのみアップロード可能です'
-}).refine(data => fileValidators.allowedMimeType(data.mimeType, ALLOWED_MIME_TYPES.PDF), {
-  message: '有効なPDFファイルをアップロードしてください'
-}).refine(data => fileValidators.validFileSize(data.size, 'PDF'), {
-  message: `PDFファイルサイズは${FILE_LIMITS.PDF / (1024 * 1024)}MB以下にしてください`
-});
-
-/**
- * Audio file upload schema
- */
-const audioUploadSchema = fileMetadataSchema.extend({
-  category: z.literal('AUDIO'),
-  purpose: z.enum(['lecture', 'pronunciation', 'interview', 'discussion'], {
-    errorMap: () => ({ message: '音声ファイルの用途を選択してください' })
-  }),
-  
-  // Audio-specific metadata
-  title: z.string()
-    .min(1, { message: '音声タイトルは必須です' })
-    .max(200, { message: '音声タイトルは200文字以内で入力してください' }),
-  transcript: z.string()
-    .max(5000, { message: '音声の文字起こしは5000文字以内で入力してください' })
-    .optional(),
-  duration: z.number()
-    .int()
-    .min(1, { message: '音声の長さは1秒以上で設定してください' })
-    .max(7200, { message: '音声の長さは2時間以下で設定してください' })
-    .optional(),
-  speaker: z.string()
-    .max(100, { message: '話者名は100文字以内で入力してください' })
-    .optional(),
-  language: z.enum(['ja', 'en'], {
-    errorMap: () => ({ message: '音声の言語を選択してください' })
-  }).default('ja'),
-  
-  // Quality metadata
-  bitrate: z.number().int().min(32).max(320).optional(),
-  sampleRate: z.number().int().min(8000).max(48000).optional()
-}).refine(data => fileValidators.allowedExtension(data.originalName, ALLOWED_EXTENSIONS.AUDIO), {
-  message: '対応している音声ファイル形式をアップロードしてください (.mp3, .wav, .m4a, .aac)'
-}).refine(data => fileValidators.allowedMimeType(data.mimeType, ALLOWED_MIME_TYPES.AUDIO), {
-  message: '有効な音声ファイルをアップロードしてください'
-}).refine(data => fileValidators.validFileSize(data.size, 'AUDIO'), {
-  message: `音声ファイルサイズは${FILE_LIMITS.AUDIO / (1024 * 1024)}MB以下にしてください`
-});
-
-/**
- * Image file upload schema
- */
-const imageUploadSchema = fileMetadataSchema.extend({
-  category: z.literal('IMAGE'),
-  purpose: z.enum(['diagram', 'chart', 'photo', 'illustration', 'screenshot'], {
-    errorMap: () => ({ message: '画像ファイルの用途を選択してください' })
-  }),
-  
-  // Image-specific metadata
-  alt: z.string()
-    .min(1, { message: '画像の代替テキストは必須です' })
-    .max(200, { message: '画像の代替テキストは200文字以内で入力してください' }),
-  caption: z.string()
-    .max(300, { message: '画像のキャプションは300文字以内で入力してください' })
-    .optional(),
-    
-  // Image properties
-  width: z.number().int().min(1).max(4000).optional(),
-  height: z.number().int().min(1).max(4000).optional(),
-  
-  // Usage permissions
-  hasPermission: z.boolean()
-    .refine(val => val === true, {
-      message: '画像の使用許可が必要です'
-    }),
-  source: z.string()
-    .max(200, { message: '画像ソースは200文字以内で入力してください' })
-    .optional()
-}).refine(data => fileValidators.allowedExtension(data.originalName, ALLOWED_EXTENSIONS.IMAGE), {
-  message: '対応している画像ファイル形式をアップロードしてください (.jpg, .png, .gif, .webp)'
-}).refine(data => fileValidators.allowedMimeType(data.mimeType, ALLOWED_MIME_TYPES.IMAGE), {
-  message: '有効な画像ファイルをアップロードしてください'
-}).refine(data => fileValidators.validFileSize(data.size, 'IMAGE'), {
-  message: `画像ファイルサイズは${FILE_LIMITS.IMAGE / (1024 * 1024)}MB以下にしてください`
-});
-
-/**
- * Batch upload schema
- */
-const batchUploadSchema = z.object({
-  files: z.array(
-    z.union([pdfUploadSchema, audioUploadSchema, imageUploadSchema])
-  )
-    .min(1, { message: '最低1つのファイルが必要です' })
-    .max(MAX_FILES_PER_UPLOAD, { 
-      message: `一度にアップロードできるファイルは${MAX_FILES_PER_UPLOAD}個までです` 
-    }),
-    
-  // Batch metadata
-  batchTitle: z.string()
-    .max(100, { message: 'バッチタイトルは100文字以内で入力してください' })
-    .optional(),
-  batchDescription: z.string()
-    .max(500, { message: 'バッチ説明は500文字以内で入力してください' })
-    .optional(),
-    
-  // Folder organization
-  folder: z.string()
-    .max(100, { message: 'フォルダ名は100文字以内で入力してください' })
-    .regex(/^[a-zA-Z0-9_-]+$/, { message: 'フォルダ名は英数字、ハイフン、アンダースコアのみ使用できます' })
-    .optional(),
-    
-  // Processing options
-  autoProcess: z.boolean().default(true),
-  generateThumbnails: z.boolean().default(true),
-  extractMetadata: z.boolean().default(true)
-}).refine(data => {
-  // Check total size doesn't exceed reasonable limits
-  const totalSize = data.files.reduce((sum, file) => sum + file.size, 0);
-  return totalSize <= 200 * 1024 * 1024; // 200MB total
-}, {
-  message: 'バッチアップロードの合計サイズは200MBを超えることはできません'
-});
-
-/**
- * File replacement schema (for updating existing files)
- */
-const fileReplacementSchema = z.object({
-  existingFileId: z.string().min(1, { message: '既存ファイルIDは必須です' }),
-  newFile: z.union([pdfUploadSchema, audioUploadSchema, imageUploadSchema]),
-  reason: z.string()
-    .min(10, { message: 'ファイル置換の理由は10文字以上で入力してください' })
-    .max(200, { message: 'ファイル置換の理由は200文字以内で入力してください' }),
-  keepOldVersion: z.boolean().default(true),
-  notifyUsers: z.boolean().default(false)
-});
-
-/**
- * File sharing schema
- */
-const fileSharingSchema = z.object({
-  fileId: z.string().min(1, { message: 'ファイルIDは必須です' }),
-  shareType: z.enum(['public', 'users', 'temporary'], {
-    errorMap: () => ({ message: '有効な共有タイプを選択してください' })
-  }),
-  
-  // User-based sharing
-  sharedWithUsers: z.array(z.string())
-    .max(50, { message: '共有ユーザーは50人までです' })
-    .optional(),
-    
-  // Time-based sharing
-  expiresAt: z.date().optional(),
-  downloadLimit: z.number()
-    .int()
-    .min(1)
-    .max(1000, { message: 'ダウンロード制限は1000回までです' })
-    .optional(),
-    
-  // Access permissions
-  allowDownload: z.boolean().default(true),
-  allowView: z.boolean().default(true),
-  requirePassword: z.boolean().default(false),
-  password: z.string()
-    .min(6, { message: '共有パスワードは6文字以上で設定してください' })
-    .optional()
-}).refine(data => {
-  // Password required if requirePassword is true
-  if (data.requirePassword && !data.password) {
-    return false;
-  }
-  return true;
-}, {
-  message: 'パスワード保護を有効にする場合はパスワードが必要です',
-  path: ['password']
-});
-
-/**
- * Upload validation helpers
- */
-const uploadValidationHelpers = {
+const FileValidationUtils = {
   /**
-   * Validate file upload data
+   * Validate file magic number against MIME type
+   * @param {Buffer} buffer - File buffer
+   * @param {string} mimeType - Declared MIME type
+   * @returns {boolean} - True if valid
    */
-  validate(schema, data) {
-    const result = schema.safeParse(data);
-    
-    if (!result.success) {
-      const errors = result.error.errors.reduce((acc, error) => {
-        const field = error.path.join('.');
-        acc[field] = error.message;
-        return acc;
-      }, {});
-      
-      return {
-        success: false,
-        errors,
-        data: null
-      };
+  validateMagicNumber(buffer, mimeType) {
+    const signatures = FILE_SIGNATURES[mimeType];
+    if (!signatures) {
+      return false; // Unknown MIME type
     }
     
-    return {
-      success: true,
-      errors: {},
-      data: result.data
-    };
-  },
-
-  /**
-   * Get file type category from MIME type
-   */
-  getFileCategory(mimeType) {
-    for (const [category, mimes] of Object.entries(ALLOWED_MIME_TYPES)) {
-      if (mimes.includes(mimeType.toLowerCase())) {
-        return category;
+    return signatures.some(signature => {
+      if (buffer.length < signature.length) {
+        return false;
       }
-    }
-    return null;
+      
+      return signature.every((byte, index) => {
+        return buffer[index] === byte;
+      });
+    });
   },
 
   /**
-   * Check if file type is allowed
+   * Check for malicious executable signatures
+   * @param {Buffer} buffer - File buffer
+   * @returns {boolean} - True if potentially malicious
    */
-  isAllowedFileType(filename, mimeType) {
-    const category = this.getFileCategory(mimeType);
-    if (!category) return false;
+  containsExecutableSignature(buffer) {
+    return MALICIOUS_PATTERNS.EXECUTABLE_SIGNATURES.some(signature => {
+      if (buffer.length < signature.length) {
+        return false;
+      }
+      
+      return signature.every((byte, index) => {
+        return buffer[index] === byte;
+      });
+    });
+  },
+
+  /**
+   * Scan text content for malicious patterns
+   * @param {string} content - Text content
+   * @returns {Array} - Array of detected threats
+   */
+  scanTextContent(content) {
+    const threats = [];
     
-    return fileValidators.allowedExtension(filename, ALLOWED_EXTENSIONS[category]);
+    // Check for script patterns
+    MALICIOUS_PATTERNS.SCRIPT_PATTERNS.forEach((pattern, index) => {
+      if (pattern.test(content)) {
+        threats.push(`Script pattern detected: ${pattern.toString()}`);
+      }
+    });
+    
+    // Check for suspicious strings (case insensitive)
+    const lowerContent = content.toLowerCase();
+    MALICIOUS_PATTERNS.MALICIOUS_STRINGS.forEach(str => {
+      if (lowerContent.includes(str)) {
+        threats.push(`Suspicious string detected: ${str}`);
+      }
+    });
+    
+    return threats;
   },
 
   /**
-   * Get upload limits for user
+   * Generate file hash for duplicate detection
+   * @param {Buffer} buffer - File buffer
+   * @returns {string} - SHA-256 hash
    */
-  getUploadLimits(userRole = 'user') {
-    const baseLimits = {
-      dailyFiles: MAX_FILES_PER_USER_PER_DAY,
-      batchSize: MAX_FILES_PER_UPLOAD,
-      fileSizes: FILE_LIMITS
+  generateFileHash(buffer) {
+    return crypto.createHash('sha256').update(buffer).digest('hex');
+  },
+
+  /**
+   * Validate file name for security
+   * @param {string} filename - Original filename
+   * @returns {string} - Sanitized filename
+   */
+  sanitizeFilename(filename) {
+    if (!filename || typeof filename !== 'string') {
+      throw new Error('ファイル名が無効です');
+    }
+    
+    // Check for double extensions
+    MALICIOUS_PATTERNS.DOUBLE_EXTENSIONS.forEach(pattern => {
+      if (pattern.test(filename)) {
+        throw new Error('不正なファイル拡張子が検出されました');
+      }
+    });
+    
+    // Remove dangerous characters and paths
+    let sanitized = filename
+      .replace(/[<>:"|?*]/g, '') // Windows forbidden chars
+      .replace(/\.\./g, '') // Path traversal
+      .replace(/^\.+/, '') // Hidden file prevention
+      .replace(/\s+/g, '_') // Replace spaces with underscores
+      .replace(/[^\w\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FAF._-]/g, '') // Allow only safe chars + Japanese
+      .substring(0, 255); // Limit length
+    
+    if (!sanitized || sanitized.length === 0) {
+      throw new Error('ファイル名に使用可能な文字がありません');
+    }
+    
+    // Ensure file has extension
+    if (!sanitized.includes('.')) {
+      throw new Error('ファイル拡張子が必要です');
+    }
+    
+    return sanitized;
+  },
+
+  /**
+   * Analyze PDF content for suspicious elements
+   * @param {Buffer} buffer - PDF buffer
+   * @returns {Array} - Array of detected issues
+   */
+  analyzePDFContent(buffer) {
+    const issues = [];
+    const content = buffer.toString('binary');
+    
+    // Check for JavaScript in PDF
+    if (content.includes('/JavaScript') || content.includes('/JS')) {
+      issues.push('PDF contains JavaScript');
+    }
+    
+    // Check for embedded files
+    if (content.includes('/EmbeddedFile')) {
+      issues.push('PDF contains embedded files');
+    }
+    
+    // Check for forms with actions
+    if (content.includes('/URI') && content.includes('/A')) {
+      issues.push('PDF contains external URIs');
+    }
+    
+    // Check for suspicious object references
+    const suspiciousRefs = ['/Launch', '/ImportData', '/SubmitForm'];
+    suspiciousRefs.forEach(ref => {
+      if (content.includes(ref)) {
+        issues.push(`PDF contains suspicious reference: ${ref}`);
+      }
+    });
+    
+    return issues;
+  }
+};
+
+/**
+ * File upload validation schemas
+ */
+const UploadSchemas = {
+  /**
+   * General file validation
+   * @param {object} fileData - File data object
+   * @param {Buffer} buffer - File buffer
+   * @returns {object} - Validation result
+   */
+  validateFile(fileData, buffer) {
+    const result = {
+      isValid: true,
+      errors: [],
+      warnings: [],
+      metadata: {}
     };
     
-    // Adjust limits based on user role
-    if (userRole === 'admin' || userRole === 'premium') {
-      baseLimits.dailyFiles *= 2;
-      baseLimits.batchSize *= 2;
+    try {
+      // Basic file info validation
+      if (!fileData.name || !fileData.size || !fileData.type) {
+        throw new Error('ファイル情報が不完全です');
+      }
+      
+      // Sanitize filename
+      const sanitizedName = FileValidationUtils.sanitizeFilename(fileData.name);
+      result.metadata.sanitizedName = sanitizedName;
+      
+      // File size validation
+      const maxSize = 100 * 1024 * 1024; // 100MB absolute maximum
+      if (fileData.size > maxSize) {
+        throw new Error(`ファイルサイズが大きすぎます (最大: ${maxSize / (1024 * 1024)}MB)`);
+      }
+      
+      if (fileData.size === 0) {
+        throw new Error('空のファイルはアップロードできません');
+      }
+      
+      // Magic number validation
+      if (buffer && buffer.length > 0) {
+        if (!FileValidationUtils.validateMagicNumber(buffer, fileData.type)) {
+          throw new Error('ファイル形式とファイルヘッダが一致しません');
+        }
+        
+        // Check for executable signatures
+        if (FileValidationUtils.containsExecutableSignature(buffer)) {
+          throw new Error('実行可能ファイルは許可されていません');
+        }
+        
+        // Generate file hash
+        result.metadata.hash = FileValidationUtils.generateFileHash(buffer);
+      }
+      
+    } catch (error) {
+      result.isValid = false;
+      result.errors.push(error.message);
     }
     
-    return baseLimits;
+    return result;
+  },
+
+  /**
+   * Document file validation (PDF, DOC, DOCX)
+   * @param {object} fileData - File data
+   * @param {Buffer} buffer - File buffer
+   * @returns {object} - Validation result
+   */
+  validateDocument(fileData, buffer) {
+    const result = this.validateFile(fileData, buffer);
+    
+    if (!result.isValid) {
+      return result;
+    }
+    
+    try {
+      // Size limit for documents (10MB)
+      if (fileData.size > 10 * 1024 * 1024) {
+        throw new Error('文書ファイルは10MB以下である必要があります');
+      }
+      
+      // PDF-specific validation
+      if (fileData.type === 'application/pdf' && buffer) {
+        const pdfIssues = FileValidationUtils.analyzePDFContent(buffer);
+        if (pdfIssues.length > 0) {
+          result.warnings.push(...pdfIssues);
+          
+          // Block PDFs with high-risk features
+          const highRiskPatterns = ['JavaScript', 'Launch', 'ImportData'];
+          const hasHighRisk = pdfIssues.some(issue => 
+            highRiskPatterns.some(pattern => issue.includes(pattern))
+          );
+          
+          if (hasHighRisk) {
+            throw new Error('PDFに危険な要素が含まれています');
+          }
+        }
+      }
+      
+      result.metadata.category = 'document';
+      result.metadata.educational = true;
+      
+    } catch (error) {
+      result.isValid = false;
+      result.errors.push(error.message);
+    }
+    
+    return result;
+  },
+
+  /**
+   * Audio file validation (MP3, WAV, M4A, OGG)
+   * @param {object} fileData - File data
+   * @param {Buffer} buffer - File buffer
+   * @returns {object} - Validation result
+   */
+  validateAudio(fileData, buffer) {
+    const result = this.validateFile(fileData, buffer);
+    
+    if (!result.isValid) {
+      return result;
+    }
+    
+    try {
+      // Size limit for audio (50MB)
+      if (fileData.size > 50 * 1024 * 1024) {
+        throw new Error('音声ファイルは50MB以下である必要があります');
+      }
+      
+      // Duration estimation (rough)
+      const estimatedDuration = fileData.size / (128 * 1024 / 8); // Assume 128kbps
+      if (estimatedDuration > 7200) { // 2 hours
+        result.warnings.push('音声ファイルが非常に長い可能性があります');
+      }
+      
+      result.metadata.category = 'audio';
+      result.metadata.educational = true;
+      result.metadata.estimatedDuration = Math.round(estimatedDuration);
+      
+    } catch (error) {
+      result.isValid = false;
+      result.errors.push(error.message);
+    }
+    
+    return result;
+  },
+
+  /**
+   * Image file validation (JPG, PNG, GIF, WebP)
+   * @param {object} fileData - File data
+   * @param {Buffer} buffer - File buffer
+   * @returns {object} - Validation result
+   */
+  validateImage(fileData, buffer) {
+    const result = this.validateFile(fileData, buffer);
+    
+    if (!result.isValid) {
+      return result;
+    }
+    
+    try {
+      // Size limit for images (5MB)
+      if (fileData.size > 5 * 1024 * 1024) {
+        throw new Error('画像ファイルは5MB以下である必要があります');
+      }
+      
+      // Basic dimension validation (if possible to extract)
+      if (buffer && fileData.type === 'image/png') {
+        // PNG dimension extraction (basic)
+        if (buffer.length > 24) {
+          const width = buffer.readUInt32BE(16);
+          const height = buffer.readUInt32BE(20);
+          
+          if (width > 4000 || height > 4000) {
+            result.warnings.push('画像サイズが大きすぎる可能性があります');
+          }
+          
+          result.metadata.dimensions = { width, height };
+        }
+      }
+      
+      result.metadata.category = 'image';
+      result.metadata.educational = true;
+      
+    } catch (error) {
+      result.isValid = false;
+      result.errors.push(error.message);
+    }
+    
+    return result;
+  },
+
+  /**
+   * Batch file validation for multiple uploads
+   * @param {Array} files - Array of file objects with buffers
+   * @returns {object} - Batch validation result
+   */
+  validateBatch(files) {
+    const result = {
+      isValid: true,
+      validFiles: [],
+      invalidFiles: [],
+      totalSize: 0,
+      warnings: []
+    };
+    
+    // Batch limits
+    const maxFiles = 10;
+    const maxBatchSize = 100 * 1024 * 1024; // 100MB total
+    
+    if (files.length > maxFiles) {
+      result.isValid = false;
+      result.warnings.push(`一度にアップロードできるファイル数は${maxFiles}個までです`);
+      return result;
+    }
+    
+    files.forEach((fileData, index) => {
+      try {
+        let fileResult;
+        
+        // Determine validation method based on file type
+        if (fileData.type.startsWith('image/')) {
+          fileResult = this.validateImage(fileData, fileData.buffer);
+        } else if (fileData.type.startsWith('audio/')) {
+          fileResult = this.validateAudio(fileData, fileData.buffer);
+        } else if (fileData.type.includes('pdf') || fileData.type.includes('word')) {
+          fileResult = this.validateDocument(fileData, fileData.buffer);
+        } else {
+          fileResult = this.validateFile(fileData, fileData.buffer);
+        }
+        
+        if (fileResult.isValid) {
+          result.validFiles.push({ index, file: fileData, metadata: fileResult.metadata });
+          result.totalSize += fileData.size;
+        } else {
+          result.invalidFiles.push({ index, file: fileData, errors: fileResult.errors });
+          result.isValid = false;
+        }
+        
+        if (fileResult.warnings.length > 0) {
+          result.warnings.push(...fileResult.warnings.map(w => `File ${index + 1}: ${w}`));
+        }
+        
+      } catch (error) {
+        result.invalidFiles.push({ index, file: fileData, errors: [error.message] });
+        result.isValid = false;
+      }
+    });
+    
+    // Check total batch size
+    if (result.totalSize > maxBatchSize) {
+      result.isValid = false;
+      result.warnings.push(`バッチの合計サイズが制限を超えています (最大: ${maxBatchSize / (1024 * 1024)}MB)`);
+    }
+    
+    return result;
   }
 };
 
 module.exports = {
-  // Main schemas
-  pdfUploadSchema,
-  audioUploadSchema,
-  imageUploadSchema,
-  batchUploadSchema,
-  fileReplacementSchema,
-  fileSharingSchema,
-  
-  // Base schemas
-  fileMetadataSchema,
-  
-  // Validation helpers
-  uploadValidationHelpers,
-  fileValidators,
-  
-  // Constants
-  FILE_LIMITS,
-  MAX_FILES_PER_UPLOAD,
-  MAX_FILES_PER_USER_PER_DAY,
-  ALLOWED_EXTENSIONS,
-  ALLOWED_MIME_TYPES,
-  MAGIC_BYTES,
-  DANGEROUS_PATTERNS
+  UploadSchemas,
+  FileValidationUtils,
+  FILE_SIGNATURES,
+  MALICIOUS_PATTERNS
 };
