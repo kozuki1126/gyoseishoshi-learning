@@ -158,37 +158,6 @@ class ContentManager {
         hasAudio: false,
         createdAt: '2024-01-25T00:00:00Z',
         updatedAt: '2024-01-25T00:00:00Z'
-      },
-
-      // Practice units
-      {
-        id: '401',
-        title: '憲法基礎問題演習',
-        subjectId: 'constitutional-law',
-        difficulty: 'beginner',
-        estimatedTime: 60,
-        type: 'practice',
-        content: {
-          introduction: '憲法の基礎的な問題を通じて理解を深めます。',
-          sections: [
-            {
-              title: '選択式問題',
-              content: '基本的な知識を確認する選択式問題です。'
-            },
-            {
-              title: '記述式問題',
-              content: '理解度を深める記述式問題です。'
-            }
-          ],
-          keyPoints: [
-            '基本概念の理解が重要',
-            '条文の暗記だけでは不十分',
-            '具体的事例で考える'
-          ]
-        },
-        hasAudio: false,
-        createdAt: '2024-02-01T00:00:00Z',
-        updatedAt: '2024-02-01T00:00:00Z'
       }
     ];
 
@@ -407,69 +376,6 @@ class ContentManager {
     };
   }
 
-  updateUserProgress(userId, unitId, progressData) {
-    const userProgress = this.getUserProgress(userId);
-    
-    // Update recent activity
-    const recentEntry = {
-      unitId,
-      completedAt: new Date().toISOString(),
-      score: progressData.score || 0,
-      timeSpent: progressData.timeSpent || 0
-    };
-
-    userProgress.recent.unshift(recentEntry);
-    userProgress.recent = userProgress.recent.slice(0, 20); // Keep last 20
-
-    // Update overall stats
-    if (progressData.completed) {
-      userProgress.overall.completedUnits += 1;
-    }
-    
-    userProgress.overall.totalStudyTime += progressData.timeSpent || 0;
-
-    // Recalculate average score
-    const scores = userProgress.recent.map(r => r.score).filter(s => s > 0);
-    if (scores.length > 0) {
-      userProgress.overall.averageScore = Math.round(
-        scores.reduce((sum, score) => sum + score, 0) / scores.length
-      );
-    }
-
-    // Update by subject
-    const unit = this.units.get(unitId);
-    if (unit) {
-      const subjectProgress = userProgress.bySubject[unit.subjectId] || {
-        completed: 0,
-        total: 0,
-        score: 0
-      };
-
-      if (progressData.completed) {
-        subjectProgress.completed += 1;
-      }
-
-      // Update subject score
-      const subjectScores = userProgress.recent
-        .filter(r => {
-          const u = this.units.get(r.unitId);
-          return u && u.subjectId === unit.subjectId && r.score > 0;
-        })
-        .map(r => r.score);
-
-      if (subjectScores.length > 0) {
-        subjectProgress.score = Math.round(
-          subjectScores.reduce((sum, score) => sum + score, 0) / subjectScores.length
-        );
-      }
-
-      userProgress.bySubject[unit.subjectId] = subjectProgress;
-    }
-
-    this.userProgress.set(userId, userProgress);
-    return userProgress;
-  }
-
   // Utility methods
   generateId() {
     return Math.random().toString(36).substr(2, 9);
@@ -499,35 +405,6 @@ class ContentManager {
 
   rebuildSearchIndex() {
     this.searchIndex = this.buildSearchIndex();
-  }
-
-  // Analytics
-  getAnalytics() {
-    const totalUnits = this.units.size;
-    const subjectCounts = {};
-    const typeCounts = {};
-    const difficultyCounts = {};
-
-    for (const unit of this.units.values()) {
-      subjectCounts[unit.subjectId] = (subjectCounts[unit.subjectId] || 0) + 1;
-      typeCounts[unit.type] = (typeCounts[unit.type] || 0) + 1;
-      difficultyCounts[unit.difficulty] = (difficultyCounts[unit.difficulty] || 0) + 1;
-    }
-
-    return {
-      totalUnits,
-      subjectCounts,
-      typeCounts,
-      difficultyCounts,
-      lastUpdated: new Date().toISOString()
-    };
-  }
-
-  // Cleanup
-  clear() {
-    this.units.clear();
-    this.userProgress.clear();
-    this.searchIndex.clear();
   }
 }
 

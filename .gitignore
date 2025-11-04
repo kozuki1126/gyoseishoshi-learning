@@ -60,3 +60,12 @@ Desktop.ini
 # logs
 logs
 *.log
+
+# Dynamic content directories
+/temp
+/public/audio/*.mp3
+/public/audio/*.wav
+/public/audio/*.m4a
+/public/audio/*.ogg
+/public/pdf/*.pdf
+/content/units/*.meta.json
