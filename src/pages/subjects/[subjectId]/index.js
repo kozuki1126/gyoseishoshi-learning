@@ -1,9 +1,9 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { subjects, getSubjectById } from '../../data/subjects';
+import Header from '@/shared/layout/Header';
+import Footer from '@/shared/layout/Footer';
+import { subjects, getSubjectById } from '@/features/content/lib/subjects';
 import {
   Clock,
   BookOpen,

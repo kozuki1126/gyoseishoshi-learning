@@ -177,7 +177,7 @@ const SAFE_URL_PATTERNS = {
     /%3cscript/gi,
     /%3c%2fscript/gi,
     /&lt;script/gi,
-    /&lt;/script/gi
+    /&lt;\/script/gi
   ]
 };
 

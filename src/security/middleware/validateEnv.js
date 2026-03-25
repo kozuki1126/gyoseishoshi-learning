@@ -11,7 +11,7 @@
  * - Comprehensive error reporting
  * 
  * Usage:
- *   import { validateEnvironment } from '@/middleware/validateEnv';
+ *   import { validateEnvironment } from '@/security/middleware/validateEnv';
  *   validateEnvironment(); // Call at app startup
  */
 

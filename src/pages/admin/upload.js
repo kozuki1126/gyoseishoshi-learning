@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import AdminLayout from '../../components/admin/AdminLayout';
+import AdminLayout from '@/features/admin/components/AdminLayout';
 import {
   Upload,
   FileText,

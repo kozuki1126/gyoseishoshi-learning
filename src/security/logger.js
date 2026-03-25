@@ -13,7 +13,7 @@
  * - Production-ready monitoring integration
  * 
  * Usage:
- *   const logger = require('./lib/logger');
+ *   const logger = require('./security/logger');
  *   logger.security('rate_limit_exceeded', { ip, endpoint });
  */
 

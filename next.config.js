@@ -5,7 +5,7 @@
  * at application startup to ensure security requirements are met.
  */
 
-const { validateEnvironmentMiddleware } = require('./src/middleware/validateEnv');
+const { validateEnvironmentMiddleware } = require('./src/security/middleware/validateEnv');
 
 // Validate environment variables at startup
 // This will throw an error and prevent startup if validation fails

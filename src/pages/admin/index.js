@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AdminLayout from '../../components/admin/AdminLayout';
+import AdminLayout from '@/features/admin/components/AdminLayout';
 import {
   BookOpen,
   Users,

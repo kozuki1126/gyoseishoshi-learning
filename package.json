@@ -18,10 +18,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "setup": "node setup.js",
+    "setup": "node scripts/setup.js",
     "postinstall": "npm run setup",
     "generate-jwt": "node scripts/generate-jwt-secret.js",
     "env-check": "node scripts/check-env.js",
+    "dir-check": "node scripts/check-directories.js",
+    "test-api": "node scripts/test-api.js",
     "security-audit": "npm audit && npm run env-check"
   },
   "dependencies": {

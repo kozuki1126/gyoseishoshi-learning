@@ -24,7 +24,7 @@ const {
   trackAPIUsage,
   healthCheck
 } = require('./apiRateLimit');
-const logger = require('../lib/logger');
+const logger = require('../logger');
 
 /**
  * Route-based rate limiting configuration

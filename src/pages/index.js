@@ -1,15 +1,15 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
-import AIQualitySection from '../components/AIQualitySection';
-import SubjectsSection from '../components/SubjectsSection';
-import FeaturedContent from '../components/FeaturedContent';
-import DownloadSection from '../components/DownloadSection';
-import YouTubeSection from '../components/YouTubeSection';
-import PricingSection from '../components/PricingSection';
-import CallToAction from '../components/CallToAction';
-import Footer from '../components/Footer';
+import Header from '@/shared/layout/Header';
+import HeroSection from '@/features/marketing/components/HeroSection';
+import AIQualitySection from '@/features/marketing/components/AIQualitySection';
+import SubjectsSection from '@/features/marketing/components/SubjectsSection';
+import FeaturedContent from '@/features/marketing/components/FeaturedContent';
+import DownloadSection from '@/features/marketing/components/DownloadSection';
+import YouTubeSection from '@/features/marketing/components/YouTubeSection';
+import PricingSection from '@/features/marketing/components/PricingSection';
+import CallToAction from '@/features/marketing/components/CallToAction';
+import Footer from '@/shared/layout/Footer';
 
 export default function Home() {
   // スムーズスクロールのためのフック

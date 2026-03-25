@@ -31,7 +31,7 @@
 
 ### フロントエンド
 - **⚛️ React 18**: 最新のHooks APIを活用
-- **⚡ Next.js 14**: App Routerによる高速ルーティング
+- **⚡ Next.js 14**: Pages Routerベースのアプリケーション構成
 - **🎨 Tailwind CSS**: ユーティリティファーストなスタイリング
 - **📝 ReactMarkdown**: リアルタイムMarkdownプレビュー
 
@@ -48,7 +48,7 @@
 ## 🚀 インストールと実行
 
 ### 1. 必要な環境
-- Node.js (バージョン14以上)
+- Node.js (18.17 以上)
 - npm または yarn
 
 ### 2. セットアップ
@@ -61,6 +61,9 @@ cd gyoseishoshi-learning
 # 依存関係をインストール（自動セットアップ実行）
 npm install
 
+# 環境変数を検証
+npm run env-check
+
 # 開発サーバーを起動
 npm run dev
 ```
@@ -72,21 +75,31 @@ npm run dev
 
 ```
 gyoseishoshi-learning/
+├── 📁 docs/                  # 調査メモ・実装ノート・タスク
 ├── 📄 README.md
 ├── 📦 package.json
+├── 📄 jsconfig.json          # @/ エイリアス設定
 ├── ⚙️ next.config.js
+├── 📁 scripts/               # セットアップ・診断スクリプト
 ├── 🎨 tailwind.config.js
 ├── 📁 src/
-│   ├── 📁 components/     # Reactコンポーネント
-│   ├── 📁 pages/         # Next.jsページ・APIルート
-│   ├── 📁 data/          # データ管理
-│   └── 📁 styles/        # スタイルシート
+│   ├── 📁 features/          # ドメイン別実装（auth/admin/content/marketing）
+│   ├── 📁 pages/             # Next.jsページ・APIルート
+│   ├── 📁 security/          # セキュリティ・検証・レート制限
+│   ├── 📁 shared/            # 共通レイアウト
+│   └── 📁 styles/            # スタイルシート
 ├── 📁 content/
-│   └── 📁 units/         # 学習コンテンツ (.md)
+│   └── 📁 units/             # 学習コンテンツ (.md)
 └── 📁 public/
-    ├── 📁 audio/         # 音声ファイル
-    └── 📁 pdf/          # PDFファイル
+    ├── 📁 audio/             # 音声ファイル
+    └── 📁 pdf/               # PDFファイル
 ```
+
+### 補足ドキュメント
+- `docs/codebase-audit.md` - 現状調査と整理方針
+- `docs/development-process.md` - 開発履歴の記録
+- `docs/implementation-notes.md` - 実装メモ
+- `docs/tasks.md` - 既存タスク一覧
 
 ## 🔧 主要機能の詳細
 
@@ -97,9 +110,11 @@ gyoseishoshi-learning/
 - **📂 ファイル管理**: ドラッグ&ドロップによる簡単アップロード
 
 ### API エンドポイント
-- `GET/POST /api/content/get` - コンテンツの取得・保存
-- `POST /api/content/upload` - ファイルアップロード
-- `GET /api/content/get-files` - ファイル情報の取得
+- `GET /api/content/subjects` - 科目一覧の取得
+- `GET /api/content/units` - 単元一覧または単元詳細の取得
+- `GET /api/content/search` - 科目・単元検索
+- `POST /api/auth/login` - ログイン
+- `POST /api/auth/register` - ユーザー登録
 
 ## 🎯 学習範囲
 
