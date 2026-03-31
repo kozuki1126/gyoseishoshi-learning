@@ -1,17 +1,9 @@
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useAuth } from '@/features/auth/context/AuthContext';
 
 export default function CallToAction() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isPremium, setIsPremium] = useState(false);
-  
-  // ログイン状態を確認
-  useEffect(() => {
-    const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const premium = localStorage.getItem('isPremium') === 'true';
-    setIsLoggedIn(loggedIn);
-    setIsPremium(premium);
-  }, []);
+  const { user, isAuthenticated } = useAuth();
+  const isPremium = Boolean(user?.isPremium);
 
   // CTAの表示内容を決定
   const getCTAContent = () => {
@@ -22,7 +14,7 @@ export default function CallToAction() {
         buttonText: "学習コンテンツを見る",
         buttonLink: "/subjects"
       };
-    } else if (isLoggedIn) {
+    } else if (isAuthenticated) {
       return {
         title: "プレミアム会員にアップグレード",
         description: "PDFと音声のダウンロード、詳細な過去問解説など、より効率的な学習機能をご利用いただけます。",
@@ -34,7 +26,7 @@ export default function CallToAction() {
         title: "今すぐ無料会員登録",
         description: "会員登録をして、行政書士試験対策をスタートしましょう。基本的な学習コンテンツは無料でご利用いただけます。",
         buttonText: "無料会員登録",
-        buttonLink: "/register"
+        buttonLink: "/auth/register"
       };
     }
   };
@@ -82,8 +74,8 @@ export default function CallToAction() {
                 </div>
               </div>
               <div className="mt-4 text-center">
-                <Link href="/dashboard" className="inline-flex items-center text-white hover:text-indigo-200 font-medium">
-                  学習ダッシュボードを見る
+                <Link href="/mypage" className="inline-flex items-center text-white hover:text-indigo-200 font-medium">
+                  マイページを見る
                   <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>

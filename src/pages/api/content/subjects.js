@@ -1,4 +1,5 @@
 import { subjects, getSubjectById } from '@/features/content/lib/subjects';
+import contentRepository from '@/server/repositories/contentRepository';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -35,12 +36,13 @@ export default async function handler(req, res) {
     }
 
     // 全科目を取得
+    const publishedUnits = contentRepository.listUnits({}, { includeDraft: false }).units;
     const subjectsData = subjects.map(subject => {
       const { icon, ...subjectWithoutIcon } = subject;
       return {
         ...subjectWithoutIcon,
         iconName: icon?.displayName || icon?.name || null,
-        unitCount: subject.units?.length || 0
+        unitCount: publishedUnits.filter((unit) => unit.subjectId === subject.id).length
       };
     });
 
@@ -53,7 +55,7 @@ export default async function handler(req, res) {
     // 統計情報
     const stats = {
       totalSubjects: subjects.length,
-      totalUnits: subjects.reduce((sum, s) => sum + (s.units?.length || 0), 0),
+      totalUnits: publishedUnits.length,
       totalHours: subjects.reduce((sum, s) => sum + s.estimatedHours, 0)
     };
 

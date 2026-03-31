@@ -38,7 +38,8 @@ export default async function handler(req, res) {
     await userManager.checkPremiumStatus(user.id);
 
     // トークン生成
-    const token = generateToken(user);
+    const refreshedUser = await userManager.findById(user.id);
+    const token = generateToken(refreshedUser);
 
     // Cookieにトークンを設定
     setAuthCookie(res, token);
@@ -47,10 +48,11 @@ export default async function handler(req, res) {
       success: true,
       message: 'ログインしました',
       user: {
-        id: user.id,
-        email: user.email,
-        name: user.name,
-        isPremium: user.isPremium
+        id: refreshedUser.id,
+        email: refreshedUser.email,
+        name: refreshedUser.name,
+        isPremium: refreshedUser.isPremium,
+        membership: refreshedUser.membership
       },
       token
     });

@@ -209,8 +209,8 @@ export default function AdminDashboard() {
           />
           <QuickAction
             icon={TrendingUp}
-            title="統計を見る"
-            href="/admin/analytics"
+            title="ユーザー状況"
+            href="/admin/users"
             color="bg-orange-600"
           />
         </div>

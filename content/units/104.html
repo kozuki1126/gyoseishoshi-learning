@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>制限行為能力者制度 — 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem; font-weight: 700; color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600); padding-bottom: .5rem; margin-bottom: 2rem;
+}
+h2 { font-size: 1.25rem; font-weight: 700; color: var(--blue-700); border-left: 4px solid var(--blue-600); padding-left: .75rem; margin: 0 0 .75rem; }
+h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 1rem 0 .5rem; }
+h4 { font-size: .75rem; font-weight: 700; color: var(--text-secondary); letter-spacing: .08em; text-transform: uppercase; margin: .75rem 0 .25rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif; font-size: .9rem; line-height: 2.1;
+    background: var(--blue-100); border-left: 4px solid var(--blue-600); border-radius: 0 4px 4px 0;
+    margin: .75rem 0; padding: .875rem 1.25rem; color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.page-title-block { background: var(--blue-900); color: #fff; padding: 2.5rem 1.5rem 2rem; margin: 0 -1.5rem 2.5rem; }
+.page-title-block__breadcrumb { font-size: .75rem; color: var(--blue-200); margin: 0 0 .75rem; letter-spacing: .04em; }
+.page-title-block__main { font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.35; border: none; padding: 0; margin: 0 0 .5rem; }
+.page-title-block__sub { font-size: .9rem; color: var(--blue-200); margin: 0 0 1.25rem; }
+.page-title-block__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.page-title-block .badge--info { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); }
+.sec-head { display: flex; align-items: flex-start; gap: 1rem; margin: 3rem 0 1.25rem; }
+.sec-head__num { flex-shrink: 0; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background: var(--blue-600); color: #fff; font-size: .875rem; font-weight: 700; border-radius: 6px; letter-spacing: .04em; }
+.sec-head__sub { font-size: .75rem; color: var(--text-muted); margin: .125rem 0 0; letter-spacing: .04em; }
+section + section { margin-top: 1rem; }
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd { display: flex; align-items: center; gap: .5rem; padding: .5rem 1rem; }
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.box__term { font-size: 1rem; font-weight: 700; letter-spacing: .02em; flex: 1; }
+.box__hd-badges { display: flex; align-items: center; gap: .375rem; margin-left: auto; }
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd { background: var(--orange-600); color: #fff; padding: .625rem 1rem; }
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+.badge { display: inline-flex; align-items: center; gap: 3px; font-size: .68rem; font-weight: 700; padding: .15em .6em; border-radius: 4px; vertical-align: middle; letter-spacing: .05em; }
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: #fef08a; color: #713f12; border: 1px solid #fde047; font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+.case-card { border: 1px solid var(--blue-600); border-radius: 8px; overflow: hidden; margin: 1.5rem 0; }
+.case-card__hd { background: var(--blue-700); padding: 1rem 1.25rem .875rem; }
+.case-card__meta { font-size: .75rem; color: var(--blue-200); margin-bottom: .375rem; letter-spacing: .03em; }
+.case-card__title { font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.45; margin-bottom: .625rem; }
+.case-card__badges { display: flex; flex-wrap: wrap; gap: .375rem; }
+.case-card__bd { background: var(--blue-50); padding: 1rem 1.25rem; color: var(--blue-900); font-size: .925rem; }
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+.cmp-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1rem 0 1.5rem; }
+.cmp-table th, .cmp-table td { padding: .6rem .875rem; border: 1px solid var(--blue-200); vertical-align: top; text-align: left; }
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label { background: var(--blue-50); color: var(--text-secondary); font-size: .8rem; font-weight: 700; white-space: nowrap; width: 7rem; }
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table .col--d { background: #f0fdf4; }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table thead .col--d { background: #16a34a; color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+.em-a { color: var(--blue-700); font-weight: 700; }
+.em-b { color: var(--orange-600); font-weight: 700; }
+.em-c { color: var(--red-800); font-weight: 700; }
+.em-d { color: #15803d; font-weight: 700; }
+.diagram-wrap { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.5rem; margin: 1.25rem 0; }
+.diagram-wrap svg { display: block; width: 100%; height: auto; font-family: 'Noto Sans JP', sans-serif; }
+p { margin-bottom: .75rem; }
+ul, ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .25rem; }
+</style>
+</head>
+<body>
+
+<!-- ページタイトルブロック -->
+<div class="page-title-block">
+    <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+    <h1 class="page-title-block__main">制限行為能力者制度</h1>
+    <p class="page-title-block__sub">未成年者・成年被後見人・被保佐人・被補助人の4類型と相手方保護</p>
+    <div class="page-title-block__tags">
+        <span class="badge badge--info">民法4条〜21条</span>
+        <span class="badge badge--info">行為能力</span>
+        <span class="badge badge--info">取消権・追認</span>
+        <span class="badge badge--info">催告権・詐術</span>
+        <span class="badge badge--info">成年後見制度</span>
+        <span class="badge badge--info">2022年改正</span>
+    </div>
+</div>
+
+<!-- ===== 第1節 単元の概要 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+        <h2>単元の概要</h2>
+        <p class="sec-head__sub">Unit Overview</p>
+    </div>
+</header>
+
+<p>
+私たちが社会生活を営む上で、売買・賃貸借・雇用などの<strong><mark class="kw">法律行為</mark></strong>は不可欠です。法律行為は、当事者が自らの意思で権利・義務を発生・変更・消滅させるものであり、その前提として当事者が「有効な意思を形成できること」が必要です。ところが、年齢・精神状態などの事情により、判断能力が不十分な人が不利な契約を締結してしまう危険があります。そこで民法は、<strong><mark class="kw">制限行為能力者制度</mark></strong>（民法4条〜21条）を設け、判断能力が不十分と認められる者を類型化し、その行為を事後的に取り消せるという制度的な保護を与えています。
+</p>
+<p>
+制限行為能力者制度の核心的な発想は、「<strong>意思能力の有無を個別に証明させるのでは、弱者保護として機能しない</strong>」という点にあります。意思能力（有効な意思表示をなしうる精神的能力）がなければ法律行為は無効ですが、その証明責任は無効を主張する側にあり、高度の認知症患者であっても「その時点で意思能力があった」と業者側が主張すれば争いになります。制限行為能力者制度は、これを回避するため、<em>年齢</em>（未成年者）や<em>家庭裁判所の審判</em>（成年後見・保佐・補助）という形式的・客観的な基準で保護対象者を確定し、本人や保護者が「制限行為能力者であること」を理由として取り消せるようにしたのです。取消しにあたって相手方の悪意・善意は問われません。
+</p>
+
+<div class="box box--example">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">lightbulb</span>
+        <span class="box__label">具体例</span>
+    </div>
+    <div class="box__bd">
+        <p>重度の認知症で意思疎通が困難な高齢者Aが、訪問販売業者Bから高額な布団セットを購入する契約を締結した。AにはすでにCが成年後見人として就任している。この場合、Aは<strong><mark class="kw">成年被後見人</mark></strong>であるから、Aが単独でした法律行為（布団の購入契約）は、Aまたは後見人Cが取り消すことができる（民法9条）。Bが「この時点でAには意思能力があった」と主張しても、制限行為能力者であることだけを理由に取消しが認められる。これが制度の最大のメリットである。</p>
+    </div>
+</div>
+
+<p>
+行政書士試験では、この単元から<strong>毎年1〜2問</strong>の出題があり、記述式問題（40字程度）でも催告権・追認の仕組みが問われることがあります。4類型の特徴（要件・保護者・権限・制限される行為の範囲）を横断的に比較した上で、相手方保護の手段（催告権・詐術）の細かいルールを正確に押さえることが高得点の鍵となります。
+</p>
+</section>
+
+<!-- ===== 第2節 重要用語の解説 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+        <h2>重要用語の解説</h2>
+        <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+</header>
+
+<!-- 権利能力・意思能力・行為能力 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">権利能力・意思能力・行為能力（3つの「能力」の区別）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">権利能力</mark></strong>とは、権利・義務の主体となることができる一般的・抽象的な資格をいいます。生きている全ての自然人は、出生から死亡まで権利能力を有します（民法3条1項）。法人も権利能力を持ちます。権利能力のない者が当事者となった法律行為は無効です。</p>
+        <p><strong><mark class="kw">意思能力</mark></strong>とは、自らの法律行為の意味・結果を理解して有効な意思決定を行うことができる精神的能力をいいます（民法3条の2）。意思能力のない状態で行った法律行為は<em>無効</em>です。2020年施行の民法改正で明文化されましたが（3条の2）、証明責任は無効を主張する側にあります。</p>
+        <p><strong><mark class="kw">行為能力</mark></strong>とは、単独で完全に有効な法律行為を行うことができる能力をいいます。行為能力が制限されている者（制限行為能力者）が行った一定の行為は、<em>取り消すことができる</em>状態になります（無効ではなく取消可能）。取消しは遡及効を持ち、行為の時から無効とみなされます（民法121条）。</p>
+        <p>試験上の重要ポイント：<strong><mark class="kw-red">意思能力のない行為は「無効」、制限行為能力者の行為（意思能力がある場合）は「取消可能」</mark></strong>です。この区別は確実に押さえてください。なお、成年被後見人は常況として意思能力を欠いているとみなされ、両制度が重なって適用される場面もあります。</p>
+    </div>
+</div>
+
+<!-- 未成年者 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">未成年者（民法4条・5条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">未成年者</mark></strong>とは、成年に達していない者をいいます。2022年4月1日施行の民法改正により成年年齢が20歳から<strong><mark class="kw">18歳</mark></strong>に引き下げられたため（民法4条）、現在は18歳未満の者が未成年者です。</p>
+        <p>未成年者が法律行為をするには、原則として<strong><mark class="kw">法定代理人</mark></strong>（親権者または未成年後見人）の<strong>同意</strong>を得なければなりません（5条1項本文）。同意を得ないでした法律行為は、本人または法定代理人が取り消すことができます（5条2項）。</p>
+        <p><strong>単独で有効にできる行為の例外</strong>として、以下が重要です。</p>
+        <ul>
+            <li><strong><mark class="kw">単に権利を得または義務を免れる行為</mark></strong>（5条1項ただし書）：贈与を受けること、債務の免除を受けること等。これらは未成年者に一方的に有利であり、同意不要。ただし、<strong class="warn">負担付贈与の受諾は同意が必要</strong>（義務が付随するため）。</li>
+            <li><strong><mark class="kw">処分を許された財産の処分行為</mark></strong>（5条3項）：お小遣い・生活費など法定代理人が処分を許した財産を処分する行為。「小遣いで何でも買ってよい」と許された場合はその範囲内で自由に契約できる。</li>
+            <li><strong><mark class="kw">営業を許された未成年者がその営業に関してする行為</mark></strong>（6条1項）：一定の営業（例：飲食店経営）を許可された場合、その営業に関する全ての法律行為を単独でできる。許可を受けた営業の範囲内に限られる点に注意。</li>
+        </ul>
+        <p>保護者（法定代理人）の権限：<strong>同意権・代理権・取消権・追認権</strong>をすべて持ちます。</p>
+    </div>
+</div>
+
+<!-- 成年被後見人 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">成年被後見人（民法7条〜10条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">成年被後見人</mark></strong>とは、<strong>精神上の障害により事理を弁識する能力を欠く常況にある者</strong>であって、家庭裁判所から<strong><mark class="kw">後見開始の審判</mark></strong>を受けた者をいいます（民法7条・8条）。「事理を弁識する能力を欠く常況」とは、日常の買い物すら自分で適切に判断できないような重篤な状態（重度の認知症、重度の知的障害・精神障害など）が通常の状態として継続していることを指します。ときどき回復する瞬間があっても、常況として欠いていればこれに該当します。</p>
+        <p>成年被後見人の行った法律行為は、原則として<strong>すべて取り消すことができます</strong>（9条本文）。<strong class="warn">成年後見人に同意権はありません</strong>。事理弁識能力を欠く常況にある者に事前に同意を与えても意味がないからです。したがって、後見人の同意を得ていたとしても、その行為は取り消せます。</p>
+        <p>例外として、<strong><mark class="kw">日用品の購入その他日常生活に関する行為</mark></strong>（9条ただし書）は取り消せません。コンビニでの食料購入・公共交通機関の利用などがこれに当たります。本人の日常生活の自立を尊重するための例外です。</p>
+        <p>成年後見人（保護者）の権限：<strong>代理権・取消権・追認権</strong>を持ちます（同意権はなし）。成年後見人は<strong>法定代理人</strong>として、被後見人を代理して法律行為を行うことができます（859条）。</p>
+        <p>後見開始の審判の申立権者：本人・配偶者・四親等内の親族・未成年後見人・未成年後見監督人・保佐人・保佐監督人・補助人・補助監督人・検察官。<strong class="warn">補助開始の審判と異なり、本人の同意は審判の要件ではありません。</strong></p>
+    </div>
+</div>
+
+<!-- 被保佐人 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">被保佐人（民法11条〜15条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">被保佐人</mark></strong>とは、<strong>精神上の障害により事理を弁識する能力が著しく不十分である者</strong>であって、家庭裁判所から<strong><mark class="kw">保佐開始の審判</mark></strong>を受けた者をいいます（民法11条・12条）。成年被後見人より程度が軽く、日常の買い物は自分でできるが、不動産の売買・借金・相続の承認・放棄などの重要な財産行為については適切な判断ができない状態を指します（中程度の認知症などがイメージされます）。</p>
+        <p>被保佐人は、<strong><mark class="kw">民法13条1項</mark></strong>に列挙された重要な行為について、<strong>保佐人の同意</strong>を得なければなりません。同意を得ずにした行為は取り消すことができます（13条4項）。13条1項の主な行為は以下のとおりです。</p>
+        <ul>
+            <li>元本の領収または利用（金銭の貸し借りの受領・利用）</li>
+            <li>借財または保証（借金・保証人になること）</li>
+            <li>不動産その他重要な財産についての権利の得喪を目的とする行為</li>
+            <li>訴訟行為（民事訴訟上の原告・被告としての行為）</li>
+            <li>贈与・和解・仲裁合意</li>
+            <li>相続の承認または放棄、遺産の分割</li>
+            <li>贈与・遺贈の拒絶または負担付贈与・負担付遺贈の受諾</li>
+            <li>新築・改築・増築・大修繕</li>
+            <li>民法602条（短期賃貸借）に定める期間を超える賃貸借（土地5年超、建物3年超、動産6か月超）</li>
+            <li>上記1〜9の行為を制限行為能力者の法定代理人としてすること</li>
+        </ul>
+        <p>保佐人の権限：原則として<strong>同意権・取消権・追認権</strong>を持ちます。<strong class="warn">代理権は原則なし。</strong>ただし、家庭裁判所の<strong>代理権付与の審判</strong>（876条の4）により特定の行為について代理権が付与されることがあります。代理権付与の審判をするには、<strong><mark class="kw-red">本人以外の者の請求による場合には本人の同意が必要</mark></strong>です（876条の4第2項）。</p>
+    </div>
+</div>
+
+<!-- 被補助人 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">被補助人（民法15条〜18条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">被補助人</mark></strong>とは、<strong>精神上の障害により事理を弁識する能力が不十分である者</strong>であって、家庭裁判所から<strong><mark class="kw">補助開始の審判</mark></strong>を受けた者をいいます（民法15条・16条）。4類型の中で最も判断能力の衰えが軽度であり、本人の自己決定権の尊重が最も重視されます。</p>
+        <p>被補助人の制度の特徴は、<strong>保護の内容が最初から自動的に決まるわけではない</strong>点にあります。補助が開始しただけでは補助人には原則として何の権限も与えられません。補助人が権限を持つには、別途、家庭裁判所から<strong>同意権付与の審判</strong>または<strong>代理権付与の審判</strong>を受ける必要があります（17条・876条の9）。</p>
+        <p>同意権付与の審判があった場合、被補助人は、その審判で指定された<strong>民法13条1項の行為の一部</strong>について、補助人の同意を得なければなりません。同意なしでした行為は取り消すことができます（17条4項）。</p>
+        <p>重要な手続的要件：<strong class="warn">補助開始の審判と同意権付与・代理権付与の審判は、いずれも本人以外の者の請求による場合、本人の同意が必要です（15条2項・17条2項・876条の9第2項）。</strong>これは被保佐人（代理権付与のみ本人同意が必要）と異なる点であり、試験での頻出比較ポイントです。</p>
+    </div>
+</div>
+
+<!-- 相手方の保護（催告権） -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">相手方の保護①：催告権（民法20条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>最頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p>制限行為能力者と取引した相手方は、取り消されるかもしれないという不安定な立場に置かれます。そのため民法は、相手方に<strong><mark class="kw">催告権</mark></strong>を認め（民法20条）、「追認するかどうか、1か月以上の期間内に確答せよ」と催告できるようにしました。</p>
+        <p><strong>①保護者（法定代理人・保佐人・補助人）に対して催告した場合</strong>：確答がない場合は<strong><mark class="kw">追認とみなされます</mark></strong>（20条1項・2項）。保護者は権限者なので、期間内に対処できるはずという判断です。</p>
+        <p><strong>②被保佐人・被補助人に対して直接催告した場合</strong>：確答がない場合は<strong><mark class="kw">取消しとみなされます</mark></strong>（20条4項）。判断能力が不十分な本人への催告で「確答なし＝追認」にすると本人が不利になるため、取消みなしとしています。</p>
+        <p><strong class="warn">③未成年者・成年被後見人に対しては、直接催告しても効力がありません（98条の2）。</strong>意思表示の受領能力がないとされるためです。これらの者に対する催告は無効であり、保護者に対して催告する必要があります。</p>
+        <p><strong>行為能力者となった後（例：未成年者が成年に達した後）に本人に催告した場合</strong>：確答がない場合は<strong>追認とみなされます</strong>（20条1項）。もはや制限行為能力者でないため保護の必要がなく、「確答なし＝追認」で有効確定します。</p>
+    </div>
+</div>
+
+<!-- 詐術 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">相手方の保護②：詐術（民法21条）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">詐術</mark></strong>とは、制限行為能力者が自分を行為能力者であると相手方に誤信させるために用いる欺罔手段をいいます。制限行為能力者が詐術を用いた場合、その行為を取り消すことができません（民法21条）。制限行為能力者を保護する制度を悪用して相手方を騙した場合に、制度の保護を受けさせるのは不当だからです。</p>
+        <p>詐術の具体例：未成年者が親の同意書を偽造して提示した、成年後見の登記がないことを証する書面を偽造して提示した、など。</p>
+        <p><strong>判例（最判昭44.2.13）</strong>による重要な補足：<strong class="warn">「単に制限行為能力者であることを黙秘する（黙っている）だけでは詐術にあたらない。しかし、黙秘が他の言動と相まって相手方を誤信させ、または誤信を強めたと認められるときは詐術にあたる。」</strong></p>
+        <p>試験頻出の比較：「黙秘のみ」→詐術にあたらず取消可能。「黙秘＋他の言動による誤信強化」→詐術に該当し取消不可。この判例は行政書士試験で繰り返し出題されています（最判昭44.2.13は選択肢の素材として頻出）。</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第3節 概念関係図 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+        <h2>概念関係図</h2>
+        <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+</header>
+
+<p>制限行為能力者制度の全体構造を把握するために、2つの図を示します。第1図は4類型の全体的な位置づけを、第2図は相手方保護（催告権）の仕組みを視覚化しています。</p>
+
+<!-- 図1 -->
+<div class="diagram-wrap">
+<!-- 
+STEP A ノード一覧:
+N01: 制限行為能力者制度（root）: 幅=184, 高56, L0
+N02: 未成年者（cat）: 幅=130, 高56, L1
+N03: 成年被後見人（cat）: 幅=152, 高56, L1
+N04: 被保佐人（cat）: 幅=130, 高56, L1
+N05: 被補助人（cat）: 幅=130, 高56, L1
+
+STEP B:
+SVG幅= max(184+80, 130+152+130+130 + 3×16+80) = max(264, 670) = 670
+N01: x=(670-184)/2=243, y=30
+L1 nodes: 総幅=130+152+130+130=542, 余り=670-80-542=48, gap=48/3=16
+N02: x=40, y=186
+N03: x=40+130+16=186, y=186
+N04: x=186+152+16=354, y=186
+N05: x=354+130+16=500, y=186
+
+コネクタ(扇状):
+親中央下端: x=335, y=86
+共通Y=140
+N02中央: x=105, N03中央: x=262, N04中央: x=419, N05中央: x=565
+
+STEP C衝突確認:
+N02[40,186,130,56] N03[186,186,152,56]: 40+130+16=186 ≤ 186 OK（ちょうど16px）
+N03[186..] N04[354..]: 186+152+16=354 ≤ 354 OK
+N04[354..] N05[500..]: 354+130+16=500 ≤ 500 OK
+全OK
+
+STEP D コネクタ:
+幹線: (335,86)→(335,140) 垂直
+水平枝: (105,140)→(565,140)
+各子: (105,140)→(105,186) (262,140)→(262,186) (419,140)→(419,186) (565,140)→(565,186)
+矢印補正-8px: 各子 y2=178
+
+STEP E:
+viewBox高= 186+56+80 = 322
+viewBox= 0 0 670 322
+縮小率=780/670=1.16 > 0.55 OK
+-->
+<svg width="100%" viewBox="0 0 670 322" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+  <defs>
+    <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+    </marker>
+    <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- コネクタ先に描画（z-orderでノードの背面へ） -->
+  <!-- 扇状: 親下辺→共通Y -->
+  <line x1="335" y1="86" x2="335" y2="140" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- 水平枝 -->
+  <line x1="105" y1="140" x2="565" y2="140" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- 各子への矢印（矢印補正8px: y2=186-8=178） -->
+  <line x1="105" y1="140" x2="105" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="262" y1="140" x2="262" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="419" y1="140" x2="419" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="565" y1="140" x2="565" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- ノード N01（root）: x=243 y=30 w=184 h=56 -->
+  <g>
+    <rect x="243" y="30" width="184" height="56" rx="8" fill="#1d4ed8"/>
+    <text x="335" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">制限行為能力者制度</text>
+    <text x="335" y="75" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法4条〜21条</text>
+  </g>
+
+  <!-- N02 未成年者: x=40 y=186 w=130 h=56 -->
+  <g>
+    <rect x="40" y="186" width="130" height="56" rx="6" fill="#2563eb"/>
+    <text x="105" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">未成年者</text>
+    <text x="105" y="231" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法4条・5条</text>
+  </g>
+
+  <!-- N03 成年被後見人: x=186 y=186 w=152 h=56 -->
+  <g>
+    <rect x="186" y="186" width="152" height="56" rx="6" fill="#2563eb"/>
+    <text x="262" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">成年被後見人</text>
+    <text x="262" y="231" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法7条〜10条</text>
+  </g>
+
+  <!-- N04 被保佐人: x=354 y=186 w=130 h=56 -->
+  <g>
+    <rect x="354" y="186" width="130" height="56" rx="6" fill="#ea580c"/>
+    <text x="419" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">被保佐人</text>
+    <text x="419" y="231" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法11条〜15条</text>
+  </g>
+
+  <!-- N05 被補助人: x=500 y=186 w=130 h=56 -->
+  <g>
+    <rect x="500" y="186" width="130" height="56" rx="6" fill="#ea580c"/>
+    <text x="565" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">被補助人</text>
+    <text x="565" y="231" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法15条〜18条</text>
+  </g>
+
+  <!-- 注記エリア -->
+  <rect x="20" y="262" width="630" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="335" y="283" text-anchor="middle" font-size="12" fill="#9f1239">保護の必要度：未成年者（年齢基準）　成年被後見人（最重度）　被保佐人（中度）　被補助人（軽度）</text>
+  <text x="335" y="300" text-anchor="middle" font-size="12" fill="#9f1239">未成年者以外の3類型は家庭裁判所の「開始の審判」が必要</text>
+</svg>
+</div>
+
+<p>上図は制限行為能力者制度の4類型の位置づけを示しています。未成年者は年齢という客観的事実のみで類型化されますが、成年被後見人・被保佐人・被補助人は家庭裁判所の審判という手続きを経て確定します。青色ノード（未成年者・成年被後見人）は制限が広く、橙色ノード（被保佐人・被補助人）は制限が比較的限定的です。</p>
+
+<!-- 図2：催告権の仕組み -->
+<div class="diagram-wrap">
+<!--
+STEP A ノード（催告権の図）:
+N01: 相手方（root）: 幅=120, 高52, L0 → 中央
+N02: 保護者に催告（key）: 幅=168, 高52, L1左
+N03: 被保佐人・被補助人に催告（key）: 幅=240, 高52, L1右
+N04: 追認とみなす（effect）: 幅=160, 高52, L2左
+N05: 取消しとみなす（effect）: 幅=160, 高52, L2右
+
+STEP B:
+SVG幅: 左右2列でL1左=168, L1右=240、余白考慮。SVGを700に設定。
+N01: x=(700-120)/2=290, y=30
+N02: x=40, y=182
+N03: x=420, y=182
+N04: x=40+4=44, y=334（N02下端182+52=234、+100=334）
+N05: x=420+40=460, y=334
+
+コネクタ:
+N01下辺中央=(350,82) → 分岐
+→N02上辺中央=(124,182): polyline (350,82)→(350,132)→(124,132)→(124,174)
+→N03上辺中央=(540,182): polyline (350,82)→(350,132)→(540,132)→(540,174)
+N02下辺中央=(124,234)→N04上辺中央=(124,334-8=326): line
+N03下辺中央=(540,234)→N05上辺中央=(540,334-8=326): line
+
+N04幅=160: x=44, 中央=44+80=124 OK
+N05幅=160: x=420+40=460, 中央=460+80=540 OK
+
+衝突チェック:
+L1: N02[40,182,168,52] N03[420,182,240,52]: 40+168+16=224 ≤ 420 OK
+L2: N04[44,334,160,52] N05[460,334,160,52]: 44+160+16=220 ≤ 460 OK
+
+viewBox高= 334+52+70 = 456
+viewBox = 0 0 700 456
+縮小率=780/700=1.11 > 0.55 OK
+-->
+<svg width="100%" viewBox="0 0 700 456" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+  <defs>
+    <marker id="arr-solid2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+    </marker>
+    <marker id="arr-red2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+    </marker>
+  </defs>
+
+  <!-- コネクタ（ノードより先） -->
+  <!-- N01→N02: (350,82)→(350,132)→(124,132)→(124,174) -->
+  <polyline points="350,82 350,132 124,132 124,174" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid2)"/>
+  <!-- N01→N03: (350,82)→(350,132)→(540,132)→(540,174) -->
+  <polyline points="350,82 350,132 540,132 540,174" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid2)"/>
+  <!-- N02→N04: (124,234)→(124,326) -->
+  <line x1="124" y1="234" x2="124" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <!-- N03→N05: (540,234)→(540,326) -->
+  <line x1="540" y1="234" x2="540" y2="326" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-red2)"/>
+
+  <!-- ラベル -->
+  <rect x="30" y="120" width="64" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="62" y="134" text-anchor="middle" font-size="13" fill="#1d4ed8">催告先①</text>
+  <rect x="556" y="120" width="64" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="588" y="134" text-anchor="middle" font-size="13" fill="#1d4ed8">催告先②</text>
+  <rect x="60" y="278" width="60" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+  <text x="90" y="292" text-anchor="middle" font-size="13" fill="#ea580c">確答なし</text>
+  <rect x="510" y="278" width="60" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+  <text x="540" y="292" text-anchor="middle" font-size="13" fill="#e11d48">確答なし</text>
+
+  <!-- N01 相手方: x=290 y=30 w=120 h=52 -->
+  <g>
+    <rect x="290" y="30" width="120" height="52" rx="8" fill="#1d4ed8"/>
+    <text x="350" y="53" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">相手方</text>
+    <text x="350" y="73" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法20条</text>
+  </g>
+
+  <!-- N02 保護者に催告: x=40 y=182 w=168 h=52 -->
+  <g>
+    <rect x="40" y="182" width="168" height="52" rx="6" fill="#2563eb"/>
+    <text x="124" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">保護者に催告</text>
+    <text x="124" y="225" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">法定代理人・保佐人・補助人</text>
+  </g>
+
+  <!-- N03 被保佐人・被補助人に直接催告: x=420 y=182 w=240 h=52 -->
+  <g>
+    <rect x="420" y="182" width="240" height="52" rx="6" fill="#2563eb"/>
+    <text x="540" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">被保佐人・被補助人に催告</text>
+    <text x="540" y="225" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">本人への直接催告（20条4項）</text>
+  </g>
+
+  <!-- N04 追認とみなす: x=44 y=334 w=160 h=52 -->
+  <g>
+    <rect x="44" y="334" width="160" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="124" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">追認とみなす</text>
+    <text x="124" y="377" text-anchor="middle" fill="#7c2d12" font-size="12">有効確定（20条1項・2項）</text>
+  </g>
+
+  <!-- N05 取消しとみなす: x=460 y=334 w=160 h=52 -->
+  <g>
+    <rect x="460" y="334" width="160" height="52" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+    <text x="540" y="357" text-anchor="middle" fill="#9f1239" font-size="15" font-weight="700">取消しとみなす</text>
+    <text x="540" y="377" text-anchor="middle" fill="#9f1239" font-size="12">無効確定（20条4項）</text>
+  </g>
+
+  <!-- 注記エリア -->
+  <rect x="20" y="400" width="660" height="44" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="350" y="418" text-anchor="middle" font-size="12" fill="#9f1239">※未成年者・成年被後見人には直接催告できない（98条の2：意思表示の受領能力なし）</text>
+  <text x="350" y="436" text-anchor="middle" font-size="12" fill="#9f1239">※行為能力者になった後の本人への催告→確答なし→追認とみなす（20条1項）</text>
+</svg>
+</div>
+
+<p>第2図は催告権の仕組みを整理しています。催告先と確答がない場合の効果の組み合わせが試験で問われます。特に「被保佐人・被補助人への直接催告→確答なし→取消しみなし」という逆転の構造（通常は「確答なし→追認」なのに）が重要です。未成年者と成年被後見人への直接催告は無効という点も合わせて確認してください。</p>
+</section>
+
+<!-- ===== 第4節 比較表 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+        <h2>比較表</h2>
+        <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+</header>
+
+<h3>4類型の詳細比較</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">未成年者</th>
+            <th class="col--b">成年被後見人</th>
+            <th class="col--c">被保佐人</th>
+            <th class="col--d">被補助人</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>要件</td>
+            <td class="col--a"><strong class="em-a">18歳未満</strong>（年齢基準のみ）</td>
+            <td class="col--b">精神上の障害→事理弁識能力を<strong class="em-b">欠く常況</strong></td>
+            <td class="col--c">精神上の障害→事理弁識能力が<strong class="em-c">著しく不十分</strong></td>
+            <td class="col--d">精神上の障害→事理弁識能力が<strong class="em-d">不十分</strong></td>
+        </tr>
+        <tr>
+            <td class="col--label">根拠条文</td>
+            <td class="col--a">4条・5条</td>
+            <td class="col--b">7条〜10条</td>
+            <td class="col--c">11条〜15条</td>
+            <td class="col--d">15条〜18条</td>
+        </tr>
+        <tr>
+            <td class="col--label">開始の手続</td>
+            <td class="col--a">不要（年齢で自動的に確定）</td>
+            <td class="col--b"><strong class="em-b">後見開始の審判</strong></td>
+            <td class="col--c"><strong class="em-c">保佐開始の審判</strong></td>
+            <td class="col--d"><strong class="em-d">補助開始の審判</strong>（本人同意必要）</td>
+        </tr>
+        <tr>
+            <td class="col--label">保護者</td>
+            <td class="col--a">親権者または<strong class="em-a">未成年後見人</strong>（法定代理人）</td>
+            <td class="col--b"><strong class="em-b">成年後見人</strong>（法定代理人）</td>
+            <td class="col--c"><strong class="em-c">保佐人</strong></td>
+            <td class="col--d"><strong class="em-d">補助人</strong></td>
+        </tr>
+        <tr>
+            <td class="col--label">同意権</td>
+            <td class="col--a"><strong class="em-a">あり</strong>（全行為が原則対象）</td>
+            <td class="col--b"><strong class="em-b">なし</strong>（同意権は認められない）</td>
+            <td class="col--c"><strong class="em-c">あり</strong>（13条1項列挙行為）</td>
+            <td class="col--d">原則なし→<strong class="em-d">審判で付与</strong>（13条1項の一部）</td>
+        </tr>
+        <tr>
+            <td class="col--label">代理権</td>
+            <td class="col--a"><strong class="em-a">あり</strong>（包括的代理権）</td>
+            <td class="col--b"><strong class="em-b">あり</strong>（包括的代理権）</td>
+            <td class="col--c">原則なし→<strong class="em-c">審判で付与可</strong></td>
+            <td class="col--d">原則なし→<strong class="em-d">審判で付与可</strong></td>
+        </tr>
+        <tr>
+            <td class="col--label">取消権</td>
+            <td class="col--a"><strong class="em-a">あり</strong>（本人・法定代理人）</td>
+            <td class="col--b"><strong class="em-b">あり</strong>（本人・後見人）</td>
+            <td class="col--c"><strong class="em-c">あり</strong>（13条1項行為につき）</td>
+            <td class="col--d"><strong class="em-d">あり</strong>（審判で指定された行為につき）</td>
+        </tr>
+        <tr>
+            <td class="col--label">取消不可の例外</td>
+            <td class="col--a">単に権利を得る行為・処分許可財産・許可営業</td>
+            <td class="col--b"><strong class="em-b">日用品購入等の日常行為</strong></td>
+            <td class="col--c">13条1項以外の行為（原則単独OK）</td>
+            <td class="col--d">審判で指定されていない行為</td>
+        </tr>
+        <tr>
+            <td class="col--label">催告の可否</td>
+            <td class="col--a">本人へ：<strong class="em-a">不可（無効）</strong></td>
+            <td class="col--b">本人へ：<strong class="em-b">不可（無効）</strong></td>
+            <td class="col--c">本人へ：<strong class="em-c">可</strong>（確答なし→取消みなし）</td>
+            <td class="col--d">本人へ：<strong class="em-d">可</strong>（確答なし→取消みなし）</td>
+        </tr>
+        <tr>
+            <td class="col--label">開始審判の本人同意</td>
+            <td class="col--a">不要</td>
+            <td class="col--b">不要</td>
+            <td class="col--c">不要</td>
+            <td class="col--d"><strong class="em-d">必要</strong>（15条2項）</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>催告権まとめ比較</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">催告先</th>
+            <th class="col--a">確答あり（追認）</th>
+            <th class="col--b">確答あり（取消し）</th>
+            <th class="col--c">確答なしの場合の効果</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label">保護者</td>
+            <td class="col--a"><strong class="em-a">有効確定</strong></td>
+            <td class="col--b"><strong class="em-b">無効確定</strong></td>
+            <td class="col--c"><strong class="em-c">追認とみなす</strong>（有効確定）</td>
+        </tr>
+        <tr>
+            <td class="col--label">行為能力者となった本人</td>
+            <td class="col--a"><strong class="em-a">有効確定</strong></td>
+            <td class="col--b"><strong class="em-b">無効確定</strong></td>
+            <td class="col--c"><strong class="em-c">追認とみなす</strong>（有効確定）</td>
+        </tr>
+        <tr>
+            <td class="col--label">被保佐人・被補助人本人</td>
+            <td class="col--a">追認を得た旨通知→有効確定</td>
+            <td class="col--b">取消し通知→無効確定</td>
+            <td class="col--c"><strong class="em-c">取消しとみなす</strong>（無効確定）</td>
+        </tr>
+        <tr>
+            <td class="col--label">未成年者・成年被後見人本人</td>
+            <td class="col--a" colspan="3" style="text-align:center;"><strong class="em-a">催告は無効（98条の2）→保護者に催告し直す必要あり</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="box box--caution">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">warning</span>
+        <span class="box__label">試験で迷いやすいポイント</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">被保佐人・被補助人へ直接催告し、確答がない場合は「追認とみなす」ではなく「取消しとみなす」</strong>。通常の催告（保護者への催告で確答なし→追認みなし）と逆向きになることに注意。「判断能力が不十分な本人が黙っているということは、取消す意思があるはず」という趣旨です。</p>
+        <p><strong class="em-c">成年後見人に同意権はない</strong>。「後見人の同意を得てした行為も取り消せる」という命題は正しい。後見人の同意があっても被後見人を保護する必要があるからです。これは保佐人（同意権あり）との重要な違いです。</p>
+        <p><strong class="em-c">補助開始の審判には本人の同意が必要</strong>（後見・保佐開始の審判と異なる）。また補助人への同意権付与の審判・代理権付与の審判も、本人以外の者が請求する場合は本人の同意が必要（被保佐人は代理権付与のみ本人同意必要）。</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第5節 関連条文 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+        <h2>関連条文</h2>
+        <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+</header>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">民法4条・5条（未成年者）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            <strong>第4条（成年）</strong><br>
+            年齢<mark class="kw">18歳</mark>をもって、成年とする。<br><br>
+            <strong>第5条（未成年者の法律行為）</strong><br>
+            未成年者が法律行為をするには、その<mark class="kw">法定代理人の同意</mark>を得なければならない。ただし、<mark class="kw">単に権利を得、又は義務を免れる法律行為</mark>については、この限りでない。<br>
+            ２ 前項の規定に反する法律行為は、<mark class="kw">取り消す</mark>ことができる。<br>
+            ３ 第１項の規定にかかわらず、法定代理人が<mark class="kw">目的を定めて処分を許した財産</mark>は、その目的の範囲内において、未成年者が自由に処分することができる。目的を定めないで処分を許した財産を処分するときも、同様とする。
+        </blockquote>
+        <p>5条1項ただし書の「単に権利を得または義務を免れる行為」の解釈は慎重に行う必要があります。<strong><mark class="kw">負担付贈与の受諾</mark></strong>は義務も生じるため、同意が必要です。また、<strong><mark class="kw">賃金を領収する行為</mark></strong>は、本来は債権を持っているにすぎず、その受領により債権が消滅するため単に義務を免れる行為には当たらないとされ、法定代理人の同意が必要とされています（判例）。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">民法9条（成年被後見人の法律行為）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            成年被後見人の法律行為は、<mark class="kw">取り消すことができる</mark>。ただし、<mark class="kw">日用品の購入その他日常生活に関する行為</mark>については、この限りでない。
+        </blockquote>
+        <p>本条のポイントは2点です。第1に、成年被後見人の行為は<strong>成年後見人の同意の有無にかかわらず</strong>取り消すことができます。成年後見人には同意権がなく（7条・8条参照）、仮に同意していても無意味です。第2に、日用品の購入その他日常生活に関する行為は例外として取り消せません。<strong><mark class="kw">「日用品の購入」の範囲</mark></strong>は社会通念によって判断されますが、コンビニ・スーパーでの食料品・日用品購入、公共交通機関の利用などが典型例です。不動産の購入は「日常生活に関する行為」ではなく、取り消すことができます。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">民法13条1項（保佐人の同意を要する行為）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            被保佐人が次に掲げる行為をするには、その<mark class="kw">保佐人の同意</mark>を得なければならない。ただし、第九条ただし書に規定する行為については、この限りでない。<br>
+            一　元本を<mark class="kw">領収</mark>し、又は利用すること。<br>
+            二　<mark class="kw">借財</mark>又は保証をすること。<br>
+            三　不動産その他<mark class="kw">重要な財産</mark>に関する権利の得喪を目的とする行為をすること。<br>
+            四　<mark class="kw">訴訟行為</mark>をすること。<br>
+            五　<mark class="kw">贈与、和解又は仲裁合意</mark>をすること。<br>
+            六　<mark class="kw">相続の承認若しくは放棄</mark>又は遺産の分割をすること。<br>
+            七　贈与の申込みを拒絶し、遺贈を放棄し、負担付贈与の申込みを承諾し、又は負担付遺贈を承諾すること。<br>
+            八　<mark class="kw">新築、改築、増築</mark>又は大修繕をすること。<br>
+            九　第六百二条に定める期間を超える<mark class="kw">賃貸借</mark>をすること。（土地5年超・建物3年超・動産6か月超）<br>
+            十　前各号に掲げる行為を制限行為能力者（未成年者、成年被後見人、被保佐人及び第十七条第一項の審判を受けた被補助人をいう。以下同じ。）の<mark class="kw">法定代理人</mark>としてすること。
+        </blockquote>
+        <p>13条1項は「重要な財産行為」を列挙しています。試験では列挙されている行為かどうかを問う問題が出ます。注意点として、<strong><mark class="kw">第10号</mark></strong>（1〜9号の行為を制限行為能力者の法定代理人としてすること）は見落としがちです。また13条2項では、家庭裁判所の審判により13条1項以外の行為にも同意権の範囲を拡大できる旨が規定されています。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">民法20条（制限行為能力者の相手方の催告権）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            制限行為能力者の相手方は、その制限行為能力者が<mark class="kw">行為能力者となった後</mark>、その者に対し、<mark class="kw">1箇月以上の期間</mark>を定めて、その期間内にその取り消すことができる行為を追認するかどうかを確答すべき旨の催告をすることができる。この場合において、その者がその期間内に確答を発しないときは、その行為を<mark class="kw">追認したものとみなす</mark>。<br>
+            ２ 制限行為能力者の相手方が、制限行為能力者が行為能力者とならない間に、その<mark class="kw">法定代理人、保佐人又は補助人</mark>に対し、その権限内の行為について前項に規定する催告をした場合において、これらの者が同項の期間内に確答を発しないときも、同項後段と同様とする。（追認とみなす）<br>
+            ３ 特別の方式を要する行為については、その期間内にその方式を具備した旨の通知を発しないときは、その行為を取り消したものとみなす。<br>
+            ４ 制限行為能力者の相手方が、被保佐人又は被補助人に対し、その保佐人又は補助人の追認を得るべき旨の催告をした場合において、その被保佐人又は被補助人がその期間内に<mark class="kw">その追認を得た旨の通知を発しないとき</mark>は、その行為を<mark class="kw-red">取り消したものとみなす</mark>。
+        </blockquote>
+        <p>4項の「取消しとみなす」は、民法の取消みなしの中でも特に重要です。催告の結果が「追認みなし」になる場合（1項・2項）と「取消みなし」になる場合（4項）の違いを、催告先・状況との組み合わせで正確に把握してください。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">民法21条（制限行為能力者の詐術）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            制限行為能力者が<mark class="kw">行為能力者であることを信じさせるため詐術を用いたとき</mark>は、その行為を取り消すことができない。
+        </blockquote>
+        <p>「行為能力者であることを信じさせるため詐術を用いた」の要件は2つです。①<strong>行為能力者であると相手方を誤信させる</strong>こと、②<strong>詐術（欺罔手段）を用いた</strong>こと。判例（最判昭44.2.13）は、黙秘のみでは詐術に当たらないが、他の言動と相まって誤信させた場合は詐術に当たるとしています。詐術があれば、相手方が悪意（制限行為能力者と知っていた場合）であっても取消不可となるかが問題になることがあります。通説・判例は、相手方が悪意（偽造を知っていた）の場合は詐術による取消制限の適用がないとします。</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第6節 重要判例 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+        <h2>重要判例</h2>
+        <p class="sec-head__sub">Important Precedents</p>
+    </div>
+</header>
+
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所　昭和44年2月13日判決　民集23巻2号291頁</div>
+        <div class="case-card__title">制限行為能力者の詐術と「黙秘」（最判昭44.2.13）</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★★ 最重要</span>
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+            <span class="badge badge--law">民法21条</span>
+            <span class="badge badge--law">詐術</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>未成年者であるXが、売買契約の締結にあたり、自ら年齢を積極的に偽ったわけではないが、相手方Yから年齢について問われなかったため黙っていた。ところがXには他の言動（態度・服装・状況など）があり、それらが相まってYはXが成年者であると信じた。後にXの未成年が判明し、Xの法定代理人が取消しを主張した。</p>
+        <h4>判旨</h4>
+        <p>最高裁は、<strong><mark class="kw">「制限行為能力者であることを黙秘することのみでは詐術にあたらない」</mark></strong>とした上で、<strong><mark class="kw">「ただし、黙秘が制限行為能力者の他の言動などと相まって、相手方を誤信させ、または誤信を強めたものと認められるときは、詐術にあたる」</mark></strong>と判示しました。すなわち、詐術の成立には<em>黙秘＋他の言動による誤信の作出・強化</em>が必要であり、黙秘単独では詐術ではないが、他の言動が加わることで詐術と評価されることがある、という二段階の基準を示したものです。</p>
+        <h4>試験上の意義</h4>
+        <p>行政書士試験では「未成年者が制限行為能力者であることを黙秘した場合は詐術に当たり取消しができなくなる」という誤った選択肢が頻出します。<strong><mark class="kw-red">黙秘のみ→詐術に当たらず→取消し可能</mark></strong>という結論を覚えてください。「他の言動と相まって誤信させた場合」という付加条件があって初めて詐術になります。また、「積極的に偽った場合（運転免許証の偽造提示等）」は当然に詐術に当たります。この判例のルールはそこまで要求せず、「黙秘のみ」は詐術でないと限定しているものです。</p>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所　昭和37年4月20日判決（成年被後見人の日常行為に関する裁判例群）</div>
+        <div class="case-card__title">成年後見人の同意と取消し可否に関する解釈</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★ 重要</span>
+            <span class="badge badge--law">民法9条</span>
+            <span class="badge badge--law">成年被後見人</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>成年被後見人Aが、成年後見人Bから事前に同意を得た上で、第三者Cと売買契約を締結した。後にAまたはBが「成年被後見人のした行為」として取消しを主張した場面で、「後見人の同意があれば取り消せないのではないか」という相手方の主張が問題となった。</p>
+        <h4>判旨・解釈</h4>
+        <p>民法9条の文言と立法趣旨から、<strong><mark class="kw">成年後見人の同意を得ていた場合でも、成年被後見人の法律行為は取り消すことができる</mark></strong>と解されています。理由は、<em>成年後見人には同意権が認められていない</em>（7条・8条参照）からです。事理弁識能力を欠く常況にある者に同意を与えることは、その状況で有効な意思決定ができない以上意味をなしません。後見人の役割は同意権行使ではなく代理権の行使によって被後見人を保護することであり、被後見人自身の行為は事後的に取消しで対処する、というのが民法の設計です。</p>
+        <h4>試験上の意義</h4>
+        <p><strong><mark class="kw-red">「成年後見人が同意した行為は取り消すことができない」→誤り</mark></strong>という出題が非常に多い。「同意があっても取り消せる」というカウンター知識を確実に持つことが必要です。被保佐人（保佐人の同意があれば取り消せない、13条4項）との対比でセットで理解するのが効果的です。</p>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所　昭和56年判決　（営業許可と法律行為の範囲）</div>
+        <div class="case-card__title">営業を許された未成年者の行為能力の範囲</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★ 重要</span>
+            <span class="badge badge--law">民法6条</span>
+            <span class="badge badge--law">未成年者</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>法定代理人から「飲食店の経営」という特定の営業を許可された未成年者Xが、その飲食店の営業に関連して、食材の仕入れ・従業員の雇用・設備の賃借などの契約を法定代理人の個別の同意なしに締結した。第三者との紛争において、Xの行為が有効かどうかが問題となった。</p>
+        <h4>判旨・解釈</h4>
+        <p>民法6条1項により、<strong><mark class="kw">一種または数種の営業を許可された未成年者は、その営業に関する行為についてはすべて成年者と同一の行為能力を有する</mark></strong>とされています。したがって、許可された営業の範囲内であれば、法定代理人の個別の同意なしに法律行為を有効に行うことができます。「営業に関する行為」は広く解され、当該営業を遂行するために通常必要とされる行為が含まれます。営業の範囲を超えた行為（例：別の事業への投資）は許可の範囲外であり、法定代理人の同意が必要です。</p>
+        <h4>試験上の意義</h4>
+        <p>営業許可は「特定の営業」を単位として与えられ、その営業に関するすべての行為について行為能力が認められます。<strong><mark class="kw-red">「営業を許された未成年者は一般的に行為能力が制限されなくなる」というのは誤り</mark></strong>で、あくまでその許可された営業の範囲内に限られます。また、法定代理人が営業の許可を取り消したり制限したりできる場合があります（6条2項・3項）が、善意の第三者には対抗できません。</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第7節 試験対策ポイント ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+        <h2>試験対策ポイント</h2>
+        <p class="sec-head__sub">Examination Points</p>
+    </div>
+</header>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出テーマ①：成年後見人の同意権の有無</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">問い：成年後見人は被後見人の行為に同意を与えることができるか？</strong></p>
+        <p>正答：<strong>できない。</strong>成年後見人には同意権が認められていません（民法7条・8条・9条）。したがって、後見人が事前に同意していても、被後見人の行為は取り消すことができます。これは保佐人（同意権あり）・補助人（審判で付与されれば同意権あり）と異なる決定的な差異です。試験の選択肢では「成年後見人の同意を得た行為は取り消すことができない」という誤った記述が頻出します。</p>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出テーマ②：補助開始の審判と本人同意</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">問い：補助開始の審判をするには、常に本人の同意が必要か？</strong></p>
+        <p>正答：<strong>本人以外の者が請求する場合にのみ、本人の同意が必要です（15条2項）。</strong>本人自身が請求する場合は自らが望んでいるため同意は当然不要です。後見開始・保佐開始の審判では本人の同意は要件とされていません（成年被後見人・被保佐人は判断能力が低いため同意を必須とすると制度が機能しない）。補助だけに本人同意が必要とされるのは、補助の対象者はある程度判断能力があり自己決定権の尊重が重視されるからです。</p>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出テーマ③：催告権と確答なしの効果</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">問い：被保佐人に直接催告して確答がなかった場合の効果は何か？</strong></p>
+        <p>正答：<strong>取消しとみなされます（20条4項）。</strong>これは通常の催告（保護者への催告→確答なし→追認みなし）と逆の結果です。被保佐人・被補助人は判断能力が不十分なため、「確答なし＝追認意思」と解することが不利になるため取消みなしとされています。記述式でも「被保佐人に対して追認を得るべき旨催告したが確答がない場合の効果を述べよ」という形で出題されます。</p>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出テーマ④：未成年者が単独でできる行為の例外</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">問い：次のうち未成年者が法定代理人の同意なしに単独で有効にできる行為はどれか？</strong></p>
+        <p>①債務の免除を受けること　②負担付贈与を受諾すること　③賃金を領収すること　④コンビニでジュースを買うこと</p>
+        <p>正答：<strong>①と④。</strong>②は義務（負担）が生じるため単に権利を得る行為ではなく同意が必要です。③は「単に賃金債権を受け取る」ことは「義務を免れる行為」ではなく（債権消滅は利益）、判例上同意が必要とされています。④は日常生活における行為であり少額であることから許されます（処分許可財産の処分に準じる実務的解釈）。</p>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">warning</span>
+        <span class="box__label">他分野との横断ポイント</span>
+    </div>
+    <div class="box__bd">
+        <p><strong>取消しの遡及効・追認との関係（民法120条〜126条）</strong>：取消しができるのは本人・法定代理人・保佐人・補助人・承継人に限られます（120条）。取消しは善意の第三者にも対抗できる点で詐欺・強迫による取消し（96条3項：善意の第三者に対抗不可）と異なります。</p>
+        <p><strong>取消権の時効消滅（126条）</strong>：取消権は「追認できる時から5年」または「行為の時から20年」の経過で消滅します。この「追認できる時」（制限行為能力の状態がなくなった時）の解釈も試験で問われることがあります。</p>
+        <p><strong>行政法との関係</strong>：成年被後見人は2019年の一般法整備により、一律に公務員等の欠格事由とされなくなりました（行政書士法上の欠格事由についても同様）。行政書士法5条の欠格事由との関係で確認しておいてください。</p>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">記述式問題の対策</span>
+    </div>
+    <div class="box__bd">
+        <p>記述式では「AがBに対して催告権を行使する場合、誰に対して、どのような内容で催告し、どのような結果が生じるか述べよ」という形式が典型的です。</p>
+        <p>解答の型：「<strong>〔保護者名〕に対し、〔期間〕以上の期間を定めて追認するかどうか確答するよう催告し、確答がない場合には〔追認/取消し〕とみなされる。</strong>」という構造で記述してください。「誰に」「どんな期間」「確答なしの効果」の3要素を必ず含めることが採点上のポイントです。</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第8節 補足情報 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+        <h2>補足情報</h2>
+        <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+</header>
+
+<div class="box box--example">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">history</span>
+        <span class="box__label">立法経緯と2022年改正</span>
+    </div>
+    <div class="box__bd">
+        <p>制限行為能力者制度の前身は、明治民法の<strong>禁治産者・準禁治産者</strong>制度です。禁治産者（現：成年被後見人）は判断能力を欠く者、準禁治産者（現：被保佐人）は心神耗弱者・浪費者でした。2000年の成年後見制度改正で<strong>被補助人が新設</strong>されるとともに、浪費者は保佐開始の審判の対象から除外されました。</p>
+        <p><strong>2022年4月施行の成年年齢引下げ</strong>（民法4条改正）により、未成年者の範囲が20歳未満から<strong>18歳未満</strong>に変更されました。これにより18歳・19歳は成年として扱われ、親権者の同意なしに契約を締結できます。ただし飲酒・喫煙・公営ギャンブルは従来どおり20歳以上が条件のまま維持されています（これらは民法上の問題ではなく個別法の問題）。</p>
+        <p><strong>2019年の欠格条項整備</strong>により、成年被後見人・被保佐人に関する国家資格・公職の一律欠格事由が撤廃されました。行政書士についても、行政書士法上の欠格事由から成年被後見人・被保佐人の文言が削除され、個別の判断が求められるようになっています。</p>
+    </div>
+</div>
+
+<div class="box box--example">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">info</span>
+        <span class="box__label">学習法・整理のポイント</span>
+    </div>
+    <div class="box__bd">
+        <p><strong>4類型の縦断的理解</strong>：4類型を「保護の強さの序列」（成年被後見人＞被保佐人＞被補助人）として捉えることで、保護者の権限（同意権の有無・代理権の範囲）の設計が理解しやすくなります。保護が強いほど本人の自由が制限され、保護が弱いほど自己決定権が重視されます。</p>
+        <p><strong>同意権・代理権・取消権の表を作る</strong>：4類型×3権限（同意権・代理権・取消権）の9セルの表を自分で作成し、各セルに「あり/なし/審判で付与」を書き込む作業を繰り返すことで、混乱しやすい権限体系を整理できます。特に「成年後見人に同意権なし」「保佐人に代理権は原則なし」という2つの例外は必ず覚えてください。</p>
+        <p><strong>催告権は「誰に催告したか」で覚える</strong>：催告権の仕組みは、催告先によって効果が変わります。①保護者への催告→確答なし→追認みなし、②被保佐人・被補助人への直接催告→確答なし→取消しみなし、③未成年者・成年被後見人への直接催告→無効、という3パターンを徹底して区別してください。</p>
+        <p><strong>詐術は「黙秘のみかどうか」で判断</strong>：判例（最判昭44.2.13）のルールは「黙秘のみ→詐術にあたらない、黙秘＋他の言動→詐術にあたりうる」です。「黙秘した→詐術→取消不可」という短絡的な思考は誤りで、常に「他の言動との組み合わせがあったか」を確認する習慣をつけてください。</p>
+    </div>
+</div>
+</section>
+
+</body>
+</html>

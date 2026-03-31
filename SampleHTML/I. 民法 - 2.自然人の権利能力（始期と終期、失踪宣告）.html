@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行政書士試験 学習ノート｜自然人の権利能力（始期と終期・失踪宣告）</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --purple-50:  #f5f3ff;
+    --purple-200: #ddd6fe;
+    --purple-600: #7c3aed;
+    --purple-900: #4c1d95;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight-blue:   #dbeafe;
+    --highlight-purple: #ede9fe;
+    --highlight-red:    #ffe4e6;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+
+mark.kw-blue   { background: var(--highlight-blue);   color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-purple { background: var(--highlight-purple); color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-red    { background: var(--highlight-red);    color: inherit; padding: .1em .3em; border-radius: 3px; }
+
+/* ── セクションヘッダ ── */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* ── コンテンツボックス ── */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1rem;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__icon { font-size: 16px; line-height: 1; }
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+
+.box--definition { border: 1px solid var(--purple-600); }
+.box--definition .box__hd { background: var(--purple-600); color: #fff; }
+.box--definition .box__bd { background: var(--purple-50); color: var(--purple-900); }
+
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+
+/* ── 比較テーブル ── */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th,
+.cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 8rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--purple-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--purple-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* ── バッジ ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--purple-50);  color: var(--purple-900); border: 1px solid var(--purple-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+
+/* ── SVG図コンテナ ── */
+.diagram-wrap {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+}
+.diagram-wrap svg {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ── ページヘッダ ── */
+.page-meta {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+/* ── 判例カード ── */
+.case-card {
+    border: 1px solid var(--blue-200);
+    border-radius: 6px;
+    margin: 1.25rem 0;
+    overflow: hidden;
+}
+.case-card__head {
+    background: var(--blue-900);
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.case-card__body {
+    background: var(--blue-50);
+    padding: .875rem 1.25rem;
+    font-size: .9rem;
+}
+.case-card__body dl { display: grid; grid-template-columns: 5rem 1fr; gap: .25rem .75rem; }
+.case-card__body dt { font-weight: 700; color: var(--text-secondary); font-size: .82rem; padding-top: .1rem; }
+.case-card__body dd { color: var(--text-primary); }
+
+/* ── ポイントリスト ── */
+.point-list { list-style: none; padding: 0; }
+.point-list li {
+    display: flex;
+    gap: .5rem;
+    align-items: flex-start;
+    padding: .3rem 0;
+    border-bottom: 1px solid var(--blue-100);
+    font-size: .9rem;
+}
+.point-list li:last-child { border-bottom: none; }
+.point-list .pi { color: var(--blue-600); font-size: 18px; flex-shrink: 0; margin-top: .15rem; }
+.point-list .pi--red { color: var(--red-600); }
+.point-list .pi--purple { color: var(--purple-600); }
+
+/* ── タイムライン ── */
+.timeline { position: relative; padding-left: 1.5rem; margin: 1rem 0; }
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: .5rem;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: var(--blue-200);
+}
+.tl-item { position: relative; margin-bottom: 1rem; }
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: -1.1rem;
+    top: .55rem;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--blue-600);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--blue-600);
+}
+.tl-label { font-size: .75rem; font-weight: 700; color: var(--blue-700); }
+.tl-text  { font-size: .9rem; color: var(--text-primary); }
+</style>
+</head>
+<body>
+
+<!-- ページヘッダ -->
+<div class="page-meta">
+    <span class="badge badge--info"><span class="material-icons-round" style="font-size:13px">gavel</span>民法総則</span>
+    <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>重要度 A</span>
+    <span class="badge badge--def"><span class="material-icons-round" style="font-size:13px">auto_stories</span>権利の主体</span>
+</div>
+
+<h1>自然人の権利能力<br><span style="font-size:1rem;font-weight:400;color:var(--text-secondary);">始期と終期・失踪宣告｜民法3条・30〜32条</span></h1>
+
+
+<!-- ══════════════════════════════════════════
+     第1節 単元の概要
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+        <h2>単元の概要</h2>
+        <p class="sec-head__sub">Unit Overview</p>
+    </div>
+</header>
+
+<p>民法は、権利や義務の帰属主体を「権利能力を有する者」に限定しています。つまり、<mark class="kw-purple">誰が契約を結べるか・誰が財産を持てるか</mark>というルールの出発点が「権利能力」です。行政書士試験では民法総則の冒頭に位置し、すべての法律行為の前提となる基礎知識として頻繁に問われます。</p>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span>身近な例で理解する</div>
+    <div class="box__bd">
+        赤ちゃんが生まれた瞬間、その子は親から贈与を受けたり相続したりする「資格」を得ます。これが<strong>権利能力の始期（出生）</strong>です。一方、人が亡くなると、その人はもはや不動産の所有者でも契約の当事者でもいられません。これが<strong>権利能力の終期（死亡）</strong>です。<br>
+        しかし、ある日突然行方不明になってしまった場合はどうするか——生死が確認できない状態が長期間続くと、家族が遺産を管理することも、婚姻関係を解消することもできません。そこで<strong>失踪宣告</strong>という制度が設けられています。
+    </div>
+</div>
+
+<p>本単元では、権利能力の発生と消滅をめぐる三つの核心論点（①始期の原則・胎児の例外、②終期としての死亡、③失踪宣告とその取消）を体系的に押さえます。</p>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>試験での出題傾向</div>
+    <div class="box__bd">
+        行政書士試験では民法9問中1〜2問が総則から出題され、本単元は単独問題または制限行為能力者との複合問題として頻出です。令和6年（2024年）本試験でも失踪宣告単独問題（問27）が出題されており正答率76.9%と比較的得点しやすい分野です。<strong>条文の数値（7年・1年）と死亡みなし時点の正確な暗記</strong>が鍵となります。
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     第2節 重要用語の解説
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+        <h2>重要用語の解説</h2>
+        <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+</header>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>権利能力（けんりのうりょく）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        私法上の権利義務の帰属主体となりうる地位または資格のことをいう（民法3条）。すべての<mark class="kw-purple">自然人（＝人間）</mark>と<mark class="kw-blue">法人</mark>に認められる。犬や猫などの動物は権利の客体にはなれるが、権利の主体にはなれない。<br>
+        <br>
+        <strong>意思能力・行為能力との違い：</strong>権利能力は「権利の主体になれる資格」、意思能力は「有効な意思表示をする能力（正常な判断力）」、行為能力は「単独で有効な法律行為ができる能力」。三者は完全に別概念。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>権利能力の始期（しき）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        自然人の権利能力は<mark class="kw-purple">出生の時</mark>に始まる（民法3条1項）。「出生」の意義については複数の学説があるが、民法の通説は<mark class="kw-blue">全部露出説</mark>（胎児の身体が母体から完全に分離した時）を採用する。刑法の通説（一部露出説）と異なる点に注意。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>権利能力の終期（しゅうき）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        自然人の権利能力は<mark class="kw-purple">死亡</mark>によって消滅する。民法上、人の終期に関する直接規定はないが、死亡と失踪宣告が権利能力を喪失する場面として規定されている。死亡の判定については脳死説・心臓死説等の学説があるが、実務上は戸籍上の死亡届が基準となる。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>失踪宣告（しっそうせんこく）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        不在者の生死が一定期間明らかでない場合に、<mark class="kw-blue">家庭裁判所</mark>が<mark class="kw-purple">利害関係人の請求</mark>により行う審判。失踪宣告を受けた者は<mark class="kw-red">死亡したものとみなされ</mark>（擬制死亡）、相続等の法律関係が処理される。ただし<strong>失踪宣告は擬制であり、本人の権利能力自体は消滅しない</strong>。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>普通失踪（ふつうしっそう）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        不在者の<mark class="kw-blue">生死が7年間明らかでない</mark>とき（民法30条1項）に宣告できる失踪。死亡みなしの時点は<mark class="kw-red">7年間の期間が満了した時</mark>（民法31条）。家出・行方不明などの一般的な失踪がこれにあたる。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>特別失踪（とくべつしっそう）</div>
+    <div class="box__bd">
+        <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        戦争・船舶沈没・震災などの<mark class="kw-blue">危難に遭遇した者</mark>の生死が危難が去った後<mark class="kw-blue">1年間明らかでない</mark>とき（民法30条2項）に宣告できる失踪。死亡みなしの時点は<mark class="kw-red">危難が去った時</mark>（民法31条）。普通失踪より短い期間で認められる。
+    </div>
+</div>
+
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>停止条件説と解除条件説</div>
+    <div class="box__bd">
+        <span class="badge badge--info"><span class="material-icons-round" style="font-size:13px">info</span>学説</span>
+        胎児に例外的に権利能力が認められる場合の解釈論。<br>
+        <strong>停止条件説（判例）：</strong>胎児の間は権利能力なし。<mark class="kw-blue">生きて出生したことを停止条件</mark>として、遡及的に権利能力を取得する（大判昭7.10.6）。したがって胎児の間は法定代理人が代理して行動できない。<br>
+        <strong>解除条件説（有力学説）：</strong>胎児の間も権利能力あり。<mark class="kw-purple">死産を解除条件</mark>として権利能力が消滅する。胎児の間から代理人が行動できる利点がある。
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     第3節 概念関係図
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+        <h2>概念関係図</h2>
+        <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+</header>
+
+<div class="diagram-wrap">
+<svg viewBox="0 0 740 560" xmlns="http://www.w3.org/2000/svg" width="700" height="560">
+  <defs>
+    <!-- 実線矢印：親子関係 -->
+    <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <!-- 破線矢印：横断関係 -->
+    <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+    </marker>
+    <!-- 細実線矢印：補足関係 -->
+    <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- ━━━━ Layer 0: ルートノード ━━━━ -->
+  <g>
+    <rect x="255" y="10" width="230" height="48" rx="8" fill="#1d4ed8"/>
+    <text x="370" y="30" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">自然人の権利能力</text>
+    <text x="370" y="48" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法3条・30〜32条</text>
+  </g>
+
+  <!-- 実線: ルート→始期 / ルート→終期 -->
+  <line x1="310" y1="58" x2="210" y2="130" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="430" y1="58" x2="530" y2="130" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- ━━━━ Layer 1: 始期 / 終期 ━━━━ -->
+  <!-- 始期 -->
+  <g>
+    <rect x="100" y="130" width="200" height="48" rx="6" fill="#2563eb"/>
+    <text x="200" y="150" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">権利能力の始期</text>
+    <text x="200" y="168" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法3条1項</text>
+  </g>
+  <!-- 終期 -->
+  <g>
+    <rect x="440" y="130" width="200" height="48" rx="6" fill="#2563eb"/>
+    <text x="540" y="150" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">権利能力の終期</text>
+    <text x="540" y="168" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">死亡・失踪宣告</text>
+  </g>
+
+  <!-- 実線: 始期→出生原則 / 始期→胎児例外 -->
+  <line x1="160" y1="178" x2="120" y2="240" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="240" y1="178" x2="280" y2="240" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- 実線: 終期→死亡 / 終期→失踪宣告 -->
+  <line x1="500" y1="178" x2="470" y2="240" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="580" y1="178" x2="610" y2="240" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- ━━━━ Layer 2: 始期の子ノード ━━━━ -->
+  <!-- 出生の原則 (node-key) -->
+  <g>
+    <rect x="30" y="240" width="170" height="52" rx="6" fill="#7c3aed"/>
+    <text x="115" y="260" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">出生の原則</text>
+    <text x="115" y="278" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">全部露出説（民法通説）</text>
+  </g>
+  <!-- 胎児の例外 (node-key) -->
+  <g>
+    <rect x="220" y="240" width="160" height="52" rx="6" fill="#7c3aed"/>
+    <text x="300" y="260" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">胎児の例外</text>
+    <text x="300" y="278" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">3つの場合のみ</text>
+  </g>
+  <!-- 死亡 (node-sub) -->
+  <g>
+    <rect x="400" y="240" width="130" height="52" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="465" y="261" text-anchor="middle" fill="#1e3a8a" font-size="12" font-weight="700">死亡</text>
+    <text x="465" y="279" text-anchor="middle" fill="#1e3a8a" font-size="10">権利能力の喪失</text>
+  </g>
+  <!-- 失踪宣告 (node-key) -->
+  <g>
+    <rect x="555" y="240" width="150" height="52" rx="6" fill="#7c3aed"/>
+    <text x="630" y="261" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">失踪宣告</text>
+    <text x="630" y="279" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法30〜32条</text>
+  </g>
+
+  <!-- ラベル: 始期→出生 -->
+  <rect x="86" y="202" width="58" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="115" y="214" text-anchor="middle" font-size="9" fill="#1d4ed8">原則</text>
+
+  <!-- ラベル: 始期→胎児例外 -->
+  <rect x="248" y="202" width="58" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="277" y="214" text-anchor="middle" font-size="9" fill="#1d4ed8">例外</text>
+
+  <!-- ラベル: 終期→死亡 -->
+  <rect x="468" y="202" width="40" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="488" y="214" text-anchor="middle" font-size="9" fill="#1d4ed8">原則</text>
+
+  <!-- ラベル: 終期→失踪宣告 -->
+  <rect x="581" y="202" width="58" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="610" y="214" text-anchor="middle" font-size="9" fill="#1d4ed8">擬制死亡</text>
+
+  <!-- 実線: 胎児の例外→3種 -->
+  <line x1="270" y1="292" x2="210" y2="360" stroke="#7c3aed" stroke-width="1.2" marker-end="url(#arr-thin)"/>
+  <line x1="300" y1="292" x2="300" y2="360" stroke="#7c3aed" stroke-width="1.2" marker-end="url(#arr-thin)"/>
+  <line x1="330" y1="292" x2="390" y2="360" stroke="#7c3aed" stroke-width="1.2" marker-end="url(#arr-thin)"/>
+
+  <!-- 実線: 失踪宣告→普通・特別 -->
+  <line x1="600" y1="292" x2="560" y2="360" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="660" y1="292" x2="680" y2="360" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- ━━━━ Layer 3: 胎児例外の3種 ━━━━ -->
+  <g>
+    <rect x="140" y="360" width="130" height="52" rx="6" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="205" y="381" text-anchor="middle" fill="#4c1d95" font-size="11" font-weight="700">①相続</text>
+    <text x="205" y="399" text-anchor="middle" fill="#4c1d95" font-size="10">民法886条</text>
+  </g>
+  <g>
+    <rect x="230" y="360" width="130" height="52" rx="6" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="295" y="381" text-anchor="middle" fill="#4c1d95" font-size="11" font-weight="700">②不法行為賠償</text>
+    <text x="295" y="399" text-anchor="middle" fill="#4c1d95" font-size="10">民法721条</text>
+  </g>
+  <g>
+    <rect x="330" y="360" width="120" height="52" rx="6" fill="#fff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="390" y="381" text-anchor="middle" fill="#4c1d95" font-size="11" font-weight="700">③遺贈</text>
+    <text x="390" y="399" text-anchor="middle" fill="#4c1d95" font-size="10">民法965条</text>
+  </g>
+
+  <!-- Layer 3: 普通失踪 / 特別失踪 -->
+  <g>
+    <rect x="480" y="360" width="150" height="52" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+    <text x="555" y="380" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">普通失踪</text>
+    <text x="555" y="398" text-anchor="middle" fill="#9f1239" font-size="10">7年間 → 7年満了時死亡</text>
+  </g>
+  <g>
+    <rect x="640" y="360" width="80" height="52" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+    <text x="680" y="380" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">特別失踪</text>
+    <text x="680" y="398" text-anchor="middle" fill="#9f1239" font-size="10">危難後1年</text>
+  </g>
+
+  <!-- 破線矢印: 失踪宣告→取消 -->
+  <line x1="630" y1="412" x2="480" y2="456" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed)"/>
+  <rect x="521" y="424" width="50" height="16" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+  <text x="546" y="436" text-anchor="middle" font-size="9" fill="#9f1239">取消可能</text>
+
+  <!-- Layer 3: 失踪宣告取消 -->
+  <g>
+    <rect x="390" y="456" width="170" height="52" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+    <text x="475" y="476" text-anchor="middle" fill="#9f1239" font-size="11" font-weight="700">失踪宣告の取消</text>
+    <text x="475" y="494" text-anchor="middle" fill="#9f1239" font-size="10">民法32条</text>
+  </g>
+
+  <!-- 注記エリア -->
+  <rect x="20" y="520" width="700" height="28" rx="4" fill="none" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="370" y="538" text-anchor="middle" font-size="10" fill="#9f1239">
+    【取消の保護】失踪宣告後・取消前に「善意でした行為」は影響なし（民法32条1項後段）／財産返還は現存利益の限度（32条2項）
+  </text>
+</svg>
+</div>
+
+<p style="font-size:.88rem;color:var(--text-secondary);">
+    上図は自然人の権利能力の全体構造を示す。青ノードは基本分類、紫ノードは重要な概念・原則、赤枠は失踪宣告に関する規定を表す。破線矢印は「失踪宣告→取消」という逆方向の法律関係を示している。
+</p>
+
+
+<!-- ══════════════════════════════════════════
+     第4節 比較表
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+        <h2>比較表</h2>
+        <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+</header>
+
+<h3>比較①：普通失踪と特別失踪</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">普通失踪（民法30条1項）</th>
+            <th class="col--b">特別失踪（民法30条2項）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>対象となる者</td>
+            <td class="col--a">不在者（生死不明）一般</td>
+            <td class="col--b">戦争・船舶沈没・震災等の<strong>危難に遭遇</strong>した者</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">schedule</span>必要期間</td>
+            <td class="col--a"><mark class="kw-blue"><strong>7年間</strong></mark>生死不明</td>
+            <td class="col--b">危難が去った後<mark class="kw-blue"><strong>1年間</strong></mark>生死不明</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">event</span>死亡みなしの時点</td>
+            <td class="col--a"><mark class="kw-red"><strong>7年間の期間が満了した時</strong></mark></td>
+            <td class="col--b"><mark class="kw-red"><strong>危難が去った時</strong></mark></td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">person</span>申請できる者</td>
+            <td class="col--a">利害関係人（配偶者・相続人等）</td>
+            <td class="col--b">利害関係人（配偶者・相続人等）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">account_balance</span>申請先</td>
+            <td class="col--a">家庭裁判所</td>
+            <td class="col--b">家庭裁判所</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">lightbulb</span>具体例</td>
+            <td class="col--a">家出、音信不通、長期行方不明</td>
+            <td class="col--b">沈没船に乗船、戦地に赴いた後不明</td>
+        </tr>
+    </tbody>
+</table>
+<p style="font-size:.88rem;color:var(--text-secondary);">
+    <span class="material-icons-round" style="font-size:14px;vertical-align:middle;">info</span>
+    最重要：<strong>死亡みなしの時点</strong>は「失踪宣告を受けた時」ではなく、普通は「7年期間満了時」、特別は「危難が去った時」である（よく誤答される）。
+</p>
+
+<h3>比較②：全部露出説（民法）と一部露出説（刑法）</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">全部露出説（民法）</th>
+            <th class="col--b">一部露出説（刑法）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>出生の基準</td>
+            <td class="col--a">胎児の身体が母体から<strong>完全に分離</strong>した時</td>
+            <td class="col--b">胎児の身体の<strong>一部が露出</strong>した時</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">gavel</span>採用分野</td>
+            <td class="col--a">民法（通説）</td>
+            <td class="col--b">刑法（通説・判例）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">lightbulb</span>趣旨</td>
+            <td class="col--a">権利義務関係の明確化（独立した人格体）</td>
+            <td class="col--b">生命保護の観点から早めに「人」と認定</td>
+        </tr>
+    </tbody>
+</table>
+<p style="font-size:.88rem;color:var(--text-secondary);">
+    <span class="material-icons-round" style="font-size:14px;vertical-align:middle;">info</span>
+    同じ「出生」でも民法と刑法で基準が異なる点は試験で問われやすい。民法＝<strong>全部露出説</strong>、刑法＝<strong>一部露出説</strong>とセットで覚える。
+</p>
+
+<h3>比較③：停止条件説と解除条件説（胎児の権利能力）</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">停止条件説（判例・通説）</th>
+            <th class="col--b">解除条件説（有力学説）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>胎児中の権利能力</td>
+            <td class="col--a"><strong>なし</strong>（条件成就まで権利能力なし）</td>
+            <td class="col--b"><strong>あり</strong>（胎児の間から権利能力取得）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">event</span>権利能力の発生</td>
+            <td class="col--a">生きて出生した時に<strong>遡及して</strong>取得</td>
+            <td class="col--b">胎児である間から取得済み</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">cancel</span>死産の場合</td>
+            <td class="col--a">停止条件不成就 → 権利能力ゼロ</td>
+            <td class="col--b">解除条件成就 → 権利能力消滅</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">person</span>胎児中の代理</td>
+            <td class="col--a"><strong>不可</strong>（権利能力がないため代理不要）</td>
+            <td class="col--b"><strong>可</strong>（権利能力ありなので代理可能）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">gavel</span>採用</td>
+            <td class="col--a">判例（大判昭7.10.6）</td>
+            <td class="col--b">有力学説</td>
+        </tr>
+    </tbody>
+</table>
+<p style="font-size:.88rem;color:var(--text-secondary);">
+    <span class="material-icons-round" style="font-size:14px;vertical-align:middle;">info</span>
+    試験では判例の立場（停止条件説）を前提とした問題が多い。特に「胎児の間は法定代理人が代理できない」という帰結を押さえておくこと。
+</p>
+
+
+<!-- ══════════════════════════════════════════
+     第5節 関連条文
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+        <h2>関連条文</h2>
+        <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+</header>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第3条（私権の享有）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第３条　<mark class="kw-blue">私権の享有は、出生に始まる。</mark><br>
+            ２　外国人は、法令又は条約の規定により禁止される場合を除き、私権を享有する。
+        </blockquote>
+        <p style="font-size:.88rem;margin-top:.5rem;">自然人の権利能力の始期を定める根本条文。「私権の享有」＝権利能力の取得を意味する。第2項は外国人も原則として私権を享有できることを規定。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第30条（失踪の宣告）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第３０条　<mark class="kw-blue">不在者の生死が７年間明らかでないとき</mark>は、家庭裁判所は、<mark class="kw-blue">利害関係人の請求</mark>により、失踪の宣告をすることができる。<br>
+            ２　戦地に臨んだ者、沈没した船舶の中に在った者その他<mark class="kw-red">死亡の原因となるべき危難に遭遇した者</mark>の生死が、それぞれ、戦争が止んだ後、船舶が沈没した後又はその他の危難が去った後<mark class="kw-red">１年間明らかでないとき</mark>も、前項と同様とする。
+        </blockquote>
+        <p style="font-size:.88rem;margin-top:.5rem;">失踪宣告の要件を定める条文。第1項が普通失踪（7年）、第2項が特別失踪（1年）。申請者は「利害関係人」（配偶者・相続人・債権者等）に限られ、検察官や行政機関は申請できない点に注意。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第31条（失踪の宣告の効力）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第３１条　前条第一項の規定により失踪の宣告を受けた者は<mark class="kw-red">同項の期間が満了した時に</mark>、同条第二項の規定により失踪の宣告を受けた者は<mark class="kw-red">その危難が去った時に</mark>、<mark class="kw-red">死亡したものとみなす</mark>。
+        </blockquote>
+        <p style="font-size:.88rem;margin-top:.5rem;">失踪宣告の効果（擬制死亡）と死亡時点を定める核心条文。「失踪宣告を受けた時に死亡」ではなく、普通は「7年期間満了時」・特別は「危難が去った時」に死亡したとみなされる点が頻出の誤答ポイント。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第32条（失踪の宣告の取消し）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第３２条　失踪者が<mark class="kw-blue">生存すること</mark>又は前条に規定する時と<mark class="kw-blue">異なる時に死亡したことの証明</mark>があったときは、家庭裁判所は、<mark class="kw-blue">本人又は利害関係人の請求</mark>により、失踪の宣告を取り消さなければならない。この場合において、<mark class="kw-red">その取消しは、失踪の宣告後その取消し前に善意でした行為の効力に影響を及ぼさない</mark>。<br>
+            ２　失踪の宣告によって財産を得た者は、その取消しによって権利を失う。ただし、<mark class="kw-blue">現に利益を受けている限度においてのみ</mark>、その財産を返還する義務を負う。
+        </blockquote>
+        <p style="font-size:.88rem;margin-top:.5rem;">取消しの要件・申請者・第三者保護・財産返還義務を定める。<strong>取消申請できるのは「本人」も含む点</strong>（30条は利害関係人のみ）に注意。善意の第三者は保護されるが、<strong>双方が善意の場合のみ有効</strong>という解釈が判例。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第886条・721条・965条（胎児の権利能力の例外）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第８８６条（相続に関する胎児の権利能力）<br>
+            　<mark class="kw-purple">胎児は、相続については、既に生まれたものとみなす。</mark><br>
+            ２　前項の規定は、胎児が死体で生まれたときは、適用しない。
+        </blockquote>
+        <blockquote class="legal-text">
+            第７２１条（損害賠償請求権に関する胎児の権利能力）<br>
+            　<mark class="kw-purple">胎児は、損害賠償の請求権については、既に生まれたものとみなす。</mark>ただし、死体で生まれたときは、この限りでない。
+        </blockquote>
+        <blockquote class="legal-text">
+            第９６５条（受遺者の資格）<br>
+            　第886条及び第891条の規定は、<mark class="kw-purple">受遺者について準用する。</mark>（→胎児は遺贈についても既に生まれたものとみなされる）
+        </blockquote>
+        <p style="font-size:.88rem;margin-top:.5rem;">胎児の例外は<strong>①相続（886条）②不法行為に基づく損害賠償請求（721条）③遺贈（965条）の3つのみ</strong>。贈与や売買には例外は適用されない。死産の場合は各例外の適用がない（＝原則どおり）。</p>
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     第6節 重要判例
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+        <h2>重要判例</h2>
+        <p class="sec-head__sub">Important Precedents</p>
+    </div>
+</header>
+
+<div class="case-card">
+    <div class="case-card__head">
+        <span class="material-icons-round" style="font-size:16px">gavel</span>
+        判例①　胎児と損害賠償請求権（停止条件説を前提とした実務上の解釈）
+    </div>
+    <div class="case-card__body">
+        <dl>
+            <dt>出典</dt>
+            <dd>大判昭7.10.6（胎児の権利能力に関するリーディングケース）</dd>
+            <dt>事実</dt>
+            <dd>父親が不法行為で死亡した際、母親の胎内にあった胎児が損害賠償請求権を有するか問題となった。</dd>
+            <dt>判旨</dt>
+            <dd>胎児の「既に生まれたものとみなす」の意義について、<mark class="kw-blue">停止条件説</mark>（生きて生まれたことを停止条件として遡及的に権利能力を取得する）を採用した。したがって、胎児の間は法定代理人が代理して請求行動をとることはできない。</dd>
+            <dt>意義</dt>
+            <dd>胎児の権利能力をめぐる学説上の争点（停止条件説 vs 解除条件説）について判例の立場を確立。現在も実務では停止条件説が基本。試験では判例の立場から「胎児中は代理不可」という帰結を問う問題が出題される。</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__head">
+        <span class="material-icons-round" style="font-size:16px">gavel</span>
+        判例②　失踪宣告取消後の財産返還と双方善意（民法32条の解釈）
+    </div>
+    <div class="case-card__body">
+        <dl>
+            <dt>出典</dt>
+            <dd>最判昭32.6.5（失踪宣告取消と善意の第三者保護）</dd>
+            <dt>事実</dt>
+            <dd>Aについて失踪宣告がなされ、相続人BがA所有の土地をCに売却した後、Aが生存していることが判明し失踪宣告が取り消された。BとCがそれぞれ善意・悪意の場合に土地の帰趨が問題となった。</dd>
+            <dt>判旨</dt>
+            <dd>民法32条1項後段の「善意でした行為」の解釈として、<mark class="kw-blue">当事者双方（BとC）が善意である場合に限り</mark>行為の効力が維持されると解した。一方でも悪意がある場合は保護されない。</dd>
+            <dt>意義</dt>
+            <dd>失踪宣告取消後の法律関係の処理において、善意の範囲（単独か双方か）を明確にした判例。行政書士試験でも「一方が善意・他方が悪意」の事例問題として頻出。<strong>「双方善意」でなければ保護されない</strong>という点を確実に押さえること。</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__head">
+        <span class="material-icons-round" style="font-size:16px">gavel</span>
+        判例③　失踪宣告取消後の婚姻（重婚状態の処理）
+    </div>
+    <div class="case-card__body">
+        <dl>
+            <dt>出典</dt>
+            <dd>最判昭38.12.6（失踪宣告取消と再婚の効力）</dd>
+            <dt>事実</dt>
+            <dd>Aの配偶者Bは失踪宣告を受けてAが死亡したものとみなされた後、Cと再婚した。その後Aが生存していることが判明し失踪宣告が取り消された場合、B・C間の婚姻（後婚）の効力が問題となった。</dd>
+            <dt>判旨</dt>
+            <dd>失踪宣告の取消しがあっても、取消前に<mark class="kw-blue">善意でなされた後婚は有効</mark>である。前婚は取消しによって当然には復活せず、当事者が協議または離婚・婚姻取消の手続きを経る必要がある。</dd>
+            <dt>意義</dt>
+            <dd>失踪宣告後の婚姻（重婚状態）の処理に関する判例。民法732条（重婚禁止）との関係で整理が必要。善意の再婚は32条1項後段で保護されるため、前婚が自動復活するわけではない点が重要。</dd>
+        </dl>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>判例横断注意点</div>
+    <div class="box__bd">
+        失踪宣告に関する判例問題では、「失踪者本人の権利能力は消滅しない」という大前提を常に意識する。失踪宣告後も本人が別の場所で行った契約等は<strong>有効</strong>であり、本人自身の損害賠償請求権等も存続している。失踪宣告は「周囲の法律関係を整理する制度」であり、本人の主観的権利を奪うものではない。
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     第7節 試験対策ポイント
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+        <h2>試験対策ポイント</h2>
+        <p class="sec-head__sub">Examination Points</p>
+    </div>
+</header>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>頻出テーマ①：失踪宣告の「死亡みなし時点」</div>
+    <div class="box__bd">
+        <ul class="point-list">
+            <li><span class="material-icons-round pi pi--red">cancel</span><strong>誤答パターン：</strong>「失踪の宣告を受けた時に死亡したものとみなされる」→<mark class="kw-red">×</mark></li>
+            <li><span class="material-icons-round pi">check_circle</span><strong>正解：</strong>普通失踪は「<mark class="kw-purple">7年間の期間が満了した時</mark>」、特別失踪は「<mark class="kw-purple">危難が去った時</mark>」（民法31条）</li>
+            <li><span class="material-icons-round pi">check_circle</span>宣告はあくまで家庭裁判所が行う<strong>審判</strong>であって、死亡の時点を決めるのは<strong>法律（31条）</strong>が定める時点</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>頻出テーマ②：失踪宣告と権利能力の関係</div>
+    <div class="box__bd">
+        <ul class="point-list">
+            <li><span class="material-icons-round pi pi--red">cancel</span><strong>誤答パターン：</strong>「失踪宣告により、失踪者の権利能力は消滅する」→<mark class="kw-red">×</mark></li>
+            <li><span class="material-icons-round pi">check_circle</span><strong>正解：</strong>失踪宣告はあくまで<strong>擬制（みなし）</strong>。本人が生存している間、その権利能力は別の場所で存続し続ける</li>
+            <li><span class="material-icons-round pi">check_circle</span>失踪宣告が取り消されなくても、本人が生存中に行った行為は有効</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>頻出テーマ③：失踪宣告取消の「善意」の範囲</div>
+    <div class="box__bd">
+        <ul class="point-list">
+            <li><span class="material-icons-round pi pi--red">cancel</span><strong>誤答パターン：</strong>「一方が善意であれば取消前の行為は有効」→<mark class="kw-red">×</mark></li>
+            <li><span class="material-icons-round pi">check_circle</span><strong>正解（判例）：</strong><mark class="kw-purple">当事者双方が善意</mark>である場合のみ行為は有効（最判昭32.6.5）</li>
+            <li><span class="material-icons-round pi pi--red">warning</span>財産を得た者の返還義務は「<mark class="kw-red">現存利益の限度</mark>」（民法32条2項但書）→現存利益主義</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>頻出テーマ④：胎児の権利能力の例外3つ</div>
+    <div class="box__bd">
+        <ul class="point-list">
+            <li><span class="material-icons-round pi">check_circle</span><strong>①相続（886条）・②不法行為賠償（721条）・③遺贈（965条）</strong>の3場面のみ</li>
+            <li><span class="material-icons-round pi pi--red">cancel</span><strong>適用されない例：</strong>贈与・売買・遺産分割協議への参加等</li>
+            <li><span class="material-icons-round pi">check_circle</span><strong>死産の場合：</strong>例外は適用されず、始めから権利能力なし（各条文の「ただし書」）</li>
+            <li><span class="material-icons-round pi pi--red">warning</span>判例（停止条件説）によれば、<mark class="kw-red">胎児中は代理人として行動できない</mark></li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>誤りやすい概念：取消の申請者</div>
+    <div class="box__bd">
+        失踪宣告の<strong>申請者</strong>（民法30条）は「<mark class="kw-blue">利害関係人</mark>」のみ。<br>
+        しかし取消の<strong>申請者</strong>（民法32条）は「<mark class="kw-purple">本人又は利害関係人</mark>」。<strong>本人も含まれる</strong>点が宣告との相違。本人が生存していれば自ら裁判所に取消を求めることができる。
+    </div>
+</div>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">link</span>他分野との横断的つながり</div>
+    <div class="box__bd">
+        <ul class="point-list">
+            <li><span class="material-icons-round pi pi--purple">account_tree</span><strong>制限行為能力者制度（民法4〜21条）：</strong>権利能力（主体となる資格）と行為能力（単独で行動できる能力）は別概念。権利能力は0か1かだが、行為能力は程度がある</li>
+            <li><span class="material-icons-round pi pi--purple">account_tree</span><strong>相続法（民法882条〜）：</strong>胎児の相続権（886条）、相続開始原因としての死亡・失踪宣告との関連</li>
+            <li><span class="material-icons-round pi pi--purple">account_tree</span><strong>不在者の財産管理（民法25条〜）：</strong>失踪宣告前の段階として「不在者財産管理人」制度（25条）との連続性を理解する</li>
+            <li><span class="material-icons-round pi pi--purple">account_tree</span><strong>認定死亡（戸籍法89条）：</strong>失踪宣告と異なり裁判を要しない行政上の死亡推定。取消手続きも異なる</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     第8節 補足情報
+═══════════════════════════════════════════ -->
+<header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+        <h2>補足情報</h2>
+        <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+</header>
+
+<h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;color:var(--blue-600);">history</span> 立法経緯・歴史的背景</h3>
+<p>
+    失踪宣告制度は、明治民法（1898年施行）から引き継がれた制度です。当時は戦争・難破・海外渡航による長期行方不明者が多く、家族関係・財産関係の安定のために法整備が求められました。現行の7年・1年という期間は、明治民法施行以来ほぼ変わらず維持されています。
+</p>
+<p>
+    2018年（平成30年）の相続法改正では、<strong>配偶者居住権</strong>等が新設されましたが、失踪宣告制度自体に直接の改正はありませんでした。一方、<strong>2022年（令和4年）の民法改正</strong>（成年年齢引下げ）により成年の年齢が20歳から18歳に引き下げられましたが、権利能力の始期（出生）には影響しません。
+</p>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span>認定死亡との比較（実務上の補足）</div>
+    <div class="box__bd">
+        <strong>認定死亡（戸籍法89条）</strong>は、水難・火災などの事故で死亡したと認められるが遺体が発見されない場合に、調査した官公署が死亡地の市区町村長に報告して死亡を推定する制度。<br>
+        失踪宣告との違いは①裁判所の関与不要、②推定（反証可）vs みなし（家裁取消が必要）、③取消方法（死亡届の錯誤訂正 vs 民法32条の取消審判）。実務ではまず認定死亡が試みられ、それが困難な場合に失踪宣告が利用される。
+    </div>
+</div>
+
+<h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;color:var(--blue-600);">lightbulb</span> 本単元に特化した学習法</h3>
+
+<div class="timeline">
+    <div class="tl-item">
+        <div class="tl-label">STEP 1 — 数値の完全暗記</div>
+        <div class="tl-text">普通失踪7年・特別失踪1年という期間と、死亡みなし時点（7年満了時・危難が去った時）を条文で確認しながら5回書いて覚える。この2セットは絶対に混同しないこと。</div>
+    </div>
+    <div class="tl-item">
+        <div class="tl-label">STEP 2 — 胎児の例外3つを語呂で暗記</div>
+        <div class="tl-text">「<strong>相（そう）・不（ふ）・遺（い）</strong>」＝相続・不法行為・遺贈の頭文字。この3つ以外には胎児の例外は及ばない。死産した場合は例外適用なしも必ずセットで覚える。</div>
+    </div>
+    <div class="tl-item">
+        <div class="tl-label">STEP 3 — 失踪宣告取消の効果をフロー化</div>
+        <div class="tl-text">①取消の申請者（本人 or 利害関係人）→②善意の保護（双方善意の場合のみ）→③財産返還（現存利益の限度）の3段階を自分でフローチャートを書いて整理する。</div>
+    </div>
+    <div class="tl-item">
+        <div class="tl-label">STEP 4 — 過去問演習（年度別）</div>
+        <div class="tl-text">令和6年問27・令和3年問28等の実際の出題を解き、本節の比較表と照合する。「死亡みなし時点」「善意の双方性」「本人の権利能力の存続」の3論点から出題されているパターンを把握する。</div>
+    </div>
+    <div class="tl-item">
+        <div class="tl-label">STEP 5 — 他制度との横断整理</div>
+        <div class="tl-text">不在者財産管理制度（25〜29条）→失踪宣告（30〜32条）→相続開始という時系列的な流れを図に描いて全体像を確認する。制限行為能力者との比較（権利能力 vs 行為能力）も忘れずに。</div>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>令和6年本試験（問27）の教訓</div>
+    <div class="box__bd">
+        令和6年の失踪宣告問題（正答率76.9%）では、「普通失踪の死亡みなし時点」「失踪者の権利能力存続」「取消申請者（本人も含む）」が問われました。正答率が高い反面、<mark class="kw-red">「宣告を受けた時に死亡」という誤肢に引っかかった受験生が約23%</mark>います。条文の数値と死亡時点の正確な記憶が合否を分けます。本単元は「やれば必ず取れる」得点源として確実に仕上げておきましょう。
+    </div>
+</div>
+
+</body>
+</html>

@@ -9,18 +9,21 @@ export default function HeroSection() {
       title: "テキスト&音声で効率的に学習",
       subtitle: "いつでもどこでも、あなたのペースで行政書士試験対策",
       cta: "今すぐ無料で始める",
+      href: "/auth/register",
       bgColor: "from-indigo-600 to-purple-700"
     },
     {
       title: "完全無料で学習開始",
       subtitle: "有料会員はテキスト＆音声ダウンロード可能",
       cta: "学習内容を見る",
+      href: "/subjects",
       bgColor: "from-blue-600 to-cyan-700"
     },
     {
       title: "ダウンロードして学習可能",
       subtitle: "有料会員なら全ての教材をダウンロードして学習できます",
       cta: "料金プランを見る",
+      href: "/pricing",
       bgColor: "from-green-600 to-teal-700"
     }
   ];
@@ -37,17 +40,17 @@ export default function HeroSection() {
     {
       title: "徹底解説テキスト",
       description: "試験に出るポイントをわかりやすく解説した学習テキスト",
-      imageUrl: "/images/features/textbook-business.jpg"
+      imageUrl: "/images/features/textbook-business.jpg.svg"
     },
     {
       title: "音声講義",
       description: "移動中や家事の合間にも学習できる音声講義",
-      imageUrl: "/images/features/audio-lecture-business.jpg"
+      imageUrl: "/images/features/audio-lecture-business.jpg.svg"
     },
     {
       title: "ダウンロード対応",
       description: "有料会員ならテキストと音声をダウンロードして学習可能",
-      imageUrl: "/images/features/download-support-business.jpg"
+      imageUrl: "/images/features/download-support-business.jpg.svg"
     }
   ];
 
@@ -79,7 +82,7 @@ export default function HeroSection() {
                 >
                   <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight">{slide.title}</h1>
                   <p className="text-xl sm:text-2xl md:text-3xl mb-8 max-w-3xl">{slide.subtitle}</p>
-                  <Link href="/register" className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg inline-flex items-center shadow-lg transition transform hover:scale-105">
+                  <Link href={slide.href} className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-lg inline-flex items-center shadow-lg transition transform hover:scale-105">
                     {slide.cta}
                     <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -125,10 +128,12 @@ export default function HeroSection() {
                 {/* 画像部分 - リアルなビジネス風画像を表示 */}
                 <div className="w-full h-56 sm:h-64 overflow-hidden">
                   <div className="relative w-full h-full">
-                    <img
+                    <Image
                       src={feature.imageUrl}
                       alt={feature.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
                     />
                   </div>
                 </div>

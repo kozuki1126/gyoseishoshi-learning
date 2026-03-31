@@ -28,16 +28,14 @@ const menuItems = [
     icon: BookOpen,
     submenu: [
       { title: 'コンテンツ一覧', href: '/admin/content' },
-      { title: '新規作成', href: '/admin/content/create' },
-      { title: '科目管理', href: '/admin/subjects' }
+      { title: '新規作成', href: '/admin/content/create' }
     ]
   },
   {
     title: 'ファイル管理',
     icon: Upload,
     submenu: [
-      { title: 'アップロード', href: '/admin/upload' },
-      { title: 'ファイル一覧', href: '/admin/files' }
+      { title: 'アップロード', href: '/admin/upload' }
     ]
   },
   {
@@ -46,13 +44,8 @@ const menuItems = [
     icon: Users
   },
   {
-    title: '統計・分析',
-    href: '/admin/analytics',
-    icon: BarChart3
-  },
-  {
-    title: '設定',
-    href: '/admin/settings',
+    title: 'アカウント設定',
+    href: '/mypage/settings',
     icon: Settings
   }
 ];

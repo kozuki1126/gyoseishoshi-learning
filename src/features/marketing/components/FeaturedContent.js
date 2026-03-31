@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function FeaturedContent() {
   // おすすめコンテンツデータ
@@ -8,8 +9,9 @@ export default function FeaturedContent() {
       id: 1,
       title: '憲法総論',
       description: '憲法の基本的な概念、成立過程、立憲主義について学習します。',
+      subjectId: 'constitutional-law',
       unitId: 201,
-      imageUrl: null,
+      imageUrl: '/images/featured/constitutional-law.svg',
       category: '人気コンテンツ',
       studyTime: '30分',
       level: '初級'
@@ -18,8 +20,9 @@ export default function FeaturedContent() {
       id: 2,
       title: '行政手続法の目的と適用範囲',
       description: '行政手続法の目的、適用範囲、基本的な考え方について学習します。',
+      subjectId: 'administrative-law',
       unitId: 401,
-      imageUrl: null,
+      imageUrl: '/images/featured/administrative-law.svg',
       category: '新着コンテンツ',
       studyTime: '45分',
       level: '中級'
@@ -28,8 +31,9 @@ export default function FeaturedContent() {
       id: 3,
       title: '地方自治の本旨',
       description: '地方自治の本旨、団体自治と住民自治の考え方について学習します。',
+      subjectId: 'commercial-law',
       unitId: 501,
-      imageUrl: null,
+      imageUrl: '/images/featured/local-governance.svg',
       category: '新着コンテンツ',
       studyTime: '40分',
       level: '中級'
@@ -38,8 +42,9 @@ export default function FeaturedContent() {
       id: 4,
       title: '民法の基本原則',
       description: '民法の基本原則である私的自治の原則、権利濫用の禁止等について学習します。',
+      subjectId: 'civil-law',
       unitId: 101,
-      imageUrl: null,
+      imageUrl: '/images/featured/civil-law.svg',
       category: '人気コンテンツ',
       studyTime: '35分',
       level: '初級'
@@ -107,14 +112,18 @@ export default function FeaturedContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {getFilteredItems().map((item) => (
             <div key={item.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-              <Link href={`/units/${item.unitId}`} className="block">
+              <Link href={`/subjects/${item.subjectId}/${item.unitId}`} className="block">
                 <div className="aspect-w-16 aspect-h-9 bg-gray-200">
                   {item.imageUrl ? (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className="object-cover w-full h-48"
-                    />
+                    <div className="relative h-48 w-full">
+                      <Image
+                        src={item.imageUrl}
+                        alt={item.title}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
                   ) : (
                     <div className="flex items-center justify-center h-48 bg-gradient-to-r from-indigo-500 to-purple-600">
                       <span className="text-white text-lg font-medium">
@@ -169,14 +178,14 @@ export default function FeaturedContent() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>
-          <Link href="/downloads" className="inline-flex items-center bg-white hover:bg-gray-50 text-green-600 font-medium px-6 py-3 rounded-md shadow-sm border border-gray-200">
-            学習ノート・演習問題集
+          <Link href="/pricing" className="inline-flex items-center bg-white hover:bg-gray-50 text-green-600 font-medium px-6 py-3 rounded-md shadow-sm border border-gray-200">
+            プレミアム特典を見る
             <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
           </Link>
           <p className="text-sm text-gray-500 mt-2">
-            科目別の学習ノートと演習問題集をダウンロードして効率的に学習を進めることができます。
+            学習ノートや演習問題集のダウンロードはプレミアム会員向けに順次整備します。
           </p>
         </div>
       </div>

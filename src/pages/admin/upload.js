@@ -1,447 +1,222 @@
-import { useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import AdminLayout from '@/features/admin/components/AdminLayout';
-import {
-  Upload,
-  FileText,
-  Music,
-  Trash2,
-  CheckCircle,
-  AlertCircle,
-  X,
-  FolderOpen,
-  HardDrive
-} from 'lucide-react';
+import { Upload, FileText, Music, Trash2, FolderOpen, HardDrive, AlertCircle, CheckCircle } from 'lucide-react';
 
-// File type configurations
 const fileTypes = {
-  pdf: {
-    label: 'PDF',
-    accept: '.pdf',
-    maxSize: 10 * 1024 * 1024, // 10MB
-    icon: FileText,
-    color: 'text-red-600 bg-red-100'
-  },
-  audio: {
-    label: '音声',
-    accept: 'audio/*,.mp3,.wav,.m4a',
-    maxSize: 50 * 1024 * 1024, // 50MB
-    icon: Music,
-    color: 'text-green-600 bg-green-100'
-  }
+  pdf: { label: 'PDF', accept: '.pdf', icon: FileText, color: 'text-red-600 bg-red-100' },
+  audio: { label: '音声', accept: 'audio/*,.mp3,.wav,.m4a', icon: Music, color: 'text-green-600 bg-green-100' },
 };
 
-// Format file size
 function formatFileSize(bytes) {
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
+  if (!bytes) {
+    return '0 Bytes';
+  }
+
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  const index = Math.floor(Math.log(bytes) / Math.log(1024));
+  return `${parseFloat((bytes / 1024 ** index).toFixed(2))} ${sizes[index]}`;
 }
 
-// File Item Component
-function FileItem({ file, onRemove }) {
-  const isAudio = file.type.startsWith('audio') || file.name.match(/\.(mp3|wav|m4a)$/i);
-  const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
-  
-  const Icon = isAudio ? Music : FileText;
-  const colorClass = isAudio ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100';
-
-  return (
-    <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${colorClass}`}>
-        <Icon className="w-5 h-5" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-gray-800 truncate">{file.name}</p>
-        <p className="text-xs text-gray-500">{formatFileSize(file.size)}</p>
-      </div>
-      {file.status === 'uploading' && (
-        <div className="w-20">
-          <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-blue-600 rounded-full transition-all"
-              style={{ width: `${file.progress || 0}%` }}
-            />
-          </div>
-          <p className="text-xs text-gray-500 text-center mt-1">{file.progress || 0}%</p>
-        </div>
-      )}
-      {file.status === 'success' && (
-        <CheckCircle className="w-5 h-5 text-green-600" />
-      )}
-      {file.status === 'error' && (
-        <div className="flex items-center gap-2">
-          <AlertCircle className="w-5 h-5 text-red-600" />
-          <span className="text-xs text-red-600">{file.error}</span>
-        </div>
-      )}
-      <button
-        onClick={() => onRemove(file.id)}
-        className="p-1.5 hover:bg-gray-200 rounded-lg transition-colors"
-      >
-        <X className="w-4 h-4 text-gray-500" />
-      </button>
-    </div>
-  );
-}
-
-// Existing File Component
 function ExistingFile({ file, onDelete }) {
   const Icon = file.type === 'audio' ? Music : FileText;
   const colorClass = file.type === 'audio' ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100';
 
   return (
-    <div className="flex items-center gap-3 p-4 bg-white border border-gray-200 rounded-lg hover:shadow-sm transition-shadow">
-      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${colorClass}`}>
-        <Icon className="w-5 h-5" />
+    <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white p-4 transition-shadow hover:shadow-sm">
+      <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${colorClass}`}>
+        <Icon className="h-5 w-5" />
       </div>
-      <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-gray-800 truncate">{file.name}</p>
+      <div className="min-w-0 flex-1">
+        <p className="truncate text-sm font-medium text-gray-800">{file.name}</p>
         <p className="text-xs text-gray-500">
-          {formatFileSize(file.size)} • {file.unitId ? `単元: ${file.unitId}` : '未割当'}
+          {formatFileSize(file.size)} • {file.unitTitle ? `${file.unitTitle} (${file.unitId})` : '未割当'}
         </p>
       </div>
-      <button
-        onClick={() => onDelete(file.id)}
-        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-      >
-        <Trash2 className="w-4 h-4" />
+      <button onClick={() => onDelete(file.path)} className="rounded-lg p-2 text-red-500 transition-colors hover:bg-red-50">
+        <Trash2 className="h-4 w-4" />
       </button>
     </div>
   );
 }
 
 export default function UploadPage() {
-  const [activeTab, setActiveTab] = useState('upload'); // upload, files
+  const [activeTab, setActiveTab] = useState('upload');
   const [fileType, setFileType] = useState('pdf');
-  const [files, setFiles] = useState([]);
+  const [unitId, setUnitId] = useState('');
+  const [selectedFile, setSelectedFile] = useState(null);
   const [uploading, setUploading] = useState(false);
-  const [dragActive, setDragActive] = useState(false);
+  const [notice, setNotice] = useState(null);
+  const [existingFiles, setExistingFiles] = useState([]);
 
-  // Mock existing files
-  const [existingFiles, setExistingFiles] = useState([
-    { id: '1', name: '101_憲法の基本原理.pdf', type: 'pdf', size: 2456789, unitId: '101' },
-    { id: '2', name: '101_audio.mp3', type: 'audio', size: 15678901, unitId: '101' },
-    { id: '3', name: '201_行政法の基本原理.pdf', type: 'pdf', size: 3567890, unitId: '201' },
-    { id: '4', name: '201_audio.mp3', type: 'audio', size: 18901234, unitId: '201' },
-    { id: '5', name: '301_民法の基本原理.pdf', type: 'pdf', size: 2890123, unitId: '301' }
-  ]);
-
-  const config = fileTypes[fileType];
-
-  const validateFile = (file) => {
-    // Check file size
-    if (file.size > config.maxSize) {
-      return `ファイルサイズが大きすぎます（最大: ${formatFileSize(config.maxSize)}）`;
+  async function loadFiles() {
+    const res = await fetch('/api/upload');
+    const data = await res.json();
+    if (res.ok && data.success) {
+      setExistingFiles(data.files);
     }
+  }
 
-    // Check file type
-    const isValidType = fileType === 'pdf'
-      ? file.type === 'application/pdf' || file.name.endsWith('.pdf')
-      : file.type.startsWith('audio') || file.name.match(/\.(mp3|wav|m4a)$/i);
-
-    if (!isValidType) {
-      return '無効なファイル形式です';
-    }
-
-    return null;
-  };
-
-  const handleFiles = (fileList) => {
-    const newFiles = Array.from(fileList).map(file => {
-      const error = validateFile(file);
-      return {
-        id: Math.random().toString(36).substr(2, 9),
-        file,
-        name: file.name,
-        size: file.size,
-        type: file.type,
-        status: error ? 'error' : 'pending',
-        error,
-        progress: 0
-      };
-    });
-
-    setFiles(prev => [...prev, ...newFiles]);
-  };
-
-  const handleDrag = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (e.type === 'dragenter' || e.type === 'dragover') {
-      setDragActive(true);
-    } else if (e.type === 'dragleave') {
-      setDragActive(false);
-    }
+  useEffect(() => {
+    loadFiles();
   }, []);
 
-  const handleDrop = useCallback((e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      handleFiles(e.dataTransfer.files);
+  async function uploadFile() {
+    if (!selectedFile) {
+      setNotice({ type: 'error', text: 'アップロードするファイルを選択してください' });
+      return;
     }
-  }, [fileType]);
-
-  const handleFileInput = (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      handleFiles(e.target.files);
-    }
-  };
-
-  const removeFile = (id) => {
-    setFiles(prev => prev.filter(f => f.id !== id));
-  };
-
-  const uploadFiles = async () => {
-    const pendingFiles = files.filter(f => f.status === 'pending');
-    if (pendingFiles.length === 0) return;
 
     setUploading(true);
+    setNotice(null);
 
-    for (const fileItem of pendingFiles) {
-      // Update status to uploading
-      setFiles(prev => prev.map(f =>
-        f.id === fileItem.id ? { ...f, status: 'uploading', progress: 0 } : f
-      ));
+    const payload = new FormData();
+    payload.append('type', fileType);
+    payload.append('unitId', unitId || 'manual');
+    payload.append('file', selectedFile);
 
-      // Simulate upload progress
-      for (let i = 0; i <= 100; i += 10) {
-        await new Promise(resolve => setTimeout(resolve, 100));
-        setFiles(prev => prev.map(f =>
-          f.id === fileItem.id ? { ...f, progress: i } : f
-        ));
+    try {
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: payload,
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'アップロードに失敗しました');
       }
 
-      // Mark as success
-      setFiles(prev => prev.map(f =>
-        f.id === fileItem.id ? { ...f, status: 'success', progress: 100 } : f
-      ));
+      setNotice({ type: 'success', text: 'ファイルをアップロードしました' });
+      setSelectedFile(null);
+      setUnitId('');
+      await loadFiles();
+    } catch (error) {
+      setNotice({ type: 'error', text: error.message || 'アップロードに失敗しました' });
+    } finally {
+      setUploading(false);
+    }
+  }
 
-      // Add to existing files
-      setExistingFiles(prev => [...prev, {
-        id: fileItem.id,
-        name: fileItem.name,
-        type: fileType,
-        size: fileItem.size,
-        unitId: null
-      }]);
+  async function deleteFile(filePath) {
+    if (!confirm('このファイルを削除しますか？')) {
+      return;
     }
 
-    setUploading(false);
-  };
+    const res = await fetch(`/api/upload?path=${encodeURIComponent(filePath)}`, {
+      method: 'DELETE',
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      setNotice({ type: 'error', text: data.error || '削除に失敗しました' });
+      return;
+    }
 
-  const deleteExistingFile = (id) => {
-    if (!confirm('このファイルを削除してもよろしいですか？')) return;
-    setExistingFiles(prev => prev.filter(f => f.id !== id));
-  };
+    setNotice({ type: 'success', text: 'ファイルを削除しました' });
+    await loadFiles();
+  }
 
-  // Calculate storage stats
-  const storageUsed = existingFiles.reduce((sum, f) => sum + f.size, 0);
-  const storageTotal = 10 * 1024 * 1024 * 1024; // 10GB
+  const storageUsed = existingFiles.reduce((sum, file) => sum + file.size, 0);
+  const storageTotal = 10 * 1024 * 1024 * 1024;
   const storagePercent = (storageUsed / storageTotal) * 100;
+  const config = fileTypes[fileType];
 
   return (
     <AdminLayout title="ファイル管理">
-      {/* Storage Overview */}
-      <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-            <HardDrive className="w-6 h-6 text-blue-600" />
+      <div className="mb-6 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+        <div className="mb-4 flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
+            <HardDrive className="h-6 w-6 text-blue-600" />
           </div>
           <div>
             <h3 className="font-medium text-gray-800">ストレージ使用量</h3>
-            <p className="text-sm text-gray-500">
-              {formatFileSize(storageUsed)} / {formatFileSize(storageTotal)} 使用中
-            </p>
+            <p className="text-sm text-gray-500">{formatFileSize(storageUsed)} / {formatFileSize(storageTotal)} 使用中</p>
           </div>
         </div>
-        <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all ${
-              storagePercent > 80 ? 'bg-red-500' : storagePercent > 60 ? 'bg-yellow-500' : 'bg-blue-600'
-            }`}
-            style={{ width: `${storagePercent}%` }}
-          />
+        <div className="h-2 overflow-hidden rounded-full bg-gray-200">
+          <div className={`h-full rounded-full ${storagePercent > 80 ? 'bg-red-500' : storagePercent > 60 ? 'bg-yellow-500' : 'bg-blue-600'}`} style={{ width: `${storagePercent}%` }} />
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="flex border-b border-gray-200 mb-6">
-        <button
-          onClick={() => setActiveTab('upload')}
-          className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-            activeTab === 'upload'
-              ? 'border-blue-600 text-blue-600'
-              : 'border-transparent text-gray-500 hover:text-gray-700'
-          }`}
-        >
-          <Upload className="w-4 h-4 inline mr-2" />
+      <div className="mb-6 flex border-b border-gray-200">
+        <button onClick={() => setActiveTab('upload')} className={`px-4 py-2 text-sm font-medium border-b-2 ${activeTab === 'upload' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+          <Upload className="mr-2 inline h-4 w-4" />
           アップロード
         </button>
-        <button
-          onClick={() => setActiveTab('files')}
-          className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
-            activeTab === 'files'
-              ? 'border-blue-600 text-blue-600'
-              : 'border-transparent text-gray-500 hover:text-gray-700'
-          }`}
-        >
-          <FolderOpen className="w-4 h-4 inline mr-2" />
+        <button onClick={() => setActiveTab('files')} className={`px-4 py-2 text-sm font-medium border-b-2 ${activeTab === 'files' ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+          <FolderOpen className="mr-2 inline h-4 w-4" />
           ファイル一覧 ({existingFiles.length})
         </button>
       </div>
 
+      {notice && (
+        <div className={`mb-6 flex items-center gap-3 rounded-lg p-4 ${notice.type === 'error' ? 'bg-red-50 text-red-700' : 'bg-green-50 text-green-700'}`}>
+          {notice.type === 'error' ? <AlertCircle className="h-5 w-5" /> : <CheckCircle className="h-5 w-5" />}
+          {notice.text}
+        </div>
+      )}
+
       {activeTab === 'upload' ? (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Upload Area */}
-          <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-              {/* File Type Selector */}
-              <div className="flex gap-4 mb-6">
-                {Object.entries(fileTypes).map(([key, type]) => {
-                  const Icon = type.icon;
-                  return (
-                    <button
-                      key={key}
-                      onClick={() => setFileType(key)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-lg border-2 transition-colors ${
-                        fileType === key
-                          ? 'border-blue-600 bg-blue-50 text-blue-700'
-                          : 'border-gray-200 text-gray-600 hover:border-gray-300'
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      {type.label}
-                    </button>
-                  );
-                })}
-              </div>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div className="lg:col-span-2 rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+            <div className="mb-6 flex gap-4">
+              {Object.entries(fileTypes).map(([key, value]) => {
+                const Icon = value.icon;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setFileType(key)}
+                    className={`flex items-center gap-2 rounded-lg border-2 px-4 py-2 transition-colors ${fileType === key ? 'border-blue-600 bg-blue-50 text-blue-700' : 'border-gray-200 text-gray-600 hover:border-gray-300'}`}
+                  >
+                    <Icon className="h-4 w-4" />
+                    {value.label}
+                  </button>
+                );
+              })}
+            </div>
 
-              {/* Drop Zone */}
-              <div
-                className={`border-2 border-dashed rounded-xl p-8 text-center transition-colors ${
-                  dragActive
-                    ? 'border-blue-500 bg-blue-50'
-                    : 'border-gray-300 hover:border-gray-400'
-                }`}
-                onDragEnter={handleDrag}
-                onDragLeave={handleDrag}
-                onDragOver={handleDrag}
-                onDrop={handleDrop}
-              >
-                <input
-                  type="file"
-                  accept={config.accept}
-                  multiple
-                  onChange={handleFileInput}
-                  className="hidden"
-                  id="file-upload"
-                />
-                <label htmlFor="file-upload" className="cursor-pointer">
-                  <Upload className="w-12 h-12 mx-auto mb-4 text-gray-400" />
-                  <p className="text-gray-600 mb-2">
-                    ファイルをドラッグ＆ドロップ
-                  </p>
-                  <p className="text-sm text-gray-400 mb-4">または</p>
-                  <span className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                    ファイルを選択
-                  </span>
-                </label>
-                <p className="text-xs text-gray-400 mt-4">
-                  {config.label}ファイル • 最大 {formatFileSize(config.maxSize)}
-                </p>
-              </div>
-
-              {/* File List */}
-              {files.length > 0 && (
-                <div className="mt-6 space-y-3">
-                  <h4 className="font-medium text-gray-800">選択されたファイル</h4>
-                  {files.map(file => (
-                    <FileItem key={file.id} file={file} onRemove={removeFile} />
-                  ))}
-                  <div className="flex justify-end gap-3 pt-4">
-                    <button
-                      onClick={() => setFiles([])}
-                      className="px-4 py-2 border border-gray-200 rounded-lg hover:bg-gray-50"
-                    >
-                      クリア
-                    </button>
-                    <button
-                      onClick={uploadFiles}
-                      disabled={uploading || files.filter(f => f.status === 'pending').length === 0}
-                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
-                    >
-                      {uploading ? 'アップロード中...' : 'アップロード'}
-                    </button>
+            <div className="space-y-4">
+              <input value={unitId} onChange={(event) => setUnitId(event.target.value)} placeholder="関連する単元ID（任意）" className="w-full rounded-lg border border-gray-200 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <label className="block rounded-xl border-2 border-dashed border-gray-300 p-8 text-center transition-colors hover:border-gray-400">
+                <input type="file" accept={config.accept} className="hidden" onChange={(event) => setSelectedFile(event.target.files?.[0] || null)} />
+                {selectedFile ? (
+                  <div className="text-green-600">
+                    <CheckCircle className="mx-auto mb-2 h-10 w-10" />
+                    <p className="font-medium">{selectedFile.name}</p>
+                    <p className="text-sm text-green-700">{formatFileSize(selectedFile.size)}</p>
                   </div>
-                </div>
-              )}
+                ) : (
+                  <div className="text-gray-500">
+                    <Upload className="mx-auto mb-4 h-12 w-12" />
+                    <p>{config.label}ファイルを選択</p>
+                    <p className="mt-2 text-sm text-gray-400">クリックしてアップロード対象を指定します</p>
+                  </div>
+                )}
+              </label>
+              <div className="flex justify-end">
+                <button onClick={uploadFile} disabled={uploading || !selectedFile} className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 disabled:opacity-50">
+                  {uploading ? 'アップロード中...' : 'アップロード'}
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Instructions */}
           <div className="space-y-6">
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-              <h3 className="font-medium text-gray-800 mb-4">ファイル命名規則</h3>
-              <div className="space-y-3 text-sm text-gray-600">
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-gray-700">PDFファイル</p>
-                  <code className="text-xs text-blue-600">[単元ID]_[タイトル].pdf</code>
-                  <p className="text-xs text-gray-500 mt-1">例: 101_憲法の基本原理.pdf</p>
-                </div>
-                <div className="p-3 bg-gray-50 rounded-lg">
-                  <p className="font-medium text-gray-700">音声ファイル</p>
-                  <code className="text-xs text-blue-600">[単元ID]_audio.mp3</code>
-                  <p className="text-xs text-gray-500 mt-1">例: 101_audio.mp3</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-yellow-50 rounded-xl p-4">
-              <h4 className="font-medium text-yellow-800 mb-2">注意事項</h4>
-              <ul className="text-sm text-yellow-700 space-y-1">
-                <li>• PDFは最大10MBまで</li>
-                <li>• 音声は最大50MBまで</li>
-                <li>• 同名ファイルは上書きされます</li>
-                <li>• MP3, WAV, M4A形式に対応</li>
+            <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+              <h3 className="mb-4 font-medium text-gray-800">アップロードメモ</h3>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li>音声・PDF は保存後すぐ一覧に反映されます。</li>
+                <li>コンテンツ編集画面から添付したファイルもここに表示されます。</li>
+                <li>不要なファイルは一覧タブから削除できます。</li>
               </ul>
             </div>
           </div>
         </div>
       ) : (
-        /* Files List Tab */
-        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          {/* Filter */}
-          <div className="flex gap-4 mb-6">
-            <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200">
-              すべて ({existingFiles.length})
-            </button>
-            <button className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
-              PDF ({existingFiles.filter(f => f.type === 'pdf').length})
-            </button>
-            <button className="px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg">
-              音声 ({existingFiles.filter(f => f.type === 'audio').length})
-            </button>
+        <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {existingFiles.map((file) => <ExistingFile key={file.id} file={file} onDelete={deleteFile} />)}
           </div>
-
-          {/* Files Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {existingFiles.map(file => (
-              <ExistingFile
-                key={file.id}
-                file={file}
-                onDelete={deleteExistingFile}
-              />
-            ))}
-          </div>
-
           {existingFiles.length === 0 && (
-            <div className="text-center py-12 text-gray-500">
-              <FolderOpen className="w-12 h-12 mx-auto mb-4 text-gray-300" />
+            <div className="py-12 text-center text-gray-500">
+              <FolderOpen className="mx-auto mb-4 h-12 w-12 text-gray-300" />
               <p>ファイルがありません</p>
             </div>
           )}

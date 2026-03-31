@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="constitutional" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#constitutional)"/>
+  <rect x="170" y="130" width="860" height="540" rx="38" fill="#ffffff" opacity="0.12"/>
+  <rect x="290" y="220" width="620" height="340" rx="28" fill="#eff6ff"/>
+  <rect x="360" y="290" width="480" height="18" rx="9" fill="#93c5fd"/>
+  <rect x="360" y="336" width="410" height="18" rx="9" fill="#bfdbfe"/>
+  <rect x="360" y="382" width="450" height="18" rx="9" fill="#bfdbfe"/>
+  <rect x="360" y="450" width="220" height="54" rx="27" fill="#1d4ed8"/>
+</svg>

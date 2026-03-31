@@ -66,7 +66,8 @@ export default async function handler(req, res) {
         id: user.id,
         email: user.email,
         name: user.name,
-        isPremium: user.isPremium
+        isPremium: user.isPremium,
+        membership: user.membership
       },
       token
     });

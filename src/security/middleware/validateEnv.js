@@ -27,10 +27,7 @@ const REQUIRED_VARS = {
   development: [
     'API_BASE_URL'
   ],
-  production: [
-    'ADMIN_EMAIL',
-    'DATABASE_URL'
-  ]
+  production: []
 };
 
 // Security validation rules
@@ -59,6 +56,10 @@ const VALIDATION_RULES = {
   DATABASE_URL: {
     pattern: /^postgresql:\/\/.+$/,
     description: 'Must be a valid PostgreSQL connection string'
+  },
+  STORAGE_MODE: {
+    allowedValues: ['file', 'database'],
+    description: 'Must be file or database'
   },
   UPLOAD_MAX_SIZE: {
     pattern: /^\d+$/,
@@ -182,9 +183,14 @@ function validateEnvironmentVariable(key, value, rule) {
  */
 function getRequiredVariables(nodeEnv = 'development') {
   const required = [...REQUIRED_VARS.all];
+  const storageMode = process.env.STORAGE_MODE || 'file';
   
   if (REQUIRED_VARS[nodeEnv]) {
     required.push(...REQUIRED_VARS[nodeEnv]);
+  }
+
+  if (storageMode === 'database') {
+    required.push('DATABASE_URL');
   }
 
   return required;

@@ -36,6 +36,7 @@ async function handleGet(req, res, userId) {
         email: user.email,
         name: user.name,
         isPremium: user.isPremium,
+        membership: user.membership,
         premiumExpiresAt: user.premiumExpiresAt,
         settings: user.settings,
         createdAt: user.createdAt,
@@ -127,6 +128,7 @@ async function handlePut(req, res, userId) {
         email: updatedUser.email,
         name: updatedUser.name,
         isPremium: updatedUser.isPremium,
+        membership: updatedUser.membership,
         settings: updatedUser.settings
       }
     });

@@ -1,5 +1,6 @@
 import userManager from '@/features/auth/server/userManager';
 import { withAuth } from '@/features/auth/server/auth';
+import progressRepository from '@/server/repositories/progressRepository';
 
 async function handler(req, res) {
   const userId = req.user.userId;
@@ -24,21 +25,21 @@ async function handleGet(req, res, userId) {
 
     // 特定の単元の進捗を取得
     if (unitId) {
-      const progress = await userManager.getProgress(userId);
+      const progress = progressRepository.getUnitProgress(userId, unitId);
       return res.status(200).json({
         success: true,
-        progress: progress[unitId] || null
+        progress
       });
     }
 
-    // 全体の進捗を取得
-    const progress = await userManager.getProgress(userId);
-    const overallProgress = await userManager.getOverallProgress(userId);
+    const summary = progressRepository.getSummary(userId);
 
     return res.status(200).json({
       success: true,
-      progress,
-      overall: overallProgress
+      overall: summary.overall,
+      recent: summary.recent,
+      bySubject: summary.bySubject,
+      byUnit: summary.byUnit
     });
 
   } catch (error) {

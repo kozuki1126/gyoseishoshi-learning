@@ -41,7 +41,8 @@ export default function PricingPage() {
       cta: isAuthenticated ? '現在のプラン' : '無料で始める',
       ctaLink: isAuthenticated ? '/mypage' : '/auth/register',
       popular: false,
-      current: isAuthenticated && !user?.isPremium
+      current: isAuthenticated && !user?.isPremium,
+      available: true
     },
     {
       id: 'premium',
@@ -59,10 +60,11 @@ export default function PricingPage() {
         { text: 'メールサポート', included: true },
         { text: '優先サポート', included: false }
       ],
-      cta: user?.isPremium ? '現在のプラン' : 'プレミアムに登録',
-      ctaLink: '/checkout/premium',
+      cta: user?.isPremium ? '現在のプラン' : '決済準備中',
+      ctaLink: '/pricing',
       popular: true,
-      current: user?.isPremium
+      current: user?.isPremium,
+      available: false
     },
     {
       id: 'annual',
@@ -82,10 +84,11 @@ export default function PricingPage() {
         { text: 'メールサポート', included: true },
         { text: '優先サポート', included: true }
       ],
-      cta: '年間プランに登録',
-      ctaLink: '/checkout/annual',
+      cta: '決済準備中',
+      ctaLink: '/pricing',
       popular: false,
-      current: false
+      current: false,
+      available: false
     }
   ];
 
@@ -189,18 +192,35 @@ export default function PricingPage() {
                     </ul>
 
                     {/* CTA Button */}
-                    <Link
-                      href={plan.ctaLink}
-                      className={`block w-full py-3 px-4 rounded-xl text-center font-medium transition-all ${
-                        plan.current
-                          ? 'bg-gray-100 text-gray-500 cursor-default'
-                          : plan.popular
-                            ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                            : 'bg-gray-100 hover:bg-gray-200 text-gray-800'
-                      }`}
-                    >
-                      {plan.cta}
-                    </Link>
+                    {plan.available ? (
+                      <Link
+                        href={plan.ctaLink}
+                        className={`block w-full rounded-xl py-3 px-4 text-center font-medium transition-all ${
+                          plan.current
+                            ? 'cursor-default bg-gray-100 text-gray-500'
+                            : plan.popular
+                              ? 'bg-blue-600 text-white hover:bg-blue-700'
+                              : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
+                        }`}
+                      >
+                        {plan.cta}
+                      </Link>
+                    ) : (
+                      <div>
+                        <button
+                          type="button"
+                          disabled
+                          className={`block w-full rounded-xl py-3 px-4 text-center font-medium ${
+                            plan.popular ? 'bg-blue-100 text-blue-500' : 'bg-gray-100 text-gray-500'
+                          }`}
+                        >
+                          {plan.cta}
+                        </button>
+                        <p className="mt-2 text-center text-xs text-gray-500">
+                          課金導線は準備中です。先に無料登録して学習を開始できます。
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               ))}

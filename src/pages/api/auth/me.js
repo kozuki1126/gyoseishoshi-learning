@@ -1,5 +1,6 @@
 import userManager from '@/features/auth/server/userManager';
 import { withAuth } from '@/features/auth/server/auth';
+import progressRepository from '@/server/repositories/progressRepository';
 
 async function handler(req, res) {
   // GETメソッドのみ許可
@@ -28,7 +29,7 @@ async function handler(req, res) {
     await userManager.checkPremiumStatus(userId);
 
     // 全体の進捗統計を取得
-    const overallProgress = await userManager.getOverallProgress(userId);
+    const summary = progressRepository.getSummary(userId);
 
     return res.status(200).json({
       success: true,
@@ -37,11 +38,12 @@ async function handler(req, res) {
         email: user.email,
         name: user.name,
         isPremium: user.isPremium,
+        membership: user.membership,
         premiumExpiresAt: user.premiumExpiresAt,
         settings: user.settings,
         createdAt: user.createdAt
       },
-      progress: overallProgress
+      progress: summary.overall
     });
 
   } catch (error) {

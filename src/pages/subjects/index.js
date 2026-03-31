@@ -1,8 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import Header from '@/shared/layout/Header';
 import Footer from '@/shared/layout/Footer';
 import { subjects } from '@/features/content/lib/subjects';
+import { useAuth } from '@/features/auth/context/AuthContext';
 import {
   Clock,
   BookOpen,
@@ -12,7 +14,7 @@ import {
 } from 'lucide-react';
 
 // Subject Card Component
-function SubjectCard({ subject }) {
+function SubjectCard({ subject, progress }) {
   const Icon = subject.icon;
   const totalUnits = subject.units?.length || 0;
   const lectureUnits = subject.units?.filter(u => u.type === 'lecture').length || 0;
@@ -81,10 +83,10 @@ function SubjectCard({ subject }) {
         <div className="mb-4">
           <div className="flex items-center justify-between text-sm mb-1">
             <span className="text-gray-500">学習進捗</span>
-            <span className="font-medium text-gray-700">0%</span>
+            <span className="font-medium text-gray-700">{progress?.completionRate || 0}%</span>
           </div>
           <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-            <div className="h-full bg-blue-600 rounded-full" style={{ width: '0%' }} />
+            <div className="h-full bg-blue-600 rounded-full" style={{ width: `${progress?.completionRate || 0}%` }} />
           </div>
         </div>
 
@@ -116,6 +118,33 @@ function StatsCard({ icon: Icon, label, value, color }) {
 }
 
 export default function SubjectsPage() {
+  const { isAuthenticated } = useAuth();
+  const [overallCompletionRate, setOverallCompletionRate] = useState(0);
+  const [progressBySubject, setProgressBySubject] = useState({});
+
+  useEffect(() => {
+    async function loadProgress() {
+      if (!isAuthenticated) {
+        setOverallCompletionRate(0);
+        return;
+      }
+
+      const token = localStorage.getItem('token');
+      const res = await fetch('/api/user/progress', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setOverallCompletionRate(data.overall?.completionRate || 0);
+        setProgressBySubject(data.bySubject || {});
+      }
+    }
+
+    loadProgress();
+  }, [isAuthenticated]);
+
   // Calculate totals
   const totalUnits = subjects.reduce((sum, s) => sum + (s.units?.length || 0), 0);
   const totalHours = subjects.reduce((sum, s) => sum + s.estimatedHours, 0);
@@ -158,7 +187,7 @@ export default function SubjectsPage() {
                 <p className="text-sm text-blue-100">学習時間</p>
               </div>
               <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
-                <p className="text-3xl font-bold">0%</p>
+                <p className="text-3xl font-bold">{overallCompletionRate}%</p>
                 <p className="text-sm text-blue-100">進捗率</p>
               </div>
             </div>
@@ -178,7 +207,7 @@ export default function SubjectsPage() {
                 {subjects
                   .filter(s => s.category === 'law')
                   .map(subject => (
-                    <SubjectCard key={subject.id} subject={subject} />
+                    <SubjectCard key={subject.id} subject={subject} progress={progressBySubject[subject.id]} />
                   ))
                 }
               </div>
@@ -194,7 +223,7 @@ export default function SubjectsPage() {
                 {subjects
                   .filter(s => s.category === 'general')
                   .map(subject => (
-                    <SubjectCard key={subject.id} subject={subject} />
+                    <SubjectCard key={subject.id} subject={subject} progress={progressBySubject[subject.id]} />
                   ))
                 }
               </div>

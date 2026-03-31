@@ -1,66 +1,53 @@
+import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '@/shared/layout/Header';
 import Footer from '@/shared/layout/Footer';
-import { subjects, getSubjectById } from '@/features/content/lib/subjects';
+import { getSubjectById } from '@/features/content/lib/subjects';
+import { useAuth } from '@/features/auth/context/AuthContext';
+import { hasPremiumAccess, getEntitlementLabel } from '@/shared/lib/entitlements';
 import {
   Clock,
   BookOpen,
   ChevronRight,
   ChevronLeft,
   Target,
-  Play,
   FileText,
   Music,
   Lock,
   CheckCircle,
-  Circle
+  Crown,
 } from 'lucide-react';
 
-// Unit Card Component
-function UnitCard({ unit, subjectId, index, isLocked = false }) {
-  const getTypeIcon = (type) => {
-    return type === 'lecture' ? BookOpen : Target;
-  };
-
-  const getTypeBadge = (type) => {
-    return type === 'lecture' 
-      ? { label: '講義', color: 'bg-blue-100 text-blue-700' }
-      : { label: '演習', color: 'bg-purple-100 text-purple-700' };
-  };
-
-  const getDifficultyBadge = (difficulty) => {
-    const badges = {
-      beginner: { label: '初級', color: 'bg-green-100 text-green-700' },
-      intermediate: { label: '中級', color: 'bg-yellow-100 text-yellow-700' },
-      advanced: { label: '上級', color: 'bg-red-100 text-red-700' }
-    };
-    return badges[difficulty] || badges.beginner;
-  };
-
-  const TypeIcon = getTypeIcon(unit.type);
-  const typeBadge = getTypeBadge(unit.type);
-  const diffBadge = getDifficultyBadge(unit.difficulty);
-
-  // Mock completion status
-  const isCompleted = false;
+function UnitCard({ unit, subjectId, index, progress, isLocked }) {
+  const isCompleted = Boolean(progress?.completed);
 
   if (isLocked) {
     return (
-      <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 opacity-60">
+      <div className="rounded-xl border border-amber-200 bg-amber-50 p-5">
         <div className="flex items-start gap-4">
-          <div className="flex-shrink-0 w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
-            <Lock className="w-5 h-5 text-gray-400" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100">
+            <Lock className="h-5 w-5 text-amber-600" />
           </div>
           <div className="flex-1">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-sm text-gray-400">単元 {index + 1}</span>
+            <div className="mb-1 flex items-center gap-2">
+              <span className="text-sm text-amber-700">単元 {index + 1}</span>
+              <span className="rounded-full bg-white px-2 py-0.5 text-xs font-medium text-amber-700">
+                プレミアム限定
+              </span>
             </div>
-            <h3 className="font-medium text-gray-400 mb-2">{unit.title}</h3>
-            <p className="text-sm text-gray-400">
-              プレミアム会員限定コンテンツです
+            <h3 className="font-medium text-gray-800">{unit.title}</h3>
+            <p className="mt-2 text-sm text-amber-800">
+              この単元はプレミアム会員向けです。無料会員でも学習一覧までは確認できます。
             </p>
+            <Link
+              href="/pricing"
+              className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-amber-700 hover:text-amber-800"
+            >
+              <Crown className="h-4 w-4" />
+              プランを見る
+            </Link>
           </div>
         </div>
       </div>
@@ -69,57 +56,58 @@ function UnitCard({ unit, subjectId, index, isLocked = false }) {
 
   return (
     <Link href={`/subjects/${subjectId}/${unit.id}`}>
-      <div className="bg-white rounded-xl border border-gray-100 p-5 hover:shadow-md hover:border-gray-200 transition-all duration-300 cursor-pointer group">
+      <div className="group cursor-pointer rounded-xl border border-gray-100 bg-white p-5 transition-all duration-300 hover:border-gray-200 hover:shadow-md">
         <div className="flex items-start gap-4">
-          {/* Status Icon */}
           <div className="flex-shrink-0">
             {isCompleted ? (
-              <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                <CheckCircle className="w-5 h-5 text-green-600" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
+                <CheckCircle className="h-5 w-5 text-green-600" />
               </div>
             ) : (
-              <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
-                <TypeIcon className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors" />
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-100 transition-colors group-hover:bg-blue-600">
+                {unit.type === 'lecture' ? (
+                  <BookOpen className="h-5 w-5 text-blue-600 group-hover:text-white" />
+                ) : (
+                  <Target className="h-5 w-5 text-blue-600 group-hover:text-white" />
+                )}
               </div>
             )}
           </div>
 
-          {/* Content */}
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2 mb-1">
+            <div className="mb-1 flex flex-wrap items-center gap-2">
               <span className="text-sm text-gray-400">単元 {index + 1}</span>
-              <span className={`px-2 py-0.5 rounded text-xs font-medium ${typeBadge.color}`}>
-                {typeBadge.label}
+              <span className={`rounded px-2 py-0.5 text-xs font-medium ${unit.type === 'lecture' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'}`}>
+                {unit.type === 'lecture' ? '講義' : '演習'}
               </span>
-              <span className={`px-2 py-0.5 rounded text-xs font-medium ${diffBadge.color}`}>
-                {diffBadge.label}
+              <span className={`rounded px-2 py-0.5 text-xs font-medium ${unit.accessLevel === 'premium' ? 'bg-amber-100 text-amber-700' : 'bg-emerald-100 text-emerald-700'}`}>
+                {getEntitlementLabel(unit.accessLevel)}
+              </span>
+              <span className={`rounded px-2 py-0.5 text-xs font-medium ${unit.status === 'draft' ? 'bg-gray-100 text-gray-700' : 'bg-slate-100 text-slate-700'}`}>
+                {unit.status === 'draft' ? '下書き' : '公開中'}
               </span>
             </div>
-            <h3 className="font-medium text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
-              {unit.title}
-            </h3>
-            
-            {/* Meta Info */}
-            <div className="flex items-center gap-4 text-sm text-gray-500">
+            <h3 className="mb-2 font-medium text-gray-800 transition-colors group-hover:text-blue-600">{unit.title}</h3>
+
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
               <span className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                約30分
+                <Clock className="h-4 w-4" />
+                約{unit.estimatedTime}分
               </span>
               <span className="flex items-center gap-1">
-                <FileText className="w-4 h-4" />
+                <FileText className="h-4 w-4" />
                 テキスト
               </span>
-              <span className="flex items-center gap-1">
-                <Music className="w-4 h-4" />
-                音声
-              </span>
+              {unit.hasAudio && (
+                <span className="flex items-center gap-1">
+                  <Music className="h-4 w-4" />
+                  音声
+                </span>
+              )}
             </div>
           </div>
 
-          {/* Arrow */}
-          <div className="flex-shrink-0 self-center">
-            <ChevronRight className="w-5 h-5 text-gray-300 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
-          </div>
+          <ChevronRight className="h-5 w-5 flex-shrink-0 self-center text-gray-300 transition-all group-hover:translate-x-1 group-hover:text-blue-600" />
         </div>
       </div>
     </Link>
@@ -129,15 +117,66 @@ function UnitCard({ unit, subjectId, index, isLocked = false }) {
 export default function SubjectDetail() {
   const router = useRouter();
   const { subjectId } = router.query;
+  const { user, isAuthenticated } = useAuth();
+  const [units, setUnits] = useState([]);
+  const [progressByUnit, setProgressByUnit] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // Get subject data
   const subject = getSubjectById(subjectId);
 
-  // If subject not found
-  if (!subjectId) {
+  useEffect(() => {
+    if (!subjectId) {
+      return;
+    }
+
+    async function load() {
+      setLoading(true);
+      try {
+        const unitsRes = await fetch(`/api/content/units?subjectId=${encodeURIComponent(subjectId)}`);
+        const unitsData = await unitsRes.json();
+        if (unitsRes.ok && unitsData.success) {
+          setUnits(unitsData.units);
+        }
+
+        if (isAuthenticated) {
+          const token = localStorage.getItem('token');
+          const progressRes = await fetch('/api/user/progress', {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          const progressData = await progressRes.json();
+          if (progressRes.ok && progressData.success) {
+            setProgressByUnit(progressData.byUnit || {});
+          }
+        } else {
+          setProgressByUnit({});
+        }
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    load();
+  }, [subjectId, isAuthenticated]);
+
+  const lectureUnits = useMemo(() => units.filter((unit) => unit.type === 'lecture'), [units]);
+  const practiceUnits = useMemo(() => units.filter((unit) => unit.type === 'practice'), [units]);
+
+  const progressStats = useMemo(() => {
+    const completed = units.filter((unit) => progressByUnit[unit.id]?.completed).length;
+    const total = units.length;
+    return {
+      completed,
+      total,
+      percentage: total ? Math.round((completed / total) * 100) : 0,
+    };
+  }, [units, progressByUnit]);
+
+  if (loading || !subjectId) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      <div className="flex min-h-screen items-center justify-center bg-gray-50">
+        <div className="h-12 w-12 animate-spin rounded-full border-b-2 border-blue-600" />
       </div>
     );
   }
@@ -147,9 +186,9 @@ export default function SubjectDetail() {
       <div className="min-h-screen bg-gray-50">
         <Header />
         <main className="pt-20 pb-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">科目が見つかりません</h1>
-            <p className="text-gray-500 mb-8">指定された科目は存在しません。</p>
+          <div className="mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 lg:px-8">
+            <h1 className="mb-4 text-2xl font-bold text-gray-800">科目が見つかりません</h1>
+            <p className="mb-8 text-gray-500">指定された科目は存在しません。</p>
             <Link href="/subjects" className="text-blue-600 hover:text-blue-700">
               科目一覧に戻る
             </Link>
@@ -161,8 +200,7 @@ export default function SubjectDetail() {
   }
 
   const Icon = subject.icon;
-  const lectureUnits = subject.units?.filter(u => u.type === 'lecture') || [];
-  const practiceUnits = subject.units?.filter(u => u.type === 'practice') || [];
+  const premium = hasPremiumAccess(user);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -174,119 +212,111 @@ export default function SubjectDetail() {
       <Header />
 
       <main className="pt-20">
-        {/* Hero Section */}
-        <section className={`${subject.color} text-white py-12`}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-sm text-white/70 mb-6">
+        <section className={`${subject.color} py-12 text-white`}>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <nav className="mb-6 flex flex-wrap items-center gap-2 text-sm text-white/70">
               <Link href="/" className="hover:text-white">ホーム</Link>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="h-4 w-4" />
               <Link href="/subjects" className="hover:text-white">科目一覧</Link>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="h-4 w-4" />
               <span className="text-white">{subject.name}</span>
             </nav>
 
-            <div className="flex flex-col md:flex-row md:items-center gap-6">
-              {/* Icon */}
-              <div className="w-20 h-20 bg-white/20 backdrop-blur rounded-2xl flex items-center justify-center">
-                <Icon className="w-10 h-10 text-white" />
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white/20 backdrop-blur">
+                <Icon className="h-10 w-10 text-white" />
               </div>
 
-              {/* Info */}
               <div className="flex-1">
-                <h1 className="text-3xl md:text-4xl font-bold mb-3">{subject.name}</h1>
-                <p className="text-lg text-white/80 mb-4">{subject.description}</p>
-                
-                {/* Stats */}
+                <h1 className="mb-3 text-3xl font-bold md:text-4xl">{subject.name}</h1>
+                <p className="mb-4 text-lg text-white/80">{subject.description}</p>
+
                 <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
-                    <BookOpen className="w-4 h-4" />
+                  <div className="flex items-center gap-2 rounded-lg bg-white/10 px-3 py-1.5">
+                    <BookOpen className="h-4 w-4" />
                     <span className="text-sm">講義 {lectureUnits.length}単元</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
-                    <Target className="w-4 h-4" />
+                  <div className="flex items-center gap-2 rounded-lg bg-white/10 px-3 py-1.5">
+                    <Target className="h-4 w-4" />
                     <span className="text-sm">演習 {practiceUnits.length}単元</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
-                    <Clock className="w-4 h-4" />
+                  <div className="flex items-center gap-2 rounded-lg bg-white/10 px-3 py-1.5">
+                    <Clock className="h-4 w-4" />
                     <span className="text-sm">約{subject.estimatedHours}時間</span>
                   </div>
                 </div>
               </div>
 
-              {/* Progress */}
-              <div className="bg-white/10 backdrop-blur rounded-xl p-4 min-w-[200px]">
-                <div className="text-center mb-3">
-                  <span className="text-3xl font-bold">0%</span>
+              <div className="min-w-[220px] rounded-xl bg-white/10 p-4 backdrop-blur">
+                <div className="mb-3 text-center">
+                  <span className="text-3xl font-bold">{progressStats.percentage}%</span>
                   <p className="text-sm text-white/70">学習進捗</p>
                 </div>
-                <div className="h-2 bg-white/20 rounded-full overflow-hidden">
-                  <div className="h-full bg-white rounded-full" style={{ width: '0%' }} />
+                <div className="h-2 overflow-hidden rounded-full bg-white/20">
+                  <div className="h-full rounded-full bg-white" style={{ width: `${progressStats.percentage}%` }} />
                 </div>
-                <p className="text-xs text-white/70 text-center mt-2">
-                  0 / {subject.units?.length || 0} 単元完了
+                <p className="mt-2 text-center text-xs text-white/70">
+                  {progressStats.completed} / {progressStats.total} 単元完了
                 </p>
+                {!premium && (
+                  <p className="mt-3 text-xs text-white/80">
+                    無料会員では一部講義と進捗管理が利用できます。
+                  </p>
+                )}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Units List */}
         <section className="py-12">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Lecture Units */}
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             {lectureUnits.length > 0 && (
               <div className="mb-12">
-                <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                  <BookOpen className="w-6 h-6 text-blue-600" />
+                <h2 className="mb-6 flex items-center gap-3 text-xl font-bold text-gray-800">
+                  <BookOpen className="h-6 w-6 text-blue-600" />
                   講義
-                  <span className="text-sm font-normal text-gray-500">
-                    ({lectureUnits.length}単元)
-                  </span>
+                  <span className="text-sm font-normal text-gray-500">({lectureUnits.length}単元)</span>
                 </h2>
                 <div className="space-y-4">
                   {lectureUnits.map((unit, index) => (
-                    <UnitCard 
-                      key={unit.id} 
-                      unit={unit} 
+                    <UnitCard
+                      key={unit.id}
+                      unit={unit}
                       subjectId={subjectId}
                       index={index}
+                      progress={progressByUnit[unit.id]}
+                      isLocked={unit.accessLevel === 'premium' && !premium}
                     />
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Practice Units */}
             {practiceUnits.length > 0 && (
               <div>
-                <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-                  <Target className="w-6 h-6 text-purple-600" />
+                <h2 className="mb-6 flex items-center gap-3 text-xl font-bold text-gray-800">
+                  <Target className="h-6 w-6 text-purple-600" />
                   演習
-                  <span className="text-sm font-normal text-gray-500">
-                    ({practiceUnits.length}単元)
-                  </span>
+                  <span className="text-sm font-normal text-gray-500">({practiceUnits.length}単元)</span>
                 </h2>
                 <div className="space-y-4">
                   {practiceUnits.map((unit, index) => (
-                    <UnitCard 
-                      key={unit.id} 
-                      unit={unit} 
+                    <UnitCard
+                      key={unit.id}
+                      unit={unit}
                       subjectId={subjectId}
                       index={lectureUnits.length + index}
+                      progress={progressByUnit[unit.id]}
+                      isLocked={unit.accessLevel === 'premium' && !premium}
                     />
                   ))}
                 </div>
               </div>
             )}
 
-            {/* Navigation */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
-              <Link 
-                href="/subjects"
-                className="inline-flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
+            <div className="mt-12 border-t border-gray-200 pt-8">
+              <Link href="/subjects" className="inline-flex items-center gap-2 text-gray-600 transition-colors hover:text-blue-600">
+                <ChevronLeft className="h-5 w-5" />
                 科目一覧に戻る
               </Link>
             </div>

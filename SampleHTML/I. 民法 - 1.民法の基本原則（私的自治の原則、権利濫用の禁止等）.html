@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>民法の基本原則 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --purple-50:  #f5f3ff;
+    --purple-200: #ddd6fe;
+    --purple-600: #7c3aed;
+    --purple-900: #4c1d95;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight-blue:   #dbeafe;
+    --highlight-purple: #ede9fe;
+    --highlight-red:    #ffe4e6;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+
+mark.kw-blue   { background: var(--highlight-blue);   color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-purple { background: var(--highlight-purple); color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-red    { background: var(--highlight-red);    color: inherit; padding: .1em .3em; border-radius: 3px; }
+
+/* セクションヘッダ */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* ボックス */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .45rem 1rem;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__icon { font-size: 16px; line-height: 1; }
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+
+.box--definition { border: 1px solid var(--purple-600); }
+.box--definition .box__hd { background: var(--purple-600); color: #fff; }
+.box--definition .box__bd { background: var(--purple-50); color: var(--purple-900); }
+
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+
+/* 比較テーブル */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th,
+.cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--purple-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--purple-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* バッジ */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--purple-50);  color: var(--purple-900); border: 1px solid var(--purple-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+
+/* 図 */
+.diagram-wrap {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 2rem 1.5rem;
+    margin: 1.25rem 0;
+    overflow-x: auto;
+}
+.diagram-wrap svg {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* リスト */
+ul, ol { padding-left: 1.5rem; }
+li { margin-bottom: .3rem; }
+
+/* ページタイトルエリア */
+.page-meta {
+    display: flex;
+    gap: .75rem;
+    margin-bottom: .75rem;
+    flex-wrap: wrap;
+}
+.page-meta span {
+    font-size: .75rem;
+    color: var(--text-muted);
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    padding: .2em .75em;
+    border-radius: 4px;
+}
+
+/* 判例カード */
+.case-card {
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__header {
+    background: var(--blue-900);
+    color: #fff;
+    padding: .6rem 1rem;
+    font-size: .8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.case-card__body { padding: 1rem 1.25rem; background: var(--blue-50); }
+.case-card__section { margin-bottom: .75rem; }
+.case-card__label {
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: .25rem;
+}
+.case-card__content { font-size: .9rem; }
+
+/* 横断リンク */
+.cross-ref {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 6px;
+    padding: .75rem 1rem;
+    font-size: .85rem;
+    color: var(--blue-900);
+    margin: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.cross-ref .material-icons-round { font-size: 16px; flex-shrink: 0; margin-top: .15rem; }
+</style>
+</head>
+<body>
+
+<div class="page-meta">
+    <span>民法 第1編 総則</span>
+    <span>第1章 通則</span>
+    <span>民法1条・2条</span>
+</div>
+
+<h1>民法の基本原則<br><span style="font-size:1rem;font-weight:400;color:var(--text-secondary);">私的自治の原則・信義誠実の原則・権利濫用の禁止 ほか</span></h1>
+
+<!-- ===== 第1節 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+        <h2>単元の概要</h2>
+        <p class="sec-head__sub">Unit Overview</p>
+    </div>
+</header>
+
+<p>民法は、私人間（市民同士）の権利義務関係を定める<mark class="kw-blue">私法の基本法典</mark>です。その冒頭に置かれた第1条・第2条は、民法全体を貫く「基本原則」を宣言しており、<mark class="kw-purple">民法1,050条すべての解釈・適用の基準</mark>となります。</p>
+
+<p>行政書士試験では、基本原則そのものの条文知識だけでなく、「信義則」「権利濫用の禁止」が実際の事案にどう適用されるかを問う問題が繰り返し出題されます。判例との結びつきを理解することが得点の鍵です。</p>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span>具体例で理解する</div>
+    <div class="box__bd">
+        <p><strong>なぜ基本原則が必要なのか？</strong>民法は条文だけで全事案を解決できるわけではありません。たとえば、隣人が嫌がらせ目的だけで、自分に何の利益もない状態で「私の土地を勝手に使っている」と撤去を要求してきた場合、条文どおりに認めると社会的に不合理な結果になります。そこで「権利の濫用は許さない」という基本原則が、条文の硬直的な適用を防ぐ安全弁として機能します。</p>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>試験における位置づけ</div>
+    <div class="box__bd">
+        <ul>
+            <li>民法の択一式問題で毎年1〜2問出題される最重要単元</li>
+            <li>宇奈月温泉事件・信義則に関する判例は頻出中の頻出</li>
+            <li>行政法の「信頼保護の原則」「比例原則」と横断的に問われることがある</li>
+            <li>他の条文との組み合わせで「正しいか誤りか」を判断させる問題が多い</li>
+        </ul>
+    </div>
+</div>
+
+<p>民法の基本原則は以下の体系で整理されます。</p>
+<ul>
+    <li><strong>近代私法の3大原則</strong>（背景にある自由主義的原理）：私的自治の原則・所有権絶対の原則・過失責任の原則</li>
+    <li><strong>民法1条の3原則</strong>（明文規定）：公共の福祉適合（1項）・信義誠実（2項）・権利濫用禁止（3項）</li>
+    <li><strong>民法2条</strong>：個人の尊厳と両性の本質的平等（解釈基準）</li>
+</ul>
+</section>
+
+<!-- ===== 第2節 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+        <h2>重要用語の解説</h2>
+        <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+</header>
+
+<h3>私的自治の原則 <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></h3>
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>定義</div>
+    <div class="box__bd">
+        個人は自己の意思に基づいて自由に法律関係を形成できるという原則。国家はみだりに私人間の関係に干渉すべきでないという自由主義思想を背景とする。民法に直接明文はないが、民法全体の基礎原理として位置づけられる。
+    </div>
+</div>
+<p><strong>実務上の意義：</strong>契約の締結・内容・相手方・方式を自由に決定できる「契約自由の原則」（民法521条・522条2項）はその典型的な現れです。ただし、公序良俗（民法90条）や強行法規による制限があります。</p>
+
+<h3>公共の福祉の原則 <span class="badge badge--def"><span class="material-icons-round" style="font-size:13px">auto_stories</span>定義</span></h3>
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>定義</div>
+    <div class="box__bd">
+        私権は公共の福祉（社会共同生活全体の利益）に適合しなければならないという原則（民法1条1項）。所有権絶対の原則などに対する修正原理として機能する。
+    </div>
+</div>
+<p><strong>類似概念との相違：</strong>憲法29条2項の「財産権の内容は、公共の福祉に適合するやうに、法律でこれを定める」と連動しています。民法1条1項は、既存の私権の内容・行使が公共の福祉に適合すべき旨を宣言するものです。</p>
+
+<h3>信義誠実の原則（信義則） <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>最重要</span></h3>
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>定義</div>
+    <div class="box__bd">
+        権利の行使及び義務の履行は、信義に従い誠実に行わなければならないという原則（民法1条2項）。相互に相手の信頼を裏切らないように、誠意をもって行動することを求める。「信義則」と略称される。
+    </div>
+</div>
+<p><strong>適用場面：</strong>他の法規定で解決できない場合の最終手段として機能する。安易に援用すべきでないとされる。</p>
+
+<p><strong>信義則から派生する4つの原則</strong></p>
+<ul>
+    <li><mark class="kw-purple">禁反言の原則（エストッペル）</mark>：自己の行為・言動と矛盾する態度をとることは許されない</li>
+    <li><mark class="kw-purple">クリーンハンズの原則</mark>：法の保護を受けようとする者は自ら誠実（合法）でなければならない（民法708条の不法原因給付に現れる）</li>
+    <li><mark class="kw-purple">事情変更の原則</mark>：契約締結後に予見不可能な事情変化が生じた場合、当初の条件どおりの履行を強制することが信義則に反する場合は変更・解除できる</li>
+    <li><mark class="kw-purple">失権（権利失効）の原則</mark>：権利者が長期間にわたり権利を行使しないでいると、相手方の信頼を保護するため権利行使が制限される</li>
+</ul>
+
+<h3>権利濫用の禁止 <span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></h3>
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>定義</div>
+    <div class="box__bd">
+        外観上は正当な権利行使に見えても、その行使が社会的に認められる範囲を超えた場合、これを許さないという原則（民法1条3項）。権利濫用と認定されると、法律効果の発生が否定され、場合によっては不法行為として損害賠償責任が生じる。
+    </div>
+</div>
+<p><strong>判断基準（主観＋客観）：</strong>かつては加害目的などの主観的要素が重視されたが、現在の判例は主に<mark class="kw-red">当事者双方の利益衡量（客観的基準）</mark>によって判断する。</p>
+
+<h3>個人の尊厳・両性の本質的平等（民法2条）</h3>
+<div class="box box--definition">
+    <div class="box__hd"><span class="material-icons-round box__icon">auto_stories</span>定義</div>
+    <div class="box__bd">
+        民法は「個人の尊厳」と「両性の本質的平等」を旨として解釈しなければならない（民法2条）。財産法・家族法を含む民法全体の解釈基準となる。
+    </div>
+</div>
+<p>憲法24条（家族生活における両性の平等）の内容を民法解釈の基準として取り込んだ条文です。</p>
+
+<h3>近代私法の3大原則</h3>
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span>背景原理の整理</div>
+    <div class="box__bd">
+        <ul>
+            <li><strong>所有権絶対の原則</strong>：所有者は他人の干渉なく所有権を行使できる（民法206条）。ただし法令の範囲内</li>
+            <li><strong>契約自由の原則</strong>：締結の自由・内容の自由・方式の自由・相手方選択の自由（民法521条・522条）</li>
+            <li><strong>過失責任の原則</strong>：他人に損害を与えても故意・過失がなければ責任を負わない（民法709条）</li>
+        </ul>
+        これら3原則は資本主義・自由主義の発展とともに形成されたが、20世紀以降の社会的修正（信義則・権利濫用禁止・消費者保護法制等）により限界が認められるようになった。
+    </div>
+</div>
+</section>
+
+<!-- ===== 第3節 概念関係図 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+        <h2>概念関係図</h2>
+        <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+</header>
+
+<div class="diagram-wrap">
+<svg viewBox="0 0 780 560" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="'Noto Sans JP', sans-serif">
+  <defs>
+    <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+    </marker>
+    <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- Layer 0: ルートノード -->
+  <g>
+    <rect x="270" y="10" width="240" height="50" rx="8" fill="#1d4ed8"/>
+    <text x="390" y="31" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">民法の基本原則</text>
+    <text x="390" y="48" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法1条・2条</text>
+  </g>
+
+  <!-- Layer 0→1 矢印 3本 -->
+  <line x1="330" y1="60" x2="160" y2="128" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="390" y1="60" x2="390" y2="128" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <line x1="450" y1="60" x2="620" y2="128" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- Layer 1: 3つのカテゴリ -->
+  <!-- 公共の福祉 -->
+  <g>
+    <rect x="50" y="130" width="220" height="50" rx="6" fill="#2563eb"/>
+    <text x="160" y="151" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">公共の福祉適合</text>
+    <text x="160" y="168" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法1条1項</text>
+  </g>
+  <!-- 信義則 -->
+  <g>
+    <rect x="280" y="130" width="220" height="50" rx="6" fill="#7c3aed"/>
+    <text x="390" y="151" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">信義誠実の原則</text>
+    <text x="390" y="168" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法1条2項（信義則）</text>
+  </g>
+  <!-- 権利濫用 -->
+  <g>
+    <rect x="510" y="130" width="220" height="50" rx="6" fill="#e11d48"/>
+    <text x="620" y="151" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">権利濫用の禁止</text>
+    <text x="620" y="168" text-anchor="middle" fill="#fff" font-size="10" opacity="0.85">民法1条3項</text>
+  </g>
+
+  <!-- Layer 1→2 矢印（信義則） -->
+  <line x1="340" y1="180" x2="180" y2="258" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+  <line x1="370" y1="180" x2="320" y2="258" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+  <line x1="410" y1="180" x2="460" y2="258" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+  <line x1="440" y1="180" x2="600" y2="258" stroke="#7c3aed" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+
+  <!-- ラベル（信義則→派生） -->
+  <rect x="330" y="210" width="46" height="16" rx="3" fill="#f5f3ff" stroke="#ddd6fe" stroke-width="0.5"/>
+  <text x="353" y="222" text-anchor="middle" font-size="9" fill="#4c1d95">派生原則</text>
+
+  <!-- Layer 2: 信義則から派生する4原則 -->
+  <!-- 禁反言 -->
+  <g>
+    <rect x="70" y="260" width="170" height="48" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="155" y="280" text-anchor="middle" fill="#4c1d95" font-size="12" font-weight="700">禁反言の原則</text>
+    <text x="155" y="298" text-anchor="middle" fill="#4c1d95" font-size="10" opacity="0.85">エストッペル</text>
+  </g>
+  <!-- クリーンハンズ -->
+  <g>
+    <rect x="255" y="260" width="160" height="48" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="335" y="280" text-anchor="middle" fill="#4c1d95" font-size="12" font-weight="700">クリーンハンズ</text>
+    <text x="335" y="298" text-anchor="middle" fill="#4c1d95" font-size="10" opacity="0.85">不法原因給付(708条)</text>
+  </g>
+  <!-- 事情変更 -->
+  <g>
+    <rect x="430" y="260" width="160" height="48" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="510" y="280" text-anchor="middle" fill="#4c1d95" font-size="12" font-weight="700">事情変更の原則</text>
+    <text x="510" y="298" text-anchor="middle" fill="#4c1d95" font-size="10" opacity="0.85">契約内容の変更・解除</text>
+  </g>
+  <!-- 失権 -->
+  <g>
+    <rect x="605" y="260" width="145" height="48" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="677" y="280" text-anchor="middle" fill="#4c1d95" font-size="12" font-weight="700">失権の原則</text>
+    <text x="677" y="298" text-anchor="middle" fill="#4c1d95" font-size="10" opacity="0.85">長期不行使で失権</text>
+  </g>
+
+  <!-- 権利濫用→効果 矢印 -->
+  <line x1="620" y1="180" x2="560" y2="370" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed)"/>
+
+  <!-- Layer 3: 権利濫用の効果 -->
+  <g>
+    <rect x="430" y="372" width="195" height="48" rx="6" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+    <text x="528" y="392" text-anchor="middle" fill="#9f1239" font-size="12" font-weight="700">法的効果の否定</text>
+    <text x="528" y="410" text-anchor="middle" fill="#9f1239" font-size="10" opacity="0.9">不法行為責任も発生しうる</text>
+  </g>
+
+  <!-- ラベル（権利濫用→効果） -->
+  <rect x="576" y="306" width="52" height="16" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+  <text x="602" y="318" text-anchor="middle" font-size="9" fill="#9f1239">濫用認定</text>
+
+  <!-- 民法2条ノード -->
+  <g>
+    <rect x="50" y="372" width="220" height="48" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+    <text x="160" y="392" text-anchor="middle" fill="#1e3a8a" font-size="12" font-weight="700">民法2条</text>
+    <text x="160" y="410" text-anchor="middle" fill="#1e3a8a" font-size="10">個人の尊厳・両性の本質的平等</text>
+  </g>
+  <!-- 公共の福祉→民法2条 -->
+  <line x1="160" y1="180" x2="160" y2="370" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <rect x="118" y="268" width="84" height="16" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="160" y="280" text-anchor="middle" font-size="9" fill="#1d4ed8">解釈指針を補完</text>
+
+  <!-- 注記エリア -->
+  <rect x="20" y="450" width="740" height="36" rx="4" fill="none" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="390" y="463" text-anchor="middle" font-size="10" fill="#9f1239">信義則・権利濫用はあくまで補充的・例外的適用。他の条文で解決できる場合は優先する</text>
+  <text x="390" y="478" text-anchor="middle" font-size="10" fill="#9f1239">権利濫用の判断：主観的要件（加害目的等）＋客観的要件（利益衡量）</text>
+</svg>
+</div>
+<p style="font-size:.875rem;color:var(--text-secondary);">民法1条は3項目の原則を定め、信義則（2項）はさらに禁反言・クリーンハンズ・事情変更・失権の4原則を派生させる。権利濫用（3項）が認定されると法的効果が否定される。民法2条は全体の解釈基準として機能する。</p>
+</section>
+
+<!-- ===== 第4節 比較表 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+        <h2>比較表</h2>
+        <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+</header>
+
+<h3>信義則 vs 権利濫用の禁止</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">信義誠実の原則（民法1条2項）</th>
+            <th class="col--b">権利濫用の禁止（民法1条3項）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>根拠条文</td>
+            <td class="col--a">民法1条2項</td>
+            <td class="col--b">民法1条3項</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>対象</td>
+            <td class="col--a">権利行使・義務履行の<strong>方法・態様</strong></td>
+            <td class="col--b">権利行使それ自体が<strong>許容限度を超える</strong>こと</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>適用範囲</td>
+            <td class="col--a">あらゆる法律関係（契約・不法行為・家族法等）</td>
+            <td class="col--b">権利行使の場面（所有権・債権・解雇権等）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>法的効果</td>
+            <td class="col--a">義務を履行したことにならない／権利行使の効果が生じない</td>
+            <td class="col--b">法律効果の発生が否定される（不法行為にもなりうる）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>適用態度</td>
+            <td class="col--a">補充的・慎重に適用（他の法規で解決できる場合は使わない）</td>
+            <td class="col--b">補充的・慎重に適用（濫用の濫用に注意）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>典型判例</td>
+            <td class="col--a">最判昭32.7.5（契約解釈の基準となる信義則）</td>
+            <td class="col--b">大判昭10.10.5（宇奈月温泉事件）</td>
+        </tr>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>判断要素</td>
+            <td class="col--a">相手の信頼を裏切っているか（誠実性）</td>
+            <td class="col--b">主観的目的＋客観的利益衡量（双方の損得比較）</td>
+        </tr>
+    </tbody>
+</table>
+<p style="font-size:.875rem;color:var(--text-secondary);">信義則は行動の「方法」を問うのに対し、権利濫用は権利行使「そのもの」が許容限度を超えるかを問う。重複適用は理論上可能だが、まず他の法規で解決を試みることが原則。</p>
+
+<h3>近代私法3大原則とその修正</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">原則</th>
+            <th class="col--a">原則の内容</th>
+            <th class="col--b">社会的修正（現代の制限）</th>
+            <th class="col--c">根拠条文</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label">契約自由の原則</td>
+            <td class="col--a">締結・内容・相手方・方式を自由に決定</td>
+            <td class="col--b">消費者契約法・労働基準法による強行規定</td>
+            <td class="col--c">民法521条・522条</td>
+        </tr>
+        <tr>
+            <td class="col--label">所有権絶対の原則</td>
+            <td class="col--a">所有者は自由に所有権を行使できる</td>
+            <td class="col--b">権利濫用禁止・土地収用・建築規制</td>
+            <td class="col--c">民法206条</td>
+        </tr>
+        <tr>
+            <td class="col--label">過失責任の原則</td>
+            <td class="col--a">故意・過失がなければ責任を負わない</td>
+            <td class="col--b">製造物責任法（無過失責任）・使用者責任</td>
+            <td class="col--c">民法709条</td>
+        </tr>
+    </tbody>
+</table>
+<p style="font-size:.875rem;color:var(--text-secondary);">3大原則はいずれも19世紀自由主義の産物。20世紀以降の社会的弱者保護の観点から、立法・判例による修正が重ねられてきた。</p>
+</section>
+
+<!-- ===== 第5節 関連条文 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+        <h2>関連条文</h2>
+        <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+</header>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第1条（基本原則）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第一条　<mark class="kw-blue">私権は、公共の福祉に適合しなければならない。</mark><br>
+            ２　<mark class="kw-purple">権利の行使及び義務の履行は、信義に従い誠実に行わなければならない。</mark><br>
+            ３　<mark class="kw-red">権利の濫用は、これを許さない。</mark>
+        </blockquote>
+        <p><strong>1項解説：</strong>私権の内容・行使は社会共同生活全体の利益と調和しなければならないことを宣言。所有権絶対の原則に対する公法的制約の根拠となる。</p>
+        <p><strong>2項解説：</strong>信義則を規定。形式的な権利義務の背後に誠実性を求める原則。契約の趣旨解釈の基準ともなる（最判昭32.7.5）。補充的・例外的に適用される。</p>
+        <p><strong>3項解説：</strong>外観上は適法な権利行使であっても、権利の目的・機能を逸脱する場合は許されない。宇奈月温泉事件の判例を受けて昭和22年の改正で明文化された。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>民法第2条（解釈の基準）</div>
+    <div class="box__bd">
+        <blockquote class="legal-text">
+            第二条　この法律は、<mark class="kw-blue">個人の尊厳</mark>と<mark class="kw-blue">両性の本質的平等</mark>を旨として、解釈しなければならない。
+        </blockquote>
+        <p>民法全体（財産法・家族法いずれも）の解釈指針として機能する。憲法13条（個人の尊重）・24条（両性の平等）の趣旨を民法解釈に取り込んだもの。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span>関連条文（派生・適用場面）</div>
+    <div class="box__bd">
+        <p><strong>民法90条（公序良俗）</strong>：公の秩序又は善良の風俗に反する法律行為は無効。私的自治の原則の外的限界として機能。</p>
+        <p><strong>民法521条・522条2項</strong>：契約の締結・内容の自由を明文化（2017年改正で新設）。私的自治の原則の具体化。</p>
+        <p><strong>民法206条（所有権の内容）</strong>：「所有者は、法令の制限内において、自由にその所有物の使用、収益及び処分をする権利を有する」。所有権絶対の原則と法令制限の並存を示す。</p>
+        <p><strong>民法709条（不法行為の要件）</strong>：過失責任主義の根拠。「故意又は過失によって他人の権利又は法律上保護される利益を侵害した者は、これによって生じた損害を賠償する責任を負う」。</p>
+        <p><strong>民法708条（不法原因給付）</strong>：「不法な原因のために給付をした者は、その給付したものの返還を請求することができない」。クリーンハンズの原則の現れ。</p>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>条文間の関係に注意</div>
+    <div class="box__bd">
+        民法1条（基本原則）と民法90条（公序良俗）はいずれも私的自治の限界を定めるが、適用場面が異なる。90条は<strong>法律行為の有効・無効</strong>を問題とするのに対し、1条は<strong>権利行使の方法・態様</strong>の問題である。混同しないよう注意が必要。
+    </div>
+</div>
+</section>
+
+<!-- ===== 第6節 重要判例 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+        <h2>重要判例</h2>
+        <p class="sec-head__sub">Important Precedents</p>
+    </div>
+</header>
+
+<div class="case-card">
+    <div class="case-card__header">
+        <span class="material-icons-round" style="font-size:18px">gavel</span>
+        判例① 宇奈月温泉事件（権利濫用の禁止の原点）
+        <span class="badge badge--exam" style="margin-left:auto;"><span class="material-icons-round" style="font-size:13px">school</span>最重要</span>
+    </div>
+    <div class="case-card__body">
+        <div class="case-card__section">
+            <div class="case-card__label">出典</div>
+            <div class="case-card__content">大審院昭和10年10月5日判決・民集14巻1965頁（妨害排除請求事件）</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">事実の概要</div>
+            <div class="case-card__content">富山県の宇奈月温泉は、約7.5kmの引湯管で黒薙温泉から湯を引いていた。X（第三者）は引湯管がわずか2坪ほど無断で通過する土地を購入し、Y（温泉会社）に対して①引湯管の撤去、または②時価の20倍を超える高額での土地買取を要求。Yが拒否したため、Xは所有権に基づく妨害排除請求（引湯管の撤去）を提訴した。</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">判旨</div>
+            <div class="case-card__content">所有権侵害による損失はほとんどなく、侵害の除去には莫大な費用を要する。XはこのことをY会社の弱点として、専ら不当な利益を得る目的で土地を買収したものであり、当該除去請求は所有権行使の外形を有するにとどまり、真に権利救済を目的とするものではない。これは社会観念上所有権の目的に違背し、権利の濫用に外ならない。→ X の請求を棄却</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">意義・ポイント</div>
+            <div class="case-card__content">
+                <ul>
+                    <li>当時まだ民法に「権利濫用」の明文規定がなかった時代に、大審院が条文なしに「権利の濫用」を認定した画期的判決</li>
+                    <li>この判例が後の昭和22年民法改正で1条3項明文化の契機となった</li>
+                    <li>権利濫用の判断：<strong>主観（加害・不当利得目的）</strong>と<strong>客観（双方の利益衡量）</strong>の両面から検討</li>
+                    <li>民法判例百選I（総則・物権）の第1番に掲載される「法学の聖典」</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__header">
+        <span class="material-icons-round" style="font-size:18px">gavel</span>
+        判例② 信義則・契約解釈の基準（最判昭32.7.5）
+        <span class="badge badge--exam" style="margin-left:auto;"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+    </div>
+    <div class="case-card__body">
+        <div class="case-card__section">
+            <div class="case-card__label">出典</div>
+            <div class="case-card__content">最高裁判所昭和32年7月5日判決</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">判旨</div>
+            <div class="case-card__content">「いわゆる信義誠実の原則は、ひろく債権法の領域に適用されるものであって、ひとり権利の行使、義務の履行についてのみならず、当事者のした契約の趣旨を解釈するにもその基準となるべきものである」</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">意義・ポイント</div>
+            <div class="case-card__content">
+                <ul>
+                    <li>信義則は権利行使・義務履行の場面のみならず、<strong>契約の解釈基準</strong>としても機能することを確認</li>
+                    <li>契約書に明記されていない付随義務（安全配慮義務・説明義務等）の根拠となる</li>
+                    <li>信義則が「補充的ではあるが広く機能する」ことを示した重要判例</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="case-card">
+    <div class="case-card__header">
+        <span class="material-icons-round" style="font-size:18px">gavel</span>
+        判例③ 無権代理人の相続と信義則（最判昭37.4.20）
+    </div>
+    <div class="case-card__body">
+        <div class="case-card__section">
+            <div class="case-card__label">出典</div>
+            <div class="case-card__content">最高裁判所昭和37年4月20日判決・民集16巻4号955頁</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">判旨</div>
+            <div class="case-card__content">無権代理行為をした者が、本人を単独相続した場合に、追認拒絶を認めることは信義則に反する。→ 追認拒絶は認められず、有効な代理行為として扱われる。</div>
+        </div>
+        <div class="case-card__section">
+            <div class="case-card__label">意義・ポイント</div>
+            <div class="case-card__content">
+                <ul>
+                    <li>禁反言の原則（自己の先行行為と矛盾する行動は許されない）の具体的現れ</li>
+                    <li>相続法（代理・無権代理）と信義則の交差点で出題されやすい</li>
+                    <li>本人が無権代理人を相続した場合は別（追認拒絶が認められる場合がある）点に注意</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>その他の重要判例（概要）</div>
+    <div class="box__bd">
+        <ul>
+            <li><strong>解雇権濫用法理（最判昭50.4.25 日本食塩製造事件）：</strong>客観的合理的理由を欠き社会通念上相当でない解雇は権利濫用として無効。現在は労働契約法16条に明文化。</li>
+            <li><strong>公務員の退職願撤回と信義則（最判）：</strong>退職辞令交付前でも撤回が信義則に反する特段の事情がある場合は撤回不可とした判例。</li>
+            <li><strong>土地賃貸借の合意解除と転借人保護（最判昭38.2.21）：</strong>賃貸人と賃借人の合意解除を転借人に対抗できないとし、信義則を援用。</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第7節 試験対策 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+        <h2>試験対策ポイント</h2>
+        <p class="sec-head__sub">Examination Points</p>
+    </div>
+</header>
+
+<div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span>頻出テーマと解答アプローチ</div>
+    <div class="box__bd">
+        <h4>頻出テーマ①　宇奈月温泉事件の内容確認</h4>
+        <p>「どのような事情から権利濫用と認定されたか」を正確に押さえる。<strong>①権利行使の目的（不当な利益獲得）</strong>と<strong>②利益衡量（Xの損失が小さく、Yの損害が甚大）</strong>の2点が核心。</p>
+        <h4>頻出テーマ②　信義則vs権利濫用の区別</h4>
+        <p>問題文に「義務の履行が〜」「権利行使の方法が〜」とあれば信義則。「権利行使それ自体が社会的許容限度を超える」とあれば権利濫用。</p>
+        <h4>頻出テーマ③　信義則の4つの派生原則</h4>
+        <p>禁反言・クリーンハンズ・事情変更・失権の原則それぞれの定義と根拠を整理しておく。特に禁反言は無権代理との組み合わせで出題される。</p>
+        <h4>頻出テーマ④　民法2条の適用範囲</h4>
+        <p>「民法2条は家族法にしか適用されない」→ <mark class="kw-red">誤り。財産法を含む民法全体に適用される。</mark></p>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>誤りやすいポイント</div>
+    <div class="box__bd">
+        <ul>
+            <li><mark class="kw-red">「権利者だから何をしても許される」は誤り。</mark>権利濫用の禁止により、形式的に権利があっても濫用は認められない。</li>
+            <li><mark class="kw-red">「信義則はどんな場面でも優先して使える」は誤り。</mark>信義則は補充的・例外的にのみ適用される。他の条文で解決できる場合は使わない。</li>
+            <li><mark class="kw-red">「権利濫用の認定には必ず加害目的（主観的要件）が必要」は誤り。</mark>現在の判例は客観的利益衡量を中心に判断する。</li>
+            <li><mark class="kw-red">「民法1条3項は1947年（昭和22年）から存在した」は誤り。</mark>宇奈月温泉事件（昭和10年）当時はまだ条文がなかった。昭和22年改正で明文化された。</li>
+            <li><mark class="kw-red">「私的自治の原則は民法に明文規定がある」は誤り。</mark>直接の明文規定はなく、契約自由の原則（521条・522条）がその具体化である。</li>
+        </ul>
+    </div>
+</div>
+
+<div class="cross-ref">
+    <span class="material-icons-round">link</span>
+    <div>
+        <strong>他分野との横断的つながり</strong><br>
+        <strong>行政法：</strong>信義則・権利濫用禁止は行政法上も妥当する（行政法の一般原則）。「信頼保護の原則」（工場誘致を積極的に進めていた自治体が方針転換した場合など）・「比例原則」・「平等原則」と横断的に出題される。<br>
+        <strong>憲法：</strong>民法1条1項の「公共の福祉」は憲法12条・13条の「公共の福祉」と連動。民法2条は憲法24条（両性の平等）の民法版。<br>
+        <strong>労働法：</strong>解雇権濫用法理（労働契約法16条）は民法1条3項の権利濫用禁止を労働法分野で成文化したもの。
+    </div>
+</div>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span>択一問題の解き方</div>
+    <div class="box__bd">
+        <p><strong>STEP 1</strong>　問われているのは「信義則」か「権利濫用」か「両方」かを特定する</p>
+        <p><strong>STEP 2</strong>　具体的な事実関係が示されている場合：①権利行使の目的・態様 ②当事者双方の利益関係 を整理する</p>
+        <p><strong>STEP 3</strong>　判例（特に宇奈月温泉事件）と照らし合わせて正誤を判断する</p>
+        <p><strong>STEP 4</strong>　「補充的適用」の原則を念頭に、他の条文で解決できる場面での信義則援用は誤りと判断する</p>
+    </div>
+</div>
+</section>
+
+<!-- ===== 第8節 補足情報 ===== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+        <h2>補足情報</h2>
+        <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+</header>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span>立法経緯と歴史的背景</div>
+    <div class="box__bd">
+        <p>明治29年（1896年）に制定された民法（旧民法）には、基本原則の明文規定がなかった。19世紀的な自由主義・個人主義を基調とし、所有権絶対・契約自由が無制限に認められていた時代である。</p>
+        <p>しかし、資本主義の発展と社会的矛盾の拡大を背景に、社会的弱者保護の観点から法的修正が求められるようになる。宇奈月温泉事件（昭和10年）はその象徴的判例であり、条文なしに「権利の濫用」を認定した。</p>
+        <p>第二次世界大戦後の昭和22年（1947年）改正で、民法1条・2条が現行の形に整備された。GHQ主導の民主化改革のもと、個人の尊厳・両性の平等を明文化した民法2条も新設された。</p>
+    </div>
+</div>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span>近年の法改正との関連（令和改正・平成改正）</div>
+    <div class="box__bd">
+        <ul>
+            <li><strong>平成29年（2017年）改正（令和2年施行）：</strong>債権法の大改正。契約自由の原則（521条・522条2項）が明文化された。私的自治の原則の具体化が条文上も明確になった。</li>
+            <li><strong>解雇権濫用の成文化：</strong>平成20年施行の労働契約法16条で解雇権濫用法理が明文化。民法1条3項の適用が労働分野でも確認された。</li>
+            <li><strong>消費者保護法制：</strong>消費者契約法（平成12年）・特定商取引法などにより、契約自由の原則に対する実質的修正が進んでいる。</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span>本単元に特化した学習法</div>
+    <div class="box__bd">
+        <h4>ステップ① 条文の暗記（1条・2条）</h4>
+        <p>3項目をそのまま言えるようにする。「公共の福祉→信義誠実→権利濫用禁止」の順番と各項番号を確実に紐付ける。</p>
+        <h4>ステップ② 宇奈月温泉事件を物語で覚える</h4>
+        <p>「2坪の土地を買ったXが引湯管撤去を要求→権利の濫用で却下」というストーリーを頭に入れると、事実・判旨・意義がまとめて記憶できる。</p>
+        <h4>ステップ③ 信義則の4派生原則をグループ化して記憶</h4>
+        <p>「禁・クリ・事・失」（禁反言・クリーンハンズ・事情変更・失権）と音で覚えると記憶しやすい。</p>
+        <h4>ステップ④ 過去問演習で「誤り選択肢のパターン」を把握</h4>
+        <p>誤りの選択肢は「信義則をどんな場面にも使える」「権利濫用に主観的要件が必須」「民法2条は家族法のみ」など同じパターンが繰り返されるため、3〜5年分の過去問を確認すること。</p>
+        <h4>ステップ⑤ 行政法との横断整理</h4>
+        <p>行政法の信頼保護の原則・比例原則と民法の信義則・権利濫用禁止を対応表で整理すると、横断問題への対応力が高まる。</p>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span>実務への影響と応用</div>
+    <div class="box__bd">
+        <p>民法の基本原則は「解釈の最終拠り所」として実務でも重要です。</p>
+        <ul>
+            <li><strong>契約実務：</strong>契約書に明記されていない付随義務（安全配慮義務・守秘義務・説明義務）は信義則から導かれる</li>
+            <li><strong>不動産実務：</strong>隣接土地の無断使用・通行妨害等が権利濫用と評価される場面がある</li>
+            <li><strong>労働実務：</strong>解雇・懲戒・業務命令の適否は権利濫用法理により審査される</li>
+            <li><strong>消費者保護：</strong>事業者の一方的な契約条項変更・解除が信義則・権利濫用禁止に基づき制限される</li>
+        </ul>
+        <p>行政書士として業務を行う際にも、契約書作成・法的助言の場面でこれらの原則は判断の基礎となります。</p>
+    </div>
+</div>
+
+</section>
+</body>
+</html>

@@ -1,4 +1,4 @@
-import contentManager from '@/features/content/lib/contentManager';
+import contentRepository from '@/server/repositories/contentRepository';
 import { subjects, getSubjectById } from '@/features/content/lib/subjects';
 
 export default async function handler(req, res) {
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
       limit: parseInt(limit)
     };
 
-    const unitResults = await contentManager.searchContent(searchParams);
+    const unitResults = contentRepository.searchUnits(searchParams);
 
     // 科目名でも検索
     const matchingSubjects = subjects.filter(subject => 

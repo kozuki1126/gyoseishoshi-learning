@@ -78,12 +78,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/register" className="text-gray-400 hover:text-white">
+                <Link href="/auth/register" className="text-gray-400 hover:text-white">
                   無料会員登録
                 </Link>
               </li>
               <li>
-                <Link href="/login" className="text-gray-400 hover:text-white">
+                <Link href="/auth/login" className="text-gray-400 hover:text-white">
                   ログイン
                 </Link>
               </li>
@@ -95,23 +95,23 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">サポート</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-white">
-                  お問い合わせ
+                <Link href="/mypage" className="text-gray-400 hover:text-white">
+                  マイページ
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-gray-400 hover:text-white">
-                  よくある質問
+                <Link href="/subjects" className="text-gray-400 hover:text-white">
+                  学習を始める
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-gray-400 hover:text-white">
-                  利用規約
+                <Link href="/pricing" className="text-gray-400 hover:text-white">
+                  料金プラン
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-white">
-                  プライバシーポリシー
+                <Link href="/admin" className="text-gray-400 hover:text-white">
+                  管理画面
                 </Link>
               </li>
             </ul>
@@ -126,18 +126,8 @@ export default function Footer() {
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">
                 <li>
-                  <Link href="/terms" className="text-gray-400 hover:text-white text-sm">
-                    利用規約
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">
-                    プライバシーポリシー
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/cookie" className="text-gray-400 hover:text-white text-sm">
-                    Cookie ポリシー
+                  <Link href="/subjects" className="text-gray-400 hover:text-white text-sm">
+                    学習コンテンツ
                   </Link>
                 </li>
               </ul>

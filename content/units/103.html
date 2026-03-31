@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>民法 I-3 法人 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-50:  #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-900: #1e3a8a;
+  --orange-50:  #fff7ed;
+  --orange-200: #fed7aa;
+  --orange-600: #ea580c;
+  --orange-900: #7c2d12;
+  --red-50:  #fff1f2;
+  --red-100: #ffe4e6;
+  --red-400: #fb7185;
+  --red-600: #e11d48;
+  --red-800: #9f1239;
+  --text-primary:   #111827;
+  --text-secondary: #4b5563;
+  --text-muted:     #9ca3af;
+  --highlight:        #fef08a;
+  --highlight-strong: #fde047;
+  --highlight-red:    #ffe4e6;
+}
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--text-primary);
+  background: #ffffff;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 5rem;
+}
+h1 { font-size: 1.7rem; font-weight: 700; color: var(--blue-900); border-bottom: 3px solid var(--blue-600); padding-bottom: .5rem; margin-bottom: 2rem; }
+h2 { font-size: 1.25rem; font-weight: 700; color: var(--blue-700); border-left: 4px solid var(--blue-600); padding-left: .75rem; margin: 0 0 .75rem; }
+h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 1rem 0 .5rem; }
+h4 { font-size: .75rem; font-weight: 700; color: var(--text-secondary); letter-spacing: .08em; text-transform: uppercase; margin: .75rem 0 .25rem; }
+blockquote.legal-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: .9rem; line-height: 2.1;
+  background: var(--blue-100); border-left: 4px solid var(--blue-600);
+  border-radius: 0 4px 4px 0; margin: .75rem 0; padding: .875rem 1.25rem;
+  color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);   font-weight: 700; }
+.em-b { color: var(--orange-600); font-weight: 700; }
+.em-c { color: var(--red-800);    font-weight: 700; }
+
+/* Page title block */
+.page-title-block { background: var(--blue-900); color: #fff; padding: 2.5rem 1.5rem 2rem; margin: 0 -1.5rem 2.5rem; }
+.page-title-block__breadcrumb { font-size: .75rem; color: var(--blue-200); margin: 0 0 .75rem; letter-spacing: .04em; }
+.page-title-block__main { font-size: 2rem; font-weight: 700; color: #fff; line-height: 1.35; border: none; padding: 0; margin: 0 0 .5rem; }
+.page-title-block__sub { font-size: .9rem; color: var(--blue-200); margin: 0 0 1.25rem; }
+.page-title-block__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.page-title-block .badge--info { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); }
+
+/* Section header */
+.sec-head { display: flex; align-items: flex-start; gap: 1rem; margin: 3rem 0 1.25rem; }
+.sec-head__num { flex-shrink: 0; width: 2.5rem; height: 2.5rem; display: flex; align-items: center; justify-content: center; background: var(--blue-600); color: #fff; font-size: .875rem; font-weight: 700; border-radius: 6px; letter-spacing: .04em; }
+.sec-head__sub { font-size: .75rem; color: var(--text-muted); margin: .125rem 0 0; letter-spacing: .04em; }
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd { display: flex; align-items: center; gap: .5rem; padding: .5rem 1rem; }
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.box__term { font-size: 1rem; font-weight: 700; letter-spacing: .02em; flex: 1; }
+.box__hd-badges { display: flex; align-items: center; gap: .375rem; margin-left: auto; }
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd { background: var(--orange-600); color: #fff; padding: .625rem 1rem; }
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+
+/* Badges */
+.badge { display: inline-flex; align-items: center; gap: 3px; font-size: .68rem; font-weight: 700; padding: .15em .6em; border-radius: 4px; vertical-align: middle; letter-spacing: .05em; }
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars   { background: #fef08a; color: #713f12; border: 1px solid #fde047; font-weight: 700; }
+.badge--freq    { background: var(--red-600); color: #fff; border: none; }
+.badge--law     { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Compare table */
+.cmp-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1rem 0 1.5rem; }
+.cmp-table th, .cmp-table td { padding: .6rem .875rem; border: 1px solid var(--blue-200); vertical-align: top; text-align: left; }
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label { background: var(--blue-50); color: var(--text-secondary); font-size: .8rem; font-weight: 700; white-space: nowrap; width: 7rem; }
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Case card */
+.case-card { border: 1px solid var(--blue-600); border-radius: 8px; overflow: hidden; margin: 1.5rem 0; }
+.case-card__hd { background: var(--blue-700); padding: 1rem 1.25rem .875rem; }
+.case-card__meta { font-size: .75rem; color: var(--blue-200); margin-bottom: .375rem; letter-spacing: .03em; }
+.case-card__title { font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.45; margin-bottom: .625rem; }
+.case-card__badges { display: flex; flex-wrap: wrap; gap: .375rem; }
+.case-card__bd { background: var(--blue-50); padding: 1rem 1.25rem; color: var(--blue-900); font-size: .925rem; }
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Diagram */
+.diagram-wrap { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 1.5rem; margin: 1.25rem 0; }
+.diagram-wrap svg { display: block; width: 100%; height: auto; font-family: 'Noto Sans JP', sans-serif; }
+.diagram-caption { font-size: .875rem; color: var(--text-secondary); margin-top: .75rem; line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">法人</h1>
+  <p class="page-title-block__sub">法人の種類と設立・権利能力と行為能力・法人の組織・権利能力なき社団</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法33条〜84条</span>
+    <span class="badge badge--info">一般社団法人・財団法人法</span>
+    <span class="badge badge--info">法人法定主義</span>
+    <span class="badge badge--info">権利能力なき社団</span>
+    <span class="badge badge--info">目的の範囲</span>
+  </div>
+</div>
+
+<!-- ========== 第1節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p>民法において、権利義務の主体となれるのは<strong><mark class="kw">自然人</mark></strong>と<strong><mark class="kw">法人</mark></strong>だけである。法人とは、自然人以外のものに法律上の人格（権利能力）を与えた存在であり、会社・学校・病院・NPO法人など、私たちの社会にはきわめて多くの法人が活動している。</p>
+
+  <p>本単元では、①法人はいかなる種類があるか・どのように設立されるか、②法人の権利能力・行為能力はどのような範囲か（特に<strong><mark class="kw">目的の範囲</mark></strong>の問題）、③法人の内部組織はどのように構成されるか、そして④法人格を持たないが法人に近い活動をしている<strong><mark class="kw">権利能力なき社団</mark></strong>（人格なき社団）の問題を学ぶ。</p>
+
+  <p>行政書士試験では、「<strong>法人の権利能力は目的の範囲内に限られるか</strong>」「<strong>権利能力なき社団の成立要件・財産帰属はどうなるか</strong>」「<strong>組合と権利能力なき社団の区別</strong>」が繰り返し出題されており、特に権利能力なき社団は毎年のように過去問に登場する最頻出論点のひとつである。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">なぜ法人が必要か — 具体例</span>
+    </div>
+    <div class="box__bd">
+      <p>たとえば、町内会が地域の祭りのために土地を購入しようとしたとき、「町内会」名義では登記できない。法人格がなければ、代表者の個人名義で登記するしかなく、代表者が変わるたびに登記変更が必要になる（これが権利能力なき社団の問題である）。一方、一般社団法人として登記しておけば、「〇〇町内会」という法人名義で不動産を保有でき、代表者が変わっても法人名義のままで安定的な財産管理ができる。法人制度は、このような不都合を解消し、継続的・安定的な社会活動を可能にする仕組みである。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第2節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <!-- 法人法定主義 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法人法定主義</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法人法定主義</mark></strong>とは、<em>「法人は、この法律その他の法律の規定によらなければ、成立しない」</em>（民法33条1項）という原則であり、当事者の合意だけでは法人を自由に作れないことを意味する。</p>
+      <p>なぜこのような制限があるか。法人は権利義務の主体となれるため、法人を自由に設立できるとすれば、その実体・責任財産・代表権限などが不明確になり、取引の相手方や債権者が不測の損害を被るおそれがある。そこで民法は、法人の設立・組織・解散について法律で詳細に定め、法人と取引する相手方の保護を図っている。</p>
+      <p><strong>法人でないと何ができないか</strong>。法人でない団体（権利能力なき社団・組合）は、原則として自己の名義で不動産登記ができず、契約の主体にもなれない。この不都合を受け入れながら活動するのが権利能力なき社団であり、その問題が試験の最大の論点となる。</p>
+      <p><span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>出題ポイント</span> 法人法定主義の根拠条文は<strong><mark class="kw">民法33条1項</mark></strong>であり、「当事者の意思のみで法人を設立できる」という選択肢は誤りとなる。</p>
+    </div>
+  </div>
+
+  <!-- 社団法人・財団法人 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">社団法人と財団法人</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">社団法人</mark></strong>とは、<em>人の集まり（社員）を基礎とする法人</em>である。複数の人が共通の目的のために集まって組織を作り、その組織に法人格が与えられる。日本では一般社団法人・公益社団法人・労働組合・農業協同組合・株式会社などが社団の性質を持つ。</p>
+      <p><strong><mark class="kw">財団法人</mark></strong>とは、<em>一定の財産（基金・寄附財産）を基礎とする法人</em>である。ある財産を特定の目的のために拠出し、その財産の管理・運用組織に法人格が与えられる。社員（構成員）は存在せず、理事・評議員などの機関によって運営される。公益財団法人・一般財団法人などがある。</p>
+      <p>社団と財団の本質的な違いは<strong>「人の集まり」か「財産の集まり」か</strong>という点にある。社団法人は構成員（社員）が最高意思決定を行う社員総会を持つが、財団法人には社員総会がなく、評議員会・理事会が運営する。この構造の違いから、法人内部の意思決定ルールが大きく異なる。</p>
+    </div>
+  </div>
+
+  <!-- 一般社団・財団法人 / 公益社団・財団法人 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">一般法人と公益法人（2008年改正後の枠組み）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p>2008年（平成20年）の公益法人制度改革により、非営利法人の制度体系が大きく変わった。改革前は主務官庁の許可が必要だったが（旧民法34条）、改革後は以下の二段階の枠組みになった。</p>
+      <p><strong>第一段階 ——</strong> <strong><mark class="kw">一般社団法人</mark></strong>・<strong><mark class="kw">一般財団法人</mark></strong>は、<em>「一般社団法人及び一般財団法人に関する法律」（一般法人法）に基づき、登記のみ（準則主義）で設立できる</em>。行う事業の公益性の有無は問われない。設立のハードルが低く、任意団体が法人化する手段として広く利用されている。</p>
+      <p><strong>第二段階 ——</strong> <strong><mark class="kw">公益社団法人</mark></strong>・<strong><mark class="kw">公益財団法人</mark></strong>は、一般社団（財団）法人のうち、<em>「公益社団法人及び公益財団法人の認定等に関する法律」（公益認定法）に基づき、行政庁から公益認定を受けた法人</em>である。公益認定を受けると税制上の優遇措置が与えられる一方、事業内容や財産管理について厳格な規制を受ける。</p>
+      <p><span class="badge badge--caution"><span class="material-icons-round" style="font-size:13px">warning</span>注意</span> <strong class="warn">「一般社団法人」は必ずしも公益目的でなくてよい</strong>。営利目的でないならば、どのような目的でも一般社団法人を設立できる。「公益」を名乗れるのは公益認定を受けた場合のみである。</p>
+    </div>
+  </div>
+
+  <!-- 法人の目的の範囲 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法人の権利能力の範囲（目的の範囲）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>最頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法34条</mark></strong>は「法人は、法令の規定に従い、<em>定款その他の基本約款で定められた目的の範囲内</em>において、権利を有し、義務を負う」と定める。これは、法人の権利能力を定款に記載された目的の範囲内に制限する規定であり、英米法上の<strong>ウルトラ・ヴィーレス（ultra vires）の法理</strong>に相当する。</p>
+      <p>問題は、「目的の範囲」をどこまで広く解釈するかである。定款に「野菜の販売」と書かれた法人が、広告宣伝費を支払う行為は目的の範囲内か？ 判例・通説は、<em>「目的の範囲」を文字通りに狭く解釈するのではなく、定款記載の目的の遂行上直接または間接に必要な行為はすべて目的の範囲内に含まれる</em>と広く解釈している（最判昭27.2.15）。</p>
+      <p>さらに重要な判例として、会社の政治献金が「目的の範囲内」かが争われた<strong>八幡製鉄政治献金事件</strong>（最大判昭45.6.24）がある。最高裁は、会社は社会的実在として政治的行為をすることも許容されるとして、政治献金も目的の範囲内と判示した。</p>
+      <p><span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>出題ポイント</span> 「目的の範囲外の行為は絶対に無効か」という点が問われる。実務上・判例上は目的の範囲を広く解釈するため、<strong class="warn">一見して目的外に見える行為でも目的の範囲内と認められることが多い</strong>ことを押さえる。</p>
+    </div>
+  </div>
+
+  <!-- 権利能力なき社団 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">権利能力なき社団（人格なき社団）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>最頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">権利能力なき社団</mark></strong>とは、<em>法人格は持たないが、実体として社団（人の集まり）の性質を備えた団体</em>のことである。同窓会・町内会・マンション管理組合（法人格を取得していないもの）・学内サークルなどが典型例として挙げられる。</p>
+      <p>なぜこれが重要な問題になるか。法人格がないために原則として自分の名義で権利義務の主体になれない。しかし、社会的に実体として存在し活動しているため、その財産・債務・訴訟関係をどのように処理するかが問題となる。民法には権利能力なき社団に関する明文規定がなく、判例・学説によって法人に関する規定を類推適用することで対処している。</p>
+      <p><strong>成立要件（最判昭39.10.15）</strong>：権利能力なき社団として認められるためには、①<em>団体としての組織を備えていること</em>、②<em>多数決の原則が行われていること</em>、③<em>構成員の変更にかかわらず団体そのものが存続すること</em>、④<em>代表の方法・総会の運営・財産の管理その他団体としての主要な点が確定していること</em>、の4要件（要素）が必要とされる。</p>
+      <p><strong>財産の帰属</strong>：権利能力なき社団の財産は、構成員全員に<strong><mark class="kw">総有</mark></strong>的に帰属する（最判昭32.11.14）。総有とは、各構成員が持分権を持たず、分割請求もできない共同所有の形態である。これは、民法上の組合財産が「合有」（各組合員に持分はあるが、清算前に分割請求できない）であるのと対比される。</p>
+      <p><span class="badge badge--caution"><span class="material-icons-round" style="font-size:13px">warning</span>注意</span> <strong class="warn">権利能力なき社団は自己の名義で不動産登記ができない。</strong>代表者の個人名義で登記するしかない（最判昭47.6.2）。</p>
+    </div>
+  </div>
+
+  <!-- 組合との区別 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">民法上の組合</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法上の組合</mark></strong>とは、<em>各当事者が出資をして共同の事業を営むことを約することによって成立する契約関係</em>（民法667条）であり、法人格を持たない。組合自体は権利能力を持たず、組合の財産は組合員全員の<strong><mark class="kw">合有</mark></strong>とされる（民法668条）。</p>
+      <p>権利能力なき社団との最大の違いは<strong>「団体性の強さ」</strong>にある。権利能力なき社団は団体としての独立性・継続性が強く（構成員が変わっても団体は存続）、財産は総有（持分なし）となる。これに対して組合は、構成員の個性が前面に出る側面があり、財産は合有（持分はある、ただし清算前は分割請求不可）となる。</p>
+      <p><span class="badge badge--exam"><span class="material-icons-round" style="font-size:13px">school</span>出題ポイント</span> 「組合員は組合財産について持分を有する」→ 正（合有）。「権利能力なき社団の構成員は社団財産について持分を有する」→ <strong class="warn">誤（総有なので持分なし）</strong>。この対比は非常に重要。</p>
+    </div>
+  </div>
+
+  <!-- 法人の不法行為責任 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法人の不法行為責任（民法44条類推）</span>
+    </div>
+    <div class="box__bd">
+      <p>法人の代表者が「職務を行うについて」第三者に損害を与えた場合、法人はその損害を賠償する責任を負う（一般法人法78条・会社法350条等）。これはいわゆる<strong><mark class="kw">法人の不法行為責任</mark></strong>であり、被害者保護を目的とする。</p>
+      <p>「職務を行うについて」の解釈について、判例は外形理論（取引行為として外形上職務行為と認められれば足りる）を採用し、広く法人の責任を認める。ただし、代表者の行為が法人の職務と全く無関係な場合（完全に私的な行為）は法人の責任は生じない。</p>
+      <p>また、代表者が損害を与えた場合、法人は代表者に対して<strong><mark class="kw">求償権</mark></strong>を行使できる（法人が代わりに払った場合に代表者に返還を求める権利）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第3節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;margin-right:4px;">account_tree</span>図1：日本の法人体系（全体構造）</h3>
+
+  <div class="diagram-wrap">
+    <!-- 
+      STEP A ノード一覧：
+      N01: 法人（根）       幅=120 高=52 L0  cx=360
+      N02: 社団法人         幅=128 高=52 L1  
+      N03: 財団法人         幅=128 高=52 L1  
+      N04: 一般社団法人     幅=160 高=52 L2
+      N05: 公益社団法人     幅=160 高=52 L2
+      N06: 一般財団法人     幅=160 高=52 L2
+      N07: 公益財団法人     �Width=160 高=52 L2
+      N08: 株式会社等(営利) 幅=160 高=52 L2
+
+      STEP B配置:
+      SVG幅=800
+      L0: N01 x=340 y=30 (中央)
+      L1: N02 x=100 y=150, N03 x=470 y=150
+      L2: N04 x=20 y=302, N05 x=196 y=302, N06 x=430 y=302, N07 x=606 y=302
+      N08 (営利法人) x=372 y=302 → 単独行で別扱い  
+
+      STEP C衝突チェック:
+      L1: N02(100..228) vs N03(470..598) → 水平分離OK
+      L2: N04(20..180) vs N05(196..356) → 20px間隔OK
+           N05(196..356) vs N06(430..590) → 74px間隔OK
+           N06(430..590) vs N07(606..766) → 16px間隔OK
+      →全OK
+
+      STEP D コネクタ:
+      C01: N01下辺中央(400,82)→ N02上辺中央(164,150-8=142)
+      C02: N01下辺中央(400,82)→ N03上辺中央(534,142)
+      C03: N02下辺中央(164,202)→ N04上辺中央(100,294)
+      C04: N02下辺中央(164,202)→ N05上辺中央(276,294)
+      C05: N03下辺中央(534,202)→ N06上辺中央(510,294)
+      C06: N03下辺中央(534,202)→ N07上辺中央(686,294)
+
+      STEP E viewBox: 800 x 440
+      縮小率: 780/800 ≈ 0.975 → OK
+    -->
+    <svg width="100%" viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      <!-- コネクタ（ノードより先に描画） -->
+      <!-- 幹線: N01下辺中央(400,82) → 分岐Y=120 -->
+      <line x1="400" y1="82" x2="400" y2="120" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- 水平枝線 -->
+      <line x1="164" y1="120" x2="534" y2="120" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- N01→N02 -->
+      <line x1="164" y1="120" x2="164" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <!-- N01→N03 -->
+      <line x1="534" y1="120" x2="534" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+      <!-- N02→N04,N05 -->
+      <line x1="164" y1="202" x2="164" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="100" y1="230" x2="276" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="100" y1="230" x2="100" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="276" y1="230" x2="276" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+      <!-- N03→N06,N07 -->
+      <line x1="534" y1="202" x2="534" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="510" y1="230" x2="686" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="510" y1="230" x2="510" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="686" y1="230" x2="686" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+      <!-- 公益認定ラベル (N04→N05 横断) -->
+      <line x1="180" y1="328" x2="196" y2="328" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-thin)"/>
+      <!-- 公益認定ラベル (N06→N07 横断) -->
+      <line x1="590" y1="328" x2="606" y2="328" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-thin)"/>
+
+      <!-- コネクタラベル -->
+      <rect x="300" y="105" width="100" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="350" y="119" text-anchor="middle" font-size="13" fill="#1d4ed8">種類</text>
+
+      <rect x="82" y="214" width="80" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="122" y="228" text-anchor="middle" font-size="13" fill="#1d4ed8">登記で設立</text>
+
+      <rect x="472" y="214" width="80" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="512" y="228" text-anchor="middle" font-size="13" fill="#1d4ed8">登記で設立</text>
+
+      <!-- ノード -->
+      <!-- N01 法人（根） -->
+      <g>
+        <rect x="340" y="30" width="120" height="52" rx="8" fill="#1d4ed8"/>
+        <text x="400" y="53" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">法人</text>
+        <text x="400" y="72" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法33条〜84条</text>
+      </g>
+
+      <!-- N02 社団法人 -->
+      <g>
+        <rect x="100" y="150" width="128" height="52" rx="6" fill="#2563eb"/>
+        <text x="164" y="173" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">社団法人</text>
+        <text x="164" y="192" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">人の集まり</text>
+      </g>
+
+      <!-- N03 財団法人 -->
+      <g>
+        <rect x="470" y="150" width="128" height="52" rx="6" fill="#2563eb"/>
+        <text x="534" y="173" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">財団法人</text>
+        <text x="534" y="192" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">財産の集まり</text>
+      </g>
+
+      <!-- N04 一般社団法人 -->
+      <g>
+        <rect x="20" y="302" width="160" height="52" rx="6" fill="#ea580c"/>
+        <text x="100" y="325" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">一般社団法人</text>
+        <text x="100" y="344" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">準則主義（登記）</text>
+      </g>
+
+      <!-- N05 公益社団法人 -->
+      <g>
+        <rect x="196" y="302" width="160" height="52" rx="6" fill="#ea580c"/>
+        <text x="276" y="325" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">公益社団法人</text>
+        <text x="276" y="344" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">公益認定が必要</text>
+      </g>
+
+      <!-- N06 一般財団法人 -->
+      <g>
+        <rect x="430" y="302" width="160" height="52" rx="6" fill="#ea580c"/>
+        <text x="510" y="325" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">一般財団法人</text>
+        <text x="510" y="344" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">準則主義（登記）</text>
+      </g>
+
+      <!-- N07 公益財団法人 -->
+      <g>
+        <rect x="606" y="302" width="160" height="52" rx="6" fill="#ea580c"/>
+        <text x="686" y="325" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">公益財団法人</text>
+        <text x="686" y="344" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">公益認定が必要</text>
+      </g>
+
+      <!-- 公益認定ラベル -->
+      <rect x="155" y="354" width="160" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="235" y="368" text-anchor="middle" font-size="12" fill="#7c2d12">公益認定→</text>
+
+      <rect x="500" y="354" width="160" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="580" y="368" text-anchor="middle" font-size="12" fill="#7c2d12">公益認定→</text>
+
+      <!-- 注記エリア -->
+      <rect x="20" y="395" width="760" height="36" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="400" y="418" text-anchor="middle" font-size="12" fill="#9f1239">
+        ＊営利法人（株式会社・合名・合資・合同会社）は会社法に基づく別の法人体系　＊設立は登記（準則主義）
+      </text>
+    </svg>
+    <p class="diagram-caption">上図は民法上の法人体系を示す。ルートの「法人」から、社団法人・財団法人の2種類に分かれ、さらに現行制度では一般法人法に基づく一般型と、公益認定を受けた公益型の二段階構造になっている。橙色のノードが現行制度における主要な非営利法人の形態であり、公益認定（破線矢印）を受けることで一般型から公益型に移行できる点が重要である。</p>
+  </div>
+
+  <h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;margin-right:4px;">account_tree</span>図2：権利能力なき社団・組合・法人の比較構造</h3>
+
+  <div class="diagram-wrap">
+    <!--
+      STEP A ノード:
+      N01: 団体の形態（根）幅=152 高=52 L0 cx=400
+      N02: 法人           幅=112 高=52 L1
+      N03: 権利能力なき社団 幅=200 高=52 L1
+      N04: 民法上の組合   幅=152 高=52 L1
+      N05: 権利能力あり   幅=152 高=52 L2 → N02の下
+      N06: 財産=総有      幅=152 高=52 L2 → N03の下
+      N07: 財産=合有      幅=152 高=52 L2 → N04の下
+
+      STEP B配置:
+      SVG幅=820
+      L0: N01 x=334 y=30
+      L1: N02 x=60  y=150, N03 x=280 y=150, N04 x=596 y=150
+          ※N02中心=116, N03中心=380, N04中心=672
+          水平間隔: N02右端172 vs N03左端280 → 108px OK
+                   N03右端480 vs N04左端596 → 116px OK
+      L2: N05 x=40  y=302, N06 x=304 y=302, N07 x=620 y=302
+
+      STEP C衝突チェック: 全OK（各層で十分な間隔）
+
+      STEP D コネクタ:
+      N01→N02: 幹x=410, y=82→y=120; then x=116, y=120→142
+      N01→N03: x=380,y=120→142
+      N01→N04: x=672,y=120→142
+      N02→N05: 幹x=116, y=202→230; x=116,230→294
+      N03→N06: x=380, y=202→230; x=380,230→294
+      N04→N07: x=672, y=202→230; x=696,230→294
+
+      STEP E viewBox: 820×440, 縮小率=780/820≈0.95 OK
+    -->
+    <svg width="100%" viewBox="0 0 820 440" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr2-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr2-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+
+      <!-- コネクタ -->
+      <!-- 幹線: N01下辺→分岐Y=120 -->
+      <line x1="410" y1="82" x2="410" y2="120" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="116" y1="120" x2="672" y2="120" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="116" y1="120" x2="116" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+      <line x1="380" y1="120" x2="380" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+      <line x1="672" y1="120" x2="672" y2="142" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+
+      <!-- N02→N05 -->
+      <line x1="116" y1="202" x2="116" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="116" y1="230" x2="116" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+      <!-- N03→N06 -->
+      <line x1="380" y1="202" x2="380" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="380" y1="230" x2="380" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+      <!-- N04→N07 -->
+      <line x1="672" y1="202" x2="672" y2="230" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="672" y1="230" x2="696" y2="294" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr2-solid)"/>
+
+      <!-- コネクタラベル -->
+      <rect x="302" y="105" width="100" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="352" y="119" text-anchor="middle" font-size="13" fill="#1d4ed8">法的形態</text>
+
+      <!-- ノード -->
+      <!-- N01 団体の形態（根） -->
+      <g>
+        <rect x="334" y="30" width="152" height="52" rx="8" fill="#1d4ed8"/>
+        <text x="410" y="53" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">団体の法的形態</text>
+        <text x="410" y="72" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">権利能力の有無で分類</text>
+      </g>
+
+      <!-- N02 法人 -->
+      <g>
+        <rect x="60" y="150" width="112" height="52" rx="6" fill="#2563eb"/>
+        <text x="116" y="173" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">法人</text>
+        <text x="116" y="192" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">権利能力あり</text>
+      </g>
+
+      <!-- N03 権利能力なき社団 -->
+      <g>
+        <rect x="280" y="150" width="200" height="52" rx="6" fill="#ea580c"/>
+        <text x="380" y="173" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">権利能力なき社団</text>
+        <text x="380" y="192" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">法人格なし・社団性あり</text>
+      </g>
+
+      <!-- N04 民法上の組合 -->
+      <g>
+        <rect x="596" y="150" width="152" height="52" rx="6" fill="#ea580c"/>
+        <text x="672" y="173" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">民法上の組合</text>
+        <text x="672" y="192" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">法人格なし・契約関係</text>
+      </g>
+
+      <!-- N05 権利能力あり -->
+      <g>
+        <rect x="40" y="302" width="152" height="56" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="116" y="325" text-anchor="middle" fill="#1e3a8a" font-size="15" font-weight="700">自己名義で登記可</text>
+        <text x="116" y="344" text-anchor="middle" fill="#1e3a8a" font-size="12">財産は法人に帰属</text>
+      </g>
+
+      <!-- N06 財産=総有 -->
+      <g>
+        <rect x="304" y="302" width="152" height="56" rx="6" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+        <text x="380" y="325" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">財産は「総有」</text>
+        <text x="380" y="344" text-anchor="middle" fill="#7c2d12" font-size="12">各自に持分なし</text>
+      </g>
+
+      <!-- N07 財産=合有 -->
+      <g>
+        <rect x="620" y="302" width="152" height="56" rx="6" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+        <text x="696" y="325" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">財産は「合有」</text>
+        <text x="696" y="344" text-anchor="middle" fill="#7c2d12" font-size="12">各自に持分あり</text>
+      </g>
+
+      <!-- 注記エリア -->
+      <rect x="20" y="378" width="780" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="410" y="397" text-anchor="middle" font-size="12" fill="#9f1239">
+        ＊権利能力なき社団は不動産を代表者の個人名義で登記する（社団自身の名義不可）
+      </text>
+      <text x="410" y="417" text-anchor="middle" font-size="12" fill="#9f1239">
+        ＊組合員は清算前に組合財産の分割請求不可（民法676条3項）
+      </text>
+    </svg>
+    <p class="diagram-caption">図2は法人・権利能力なき社団・組合という3つの団体形態を比較している。法人は自己名義で登記でき財産も法人に帰属するが、権利能力なき社団と組合は法人格を持たず、財産の帰属も法人とは異なる形態（総有・合有）となる。試験では特に「総有（持分なし）」と「合有（持分あり）」の対比が繰り返し問われる。</p>
+  </div>
+</section>
+
+<!-- ========== 第4節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>比較表1：権利能力なき社団・民法上の組合・法人の主要事項比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">法人</th>
+        <th class="col--b">権利能力なき社団</th>
+        <th class="col--c">民法上の組合</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>法人格</td>
+        <td class="col--a"><strong class="em-a">あり</strong></td>
+        <td class="col--b"><strong class="em-b">なし</strong></td>
+        <td class="col--c"><strong class="em-c">なし</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">設立根拠</td>
+        <td class="col--a">法律の規定が必要（<strong class="em-a">法人法定主義</strong>）</td>
+        <td class="col--b">法律の規定不要（<strong class="em-b">自然発生的</strong>）</td>
+        <td class="col--c">組合契約（民法667条）</td>
+      </tr>
+      <tr>
+        <td class="col--label">財産の帰属</td>
+        <td class="col--a"><strong class="em-a">法人自身</strong>に帰属</td>
+        <td class="col--b">構成員全員の<strong class="em-b">総有</strong>（持分なし）</td>
+        <td class="col--c">組合員全員の<strong class="em-c">合有</strong>（持分あり）</td>
+      </tr>
+      <tr>
+        <td class="col--label">不動産登記</td>
+        <td class="col--a"><strong class="em-a">法人名義</strong>で登記可</td>
+        <td class="col--b">代表者の<strong class="em-b">個人名義</strong>でのみ登記可</td>
+        <td class="col--c">組合員全員の<strong class="em-c">共同名義</strong>または代理人名義</td>
+      </tr>
+      <tr>
+        <td class="col--label">訴訟当事者能力</td>
+        <td class="col--a">あり（当然）</td>
+        <td class="col--b">代表者の定めがあれば<strong class="em-b">あり</strong>（民訴法29条）</td>
+        <td class="col--c">原則なし（組合員全員が当事者）</td>
+      </tr>
+      <tr>
+        <td class="col--label">持分権・分割請求</td>
+        <td class="col--a">なし（法人財産）</td>
+        <td class="col--b"><strong class="em-b">持分なし・分割請求不可</strong></td>
+        <td class="col--c">持分あり・<strong class="em-c">清算前は分割請求不可</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">債務の帰属</td>
+        <td class="col--a">法人が負担</td>
+        <td class="col--b">構成員に<strong class="em-b">総有的帰属</strong>（構成員個人は責任なし）</td>
+        <td class="col--c">組合財産＋各組合員が損失分担割合に応じて負担</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>比較表2：一般社団法人と公益社団法人の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">一般社団法人</th>
+        <th class="col--b">公益社団法人</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠法</td>
+        <td class="col--a"><strong class="em-a">一般法人法</strong></td>
+        <td class="col--b">一般法人法＋<strong class="em-b">公益認定法</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">設立方法</td>
+        <td class="col--a"><strong class="em-a">登記のみ</strong>（準則主義）</td>
+        <td class="col--b">登記＋<strong class="em-b">行政庁の公益認定</strong>が必要</td>
+      </tr>
+      <tr>
+        <td class="col--label">事業内容</td>
+        <td class="col--a">公益性不問（<strong class="em-a">任意</strong>）</td>
+        <td class="col--b"><strong class="em-b">公益目的事業</strong>が必要</td>
+      </tr>
+      <tr>
+        <td class="col--label">税制優遇</td>
+        <td class="col--a">原則なし（非収益事業は非課税の余地あり）</td>
+        <td class="col--b"><strong class="em-b">優遇あり</strong>（寄附金控除等）</td>
+      </tr>
+      <tr>
+        <td class="col--label">規制・監督</td>
+        <td class="col--a">緩やか</td>
+        <td class="col--b"><strong class="em-b">厳格</strong>（財産管理・情報公開義務等）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">試験で迷いやすいポイント</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">権利能力なき社団と組合の最大の区別ポイント</strong>は「財産の帰属形態」と「持分の有無」である。<strong class="warn">権利能力なき社団=総有（持分なし）、組合=合有（持分あり）</strong>という対比を必ず暗記すること。試験では「権利能力なき社団の構成員は社団財産について各自の持分を有する」という誤りの選択肢がよく出現する。</p>
+      <p>また、権利能力なき社団の<strong class="em-c">債務の帰属</strong>についても、「構成員全員に一個の義務として総有的に帰属し、構成員各自が個人的債務ないし責任を負わない」（最判昭48.10.9）という点を押さえる。構成員が個人的に連帯責任を負う選択肢は誤りとなる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第5節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <!-- 民法33条 -->
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法33条（法人の成立）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第33条　法人は、<strong>この法律その他の法律の規定によらなければ、成立しない</strong>。<br>
+        ２　学術、技芸、慈善、祭祀、宗教その他の公益を目的とする法人、営利事業を営むことを目的とする法人その他の法人の設立、組織、運営及び管理については、この法律その他の法律の定めるところによる。
+      </blockquote>
+      <p><strong>趣旨・目的</strong>：33条1項が<strong><mark class="kw">法人法定主義</mark></strong>を定める。法人は当事者の合意だけでは成立せず、必ず法律の根拠が必要である。これにより法人の実体・責任財産・代表権限などが法律上明確になり、取引の安全が保護される。</p>
+      <p><strong>各要件の意味</strong>：「この法律その他の法律の規定によらなければ」とは、民法33条以下の規定のほか、会社法・一般法人法・特定非営利活動促進法（NPO法）等の個別法に基づく必要があることを意味する。</p>
+      <p><strong>典型的な適用場面</strong>：例えば、A・B・Cが「我々の団体を法人にしよう」と口頭で合意しても、法律所定の設立手続（定款の作成・登記等）を経なければ法人は成立しない。これは会社についても同様であり（会社法49条）、設立登記によって初めて法人格が生じる。</p>
+    </div>
+  </div>
+
+  <!-- 民法34条 -->
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法34条（法人の能力）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第34条　法人は、法令の規定に従い、<strong>定款その他の基本約款で定められた目的の範囲内</strong>において、権利を有し、義務を負う。
+      </blockquote>
+      <p><strong>趣旨・目的</strong>：34条は<strong><mark class="kw">目的の範囲による権利能力の制限</mark></strong>を定める。法人の権利能力は自然人と異なり、定款等に定められた目的の範囲内に限られる。これにより、法人の設立目的外の活動が行われた場合に構成員や第三者を保護する機能を持つ。</p>
+      <p><strong>「目的の範囲」の解釈</strong>：判例・通説は、目的の範囲を文字通りに狭く解釈せず、「目的を遂行するために直接または間接に必要な行為」はすべて含まれると広く解釈する。例えば、野菜販売を目的とする会社が広告費を支払ったり、保険に加入したりすることは目的の範囲内となる。</p>
+      <p><strong>政治献金の問題</strong>：八幡製鉄政治献金事件（最大判昭45.6.24）では、会社が政党に政治献金をすることが目的の範囲内かが争われた。最高裁は、会社は社会的実体として政治的行動をとることも容認されるとして、目的の範囲内とした。この判例は「法人の目的外行為が直ちに無効になるわけではなく、判例は目的の範囲を広く解釈する」という命題を示している。</p>
+      <p><strong>他条文との関係</strong>：自然人の権利能力が無制限（3条）であるのと対照的に、法人の権利能力は34条により目的の範囲内に制限される。これが法人固有の制約であり、代表者の行為が目的の範囲を明らかに超えた場合は法人に帰属しない（ただし善意の第三者保護の問題が生じる）。</p>
+    </div>
+  </div>
+
+  <!-- 民法36条 -->
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法36条（登記）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第36条　法人及び外国法人は、この法律その他の法令の定めるところにより、登記をするものとする。
+      </blockquote>
+      <p><strong>趣旨・目的</strong>：法人の設立・変更・解散等の重要な事項を登記によって公示し、第三者が法人に関する情報を知れるようにする。法人登記は単なる事実の登録ではなく、法人格の発生・消滅に関わる重要な制度的意義を持つことが多い（例：会社法49条では設立登記により会社が成立する）。</p>
+      <p><strong>外国法人</strong>：外国の法律に基づいて設立された法人（外国法人）も、日本国内で活動するためには登記が必要とされる点に注意。</p>
+    </div>
+  </div>
+
+  <!-- 民法44条類推：不法行為責任 -->
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">一般法人法78条（代表者の行為についての損害賠償責任）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        一般社団法人は、代表理事その他の代表者がその<strong>職務を行うについて</strong>第三者に加えた損害を賠償する責任を負う。
+      </blockquote>
+      <p><strong>趣旨・目的</strong>：旧民法44条に相当する規定（現在は一般法人法78条・会社法350条等に引き継がれている）。法人の代表者が職務の執行として行った行為により第三者に損害を与えた場合、法人が賠償責任を負う。</p>
+      <p><strong>「職務を行うについて」の範囲</strong>：判例は外形理論（行為の外形が職務行為と認められれば足りる）を採用し、代表者の実際の意図が私的なものであっても、外形上職務行為と認められれば法人の責任が生じると解する。被害者保護のために広く責任を認める趣旨である。</p>
+      <p><strong>法人の求償権</strong>：法人が損害賠償を支払った場合、損害を生じさせた代表者に対して求償できる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第6節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <!-- 判例1：権利能力なき社団の成立要件 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所　昭和39年10月15日　民集18巻8号1671頁</div>
+      <div class="case-card__title">権利能力なき社団の成立要件（建物収去土地明渡請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民訴法29条</span>
+        <span class="badge badge--law">権利能力なき社団</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地の所有者Xが、ある集落の共同利用組織（B組合）に対して建物収去・土地明渡しを求めて訴訟を提起した。B組合は法人格を持たない団体であったが、一定の組織と規約を有していた。この訴訟において、法人格を持たないB組合が民事訴訟の当事者になれるか（当事者能力）が問題となった。当事者能力の有無は、B組合が民訴法29条の「法人でない社団で代表者の定めがあるもの」（権利能力なき社団）に該当するかにかかっていた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、権利能力なき社団として認められるための要件を次のように定式化した。すなわち、権利能力なき社団といいうるためには、「<em>①団体としての組織をそなえ、②そこには多数決の原則が行なわれ、③構成員の変更にもかかわらず団体そのものが存続し、しかして④その組織によって代表の方法、総会の運営、財産の管理その他団体としての主要な点が確定している</em>ものでなければならない」と判示した。また、権利能力なき社団がその名において取得した資産は、構成員全員に<strong><mark class="kw">総有的に帰属する</mark></strong>とした。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、権利能力なき社団の成立要件を示した基本判例であり、行政書士試験において最も重要な法人関係判例のひとつである。①〜④の4つの要件（要素）を正確に記憶することが必要であり、「固定資産を有していることが不可欠」という誤りの選択肢（後の最判平14.6.7で否定）に対して注意が必要。また、財産の帰属を「総有」と明示している点も重要で、「共有」「合有」という誤りの選択肢と区別しなければならない。</p>
+    </div>
+  </div>
+
+  <!-- 判例2：権利能力なき社団の債務 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所　昭和48年10月9日　民集27巻9号1129頁</div>
+      <div class="case-card__title">権利能力なき社団の取引債務と構成員の責任</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">権利能力なき社団</span>
+        <span class="badge badge--law">総有的帰属</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>権利能力なき社団（労働組合）の代表者が社団の名においてある取引を行い、その結果生じた取引上の債務について、取引の相手方が社団の構成員各自に対して個人的に債務の履行を求めた。構成員個人が社団の取引債務について、個人的な弁済責任を負うかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、権利能力のない社団の代表者が社団の名においてした取引上の債務は、「<em>社団の構成員全員に一個の義務として総有的に帰属し、社団の総有財産だけがその責任財産となり、構成員各自は、取引の相手方に対し個人的債務ないし責任を負わない</em>」と判示した。すなわち、社団の財産と同様、社団の債務も構成員に総有的に帰属するにすぎず、構成員が個人的に無限責任を負うわけではないとした。</p>
+      <h4>試験上の意義</h4>
+      <p>権利能力なき社団では、財産が総有に帰属するのと同様に、債務も総有的に帰属する。この結果として、社団の取引債務について構成員個人は個人的な責任（連帯責任等）を負わない。試験では「構成員各自が連帯して責任を負う」という誤りの選択肢が頻出する。民法上の組合（組合員が損失分担の割合で責任を負う）との対比も重要である。</p>
+    </div>
+  </div>
+
+  <!-- 判例3：権利能力なき社団の不動産登記 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所　昭和47年6月2日　民集26巻5号957頁</div>
+      <div class="case-card__title">権利能力なき社団と不動産登記</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">権利能力なき社団</span>
+        <span class="badge badge--law">不動産登記</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>権利能力なき社団が不動産を取得した際、社団名義での所有権移転登記ができるかが問題となった。社団自身には法人格がなく、不動産登記法上の権利の主体となれないため、どのような方法で登記すべきかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、権利能力なき社団の資産である不動産は、社団自身の名義では登記できないとした上で、<em>代表者個人の名義で所有権登記をすることが許される</em>と判示した。この登記は社団のために代表者が名義上保有するものであり、登記名義人（代表者個人）が実質的に財産を取得したわけではなく、あくまで社団（構成員の総有財産）のために管理しているにすぎない。</p>
+      <h4>試験上の意義</h4>
+      <p>権利能力なき社団は自己名義で不動産登記ができない。この点は法人（自己名義で登記可）と決定的に異なる。代表者が変わった場合は新代表者への名義変更が必要であり、そのための所有権移転登記請求を社団自身が原告として行えるとした判例もある（最判平26.2.27）。試験では「社団の名義で登記できる」という誤りの選択肢に注意。</p>
+    </div>
+  </div>
+
+  <!-- 判例4：法人の目的の範囲（政治献金） -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁大法廷　昭和45年6月24日　民集24巻6号625頁</div>
+      <div class="case-card__title">八幡製鉄政治献金事件（法人の目的の範囲）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">民法34条</span>
+        <span class="badge badge--law">目的の範囲</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>八幡製鉄株式会社の代表取締役が、会社の定款に定められた目的（鉄鋼業等）に政治献金は含まれないにもかかわらず、自由民主党に政治献金を行った。これに対して株主が、会社の定款上の目的の範囲を超えた違法な行為であるとして、取締役の損害賠償責任を追及した（株主代表訴訟）。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、会社は社会的実在として政治的行為をすることも当然に認められるとし、「<em>会社が政治資金の寄附をすることは、客観的、抽象的に観察して、会社の社会的役割を果たすために必要なものとして、その目的の範囲内の行為と解することができる</em>」と判示した。すなわち、目的の範囲を文字通りに解釈せず、会社の社会的活動に合理的に必要な行為はすべて目的の範囲内と広く解した。</p>
+      <h4>試験上の意義</h4>
+      <p>民法34条の「目的の範囲」を広く解釈する判例の代表例である。「定款に記載のない行為は目的の範囲外で当然に無効」という選択肢は誤りとなる。目的の範囲の判断は、「当該行為が目的遂行のために客観的・抽象的に必要と認められるか」という基準で行われる点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第7節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出論点①：権利能力なき社団の財産帰属形態</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">【設問】</strong>権利能力なき社団Xの代表者AがXの名において取得した不動産の所有権は誰に帰属するか。</p>
+      <p><strong class="em-c">【正解】</strong>Xの構成員全員に<strong>総有的に帰属する</strong>（最判昭39.10.15）。各構成員は持分権を有しない。</p>
+      <p><strong class="em-c">【誤りやすい選択肢】</strong>「AとXの構成員の共有に帰属する」「各構成員が均等の持分で共有する」「X自身に帰属する（X名義で登記できる）」はすべて誤り。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出論点②：権利能力なき社団の債務と構成員の責任</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">【設問】</strong>権利能力なき社団Xの代表者AがXの名において締結した売買契約の代金債務について、Xの構成員B・C・Dは代金の支払い責任を負うか。</p>
+      <p><strong class="em-c">【正解】</strong>B・C・Dは<strong>個人的な責任を負わない</strong>（最判昭48.10.9）。債務はXの総有財産だけが責任財産となり、Xの社団財産の範囲で処理される。</p>
+      <p><strong class="em-c">【誤りやすい選択肢】</strong>「B・C・Dが連帯して責任を負う」「各構成員が損失分担の割合で責任を負う（これは組合の話）」はいずれも誤り。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出論点③：法人の目的の範囲の解釈</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">【設問】</strong>法人が定款に記載のない行為をした場合、その行為は常に目的の範囲外として無効となるか。</p>
+      <p><strong class="em-c">【正解】</strong>常に無効とはならない。判例は「目的の範囲」を広く解釈し、<strong>目的を遂行するために客観的・抽象的に必要な行為</strong>はすべて目的の範囲内と解する（最大判昭45.6.24等）。</p>
+      <p><strong class="em-c">【誤りやすい選択肢】</strong>「定款に記載のない行為は目的外として常に無効」は誤り。目的の範囲を広く解釈する点が試験のポイント。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出論点④：権利能力なき社団の成立要件4つ</span>
+    </div>
+    <div class="box__bd">
+      <p>最判昭39.10.15の4要件（要素）をすべて正確に答えられること。</p>
+      <p>①<strong>団体としての組織を備えていること</strong><br>
+      ②<strong>多数決の原則が行われていること</strong><br>
+      ③<strong>構成員の変更にかかわらず団体そのものが存続すること</strong><br>
+      ④<strong>代表の方法・総会の運営・財産の管理その他団体としての主要な点が確定していること</strong></p>
+      <p><strong class="em-c">【補足】</strong>「固定資産・基本的財産を保有していることが不可欠」という要件は存在しない（最判平14.6.7）。これが誤りの選択肢として出題されることがある。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的なつながり</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>会社法との接続</strong>：一般法人法や会社法は民法の特別法として民法の法人規定を補充・修正している。民法34条の「目的の範囲」は会社（株式会社等）にも適用されるため、八幡製鉄政治献金事件は民法・会社法の双方から出題される可能性がある。</p>
+      <p><strong>行政法との接続</strong>：行政法上の「公益法人への補助金・委託事業」や「NPO法人の認証」などでは、法人の種類・法人格の有無が実務上重要な問題になる。行政書士の業務として「一般社団法人の設立手続き代行」があり、定款作成は行政書士の独占業務に含まれる。</p>
+      <p><strong>民事訴訟法との接続</strong>：権利能力なき社団の当事者能力は民事訴訟法29条に根拠を持つ。行政書士試験の民法出題では条文・判例の知識が問われるが、訴訟上の論点として民事訴訟法との橋渡しになる論点でもある。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 第8節 ========== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">立法経緯と2008年公益法人制度改革</span>
+    </div>
+    <div class="box__bd">
+      <p>旧民法（2008年改正前）では、公益目的の社団・財団法人は主務官庁の許可が必要（旧民法34条）であり、設立には所管省庁との交渉・認可が必要であった。このため、同一の公益目的を持つ法人であっても所管省庁によって設立のハードルが大きく異なり、また「許可」を得た後も主務官庁の強い監督・介入を受けるという問題があった。</p>
+      <p>2008年（平成20年）12月に施行された公益法人制度改革により、①一般社団・財団法人は登記だけで設立可能（準則主義）となり、②公益認定は行政庁が一定の客観的基準に基づいて行う「認定」制度に変わった（主務官庁制から独立した公益認定委員会による制度へ）。これにより、市民社会の多様な活動を柔軟に支援できる制度となった。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">本単元に特化した学習法・整理のポイント</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>3つの形態を対比して整理する</strong>：法人・権利能力なき社団・民法上の組合を常にセットで比較しながら整理することが最も効果的である。「財産の帰属形態」（法人自身・総有・合有）、「持分の有無」、「不動産登記の方法」、「債務の帰属と構成員の責任」を表形式で整理し、繰り返し確認すること。</p>
+      <p><strong>権利能力なき社団の判例を中心に組み立てる</strong>：権利能力なき社団に関する判例（最判昭39.10.15・昭32.11.14・昭47.6.2・昭48.10.9）は、それぞれ「成立要件」「財産の総有」「不動産登記」「債務の帰属」という異なる側面を担っており、各判例がどの問題に答えているかを整理しておく。これらは過去問で繰り返し問われているため、一問一答形式で繰り返し演習することを推奨する。</p>
+      <p><strong>条文の位置づけを確認する</strong>：民法の法人に関する規定（33条〜84条）は、現在は民法に枠組みのみが残り、具体的な規律は一般法人法・会社法等の個別法に委ねられている。試験では民法33条・34条・36条が直接問われることが多いため、条文番号と内容の対応を確実に覚える。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

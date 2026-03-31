@@ -60,10 +60,10 @@ export default function DownloadSection() {
                 基本から応用までを網羅し、図表やチャートを多用して理解しやすく構成しています。
               </p>
               <Link 
-                href="/downloads?tab=study"
+                href="/pricing"
                 className="block w-full text-center bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-md transition-colors"
               >
-                学習ノートを見る
+                プレミアムで利用予定
               </Link>
             </div>
           </div>
@@ -116,10 +116,10 @@ export default function DownloadSection() {
                 過去問から予想問題まで幅広く収録しています。
               </p>
               <Link 
-                href="/downloads?tab=exercise"
+                href="/pricing"
                 className="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-md transition-colors"
               >
-                演習ノートを見る
+                プレミアムで利用予定
               </Link>
             </div>
           </div>

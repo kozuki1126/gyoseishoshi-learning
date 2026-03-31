@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find c:/Users/kozuk/Desktop/workspace/gyoseishoshi-learning -maxdepth 2 -name *.md -o -name CLAUDE.md)",
+      "Bash(du -sh /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/*)",
+      "Bash(while read:*)",
+      "Bash(do du:*)",
+      "Bash(done)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(mv /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/.next/* /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/recycle/.next/)",
+      "Bash(mv /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/playwright-report/* /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/recycle/playwright-report/)",
+      "Bash(mv /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/test-results/* /c/Users/kozuk/Desktop/workspace/gyoseishoshi-learning/recycle/test-results/)"
+    ]
+  }
+}
