@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債権譲渡と債務引受 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">債権譲渡と債務引受</h1>
+  <p class="page-title-block__sub">債権者側の交替と債務者側の交替を、対抗要件・抗弁・担保移転から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法466条</span>
+    <span class="badge badge--info">民法467条</span>
+    <span class="badge badge--info">民法468条</span>
+    <span class="badge badge--info">民法469条</span>
+    <span class="badge badge--info">民法470条</span>
+    <span class="badge badge--info">民法472条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権譲渡</mark></strong>とは、債権者が自分の持つ債権を別の者へ移転することをいう。売掛金をファクタリング会社へ譲渡する、金融機関が貸金債権を回収会社へ移す、将来発生する診療報酬債権や売掛金を担保として譲渡する、といった場面で使われる。債権は物と違って目に見えないため、債務者や第三者から見ると、誰が本当の債権者かが分かりにくい。そこで民法は、譲渡そのものの有効性と、債務者・第三者へ主張するための<strong><mark class="kw">対抗要件</mark></strong>を分けて規律している。</p>
+
+  <p><strong><mark class="kw">債務引受</mark></strong>とは、ある債務を別の者が引き受ける制度である。会社の事業譲渡に伴って買主が売主の取引債務を引き受ける、親会社が子会社の借入債務を引き受ける、不動産を取得する者が抵当権付き債務を引き受ける、といった場面で問題になる。債権譲渡が「債権者側の交替」であるのに対し、債務引受は「債務者側の交替または追加」である。債務者が変わると債権者の回収可能性に直結するため、免責的債務引受では債権者の関与が特に重視される。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">民法467条</mark></strong>の通知・承諾・確定日付、<strong><mark class="kw">譲渡制限の意思表示</mark></strong>がある債権の譲渡、<strong><mark class="kw">債務者の抗弁</mark></strong>と<strong><mark class="kw">相殺</mark></strong>、<strong><mark class="kw">併存的債務引受</mark></strong>と<strong><mark class="kw">免責的債務引受</mark></strong>の違いが頻出である。特に令和2年施行の債権法改正後は、譲渡制限特約があっても譲渡自体は有効であること、将来債権譲渡が明文化されたこと、債務引受が条文化されたことを旧法知識と区別する必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに対して100万円の売買代金債権を持ち、その債権をCへ譲渡したとする。AとCの間では譲渡契約により<strong><mark class="kw">債権譲渡</mark></strong>は成立するが、CがBに支払を求めるには、AからBへの通知またはBの承諾という<strong><mark class="kw">債務者対抗要件</mark></strong>が必要である。さらにAが同じ債権をDにも譲渡した場合、CとDの優劣は確定日付ある通知の到達時または確定日付ある承諾の日時で決まる。これに対し、Bの債務をEが引き受ける場面では、BもEも責任を負う<strong><mark class="kw">併存的債務引受</mark></strong>なのか、Bが債務を免れてEだけが責任を負う<strong><mark class="kw">免責的債務引受</mark></strong>なのかで、債権者Aの保護と契約要件が大きく変わる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権譲渡</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権譲渡</mark></strong>は、債権者が有する債権を同一性を保ったまま譲受人へ移転する契約である。債務者の同意を効力発生要件としない点に特徴があり、債権者は原則として自己の財産である債権を自由に処分できる。制度趣旨は、債権を資金調達や担保、債権回収の対象として流通させ、経済活動を円滑にする点にある。ただし、債権の性質が譲渡を許さないもの、たとえば扶養請求権のように債権者本人との結び付きが強いものは譲渡できない。試験では、譲渡契約の有効性と、債務者・第三者に主張できるかという<strong><mark class="kw">対抗要件</mark></strong>を分けることが出発点になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">譲渡制限の意思表示</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">譲渡制限の意思表示</mark></strong>とは、当事者が債権の譲渡を禁止し、または制限する旨を合意することである。改正前の民法では、譲渡禁止特約に反する譲渡の効力について判例・学説上の整理が重要であったが、現行民法466条2項は、譲渡制限の意思表示があっても<strong><mark class="kw">債権譲渡</mark></strong>の効力は妨げられないと明文化した。もっとも、譲受人が譲渡制限を知り、または重大な過失で知らなかった場合、債務者は履行を拒み、譲渡人への弁済などの消滅事由を譲受人に対抗できる。つまり「譲渡は無効」ではなく、「悪意・重過失の譲受人に対して債務者が一定の防御を持つ」と理解する。預貯金債権では特則があり、譲渡制限の効力がより強く扱われる点も注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債務者対抗要件と第三者対抗要件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債務者対抗要件</mark></strong>は、譲受人が債務者に対し「自分が新しい債権者である」と主張するための要件であり、譲渡人から債務者への通知または債務者の承諾で足りる。これに対し、<strong><mark class="kw">第三者対抗要件</mark></strong>は、二重譲渡の譲受人や差押債権者など、債務者以外の第三者に優先を主張するための要件であり、通知または承諾が<strong><mark class="kw">確定日付のある証書</mark></strong>によってされなければならない。確定日付は、通知書や承諾書が特定の日に存在したことを公的に示す仕組みであり、債権譲渡の優劣判断を客観化する機能を持つ。試験では、債務者に請求できるかを問う肢と、二重譲渡で誰が優先するかを問う肢を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">対抗要件具備時と債務者の抗弁</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">対抗要件具備時</mark></strong>は、譲渡人が債務者に通知をし、または債務者が承諾をした時をいう。<strong><mark class="kw">民法468条</mark></strong>は、債務者が対抗要件具備時までに譲渡人に対して生じた事由を、譲受人に対抗できると定める。これは、債務者が譲渡を知らない間に形成した抗弁や弁済期待を保護するためである。たとえば、譲渡通知の前に売買契約の目的物に不適合があり、債務者が代金減額や解除に関する抗弁を持っていた場合、譲受人から請求されてもその抗弁を主張できる。試験では、「譲渡された以上、債務者は譲渡人に対して有していた抗弁を一切主張できない」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権譲渡と相殺</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権譲渡と相殺</mark></strong>では、債務者が譲渡人に対して反対債権を持つ場合に、譲受人からの請求に対して相殺を主張できるかが問題となる。<strong><mark class="kw">民法469条</mark></strong>は、対抗要件具備時より前に取得した譲渡人に対する債権による相殺を譲受人に対抗できるとする。さらに、対抗要件具備時より後に取得した債権でも、対抗要件具備時より前の原因に基づいて生じた債権や、譲受人が取得した債権の発生原因である契約に基づく債権であれば相殺を対抗できる。これは、譲渡前の法律関係から自然に発生する反対債権について、債務者の相殺期待を保護する趣旨である。令和7年度の出題でもこの条文構造が問われており、単なる時点暗記ではなく「どの原因から生じた反対債権か」を読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">将来債権譲渡</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">将来債権譲渡</mark></strong>は、譲渡の意思表示時にはまだ発生していない債権を譲渡することである。現行<strong><mark class="kw">民法466条の6</mark></strong>は、債権譲渡は意思表示時に債権が現に発生していることを要せず、将来債権が発生したとき譲受人が当然に取得すると定める。制度趣旨は、売掛金、診療報酬、賃料、請負代金など、継続的に発生する債権を資金調達や担保に使えるようにする点にある。もっとも、債権の発生原因や発生期間などによって対象が特定されていることが必要であり、営業活動を過度に拘束したり他の債権者を不当に害したりする場合には効力が問題となる。試験では、将来債権は一切譲渡できないとする旧来的な肢や、発生時に改めて譲渡行為が必要とする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">併存的債務引受</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">併存的債務引受</mark></strong>は、引受人が債務者と連帯して、債務者が債権者に対して負担する債務と同一内容の債務を負担する制度である。元の債務者は債務を免れず、債権者から見れば責任財産が増えるため、債権者保護に厚い。成立方法は、債権者と引受人の契約による場合と、債務者と引受人の契約に債権者が承諾する場合がある。後者は第三者のためにする契約の規定に従う。引受人は効力発生時に債務者が主張できた抗弁を債権者に対抗できるため、単に新しい独立債務を負うのではなく、元の債務の内容と抗弁を引き継ぐ構造を持つ。試験では「併存的債務引受では原債務者と引受人が分割債務を負う」とする肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">免責的債務引受</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">免責的債務引受</mark></strong>は、引受人が債務者の債務と同一内容の債務を負担し、元の債務者が自己の債務を免れる制度である。債権者から見ると、従来の債務者を失い、引受人だけを相手にすることになるため、債権者の関与が不可欠である。債権者と引受人の契約で行う場合は、債権者が債務者に契約をした旨を通知した時に効力を生じる。債務者と引受人の契約で行う場合は、債権者が引受人に承諾することによって成立する。引受人は効力発生時に債務者が主張できた抗弁を主張できるが、免責的債務引受の引受人は原則として債務者に求償権を取得しない。担保や保証を引受人の債務へ移すには、民法472条の4の意思表示・承諾ルールを確認する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 760" role="img" aria-label="債権譲渡の効力と対抗要件の構造図">
+      <defs>
+        <marker id="arr21a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr21a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+        <marker id="arr21a-orange" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L0,6 L7,3 z" fill="#ea580c"/></marker>
+      </defs>
+      <line x1="540" y1="120" x2="540" y2="165" stroke="#2563eb" stroke-width="3"/>
+      <line x1="185" y1="165" x2="895" y2="165" stroke="#2563eb" stroke-width="3"/>
+      <line x1="185" y1="165" x2="185" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21a-blue)"/>
+      <line x1="420" y1="165" x2="420" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21a-blue)"/>
+      <line x1="660" y1="165" x2="660" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21a-blue)"/>
+      <line x1="895" y1="165" x2="895" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21a-blue)"/>
+      <line x1="420" y1="388" x2="420" y2="478" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr21a-orange)"/>
+      <line x1="660" y1="388" x2="660" y2="478" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr21a-red)"/>
+      <polyline points="895,388 895,440 936,440 936,478" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr21a-red)"/>
+      <rect x="360" y="40" width="360" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">債権譲渡</text>
+      <text x="540" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">効力発生と対抗要件を分けて考える</text>
+      <rect x="55" y="248" width="260" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="185" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">譲渡契約の効力</text>
+      <text x="185" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法466条1項・2項</text>
+      <text x="185" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">原則として譲渡可能</text>
+      <text x="185" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">譲渡制限でも効力妨げず</text>
+      <rect x="290" y="248" width="260" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="420" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">債務者対抗要件</text>
+      <text x="420" y="310" text-anchor="middle" font-size="13" fill="#7c2d12">民法467条1項</text>
+      <text x="420" y="338" text-anchor="middle" font-size="13" fill="#7c2d12">譲渡人の通知または承諾</text>
+      <text x="420" y="364" text-anchor="middle" font-size="13" fill="#7c2d12">債務者へ請求する入口</text>
+      <rect x="530" y="248" width="260" height="140" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="660" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">第三者対抗要件</text>
+      <text x="660" y="310" text-anchor="middle" font-size="13" fill="#9f1239">民法467条2項</text>
+      <text x="660" y="338" text-anchor="middle" font-size="13" fill="#9f1239">確定日付ある証書</text>
+      <text x="660" y="364" text-anchor="middle" font-size="13" fill="#9f1239">二重譲渡・差押えと競合</text>
+      <rect x="805" y="248" width="180" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="895" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">抗弁・相殺</text>
+      <text x="895" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法468条・469条</text>
+      <text x="895" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">対抗要件具備時で判定</text>
+      <text x="895" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">債務者の期待を保護</text>
+      <rect x="290" y="478" width="260" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="420" y="514" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">通知・承諾の主体</text>
+      <text x="420" y="542" text-anchor="middle" font-size="13" fill="#7c2d12">通知は譲渡人から</text>
+      <text x="420" y="568" text-anchor="middle" font-size="13" fill="#7c2d12">譲受人単独通知では不足</text>
+      <rect x="530" y="478" width="260" height="110" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="660" y="514" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">優劣の判断基準</text>
+      <text x="660" y="542" text-anchor="middle" font-size="13" fill="#9f1239">到達時または承諾日時</text>
+      <text x="660" y="568" text-anchor="middle" font-size="13" fill="#9f1239">確定日付の日付だけではない</text>
+      <rect x="806" y="478" width="260" height="110" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="936" y="514" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">相殺できる範囲</text>
+      <text x="936" y="542" text-anchor="middle" font-size="13" fill="#9f1239">前取得債権が中心</text>
+      <text x="936" y="568" text-anchor="middle" font-size="13" fill="#9f1239">発生原因にも注目</text>
+      <rect x="60" y="642" width="960" height="54" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="540" y="675" text-anchor="middle" font-size="13" fill="#9f1239">譲渡制限の意思表示がある場合でも譲渡自体は有効。悪意・重過失の譲受人に対する履行拒絶・消滅事由対抗を確認する。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">債権譲渡</mark></strong>を「譲渡契約の効力」「債務者対抗要件」「第三者対抗要件」「債務者の抗弁・相殺」の四段階に分けている。まず譲渡人と譲受人の間では、債権の性質が許さない場合を除き譲渡が成立し、譲渡制限の意思表示があっても譲渡自体は妨げられない。次に、譲受人が債務者へ請求するには譲渡人からの通知または債務者の承諾が必要である。さらに二重譲渡や差押えとの競合では、確定日付ある証書による通知・承諾が必要になり、判例上は到達時または承諾日時の先後で優劣を判断する。最後に、債務者が持っていた抗弁や相殺の期待は対抗要件具備時を基準に保護される。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 720" role="img" aria-label="併存的債務引受と免責的債務引受の比較構造図">
+      <defs>
+        <marker id="arr21b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr21b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="520" y1="120" x2="520" y2="170" stroke="#2563eb" stroke-width="3"/>
+      <line x1="260" y1="170" x2="780" y2="170" stroke="#2563eb" stroke-width="3"/>
+      <line x1="260" y1="170" x2="260" y2="250" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21b-blue)"/>
+      <line x1="780" y1="170" x2="780" y2="250" stroke="#2563eb" stroke-width="3" marker-end="url(#arr21b-blue)"/>
+      <line x1="260" y1="390" x2="260" y2="486" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr21b-blue)"/>
+      <line x1="780" y1="390" x2="780" y2="486" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr21b-red)"/>
+      <rect x="350" y="40" width="340" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="520" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">債務引受</text>
+      <text x="520" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">債務者側の追加または交替</text>
+      <rect x="110" y="250" width="300" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="260" y="284" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">併存的債務引受</text>
+      <text x="260" y="312" text-anchor="middle" font-size="13" fill="#1e3a8a">民法470条・471条</text>
+      <text x="260" y="340" text-anchor="middle" font-size="13" fill="#1e3a8a">原債務者は免れない</text>
+      <text x="260" y="366" text-anchor="middle" font-size="13" fill="#1e3a8a">引受人と連帯して責任</text>
+      <rect x="630" y="250" width="300" height="140" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="780" y="284" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">免責的債務引受</text>
+      <text x="780" y="312" text-anchor="middle" font-size="13" fill="#9f1239">民法472条から472条の4</text>
+      <text x="780" y="340" text-anchor="middle" font-size="13" fill="#9f1239">原債務者は債務を免れる</text>
+      <text x="780" y="366" text-anchor="middle" font-size="13" fill="#9f1239">債権者の関与が不可欠</text>
+      <rect x="110" y="486" width="300" height="112" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="260" y="522" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">債権者保護</text>
+      <text x="260" y="550" text-anchor="middle" font-size="13" fill="#1e3a8a">責任財産が増える</text>
+      <text x="260" y="576" text-anchor="middle" font-size="13" fill="#1e3a8a">原則として連帯債務関係</text>
+      <rect x="630" y="486" width="300" height="112" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="780" y="522" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">担保・保証の移転</text>
+      <text x="780" y="550" text-anchor="middle" font-size="13" fill="#9f1239">意思表示・承諾を確認</text>
+      <text x="780" y="576" text-anchor="middle" font-size="13" fill="#9f1239">求償権は原則取得しない</text>
+      <rect x="60" y="640" width="920" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="520" y="670" text-anchor="middle" font-size="13" fill="#9f1239">併存型は「追加」、免責型は「交替」。元の債務者が残るか免れるかを最初に判定する。</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、<strong><mark class="kw">債務引受</mark></strong>を<strong><mark class="kw">併存的債務引受</mark></strong>と<strong><mark class="kw">免責的債務引受</mark></strong>に分けて示している。併存的債務引受では元の債務者が残るため、債権者から見れば責任を負う者が増える。免責的債務引受では元の債務者が抜けるため、債権者の利益を害しないように契約・通知・承諾の要件が細かく定められている。担保や保証が当然に移ると考えると誤りであり、民法472条の4の意思表示や承諾を必ず確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>債権譲渡の場面別整理</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">譲渡契約の効力</th>
+        <th class="col--b">債務者対抗要件</th>
+        <th class="col--c">第三者対抗要件</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">譲渡人から譲受人へ<strong class="em-a">債権が移るか</strong>を判断する。</td>
+        <td class="col--b">譲受人が債務者へ<strong class="em-b">支払請求できるか</strong>を判断する。</td>
+        <td class="col--c">二重譲渡・差押えとの間で<strong class="em-c">誰が優先するか</strong>を判断する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法466条</mark></strong>、<strong><mark class="kw">民法466条の6</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法467条1項</mark></strong>。</td>
+        <td class="col--c"><strong><mark class="kw">民法467条2項</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">要件</td>
+        <td class="col--a">債権の性質上譲渡できない場合を除き、譲渡契約で足りる。譲渡制限があっても効力は妨げられない。</td>
+        <td class="col--b">譲渡人から債務者への通知、または債務者の承諾。確定日付は債務者対抗だけなら必須ではない。</td>
+        <td class="col--c">通知または承諾が<strong class="em-c">確定日付ある証書</strong>によることが必要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">譲受人は債権を取得する。将来債権は発生時に当然取得する。</td>
+        <td class="col--b">債務者は譲受人への弁済で免責され、譲受人の請求を拒めなくなる。</td>
+        <td class="col--c">競合する第三者に対して優先を主張できる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「譲渡制限特約があると譲渡は当然無効」とする肢。</td>
+        <td class="col--b">「譲受人が債務者へ通知すれば足りる」とする肢。</td>
+        <td class="col--c">「確定日付の日付の早い方が常に優先する」とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、まず問題文が「譲渡人・譲受人間の効力」を聞いているのか、「債務者へ請求できるか」を聞いているのか、「第三者との優劣」を聞いているのかを分類する。譲渡契約の有効性を問うなら<strong><mark class="kw">民法466条</mark></strong>、債務者へ請求できるかなら通知・承諾、二重譲渡や差押えが出たら確定日付ある証書と到達時を確認する。特に「譲受人からの通知」は対抗要件として足りない点が試験で狙われる。</p>
+
+  <h3>債務引受の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">併存的債務引受</th>
+        <th class="col--b">免責的債務引受</th>
+        <th class="col--c">履行引受との違い</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a">引受人が債務者と連帯して同一内容の債務を負う。</td>
+        <td class="col--b">引受人が同一内容の債務を負い、元の債務者は免れる。</td>
+        <td class="col--c">引受人が債務者との内部関係で履行を約束するにとどまり、債権者に直接債務を負わない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法470条</mark></strong>、<strong><mark class="kw">民法471条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法472条</mark></strong>から<strong><mark class="kw">民法472条の4</mark></strong>。</td>
+        <td class="col--c">明文の債務引受ではなく、内部的な履行約束として扱う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">元の債務者</td>
+        <td class="col--a">免れない。引受人と連帯責任を負う。</td>
+        <td class="col--b">免れる。債権者は原則として引受人へ請求する。</td>
+        <td class="col--c">免れない。債権者は従来どおり債務者へ請求する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">債権者保護</td>
+        <td class="col--a">責任者が増えるため、債権者の不利益は小さい。</td>
+        <td class="col--b">責任者が交替するため、債権者の契約・通知・承諾が重要。</td>
+        <td class="col--c">債権者に直接請求権を与える意思がなければ、債権者は引受人に請求できない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の狙い</td>
+        <td class="col--a">「分割債務になる」ではなく<strong class="em-a">連帯</strong>である点。</td>
+        <td class="col--b">担保・保証の移転、求償権なし、抗弁承継を問う点。</td>
+        <td class="col--c">債務引受と履行引受を混同させる点。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>問題文に「債務者が免れる」とあれば<strong><mark class="kw">免責的債務引受</mark></strong>、「債務者と引受人がともに責任を負う」とあれば<strong><mark class="kw">併存的債務引受</mark></strong>である。債権者が引受人へ直接請求できるかが明らかでない場合は、単なる履行引受にすぎない可能性を検討する。債務引受では「誰が債権者に対して債務を負うか」を外部関係として先に確定し、その後に抗弁、担保、求償を処理する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法466条・466条の6：債権の譲渡性と将来債権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法466条1項</mark></strong>　債権は、譲り渡すことができる。ただし、その性質がこれを許さないときは、この限りでない。<br>
+        <strong><mark class="kw">民法466条2項</mark></strong>　当事者が債権の譲渡を禁止し、又は制限する旨の意思表示をしたときであっても、債権の譲渡は、その効力を妨げられない。<br>
+        <strong><mark class="kw">民法466条3項</mark></strong>　前項に規定する場合には、譲渡制限の意思表示がされたことを知り、又は重大な過失によって知らなかった譲受人その他の第三者に対しては、債務者は、その債務の履行を拒むことができ、かつ、譲渡人に対する弁済その他の債務を消滅させる事由をもってその第三者に対抗することができる。<br>
+        <strong><mark class="kw">民法466条の6第1項</mark></strong>　債権の譲渡は、その意思表示の時に債権が現に発生していることを要しない。
+      </blockquote>
+      <p><strong><mark class="kw">民法466条</mark></strong>は、債権譲渡自由の原則を定める。1項ただし書は、債権の性質が譲渡を許さない場合の例外であり、債権者本人への給付を予定する権利などが問題になる。2項は令和2年施行の債権法改正で重要な意味を持ち、譲渡制限の意思表示があっても譲渡自体は有効であることを明確にした。3項は債務者保護の規定であり、悪意・重過失の譲受人に対して履行拒絶と消滅事由の対抗を認める。<strong><mark class="kw">民法466条の6</mark></strong>は将来債権譲渡を明文化し、発生時に譲受人が当然取得するという判例法理を条文化したものである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法467条：債権譲渡の対抗要件</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法467条1項</mark></strong>　債権の譲渡（現に発生していない債権の譲渡を含む。）は、譲渡人が債務者に通知をし、又は債務者が承諾をしなければ、債務者その他の第三者に対抗することができない。<br>
+        <strong><mark class="kw">民法467条2項</mark></strong>　前項の通知又は承諾は、確定日付のある証書によってしなければ、債務者以外の第三者に対抗することができない。
+      </blockquote>
+      <p><strong><mark class="kw">民法467条</mark></strong>は、債権譲渡の中心条文である。1項は、譲渡人から債務者への通知または債務者の承諾を要求する。通知主体が譲渡人である点が重要で、譲受人が一方的に「自分が譲り受けた」と通知しても、民法467条の通知にはならない。2項は、第三者対抗要件として確定日付ある証書を要求する。判例は、二重譲渡の優劣を確定日付の前後だけでなく、確定日付ある通知が債務者に到達した日時または確定日付ある承諾の日時の先後で判断する。行政書士試験では、確定日付を「書面の日付が早い方」と短絡する肢を警戒する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法468条・469条：抗弁と相殺</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法468条1項</mark></strong>　債務者は、対抗要件具備時までに譲渡人に対して生じた事由をもって譲受人に対抗することができる。<br>
+        <strong><mark class="kw">民法469条1項</mark></strong>　債務者は、対抗要件具備時より前に取得した譲渡人に対する債権による相殺をもって譲受人に対抗することができる。<br>
+        <strong><mark class="kw">民法469条2項</mark></strong>　債務者が対抗要件具備時より後に取得した譲渡人に対する債権であっても、その債権が次に掲げるものであるときは、前項と同様とする。
+      </blockquote>
+      <p><strong><mark class="kw">民法468条</mark></strong>は、債権譲渡によって債務者の地位が不当に悪化しないようにする規定である。譲渡通知前に債務者が譲渡人へ主張できた抗弁は、譲受人に対しても主張できる。<strong><mark class="kw">民法469条</mark></strong>は相殺に特化した規定で、対抗要件具備時より前に取得した反対債権だけでなく、後に取得した反対債権でも、譲渡前の原因や同一契約関係に基づくものは相殺を対抗できる。試験では、単に「対抗要件具備後に取得した債権だから相殺不可」と即断せず、民法469条2項各号に該当するかを検討する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法470条・471条：併存的債務引受</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法470条1項</mark></strong>　併存的債務引受の引受人は、債務者と連帯して、債務者が債権者に対して負担する債務と同一の内容の債務を負担する。<br>
+        <strong><mark class="kw">民法470条2項</mark></strong>　併存的債務引受は、債権者と引受人となる者との契約によってすることができる。<br>
+        <strong><mark class="kw">民法471条1項</mark></strong>　引受人は、併存的債務引受により負担した自己の債務について、その効力が生じた時に債務者が主張することができた抗弁をもって債権者に対抗することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法470条</mark></strong>は、改正前の判例法理を踏まえ、併存的債務引受の要件と効果を明文化した。引受人は債務者と連帯して同一内容の債務を負うため、債権者は引受人にも原債務者にも請求できる。債権者と引受人の契約だけで成立し、債務者の同意は不要である。これは債務者を免れさせる制度ではなく、債権者にとって責任者を追加する制度だからである。<strong><mark class="kw">民法471条</mark></strong>は、引受人が元の債務に付着する抗弁を主張できることを定め、引受人の責任が元の債務内容を基礎とすることを示す。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法472条から472条の4：免責的債務引受</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法472条1項</mark></strong>　免責的債務引受の引受人は債務者が債権者に対して負担する債務と同一の内容の債務を負担し、債務者は自己の債務を免れる。<br>
+        <strong><mark class="kw">民法472条2項</mark></strong>　免責的債務引受は、債権者と引受人となる者との契約によってすることができる。この場合において、免責的債務引受は、債権者が債務者に対してその契約をした旨を通知した時に、その効力を生ずる。<br>
+        <strong><mark class="kw">民法472条の3</mark></strong>　免責的債務引受の引受人は、債務者に対して求償権を取得しない。<br>
+        <strong><mark class="kw">民法472条の4第1項</mark></strong>　債権者は、第四百七十二条第一項の規定により債務者が免れる債務の担保として設定された担保権を引受人が負担する債務に移すことができる。ただし、引受人以外の者がこれを設定した場合には、その承諾を得なければならない。
+      </blockquote>
+      <p><strong><mark class="kw">民法472条</mark></strong>は、免責的債務引受の基本構造を定める。元の債務者が免れるため、債権者は資力や信用の異なる引受人だけを相手にすることになり、債権者保護のための関与が必要になる。債権者と引受人の契約で行う場合は、債務者に通知した時に効力を生じる。債務者と引受人の契約で行う場合は、債権者が引受人に承諾することが必要である。<strong><mark class="kw">民法472条の3</mark></strong>は引受人の求償権を否定し、免責的債務引受が通常の弁済代行とは異なることを示す。<strong><mark class="kw">民法472条の4</mark></strong>は担保・保証の移転を規律し、担保提供者や保証人の承諾を要する場面を設けている。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和49年3月7日 昭和47年(オ)第596号 民集28巻2号174頁</div>
+      <div class="case-card__title">債権二重譲渡と到達時説</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法467条</span>
+        <span class="badge badge--law">確定日付</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>同一の指名債権が二人の譲受人へ二重に譲渡され、それぞれの譲受人が自己の債権取得を主張した。各譲渡について確定日付ある通知または承諾が関係していたが、優劣を確定日付そのものの前後で決めるのか、それとも通知が債務者へ到達した時または承諾の時で決めるのかが争点となった。債権は不動産登記のような公示制度を持たないため、債務者がいつ譲渡を認識し得る状態になったかを基準とするか、証書上の日付だけを基準とするかで結論が変わり得る事案であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、指名債権が二重に譲渡された場合、譲受人相互の優劣は、確定日付ある通知が債務者に到達した日時、または確定日付ある債務者の承諾の日時の先後によって決すべきであると判示した。確定日付は通知・承諾が特定の日に存在したことを証明する機能を持つが、第三者対抗要件としての効力は、債務者に通知が到達し、または債務者が承諾して初めて外部的に意味を持つ。したがって、証書の日付だけが早くても、債務者への到達が後であれば優先できない。債務者に対する公示に代わる制度として、到達時を基準にする判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法467条2項</mark></strong>の第三者対抗要件を理解するうえで最重要である。誤答パターンは、「二重譲渡では確定日付の年月日が早い譲受人が常に優先する」という形で現れる。正しくは、確定日付ある通知の到達時または確定日付ある承諾の日時の先後で決まる。確定日付と到達時を分けることで、譲渡人・譲受人が内部で古い日付の書面を準備しただけでは第三者に優先できないという公示機能を維持している。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法467条</mark></strong>、二重譲渡、債権差押えとの競合が関連する。債権譲渡登記制度を用いた場合にも、民法467条の通知と競合するときは、登記日時と通知到達日時の先後が問題となる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和48年7月19日 昭和47年(オ)第111号 民集27巻7号823頁</div>
+      <div class="case-card__title">譲渡禁止特約と重大な過失</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法466条</span>
+        <span class="badge badge--law">譲渡制限</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>銀行預金債権のように、取引上、譲渡禁止特約が付されていることが通常想定される債権について、譲受人がその特約の存在を知らなかったとして債権取得を主張した。問題は、旧民法466条2項ただし書が善意の第三者を保護していた場面で、譲受人に重大な過失がある場合まで善意者として保護するかであった。譲渡禁止特約は債務者が誰に履行すればよいかを安定させるために置かれることが多く、譲受人の調査不足をどこまで救済するかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、譲渡禁止特約のある債権の譲受人が、その特約の存在を知らないことにつき重大な過失があるときは、その債権を取得し得ないと判示した。旧法下の判断ではあるが、重大な過失は悪意と同様に扱うべきであり、わずかな注意を払えば譲渡禁止特約を知り得た者まで保護すると、債務者の利益と取引安全を害するという考え方が背景にある。現行民法では、譲渡制限の意思表示があっても譲渡自体の効力は妨げられないが、悪意・重過失の譲受人に対して債務者が履行拒絶や消滅事由の対抗をできるという形で、判例の問題意識が条文化されている。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、改正前後の整理を問う問題で重要である。現行法では「譲渡禁止特約があると譲渡は当然無効」と答えると誤りである。他方で、譲受人が譲渡制限を知り、または重大な過失で知らなかった場合にも債務者が何も主張できないとするのも誤りである。正しくは、譲渡自体は有効だが、債務者は悪意・重過失の譲受人に対し履行拒絶と譲渡人への弁済等の消滅事由を対抗できる。預貯金債権では民法466条の5の特則もあわせて確認する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法466条</mark></strong>、<strong><mark class="kw">民法466条の2</mark></strong>、<strong><mark class="kw">民法466条の5</mark></strong>が関連する。譲渡制限、供託、預貯金債権、差押債権者の扱いを横断的に整理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成13年11月22日 平成12年(受)第194号 民集55巻6号1056頁</div>
+      <div class="case-card__title">集合債権譲渡担保と将来債権の対抗要件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法466条の6</span>
+        <span class="badge badge--law">民法467条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務者が金融機関等に対する金銭債務を担保するため、既に発生している売掛債権だけでなく、一定の取引から将来発生する債権もまとめて譲渡担保の目的とした。契約では、担保権実行の通知がされるまでは譲渡人が第三債務者から取り立てることが許され、取り立てた金銭を直ちに譲受人へ引き渡す必要もない仕組みになっていた。このような集合債権譲渡担保で、将来発生する債権について民法467条の指名債権譲渡の対抗要件を具備できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、発生原因となる取引の種類や発生期間等によって特定された既発生債権および将来債権を一括して譲渡する集合債権譲渡担保契約について、債権は譲渡担保権者に確定的に譲渡されており、譲渡人に取立権限が留保されていても、そのことは第三者対抗要件の具備を妨げないと判断した。したがって、将来発生する債権についても、民法467条2項の方法によって第三者対抗要件を備えることができる。これは、将来債権を資金調達の担保として活用する実務上の必要性を認めつつ、債権の特定と対抗要件によって第三者との調整を図る判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、現行<strong><mark class="kw">民法466条の6</mark></strong>と<strong><mark class="kw">民法467条</mark></strong>の理解につながる。誤答パターンは、「将来発生する債権はまだ存在しないため譲渡できず、第三者対抗要件も具備できない」という形で現れる。正しくは、将来債権でも、対象が発生原因・期間などで特定されていれば譲渡の対象となり、発生時に譲受人が当然取得する。もっとも、無限定な譲渡や営業活動を著しく拘束する譲渡は別途公序良俗等が問題となり得るため、特定性と限界をセットで押さえる。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法466条の6</mark></strong>、<strong><mark class="kw">民法467条</mark></strong>、債権譲渡登記制度、譲渡担保、ファクタリングが関連する。担保物権・非典型担保の単元とも接続する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和41年12月20日 昭和39年(オ)第1237号 民集20巻10号2139頁</div>
+      <div class="case-card__title">重畳的債務引受と連帯債務関係</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法470条</span>
+        <span class="badge badge--law">併存的債務引受</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>貸金債務について、元の債務者とは別の者が債務を重ねて引き受けた。元の債務者が免れる免責型ではなく、元の債務者も引受人も債権者に対して責任を負う重畳的債務引受の場面で、両者の関係を分割債務と見るのか、連帯債務と見るのかが争われた。債権者にとっては、各人に半額しか請求できないのか、それとも一方に全額を請求できるのかという回収可能性の違いが重要であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、重畳的債務引受があった場合には、特段の事情がない限り、原債務者と債務引受人との間に連帯債務関係が生ずると判示した。重畳的債務引受は、債権者にとって責任を負う者を追加し、債権の担保力を強化する機能を持つ。もし分割債務にとどまるとすれば、引受によって債権者の回収可能性が十分に強化されず、当事者が通常期待する効果にも合わない。したがって、別段の意思表示がない限り、原債務者と引受人は連帯して同一内容の債務を負うと解するのが相当とされた。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例法理は現行<strong><mark class="kw">民法470条1項</mark></strong>に取り込まれている。行政書士試験では平成26年度に、併存的債務引受が債務者の意思に反しても債権者と引受人のみの契約でなし得ること、併存的債務引受があった場合に分割債務ではなく連帯債務関係になることが問われた。誤答パターンは、「併存的債務引受では原債務者と引受人が等しい割合で分割債務を負う」という肢である。正しくは、債権者に対する外部関係では連帯して責任を負う。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法470条</mark></strong>、<strong><mark class="kw">民法471条</mark></strong>、多数当事者の債権関係、連帯債務の相対効原則が関連する。債務引受は契約上の地位の移転とも区別して整理する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">債権譲渡</mark></strong>では、譲渡契約の有効性、債務者対抗要件、第三者対抗要件を三段階で分ける。</li>
+        <li><strong><mark class="kw">譲渡制限の意思表示</mark></strong>があっても譲渡自体は有効であり、悪意・重過失の譲受人に対する債務者の履行拒絶を確認する。</li>
+        <li><strong><mark class="kw">民法467条</mark></strong>では、通知主体が譲渡人であること、第三者対抗には確定日付ある証書が必要なこと、優劣は到達時または承諾日時で決まることを押さえる。</li>
+        <li><strong><mark class="kw">民法468条</mark></strong>と<strong><mark class="kw">民法469条</mark></strong>では、対抗要件具備時と反対債権の発生原因を読む。</li>
+        <li><strong><mark class="kw">併存的債務引受</mark></strong>は元の債務者が残る追加型、<strong><mark class="kw">免責的債務引受</mark></strong>は元の債務者が免れる交替型である。</li>
+        <li>債務引受では、抗弁の承継、引受人の求償権、担保・保証の移転を条文ごとに確認する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「債権に譲渡禁止特約がある場合、その債権譲渡は常に無効である。」これは誤りである。現行<strong><mark class="kw">民法466条2項</mark></strong>は、譲渡制限の意思表示があっても債権譲渡の効力は妨げられないとする。</p>
+      <p><strong>誤りの選択肢例2：</strong>「債権譲渡について、譲受人が債務者に通知すれば債務者対抗要件を備える。」これは誤りである。<strong><mark class="kw">民法467条1項</mark></strong>の通知は譲渡人から債務者に対してされる必要がある。</p>
+      <p><strong>誤りの選択肢例3：</strong>「二重譲渡の優劣は、確定日付ある証書に記載された日付の先後だけで決まる。」これは誤りである。判例は、確定日付ある通知の到達時または確定日付ある承諾の日時の先後で決める。</p>
+      <p><strong>誤りの選択肢例4：</strong>「債務者は、債権譲渡の対抗要件具備時より後に取得した譲渡人への債権による相殺を、いかなる場合も譲受人に対抗できない。」これは誤りである。<strong><mark class="kw">民法469条2項</mark></strong>は、一定の発生原因を持つ後取得債権について相殺対抗を認める。</p>
+      <p><strong>誤りの選択肢例5：</strong>「併存的債務引受では、原債務者と引受人は等しい割合で分割債務を負う。」これは誤りである。<strong><mark class="kw">民法470条1項</mark></strong>により、引受人は債務者と連帯して同一内容の債務を負担する。</p>
+      <p><strong>誤りの選択肢例6：</strong>「免責的債務引受の引受人は、債務者に対して当然に求償権を取得する。」これは誤りである。<strong><mark class="kw">民法472条の3</mark></strong>は、免責的債務引受の引受人が債務者に対して求償権を取得しないと定める。</p>
+    </div>
+  </div>
+
+  <p>解答手順は、第一に、問題が債権者側の交替か債務者側の交替かを判定する。第二に、債権譲渡なら、譲渡の有効性、債務者対抗要件、第三者対抗要件、抗弁・相殺の順に読む。第三に、譲渡制限特約が出たら、「譲渡無効」ではなく「悪意・重過失の譲受人に対する債務者の防御」と置き換える。第四に、債務引受なら、元の債務者が残るか免れるかを最初に判定する。第五に、併存的債務引受なら連帯責任、免責的債務引受なら債権者の関与・担保移転・求償権なしを確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">債権譲渡</mark></strong>と<strong><mark class="kw">債務引受</mark></strong>の双方で大きな整理が行われた。債権譲渡では、譲渡制限の意思表示があっても譲渡自体の効力は妨げられないこと、将来債権譲渡が可能であること、債務者の抗弁・相殺が対抗要件具備時を基準に整理されることが明文化された。債務引受では、改正前に判例・実務で認められていた併存的債務引受と免責的債務引受が条文化され、成立方法、抗弁、求償権、担保移転のルールが明確になった。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">債権譲渡</mark></strong>は、資金調達と債権回収の手段として重要である。売掛債権を早期に現金化するファクタリング、貸金債権の譲渡、集合債権譲渡担保、債権譲渡登記制度など、多くの制度が債権の流動化を前提にしている。だからこそ、債務者が二重払いをさせられないように、通知・承諾・確定日付・抗弁・相殺の規定が置かれている。</p>
+
+  <p><strong><mark class="kw">債権譲渡登記制度</mark></strong>は、法人がする金銭債権譲渡について、登記によって第三者対抗要件を備えられる制度である。登記ファイルに記録されると、債務者以外の第三者について民法467条の確定日付ある証書による通知があったものとみなされる。もっとも、債務者に対して譲渡を主張するには、登記事項証明書を交付して通知するなど別途の手続が必要である。民法467条の基本構造を理解したうえで、登記制度は第三者対抗要件を大量債権譲渡に適合させる仕組みとして位置づける。</p>
+
+  <p><strong><mark class="kw">債務引受</mark></strong>は、事業譲渡、組織再編、事業承継、担保付き不動産の取得、親会社による子会社支援などで使われる。併存的債務引受は債権者にとって責任者が増えるため使いやすいが、免責的債務引受では元の債務者が抜けるため、債権者・担保提供者・保証人の利益調整が不可欠になる。行政書士試験では、制度名だけで判断せず、契約の相手方、通知・承諾の有無、担保・保証が誰のために残るかを丁寧に読む必要がある。</p>
+
+  <p>他分野との接点として、<strong><mark class="kw">債権譲渡</mark></strong>は相殺、時効、弁済、担保物権、非典型担保、破産・民事執行と結びつく。<strong><mark class="kw">債務引受</mark></strong>は多数当事者の債権関係、保証、契約上の地位の移転、事業譲渡、会社法上の組織再編と接続する。学習では、「債権者が替わるのか、債務者が替わるのか」「相手方に不利益が生じるのか」「対抗要件や承諾で誰を保護しているのか」という三つの問いで整理すると、条文の位置づけを安定して理解できる。</p>
+</section>
+
+</body>
+</html>

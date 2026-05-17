@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>意思表示の瑕疵 | 行政書士試験 民法 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">意思表示の瑕疵</h1>
+  <p class="page-title-block__sub">心裡留保・通謀虚偽表示・錯誤・詐欺・強迫の要件・効果・第三者保護</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法93条から96条</span>
+    <span class="badge badge--info">意思の不存在</span>
+    <span class="badge badge--info">瑕疵ある意思</span>
+    <span class="badge badge--info">第三者保護</span>
+    <span class="badge badge--info">令和2年改正対応</span>
+  </div>
+</div>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p>意思表示は、法律行為の核心であり、契約をはじめとするあらゆる法律行為は有効な意思表示によって成立します。しかし、意思表示が何らかの欠陥（瑕疵）を抱えている場合、その意思表示をそのまま有効とすることは、表意者や社会全体の利益に反することがあります。本単元では、そうした欠陥ある意思表示について、民法がどのような規律を設けているかを学びます。</p>
+
+  <p>意思表示の瑕疵には大きく二つのグループがあります。第一は<strong><mark class="kw">意思の不存在</mark></strong>（非真意表示）と呼ばれるグループで、<strong><mark class="kw">心裡留保</mark></strong>（民法93条）、<strong><mark class="kw">通謀虚偽表示</mark></strong>（民法94条）、<strong><mark class="kw">錯誤</mark></strong>（民法95条）がこれに属します。これらは、表意者の内心の意思（効果意思）と、外部に表れた意思表示との間に食い違いがある状態です。第二は<strong><mark class="kw">瑕疵ある意思</mark></strong>と呼ばれるグループで、<strong><mark class="kw">詐欺</mark></strong>および<strong><mark class="kw">強迫</mark></strong>（民法96条）がこれに属します。詐欺・強迫の場合は、意思と表示は一致しているものの、その意思を形成する過程に不正な外部的干渉があったという点で瑕疵があります。</p>
+
+  <p>行政書士試験では、この5種類（心裡留保・通謀虚偽表示・錯誤・詐欺・強迫）について、原則的な効力（有効か無効か取消か）、相手方との関係での例外処理、そして第三者保護の要件という三層構造を理解・整理することが問われます。令和2年施行の民法改正により、錯誤が「無効」から「取消し」に変更され、動機の錯誤が明文化され、詐欺の第三者保護要件が「善意無過失」に引き上げられるなど、重要な変更点があります。改正前後の比較を含めて学ぶことが高得点への近道です。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">なぜ学ぶか──身近な例で理解する</span>
+    </div>
+    <div class="box__bd">
+      <p>友人に冗談で「この車、100万円で売るよ」と言ったら本気にされた（心裡留保）。借金を隠すために友人名義に不動産を移した（通謀虚偽表示）。「この土地の近くに新駅ができる」という情報を信じて高値で土地を買ったが実は誤情報だった（錯誤）。悪徳業者に「欠陥がない」と嘘をつかれて家を買った（詐欺）。「断ったら家族に危害を加える」と脅されて契約した（強迫）。これらは全て日常生活で起こりうるシナリオであり、民法はそれぞれに対して適切な保護を与えるルールを設けています。</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">心裡留保（しんりりゅうほ）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">心裡留保</mark></strong>とは、表意者が自己の<em>真意でないこと</em>を<em>自覚しながら</em>行う単独の意思表示をいいます（民法93条）。要するに「嘘をついていることを自分でわかっていながら行う意思表示」です。典型例は冗談や儀礼的な表現です。「この宝石、100万円で売るよ」と冗談を言ったが相手が本気にした場合などがこれにあたります。</p>
+      <p><strong>原則として有効です。</strong>表意者が自ら真意を秘して意思表示をしたのですから、その意思表示を信頼した相手方を保護するのが当然です。表意者を保護する必要性は低く、取引の安全・相手方の信頼を優先します。</p>
+      <p><strong>例外（無効）：</strong><em>相手方が表意者の真意でないことを知り（悪意）、または知ることができた（有過失）</em>ときは無効となります（93条1項ただし書）。保護するに値しない相手方の信頼まで守る必要はないからです。</p>
+      <p><strong>第三者との関係：</strong>心裡留保に基づく意思表示が無効となる場合でも、<em>善意の第三者に対しては無効を主張できません</em>（93条2項）。ただし、この「第三者」は無過失まで要求されない（善意のみで足りる）点に注意が必要です。</p>
+      <p><strong>試験での出題傾向：</strong>「相手方が知っていた場合は無効」「第三者が善意なら対抗不可」という二段構えの構造が問われます。また、虚偽表示との区別（一方的か通謀かの違い）もよく出題されます。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">通謀虚偽表示（つうぼうきょぎひょうじ）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">通謀虚偽表示</mark></strong>とは、<em>相手方と通じて</em>行う虚偽の意思表示をいいます（民法94条）。表意者と相手方が共謀して、二人ともが真意でないことを知りながら行う意思表示です。心裡留保が「一人の嘘」であるのに対し、虚偽表示は「二人で結託した嘘」です。典型例は、債権者の強制執行を免れるために友人との間で不動産の仮装売買契約を締結し登記名義を移転するケースです。</p>
+      <p><strong>原則として無効です</strong>（94条1項）。当事者双方とも真意ではなく、法律行為を有効とすべき根拠がないためです。有効を主張すべき者が誰もいないのですから、当然の結果です。</p>
+      <p><strong>第三者との関係（重要）：</strong>この無効は<em>善意の第三者に対抗できません</em>（94条2項）。これは「権利外観法理」の現れです。虚偽の外観（例えば他人名義の登記）を作り出した者は、その外観を信頼して取引した善意の第三者に対して無効を主張できません。この「第三者」には無過失は不要（善意のみで足りる）とするのが判例・通説です。また、第三者が対抗要件（不動産なら登記）を備えている必要はないというのも判例（最判昭44.5.27）の立場です。</p>
+      <p><strong>94条2項の類推適用：</strong>通謀による虚偽表示がなくても、真の権利者に帰責性がある場合（例えば他人名義の登記を放置した）に、この外観を信頼した第三者を保護するために94条2項を類推適用する判例法理があります。これは行政書士試験でも出題される重要論点です。</p>
+      <p><strong>「第三者」の範囲：</strong>仮装譲受人からの転得者、仮装譲渡不動産上に抵当権を設定した者、仮装債権の譲受人、仮装債権者の差押債権者などが含まれます。一方、仮装譲渡された土地の建物の賃借人は第三者に含まれないとした判例（最判昭57.6.8）があります。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">錯誤（さくご）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">錯誤</mark></strong>とは、表意者の真意とは異なる意思表示であって、<em>表意者がその食い違いを自覚していない</em>場合をいいます（民法95条）。心裡留保が「知っていて嘘をつく」のに対し、錯誤は「勘違いによる意思表示」です。</p>
+      <p>令和2年施行の改正民法により、錯誤は<em>「無効」から「取消し」</em>に変更されました（この変更は試験上非常に重要です）。理由は、従来の「無効」では誰でも主張できる建前となるところ、実際には表意者しか主張できないという判例法理との乖離があったため、表意者保護の制度である取消しに改めたものです。</p>
+      <p>錯誤には二類型があります。①<strong><mark class="kw">表示の錯誤</mark></strong>（意思表示に対応する意思を欠く錯誤、95条1項1号）：意思と表示が食い違う場合で、例えば「甲土地を買うつもりで乙土地を買う」と言ってしまったような場合です。②<strong><mark class="kw">動機の錯誤</mark></strong>（表意者が法律行為の基礎とした事情についての認識が真実に反する錯誤、95条1項2号）：意思と表示は一致しているが、その意思を形成した動機に勘違いがある場合です。例えば、「新駅ができる」という誤情報を信じて土地を購入した場合がこれにあたります。動機の錯誤は改正前は明文規定がなく判例で処理されていましたが、改正により明文化されました。</p>
+      <p><strong>取消しの要件（錯誤が重要なものであること）：</strong>軽微な勘違いまで保護するわけにはいかないため、取り消せるのは「法律行為の目的および取引上の社会通念に照らして重要なもの」に限られます（95条1項）。</p>
+      <p><strong>動機の錯誤の追加要件：</strong>動機の錯誤（2号）については、さらに「その事情が法律行為の基礎とされていることが表示されていた」ことが必要です（95条2項）。動機は表意者の内心にとどまることが多く、相手方が知り得ない場合に取消しを認めると相手方が不測の損害を被るためです。「表示」には明示だけでなく黙示の表示も含まれます。</p>
+      <p><strong>重大な過失がある場合（原則取消不可）：</strong>表意者に重大な過失がある場合は、原則として取消しを主張できません（95条3項）。ただし例外として、①相手方が錯誤を知り、または重大な過失により知らなかった場合、②相手方が表意者と同一の錯誤に陥っていた場合（共通錯誤）には、重大な過失があっても取消しが認められます。</p>
+      <p><strong>第三者保護：</strong>錯誤による取消しは、<em>善意かつ無過失の第三者に対抗できません</em>（95条4項）。詐欺の場合と同様、善意無過失が要求されます。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">詐欺（さぎ）による意思表示</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">詐欺</mark></strong>とは、他人を欺罔（欺き）して錯誤に陥らせ、その錯誤に基づいて意思表示をさせることをいいます（民法96条）。詐欺は「瑕疵ある意思」のグループに属し、意思と表示は一致しているが、意思形成過程に不正な干渉があった場合です。</p>
+      <p><strong>成立要件（二重の故意）：</strong>①欺罔行為（相手を騙す行為）が存在すること、②欺罔行為によって表意者が錯誤に陥ったこと、③その錯誤に基づいて意思表示をしたこと、が必要です。また詐欺者には「欺罔によって錯誤に陥らせようとする故意」と「錯誤に基づいて意思表示をさせようとする故意」という二重の故意が必要とされています。</p>
+      <p><strong>効果：取消しができます</strong>（96条1項）。表意者の帰責性は相手方（詐欺師）にあるため、取消しを認めて表意者を保護します。</p>
+      <p><strong>第三者詐欺（重要）：</strong>詐欺が第三者（当事者以外の者）によって行われた場合、相手方が「詐欺の事実を知り、または知ることができた」ときに限り取消しが可能です（96条2項）。令和2年改正前は「相手方が知っていたときに限り」と悪意のみが要件でしたが、改正により「知ることができたとき」（有過失）も加わり、表意者保護が強化されました。</p>
+      <p><strong>第三者保護：</strong>詐欺による取消しは、<em>善意かつ無過失の第三者に対抗できません</em>（96条3項）。令和2年改正前は「善意の第三者」（無過失不要）でしたが、改正により「善意無過失」が必要になりました。詐欺の被害者は詐欺師に騙されたという事情があるため、通謀虚偽表示の場合よりも保護されるべきと考えられたためです。</p>
+      <p><strong>強迫との比較：</strong>強迫による取消しには第三者保護規定がありません（どんな善意の第三者にも対抗できます）。これは強迫を受けた表意者の被害の深刻さが詐欺の場合よりも大きいためです。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">強迫（きょうはく）による意思表示</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">強迫</mark></strong>とは、相手方を畏怖させ（怖がらせ）、その畏怖に基づいて意思表示をさせることをいいます（民法96条1項）。「同意しなければ命を奪う」「サインしなければ家族を傷つける」などと脅して意思表示をさせる行為です。</p>
+      <p><strong>成立要件：</strong>①畏怖させる行為が存在すること、②表意者が畏怖したこと、③畏怖に基づいて意思表示をしたこと、が必要です。強迫が成立するためには表意者が「完全に選択の自由を失った」ことまでは不要とされています（最判昭33.7.1）。ある程度の選択の余地が残っていても、畏怖の影響下で意思表示をしたなら強迫が成立します。ただし、強迫の程度が非常に強く表意者が完全に自由意思を喪失している場合は、意思表示が当然無効となる場合もあります。</p>
+      <p><strong>効果：取消しができます</strong>（96条1項）。</p>
+      <p><strong>第三者保護規定なし（最重要ポイント）：</strong>詐欺と異なり、強迫による取消しについては第三者保護規定が存在しません。つまり、<em>善意の第三者に対してもなお取消しを主張できます</em>。強迫を受けた者の保護の必要性は詐欺よりも大きく、被害者に帰責性がほとんどないためです。第三者が善意であっても取消しを対抗できるという点が詐欺との最大の相違点であり、試験で繰り返し問われます。</p>
+      <p><strong>第三者による強迫：</strong>強迫については第三者保護規定がないのと同様に、第三者が強迫を行った場合についても制限規定がなく（96条2項は詐欺のみを対象）、どんな場合でも取消しが可能です。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">注意：「無効」と「取消し」の違い</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="warn">「無効」は誰でも・いつでも主張できますが、「取消し」は取消権者のみが一定の期間内に主張できます。</strong>錯誤・詐欺・強迫はすべて「取消し」であり、取消権者は表意者本人（および代理人・承継人）に限られます。相手方は取消しを主張できません。取消権は追認できる時から5年、または行為の時から20年で消滅します（126条）。これは頻出の誤答パターンです。</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>図1：意思表示の瑕疵 全体構造図</h3>
+  <div class="diagram-wrap">
+    
+    <svg width="100%" viewBox="0 0 780 482" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      
+      
+      <polyline points="390,88 390,152 116,152 116,180" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      
+      <polyline points="392,88 392,152 664,152 664,180" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      
+      <polyline points="116,240 116,294 108,294 108,332" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      
+      <polyline points="118,240 118,294 277,294 277,332" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      
+      <polyline points="120,240 120,294 430,294 430,332" fill="none" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      
+      <polyline points="662,240 662,294 559,294 559,332" fill="none" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-dashed)"/>
+      
+      <polyline points="666,240 666,294 688,294 688,332" fill="none" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-dashed)"/>
+
+      
+      <rect x="32" y="140" width="88" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="76" y="154" text-anchor="middle" font-size="13" fill="#1d4ed8">非真意</text>
+      <rect x="652" y="140" width="76" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="690" y="154" text-anchor="middle" font-size="13" fill="#e11d48">瑕疵</text>
+
+      
+      <g>
+        <rect x="280" y="30" width="220" height="58" rx="8" fill="#1d4ed8"/>
+        <text x="390" y="57" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">意思表示の瑕疵</text>
+        <text x="390" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">民法93条から96条</text>
+      </g>
+
+      
+      <g>
+        <rect x="40" y="188" width="152" height="52" rx="6" fill="#2563eb"/>
+        <text x="116" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">意思の不存在</text>
+        <text x="116" y="230" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">非真意表示（3類型）</text>
+      </g>
+
+      
+      <g>
+        <rect x="588" y="188" width="152" height="52" rx="6" fill="#e11d48"/>
+        <text x="664" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">瑕疵ある意思</text>
+        <text x="664" y="230" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">意思形成過程の瑕疵（2類型）</text>
+      </g>
+
+      
+      <g>
+        <rect x="40" y="340" width="136" height="52" rx="6" fill="#ea580c"/>
+        <text x="108" y="363" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">心裡留保</text>
+        <text x="108" y="382" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">93条｜原則有効</text>
+      </g>
+
+      
+      <g>
+        <rect x="201" y="340" width="152" height="52" rx="6" fill="#ea580c"/>
+        <text x="277" y="363" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">通謀虚偽表示</text>
+        <text x="277" y="382" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">94条｜無効</text>
+      </g>
+
+      
+      <g>
+        <rect x="378" y="340" width="104" height="52" rx="6" fill="#ea580c"/>
+        <text x="430" y="363" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">錯誤</text>
+        <text x="430" y="382" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">95条｜取消し</text>
+      </g>
+
+      
+      <g>
+        <rect x="507" y="340" width="104" height="52" rx="6" fill="#9f1239" stroke="#e11d48" stroke-width="2"/>
+        <text x="559" y="363" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">詐欺</text>
+        <text x="559" y="382" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">96条｜取消し</text>
+      </g>
+
+      
+      <g>
+        <rect x="636" y="340" width="104" height="52" rx="6" fill="#9f1239" stroke="#e11d48" stroke-width="2"/>
+        <text x="688" y="363" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">強迫</text>
+        <text x="688" y="382" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">96条｜取消し</text>
+      </g>
+
+      
+      <rect x="20" y="412" width="740" height="40" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="390" y="436" text-anchor="middle" font-size="12" fill="#9f1239">取消権の期間制限：追認できる時から5年 ／ 行為の時から20年（民法126条）</text>
+    </svg>
+  </div>
+
+  <p>上図は意思表示の瑕疵の全体構造を示しています。「意思の不存在」は表意者が真意と異なることを認識しているか否かに関わらず、真意と表示が食い違う類型です。心裡留保は表意者自身が知りながら行う場合、虚偽表示は相手方と共謀する場合、錯誤は表意者が気づかず勘違いしている場合です。「瑕疵ある意思」では意思と表示は一致しますが、その意思形成が外部の不正な干渉（騙す・脅す）によって歪められています。原則的効力の相違（有効・無効・取消し）はこれらの類型の性質から論理的に導かれます。</p>
+
+  <h3>図2：第三者保護要件の比較図</h3>
+  <div class="diagram-wrap">
+    
+    <svg width="100%" viewBox="0 0 800 330" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr-s2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-d2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      
+      <line x1="108" y1="88" x2="104" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-s2)"/>
+      <line x1="270" y1="88" x2="248" y2="180" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-s2)"/>
+      <line x1="424" y1="88" x2="392" y2="180" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-d2)"/>
+      <line x1="562" y1="88" x2="536" y2="180" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-d2)"/>
+      <line x1="700" y1="88" x2="680" y2="180" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-d2)"/>
+
+      
+      <g>
+        <rect x="40" y="30" width="136" height="58" rx="6" fill="#ea580c"/>
+        <text x="108" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">心裡留保</text>
+        <text x="108" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">93条</text>
+      </g>
+      <g>
+        <rect x="194" y="30" width="152" height="58" rx="6" fill="#ea580c"/>
+        <text x="270" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">通謀虚偽表示</text>
+        <text x="270" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">94条</text>
+      </g>
+      <g>
+        <rect x="364" y="30" width="120" height="58" rx="6" fill="#ea580c"/>
+        <text x="424" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">錯誤</text>
+        <text x="424" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">95条</text>
+      </g>
+      <g>
+        <rect x="502" y="30" width="120" height="58" rx="6" fill="#9f1239"/>
+        <text x="562" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">詐欺</text>
+        <text x="562" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">96条</text>
+      </g>
+      <g>
+        <rect x="640" y="30" width="120" height="58" rx="6" fill="#9f1239"/>
+        <text x="700" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">強迫</text>
+        <text x="700" y="77" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">96条</text>
+      </g>
+
+      
+      <g>
+        <rect x="40" y="188" width="128" height="52" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="104" y="210" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">善意のみ対抗不可</text>
+        <text x="104" y="230" text-anchor="middle" fill="#4b5563" font-size="12">（無過失不要）</text>
+      </g>
+      <g>
+        <rect x="184" y="188" width="128" height="52" rx="6" fill="#ffffff" stroke="#2563eb" stroke-width="2"/>
+        <text x="248" y="210" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">善意のみ対抗不可</text>
+        <text x="248" y="230" text-anchor="middle" fill="#4b5563" font-size="12">（無過失不要）</text>
+      </g>
+      <g>
+        <rect x="328" y="188" width="128" height="52" rx="6" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+        <text x="392" y="210" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">善意無過失</text>
+        <text x="392" y="230" text-anchor="middle" fill="#7c2d12" font-size="12">対抗不可（95条4項）</text>
+      </g>
+      <g>
+        <rect x="472" y="188" width="128" height="52" rx="6" fill="#ffffff" stroke="#ea580c" stroke-width="2"/>
+        <text x="536" y="210" text-anchor="middle" fill="#7c2d12" font-size="13" font-weight="700">善意無過失</text>
+        <text x="536" y="230" text-anchor="middle" fill="#7c2d12" font-size="12">対抗不可（96条3項）</text>
+      </g>
+      <g>
+        <rect x="616" y="188" width="128" height="52" rx="6" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
+        <text x="680" y="210" text-anchor="middle" fill="#9f1239" font-size="13" font-weight="700">第三者保護なし</text>
+        <text x="680" y="230" text-anchor="middle" fill="#9f1239" font-size="12">善意でも対抗可</text>
+      </g>
+
+      
+      <rect x="20" y="260" width="760" height="40" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="400" y="284" text-anchor="middle" font-size="12" fill="#7c2d12">心裡留保・虚偽表示：善意のみ（無過失不要）  ／  錯誤・詐欺：善意無過失（令和2年改正）  ／  強迫：第三者保護規定なし</text>
+    </svg>
+  </div>
+
+  <p>図2は第三者保護要件の違いを一覧で示しています。重要なポイントは三段階の保護水準です。心裡留保・通謀虚偽表示では善意のみで第三者が保護されますが、錯誤・詐欺では令和2年改正により「善意かつ無過失」が必要になりました。これは、意思の不存在の場合より瑕疵ある意思の場合のほうが表意者の保護が重要であるという考慮が背景にあります。そして強迫については第三者保護規定が一切なく、表意者は善意の第三者にも取消しを主張できる点が際立っています。</p>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>表1：意思表示の瑕疵 5類型 比較一覧</h3>
+  <div style="overflow-x:auto;">
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">心裡留保</th>
+        <th class="col--b">通謀虚偽表示</th>
+        <th class="col--c">錯誤</th>
+        <th class="col--a">詐欺</th>
+        <th class="col--b">強迫</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>根拠条文</td>
+        <td class="col--a"><strong class="em-a">93条</strong></td>
+        <td class="col--b"><strong class="em-b">94条</strong></td>
+        <td class="col--c"><strong class="em-c">95条</strong></td>
+        <td class="col--a">96条1項</td>
+        <td class="col--b">96条1項</td>
+      </tr>
+      <tr>
+        <td class="col--label">グループ</td>
+        <td class="col--a"><strong class="em-a">意思の不存在</strong></td>
+        <td class="col--b"><strong class="em-b">意思の不存在</strong></td>
+        <td class="col--c"><strong class="em-c">意思の不存在</strong></td>
+        <td class="col--a">瑕疵ある意思</td>
+        <td class="col--b">瑕疵ある意思</td>
+      </tr>
+      <tr>
+        <td class="col--label">成立要件</td>
+        <td class="col--a">真意と異なる表示を自覚している（<strong class="em-a">単独</strong>）</td>
+        <td class="col--b">相手方と<strong class="em-b">通謀</strong>した虚偽表示</td>
+        <td class="col--c">勘違いによる表示（<strong class="em-c">自覚なし</strong>）</td>
+        <td class="col--a">欺罔行為＋錯誤誘発＋錯誤に基づく意思表示</td>
+        <td class="col--b">畏怖行為＋畏怖＋畏怖に基づく意思表示</td>
+      </tr>
+      <tr>
+        <td class="col--label">原則的効力</td>
+        <td class="col--a"><strong class="em-a">有効</strong></td>
+        <td class="col--b"><strong class="em-b">無効</strong></td>
+        <td class="col--c"><strong class="em-c">取消し</strong>（改正前は無効）</td>
+        <td class="col--a">取消し</td>
+        <td class="col--b">取消し</td>
+      </tr>
+      <tr>
+        <td class="col--label">例外処理</td>
+        <td class="col--a">相手方悪意・有過失なら<strong class="em-a">無効</strong></td>
+        <td class="col--b">なし（常に無効）</td>
+        <td class="col--c">表意者重過失→原則<strong class="em-c">取消不可</strong><br>（相手方悪意・重過失、共通錯誤なら可）</td>
+        <td class="col--a">第三者詐欺→相手方悪意・有過失のみ取消可</td>
+        <td class="col--b">なし（第三者強迫でも常に取消可）</td>
+      </tr>
+      <tr>
+        <td class="col--label">第三者保護</td>
+        <td class="col--a"><strong class="em-a">善意</strong>（無過失不要）→対抗不可</td>
+        <td class="col--b"><strong class="em-b">善意</strong>（無過失不要）→対抗不可</td>
+        <td class="col--c"><strong class="em-c">善意無過失</strong>→対抗不可（改正で追加）</td>
+        <td class="col--a"><strong>善意無過失</strong>→対抗不可（改正前は善意のみ）</td>
+        <td class="col--b"><strong>規定なし</strong>→善意でも対抗可</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>表2：錯誤の類型比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">表示の錯誤（1号）</th>
+        <th class="col--b">動機の錯誤（2号）</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">条文</td>
+        <td class="col--a"><strong class="em-a">95条1項1号</strong></td>
+        <td class="col--b"><strong class="em-b">95条1項2号・2項</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">内容</td>
+        <td class="col--a">意思表示に対応する意思を欠く錯誤（意思と表示の食い違い）</td>
+        <td class="col--b">法律行為の基礎とした事情についての認識が真実に反する錯誤（動機の勘違い）</td>
+      </tr>
+      <tr>
+        <td class="col--label">具体例</td>
+        <td class="col--a">「甲土地を買う」と言うつもりが<strong class="em-a">「乙土地を買う」と言ってしまった</strong></td>
+        <td class="col--b">「新駅ができる」と信じて土地を購入したが<strong class="em-b">計画が存在しなかった</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">追加要件</td>
+        <td class="col--a">なし（重要性要件のみ）</td>
+        <td class="col--b"><strong class="em-b">動機が法律行為の基礎とされていることが「表示」されていること</strong>（明示・黙示を問わない）</td>
+      </tr>
+      <tr>
+        <td class="col--label">改正前の扱い</td>
+        <td class="col--a">要素の錯誤として無効</td>
+        <td class="col--b">原則「錯誤」に当たらず。動機が表示された場合のみ例外的に無効（判例法理）</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">試験で迷いやすいポイント</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">①「無効」vs「取消し」の混同：</strong>心裡留保（例外）と通謀虚偽表示は「無効」、錯誤・詐欺・強迫は「取消し」です。改正前の錯誤が無効であったことと混同しないよう注意が必要です。</p>
+      <p><strong class="em-c">②第三者保護の「善意」vs「善意無過失」：</strong>心裡留保と通謀虚偽表示は「善意のみ」、錯誤と詐欺は「善意かつ無過失」です。強迫は「保護規定なし」です。令和2年改正で錯誤・詐欺が「善意無過失」に変わったことを確実に押さえましょう。</p>
+      <p><strong class="em-c">③第三者詐欺の相手方要件：</strong>改正前は「悪意」のみ、改正後は「悪意または有過失」で取消可能です。この変更はよく出題されます。</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法93条（心裡留保）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第93条　意思表示は、表意者がその真意ではないことを知ってしたときであっても、そのためにその効力を妨げられない。ただし、相手方がその意思表示が表意者の真意ではないことを知り、又は知ることができたときは、その意思表示は、無効とする。<br>
+        ２　前項ただし書の規定による意思表示の無効は、善意の第三者に対抗することができない。
+      </blockquote>
+      <p><strong class="em-a">①本文（原則有効）：</strong>表意者が真意でないことを「知ってした」というのが心裡留保の核心です。知りながら意思表示した以上、その表示を信頼した相手方を保護するのが妥当であり、原則として有効とされます。</p>
+      <p><strong class="em-a">②ただし書（例外無効）：</strong>相手方が「知り（悪意）または知ることができた（有過失）」場合は無効になります。保護に値しない相手方まで守る必要はないからです。「知ることができた」という有過失を含む点に注意が必要です。</p>
+      <p><strong class="em-a">③2項（第三者保護）：</strong>ただし書により意思表示が無効となる場合でも、善意の第三者（無過失不要）には無効を対抗できません。第三者の保護要件が「善意のみ」である点は、錯誤・詐欺の「善意無過失」と比較しながら理解することが重要です。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法94条（虚偽表示）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第94条　相手方と通じてした虚偽の意思表示は、無効とする。<br>
+        ２　前項の規定による意思表示の無効は、善意の第三者に対抗することができない。
+      </blockquote>
+      <p><strong class="em-a">①1項（当事者間の無効）：</strong>「相手方と通じてした」という要件（通謀）が重要です。両当事者とも真意でないことを知っているため、法律行為を有効とする根拠がなく、当然に無効となります。</p>
+      <p><strong class="em-a">②2項（善意の第三者保護）：</strong>虚偽の外観（例えば他人名義の登記）を信頼して取引をした善意の第三者を保護します。これは権利外観法理の典型的な現れです。第三者が保護されるための要件は「善意」のみで足り、無過失は不要です（判例・通説）。また、第三者が対抗要件（不動産なら登記）を備えることも不要とするのが判例（最判昭44.5.27）です。</p>
+      <p><strong class="em-a">③94条2項の類推適用：</strong>条文は通謀虚偽表示を前提としていますが、判例は、真の権利者に帰責性がある場合（権利者が虚偽の外観の作出を承認・放置した等）には、通謀がなくても94条2項を類推適用して善意（または善意無過失）の第三者を保護します。類推適用の要件は①虚偽の外観の存在、②権利者の帰責性、③第三者の信頼（善意）の3つです。帰責性の程度によって第三者の主観的要件（善意のみか善意無過失か）が変わります。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法95条（錯誤）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第95条　意思表示は、次に掲げる錯誤に基づくものであって、その錯誤が法律行為の目的及び取引上の社会通念に照らして重要なものであるときは、取り消すことができる。<br>
+        　一　意思表示に対応する意思を欠く錯誤<br>
+        　二　表意者が法律行為の基礎とした事情についてのその認識が真実に反する錯誤<br>
+        ２　前項第二号の規定による意思表示の取消しは、その事情が法律行為の基礎とされていることが表示されていたときに限り、することができる。<br>
+        ３　錯誤が表意者の重大な過失によるものであった場合には、次に掲げる場合を除き、第一項の規定による意思表示の取消しをすることができない。<br>
+        　一　相手方が表意者に錯誤があることを知り、又は重大な過失によって知らなかったとき。<br>
+        　二　相手方が表意者と同一の錯誤に陥っていたとき。<br>
+        ４　第一項の規定による意思表示の取消しは、善意でかつ過失がない第三者に対抗することができない。
+      </blockquote>
+      <p><strong class="em-a">①1項（錯誤の要件）：</strong>「重要なもの」という要件が取消しの前提です。重要性の判断基準は「法律行為の目的と取引上の社会通念」であり、些細な勘違いは保護されません。表示の錯誤（1号）と動機の錯誤（2号）の二類型があります。</p>
+      <p><strong class="em-a">②2項（動機の錯誤の追加要件）：</strong>動機の錯誤の場合は、動機が「法律行為の基礎とされていることが表示」されている必要があります。表示は明示でも黙示でも構いません。黙示の表示とは、明確に口にしなくても、取引の経緯から相手方が当然に動機を理解できる場合です。</p>
+      <p><strong class="em-a">③3項（重大な過失による制限）：</strong>表意者に重大な過失（重過失）がある場合、原則として取消し不可です。ただし例外として、①相手方が錯誤を知っていたか重過失で知らなかった場合、②共通錯誤（相手方も同じ錯誤に陥っていた）の場合には、表意者の重過失があっても取消しが認められます。</p>
+      <p><strong class="em-a">④4項（第三者保護）：</strong>令和2年改正で明文化された規定です。善意無過失の第三者には取消しを対抗できません。改正前は規定がなく、類推解釈等で処理されていました。</p>
+    </div>
+  </div>
+
+  
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法96条（詐欺又は強迫）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第96条　詐欺又は強迫による意思表示は、取り消すことができる。<br>
+        ２　相手方に対する意思表示について第三者が詐欺を行った場合においては、相手方がその事実を知り、又は知ることができたときに限り、その意思表示を取り消すことができる。<br>
+        ３　前二項の規定による詐欺による意思表示の取消しは、善意でかつ過失がない第三者に対抗することができない。
+      </blockquote>
+      <p><strong class="em-a">①1項（詐欺・強迫の取消し）：</strong>詐欺も強迫も同一条文で規定されていますが、実際の効果は大きく異なります。1項は共通のルールで、いずれも取消しが可能です。</p>
+      <p><strong class="em-a">②2項（第三者詐欺）：</strong>令和2年改正で「知ることができたとき」（有過失）が追加されました。改正前は「知っていたとき」（悪意）のみでした。第三者詐欺は詐欺の一類型で、意思表示の相手方以外の者（第三者）が詐欺を行う場合です（例：Aが第三者Cに騙されてBとの契約をした場合）。この場合、相手方Bが詐欺の事実を知り又は知ることができた（悪意・有過失）ときに限り、AはBとの契約を取り消せます。</p>
+      <p><strong class="em-a">③3項（詐欺の第三者保護・強迫には適用なし）：</strong>注意すべき点は、この条文が「詐欺による意思表示の取消し」にのみ適用され、<strong class="em-a">強迫には適用されない</strong>ことです。強迫の取消しについては第三者保護規定がなく、どんな善意の第三者に対しても取消しを主張できます。また令和2年改正前は「善意の第三者」（無過失不要）でしたが、改正後は「善意かつ無過失の第三者」に改められました。</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和44年5月27日　民集23巻6号998頁</div>
+      <div class="case-card__title">通謀虚偽表示と善意の第三者（対抗要件不要）（94条2項と登記）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法94条2項</span>
+        <span class="badge badge--law">登記不要</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>AとBが通謀してA所有の不動産をBに仮装譲渡し、所有権移転登記をBに移した（A→B）。その後Bがこの不動産を事情を知らない善意のCに売却したが（B→C）、Cは登記を取得しないまま（登記はBのまま）であった。AがCに対して所有権に基づく明渡し等を請求した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法94条2項の善意の第三者として保護されるためには、<strong class="em-a">不動産の対抗要件（登記）を備えることは不要</strong>であると判断した。その理由として、94条2項は権利外観法理に基づき、虚偽の外観を作り出した者（通謀した者）が、その外観を信頼した善意の第三者に対して無効を主張することを禁止する規定であり、真の権利者（A）と善意の第三者（C）は対抗関係に立つ当事者ではなく177条の対抗問題は生じない、と述べた。したがって善意のCは登記なしにAに対して所有権を主張できる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は行政書士試験で繰り返し出題される最頻出判例の一つです。「94条2項の保護を受けるために第三者は登記を備える必要があるか」という論点に対して「不要」と明確に答えます。なぜ不要かという理由（対抗関係に立たないため）まで理解しておくことが重要です。また、通謀虚偽表示でAが「善意の第三者Cに登記を対抗できない」という場合、CはAに登記なしで対抗できるが、Cが登記を取得した場合に真の権利者からの別の譲受人Dとの間では対抗関係が生じる（CとDは177条で対抗関係）という点も押さえておく必要があります。</p>
+    </div>
+  </div>
+
+  
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和45年7月24日　民集24巻7号1116頁</div>
+      <div class="case-card__title">通謀虚偽表示と善意の転得者（悪意の中間者からの転得）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法94条2項</span>
+        <span class="badge badge--law">転得者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>AとBが通謀して仮装売買を行い（A→B仮装）、BからCに転売されたが（B→C）、このCは通謀の事実を知っていた（悪意）。さらにCからDに転売され（C→D）、このDはAB間の通謀について善意であった。AはDに対して虚偽表示の無効を主張して所有権の確認を求めた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法94条2項の「第三者」とは、虚偽表示の当事者またはその一般承継人以外の者であって、その表示の目的につき<strong class="em-a">法律上利害関係を有するに至った者</strong>をいい、虚偽表示の相手方（B）と取引関係に立ったC（直接の第三者）が悪意であっても、<strong class="em-a">Cからの転得者Dが善意であれば、Dは94条2項の善意の第三者にあたる</strong>と判示した。通謀虚偽表示の当事者は、善意の第三者が出現した時点で無効を対抗できなくなり、その後の法律関係は確定的に成立することになるためである。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は「悪意の中間者からの転得者の保護」という論点を処理したものです。試験では「悪意のCを経由してDに転売された場合、DがAに対抗できるか」という形で出題されます。判例によれば<strong class="em-a">DがAB間の虚偽表示について善意であれば保護される</strong>（悪意のCを通じて取得した事実は関係ない）が答えです。なお、Cのように直接の第三者が悪意であればCは保護されません。この「絶対的構成」（善意の第三者が出現すれば法律関係が確定する）が採用されています。</p>
+    </div>
+  </div>
+
+  
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和45年9月22日　民集24巻10号1424頁</div>
+      <div class="case-card__title">94条2項の類推適用（虚偽の外観放置の場合）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法94条2項類推</span>
+        <span class="badge badge--law">権利外観法理</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>A所有の不動産について、AとBの間に何らかの事情でB名義の登記がなされた（通謀はないが、Aは知りながら放置していた）。BがこのB名義の登記を利用してCに不動産を売却した。AはCに対して所有権に基づき明渡しを求めた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、通謀による虚偽表示がなくても、不動産の所有者（A）が<strong class="em-a">自己の意思に基づいて他人名義の登記の作出に関与した場合や、知りながら放置した場合</strong>には、Aに虚偽の外観の作出・維持について帰責性が認められるとして、<strong class="em-a">94条2項を類推適用</strong>し、虚偽の外観を信頼して取引をした善意のCを保護した。真の権利者の犠牲のもとで外観を信頼した者を保護するという権利外観法理は、通謀があるか否かに関わらず機能するというのが判旨の核心です。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は「94条2項の類推適用」という論点の代表例です。本来94条2項は「相手方と通じてした虚偽の意思表示」の場合を直接適用対象としていますが、通謀がなくても権利者の帰責性がある場合に類推適用されます。行政書士試験では、真の権利者（A）に帰責性がある場合の第三者保護について問われます。帰責性の程度が大きいほど（例えば積極的に虚偽登記を承認した場合）第三者は善意のみで保護され、帰責性が小さいほど（例えば過失で放置した場合）第三者に無過失まで要求されることがある点を理解しておくことが重要です。</p>
+    </div>
+  </div>
+
+  
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和40年9月10日　民集19巻6号1512頁</div>
+      <div class="case-card__title">錯誤と取消権者（第三者は原則として取消しを主張できない）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">民法95条（改正前）</span>
+        <span class="badge badge--law">取消権者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>表意者Aが錯誤を犯して不動産を安値でBに売却した。Aの債権者Cは、AB間の売買が無効（当時の規定では錯誤は「無効」）であるとして、代位による無効主張によってAの不動産を保全しようとした（Aは錯誤の無効を主張する意思がなかった）。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、改正前民法95条の錯誤無効の規定は<strong class="em-a">表意者を保護するための規定</strong>であり、表意者自身が無効を主張する意思を有しない場合、債権者等の第三者は原則として錯誤無効を主張することができないと判示した。ただし例外として、①第三者に債権保全の必要性があり（表意者が無資力）、かつ②表意者が錯誤を認めているときは、第三者からの無効主張が認められるとした。</p>
+      <h4>試験上の意義</h4>
+      <p>現行法（令和2年改正後）では、錯誤は「無効」から「取消し」に変更されたため、条文上は取消権者が明確に限定されました（120条2項）。本判例は改正前のものですが、制度の趣旨（錯誤は表意者保護の制度）を理解する上で有益です。現行法のもとでも、錯誤取消権は表意者（及びその代理人・承継人）のみが有し、相手方は取消しを主張できないという点が試験で問われます。</p>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ① 原則効力の正確な整理</span>
+    </div>
+    <div class="box__bd">
+      <p>5類型の原則的効力（有効・無効・取消し）を正確に覚えることが出発点です。</p>
+      <ul>
+        <li><strong class="em-c">心裡留保 → 有効</strong>（ただし相手方悪意・有過失なら無効）</li>
+        <li><strong class="em-c">通謀虚偽表示 → 無効</strong>（例外なし）</li>
+        <li><strong class="em-c">錯誤 → 取消し</strong>（改正後。改正前は「無効」）</li>
+        <li><strong class="em-c">詐欺 → 取消し</strong></li>
+        <li><strong class="em-c">強迫 → 取消し</strong></li>
+      </ul>
+      <p>誤答パターン：錯誤を「無効」とする（改正前の知識の混入）、心裡留保を「取消し」とする（有効が原則）。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ② 第三者保護の三段階</span>
+    </div>
+    <div class="box__bd">
+      <p>第三者保護の要件は3段階に分類して記憶します。</p>
+      <ul>
+        <li><strong class="em-c">心裡留保・通謀虚偽表示 → 第三者は「善意」のみで保護</strong>（無過失不要）</li>
+        <li><strong class="em-c">錯誤・詐欺 → 第三者は「善意かつ無過失」で保護</strong>（令和2年改正で統一）</li>
+        <li><strong class="em-c">強迫 → 第三者保護規定なし</strong>（善意の第三者にも対抗可）</li>
+      </ul>
+      <p>誤答パターン：詐欺の第三者を「善意のみ」とする（改正前の規定）、強迫に第三者保護規定があると誤解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ③ 動機の錯誤の要件</span>
+    </div>
+    <div class="box__bd">
+      <p>動機の錯誤（95条1項2号）は、追加要件として「動機が表示されていること」が必要です（95条2項）。試験では「表示されていなければ取消し不可」という点が問われます。</p>
+      <p>模範的解答例：「表意者Aが甲土地の近くに新駅が建設されると誤信して甲土地を購入した場合、この誤信が法律行為の基礎とされていることが相手方Bに表示されていたときに限り、Aは95条1項2号の錯誤を理由に取り消すことができる。また、Aに重大な過失がある場合は原則取消し不可だが、Bが悪意または重大な過失の場合はこの限りでない。」</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ④ 詐欺と強迫の第三者保護の相違</span>
+    </div>
+    <div class="box__bd">
+      <p>詐欺と強迫は同じ96条で規定されていますが、第三者保護については全く異なります。</p>
+      <ul>
+        <li>詐欺：善意無過失の第三者には取消しを対抗できない（96条3項）</li>
+        <li>強迫：<strong class="em-c">第三者保護規定がない</strong>→善意の第三者にも対抗できる</li>
+      </ul>
+      <p>理由：強迫は本人の意思が完全に抑圧されているため、詐欺よりも表意者保護の必要性が高い。詐欺の被害者は騙されたという点でわずかに帰責性があるが、強迫の被害者には帰責性がほぼない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">令和2年改正の重要変更点まとめ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong class="warn">①錯誤：無効→取消し</strong>（95条）</li>
+        <li><strong class="warn">②動機の錯誤の明文化</strong>（95条1項2号）</li>
+        <li><strong class="warn">③錯誤の第三者保護明文化：善意無過失</strong>（95条4項）</li>
+        <li><strong class="warn">④第三者詐欺の要件拡張：悪意→悪意または有過失</strong>（96条2項）</li>
+        <li><strong class="warn">⑤詐欺の第三者保護：善意のみ→善意無過失</strong>（96条3項）</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p>意思表示の瑕疵は民法の他の分野と密接に関係しています。<strong><mark class="kw">代理</mark></strong>との関係では、代理人が詐欺・強迫を受けた場合の処理（100条・101条）が問題になります。<strong><mark class="kw">無効と取消し</mark></strong>（民法8節）との関係では、無効行為の追認不可の原則や、錯誤・詐欺・強迫の取消後の原状回復（121条の2）が問われます。また、<strong><mark class="kw">物権変動</mark></strong>（民法11節）との関係では、取消前・取消後の第三者保護と177条（登記の対抗要件）の関係が問題になります。錯誤・詐欺・強迫の「取消前の第三者」は各条文で保護されますが、「取消後の第三者」は177条の問題となり、対抗要件（登記等）が必要になります。</p>
+</section>
+
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行 民法改正の経緯と背景</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年成立・令和2年施行の民法（債権法）改正において、意思表示に関する規定は大幅に見直されました。改正前の95条（錯誤）は「法律行為の要素に錯誤があったときは、無効とする」という規定でしたが、判例は「誰でも主張できる」はずの無効について「表意者のみが主張できる」と解釈しており、条文と判例の乖離が長年指摘されていました。改正により、この判例法理が明文化され、錯誤は「取消し」に改められました。</p>
+      <p>また、動機の錯誤も判例が認めていたものの明文規定がなく、改正でこれを明文化しました（95条1項2号・2項）。詐欺の第三者保護についても、改正前は「善意」のみで足りるとされていましたが、詐欺の被害者を通謀虚偽表示の当事者よりも手厚く保護するという観点から「善意無過失」に引き上げられました。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">効率的な整理・学習方法</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>三層構造での理解：</strong>各類型について「①当事者間の原則的効力」「②例外処理（相手方の主観による変化）」「③第三者保護の要件」という三層で整理すると体系的に理解しやすくなります。それぞれの層で「なぜそうなるか（制度趣旨）」から論理的に導くと記憶が定着します。</p>
+      <p><strong>比較軸の設定：</strong>5類型を一覧表で横断的に比較することが効果的です。特に「第三者保護の要件」は改正前後で変化しているため、改正前後を対比しながら整理することが重要です。「善意のみ」か「善意無過失」か「保護なし」という3パターンを確実に押さえましょう。</p>
+      <p><strong>判例学習の重点：</strong>本単元の判例は94条2項の解釈問題（善意の第三者の範囲・登記の要否・転得者・類推適用）が中心です。各判例について「何が争点だったか」「どう判断されたか」「その理由は何か」という構造で学習すると応用力がつきます。</p>
+      <p><strong>記述式対策：</strong>行政書士試験の記述式では、具体的な事例（A・B・Cが登場する設定）を読んで、該当する条文・要件・効果を正確に記述する問題が出題されます。特に通謀虚偽表示・錯誤・詐欺については、第三者が善意か悪意か、有過失か無過失かによって結論が変わるため、段階的に丁寧に検討する習慣をつけておくことが重要です。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">実務・身分行為への適用についての注意</span>
+    </div>
+    <div class="box__bd">
+      <p>心裡留保や通謀虚偽表示の規定は、<strong class="warn">婚姻・養子縁組などの身分行為（家族法）には原則として適用されません</strong>。身分行為は当事者の真意が尊重されるため、当事者の意思に関わりなく常に無効とされます（742条1号：婚姻の無効事由、802条1号：養子縁組の無効事由）。例えば、便宜上の婚姻（通謀虚偽表示としての婚姻）は常に無効です。一方、相続放棄については、家庭裁判所への申述を要する手続的行為ですが私法上の財産的行為に類する性格も持つとして、錯誤の適用が認められています（最判昭40.5.27）。このような身分行為と財産行為の違いについても注意が必要です。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+

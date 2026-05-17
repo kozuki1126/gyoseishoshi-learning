@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物権変動 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">物権変動</h1>
+  <p class="page-title-block__sub">意思主義・不動産登記・動産引渡し・即時取得を横断して整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法176条</span>
+    <span class="badge badge--info">民法177条</span>
+    <span class="badge badge--info">民法178条</span>
+    <span class="badge badge--info">民法192条</span>
+    <span class="badge badge--info">背信的悪意者</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">物権変動</mark></strong>とは、所有権・抵当権・地上権などの物権が発生し、移転し、変更し、消滅することをいう。売買契約で土地を買った、動産を譲り受けた、抵当権を設定した、契約が解除されて所有権が戻った、といった場面が典型である。行政書士試験では、単に「契約すれば所有権が移る」と覚えるだけでは足りない。誰との関係で権利を主張できるか、登記や引渡しがないと負ける相手は誰か、相手が悪意でも保護されるのか、動産では無権利者から買っても権利取得できるのか、という対外的な優劣判断が中心になる。</p>
+
+  <p>民法は、<strong><mark class="kw">物権の設定及び移転</mark></strong>は当事者の意思表示だけで効力を生ずると定める（176条）。これを<strong><mark class="kw">意思主義</mark></strong>という。たとえばAがBに土地を売れば、当事者間では原則として売買契約だけで所有権がBに移る。しかし、Bが登記をしない間にAが同じ土地をCにも売り、Cが登記を先に備えた場合、BはCに所有権取得を主張できない。ここで働くのが<strong><mark class="kw">対抗要件</mark></strong>である。不動産では登記、動産では引渡しが対抗要件となる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">実生活でのイメージ</span>
+    </div>
+    <div class="box__bd">
+      <p>中古住宅を買う場面で考えると分かりやすい。売買契約を結び、代金を払ったとしても、登記名義を移さないまま放置していると、売主が別の買主に同じ不動産を売り、その別買主が先に登記を備える危険がある。民法177条は「本当は先に買ったのは誰か」だけでなく、「第三者から見て権利関係を公示したのは誰か」を重視する。動産では登記制度がないため、引渡しという外形が対抗要件になる。さらに、動産取引では占有を信頼した者を保護するため、一定要件のもとで<strong><mark class="kw">即時取得</mark></strong>が認められる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">意思主義</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">意思主義</mark></strong>とは、物権の設定・移転が、登記や引渡しを待たず、当事者の意思表示だけで効力を生ずるという考え方である。民法176条はこの原則を採用している。売買契約が成立すれば、当事者間では所有権は買主に移転する。これは、物権変動に特別な形式を要求しないことで取引を簡便にする制度である。しかし、意思表示だけでは第三者に権利変動が見えない。そこで民法は、当事者間の効力発生と第三者に対する主張可能性を分け、不動産では177条の登記、動産では178条の引渡しを対抗要件とした。試験では「登記がなければ所有権は移転しない」という選択肢が誤りである点がよく問われる。登記がなくても当事者間では移転するが、第三者に対抗できない場合がある、という二段階で理解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">対抗要件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">対抗要件</mark></strong>とは、すでに発生した権利変動を第三者に主張するために必要な公示手段をいう。不動産物権変動では登記、動産物権譲渡では引渡しが代表例である。対抗要件は、権利の発生要件ではない。権利は当事者間では意思表示によって移転するが、第三者との優劣を決めるために対抗要件が必要になる。制度趣旨は、外部から見えない権利変動を公示し、取引安全と権利関係の明確化を図ることにある。典型問題は二重譲渡であり、AがBに土地を売った後、Aが同じ土地をCに売った場合、BとCの優劣は原則として登記の先後で決まる。試験では、第三者に当たる者と当たらない者の区別、悪意者でも原則として第三者に含まれること、背信的悪意者は例外的に排除されることが頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">民法177条の第三者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法177条の第三者</mark></strong>とは、判例上、当事者およびその包括承継人以外の者で、登記の欠缺を主張する正当な利益を有する者をいう。ここでいう第三者は、単に事実上関係する者すべてではない。二重譲受人、差押債権者、抵当権者などは、登記の有無によって自分の権利の優劣が左右されるため第三者に当たり得る。他方、不法占拠者のように、登記がなくても権利者から排除されるべき者は、登記の欠缺を主張する正当な利益を持たない。重要なのは、第三者が物権変動を知っていた、つまり悪意であっても、原則として177条の第三者から排除されない点である。登記制度は善意者だけを保護する制度ではなく、権利関係を公示した者を優先する制度だからである。ただし、単なる悪意を超えて信義則上保護に値しない事情がある場合には、背信的悪意者として排除される。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">背信的悪意者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">背信的悪意者</mark></strong>とは、物権変動の事実を知っているだけでなく、登記の欠缺を主張することが信義に反すると評価される特段の事情を有する者をいう。単なる悪意者は177条の第三者に含まれる。たとえば、AからBへの売買を知りながら、CがAから同じ不動産を買って登記しただけでは、原則としてCは第三者として保護される。しかし、CがBを害する目的で買い受けた、Bの登記未了につけ込んで不当な利益を得ようとした、Bの占有や取引経緯を利用して信義に反する態様で権利取得した、という事情がある場合は別である。判例は、このような者は登記の欠缺を主張する正当な利益を有せず、民法177条の第三者に当たらないとする。試験では「悪意者は常に第三者に当たらない」という誤答と、「背信的悪意者でも登記を備えれば常に勝つ」という誤答の両方に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">即時取得</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">即時取得</mark></strong>とは、取引行為によって、平穏・公然に動産の占有を始めた者が、善意無過失であるときに、即時にその動産上の権利を取得する制度である。民法192条が定める。前主が無権利者であっても、動産の占有という外観を信頼して取引した者を保護する制度である。制度趣旨は、動産取引では権利者を逐一確認することが困難であり、占有を信頼して取引するのが通常であるため、取引安全を優先する点にある。即時取得の対象は動産であり、不動産には登記に公信力がないため原則として適用されない。要件として、取引行為、有効な占有取得、平穏・公然・善意・無過失が必要である。占有改定による即時取得は、外観上占有状態に変化がないため、判例上否定される。試験では「動産なら常に即時取得できる」「占有改定でも即時取得できる」「盗品・遺失物でも所有者は回復請求できない」といった誤答が出やすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">公示の原則・公信の原則</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">公示の原則</mark></strong>とは、物権変動を第三者が認識できる外形によって示すべきであるという考え方である。不動産では登記、動産では引渡しが公示手段となる。物権は債権と異なり誰に対しても主張され得る強い権利であるため、外部から権利関係を判断できる仕組みが必要になる。これに対し、<strong><mark class="kw">公信の原則</mark></strong>とは、公示された外観を信頼した者に、たとえ外観が真実と違っていても権利取得を認める考え方である。日本民法では、不動産登記には公信力が認められていない。したがって、無権利者が登記名義を持っていても、その登記を信頼して不動産を買った者は、原則として所有権を取得できない。これに対し、動産では民法192条の即時取得により、占有という外観を信頼した善意無過失の取得者が保護される。試験では「登記には公信力がある」とする選択肢は誤りであり、不動産では登記は対抗要件、動産では占有に一定の公信的効果が認められる、と対比して整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 900 430" role="img" aria-label="物権変動の全体構造図">
+      <defs>
+        <marker id="arr-solid-bukken" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed-bukken" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-thin-bukken" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+      <line x1="450" y1="94" x2="450" y2="135" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="210" y1="135" x2="690" y2="135" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="210" y1="135" x2="210" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken)"/>
+      <line x1="450" y1="135" x2="450" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken)"/>
+      <line x1="690" y1="135" x2="690" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken)"/>
+      <polyline points="450,244 450,292 690,292 690,342" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed-bukken)"/>
+      <rect x="500" y="276" width="120" height="22" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="560" y="291" text-anchor="middle" font-size="13" fill="#9f1239">公信力の例外</text>
+      <g>
+        <rect x="320" y="30" width="260" height="64" rx="6" fill="#1d4ed8"/>
+        <text x="450" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">物権変動</text>
+        <text x="450" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">176条：意思表示で効力発生</text>
+      </g>
+      <g>
+        <rect x="90" y="180" width="240" height="64" rx="6" fill="#2563eb"/>
+        <text x="210" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">当事者間効力</text>
+        <text x="210" y="228" text-anchor="middle" font-size="12" fill="#dbeafe">登記・引渡し前でも移転</text>
+      </g>
+      <g>
+        <rect x="330" y="180" width="240" height="64" rx="6" fill="#ea580c"/>
+        <text x="450" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">第三者対抗</text>
+        <text x="450" y="228" text-anchor="middle" font-size="12" fill="#fff7ed">不動産177条・動産178条</text>
+      </g>
+      <g>
+        <rect x="570" y="180" width="240" height="64" rx="6" fill="#ea580c"/>
+        <text x="690" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">公示の違い</text>
+        <text x="690" y="228" text-anchor="middle" font-size="12" fill="#fff7ed">登記・引渡し・占有</text>
+      </g>
+      <g>
+        <rect x="570" y="350" width="240" height="54" rx="6" fill="#e11d48"/>
+        <text x="690" y="373" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">即時取得</text>
+        <text x="690" y="393" text-anchor="middle" font-size="12" fill="#ffe4e6">192条：動産占有への信頼保護</text>
+      </g>
+    </svg>
+  </div>
+
+  <p>この図は、物権変動を「当事者間の効力」と「第三者に対する対抗」に分けて理解することを示している。民法176条は、意思表示だけで物権変動が生じるという当事者間の効力発生を定める。これに対し、177条・178条は、第三者との優劣を決めるための公示手段を定める。不動産は登記、動産は引渡しによって公示されるが、動産では占有に公信的機能を認める即時取得がある点で不動産と大きく異なる。行政書士試験では、この「発生」と「対抗」と「公信力」の三層を混同しないことが重要である。</p>
+
+  <h3>図2：民法177条の第三者性判断フロー</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" role="img" aria-label="民法177条の第三者性判断フロー">
+      <defs>
+        <marker id="arr-solid-bukken2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed-bukken2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="220" y1="136" x2="760" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="220" y1="136" x2="220" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <line x1="490" y1="136" x2="490" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <line x1="760" y1="136" x2="760" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <line x1="220" y1="254" x2="220" y2="356" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <line x1="490" y1="254" x2="490" y2="356" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <line x1="760" y1="254" x2="760" y2="356" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-bukken2)"/>
+      <polyline points="760,424 760,480 490,480 490,526" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed-bukken2)"/>
+      <rect x="676" y="466" width="168" height="22" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="760" y="481" text-anchor="middle" font-size="13" fill="#9f1239">例外的に第三者性否定</text>
+      <g>
+        <rect x="350" y="30" width="280" height="64" rx="6" fill="#1d4ed8"/>
+        <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">登記を欠く権利者の相手方</text>
+        <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">177条：第三者に対抗できるか</text>
+      </g>
+      <g>
+        <rect x="90" y="184" width="260" height="70" rx="6" fill="#2563eb"/>
+        <text x="220" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">正当利益あり</text>
+        <text x="220" y="233" text-anchor="middle" font-size="12" fill="#dbeafe">二重譲受人・差押債権者等</text>
+      </g>
+      <g>
+        <rect x="360" y="184" width="260" height="70" rx="6" fill="#ea580c"/>
+        <text x="490" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">正当利益なし</text>
+        <text x="490" y="233" text-anchor="middle" font-size="12" fill="#fff7ed">不法占有者・無権利者等</text>
+      </g>
+      <g>
+        <rect x="630" y="184" width="260" height="70" rx="6" fill="#e11d48"/>
+        <text x="760" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">背信的悪意者</text>
+        <text x="760" y="233" text-anchor="middle" font-size="12" fill="#ffe4e6">悪意を超える信義則違反</text>
+      </g>
+      <g>
+        <rect x="90" y="364" width="260" height="60" rx="6" fill="#2563eb"/>
+        <text x="220" y="389" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">登記の先後で優劣</text>
+        <text x="220" y="409" text-anchor="middle" font-size="12" fill="#dbeafe">悪意者でも原則保護</text>
+      </g>
+      <g>
+        <rect x="360" y="364" width="260" height="60" rx="6" fill="#ea580c"/>
+        <text x="490" y="389" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">登記なく対抗可能</text>
+        <text x="490" y="409" text-anchor="middle" font-size="12" fill="#fff7ed">相手方は177条の第三者でない</text>
+      </g>
+      <g>
+        <rect x="630" y="364" width="260" height="60" rx="6" fill="#e11d48"/>
+        <text x="760" y="389" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">欠缺主張を遮断</text>
+        <text x="760" y="409" text-anchor="middle" font-size="12" fill="#ffe4e6">信義則上保護しない</text>
+      </g>
+      <g>
+        <rect x="230" y="534" width="520" height="44" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="490" y="561" text-anchor="middle" font-size="13" fill="#9f1239">単なる悪意と背信的悪意を分けることが、177条問題の核心</text>
+      </g>
+    </svg>
+  </div>
+
+  <p>この判断フローは、<strong><mark class="kw">民法177条の第三者</mark></strong>を「当事者以外なら誰でもよい」と考えないための図である。まず、相手方が登記の欠缺を主張する正当な利益を有するかを見る。二重譲受人や差押債権者のように自己の権利保全のため登記の有無を問題にする者は第三者に当たり得るが、不法占有者のように保護すべき取引関係に立たない者は第三者に当たらない。さらに、正当利益がありそうに見える後取得者でも、先取得者の登記未了につけ込んで高値転売を狙うなど信義則に反する事情があれば、<strong><mark class="kw">背信的悪意者</mark></strong>として排除される。試験では、単なる悪意、正当利益の欠如、背信的悪意という三段階を分けて読むことが必要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">不動産物権変動</th>
+        <th class="col--b">動産物権譲渡</th>
+        <th class="col--c">即時取得</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>根拠条文</td>
+        <td class="col--a"><strong class="em-a">民法177条</strong></td>
+        <td class="col--b"><strong class="em-b">民法178条</strong></td>
+        <td class="col--c"><strong class="em-c">民法192条</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>公示方法</td>
+        <td class="col--a">登記</td>
+        <td class="col--b">引渡し</td>
+        <td class="col--c">占有という外観への信頼</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>公信力</td>
+        <td class="col--a">登記に<strong class="em-a">公信力なし</strong>。無権利者名義の登記を信頼しても原則取得不可</td>
+        <td class="col--b">引渡しは対抗要件。権利取得には前主の権限が問題となる</td>
+        <td class="col--c">動産占有への信頼を保護し、無権利者からでも権利取得を認め得る</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>典型問題</td>
+        <td class="col--a">二重譲渡、取消し・解除と第三者、背信的悪意者</td>
+        <td class="col--b">動産二重譲渡、占有改定、指図による占有移転</td>
+        <td class="col--c">善意無過失、占有改定の可否、盗品・遺失物の回復</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>迷いやすいポイントは、不動産の登記と動産の占有を同じように考えてしまう点である。不動産登記は対抗要件であり、公信力はない。したがって、無権利者名義の登記を信じて不動産を買っても、原則として所有権を取得できない。これに対し、動産では占有を信頼した取引安全を重視し、即時取得が認められる。実践的には、まず対象が不動産か動産かを確認し、次に「真の権利者からの承継取得の対抗問題」なのか、「無権利者からの取得を保護する即時取得問題」なのかを分ける。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">判断軸</th>
+        <th class="col--a">通常の第三者</th>
+        <th class="col--b">第三者に当たらない者</th>
+        <th class="col--c">背信的悪意者</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>基本定義</td>
+        <td class="col--a">当事者・包括承継人以外で、登記の欠缺を主張する<strong class="em-a">正当な利益</strong>を有する者</td>
+        <td class="col--b">保護すべき取引関係や法的地位がなく、欠缺主張の<strong class="em-b">正当利益を欠く</strong>者</td>
+        <td class="col--c">正当利益があるように見えても、信義則上欠缺主張を許せない<strong class="em-c">特段の事情</strong>がある者</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>典型例</td>
+        <td class="col--a">二重譲受人、抵当権者、差押債権者</td>
+        <td class="col--b">不法占有者、不法行為者、実質的無権利者</td>
+        <td class="col--c">先取得者の長期占有を知り、登記未了につけ込んで高値転売を狙う後取得者</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>悪意の扱い</td>
+        <td class="col--a">単に知っているだけなら<strong class="em-a">原則保護</strong>される</td>
+        <td class="col--b">善意・悪意以前に正当利益がない</td>
+        <td class="col--c">知っていることに加え、害意・濫用的態様などがあるため<strong class="em-c">排除</strong>される</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>結論</td>
+        <td class="col--a">登記を備えた者が優先する</td>
+        <td class="col--b">未登記権利者も登記なく対抗できる</td>
+        <td class="col--c">登記を備えても欠缺主張が許されない</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>誤答例</td>
+        <td class="col--a">「悪意者は常に第三者ではない」は誤り</td>
+        <td class="col--b">「占有している者は常に第三者」は誤り</td>
+        <td class="col--c">「登記を得た背信的悪意者も必ず勝つ」は誤り</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>この表の実践的な使い方は、相手方の主観だけでなく、相手方の法的地位と行動態様を順に見ることである。第一に、その人は登記の欠缺を主張することで守られるべき権利や利益を持つかを確認する。第二に、単なる悪意にとどまるのか、相手を害する目的や登記未了への不当な便乗があるのかを分ける。第三に、結論として登記の先後で処理するのか、登記なく対抗できる例外なのかを決める。ここを一気に「知っていたから負け」と処理すると、行政書士試験の典型的な誤答に入る。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法176条・177条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百七十六条　物権の設定及び移転は、当事者の意思表示のみによって、その効力を生ずる。<br>第百七十七条　不動産に関する物権の得喪及び変更は、不動産登記法（平成十六年法律第百二十三号）その他の登記に関する法律の定めるところに従いその登記をしなければ、第三者に対抗することができない。</blockquote>
+      <p><strong><mark class="kw">民法176条</mark></strong>は、物権変動の効力発生について意思主義を採用する。売買契約、贈与契約、抵当権設定契約など、当事者の意思表示により物権変動が生じる。<strong><mark class="kw">民法177条</mark></strong>は、不動産物権変動について登記を第三者対抗要件とする。趣旨は、外部から見えない不動産物権変動を登記で公示し、取引安全を確保する点にある。要件は、不動産に関する物権の得喪変更、登記未了、第三者への対抗である。典型場面は二重譲渡、抵当権設定、解除・取消し後の第三者関係である。177条の「第三者」には、登記の欠缺を主張する正当な利益が必要であり、背信的悪意者は含まれない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法178条・192条・193条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百七十八条　動産に関する物権の譲渡は、その動産の引渡しがなければ、第三者に対抗することができない。<br>第百九十二条　取引行為によって、平穏に、かつ、公然と動産の占有を始めた者は、善意であり、かつ、過失がないときは、即時にその動産について行使する権利を取得する。<br>第百九十三条　前条の場合において、占有物が盗品又は遺失物であるときは、被害者又は遺失者は、盗難又は遺失の時から二年間、占有者に対してその物の回復を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法178条</mark></strong>は、動産物権譲渡の対抗要件を引渡しとする。動産には不動産登記のような公示制度がないため、占有の移転が外部への公示手段になる。<strong><mark class="kw">民法192条</mark></strong>は、動産の占有を信頼した者に権利取得を認める即時取得制度である。要件は、取引行為、動産、占有開始、平穏・公然・善意・無過失である。ここでいう占有開始は、外観上占有状態が変化することを要し、占有改定では足りないとするのが判例である。<strong><mark class="kw">民法193条</mark></strong>は盗品・遺失物の特則であり、即時取得が成立し得る場合でも、被害者または遺失者は盗難または遺失の時から2年間回復請求できる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法545条との関係</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百四十五条　当事者の一方がその解除権を行使したときは、各当事者は、その相手方を原状に復させる義務を負う。ただし、第三者の権利を害することはできない。</blockquote>
+      <p><strong><mark class="kw">民法545条1項ただし書</mark></strong>は、解除の遡及効によって第三者の権利を害することはできないと定める。物権変動の単元で重要なのは、解除前の第三者・解除後の第三者と登記の関係である。解除前の第三者は、解除の遡及効から保護され得るが、不動産では登記を備えなければ保護されないとされる。解除後の第三者については、解除による復帰的物権変動と第三者の物権取得が対抗関係に立つため、177条により登記の先後で処理される。試験では、解除前後で理論構成は異なるが、結論として登記が重要になる点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和43年8月2日　昭和42年（オ）第564号　民集22巻8号1571頁</div>
+      <div class="case-card__title">背信的悪意者排除論（民法177条の第三者性）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法177条</span>
+        <span class="badge badge--law">背信的悪意者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>甲は乙から山林を買い受け、所有権取得登記を備えないまま二十三年余りその山林を占有していた。丙は、甲が山林を買い受けて長年占有している事実を知りながら、甲に登記がないことに乗じ、甲へ高値で売りつけて利益を得る目的で乙から同じ山林を買い受け、その登記を経た。争点は、丙が単に先行する物権変動を知っていた悪意者にとどまるのか、それとも登記制度を利用して先取得者を害する<strong><mark class="kw">背信的悪意者</mark></strong>として、<strong><mark class="kw">民法177条の第三者</mark></strong>から排除されるのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法177条の第三者について、単に物権変動を知っている悪意者であるというだけでは第三者性を否定できないという前提に立った。そのうえで、実体上物権変動があった事実を知る者において、その物権変動について登記の欠缺を主張することが信義に反すると認められる事情がある場合には、その者は登記の欠缺を主張する正当な利益を有しないから、民法177条の第三者に当たらないとした。つまり、判例は「悪意者一般排除」ではなく、「背信的悪意者排除」という限定的な法理を採用した。登記制度の形式的安定性を維持しながら、信義則上保護できない濫用的な登記取得者を排除する論理である。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、177条の第三者と背信的悪意者の区別が繰り返し問われる。誤答パターンは、「物権変動を知っていた者は常に177条の第三者に当たらない」「登記を備えた者はどのような事情があっても常に勝つ」という両極である。正しくは、悪意者も原則として第三者に含まれるが、登記の欠缺を主張することが信義に反する特段の事情がある場合に限り排除される。関連条文は177条であり、第三者を「登記の欠缺を主張する正当な利益を有する者」と制限的に理解するための中心判例である。</p>
+      <h4>関連判例・条文</h4>
+      <p>二重譲渡では、単純な悪意の第二譲受人は原則として登記を備えれば勝つ。これに対し、詐害的・害意的な取得、信義則に反する取得態様がある場合は背信的悪意者となる。解除後の第三者との関係でも、177条で登記の先後が問題となるが、背信的悪意者であれば例外的に保護されない。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和33年6月14日　昭和31年（オ）第32号　民集12巻9号1449頁</div>
+      <div class="case-card__title">解除前の第三者と登記（合意解除と民法545条1項ただし書）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法177条</span>
+        <span class="badge badge--law">民法545条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>Aが不動産をBに売却し、BがさらにCへ転売した。その後、AとBが売買契約を合意解除したため、Aは所有権が自分に戻ったとして、Cの権利を否定しようとした。Cは解除前にすでにBから不動産を取得していたが、所有権移転登記を備えていなかった。そこで、解除前に登場した第三者Cが、民法545条1項ただし書の第三者として保護されるために登記を要するかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の売買契約が合意解除された場合、買主から不動産を取得した者であっても、対抗要件としての登記を備えていない者は、原則として民法545条1項ただし書の第三者として保護されないと判断した。解除前の第三者は、解除の遡及効により影響を受けるため第三者保護の問題になるが、不動産物権変動については登記による公示が必要である。したがって、Cは解除前に転得していたとしても、登記を欠く以上、Aに自己の所有権取得を主張できない。判例は、解除前の第三者にも登記を要求することで、解除関係における権利保護と不動産登記制度の公示機能を調整した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、解除と第三者の問題で頻出である。誤答パターンは、「解除前の第三者は545条1項ただし書で当然に保護され、登記は不要」とするものである。正しくは、解除前の第三者も、不動産については登記を備えなければ保護されない。解除後の第三者は177条の対抗関係として処理され、解除前の第三者は545条1項ただし書の第三者保護として論じられるが、試験上はどちらも登記の有無が決定的に重要である。条文横断として、契約解除の効果を学ぶ単元と物権変動の対抗要件を接続する判例である。</p>
+      <h4>関連判例・条文</h4>
+      <p>解除後の第三者については、解除による復帰的物権変動と第三者の物権取得が対抗関係となり、177条で処理される。取消しの場合も、取消前の第三者と取消後の第三者で保護要件が異なるため、意思表示の瑕疵・無効取消しの単元とあわせて整理する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和35年2月11日　昭和32年（オ）第1092号　民集14巻2号168頁</div>
+      <div class="case-card__title">占有改定と即時取得（占有改定では即時取得は成立しない）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法192条</span>
+        <span class="badge badge--law">占有改定</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>動産の取引において、譲渡人が占有を続けたまま、当事者間の合意だけで譲受人のために占有することにする占有改定がされた。譲受人は、譲渡人を権利者と信じて取引したため、民法192条の即時取得により所有権を取得したと主張した。しかし、占有改定では動産の現実の支配状態は外部から見て変化しない。そこで、即時取得に必要な「占有を始めた」といえるか、占有改定による占有取得で足りるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、占有改定による占有取得では、民法192条の即時取得は成立しないと判断した。即時取得は、動産の占有という外観を信頼して取引した者を保護する制度である。ところが、占有改定では、譲渡後も動産は従前と同じく譲渡人の手元に残り、外観上の占有状態に変化がない。これでは、外部から見て新たな占有者が現れたとはいえず、即時取得を認める基礎となる公示的外観が不足する。したがって、即時取得を成立させるためには、現実の引渡し、簡易の引渡し、指図による占有移転など、少なくとも外観上占有の帰属が変化したと評価できる占有取得が必要となる。</p>
+      <h4>試験上の意義</h4>
+      <p>即時取得の最頻出論点である。試験では「占有改定によって占有を取得した場合でも、善意無過失なら即時取得できる」という選択肢がよく出るが、これは誤りである。即時取得は占有の公信的機能を根拠にするため、外観に変化がない占有改定では成立しない。なお、178条の動産譲渡の対抗要件としては占有改定も引渡しに含まれるが、192条の即時取得に必要な占有取得としては足りない。この違いが行政書士試験で特に問われる。</p>
+      <h4>関連判例・条文</h4>
+      <p>民法178条では、引渡しには現実の引渡し、簡易の引渡し、占有改定、指図による占有移転が含まれる。しかし192条の即時取得では、占有改定は否定される。対抗要件としての引渡しと、即時取得の基礎となる占有取得を同一視しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和25年12月19日　昭和24年（オ）第296号　民集4巻12号660頁</div>
+      <div class="case-card__title">不法占有者と民法177条の第三者（家屋明渡請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法177条</span>
+        <span class="badge badge--law">第三者性</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物について所有権移転があったが、取得者はまだ所有権移転登記を備えていなかった。建物を占有していた相手方は、取得者に登記がないことを理由に、明渡しを拒むことができると主張した。ここで問題になったのは、正当な占有権原を失った不法占有者が、未登記の所有権取得者に対し、<strong><mark class="kw">民法177条</mark></strong>の「第三者に対抗することができない」という文言を援用できるかである。単に建物を事実上占有しているだけで、登記制度によって保護される第三者といえるのかが争点となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の不法占有者は<strong><mark class="kw">民法177条の第三者</mark></strong>には当たらないとした。177条が保護するのは、登記による公示を信頼し、または登記の欠缺を主張する正当な利益を有する者である。不法占有者は、権利関係の取引安全を守るために保護すべき地位に立たず、未登記権利者との間で登記の先後による優劣を競う関係にもない。したがって、所有権取得者は、登記を備えていなくても、不法占有者に対して所有権取得を主張し、明渡しを求めることができる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、第三者性の定義を具体的に理解するための基本判例である。行政書士試験では「登記がない以上、所有権取得者は誰に対しても所有権を主張できない」という選択肢が出やすいが、これは誤りである。177条は未登記権利者を絶対的に無権利者扱いする規定ではない。相手方が登記の欠缺を主張する正当な利益を持つかを確認し、不法占有者のように保護に値しない者には登記なく対抗できる、と整理する。</p>
+      <h4>関連判例・条文</h4>
+      <p>背信的悪意者排除論と同じく、中心にあるのは「登記の欠缺を主張する正当な利益」という限定である。不法占有者は初めから正当利益を欠く者であり、背信的悪意者は一応取引関係に入ったように見えても信義則上正当利益を否定される者である。両者を比較すると、177条が形式的な登記先後だけでなく、保護すべき第三者かどうかを前提にしていることが分かる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ1 発生要件と対抗要件を分ける</span></div>
+    <div class="box__bd">
+      <p>民法176条により、物権変動は当事者間では意思表示だけで効力を生ずる。177条・178条は第三者に対抗するための要件であって、権利発生そのものの要件ではない。誤答パターンは「不動産売買では登記をしなければ所有権は移転しない」「動産譲渡では引渡しがなければ当事者間でも所有権が移転しない」というものである。当事者間では移転するが、第三者に勝てないことがある、と区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ2 悪意者と背信的悪意者</span></div>
+    <div class="box__bd">
+      <p>177条は善意者保護規定ではないため、悪意者も原則として第三者に含まれる。もっとも、信義則上登記の欠缺を主張することが許されない者は背信的悪意者として排除される。試験では、単なる悪意と背信性を分ける。知っていたかどうかだけではなく、害意、詐欺的態様、不当な利益取得、先取得者との信頼関係侵害など、信義則違反を基礎づける事情があるかを見る。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ3 即時取得の要件</span></div>
+    <div class="box__bd">
+      <p>即時取得は、動産、取引行為、占有開始、平穏・公然・善意・無過失を要する。前主が無権利者である場面で、占有という外観を信頼した者を保護する制度である。不動産には原則として適用されない。占有改定では即時取得が成立しない点、盗品・遺失物については193条の回復請求がある点、登録自動車など公示制度がある動産では扱いが変わる点に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">横断論点</span></div>
+    <div class="box__bd">
+      <p>物権変動は、意思表示、無効・取消し、契約解除、詐欺・強迫、相続、担保物権と横断する。取消前の第三者と取消後の第三者、解除前の第三者と解除後の第三者では理論構成が異なる。相続では共同相続人と第三者の対抗関係、担保物権では抵当権設定登記の対抗要件が問題になる。行政書士試験では、A・B・Cの事例で時系列を読ませ、誰がいつ登記または引渡しを備えたかを問う形式が多い。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">history</span><span class="box__label">制度趣旨と実務への影響</span></div>
+    <div class="box__bd">
+      <p>日本民法は、物権変動について意思主義を採用しつつ、第三者対抗について公示制度を重視する構造をとる。不動産登記は権利関係を社会に示す制度であるが、登記に公信力は認められていないため、登記名義人が無権利者であれば、そこから買った者は原則として所有権を取得できない。これは真の権利者保護を重視する反面、取引安全には限界がある。そのため、虚偽表示の94条2項類推適用や権利外観法理が別途問題になる。動産では取引頻度が高く、権利確認が困難であるため、占有を信頼した即時取得制度が置かれている。実務では、不動産取引では登記手続の同時履行的処理、動産取引では占有移転の方法と前主の権限確認が重要となる。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span><span class="box__label">学習の整理ポイント</span></div>
+    <div class="box__bd">
+      <p>この単元は、時系列を書いて解くのが最も有効である。まず、AからBへの物権変動がいつ発生したかを176条で確認する。次に、第三者Cがいつ登場し、Cが登記または引渡しを備えたかを見る。さらに、Cが177条の第三者に当たるか、背信的悪意者ではないかを検討する。動産では、178条の対抗要件問題なのか、192条の即時取得問題なのかを区別する。最後に、解除・取消し・相続など別単元の事情がある場合は、それぞれの第三者保護規定と177条の関係を確認する。この順序で読むと、複雑な事例でも結論を安定して導ける。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

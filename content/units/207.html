@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>II. 憲法 - 7.表現の自由（表現の自由の優越的地位、知る権利、報道の自由、検閲の禁止）</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+    <div class="page-title-block">
+        <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 憲法</p>
+        <h1 class="page-title-block__main">表現の自由</h1>
+        <p class="page-title-block__sub">優越的地位・知る権利・報道の自由・検閲禁止を、21条と重要判例から整理する</p>
+        <div class="page-title-block__tags">
+            <span class="badge badge--info">憲法21条</span>
+            <span class="badge badge--info">精神的自由権</span>
+            <span class="badge badge--info">検閲禁止</span>
+            <span class="badge badge--info">報道・取材の自由</span>
+            <span class="badge badge--info">事前抑制</span>
+        </div>
+    </div>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">01</div>
+            <div>
+                <h2>単元の概要</h2>
+                <p class="sec-head__sub">Unit Overview</p>
+            </div>
+        </header>
+
+        <p><strong><mark class="kw">表現の自由</mark></strong>は、憲法上の人権の中でも行政書士試験で繰り返し問われる中核単元です。憲法21条1項は、集会・結社・言論・出版その他一切の表現の自由を保障し、同条2項前段は検閲を禁止しています。単に「言いたいことを言える自由」という日常的理解にとどまらず、国民が政治情報・社会情報を受け取り、批判し、議論し、選挙や住民参加で判断するための制度的基盤として理解する必要があります。</p>
+
+        <p>たとえば、行政機関の政策について新聞が批判記事を書く、住民がSNSで自治体の施策に意見を述べる、出版社が政治家を批判する雑誌を刊行する、報道機関が刑事事件の現場を取材する、といった場面はいずれも表現の自由と関係します。これらの表現は、ときに名誉、プライバシー、刑事裁判の公正、青少年保護、税関での輸入規制など他の利益と衝突します。そのため試験では、「保障されるか」だけでなく「どの程度制約できるか」「制約方法が検閲や事前抑制に当たるか」「事後的な損害賠償や刑罰とどう違うか」が問われます。</p>
+
+        <div class="box box--exam">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">school</span>
+                <span class="box__label">試験上の位置づけ</span>
+            </div>
+            <div class="box__bd">
+                <p>行政書士試験では、憲法の判例問題・正誤問題で、<strong class="em-c">検閲の定義</strong>、<strong class="em-c">事前抑制の原則禁止</strong>、<strong class="em-c">報道の自由と取材の自由の区別</strong>が狙われます。条文知識だけでは対応しにくく、税関検査事件・北方ジャーナル事件・博多駅テレビフィルム提出命令事件の判旨を、どの利益とどの利益を比較衡量した判例なのかまで押さえる必要があります。</p>
+            </div>
+        </div>
+
+        <div class="box box--example">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">lightbulb</span>
+                <span class="box__label">具体例</span>
+            </div>
+            <div class="box__bd">
+                <p>選挙前に、ある雑誌が候補者の過去の言動を批判する記事を掲載しようとしている場面を考えます。候補者側は、名誉を傷つける記事だから発売前に止めたいと考えるかもしれません。しかし、選挙に関する批判は有権者の判断材料になり、民主政に直結します。そのため出版前の差止めは、名誉保護のためであっても、表現が公に出る前に止める点で特に慎重に扱われます。これが北方ジャーナル事件で問われた、<strong class="em-a">事前差止めと表現の自由の緊張関係</strong>です。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">02</div>
+            <div>
+                <h2>重要用語の解説</h2>
+                <p class="sec-head__sub">Key Concepts</p>
+            </div>
+        </header>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">表現の自由</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">表現の自由</mark></strong>とは、思想・意見・情報・感情などを外部に発表し、伝達し、受領する自由をいいます。憲法21条1項は、集会、結社、言論、出版を例示したうえで「その他一切の表現の自由」を保障しているため、新聞・書籍・演説だけでなく、放送、映画、インターネット上の投稿、ビラ配布、デモ行進なども広く問題になります。この自由が重要なのは、個人が自分の考えを形成し、他者と交流し、人格を発展させるために不可欠だからです。また、国民が政治権力を監視し、選挙で判断し、公共問題について議論するためにも不可欠です。したがって表現の自由は、単なる個人的利益ではなく、民主主義社会の意思決定過程を支える基盤として扱われます。試験では、表現活動の内容・方法・場所・時期のどこに制約がかかっているかを見極め、制約の目的と手段の相当性を検討する視点が必要です。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">表現の自由の優越的地位</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">表現の自由の優越的地位</mark></strong>とは、表現の自由が精神的自由権の中心として、経済的自由などと比べて特に重要な保護を受けるという考え方です。理由は、表現の自由が侵害されると、国民が政治的判断を行う前提となる情報流通そのものが損なわれ、民主的な自己統治の仕組みが働きにくくなるからです。また、経済的自由の制約は選挙や議会を通じて是正される余地がありますが、政治的批判や情報流通が抑えられると、その是正過程自体が機能不全に陥ります。そのため、表現内容そのものに着目した規制や、発表前に止める規制は、特に厳格に見られます。ただし、優越的地位は「常に無制限」という意味ではなく、名誉、プライバシー、裁判の公正、公共の安全などとの調整は必要です。試験では、「優越的地位があるから一切制約できない」という選択肢は誤りになりやすく、<strong class="em-b">制約の種類ごとに審査密度が変わる</strong>と理解することが重要です。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">知る権利</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">知る権利</mark></strong>とは、国民が政治的・社会的判断を行うために必要な情報を受け取り、収集し、情報提供を求める利益を憲法上の価値として把握する考え方です。憲法21条には「知る権利」という文言はありませんが、表現の自由は発信者側の自由だけでなく、受け手が情報を受け取る自由を含むものとして理解されます。特に現代社会では、国民が行政活動や政治過程を直接観察することは難しく、報道機関や情報公開制度を通じて情報を得る場面が多くなります。そのため、報道の自由は国民の知る権利に奉仕するものと説明されます。ただし、知る権利は、あらゆる情報の開示を直接憲法上当然に請求できる権利として単純化してはなりません。具体的な情報公開請求権は、情報公開法や個人情報保護制度などの法律によって制度化されます。試験では、<strong class="em-b">21条の派生的利益</strong>としての知る権利と、法律上の開示請求権を混同しないことが重要です。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">報道の自由・取材の自由</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">報道の自由</mark></strong>とは、新聞・放送・出版・インターネットメディアなどが事実や意見を社会に伝達する自由をいいます。最高裁は、報道機関の報道が国民の知る権利に奉仕するものであり、憲法21条の保障の下にあると判示しています。これに対し、<strong><mark class="kw">取材の自由</mark></strong>は、報道の前提として情報を収集する自由です。取材がなければ正確な報道は困難であるため、取材の自由も21条の精神に照らして十分尊重に値します。しかし、取材の自由は報道の自由そのものと同じ強度で常に絶対的に保障されるわけではありません。刑事裁判の公正、証拠収集の必要性、取材対象者の権利などと衝突する場合には比較衡量が行われます。試験では、博多駅テレビフィルム提出命令事件の「報道の自由は21条の保障下、取材の自由は21条の精神に照らし十分尊重に値する」という段階的な表現が狙われます。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">検閲の禁止</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">検閲の禁止</mark></strong>は、憲法21条2項前段が明文で定める、表現の自由保障の中でも特に強いルールです。判例上の検閲は、行政権が主体となり、思想内容等の表現物を対象に、発表前にその内容を審査し、不適当と認めるものの発表を禁止することを目的として、網羅的一般的に行うものと整理されます。この定義のポイントは、単に「事前に審査する」だけでは足りず、行政権主体、発表前審査、発表禁止目的、網羅的一般性といった要素を総合して検閲該当性を判断する点です。検閲に当たれば憲法上絶対的に禁止されるため、試験では「税関検査は検閲に当たるか」「裁判所の出版差止めは検閲か」といった形で問われます。税関検査事件では、輸入禁制品該当性の税関検査は、国外で既に発表済みの表現物の輸入規制であり、思想内容の発表そのものを網羅的に禁止する制度ではないとして、検閲には当たらないとされました。ただし、検閲に当たらないから直ちに合憲というわけではなく、表現の自由に対する制約として別途合理性が問題になります。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">事前抑制</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">事前抑制</mark></strong>とは、表現が社会に発表される前に、その発表・配布・出版などを止める規制をいいます。検閲は事前抑制の中でも憲法21条2項が明文で禁止する特殊類型ですが、事前抑制は行政権による検閲に限られず、裁判所による出版差止めのような形でも問題になります。事前抑制が危険視されるのは、表現が公に出る前に消されるため、読者や有権者がその内容を知って反論・評価する機会を失うからです。また、発信者に萎縮効果を与え、将来の表現活動を控えさせるおそれもあります。もっとも、名誉やプライバシーに対する重大で回復困難な侵害が明白な場合まで常に放置する必要はありません。北方ジャーナル事件は、人格権としての名誉権に基づく出版物の事前差止めについて、原則として許されないが、一定の明白性と重大性があるときに例外的に許されるとしました。試験では、<strong class="em-b">検閲は絶対禁止、事前抑制は原則禁止で例外あり</strong>という区別が重要です。</p>
+            </div>
+        </div>
+
+        <div class="box box--definition">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">auto_stories</span>
+                <span class="box__term">名誉・プライバシーとの調整</span>
+                <div class="box__hd-badges">
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                </div>
+            </div>
+            <div class="box__bd">
+                <p><strong><mark class="kw">名誉・プライバシーとの調整</mark></strong>は、表現の自由の限界を考えるうえで避けられない論点です。政治的批判や社会的批評は民主政に重要ですが、虚偽の事実を摘示して人の社会的評価を下げたり、私生活上の秘密を不必要に暴露したりすれば、人格的利益を深く侵害します。憲法13条の個人の尊重・幸福追求権は、人格権やプライバシー利益の基礎として理解されるため、21条の自由と13条の人格的利益が衝突する場面になります。問題は、表現が公的事項に関するものか、公益目的があるか、真実性または真実相当性があるか、被害が事後救済で回復できるかという判断です。特に出版前差止めでは、名誉侵害のおそれがあるだけでは足りず、北方ジャーナル事件のように、表現内容が真実でないか公益目的でないことが明白で、重大かつ著しく回復困難な損害のおそれが必要とされます。試験では、単に「名誉権があるから差止め可能」とする選択肢に注意が必要です。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">03</div>
+            <div>
+                <h2>概念関係図</h2>
+                <p class="sec-head__sub">Concept Map</p>
+            </div>
+        </header>
+
+        <div class="diagram-wrap">
+            <svg viewBox="0 0 900 470" width="100%" role="img" aria-label="表現の自由の概念関係図">
+                <defs>
+                    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#2563eb"></path>
+                    </marker>
+                    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#e11d48"></path>
+                    </marker>
+                </defs>
+
+                <rect x="315" y="20" width="270" height="64" rx="8" fill="#1e3a8a"></rect>
+                <text x="450" y="48" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">表現の自由</text>
+                <text x="450" y="70" text-anchor="middle" fill="#dbeafe" font-size="12">憲法21条1項</text>
+
+                <rect x="58" y="142" width="180" height="64" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+                <text x="148" y="170" text-anchor="middle" fill="#1e3a8a" font-size="14" font-weight="700">自己実現</text>
+                <text x="148" y="191" text-anchor="middle" fill="#1e3a8a" font-size="12">人格形成・思想表明</text>
+
+                <rect x="268" y="142" width="180" height="64" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+                <text x="358" y="170" text-anchor="middle" fill="#1e3a8a" font-size="14" font-weight="700">自己統治</text>
+                <text x="358" y="191" text-anchor="middle" fill="#1e3a8a" font-size="12">民主政の情報基盤</text>
+
+                <rect x="478" y="142" width="180" height="64" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"></rect>
+                <text x="568" y="170" text-anchor="middle" fill="#7c2d12" font-size="14" font-weight="700">知る権利</text>
+                <text x="568" y="191" text-anchor="middle" fill="#7c2d12" font-size="12">情報の受領・収集</text>
+
+                <rect x="688" y="142" width="180" height="64" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"></rect>
+                <text x="778" y="170" text-anchor="middle" fill="#7c2d12" font-size="14" font-weight="700">報道・取材</text>
+                <text x="778" y="191" text-anchor="middle" fill="#7c2d12" font-size="12">知る権利に奉仕</text>
+
+                <rect x="120" y="290" width="210" height="70" rx="8" fill="#fff1f2" stroke="#fb7185" stroke-width="2"></rect>
+                <text x="225" y="318" text-anchor="middle" fill="#9f1239" font-size="14" font-weight="700">検閲禁止</text>
+                <text x="225" y="340" text-anchor="middle" fill="#9f1239" font-size="12">行政権による発表前審査</text>
+
+                <rect x="345" y="290" width="210" height="70" rx="8" fill="#fff1f2" stroke="#fb7185" stroke-width="2"></rect>
+                <text x="450" y="318" text-anchor="middle" fill="#9f1239" font-size="14" font-weight="700">事前抑制</text>
+                <text x="450" y="340" text-anchor="middle" fill="#9f1239" font-size="12">原則禁止・例外あり</text>
+
+                <rect x="570" y="290" width="210" height="70" rx="8" fill="#fff1f2" stroke="#fb7185" stroke-width="2"></rect>
+                <text x="675" y="318" text-anchor="middle" fill="#9f1239" font-size="14" font-weight="700">他利益との調整</text>
+                <text x="675" y="340" text-anchor="middle" fill="#9f1239" font-size="12">名誉・プライバシー・裁判</text>
+
+                <line x1="410" y1="84" x2="180" y2="142" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"></line>
+                <line x1="440" y1="84" x2="370" y2="142" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"></line>
+                <line x1="470" y1="84" x2="555" y2="142" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"></line>
+                <line x1="500" y1="84" x2="748" y2="142" stroke="#2563eb" stroke-width="2" marker-end="url(#arrow-blue)"></line>
+                <line x1="568" y1="206" x2="735" y2="290" stroke="#ea580c" stroke-width="2" marker-end="url(#arrow-blue)"></line>
+                <line x1="450" y1="84" x2="450" y2="290" stroke="#e11d48" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow-red)"></line>
+                <line x1="305" y1="206" x2="245" y2="290" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-red)"></line>
+                <line x1="790" y1="206" x2="690" y2="290" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-red)"></line>
+
+                <rect x="94" y="107" width="108" height="24" rx="4" fill="#dbeafe"></rect>
+                <text x="148" y="124" text-anchor="middle" fill="#1e3a8a" font-size="11">保障根拠</text>
+                <rect x="516" y="235" width="104" height="24" rx="4" fill="#fff7ed" stroke="#fed7aa"></rect>
+                <text x="568" y="252" text-anchor="middle" fill="#7c2d12" font-size="11">制度的連関</text>
+                <rect x="398" y="230" width="104" height="24" rx="4" fill="#ffe4e6" stroke="#fb7185"></rect>
+                <text x="450" y="247" text-anchor="middle" fill="#9f1239" font-size="11">制約審査</text>
+
+                <rect x="120" y="400" width="660" height="42" rx="8" fill="#dbeafe" stroke="#2563eb"></rect>
+                <text x="450" y="426" text-anchor="middle" fill="#1e3a8a" font-size="13" font-weight="700">試験では「保障範囲」から入り、「制約の型」と「判例の比較衡量」を順に確認する</text>
+            </svg>
+        </div>
+
+        <p>この図は、表現の自由を「なぜ重要か」と「どこで制限されるか」に分けて整理したものです。上段の自己実現・自己統治は、表現の自由が個人の人格形成と民主政の双方に関わることを示します。中段の知る権利と報道・取材は、情報の受け手と伝え手が相互に支え合う関係にあることを示します。下段の検閲禁止・事前抑制・他利益との調整は、制約の類型ごとに審査の厳しさが異なることを示します。試験では、問題文の規制がこの図のどこに位置づけられるかを先に判断すると、判例の当てはめが安定します。</p>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">04</div>
+            <div>
+                <h2>比較表</h2>
+                <p class="sec-head__sub">Comparison Table</p>
+            </div>
+        </header>
+
+        <table class="cmp-table">
+            <thead>
+                <tr>
+                    <th class="col--label">比較項目</th>
+                    <th class="col--a">検閲</th>
+                    <th class="col--b">事前抑制</th>
+                    <th class="col--c">事後制裁</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>意味</td>
+                    <td class="col--a">行政権が主体となり、思想内容等を発表前に審査し、不適当なものの発表を禁止する制度。判例上の要件を満たす場合は<strong class="em-a">絶対禁止</strong>。</td>
+                    <td class="col--b">表現が公に出る前に、出版・配布・放送などを止める規制。裁判所の差止めも含み得る。<strong class="em-b">原則禁止</strong>だが例外を認める余地がある。</td>
+                    <td class="col--c">表現が行われた後に、損害賠償、名誉回復措置、刑罰などを科すもの。表現前に止めないため、事前抑制よりは緩やかに扱われる。</td>
+                </tr>
+                <tr>
+                    <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">gavel</span>根拠</td>
+                    <td class="col--a">憲法21条2項前段「検閲は、これをしてはならない。」</td>
+                    <td class="col--b">憲法21条1項の表現の自由、21条2項の趣旨、判例法理。</td>
+                    <td class="col--c">民法上の不法行為、刑法上の名誉毀損など、個別法に基づく責任。</td>
+                </tr>
+                <tr>
+                    <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">warning</span>危険性</td>
+                    <td class="col--a">権力が発表前に内容を選別するため、思想統制に直結しやすい。</td>
+                    <td class="col--b">読者・有権者が表現内容を知る機会を失い、萎縮効果も大きい。</td>
+                    <td class="col--c">表現後の責任なので公開の機会は残るが、過度に重い制裁は将来の表現を萎縮させる。</td>
+                </tr>
+                <tr>
+                    <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">school</span>代表判例</td>
+                    <td class="col--a">税関検査事件。税関検査は判例上の検閲には当たらないとされた。</td>
+                    <td class="col--b">北方ジャーナル事件。公的事項に関する出版差止めは、厳格な例外要件の下でのみ許される。</td>
+                    <td class="col--c">名誉毀損・プライバシー侵害の事後救済一般。公共性・公益目的・真実性等が問題になる。</td>
+                </tr>
+                <tr>
+                    <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">task_alt</span>判断基準</td>
+                    <td class="col--a">行政権主体、発表前審査、発表禁止目的、網羅的一般性を確認する。</td>
+                    <td class="col--b">表現内容が真実でないか公益目的でないことの明白性、重大で著しく回復困難な損害のおそれを確認する。</td>
+                    <td class="col--c">名誉・プライバシーの侵害、違法性阻却、過失、損害、制裁の相当性を確認する。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>試験で最も迷いやすいのは、検閲と事前抑制の関係です。検閲は事前抑制の一種ですが、すべての事前抑制が検閲になるわけではありません。特に、裁判所による出版差止めは行政権による網羅的一般的審査ではないため、通常は検閲そのものではなく、事前抑制として21条1項との関係で厳格に審査されます。判断では、まず「発表前に止めているか」を見て事前抑制性を確認し、次に「行政権が網羅的一般的に内容審査しているか」を見て検閲該当性を検討します。</p>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">05</div>
+            <div>
+                <h2>関連条文</h2>
+                <p class="sec-head__sub">Legal Provisions</p>
+            </div>
+        </header>
+
+        <div class="box box--legal">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">gavel</span>
+                <span class="box__label">日本国憲法12条・13条</span>
+            </div>
+            <div class="box__bd">
+                <blockquote class="legal-text">
+                    第十二条　この憲法が国民に保障する自由及び権利は、国民の不断の努力によつて、これを保持しなければならない。又、国民は、これを濫用してはならないのであつて、常に公共の福祉のためにこれを利用する責任を負ふ。<br>
+                    第十三条　すべて国民は、個人として尊重される。生命、自由及び幸福追求に対する国民の権利については、公共の福祉に反しない限り、立法その他の国政の上で、最大の尊重を必要とする。
+                </blockquote>
+                <p>憲法12条は、人権が無制限ではなく、濫用禁止と公共の福祉による調整を受けることを示します。ただし、公共の福祉という言葉だけで表現の自由を広く制限できるわけではありません。表現の自由は民主政に直結するため、制約の目的、手段、必要性、過度性を丁寧に見る必要があります。憲法13条は、名誉、プライバシー、人格権の基礎として問題になります。表現の自由と名誉・プライバシーが衝突するときは、21条だけでなく、13条の個人の尊重との調整として把握します。</p>
+            </div>
+        </div>
+
+        <div class="box box--legal">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">gavel</span>
+                <span class="box__label">日本国憲法21条1項</span>
+            </div>
+            <div class="box__bd">
+                <blockquote class="legal-text">
+                    第二十一条　集会、結社及び言論、出版その他一切の表現の自由は、これを保障する。
+                </blockquote>
+                <p>21条1項は、表現の自由の中心条文です。「集会」「結社」「言論」「出版」は例示であり、「その他一切の表現の自由」によって広い表現活動が含まれます。条文の趣旨は、個人が思想・意見を形成して社会に伝える自由を保障することに加え、国民が政治的意思決定に必要な情報を交換する場を守ることにあります。要件としては、まず問題となる行為が表現活動に当たるかを確認し、次にその制約が内容規制か、方法・場所・時間の規制か、発表前の規制かを区別します。内容規制や発表前規制はとくに厳格に見られ、単なる行政便宜だけでは正当化しにくいと考えます。報道の自由、知る権利、取材の自由は、この条文の保障内容や精神から導かれる重要論点です。</p>
+            </div>
+        </div>
+
+        <div class="box box--legal">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">gavel</span>
+                <span class="box__label">日本国憲法21条2項</span>
+            </div>
+            <div class="box__bd">
+                <blockquote class="legal-text">
+                    検閲は、これをしてはならない。通信の秘密は、これを侵してはならない。
+                </blockquote>
+                <p>21条2項前段は、検閲を明文で禁止します。これは、表現の自由の中でも発表前の内容審査が特に危険であるため、行政権による思想統制を排除する趣旨です。判例上、検閲は行政権主体の発表前審査として狭く定義されますが、いったん検閲に当たれば原則として比較衡量で正当化する余地はありません。21条2項後段の通信の秘密は、郵便、電話、電子通信などの私的通信内容や通信の存在・相手方などを守るものです。本単元の中心は検閲禁止ですが、インターネット上の発信、通信傍受、個人情報の取得などでは、21条1項の表現の自由、21条2項後段の通信の秘密、13条のプライバシーが横断的に関係します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">06</div>
+            <div>
+                <h2>重要判例</h2>
+                <p class="sec-head__sub">Leading Cases</p>
+            </div>
+        </header>
+
+        <div class="case-card">
+            <div class="case-card__hd">
+                <div class="case-card__meta">最高裁判所大法廷　昭和44年11月26日　昭和44年（し）第68号</div>
+                <div class="case-card__title">博多駅テレビフィルム提出命令事件（取材フィルム提出命令に対する抗告棄却決定に対する特別抗告事件）</div>
+                <div class="case-card__badges">
+                    <span class="badge badge--stars">★★★ 最重要</span>
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                    <span class="badge badge--law">憲法21条</span>
+                    <span class="badge badge--law">報道の自由</span>
+                    <span class="badge badge--law">取材の自由</span>
+                </div>
+            </div>
+            <div class="case-card__bd">
+                <h4>事実の概要</h4>
+                <p>米原子力空母の佐世保寄港に反対する学生らと警察官との衝突をめぐり、刑事事件の審理で、裁判所が報道機関の撮影したテレビフィルムの提出を命じました。報道機関側は、取材資料を裁判の証拠として提出させられると、将来の取材活動に支障が生じ、報道の自由が害されると主張しました。争点は、報道機関が取材で得たフィルムに対する提出命令が、憲法21条の保障する報道の自由・取材の自由との関係で許されるかでした。</p>
+                <h4>判旨</h4>
+                <p>最高裁は、報道機関の報道は国民の知る権利に奉仕するものであり、報道の自由は憲法21条の保障の下にあるとしました。また、報道のための取材の自由も、報道が正しい内容をもつために不可欠であるから、21条の精神に照らし十分尊重に値するとしました。他方で、公正な刑事裁判を実現するために、取材物が証拠として必要な場合には、取材の自由が一定程度制約されることもやむを得ないとしました。判断枠組みとして、犯罪の性質・態様・軽重、取材物の証拠価値、刑事裁判上の必要性、提出によって取材の自由が妨げられる程度、報道の自由に及ぼす影響などを比較衡量すべきとし、本件提出命令を適法としました。</p>
+                <h4>試験上の意義</h4>
+                <p>本判例は、<strong class="em-a">報道の自由は21条の保障下</strong>にあり、<strong class="em-a">取材の自由は21条の精神に照らして十分尊重</strong>されるという二段階の理解が頻出です。「取材の自由は21条で直接・絶対的に保障され、刑事裁判上の必要性によっても制約できない」という選択肢は誤りです。取材資料の提出命令は、単純に違憲・合憲を決めるのではなく、公正な刑事裁判の実現との比較衡量で判断します。関連して、報道の自由が国民の知る権利に奉仕するという説明も、知る権利の理解と結びつけて押さえる必要があります。</p>
+                <h4>関連判例・条文</h4>
+                <p>憲法21条1項の報道の自由と、刑事裁判の公正との調整判例です。北方ジャーナル事件が出版前差止めという事前抑制を扱うのに対し、本判例は取材資料提出命令という取材過程への制約を扱います。両者はいずれも表現の自由が絶対ではなく、他の憲法上重要な利益との調整が必要になることを示します。</p>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-card__hd">
+                <div class="case-card__meta">最高裁判所大法廷　昭和59年12月12日　昭和57年（行ツ）第156号</div>
+                <div class="case-card__title">税関検査事件（輸入禁制品該当通知取消等請求事件）</div>
+                <div class="case-card__badges">
+                    <span class="badge badge--stars">★★★ 最重要</span>
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                    <span class="badge badge--law">憲法21条2項</span>
+                    <span class="badge badge--law">検閲</span>
+                    <span class="badge badge--law">税関検査</span>
+                </div>
+            </div>
+            <div class="case-card__bd">
+                <h4>事実の概要</h4>
+                <p>外国から輸入しようとした書籍・図画等について、税関長が関税定率法上の輸入禁制品に該当すると判断し、輸入を認めない旨の通知をしました。輸入者側は、このような税関検査が表現物の内容を行政機関が事前に審査して国内流通を止める制度であり、憲法21条2項前段が禁止する検閲に当たるなどと主張しました。争点は、税関検査が判例上の検閲に該当するか、また検閲に当たらないとしても表現の自由の制約として許されるかでした。</p>
+                <h4>判旨</h4>
+                <p>最高裁は、憲法21条2項前段の検閲について、行政権が主体となり、思想内容等の表現物を対象として、その全部または一部の発表の禁止を目的として、発表前に内容を審査したうえ、不適当と認めるものの発表を禁止することをいう趣旨で定義しました。そのうえで、税関検査は、国外で既に発表された表現物について輸入を規制するものであり、思想内容等の発表そのものを事前に網羅的一般的に禁止する制度ではないとして、検閲には当たらないとしました。また、わいせつ表現物等の輸入規制は、公共の福祉に基づく必要かつ合理的な制限として許されると判断しました。</p>
+                <h4>試験上の意義</h4>
+                <p>本判例は、検閲の定義を問う正誤問題で最重要です。特に、<strong class="em-a">行政権が主体</strong>、<strong class="em-a">発表前の内容審査</strong>、<strong class="em-a">不適当な表現の発表禁止目的</strong>という要素を正確に記憶する必要があります。「税関検査は表現物の輸入を止めるから当然に検閲である」という選択肢は誤りです。ただし、「検閲でなければ表現の自由の問題にならない」という選択肢も誤りです。検閲該当性と、21条1項上の制約としての合憲性は、別段階で検討します。</p>
+                <h4>関連判例・条文</h4>
+                <p>憲法21条2項前段の検閲禁止に関する基本判例です。北方ジャーナル事件の出版差止めは裁判所による個別的救済として問題となるため、行政権による検閲とは区別されます。博多駅事件は報道・取材の自由の比較衡量判例であり、税関検査事件とは制約類型が異なります。</p>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-card__hd">
+                <div class="case-card__meta">最高裁判所大法廷　昭和61年6月11日　昭和56年（オ）第609号</div>
+                <div class="case-card__title">北方ジャーナル事件（損害賠償等請求事件）</div>
+                <div class="case-card__badges">
+                    <span class="badge badge--stars">★★★ 最重要</span>
+                    <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+                    <span class="badge badge--law">憲法21条</span>
+                    <span class="badge badge--law">事前抑制</span>
+                    <span class="badge badge--law">名誉権</span>
+                </div>
+            </div>
+            <div class="case-card__bd">
+                <h4>事実の概要</h4>
+                <p>雑誌「北方ジャーナル」が、公職選挙の候補者に関する批判記事を掲載しようとしたところ、候補者側が名誉を侵害されるとして、発売前の印刷・製本・販売・頒布等の差止めを求めました。裁判所は仮処分により出版を差し止め、雑誌側は、これは表現の自由に対する重大な制約であり、憲法21条に反すると主張しました。争点は、人格権としての名誉権に基づき、政治的表現を含む出版物を発売前に差し止めることが許されるかでした。</p>
+                <h4>判旨</h4>
+                <p>最高裁は、出版物の事前差止めは、表現物が読者に到達する前に抑止するものであり、表現の自由に対する重大な制約であるから、原則として許されないとしました。特に、公務員または公職選挙の候補者に対する評価・批判等に関する表現は、公共的事項に関わるため、事前差止めには極めて慎重でなければならないとしました。他方で、人格権としての名誉権も保護されるべき利益であるため、表現内容が真実でないか、または専ら公益を図る目的のものでないことが明白であり、かつ、被害者が重大で著しく回復困難な損害を被るおそれがあるときに限り、例外的に事前差止めが許されるとしました。</p>
+                <h4>試験上の意義</h4>
+                <p>本判例は、<strong class="em-a">事前抑制は原則禁止</strong>であるが、名誉権保護のための例外があり得るという結論を押さえる判例です。出題では、「公職候補者に関する批判記事は常に差止めできない」「名誉侵害のおそれがあれば直ちに差止めできる」という両極端の選択肢が誤りになります。キーワードは、真実でないことまたは公益目的でないことの明白性、重大で著しく回復困難な損害です。検閲との違いも重要で、裁判所の個別的な差止めは、行政権による網羅的一般的な発表前審査である検閲とは別に、事前抑制として厳格に審査されます。</p>
+                <h4>関連判例・条文</h4>
+                <p>憲法21条1項の表現の自由と、憲法13条を基礎とする人格権・名誉権との調整判例です。税関検査事件が検閲の定義を示すのに対し、本判例は検閲に限られない事前抑制の限界を示します。民法上の不法行為による事後救済との比較でも、発表前に止めることの重大性を理解する必要があります。</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">07</div>
+            <div>
+                <h2>試験対策ポイント</h2>
+                <p class="sec-head__sub">Exam Strategy</p>
+            </div>
+        </header>
+
+        <div class="box box--exam">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">school</span>
+                <span class="box__label">頻出テーマ</span>
+            </div>
+            <div class="box__bd">
+                <ul>
+                    <li><strong class="em-c">検閲の定義</strong>は、行政権主体・発表前審査・発表禁止目的・網羅的一般性をセットで確認する。</li>
+                    <li><strong class="em-c">事前抑制</strong>は、検閲より広い概念であり、裁判所の出版差止めも問題になる。</li>
+                    <li><strong class="em-c">報道の自由</strong>は21条の保障下にあり、取材の自由は21条の精神に照らして十分尊重される。</li>
+                    <li><strong class="em-c">知る権利</strong>は、国民が情報を受け取る側の利益であり、報道の自由を支える説明として出やすい。</li>
+                    <li><strong class="em-c">名誉・プライバシー</strong>との調整では、公共性、公益目的、真実性、被害の重大性を区別する。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box--caution">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">warning</span>
+                <span class="box__label">誤りやすい選択肢</span>
+            </div>
+            <div class="box__bd">
+                <p><strong class="warn">「表現の自由は優越的地位を有するから、公共の福祉による制約を一切受けない」</strong>という選択肢は誤りです。優越的地位は制約審査を厳格にする理由であり、名誉、プライバシー、刑事裁判の公正などとの調整を否定するものではありません。</p>
+                <p><strong class="warn">「取材の自由は憲法21条で明文保障され、報道の自由と同じ強度で絶対的に保障される」</strong>という選択肢も誤りです。博多駅事件は、報道の自由は21条の保障下にあるとしつつ、取材の自由については21条の精神に照らして十分尊重に値すると述べ、刑事裁判の公正との比較衡量を行っています。</p>
+                <p><strong class="warn">「税関検査は表現物を輸入段階で止めるから検閲である」</strong>という選択肢は、税関検査事件に反します。ただし、税関検査が検閲ではないとしても、表現の自由に対する制約としての合憲性検討は残ります。</p>
+            </div>
+        </div>
+
+        <p>解答アプローチは、まず問題文の規制対象が「表現内容そのもの」か、「表現の方法・場所・時期」かを見ます。次に、その規制が発表前に表現を止めるものかを確認します。発表前なら、検閲該当性と事前抑制性を分けて検討します。最後に、関係する判例を選び、税関検査なら検閲の定義、出版差止めなら北方ジャーナル事件、取材資料提出なら博多駅事件という形で、判例ごとの判断枠組みに当てはめます。</p>
+
+        <p>他分野との接点としては、民法の不法行為、刑法の名誉毀損罪、行政法の情報公開制度、個人情報保護法、行政手続における公表制度などがあります。行政書士試験では憲法単独の抽象論だけでなく、行政機関による公表、情報公開、個人情報、住民参加と絡めて出題される可能性があります。表現の自由は、行政活動の透明性と個人の人格的利益の双方に接続する単元として整理してください。</p>
+    </section>
+
+    <section>
+        <header class="sec-head">
+            <div class="sec-head__num">08</div>
+            <div>
+                <h2>補足情報</h2>
+                <p class="sec-head__sub">Supplement</p>
+            </div>
+        </header>
+
+        <p>表現の自由は、戦前の出版・言論統制への反省を背景に、日本国憲法で強く保障されました。特に検閲禁止が明文で置かれている点は、国家権力が思想や言論を発表前に選別する危険を排除する意味を持ちます。現代では、新聞・出版・放送だけでなく、SNS、動画配信、検索サービス、AIによる情報生成など、情報流通の手段が大きく変化しています。しかし、試験上の基本構造は変わりません。表現の自由は、個人の人格形成と民主政の情報基盤を守る自由であり、制約の型に応じて厳格さを変えて審査するという枠組みが中心です。</p>
+
+        <div class="box box--example">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">info</span>
+                <span class="box__label">学習の整理法</span>
+            </div>
+            <div class="box__bd">
+                <p>この単元は、条文を暗記するだけでは得点につながりにくい分野です。まず憲法21条を、1項の「表現の自由」と2項前段の「検閲禁止」に分けます。次に、判例を制約類型ごとに配置します。税関検査事件は検閲、北方ジャーナル事件は事前抑制、博多駅事件は報道・取材の自由と刑事裁判の公正という形で整理します。最後に、名誉・プライバシー、情報公開、刑事裁判、行政機関の公表など、衝突する利益を横に並べると、正誤問題で理由まで判断できるようになります。</p>
+            </div>
+        </div>
+
+        <div class="box box--legal">
+            <div class="box__hd">
+                <span class="material-icons-round box__icon">gavel</span>
+                <span class="box__label">調査参照先</span>
+            </div>
+            <div class="box__bd">
+                <p>条文はe-Gov法令検索の日本国憲法を確認し、判例は裁判所判例検索および最高裁判例集掲載情報を照合しました。学習時には、判例の結論だけでなく、どの利益とどの利益を比較したのかを確認してください。</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

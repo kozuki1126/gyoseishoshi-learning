@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>憲法の基本原理（国民主権・平和主義・基本的人権の尊重）| 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-50:#eff6ff; --blue-100:#dbeafe; --blue-200:#bfdbfe;
+  --blue-600:#2563eb; --blue-700:#1d4ed8; --blue-900:#1e3a8a;
+  --orange-50:#fff7ed; --orange-200:#fed7aa;
+  --orange-600:#ea580c; --orange-900:#7c2d12;
+  --red-50:#fff1f2; --red-100:#ffe4e6;
+  --red-400:#fb7185; --red-600:#e11d48; --red-800:#9f1239;
+  --text-primary:#111827; --text-secondary:#4b5563; --text-muted:#9ca3af;
+  --highlight:#fef08a; --highlight-strong:#fde047; --highlight-red:#ffe4e6;
+}
+body {
+  font-family:'Noto Sans JP',sans-serif;
+  font-size:15px; line-height:1.9;
+  color:var(--text-primary);
+  background:#fff;
+  max-width:860px; margin:0 auto;
+  padding:0 1.5rem 5rem;
+}
+h1 { font-size:1.7rem; font-weight:700; color:var(--blue-900); border-bottom:3px solid var(--blue-600); padding-bottom:.5rem; margin-bottom:2rem; }
+h2 { font-size:1.25rem; font-weight:700; color:var(--blue-700); border-left:4px solid var(--blue-600); padding-left:.75rem; margin:0 0 .75rem; }
+h3 { font-size:1.05rem; font-weight:700; color:var(--text-primary); margin:1rem 0 .5rem; }
+h4 { font-size:.75rem; font-weight:700; color:var(--text-secondary); letter-spacing:.08em; text-transform:uppercase; margin:.75rem 0 .25rem; }
+blockquote.legal-text {
+  font-family:'Noto Serif JP',serif; font-size:.9rem; line-height:2.1;
+  background:var(--blue-100); border-left:4px solid var(--blue-600);
+  border-radius:0 4px 4px 0; margin:.75rem 0; padding:.875rem 1.25rem;
+  color:var(--blue-900);
+}
+mark.kw         { background:var(--highlight);        color:inherit; padding:.1em .3em; border-radius:3px; }
+mark.kw-strong  { background:var(--highlight-strong); color:inherit; padding:.1em .3em; border-radius:3px; font-weight:700; }
+mark.kw-red     { background:var(--highlight-red);    color:var(--red-800); padding:.1em .3em; border-radius:3px; }
+strong.warn     { color:var(--red-600); font-weight:700; }
+.em-a { color:var(--blue-700); font-weight:700; }
+.em-b { color:var(--orange-600); font-weight:700; }
+.em-c { color:var(--red-800); font-weight:700; }
+
+/* Page Title Block */
+.page-title-block { background:var(--blue-900); color:#fff; padding:2.5rem 1.5rem 2rem; margin:0 -1.5rem 2.5rem; }
+.page-title-block__breadcrumb { font-size:.75rem; color:var(--blue-200); margin:0 0 .75rem; letter-spacing:.04em; }
+.page-title-block__main { font-size:2rem; font-weight:700; color:#fff; line-height:1.35; border:none; padding:0; margin:0 0 .5rem; }
+.page-title-block__sub { font-size:.9rem; color:var(--blue-200); margin:0 0 1.25rem; }
+.page-title-block__tags { display:flex; flex-wrap:wrap; gap:.4rem; }
+.page-title-block .badge--info { background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3); }
+
+/* Section Header */
+.sec-head { display:flex; align-items:flex-start; gap:1rem; margin:3rem 0 1.25rem; }
+.sec-head__num { flex-shrink:0; width:2.5rem; height:2.5rem; display:flex; align-items:center; justify-content:center; background:var(--blue-600); color:#fff; font-size:.875rem; font-weight:700; border-radius:6px; letter-spacing:.04em; }
+.sec-head__sub { font-size:.75rem; color:var(--text-muted); margin:.125rem 0 0; letter-spacing:.04em; }
+section + section { margin-top:1rem; }
+
+/* Box Components */
+.box { border-radius:6px; margin:1.25rem 0; overflow:hidden; }
+.box__hd { display:flex; align-items:center; gap:.5rem; padding:.5rem 1rem; }
+.box__icon { font-size:18px; line-height:1; flex-shrink:0; }
+.box__label { font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+.box__term { font-size:1rem; font-weight:700; letter-spacing:.02em; flex:1; }
+.box__hd-badges { display:flex; align-items:center; gap:.375rem; margin-left:auto; }
+.box__bd { padding:.875rem 1.25rem; font-size:.925rem; }
+.box--definition { border:1px solid var(--orange-600); }
+.box--definition .box__hd { background:var(--orange-600); color:#fff; padding:.625rem 1rem; }
+.box--definition .box__bd { background:var(--orange-50); color:var(--orange-900); }
+.box--example { border:1px solid var(--blue-200); }
+.box--example .box__hd { background:var(--blue-600); color:#fff; }
+.box--example .box__bd { background:var(--blue-50); color:var(--blue-900); }
+.box--legal { border:1px solid var(--blue-600); }
+.box--legal .box__hd { background:var(--blue-900); color:#fff; }
+.box--legal .box__bd { background:var(--blue-100); color:var(--blue-900); }
+.box--caution { border:1px solid var(--red-400); }
+.box--caution .box__hd { background:var(--red-400); color:#fff; }
+.box--caution .box__bd { background:var(--red-50); color:var(--red-800); }
+.box--exam { border:1px solid var(--red-600); }
+.box--exam .box__hd { background:var(--red-600); color:#fff; }
+.box--exam .box__bd { background:var(--red-100); color:var(--red-800); }
+.box--definition .badge--freq { background:rgba(255,255,255,0.2); color:#fff; border:1px solid rgba(255,255,255,0.4); }
+
+/* Badge */
+.badge { display:inline-flex; align-items:center; gap:3px; font-size:.68rem; font-weight:700; padding:.15em .6em; border-radius:4px; vertical-align:middle; letter-spacing:.05em; }
+.badge--def     { background:var(--orange-50);  color:var(--orange-900); border:1px solid var(--orange-200); }
+.badge--exam    { background:var(--red-100);    color:var(--red-800);    border:1px solid var(--red-400); }
+.badge--caution { background:var(--red-50);     color:var(--red-800);    border:1px solid var(--red-400); }
+.badge--info    { background:var(--blue-50);    color:var(--blue-900);   border:1px solid var(--blue-200); }
+.badge--freq    { background:var(--red-600);    color:#fff;              border:none; }
+.badge--stars   { background:#fef08a; color:#713f12; border:1px solid #fde047; font-weight:700; }
+.badge--law     { background:rgba(255,255,255,0.18); color:#fff; border:1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card { border:1px solid var(--blue-600); border-radius:8px; overflow:hidden; margin:1.5rem 0; }
+.case-card__hd { background:var(--blue-700); padding:1rem 1.25rem .875rem; }
+.case-card__meta { font-size:.75rem; color:var(--blue-200); margin-bottom:.375rem; letter-spacing:.03em; }
+.case-card__title { font-size:1.05rem; font-weight:700; color:#fff; line-height:1.45; margin-bottom:.625rem; }
+.case-card__badges { display:flex; flex-wrap:wrap; gap:.375rem; }
+.case-card__bd { background:var(--blue-50); padding:1rem 1.25rem; color:var(--blue-900); font-size:.925rem; }
+.case-card__bd h4 { color:var(--blue-700); margin-top:.875rem; }
+
+/* Comparison Table */
+.cmp-table { width:100%; border-collapse:collapse; font-size:.9rem; margin:1rem 0 1.5rem; }
+.cmp-table th,.cmp-table td { padding:.6rem .875rem; border:1px solid var(--blue-200); vertical-align:top; text-align:left; }
+.cmp-table thead th { font-weight:700; }
+.cmp-table .col--label { background:var(--blue-50); color:var(--text-secondary); font-size:.8rem; font-weight:700; white-space:nowrap; width:7rem; }
+.cmp-table thead .col--label { background:var(--blue-100); color:var(--blue-900); }
+.cmp-table .col--a { background:var(--blue-50); }
+.cmp-table .col--b { background:var(--orange-50); }
+.cmp-table .col--c { background:var(--red-50); }
+.cmp-table thead .col--a { background:var(--blue-600); color:#fff; }
+.cmp-table thead .col--b { background:var(--orange-600); color:#fff; }
+.cmp-table thead .col--c { background:var(--red-600); color:#fff; }
+.cmp-table tbody tr:hover td { filter:brightness(.97); }
+
+/* Diagram */
+.diagram-wrap { background:var(--blue-50); border:1px solid var(--blue-200); border-radius:8px; padding:1.5rem; margin:1.25rem 0; }
+.diagram-wrap svg { display:block; width:100%; height:auto; font-family:'Noto Sans JP',sans-serif; }
+.diagram-title { display:flex; align-items:center; gap:.5rem; font-size:.85rem; font-weight:700; color:var(--blue-700); margin-bottom:1rem; }
+
+/* List */
+ul.note-list { padding-left:1.4rem; margin:.5rem 0; }
+ul.note-list li { margin:.3rem 0; }
+ol.note-list { padding-left:1.4rem; margin:.5rem 0; }
+ol.note-list li { margin:.3rem 0; }
+</style>
+</head>
+<body>
+
+<!-- ページタイトルブロック -->
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 憲法</p>
+  <h1 class="page-title-block__main">憲法の基本原理</h1>
+  <p class="page-title-block__sub">国民主権の原理・平和主義・基本的人権の尊重 ——日本国憲法を貫く三大原理の体系的理解</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">憲法前文</span>
+    <span class="badge badge--info">第1条・第9条</span>
+    <span class="badge badge--info">第11条・第97条</span>
+    <span class="badge badge--info">統治行為論</span>
+    <span class="badge badge--info">砂川事件</span>
+    <span class="badge badge--info">自衛権</span>
+  </div>
+</div>
+
+<!-- ===== 第1節 単元の概要 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p>日本国憲法は1947年（昭和22年）5月3日に施行された。大日本帝国憲法（明治憲法）において天皇に主権があったのとは根本的に異なり、現行憲法は<strong><mark class="kw">国民主権の原理</mark></strong>・<strong><mark class="kw">平和主義</mark></strong>・<strong><mark class="kw">基本的人権の尊重</mark></strong>という三大原理を根幹に据えている。これらは単なる個別条文の問題ではなく、憲法のすべての条文を解釈・運用する際の出発点となる基本原理であり、前文においてその精神が宣言されている。</p>
+
+  <p>行政書士試験における本単元の位置づけは「入口」にあたる。三大原理の内容・根拠条文・相互関係を正確に把握していなければ、その後の人権規定（第3章）や統治機構（第4章〜）を体系的に理解することが難しくなる。試験では三大原理そのものを直接問う問題よりも、平和主義に関連する憲法第9条の解釈、統治行為論（砂川事件）、人権の特質（固有性・不可侵性・永久性）といった論点が頻出である。配点は300点中28点（憲法全体）であり、6問中3〜4問の正解を目標に置く学習戦略が現実的とされている。</p>
+
+  <p>三大原理は互いに独立しているわけではなく、深く連関している。国家権力が国民の意思（国民主権）に基づく場合でも、戦争を起こしたり（平和主義の要請）、個人の権利を侵したりする（基本的人権尊重の要請）ことは許されない。この三原理が揃ってはじめて日本国憲法の<strong><mark class="kw">立憲主義</mark></strong>が完成する、と理解することが本単元の核心である。</p>
+</section>
+
+<!-- ===== 第2節 重要用語の解説 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <!-- 国民主権 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">国民主権（Popular Sovereignty）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">国民主権</mark></strong>とは、国家の政治のあり方を最終的に決定する権力（主権）が国民に存する、という原理である。根拠条文は前文（「国政は、国民の厳粛な信託によるものであつて」）および<strong><mark class="kw">第1条</mark></strong>（「主権の存する日本国民の総意に基く」）である。</p>
+      <p>国民主権には<em class="em-b">二つの意味</em>があることに注意が必要である。第一に<strong><mark class="kw">正当性根拠としての国民主権</mark></strong>：国家権力の正統性の根拠が国民の意思・同意に由来するという原理。第二に<strong><mark class="kw">権力の帰属・行使主体としての国民主権</mark></strong>：国家の政治的意思決定の最高権力が国民自身に帰属するという原理。日本国憲法はこの両側面を有する。</p>
+      <p>実際の統治形態として、日本国憲法は<strong><mark class="kw">代表民主制（間接民主制）</mark></strong>を基本とする（第43条）。国民は選挙によって代表者（国会議員）を選び、その代表者を通じて間接的に国政に参加する。ただし例外として、憲法改正における<strong><mark class="kw">国民投票</mark></strong>（第96条）、一の地方公共団体のみに適用される特別法の<strong><mark class="kw">住民投票</mark></strong>（第95条）という直接民主制的制度も設けられている。</p>
+      <p><strong><mark class="kw">象徴天皇制</mark></strong>（第1条）と国民主権の関係も重要論点である。天皇は「日本国の象徴であり日本国民統合の象徴」であり、主権者ではない。天皇の国事行為（第7条）はすべて「内閣の助言と承認」を必要とし（第3条）、実質的な政治的権限を持たない。これは明治憲法における「天皇主権」から「国民主権」への根本的な転換を示す。</p>
+      <p>なぜこの原理が重要かについては、立法・行政・司法のすべての国家権力が「国民の意思」に由来し国民に対して責任を負うという民主主義の根幹に関わるためである。</p>
+    </div>
+  </div>
+
+  <!-- 平和主義 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">平和主義（Pacifism）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>最頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">平和主義</mark></strong>とは、日本国が戦争・武力行使を放棄し、平和的生存を希求するという原理である。前文で「政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意」と宣言され、<strong><mark class="kw">第9条</mark></strong>によって具体化されている。</p>
+      <p><strong>第9条1項</strong>は「国際紛争を解決する手段としては、永久にこれを放棄する」とし、<em class="em-b">国権の発動たる戦争</em>・<em class="em-b">武力による威嚇</em>・<em class="em-b">武力の行使</em>の三類型を放棄する。<strong>第9条2項</strong>は「前項の目的を達するため、陸海空軍その他の戦力は、これを保持しない。国の交戦権は、これを認めない」と規定する。</p>
+      <p>学説上の最大の争点は<strong><mark class="kw">「前項の目的を達するため」</mark></strong>という文言の解釈である。<em class="em-b">限定説</em>（政府解釈）は、2項は1項の目的すなわち侵略戦争目的の戦力のみを禁止するのであり、自衛のための戦力保持は可能と解する。これに対し<em class="em-b">全面放棄説</em>（有力学説）は、2項は一切の戦力を禁止すると解し、自衛隊も違憲と考える。</p>
+      <p><strong><mark class="kw">自衛権</mark></strong>については、政府は「国際法上、自衛権は固有の権利であり、憲法9条は自衛権まで否定したものではない」と解釈してきた（砂川事件最高裁判決も自衛権を否定しないと述べる）。<strong><mark class="kw">個別的自衛権</mark></strong>（自国への武力攻撃に対して反撃する権利）は一貫して認められてきたが、<strong><mark class="kw">集団的自衛権</mark></strong>（同盟国への攻撃に共同して反撃する権利）については、長らく「保持するが行使できない」とされていた。2015年の安保法制により、存立危機事態において限定的な集団的自衛権の行使が容認された。</p>
+      <p>自衛隊の合憲性は長年の論争的テーマである。政府見解は「9条2項の戦力とは日本が主体となって指揮・管理できる戦力」をいい、自衛隊は「自衛のための必要最小限度の実力」であって「戦力」に該当しないと主張する。最高裁はこの問題について統治行為論を採用し、直接の憲法判断を回避している（砂川事件）。</p>
+    </div>
+  </div>
+
+  <!-- 基本的人権の尊重 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">基本的人権の尊重（Respect for Fundamental Human Rights）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">基本的人権</mark></strong>とは、人間が人間である以上当然に有する権利であり、国家といえども侵すことができないものとして憲法で保障される権利の総体である。根拠条文は<strong><mark class="kw">第11条</mark></strong>（基本的人権の享有・保障）・<strong><mark class="kw">第13条</mark></strong>（個人の尊重・幸福追求権）・<strong><mark class="kw">第97条</mark></strong>（基本的人権の本質）である。</p>
+      <p>基本的人権の三特質として、次の三点を必ず覚えること。<em class="em-b">①固有性</em>：人権は国家から与えられるものではなく、人間として生まれながらに当然に有する権利（自然権思想の反映）。<em class="em-b">②不可侵性</em>：国家権力によっても侵すことができない絶対的性格（第11条「侵すことのできない権利」）。<em class="em-b">③永久性</em>：現在の国民のみならず「将来の国民」にも永久に保障される（第11条・第97条の「将来の国民に」という文言）。</p>
+      <p><strong><mark class="kw">第97条</mark></strong>は「この憲法が日本国民に保障する基本的人権は、人類の多年にわたる自由獲得の努力の成果であつて…」と規定し、人権が歴史的な獲得物であることを明確にしている。同条は最高法規章（第10章）に位置し、第11条と並んで人権の根拠規定として機能する。両条を混同しないこと。</p>
+      <p>人権は分類上、<em class="em-b">自由権</em>（国家からの自由）・<em class="em-b">社会権</em>（国家による自由）・<em class="em-b">参政権</em>（国家への自由）・<em class="em-b">請求権</em>（人権保障のための権利）に整理される。行政書士試験では各権利の内容・根拠条文・判例を精密に把握することが要求される。</p>
+    </div>
+  </div>
+
+  <!-- 公共の福祉 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">公共の福祉（Public Welfare）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">公共の福祉</mark></strong>とは、人権相互が衝突する場合の調整原理であり、人権制約の根拠となる概念である。憲法第12条・第13条・第22条・第29条に登場する。</p>
+      <p>学説の変遷として、かつての<em class="em-b">一元的外在制約説</em>（宮沢俊義説）は、公共の福祉を人権の外部に存在する一般的な制約原理と解し、立法者が広く人権を制限できると考えた。これに対し現在の通説的見解（<em class="em-b">内在的制約説</em>・<em class="em-b">二元的内在外在制約説</em>）は、公共の福祉を人権相互の矛盾・衝突を調整するための内在的な制約原理と理解する。自由権については人権に内在する制約（他者の人権との衝突を避けること）であり、社会権については社会政策的目的による外在的制約も許容されると解する二元説が有力である。</p>
+      <p><em class="em-b">比例原則</em>も重要な概念であり、人権制約は①目的の正当性、②手段の必要性・相当性、③制限の最小性（必要最小限）を満たす場合にのみ許容されるとする考え方であり、違憲審査においても重要な判断基準となる。</p>
+      <p><strong class="warn">注意：</strong>「公共の福祉」という言葉があれば何でも人権制限が正当化されるわけではない。人権制限には個別の根拠・目的・手段の合理性が必要であり、各権利の性質に応じた違憲審査基準（二重の基準論等）が適用される。</p>
+    </div>
+  </div>
+
+  <!-- 統治行為論 -->
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">統治行為論（Act of State Doctrine）</span>
+      <div class="box__hd-badges">
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+      </div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">統治行為論</mark></strong>とは、高度の政治性を有する国家行為については、たとえ法律上の争訟として司法審査の対象となりうる場合であっても、裁判所は審査・判断を差し控え、政治部門（内閣・国会）または国民の判断に委ねるべきとする理論である。</p>
+      <p>代表的な適用例が<em class="em-b">砂川事件</em>（最大判昭34.12.16）である。同判決は、日米安全保障条約が「高度の政治性を有するもの」として、「一見極めて明白に違憲無効」と認められない限り司法審査になじまないと判示した。また<em class="em-b">苫米地事件</em>（最大判昭35.6.8）でも、衆議院解散の有効性について統治行為論を採用した。</p>
+      <p>統治行為論の根拠については、①裁判所の機能的限界（政治的事項は非法律的判断を含む）、②民主的正統性（国民の直接選択によらない裁判官が政治問題を決するべきでない）などが挙げられる。批判としては③法の支配・違憲審査制の形骸化という指摘がある。</p>
+    </div>
+  </div>
+
+  <!-- 注意ボックス -->
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りやすい概念の整理</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">「国民主権」と「人民主権」は同義ではない。</strong>国民主権論は「国民」（国籍保有者全体＝抽象的概念）が主権を持つとし、代表民主制を重視する。人民主権論は有権者（現実に政治的意思を持つ現実の人民）が主権を持つとし、直接民主制を重視する立場である。日本国憲法は国民主権を採用している。</p>
+      <p><strong class="em-c">「平和的生存権」は独立した権利か？</strong>憲法前文は「われらは、全世界の国民が、ひとしく恐怖と欠乏から免かれ、平和のうちに生存する権利を有することを確認する」と述べるが、これが訴訟上援用できる具体的権利かは争いがある。名古屋高裁平成20年4月17日判決はイラク派遣事件で平和的生存権の法規範性を認めたが、最高裁は未判断。試験では「前文の規定は裁判規範ではなく、独立した具体的権利を認めたものではないとするのが通説」という理解を押さえること。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第3節 概念関係図 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <!-- SVG1: 三大原理の全体構造 -->
+  <div class="diagram-wrap">
+    <div class="diagram-title">
+      <span class="material-icons-round" style="font-size:18px;color:var(--blue-600)">account_tree</span>
+      図1｜日本国憲法の三大基本原理：全体構造
+    </div>
+    <svg width="100%" viewBox="0 0 700 322" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr-solid1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+      </defs>
+
+      <!-- ===== コネクタ（ノードより先に描画） ===== -->
+      <!-- 縦幹線 N01底辺中央→水平レール -->
+      <line x1="350" y1="86" x2="350" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- 水平レール -->
+      <line x1="136" y1="136" x2="556" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <!-- →N02 -->
+      <line x1="136" y1="136" x2="136" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid1)"/>
+      <!-- →N03 -->
+      <line x1="342" y1="136" x2="342" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid1)"/>
+      <!-- →N04 -->
+      <line x1="556" y1="136" x2="556" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid1)"/>
+
+      <!-- コネクタラベル -->
+      <rect x="270" y="100" width="160" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="350" y="115" text-anchor="middle" font-size="13" fill="#1d4ed8">3つの構成原理（前文宣言）</text>
+
+      <!-- ===== ノード（コネクタより後に描画） ===== -->
+
+      <!-- N01: ルートノード -->
+      <g>
+        <rect x="250" y="30" width="200" height="56" rx="8" fill="#1d4ed8"/>
+        <text x="350" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">日本国憲法の基本三原理</text>
+        <text x="350" y="73" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">前文に宣言・全条文の根幹</text>
+      </g>
+
+      <!-- N02: 国民主権の原理 -->
+      <g>
+        <rect x="60" y="186" width="152" height="56" rx="6" fill="#2563eb"/>
+        <text x="136" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">国民主権の原理</text>
+        <text x="136" y="229" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">前文・第1条</text>
+      </g>
+
+      <!-- N03: 平和主義 -->
+      <g>
+        <rect x="282" y="186" width="120" height="56" rx="6" fill="#2563eb"/>
+        <text x="342" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">平和主義</text>
+        <text x="342" y="229" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">前文・第9条</text>
+      </g>
+
+      <!-- N04: 基本的人権の尊重 -->
+      <g>
+        <rect x="472" y="186" width="167" height="56" rx="6" fill="#2563eb"/>
+        <text x="556" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">基本的人権の尊重</text>
+        <text x="556" y="229" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">前文・第11条・第97条</text>
+      </g>
+
+      <!-- 注記エリア -->
+      <rect x="20" y="262" width="660" height="40" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="350" y="281" text-anchor="middle" font-size="12" fill="#9f1239" font-weight="700">★ 三原理は互いに不可分に連関する。いずれかが欠けても立憲主義としての日本国憲法は成立しない。</text>
+      <text x="350" y="295" text-anchor="middle" font-size="12" fill="#9f1239">三原理は第96条の改正限界論において「改正できない核心部分」とする見解が有力である。</text>
+    </svg>
+  </div>
+
+  <p>上の図は日本国憲法の三大原理の全体像を示す。<strong><mark class="kw">国民主権の原理</mark></strong>は政治権力の正統性と帰属の問題を規律し、<strong><mark class="kw">平和主義</mark></strong>は対外的な国家行動を縛り、<strong><mark class="kw">基本的人権の尊重</mark></strong>は個人の権利を国家権力から守る。三者は前文において有機的に宣言されており、どれか一つを「軽い」と判断して学習を省くことは許されない。特に平和主義（9条）は試験における頻出テーマであり、条文の構造・解釈の対立・判例（砂川事件）を一体として把握する必要がある。</p>
+
+  <!-- SVG2: 憲法9条の構造 -->
+  <div class="diagram-wrap">
+    <div class="diagram-title">
+      <span class="material-icons-round" style="font-size:18px;color:var(--blue-600)">account_tree</span>
+      図2｜憲法第9条の構造と学説上の争点
+    </div>
+    <svg width="100%" viewBox="0 0 900 488" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+      <defs>
+        <marker id="arr-solid2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-key2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr-eff2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+
+      <!-- ===== コネクタ（先に描画） ===== -->
+      <!-- N01→N02,N03 ファン -->
+      <line x1="450" y1="86" x2="450" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="300" y1="136" x2="600" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="300" y1="136" x2="300" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid2)"/>
+      <line x1="600" y1="136" x2="600" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid2)"/>
+
+      <!-- N02→N04,N05 ファン -->
+      <line x1="300" y1="242" x2="300" y2="289" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="200" y1="289" x2="380" y2="289" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="200" y1="289" x2="200" y2="334" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-key2)"/>
+      <line x1="380" y1="289" x2="380" y2="334" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-key2)"/>
+
+      <!-- N03→N06,N07 ファン -->
+      <line x1="600" y1="242" x2="600" y2="289" stroke="#e11d48" stroke-width="1.5"/>
+      <line x1="556" y1="289" x2="736" y2="289" stroke="#e11d48" stroke-width="1.5"/>
+      <line x1="556" y1="289" x2="556" y2="334" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-eff2)"/>
+      <line x1="736" y1="289" x2="736" y2="334" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr-eff2)"/>
+
+      <!-- コネクタラベル（L1上） -->
+      <rect x="240" y="149" width="120" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="300" y="164" text-anchor="middle" font-size="13" fill="#1d4ed8">第1項の内容</text>
+      <rect x="540" y="149" width="120" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="600" y="164" text-anchor="middle" font-size="13" fill="#1d4ed8">第2項の内容</text>
+
+      <!-- ===== ノード（後に描画） ===== -->
+
+      <!-- N01: 憲法第9条 Root -->
+      <g>
+        <rect x="370" y="30" width="160" height="56" rx="8" fill="#1d4ed8"/>
+        <text x="450" y="55" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">憲法第9条</text>
+        <text x="450" y="73" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">平和主義の核心条文</text>
+      </g>
+
+      <!-- N02: 第1項 -->
+      <g>
+        <rect x="240" y="186" width="120" height="56" rx="6" fill="#2563eb"/>
+        <text x="300" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">第1項</text>
+        <text x="300" y="229" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">戦争放棄</text>
+      </g>
+
+      <!-- N03: 第2項 -->
+      <g>
+        <rect x="500" y="186" width="200" height="56" rx="6" fill="#2563eb"/>
+        <text x="600" y="211" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">第2項</text>
+        <text x="600" y="229" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">戦力不保持・交戦権否認</text>
+      </g>
+
+      <!-- N04: 侵略戦争の放棄 (key) -->
+      <g>
+        <rect x="120" y="342" width="160" height="56" rx="6" fill="#ea580c"/>
+        <text x="200" y="367" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">侵略戦争の放棄</text>
+        <text x="200" y="385" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">国際紛争解決手段</text>
+      </g>
+
+      <!-- N05: 自衛戦争の解釈 (sub) -->
+      <g>
+        <rect x="300" y="342" width="160" height="56" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+        <text x="380" y="367" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">自衛戦争の解釈</text>
+        <text x="380" y="385" text-anchor="middle" fill="#7c2d12" font-size="12">学説上争いあり</text>
+      </g>
+
+      <!-- N06: 戦力不保持 (effect) -->
+      <g>
+        <rect x="480" y="342" width="152" height="56" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+        <text x="556" y="367" text-anchor="middle" fill="#9f1239" font-size="15" font-weight="700">戦力不保持</text>
+        <text x="556" y="385" text-anchor="middle" fill="#9f1239" font-size="12">自衛隊の法的地位問題</text>
+      </g>
+
+      <!-- N07: 交戦権の否認 (effect) -->
+      <g>
+        <rect x="660" y="342" width="152" height="56" rx="6" fill="#fff" stroke="#e11d48" stroke-width="2"/>
+        <text x="736" y="367" text-anchor="middle" fill="#9f1239" font-size="15" font-weight="700">交戦権の否認</text>
+        <text x="736" y="385" text-anchor="middle" fill="#9f1239" font-size="12">国際法上の権利</text>
+      </g>
+
+      <!-- 注記エリア -->
+      <rect x="20" y="418" width="860" height="50" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="450" y="438" text-anchor="middle" font-size="12" fill="#9f1239" font-weight="700">★ 最重要論点：9条2項の「前項の目的を達するため」の解釈</text>
+      <text x="450" y="456" text-anchor="middle" font-size="12" fill="#9f1239">限定説（政府見解）：侵略戦争目的の戦力のみ禁止→自衛力は合憲　／　全面放棄説（有力学説）：一切の戦力を禁止→自衛隊違憲</text>
+    </svg>
+  </div>
+
+  <p>図2は憲法第9条の構造を示す。1項と2項の役割分担、そして2項から派生する学説の対立が視覚的に整理されている。特に<strong><mark class="kw">「前項の目的を達するため」</mark></strong>という2項冒頭の文言の解釈が、自衛隊・自衛権・安保条約の合憲性をめぐる論争の焦点となっている。N06（戦力不保持）の「自衛隊の法的地位問題」は、政府解釈と有力学説が真っ向から対立する最大の論点であり、試験では砂川事件の判旨（統治行為論）と合わせて理解することが不可欠である。N07（交戦権の否認）は、国際法上の「交戦国の権利」（占領地の統治権・敵国船舶の拿捕等）を日本国は持たないことを意味し、自衛権とは区別して理解する必要がある。</p>
+</section>
+
+<!-- ===== 第4節 比較表 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>比較1｜三大原理の根拠条文・内容・制度的表れ</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">国民主権の原理</th>
+        <th class="col--b">平和主義</th>
+        <th class="col--c">基本的人権の尊重</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>主な根拠条文</td>
+        <td class="col--a"><strong class="em-a">前文・第1条</strong></td>
+        <td class="col--b"><strong class="em-b">前文・第9条</strong></td>
+        <td class="col--c"><strong class="em-c">前文・第11条・第13条・第97条</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">核心的内容</td>
+        <td class="col--a">国家権力の正統性は国民意思に由来し、権力は国民に帰属する。<strong class="em-a">代表民主制</strong>を基本とする。</td>
+        <td class="col--b">戦争・武力行使を放棄し、<strong class="em-b">戦力を保持せず</strong>、交戦権を否認する。</td>
+        <td class="col--c">固有・不可侵・永久の権利として<strong class="em-c">国家権力から個人を守る</strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">主な制度的表れ</td>
+        <td class="col--a">普通選挙・国民投票（96条）・住民投票（95条）・<strong class="em-a">象徴天皇制</strong></td>
+        <td class="col--b">自衛隊・<strong class="em-b">日米安保条約</strong>（政府解釈）・PKO参加</td>
+        <td class="col--c">自由権・社会権・参政権・請求権の各規定（<strong class="em-c">19〜40条</strong>）</td>
+      </tr>
+      <tr>
+        <td class="col--label">明治憲法との対比</td>
+        <td class="col--a">天皇主権→<strong class="em-a">国民主権</strong>へ転換</td>
+        <td class="col--b">軍事大国→<strong class="em-b">戦力放棄</strong>へ転換</td>
+        <td class="col--c">臣民の権利（恩恵的）→<strong class="em-c">固有の基本的人権</strong>へ転換</td>
+      </tr>
+      <tr>
+        <td class="col--label">主な試験論点</td>
+        <td class="col--a">国民主権の二つの意味・直接民主制的制度の例外</td>
+        <td class="col--b">9条の解釈・統治行為論・自衛権の限界</td>
+        <td class="col--c">三特質（固有性・不可侵性・永久性）・公共の福祉の意味</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>比較2｜憲法9条1項・2項の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">第9条第1項</th>
+        <th class="col--b">第9条第2項</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">放棄・禁止の内容</td>
+        <td class="col--a"><strong class="em-a">国権の発動たる戦争</strong>・武力による威嚇・武力の行使（3類型）の永久放棄</td>
+        <td class="col--b"><strong class="em-b">陸海空軍その他の戦力</strong>を保持しない＋国の交戦権を認めない（2類型）</td>
+      </tr>
+      <tr>
+        <td class="col--label">目的限定の有無</td>
+        <td class="col--a">「<strong class="em-a">国際紛争を解決する手段としては</strong>」という限定あり→自衛目的の行為は文理上1項の射程外とする解釈も</td>
+        <td class="col--b">「<strong class="em-b">前項の目的を達するため</strong>」という限定句あり→この解釈が最大の論点</td>
+      </tr>
+      <tr>
+        <td class="col--label">限定説の解釈</td>
+        <td class="col--a">侵略戦争のみ放棄。自衛戦争・自衛力は許容される。</td>
+        <td class="col--b">侵略目的の戦力のみ禁止。→自衛のための必要最小限の実力（自衛隊）は「戦力」に該当せず合憲。</td>
+      </tr>
+      <tr>
+        <td class="col--label">全面放棄説の解釈</td>
+        <td class="col--a">自衛戦争を含む一切の戦争を放棄。</td>
+        <td class="col--b">「前項の目的」は限定なく、一切の戦力が禁止される。→自衛隊は違憲。</td>
+      </tr>
+      <tr>
+        <td class="col--label">政府解釈・判例</td>
+        <td class="col--a">政府は限定説を採用。砂川事件判決：「9条は固有の自衛権を否定しない」</td>
+        <td class="col--b">「戦力」＝日本が主体的に指揮・管理できる戦力。駐留米軍は「戦力」に該当しない。自衛隊は「戦力」ではない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">試験で迷いやすいポイントの整理</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">「9条は自衛権を否定する」は誤り。</strong>砂川事件の最高裁判決は明確に「憲法9条はわが国が主権国として有する固有の自衛権を何ら否定してはいない」と述べている。9条によって否定されるのは自衛権そのものではなく、「自衛のための措置を、特定の手段（戦力保持・交戦権行使）によって行うこと」である（政府・最高裁解釈）。</p>
+      <p><strong class="em-c">「交戦権の否認」＝「自衛権の否定」と混同しないこと。</strong>交戦権（jus belli）とは国際法上、交戦国が有する権利の総称（敵船の拿捕、占領地の統治等）であり、日本はこれを憲法上放棄している。自衛権は国家の固有の権利であって交戦権とは別概念である。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第5節 関連条文 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">日本国憲法 前文（抜粋）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        日本国民は、<strong><mark class="kw">正当に選挙された国会における代表者を通じて行動し</mark></strong>、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて<strong><mark class="kw">自由のもたらす恵沢を確保</mark></strong>し、政府の行為によつて<strong><mark class="kw">再び戦争の惨禍が起ることのないやうにすること</mark></strong>を決意し、ここに<strong><mark class="kw-strong">主権が国民に存すること</mark></strong>を宣言し、この憲法を確定する。
+      </blockquote>
+      <p><strong>趣旨・解説：</strong>前文は日本国憲法の制定経緯と根本原理を宣言する。①<em class="em-a">代表民主制</em>（「正当に選挙された代表者を通じて行動」）、②<em class="em-a">平和主義</em>（「戦争の惨禍が起ることのないやうに」）、③<em class="em-a">国民主権</em>（「主権が国民に存すること」）の三大原理がここに明示されている。前文は法規範性を持つが、それだけを根拠として訴訟を提起することは認められないとするのが通説・判例の立場である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第1条（天皇）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        天皇は、<strong><mark class="kw">日本国の象徴</mark></strong>であり日本国民統合の象徴であつて、この地位は、<strong><mark class="kw">主権の存する日本国民の総意</mark></strong>に基く。
+      </blockquote>
+      <p><strong>趣旨・解説：</strong>第1条は「象徴天皇制」を規定しつつ、その地位の正統性根拠が「主権の存する日本国民の総意」にあることを明示することで、<em class="em-a">国民主権の原理</em>を宣言する機能も果たしている。天皇は「象徴」であって主権者ではない。国事行為（第6条・第7条）はすべて内閣の助言と承認を必要とし（第3条）、天皇が独自の政治的判断を行う余地はない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第9条（戦争の放棄）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        ① 日本国民は、<strong><mark class="kw">正義と秩序を基調とする国際平和を誠実に希求</mark></strong>し、国権の発動たる戦争と、<strong><mark class="kw">武力による威嚇又は武力の行使</mark></strong>は、国際紛争を解決する手段としては、<strong><mark class="kw-strong">永久にこれを放棄する</mark></strong>。<br>
+        ② <strong><mark class="kw">前項の目的を達するため</mark></strong>、陸海空軍その他の<strong><mark class="kw-strong">戦力は、これを保持しない</mark></strong>。国の<strong><mark class="kw-strong">交戦権は、これを認めない</mark></strong>。
+      </blockquote>
+      <p><strong>各要件の解説：</strong>1項は「永久に放棄する」と定め、将来にわたって戦争手段を放棄することを宣言する。「国権の発動たる戦争」とは宣戦布告を伴う形式的な戦争を指し、「武力による威嚇」と「武力の行使」も禁止対象に含まれる。ただし「<em class="em-a">国際紛争を解決する手段として</em>」という限定句があるため、限定説はここから自衛目的の行使を1項の射程外と解する。2項は戦力不保持と交戦権否認の二本柱。「<em class="em-a">前項の目的を達するため</em>」の解釈が最大の対立点（前述比較表参照）。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第11条（基本的人権の享有）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        国民は、すべての<strong><mark class="kw">基本的人権の享有を妨げられない</mark></strong>。この憲法が国民に保障する基本的人権は、<strong><mark class="kw">侵すことのできない永久の権利</mark></strong>として、現在及び<strong><mark class="kw">将来の国民</mark></strong>に与へられる。
+      </blockquote>
+      <p><strong>解説：</strong>第11条は人権の享有（保有と行使）が妨げられないことを宣言し、人権の「<em class="em-a">不可侵性</em>」と「<em class="em-a">永久性</em>」（将来の国民にも）を規定する。「享有」とは生まれながらにして権利を有することを意味し、<em class="em-a">固有性</em>を示す。第97条とあわせて人権の本質を規律する最重要条文の一つである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第12条（自由・権利の保持義務、濫用の禁止）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        この憲法が国民に保障する自由及び権利は、国民の<strong><mark class="kw">不断の努力</mark></strong>によつて、これを保持しなければならない。又、国民は、これを<strong><mark class="kw">濫用してはならないのであつて</mark></strong>、常に<strong><mark class="kw">公共の福祉のためにこれを利用する責任</mark></strong>を負ふ。
+      </blockquote>
+      <p><strong>解説：</strong>第12条は二つのことを規定する。①権利保持の責任：権利は自動的に保障されるわけではなく、国民自身が「不断の努力」によって守り続けなければならない（権利は与えられるものではなく獲得するものという思想）。②権利濫用の禁止：権利も「公共の福祉」のために利用する責任を伴い、無制限に行使できるわけではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第13条（個人の尊重・幸福追求権）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        すべて国民は、<strong><mark class="kw">個人として尊重</mark></strong>される。生命、自由及び幸福追求に対する<strong><mark class="kw">国民の権利</mark></strong>については、公共の福祉に反しない限り、<strong><mark class="kw">立法その他の国政の上で、最大の尊重</mark></strong>を必要とする。
+      </blockquote>
+      <p><strong>解説：</strong>前段「<em class="em-a">個人として尊重</em>」という文言は、個人の尊厳を最高価値とする近代立憲主義の精神を表す。後段の「<em class="em-a">幸福追求権</em>」は、第14条以下の個別的人権規定に列挙されていない新しい権利（プライバシー権・肖像権・自己決定権等）の根拠条文として機能する<em class="em-a">包括的基本権</em>である。公共の福祉による制限の余地があることも明記されている。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">第97条（基本的人権の本質）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        この憲法が日本国民に保障する基本的人権は、<strong><mark class="kw">人類の多年にわたる自由獲得の努力の成果</mark></strong>であつて、これらの権利は、過去幾多の試錬に堪へ、現在及び将来の国民に対し、<strong><mark class="kw">侵すことのできない永久の権利</mark></strong>として信託されたものである。
+      </blockquote>
+      <p><strong>解説：</strong>第97条は最高法規の章（第10章）に位置する。人権が歴史的な闘争・苦難の末に獲得されてきたものであることを明示し（<em class="em-a">固有性</em>・<em class="em-a">永久性</em>）、それが現在・将来の国民へ「<em class="em-a">信託</em>」されていると表現する。第11条と内容的に重複するが、第97条が最高法規章に置かれた趣旨は、基本的人権が最高法規たる憲法の根幹であることを強調するためと解されている。<strong class="warn">注意：</strong>第11条と第97条の役割・位置づけの違いを問う問題が出題される。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第6節 重要判例 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <!-- 砂川事件 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷　昭和34年12月16日　刑集13巻13号3225頁</div>
+      <div class="case-card__title">砂川事件（米軍立川基地事件・跳躍上告事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">憲法9条</span>
+        <span class="badge badge--law">統治行為論</span>
+        <span class="badge badge--law">司法審査権の限界</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>1957年（昭和32年）、東京都北多摩郡砂川町（現立川市）に所在する米軍立川飛行場の拡張計画に反対する学生・農民らのデモ隊が、測量に対する抗議行動中に基地の境界柵を壊して立ち入り禁止区域に数メートル侵入した。これが安保条約に基づく刑事特別法2条（米軍使用施設への不正侵入）違反として起訴された。第一審東京地裁（いわゆる「伊達判決」昭和34年3月30日）は、米軍の駐留は憲法9条2項の「戦力不保持」規定に違反するとして被告人全員を無罪とした。検察側はこの判決に対して高裁を経由しない異例の「跳躍上告」（直接最高裁への上告）を行い、最高裁の判断を仰いだ。争点は①憲法9条2項に禁止される「戦力」に駐留米軍が当たるか、②日米安全保障条約は司法審査の対象となるか、という二点であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷（裁判長・田中耕太郎長官）は原判決を破棄し東京地裁に差し戻した。まず9条と自衛権について、「憲法9条はわが国が主権国として有する<em class="em-a">固有の自衛権を何ら否定してはいない</em>」「わが憲法の平和主義は決して無防備、無抵抗を定めたものではない」と述べ、自衛権の存在を認めた。また9条2項が禁止する「戦力」とは「わが国が主体となって指揮権・管理権を行使できる戦力」をいうとし、駐留米軍は日本が主体的に管理する戦力ではないから「戦力」に該当しないと判断した。
+      次いで統治行為論として、「本件安全保障条約は、主権国としてのわが国の存立の基礎に極めて重大な関係をもつ<em class="em-a">高度の政治性を有するもの</em>であって、その内容が違憲なりや否やの法的判断は、…純司法的機能をその使命とする司法裁判所の審査には、原則としてなじまない性質のものであり、したがって、<em class="em-a">一見極めて明白に違憲無効であると認められない限りは、裁判所の司法審査権の範囲外のもの</em>」と述べた。そして安保条約は一見明白に違憲無効とは認められないとして、一審判決を破棄した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判決の試験上の意義は三点ある。第一に<em class="em-a">統治行為論の確立</em>：「高度の政治性を有する国家行為」は、一見明白な違憲性がない限り司法審査の対象外とされる。これは司法権の限界（憲法76条）の問題として位置づけられる。第二に<em class="em-a">自衛権の存在の承認</em>：9条は自衛権を否定しないという最高裁の立場が示された。第三に<em class="em-a">「戦力」の定義</em>：日本が主体的に指揮・管理できる戦力が禁止されており、駐留外国軍はこれに当たらないとした点が重要。試験では「砂川事件判決は安保条約が合憲であると判断した」という選択肢が×となることに注意せよ。判決は「一見明白に違憲とは言えない」と述べたのであって、積極的に合憲と判断したわけではない。</p>
+    </div>
+  </div>
+
+  <!-- 長沼ナイキ基地訴訟 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">一審：札幌地裁昭和48年9月7日（福島判決）　控訴審：札幌高裁昭和51年8月5日　上告審：最高裁昭和57年9月9日</div>
+      <div class="case-card__title">長沼ナイキ基地訴訟（自衛隊基地建設・保安林解除処分取消請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">憲法9条</span>
+        <span class="badge badge--law">自衛隊の合憲性</span>
+        <span class="badge badge--law">統治行為論</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>北海道長沼町において、航空自衛隊ナイキ（地対空ミサイル）基地建設のために農林大臣が保安林の指定を解除した処分に対し、地元住民らが治水機能・洪水防止の観点から当該処分の取消を求めて訴訟を提起した。住民側は主たる訴訟上の主張として自衛隊の憲法9条2項違反を援用した。本件は訴訟要件（原告適格・訴えの利益）と実体（自衛隊の合憲性）の両面で重要な争点を含んでいた。</p>
+      <h4>判旨（三審の経緯）</h4>
+      <p><em class="em-a">一審（札幌地裁・福島裁判長、「福島判決」）</em>：原告の訴えを適法と認め実体審理を行い、「自衛隊は憲法9条2項にいう『陸海空軍その他の戦力』に該当し、自衛隊の存在は違憲である」という大胆な違憲判断を示して原告勝訴とした。これは下級裁判所による唯一の自衛隊違憲判決として知られる。<em class="em-a">控訴審（札幌高裁）</em>：長沼ダム建設によって洪水防止機能が回復されたことを理由に原告の訴えの利益（狭義）が消滅したとして、実体判断を回避し訴えを却下（一審判決取消）した。<em class="em-a">上告審（最高裁）</em>：同様に訴えの利益の消滅を理由に上告棄却。最高裁も自衛隊の合憲性について判断を示さなかった。</p>
+      <h4>試験上の意義</h4>
+      <p>本件の試験上の価値は二点にある。第一に、<em class="em-a">下級裁判所による自衛隊違憲判決の存在</em>：一審の福島判決は「自衛隊＝戦力に該当し違憲」と判断した唯一の裁判例であり、全面放棄説の司法実践例として重要である。第二に、<em class="em-a">上級審による司法的判断回避の手法</em>：高裁・最高裁は実体判断を回避することで自衛隊の合憲性問題に結論を出さなかった。最高裁が統治行為論（砂川事件）または訴訟要件論によって判断を回避してきたという傾向を示す。試験では「最高裁は自衛隊が合憲であると判断した」「最高裁は自衛隊が違憲であると判断した」はいずれも不正解であることに注意する。</p>
+    </div>
+  </div>
+
+  <!-- 百里基地訴訟 -->
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　平成元年6月20日　民集43巻6号385頁</div>
+      <div class="case-card__title">百里基地訴訟（自衛隊基地用地売買契約無効確認請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">憲法9条</span>
+        <span class="badge badge--law">私人間効力</span>
+        <span class="badge badge--law">直接適用否定</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>茨城県に所在する航空自衛隊百里基地の用地取得に際し、国は土地の売主とその地所の売買契約を締結した。その後、売主側（最終的には原告）が「自衛隊基地の建設は憲法9条の平和主義に違反するものであり、かかる違法目的のための売買契約は民法90条（公序良俗）に違反して無効である」と主張して、契約の無効確認を求めて訴訟を提起した。本件の根本的な問題は、憲法規定（9条の平和主義）が私人間の法律行為（売買契約）に対して直接適用されるか否か、という「憲法の私人間効力」の問題であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、「<em class="em-a">憲法9条は、その憲法規範として性格上、国の政治的・軍事的行動を規律するものであり、直接には私人間の法律関係を規律することを予定したものではない</em>」と判示し、憲法9条が私人間の売買契約に直接適用されることを否定した。また、同契約が民法90条（公序良俗）違反にも当たらないとし、売買契約は有効であると結論した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判決は「<em class="em-a">憲法規定の私人間効力</em>」（いわゆる水平的効力）の問題について重要な立場を示している。日本国憲法は国家（公権力）対国民の関係を規律するものであり、私人と私人の間の法律関係に直接適用されるわけではない（この問題は通常、三菱樹脂事件〔最大判昭48.12.12〕で扱われる間接適用説が通説であるが、百里基地訴訟は9条に関する具体的適用の問題として独立した意義を持つ）。試験では「9条の私人間直接適用を否定した判例」として把握しておくこと。また、「自衛隊基地用地購入のための契約が公序良俗に違反して無効か」という論点で、最高裁が「無効ではない」と判断した事実も重要である。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第7節 試験対策ポイント ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ（1）：平和主義・9条の解釈</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">砂川事件に関する4つの重要命題を正確に覚えよ：</strong></p>
+      <ul class="note-list">
+        <li>○「砂川事件判決は、憲法9条が日本の固有の自衛権を否定していないと述べた」→ 正しい</li>
+        <li>○「砂川事件判決は、9条2項が禁ずる戦力とは日本が主体的に指揮・管理できる戦力をいい、駐留米軍はこれに当たらないとした」→ 正しい</li>
+        <li>×「砂川事件判決は、日米安全保障条約が合憲であると積極的に判断した」→ 誤り（「一見明白に違憲とは認められない」という消極的判断にとどまる）</li>
+        <li>×「砂川事件判決は、高度の政治性を有する国家行為は一切司法審査の対象にならないとした」→ 誤り（「一見極めて明白に違憲無効と認められる場合」は司法審査が及ぶ）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ（2）：基本的人権の三特質</span>
+    </div>
+    <div class="box__bd">
+      <p>試験では「固有性・不可侵性・永久性の定義」と「根拠条文（第11条・第97条）」の正確な対応が問われる。特に注意すべき点として：</p>
+      <ul class="note-list">
+        <li><strong class="em-c">「固有性」＝生まれながらに持つ権利、国家から与えられた権利ではない</strong>（自然権思想の反映）</li>
+        <li><strong class="em-c">「不可侵性」＝国家権力によっても侵すことができない性格</strong>（第11条「侵すことのできない権利」）</li>
+        <li><strong class="em-c">「永久性」＝現在の国民のみならず将来の国民にも保障される</strong>（第11条・第97条「将来の国民に」）</li>
+      </ul>
+      <p><strong class="warn">落とし穴：</strong>第11条と第97条の内容は似ているが、第97条が「最高法規」章（第10章）に置かれているのに対し、第11条は「基本的人権」章（第3章）に置かれている。この位置づけの違いが問われることがある。また第97条は2022年の教育基本法等改正の議論で削除論が出たが、現行では存続している。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ（3）：国民主権と代表民主制</span>
+    </div>
+    <div class="box__bd">
+      <p>日本国憲法における直接民主制的要素の「例外的列挙」を正確に覚えることが重要である：</p>
+      <ul class="note-list">
+        <li><strong>第96条</strong>：憲法改正のための<em class="em-a">国民投票</em>（特別の国民投票または国会の定める選挙の際に行われる投票）</li>
+        <li><strong>第95条</strong>：一の地方公共団体のみに適用される特別法の<em class="em-a">住民投票</em></li>
+        <li><strong>第79条2項</strong>：最高裁裁判官の<em class="em-a">国民審査</em>（厳密には代表民主制内の制度だが、直接民主制的性格を持つ）</li>
+      </ul>
+      <p>上記以外の場面（法律の制定・予算の議決・条約の承認等）は、代表者（国会）を通じた間接民主制による。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン集：よく出る誤り</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="em-c">誤り1：「9条2項は一切の戦争・武力行使を禁止している」</strong>→ 1項が戦争放棄を規定し、2項が戦力不保持・交戦権否認を規定する。「一切の戦争・武力行使禁止」は1項（の一解釈）の話であって、2項はそれを実現するための手段規定である。</p>
+      <p><strong class="em-c">誤り2：「最高裁は自衛隊を合憲と認めた」</strong>→ 最高裁はいずれの事件においても自衛隊の合憲性について直接の判断を示したことはない。砂川事件は安保条約の司法審査限界、長沼事件（上告審）は訴えの利益の消滅による判断回避である。</p>
+      <p><strong class="em-c">誤り3：「公共の福祉は人権の外部にある制約原理だから、立法者は広く人権を制限できる」</strong>→ これは宮沢説の一元的外在制約説であり、現在の通説ではない。通説（内在的制約説・二元説）は公共の福祉を人権相互の衝突を調整する原理と解し、比例原則・違憲審査基準の適用を要求する。</p>
+      <p><strong class="em-c">誤り4：「前文は法的拘束力がないから訴訟の根拠にならない」</strong>→ 前文は憲法の一部として法規範性を持つとするのが多数説。ただし「前文のみを根拠として独立した具体的権利の侵害を訴訟で主張することは認められない」という限定が正確な理解である。</p>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p>本単元は憲法の他の単元すべてと連関するが、特に重要な横断論点として次の三点を挙げる。第一に<strong><mark class="kw">統治行為論</mark></strong>（本単元：砂川事件）は憲法第14章「裁判所」（司法権の限界・違憲審査制）と直結する。第二に<strong><mark class="kw">基本的人権の公共の福祉による制限</mark></strong>は、精神的自由権・経済的自由権の各論（二重の基準論・規制目的二分論）へと展開される。第三に<strong><mark class="kw">国民主権と国会の地位</mark></strong>（第41条「国権の最高機関」）の関係は、統治機構論の起点となる。また行政法との接点として、行政権（内閣）の行使も国民主権・基本的人権尊重の原理に拘束されることが「法律による行政の原理」（行政法の一般原則）の背景にある。</p>
+</section>
+
+<!-- ===== 第8節 補足情報 ===== -->
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">立法経緯と歴史的背景</span>
+    </div>
+    <div class="box__bd">
+      <p>日本国憲法は1945年8月のポツダム宣言受諾による終戦後、GHQ（連合国軍最高司令官総司令部）の強い関与のもとで制定された。GHQマッカーサー草案（1946年2月）が基礎となり、日本政府との交渉を経て同年11月3日に公布、1947年5月3日に施行された。<strong><mark class="kw">三大原理</mark></strong>のうち平和主義（9条）は、昭和天皇・幣原首相の発案説とマッカーサー指示説が諸説あるが、GHQ草案に9条相当規定が盛り込まれたことは確実である。大日本帝国憲法における「天皇主権」「軍事大国化」「臣民の権利（法律の留保付き）」という枠組みを根本的に転換するものとして三大原理は機能した。</p>
+      <p>国民主権については、大日本帝国憲法第1条「大日本帝国ハ万世一系ノ天皇之ヲ統治ス」という天皇主権から、「主権の存する日本国民」（現憲法前文・第1条）への転換が最も本質的な変更であった。天皇の地位も「統治者」から「象徴」へと変わり、国事行為には内閣の助言と承認が必要とされるようになった。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">近年の動向と関連改革</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">安保法制（2015年）</mark></strong>：集団的自衛権の限定的行使を容認する平和安全法制が成立した。具体的には「存立危機事態」（密接な関係にある他国への武力攻撃により日本の存立が脅かされ、国民の権利が根底から覆される明白な危険がある場合）において、一定の要件のもとで武力行使が認められるとされた。この解釈変更については、憲法学者の多数が「解釈改憲」として違憲の疑いを指摘する一方、政府は「砂川事件判決が自衛権の存在を認めており、必要最小限度の自衛措置として許容される」と主張した。行政書士試験での直接出題は今後増える可能性がある。</p>
+      <p><strong><mark class="kw">憲法改正論議</mark></strong>：9条への自衛隊明記・9条2項の改正等が政治的議題となっているが、現時点（2026年）では改正は行われていない。試験では現行条文・現行解釈に基づいて答えることが基本である。</p>
+      <p><strong><mark class="kw">平和的生存権の法規範性</mark></strong>：名古屋高裁平成20年4月17日判決（イラク派遣違憲確認訴訟）は、平和的生存権が憲法前文および9条の趣旨から導かれる具体的権利として一定の法規範性を認めた点で注目された。最高裁は未判断であり、今後の展開が注目される。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">学習上の整理のポイント</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元の効果的な学習法として、次の整理視点を活用するとよい。</p>
+      <p><strong>（1）条文の「位置」から意味を理解する：</strong>第11条が第3章「国民の権利及び義務」の冒頭に、第97条が第10章「最高法規」に置かれている理由を問うことで、両条の機能の違いが明確になる。法典のどこに置かれているかは立法者のメッセージである。</p>
+      <p><strong>（2）「否定しない」と「認める」の違いに敏感になる：</strong>砂川事件判決は「9条は自衛権を否定しない」と述べた。これは「9条は自衛権を積極的に認める」という意味ではない。この微妙な表現の差が試験の正誤判定に直結する。</p>
+      <p><strong>（3）政府解釈・最高裁判例・学説の三層構造を意識する：</strong>自衛隊合憲論は「政府解釈（合憲）・最高裁（判断回避）・学説多数（違憲説有力）」という三層が並立する。試験では「裁判所の立場」を問うのか「政府の立場」を問うのかを見極めることが重要である。</p>
+      <p><strong>（4）本単元と行政法の接続を常に意識する：</strong>行政書士試験の中心科目は行政法であるが、行政法の基礎概念（法律による行政、比例原則、平等原則等）は憲法の基本原理（特に基本的人権の尊重・法の支配）から派生している。本単元を「行政法への入口」として体系的に位置づけることが理解の深度を高める。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

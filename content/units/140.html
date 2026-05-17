@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I. 民法 - 40.相続人と相続分（法定相続人と相続順位、法定相続分、遺言による相続分の指定）</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">相続人と相続分</h1>
+  <p class="page-title-block__sub">誰が相続人になるか、どの順位で相続するか、どの割合で承継するかを条文と判例から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法886条</span>
+    <span class="badge badge--info">民法887条</span>
+    <span class="badge badge--info">民法889条</span>
+    <span class="badge badge--info">民法890条</span>
+    <span class="badge badge--info">民法900条</span>
+    <span class="badge badge--info">民法902条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">相続人</mark></strong>と<strong><mark class="kw">相続分</mark></strong>は、相続法の入口である。被相続人が死亡すると、相続は死亡の時に開始し、相続人は被相続人の財産に属した一切の権利義務を承継する。もっとも、実際の問題では、まず「誰が相続人か」を確定し、次に「相続人の間でどの割合を基準にするか」を決めなければ、遺産分割、相続債務、遺留分、相続登記のいずれも処理できない。</p>
+  <p>本単元の中心は、第一に<strong><mark class="kw">法定相続人</mark></strong>の範囲、第二に<strong><mark class="kw">相続順位</mark></strong>、第三に<strong><mark class="kw">法定相続分</mark></strong>、第四に<strong><mark class="kw">遺言による相続分の指定</mark></strong>である。配偶者は常に相続人になるが、血族相続人は子、直系尊属、兄弟姉妹の順に登場する。子が先に死亡している場合には<strong><mark class="kw">代襲相続</mark></strong>が問題になり、遺言がある場合には<strong><mark class="kw">指定相続分</mark></strong>が法定相続分より優先する。</p>
+  <p>行政書士試験では、条文の順序を覚えるだけでは足りない。たとえば「配偶者と兄弟姉妹が相続人なら配偶者四分の三、兄弟姉妹四分の一」であること、兄弟姉妹の代襲は甥・姪までで再代襲しないこと、胎児は相続について既に生まれたものとみなされること、遺言で相続分を指定しても遺留分を侵害できないことが問われる。数字の暗記と、家族関係の図式化を結び付けて解く単元である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る相続分の入口</span>
+    </div>
+    <div class="box__bd">
+      <p>被相続人Aが死亡し、Aには配偶者B、子C、子Dがいる。この場合、B、C、Dが相続人であり、法定相続分はBが二分の一、CとDが各四分の一である。もしCがAより先に死亡し、Cに子Eがいれば、EはCを代襲して相続人になる。さらにAが「Bに四分の三、Dに四分の一を相続させる」と遺言していれば、原則としてその指定が法定相続分より優先する。ただし、他の相続人の遺留分を侵害する場合は、遺留分侵害額請求の問題が残る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法定相続人</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法定相続人</mark></strong>とは、民法の規定により相続人となる者である。配偶者は<strong><mark class="kw">民法890条</mark></strong>により常に相続人となり、血族相続人は<strong><mark class="kw">民法887条</mark></strong>及び<strong><mark class="kw">民法889条</mark></strong>により、子、直系尊属、兄弟姉妹の順で相続人となる。制度趣旨は、被相続人に最も近い家族関係を基準に、死亡後の財産承継を画一的かつ予測可能に処理する点にある。配偶者だけは血族順位と競合して常に登場するため、「配偶者順位」という別順位があるわけではない。試験では、内縁配偶者、離婚した元配偶者、相続欠格者、相続放棄者を当然に相続人とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相続順位</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相続順位</mark></strong>とは、血族相続人のうち誰が先に相続人となるかを決める順序である。第一順位は子、第二順位は直系尊属、第三順位は兄弟姉妹である。第一順位の子がいれば、直系尊属や兄弟姉妹は相続人にならない。子もその代襲者もいないときに直系尊属が登場し、直系尊属もいないときに兄弟姉妹が登場する。直系尊属では親等の近い者が先になるため、父母がいれば祖父母は相続人にならない。試験では「父母と兄弟姉妹が同時に血族相続人となる」「祖父母と父母は同順位である」という肢を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代襲相続</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代襲相続</mark></strong>とは、本来相続人となるべき子又は兄弟姉妹が、相続開始前の死亡、相続欠格、廃除によって相続権を失っている場合に、その者の子が代わって相続人となる制度である。根拠は子について<strong><mark class="kw">民法887条2項</mark></strong>、兄弟姉妹について<strong><mark class="kw">民法889条2項</mark></strong>である。制度趣旨は、本来の相続人の系統に承継期待を残し、偶然の死亡時期によって孫や甥・姪の地位が不当に左右されることを防ぐ点にある。ただし、相続放棄は代襲原因ではない。子の代襲では再代襲があるが、兄弟姉妹の代襲では再代襲がない。試験では、相続放棄を代襲原因に含める肢、兄弟姉妹について甥・姪の子まで再代襲できるとする肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法定相続分</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法定相続分</mark></strong>とは、民法が標準として定める各共同相続人の相続割合である。根拠は<strong><mark class="kw">民法900条</mark></strong>で、配偶者と子なら配偶者二分の一・子二分の一、配偶者と直系尊属なら配偶者三分の二・直系尊属三分の一、配偶者と兄弟姉妹なら配偶者四分の三・兄弟姉妹四分の一となる。同順位者が複数いるときは、その順位に割り当てられた持分を原則として均等に分ける。父母の一方のみを同じくする兄弟姉妹は、父母の双方を同じくする兄弟姉妹の相続分の二分の一である。法定相続分は遺産分割の出発点であり、指定相続分や特別受益、寄与分がある場合には修正される。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">指定相続分</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">指定相続分</mark></strong>とは、被相続人が遺言で共同相続人の相続分を定め、又は第三者にその指定を委託することによって決まる相続割合である。根拠は<strong><mark class="kw">民法902条</mark></strong>であり、被相続人の意思を尊重する制度である。指定相続分は法定相続分より優先するが、遺留分に関する規定に違反できない。したがって「長男に全部を相続させる」と遺言しても、配偶者や他の子の遺留分が侵害されれば、遺留分侵害額請求が問題になる。試験では、指定相続分があれば常に遺留分も排除できるという肢、又は法定相続分が常に遺言より優先するという肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">特別受益・寄与分との関係</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">特別受益</mark></strong>と<strong><mark class="kw">寄与分</mark></strong>は、法定相続分又は指定相続分を前提に、共同相続人間の実質的公平を調整する制度である。特別受益は、婚姻・養子縁組・生計の資本として生前贈与などを受けた相続人の取り分を調整する。寄与分は、被相続人の財産の維持又は増加に特別の寄与をした共同相続人の取り分を増やす。相続人と相続分の単元では、まず形式的な相続人と基準割合を確定し、その後の単元で実質的修正を学ぶという位置づけで理解する。試験では、法定相続分だけで常に最終取得額が決まると考えないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="相続人確定の全体構造">
+      <defs>
+        <marker id="arr40a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr40a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr40a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="105" x2="590" y2="150" stroke="#2563eb" stroke-width="3"/>
+      <line x1="210" y1="150" x2="970" y2="150" stroke="#2563eb" stroke-width="3"/>
+      <line x1="210" y1="150" x2="210" y2="214" stroke="#2563eb" stroke-width="3" marker-end="url(#arr40a-blue)"/>
+      <line x1="590" y1="150" x2="590" y2="214" stroke="#2563eb" stroke-width="3" marker-end="url(#arr40a-blue)"/>
+      <line x1="970" y1="150" x2="970" y2="214" stroke="#2563eb" stroke-width="3" marker-end="url(#arr40a-blue)"/>
+      <line x1="590" y1="330" x2="590" y2="390" stroke="#ea580c" stroke-width="3"/>
+      <line x1="210" y1="390" x2="970" y2="390" stroke="#ea580c" stroke-width="3"/>
+      <line x1="210" y1="390" x2="210" y2="454" stroke="#ea580c" stroke-width="3" marker-end="url(#arr40a-orange)"/>
+      <line x1="590" y1="390" x2="590" y2="454" stroke="#ea580c" stroke-width="3" marker-end="url(#arr40a-orange)"/>
+      <line x1="970" y1="390" x2="970" y2="454" stroke="#ea580c" stroke-width="3" marker-end="url(#arr40a-orange)"/>
+      <path d="M365 505 H435" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr40a-red)"/>
+      <path d="M745 505 H815" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr40a-red)"/>
+
+      <rect x="410" y="35" width="360" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">相続開始</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">被相続人の死亡時に発生</text>
+
+      <rect x="55" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">配偶者</text>
+      <text x="210" y="282" text-anchor="middle" font-size="13" fill="#1e3a8a">民法890条</text>
+      <text x="210" y="306" text-anchor="middle" font-size="13" fill="#1e3a8a">常に相続人となる</text>
+
+      <rect x="435" y="220" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">血族相続人</text>
+      <text x="590" y="282" text-anchor="middle" font-size="13" fill="#7c2d12">民法887条・889条</text>
+      <text x="590" y="306" text-anchor="middle" font-size="13" fill="#7c2d12">順位に従って登場</text>
+
+      <rect x="815" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="970" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">胎児</text>
+      <text x="970" y="282" text-anchor="middle" font-size="13" fill="#1e3a8a">民法886条</text>
+      <text x="970" y="306" text-anchor="middle" font-size="13" fill="#1e3a8a">相続では既に生まれたもの</text>
+
+      <rect x="55" y="460" width="310" height="105" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="210" y="494" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">第一順位 子</text>
+      <text x="210" y="520" text-anchor="middle" font-size="13" fill="#7c2d12">代襲・再代襲あり</text>
+      <text x="210" y="543" text-anchor="middle" font-size="13" fill="#7c2d12">民法887条</text>
+
+      <rect x="435" y="460" width="310" height="105" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="494" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">第二順位 直系尊属</text>
+      <text x="590" y="520" text-anchor="middle" font-size="13" fill="#1e3a8a">親等の近い者が先</text>
+      <text x="590" y="543" text-anchor="middle" font-size="13" fill="#1e3a8a">民法889条1項1号</text>
+
+      <rect x="815" y="460" width="310" height="105" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="970" y="494" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">第三順位 兄弟姉妹</text>
+      <text x="970" y="520" text-anchor="middle" font-size="13" fill="#9f1239">甥・姪への代襲まで</text>
+      <text x="970" y="543" text-anchor="middle" font-size="13" fill="#9f1239">民法889条1項2号</text>
+
+      <rect x="160" y="650" width="860" height="52" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4"/>
+      <text x="590" y="681" text-anchor="middle" font-size="13" fill="#9f1239">相続放棄は代襲原因ではない。相続欠格・廃除・相続開始前死亡と区別する。</text>
+    </svg>
+  </div>
+  <p>この図は、相続人の確定を「配偶者」と「血族相続人」に分けて示している。配偶者は常に相続人になる一方、血族相続人は子、直系尊属、兄弟姉妹の順に登場する。子の系統では代襲相続と再代襲があり、兄弟姉妹の系統では甥・姪までに限られる。胎児は相続について既に生まれたものとみなされるため、相続人の確定では死亡時に生まれていない子についても確認する必要がある。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 780" role="img" aria-label="相続分計算と指定相続分の判断手順">
+      <defs>
+        <marker id="arr40b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr40b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr40b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="105" x2="590" y2="158" stroke="#2563eb" stroke-width="3" marker-end="url(#arr40b-blue)"/>
+      <line x1="590" y1="260" x2="590" y2="318" stroke="#2563eb" stroke-width="3" marker-end="url(#arr40b-blue)"/>
+      <line x1="590" y1="420" x2="590" y2="478" stroke="#ea580c" stroke-width="3" marker-end="url(#arr40b-orange)"/>
+      <line x1="590" y1="580" x2="590" y2="638" stroke="#e11d48" stroke-width="3" marker-end="url(#arr40b-red)"/>
+      <path d="M800 370 H950 V210 H805" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr40b-red)"/>
+      <rect x="835" y="280" width="90" height="24" rx="3" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="880" y="297" text-anchor="middle" font-size="13" fill="#9f1239">遺言確認</text>
+
+      <rect x="390" y="35" width="400" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">相続人を確定</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">配偶者・血族順位・代襲の確認</text>
+
+      <rect x="390" y="165" width="400" height="95" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="199" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">法定相続分を置く</text>
+      <text x="590" y="225" text-anchor="middle" font-size="13" fill="#1e3a8a">民法900条の三類型</text>
+      <text x="590" y="248" text-anchor="middle" font-size="13" fill="#1e3a8a">子・直系尊属・兄弟姉妹の組合せ</text>
+
+      <rect x="380" y="325" width="420" height="95" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="359" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">遺言による指定を確認</text>
+      <text x="590" y="385" text-anchor="middle" font-size="13" fill="#7c2d12">民法902条</text>
+      <text x="590" y="408" text-anchor="middle" font-size="13" fill="#7c2d12">指定相続分は法定相続分に優先</text>
+
+      <rect x="380" y="485" width="420" height="95" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="519" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">遺留分・特別受益等で修正</text>
+      <text x="590" y="545" text-anchor="middle" font-size="13" fill="#7c2d12">指定も遺留分を害せない</text>
+      <text x="590" y="568" text-anchor="middle" font-size="13" fill="#7c2d12">具体的相続分へ進む</text>
+
+      <rect x="360" y="645" width="460" height="80" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="679" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">対抗・債務承継を別途確認</text>
+      <text x="590" y="705" text-anchor="middle" font-size="13" fill="#9f1239">民法899条の2・902条の2</text>
+
+      <rect x="95" y="330" width="220" height="82" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="205" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">遺言なし</text>
+      <text x="205" y="389" text-anchor="middle" font-size="13" fill="#1e3a8a">法定相続分が基準</text>
+
+      <rect x="865" y="330" width="220" height="82" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="975" y="362" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">遺言あり</text>
+      <text x="975" y="389" text-anchor="middle" font-size="13" fill="#9f1239">指定相続分を優先</text>
+    </svg>
+  </div>
+  <p>この図は、相続分を計算するときの順序を示している。まず相続人を確定し、次に民法900条の法定相続分を仮置きする。そのうえで遺言があれば指定相続分が優先し、遺留分、特別受益、寄与分などによって最終的な取得額が調整される。さらに、指定相続分による権利取得を第三者に主張する場面や、相続債務の承継では、民法899条の2や902条の2のような対抗・債務承継の規律を別に確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">第一順位 子</th>
+        <th class="col--b">第二順位 直系尊属</th>
+        <th class="col--c">第三順位 兄弟姉妹</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">登場場面</td>
+        <td class="col--a"><span class="em-a">子がいるとき</span>に最優先で血族相続人となる。</td>
+        <td class="col--b">子及びその代襲者がいないときに<span class="em-b">直系尊属</span>が相続人となる。</td>
+        <td class="col--c">子・直系尊属がいないときに<span class="em-c">兄弟姉妹</span>が相続人となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法887条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法889条1項1号</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法889条1項2号</mark></strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">代襲</td>
+        <td class="col--a">子の子、さらにその下の直系卑属へ<span class="em-a">再代襲</span>がある。</td>
+        <td class="col--b">代襲相続の問題ではなく、親等の近い者が優先する。</td>
+        <td class="col--c">兄弟姉妹の子、つまり甥・姪まで。<span class="em-c">再代襲なし</span>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">配偶者との相続分</td>
+        <td class="col--a">配偶者二分の一、子二分の一。</td>
+        <td class="col--b">配偶者三分の二、直系尊属三分の一。</td>
+        <td class="col--c">配偶者四分の三、兄弟姉妹四分の一。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">相続放棄した子の子が代襲できるとする肢。</td>
+        <td class="col--b">父母と祖父母が同時に相続人になるとする肢。</td>
+        <td class="col--c">兄弟姉妹について甥・姪の子まで代襲できるとする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">法定相続分</th>
+        <th class="col--b">指定相続分</th>
+        <th class="col--c">具体的相続分</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">意味</td>
+        <td class="col--a">民法が定める標準割合。</td>
+        <td class="col--b">遺言で被相続人が定めた割合。</td>
+        <td class="col--c">特別受益・寄与分などを反映した実質的な取得割合。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><strong><mark class="kw">民法900条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法902条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法903条</mark></strong>、<strong><mark class="kw">民法904条の2</mark></strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">優先関係</td>
+        <td class="col--a">遺言がない場合の出発点。</td>
+        <td class="col--b">法定相続分より<span class="em-b">優先</span>する。</td>
+        <td class="col--c">遺産分割で最終的な公平を図る調整。</td>
+      </tr>
+      <tr>
+        <td class="col--label">限界</td>
+        <td class="col--a">被相続人の意思や公平調整で修正され得る。</td>
+        <td class="col--b">遺留分を侵害することはできない。</td>
+        <td class="col--c">資料不足や期間制限により主張できない場合がある。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での見分け方</td>
+        <td class="col--a">条文の割合を問う単純計算。</td>
+        <td class="col--b">遺言がある事案で法定割合を修正する。</td>
+        <td class="col--c">生前贈与や介護・事業協力などの事情が出る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、最初に家族関係図から血族順位を確定し、配偶者がいるかを確認する。次に、法定相続分を一度計算し、遺言があれば指定相続分に置き換える。さらに、設問に特別受益、寄与分、遺留分、第三者対抗、相続債務が出ていれば、単なる割合計算から一段進んだ処理が必要である。迷ったときは「誰が相続人か」「基準割合は何か」「遺言や調整事由で修正されるか」の順で読む。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法886条 胎児の相続能力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百八十六条　胎児は、相続については、既に生まれたものとみなす。<br>２　前項の規定は、胎児が死体で生まれたときは、適用しない。</blockquote>
+      <p><strong><mark class="kw">民法886条</mark></strong>は、胎児を相続について既に生まれたものとみなす。趣旨は、相続開始時にまだ出生していないという偶然だけで、胎児の承継利益が失われることを防ぐ点にある。ただし、死体で生まれたときは適用されない。試験では、胎児が常に一般的な権利能力を有するという理解ではなく、相続について特別に出生したものと扱われる点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法887条 子及びその代襲者</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百八十七条　被相続人の子は、相続人となる。<br>２　被相続人の子が、相続の開始以前に死亡したとき、又は第八百九十一条の規定に該当し、若しくは廃除によって、その相続権を失ったときは、その者の子がこれを代襲して相続人となる。ただし、被相続人の直系卑属でない者は、この限りでない。<br>３　前項の規定は、代襲者が、相続の開始以前に死亡し、又は第八百九十一条の規定に該当し、若しくは廃除によって、その代襲相続権を失った場合について準用する。</blockquote>
+      <p><strong><mark class="kw">民法887条</mark></strong>は、子を第一順位の相続人とし、子の代襲相続と再代襲を定める。代襲原因は、相続開始以前の死亡、相続欠格、廃除であり、相続放棄は含まれない。二項ただし書は、代襲者が被相続人の直系卑属でない場合を排除する。養子縁組との関係では、代襲者が被相続人の直系卑属に当たるかが問題になる。試験では、条文上の代襲原因と放棄の区別を正確に読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法889条・890条 血族順位と配偶者</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百八十九条　次に掲げる者は、第八百八十七条の規定により相続人となるべき者がない場合には、次に掲げる順序の順位に従って相続人となる。<br>一　被相続人の直系尊属。ただし、親等の異なる者の間では、その近い者を先にする。<br>二　被相続人の兄弟姉妹<br>２　第八百八十七条第二項の規定は、前項第二号の場合について準用する。<br>第八百九十条　被相続人の配偶者は、常に相続人となる。この場合において、第八百八十七条又は前条の規定により相続人となるべき者があるときは、その者と同順位とする。</blockquote>
+      <p><strong><mark class="kw">民法889条</mark></strong>は、子がいない場合の血族相続人を定める。直系尊属は第二順位であり、親等の近い者が優先する。兄弟姉妹は第三順位で、子も直系尊属もいない場合に登場する。二項により兄弟姉妹にも代襲相続が準用されるが、再代襲は準用されていない。<strong><mark class="kw">民法890条</mark></strong>は、配偶者を常に相続人とし、血族相続人がいる場合にはその者と同順位で共同相続人になると定める。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法900条・901条 法定相続分と代襲者の相続分</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第九百条　同順位の相続人が数人あるときは、その相続分は、次の各号の定めるところによる。<br>一　子及び配偶者が相続人であるときは、子の相続分及び配偶者の相続分は、各二分の一とする。<br>二　配偶者及び直系尊属が相続人であるときは、配偶者の相続分は、三分の二とし、直系尊属の相続分は、三分の一とする。<br>三　配偶者及び兄弟姉妹が相続人であるときは、配偶者の相続分は、四分の三とし、兄弟姉妹の相続分は、四分の一とする。<br>四　子、直系尊属又は兄弟姉妹が数人あるときは、各自の相続分は、相等しいものとする。ただし、父母の一方のみを同じくする兄弟姉妹の相続分は、父母の双方を同じくする兄弟姉妹の相続分の二分の一とする。<br>第九百一条　第八百八十七条第二項又は第三項の規定により相続人となる直系卑属の相続分は、その直系尊属が受けるべきであったものと同じとする。ただし、直系卑属が数人あるときは、その各自の直系尊属が受けるべきであった部分について、前条の規定に従ってその相続分を定める。<br>２　前項の規定は、第八百八十九条第二項の規定により兄弟姉妹の子が相続人となる場合について準用する。</blockquote>
+      <p><strong><mark class="kw">民法900条</mark></strong>は、法定相続分の中心条文である。一号から三号は配偶者と血族相続人の組合せによる配分を定め、四号は同順位者間の均等原則と半血兄弟姉妹の二分の一ルールを定める。<strong><mark class="kw">民法901条</mark></strong>は、代襲者の相続分を、本来の相続人が受けるべきであった相続分と同じにする。代襲者が複数いる場合は、その株の中でさらに分ける。試験では、相続分を全員で単純に人数割りするのではなく、まず順位と株を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法902条・902条の2 指定相続分と債務承継</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第九百二条　被相続人は、前二条の規定にかかわらず、遺言で、共同相続人の相続分を定め、又はこれを定めることを第三者に委託することができる。ただし、被相続人又は第三者は、遺留分に関する規定に違反することができない。<br>２　被相続人が、共同相続人中の一人若しくは数人の相続分のみを定め、又はこれを第三者に定めさせたときは、他の共同相続人の相続分は、前二条の規定により定める。<br>第九百二条の二　被相続人が相続開始の時において有した債務の債権者は、前条の規定による相続分の指定がされた場合であっても、各共同相続人に対し、第九百条及び第九百一条の規定により算定した相続分に応じてその権利を行使することができる。ただし、その債権者が共同相続人の一人に対して指定相続分に応じた債務の承継を承認したときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法902条</mark></strong>は、被相続人が遺言で相続分を指定できることを定める。指定相続分は法定相続分に優先するが、ただし書により遺留分を侵害できない。二項は、一部の相続人についてだけ指定がある場合、他の相続人の相続分は法定相続分により定まるとする。<strong><mark class="kw">民法902条の2</mark></strong>は、相続債権者が指定相続分に拘束されず、原則として法定相続分に応じて権利行使できることを定める。これは、被相続人の一方的な遺言で債権者の回収可能性が不当に害されないようにするためである。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所大法廷 平成25年9月4日 平成24年(ク)第984号・第985号 遺産分割審判に対する抗告棄却決定に対する特別抗告事件</p>
+      <h3 class="case-card__title">非嫡出子法定相続分規定違憲決定</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法900条</span>
+        <span class="badge badge--law">憲法14条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人の死亡後、嫡出子と嫡出でない子を含む共同相続人の間で遺産分割が争われた。当時の民法900条4号ただし書前段は、嫡出でない子の相続分を嫡出子の二分の一とする規定を置いていた。そのため、同じ被相続人の子でありながら、出生時の父母の婚姻関係によって法定相続分に差が生じることが問題となった。非嫡出子側は、この差別的取扱いが憲法14条1項の法の下の平等に反すると主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、法律婚を尊重するという立法目的自体に合理性があった時期を認めつつ、家族形態や国民意識、国際的動向などの変化を踏まえると、少なくとも平成13年7月当時には、嫡出でない子の相続分を嫡出子の二分の一とする区別は合理的根拠を失っていたと判断した。そして、当該規定は憲法14条1項に違反するとした。ただし、法的安定性への配慮から、既に確定的なものとなった法律関係には影響を及ぼさないとした。</p>
+      <h4>試験上の意義</h4>
+      <p>この決定は、現行の<strong><mark class="kw">法定相続分</mark></strong>を理解するうえで不可欠である。現在、嫡出子と嫡出でない子の法定相続分は同等であり、かつての二分の一ルールは削除されている。試験では、旧規定を現在の民法の内容として出す肢、又は違憲決定がすべての過去の遺産分割を当然に覆すとする肢が誤りになりやすい。相続法と憲法14条が交差する代表判例として、立法目的、社会状況の変化、法的安定性への配慮をセットで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第二小法廷 平成3年4月19日 昭和63年(オ)第174号 所有権移転登記手続請求事件</p>
+      <h3 class="case-card__title">「相続させる」旨の遺言の性質</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法902条</span>
+        <span class="badge badge--law">遺言</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人が、特定の不動産を特定の相続人に「相続させる」趣旨の遺言をした。その後、共同相続人間で、その遺言が単なる遺産分割方法の指定なのか、遺贈なのか、あるいは相続開始と同時に権利を移転させる効力を持つのかが争われた。特定財産を特定相続人に承継させる遺言の法律構成が明確でなければ、登記、遺産分割協議、相続人間の権利関係が不安定になる。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、「相続させる」旨の遺言は、特段の事情がない限り、遺産分割方法の指定をしたものと解すべきであり、その遺言により、指定された相続人は相続開始時に当該財産を承継するとした。つまり、原則として遺産分割協議を経ることなく、相続開始と同時に当該財産がその相続人に帰属するという効力を認めた。この判断は、被相続人の意思を尊重し、遺言内容の実現を円滑にする趣旨を持つ。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">指定相続分</mark></strong>と遺産分割方法の指定を区別するうえで重要である。「相続させる」遺言は、相続人に対する承継を予定するもので、受遺者に権利を与える一般的な遺贈とは異なる。現在は相続法改正により、相続による権利取得であっても、法定相続分を超える部分については登記等の対抗要件が問題になる。試験では、遺言がある場合でも常に遺産分割協議が必要であるとする肢、又は「相続させる」遺言を常に遺贈と同視する肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第二小法廷 平成5年7月19日 平成元年(オ)第714号 所有権移転登記抹消登記手続請求事件</p>
+      <h3 class="case-card__title">指定相続分による不動産取得と第三者対抗</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★</span>
+        <span class="badge badge--law">民法902条</span>
+        <span class="badge badge--law">民法899条の2</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人が遺言で特定の相続人に法定相続分を超える相続分を指定した。不動産について、指定相続分を受けた相続人と、他の相続人から権利を取得した第三者との間で、法定相続分を超える部分を登記なく対抗できるかが問題となった。相続による承継は包括承継であるため、通常の売買のような対抗要件をどこまで要求するかが争点となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、相続分の指定により法定相続分を超えて不動産を取得した相続人は、登記なくしてその取得を第三者に対抗できると判断した。相続分の指定は被相続人の意思に基づく相続の内部的割合を定めるものであり、共同相続人間の権利関係に直接影響する。この判例は改正前の法状況のもとで、相続による承継の特殊性を重視した判断であった。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、現行法との対比で重要である。令和元年施行の相続法改正により、<strong><mark class="kw">民法899条の2</mark></strong>が設けられ、相続による権利取得であっても、法定相続分を超える部分については登記等の対抗要件を備えなければ第三者に対抗できないとされた。したがって、現在の試験では、改正前判例の結論をそのまま現行法の結論として覚えるのではなく、判例が示した旧法上の扱いと、改正後の条文による修正を区別する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">配偶者</mark></strong>は常に相続人となるが、内縁配偶者や離婚した元配偶者は法定相続人ではない。</li>
+        <li><strong><mark class="kw">相続順位</mark></strong>は、子、直系尊属、兄弟姉妹の順であり、直系尊属は親等の近い者が優先する。</li>
+        <li><strong><mark class="kw">代襲相続</mark></strong>の原因は、相続開始前死亡、相続欠格、廃除であり、相続放棄は含まれない。</li>
+        <li><strong><mark class="kw">法定相続分</mark></strong>は、配偶者と子なら二分の一ずつ、配偶者と直系尊属なら三分の二と三分の一、配偶者と兄弟姉妹なら四分の三と四分の一である。</li>
+        <li><strong><mark class="kw">指定相続分</mark></strong>は法定相続分に優先するが、遺留分を侵害することはできない。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例一：</strong>「被相続人に子がいる場合でも、父母と兄弟姉妹は配偶者とともに相続人となる。」これは誤りである。子がいれば、直系尊属や兄弟姉妹は血族相続人にならない。</p>
+      <p><strong>誤りの選択肢例二：</strong>「相続放棄をした子の子は、放棄者を代襲して相続人となる。」これは誤りである。相続放棄は代襲原因ではない。</p>
+      <p><strong>誤りの選択肢例三：</strong>「配偶者と兄弟姉妹が相続人である場合、配偶者の法定相続分は三分の二である。」これは誤りである。この場合は配偶者四分の三、兄弟姉妹四分の一である。</p>
+      <p><strong>誤りの選択肢例四：</strong>「嫡出でない子の相続分は、嫡出子の二分の一である。」これは現行法では誤りである。最高裁大法廷平成25年9月4日決定と法改正により、現在は同等である。</p>
+      <p><strong>誤りの選択肢例五：</strong>「被相続人は遺言により、遺留分を含めて自由に相続分を指定できる。」これは誤りである。<strong><mark class="kw">民法902条</mark></strong>ただし書は、遺留分に関する規定に違反できないと定める。</p>
+    </div>
+  </div>
+
+  <p>計算問題では、家族関係を文章のまま処理しない。まず、被相続人を中心に、配偶者、子、孫、父母、祖父母、兄弟姉妹、甥・姪を図に置く。次に、子がいるか、子がいないなら直系尊属がいるか、直系尊属もいないなら兄弟姉妹がいるかを順番に確認する。最後に、配偶者とどの血族順位が組み合わさっているかで法定相続分を選ぶ。</p>
+  <p>他分野との接点では、<strong><mark class="kw">指定相続分</mark></strong>は遺言、遺留分、相続登記、相続債務とつながる。法定相続分を超える不動産取得を第三者に主張するには、現行法では民法899条の2により登記等の対抗要件が問題になる。相続債務についても、相続債権者は指定相続分に当然には拘束されず、民法902条の2により法定相続分に応じた権利行使が可能である。相続分の数字だけでなく、第三者や債権者との関係まで意識すると、改正法問題に対応しやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <p>相続分の制度は、家族関係の変化とともに改正されてきた。特に、嫡出でない子の相続分を嫡出子の二分の一とする旧民法900条4号ただし書前段は、最高裁大法廷平成25年9月4日決定により違憲とされ、その後の改正で削除された。このため、現在の学習では、子の相続分は嫡出子か嫡出でない子かで差をつけないことを前提にする。</p>
+  <p>令和元年施行の相続法改正では、相続による権利取得の対抗要件や、指定相続分がある場合の相続債務の扱いが明文化された。これは、遺言による承継を尊重しつつ、取引安全や相続債権者の利益を保護するためである。被相続人の意思だけで第三者や債権者の地位が不安定になると、相続財産をめぐる法律関係が複雑化する。そのため、現行法は共同相続人間の内部関係と、第三者・債権者に対する外部関係を分けて規律している。</p>
+  <p>学習上は、条文番号を機能ごとに整理するとよい。民法886条は胎児、887条は子と代襲、889条は直系尊属・兄弟姉妹、890条は配偶者、900条は法定相続分、901条は代襲者の相続分、902条は指定相続分、902条の2は指定相続分と相続債務である。この順序は、そのまま問題を解く順序にもなる。先に相続人を決め、次に基準割合を決め、最後に遺言や調整規定で修正する。</p>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">学習整理法</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元は、「人を決める」「順位を決める」「割合を決める」「遺言で修正する」の四段階で整理する。第一段階では配偶者と血族相続人を分ける。第二段階では子、直系尊属、兄弟姉妹の順位を確認する。第三段階では民法900条の三つの配偶者組合せを使って法定相続分を計算する。第四段階では、民法902条の指定相続分、遺留分、対抗要件、相続債務の承継を確認する。この手順を固定すると、家族関係が複雑な問題でも結論を出しやすい。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>婚姻 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">婚姻</h1>
+  <p class="page-title-block__sub">婚姻の成立要件、婚姻の効力、離婚の方法と効果を家族法の基本構造から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法731条</span>
+    <span class="badge badge--info">民法739条</span>
+    <span class="badge badge--info">民法742条</span>
+    <span class="badge badge--info">民法750条</span>
+    <span class="badge badge--info">民法752条</span>
+    <span class="badge badge--info">民法760条</span>
+    <span class="badge badge--info">民法761条</span>
+    <span class="badge badge--info">民法770条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">婚姻</mark></strong>は、当事者が夫婦として共同生活を形成する身分行為であり、単なる契約よりも強い公示性と制度的効果を伴う。婚姻が成立すると、配偶者という親族関係が発生し、同居・協力・扶助、婚姻費用の分担、日常家事債務の連帯責任、夫婦財産制、相続上の配偶者資格など、多数の法律効果が一体として動く。行政書士試験では、婚姻の成立だけでなく、婚姻が無効になる場面、取消しにとどまる場面、婚姻後の夫婦間の権利義務、離婚時の子・財産・氏の処理まで横断的に問われる。</p>
+
+  <p>この単元の出発点は、<strong><mark class="kw">婚姻意思</mark></strong>と<strong><mark class="kw">届出</mark></strong>である。民法は、婚姻を戸籍法の定める届出によって効力を生ずるものとし、届出のない事実婚を法律婚とは区別する。他方で、届出があるだけでは足りず、当事者間に真に夫婦共同生活を形成する意思がなければ婚姻は無効となる。たとえば在留資格取得、相続対策、債務逃れだけを目的として夫婦共同生活を作る意思がない届出は、形式的に受理されても<strong><mark class="kw">民法742条</mark></strong>一号の問題になる。</p>
+
+  <p>次に、婚姻の効力では、夫婦が同じ氏を称すること、互いに同居・協力・扶助すべきこと、婚姻から生ずる費用を分担すること、日常の家事に関する債務について連帯責任を負うことが中心になる。ここでは「夫婦だから何でも連帯責任を負う」と広げすぎても、「夫婦別産制だから一切関係がない」と狭く見すぎても誤る。<strong><mark class="kw">民法761条</mark></strong>は日常家事に限って第三者保護を図る規定であり、夫婦の財産的独立とのバランスをとる。</p>
+
+  <p>離婚では、協議離婚と裁判離婚を区別する。協議離婚は、夫婦の合意と届出を中心に成立するが、未成年の子がいる場合には親権者の定めなどが受理段階で問題になる。裁判離婚は、<strong><mark class="kw">民法770条</mark></strong>の離婚原因が必要であり、不貞、悪意の遺棄、三年以上の生死不明、婚姻を継続し難い重大な事由を条文順に確認する。令和八年四月一日施行の改正により、離婚後の子の養育、親権、養育費、財産分与の規律が見直されているため、現行法として学ぶときは旧法の選択肢に引きずられないことが重要である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る全体像</span>
+    </div>
+    <div class="box__bd">
+      <p>AとBが婚姻届を提出し、夫婦として生活を始める場合、まず双方が十八歳以上で、重婚・近親婚などの婚姻障害がなく、当事者双方と成年の証人二人以上が署名した届出が必要になる。婚姻後、Aが生活費、家賃、子の教育費などの支払を担い、Bが家事や育児を中心に担う場合でも、<strong><mark class="kw">婚姻費用</mark></strong>は資産・収入その他一切の事情を考慮して分担する。Aが日常生活に必要な食料品や家電を購入したときは<strong><mark class="kw">日常家事債務</mark></strong>としてBも連帯責任を負い得るが、Aが高額な投機用不動産をB名義で購入した場合まで当然に連帯責任を負うわけではない。夫婦関係が破綻した場合は、協議離婚で処理できるか、裁判離婚原因を主張する必要があるか、子の監護・親権・財産分与・氏をどう処理するかを段階的に検討する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻意思</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻意思</mark></strong>とは、当事者間に真に社会観念上夫婦であると認められる関係を設定しようとする意思をいう。婚姻は身分行為であるため、売買契約のように財産上の給付だけを目的とする意思では足りない。婚姻届を出す意思があっても、それが単に在留資格、相続、債務整理、戸籍上の便宜など別目的の手段にすぎず、夫婦共同生活を形成する意思がない場合は、<strong><mark class="kw">民法742条</mark></strong>一号により婚姻は無効となる。もっとも、婚姻意思は内心だけで判断されるのではなく、同居の有無、生活実態、届出作成経緯、届出後の行動、親族・第三者への説明などから総合的に認定される。試験では、「婚姻届への署名押印があれば常に有効」とする肢と、「届出受理時に当事者が意思表示できなければ常に無効」とする肢に注意する。判例は、受理時に意識を失っていても、受理前に婚姻意思に基づいて届書を作成し、その後翻意した事情がなければ婚姻成立を認める余地を示している。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻の形式的成立要件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻の形式的成立要件</mark></strong>は、<strong><mark class="kw">民法739条</mark></strong>の届出である。婚姻は、戸籍法の定めるところにより届け出ることによって効力を生じ、届出は当事者双方及び成年の証人二人以上が署名した書面又は口頭でしなければならない。日本法は法律婚主義を採るため、長期間同居していても届出がなければ法律上の婚姻は成立しない。ただし、届出の方式に軽微な欠缺がある場合でも、民法742条二号ただし書により、その方式欠缺だけで当然に婚姻の効力が妨げられるわけではない。受理段階では、戸籍事務管掌者が婚姻適齢、重婚禁止、近親婚禁止、届出方式などに反しないことを確認する。試験では、婚姻の実質的意思と形式的届出を分け、届出がない場合は原則無効、届出方式だけの欠缺は無効と直結しない、という二段階で整理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻障害</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻障害</mark></strong>とは、婚姻の実質的要件として、一定の者との婚姻又は一定の状態での婚姻を禁止する規律である。中心は、十八歳に達していない者の婚姻禁止、重婚禁止、直系血族・三親等内の傍系血族間の婚姻禁止、直系姻族間の婚姻禁止、養親子関係に由来する一定の婚姻禁止である。これらは、当事者の自由な婚姻意思を前提にしつつ、親族秩序、身分関係の明確性、家庭内の倫理的安全を守るための制限である。令和六年四月一日施行の親子法制改正により、女性の再婚禁止期間を定めていた旧規定は削除され、現行法では<strong><mark class="kw">民法733条</mark></strong>は削除条文である。成年被後見人については、婚姻をするのに成年後見人の同意を要しない。試験では、「成年被後見人の婚姻には成年後見人の同意が必要」「女性には常に再婚禁止期間がある」という旧法型の肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻の無効と取消し</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻の無効</mark></strong>は、婚姻意思がない場合又は届出がない場合に限られる。無効な婚姻は、初めから法律上の婚姻効果を生じない。これに対し、<strong><mark class="kw">婚姻の取消し</mark></strong>は、婚姻適齢違反、重婚、近親婚、詐欺・強迫など、法律が取消事由として定めた場合に家庭裁判所へ請求して効果を覆す制度である。取消しの効果は将来効であり、取消し前に発生した婚姻効果を当然に過去へさかのぼって消滅させない。制度趣旨は、身分関係の安定を重視し、婚姻に瑕疵があっても無効事由を限定し、取消しについても請求権者、期間、効果を明確にする点にある。試験では、無効と取消しを混同し、「重婚は当然無効」「詐欺による婚姻は意思表示規定により一般的に取り消せる」とする肢に注意する。婚姻の取消しは民法743条以下の特則による。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">夫婦同氏・同居協力扶助義務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">夫婦同氏</mark></strong>は、夫婦が婚姻の際に定めるところに従い、夫又は妻の氏を称する制度である。根拠は<strong><mark class="kw">民法750条</mark></strong>であり、同じ氏を称することは婚姻の身分上の効果として扱われる。さらに<strong><mark class="kw">民法752条</mark></strong>は、夫婦が同居し、互いに協力し扶助しなければならないと定める。同居義務は単なる居住場所の一致だけでなく、夫婦共同生活の基盤を作る義務として理解されるが、暴力、虐待、重大な不和、別居について正当な理由がある場合にまで機械的に同居を強制するものではない。協力扶助義務は、生活保持義務としての性格をもち、夫婦が互いに自己と同程度の生活を保障し合う方向で理解される。試験では、同居・協力・扶助義務が私法上の義務であること、しかし直接強制になじみにくく、婚姻費用分担、離婚原因、慰謝料など別の効果場面で問題化することを押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻費用分担義務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻費用分担義務</mark></strong>とは、夫婦が、その資産、収入その他一切の事情を考慮して、婚姻から生ずる費用を分担する義務である。根拠は<strong><mark class="kw">民法760条</mark></strong>である。婚姻費用には、夫婦の生活費、住居費、医療費、子の監護教育費など、婚姻共同生活を維持するために通常必要な費用が含まれる。分担は名義や家計管理者だけで決まるのではなく、収入、資産、家事・育児への寄与、別居の経緯、子の生活状況などを総合して判断される。別居中でも婚姻が継続している限り婚姻費用分担義務は問題となり、離婚後の養育費や扶養義務とは区別される。試験では、「別居すれば当然に婚姻費用分担義務は消滅する」「専業主婦又は専業主夫は収入がないから婚姻費用を負担していない」という肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">日常家事債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">日常家事債務</mark></strong>とは、夫婦の一方が日常の家事に関して第三者と法律行為をした場合に生じる債務で、他方配偶者も連帯責任を負うものをいう。根拠は<strong><mark class="kw">民法761条</mark></strong>である。日常の家事とは、食料、衣料、住居、医療、教育、通常の家計維持など夫婦共同生活に通常必要な事務を指すが、その範囲は夫婦の社会的地位、職業、資産、収入、生活地域の慣習、取引の種類・性質・金額などによって変わる。制度趣旨は、家庭生活に必要な取引について、取引相手が夫婦双方の責任を期待できるようにし、家庭生活の円滑を確保する点にある。ただし、日常家事の範囲を超える高額取引や投機取引まで当然に他方配偶者へ責任を負わせると、夫婦別産制を害する。試験では、日常家事代理権が民法110条の基本代理権として常に広く表見代理を成立させるわけではないという判例法理が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">夫婦財産制・特有財産</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">夫婦財産制</mark></strong>は、婚姻中の夫婦の財産関係を定める制度である。夫婦が婚姻届出前に別段の契約をしなければ法定財産制が適用され、各配偶者が婚姻前から有する財産及び婚姻中に自己の名で得た財産は<strong><mark class="kw">特有財産</mark></strong>となる。どちらに属するか明らかでない財産は共有に属すると推定される。これは夫婦が共同生活を営む一方で、各人の財産的独立を尊重する制度であり、夫婦の一方の債務が常に他方の財産へ及ぶわけではない。もっとも、婚姻費用、日常家事債務、財産分与の場面では、形式的名義だけでなく実質的な共同生活や寄与を考慮する。試験では、「婚姻後に取得した財産はすべて当然共有」「夫婦別産制なので離婚時に財産分与は認められない」という両極端の肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">協議離婚・裁判離婚・財産分与</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">協議離婚</mark></strong>は、夫婦が協議で離婚する制度であり、<strong><mark class="kw">民法763条</mark></strong>を根拠とする。協議離婚にも成年被後見人の同意不要、届出、詐欺・強迫による取消しの規定が準用される。<strong><mark class="kw">裁判離婚</mark></strong>は、夫婦の一方が離婚訴訟で離婚を求める制度で、<strong><mark class="kw">民法770条</mark></strong>の離婚原因が必要である。離婚時には、子の監護、親権、面会交流、養育費、氏、祭祀財産承継、財産分与が問題になる。<strong><mark class="kw">財産分与</mark></strong>は、離婚後の当事者間の財産上の衡平を図る制度で、婚姻中に取得・維持した財産、寄与の程度、婚姻期間、生活水準、協力扶助の状況、年齢、心身の状況、職業・収入などを考慮する。現行法では家庭裁判所への処分請求期間が離婚時から五年とされている点が旧法との違いとして出題されやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="婚姻の成立から効力までの判断構造">
+      <defs>
+        <marker id="arr36a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr36a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr36a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="110" x2="590" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="160" y1="150" x2="1020" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="160" y1="150" x2="160" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36a-blue)"/>
+      <line x1="440" y1="150" x2="440" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36a-blue)"/>
+      <line x1="740" y1="150" x2="740" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36a-blue)"/>
+      <line x1="1020" y1="150" x2="1020" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36a-blue)"/>
+      <rect x="512" y="128" width="156" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="590" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">成立要件を確認</text>
+
+      <line x1="160" y1="322" x2="160" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36a-orange)"/>
+      <line x1="440" y1="322" x2="440" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36a-orange)"/>
+      <line x1="740" y1="322" x2="740" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36a-orange)"/>
+      <line x1="1020" y1="322" x2="1020" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36a-orange)"/>
+      <rect x="84" y="350" width="152" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="160" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">欠けると無効</text>
+      <rect x="364" y="350" width="152" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="440" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">欠けると無効</text>
+      <rect x="664" y="350" width="152" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="740" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">取消事由</text>
+      <rect x="944" y="350" width="152" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="1020" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">受理審査</text>
+
+      <line x1="590" y1="498" x2="590" y2="550" stroke="#e11d48" stroke-width="2"/>
+      <line x1="250" y1="550" x2="930" y2="550" stroke="#e11d48" stroke-width="2"/>
+      <line x1="250" y1="550" x2="250" y2="608" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36a-red)"/>
+      <line x1="590" y1="550" x2="590" y2="608" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36a-red)"/>
+      <line x1="930" y1="550" x2="930" y2="608" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36a-red)"/>
+      <rect x="514" y="528" width="152" height="26" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="590" y="546" text-anchor="middle" font-size="13" fill="#9f1239">婚姻成立の効果</text>
+
+      <rect x="410" y="38" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="67" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">婚姻</text>
+      <text x="590" y="92" text-anchor="middle" font-size="12" fill="#1e3a8a">夫婦共同生活を形成する身分行為</text>
+
+      <rect x="40" y="230" width="240" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="160" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">婚姻意思</text>
+      <text x="160" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法742条1号</text>
+      <text x="160" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">真の夫婦関係設定意思</text>
+
+      <rect x="320" y="230" width="240" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="440" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">届出</text>
+      <text x="440" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法739条</text>
+      <text x="440" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">当事者双方・成年証人二人</text>
+
+      <rect x="620" y="230" width="240" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="740" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">婚姻障害なし</text>
+      <text x="740" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法731条・732条等</text>
+      <text x="740" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">年齢・重婚・近親婚</text>
+
+      <rect x="900" y="230" width="240" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="1020" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">届出受理</text>
+      <text x="1020" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法740条</text>
+      <text x="1020" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">法令違反を審査</text>
+
+      <rect x="40" y="398" width="240" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="160" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">婚姻無効</text>
+      <text x="160" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">意思なし・届出なし</text>
+      <text x="160" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">初めから効果なし</text>
+
+      <rect x="320" y="398" width="240" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="440" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">方式欠缺</text>
+      <text x="440" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">739条2項方式のみなら</text>
+      <text x="440" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">効力を妨げない場合あり</text>
+
+      <rect x="620" y="398" width="240" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="740" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">婚姻取消し</text>
+      <text x="740" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法744条・747条</text>
+      <text x="740" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">家庭裁判所へ請求</text>
+
+      <rect x="900" y="398" width="240" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="1020" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">婚姻成立</text>
+      <text x="1020" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">届出受理で法律婚</text>
+      <text x="1020" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">配偶者関係が発生</text>
+
+      <rect x="90" y="620" width="320" height="84" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="250" y="652" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">身分上の効果</text>
+      <text x="250" y="676" text-anchor="middle" font-size="12" fill="#9f1239">夫婦同氏・同居協力扶助</text>
+
+      <rect x="430" y="620" width="320" height="84" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="590" y="652" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">財産上の効果</text>
+      <text x="590" y="676" text-anchor="middle" font-size="12" fill="#9f1239">婚姻費用・日常家事債務</text>
+
+      <rect x="770" y="620" width="320" height="84" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="930" y="652" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">親族・相続への接続</text>
+      <text x="930" y="676" text-anchor="middle" font-size="12" fill="#9f1239">配偶者・姻族・子の身分</text>
+
+      <rect x="40" y="720" width="1100" height="30" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="590" y="741" text-anchor="middle" font-size="13" fill="#9f1239">注意：令和6年4月1日以後の婚姻では女性の再婚禁止期間は廃止され、民法733条は削除条文である。</text>
+    </svg>
+  </div>
+
+  <p>この図は、婚姻を「意思」「届出」「婚姻障害」「受理審査」の順に分解している。婚姻意思と届出は欠けると無効に直結しやすいのに対し、婚姻障害は取消しの制度で処理されることが多い。婚姻が成立すると、氏・同居協力扶助のような身分上の効果と、婚姻費用・日常家事債務・夫婦財産制のような財産上の効果が同時に生じる。試験では、成立要件と成立後の効果を一つの問題文で混ぜて問うため、最初にどの段階の問題かを切り分けると誤りにくい。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 720" role="img" aria-label="離婚の方法と効果の判断構造">
+      <defs>
+        <marker id="arr36b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr36b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr36b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="112" x2="540" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="260" y1="150" x2="820" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="260" y1="150" x2="260" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36b-blue)"/>
+      <line x1="820" y1="150" x2="820" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr36b-blue)"/>
+      <rect x="472" y="128" width="136" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="540" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">二つの方法</text>
+
+      <line x1="260" y1="322" x2="260" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36b-orange)"/>
+      <line x1="820" y1="322" x2="820" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr36b-orange)"/>
+      <rect x="188" y="350" width="144" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="260" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">届出で効力</text>
+      <rect x="748" y="350" width="144" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="820" y="368" text-anchor="middle" font-size="13" fill="#7c2d12">離婚原因が必要</text>
+
+      <line x1="540" y1="500" x2="540" y2="542" stroke="#e11d48" stroke-width="2"/>
+      <line x1="180" y1="542" x2="900" y2="542" stroke="#e11d48" stroke-width="2"/>
+      <line x1="180" y1="542" x2="180" y2="602" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36b-red)"/>
+      <line x1="420" y1="542" x2="420" y2="602" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36b-red)"/>
+      <line x1="660" y1="542" x2="660" y2="602" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36b-red)"/>
+      <line x1="900" y1="542" x2="900" y2="602" stroke="#e11d48" stroke-width="2" marker-end="url(#arr36b-red)"/>
+      <rect x="468" y="520" width="144" height="26" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="540" y="538" text-anchor="middle" font-size="13" fill="#9f1239">離婚後の処理</text>
+
+      <rect x="360" y="40" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="540" y="69" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">離婚</text>
+      <text x="540" y="92" text-anchor="middle" font-size="12" fill="#1e3a8a">婚姻関係を将来に向かって解消</text>
+
+      <rect x="100" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="260" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">協議離婚</text>
+      <text x="260" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法763条・764条</text>
+      <text x="260" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">合意と届出が中心</text>
+
+      <rect x="660" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="820" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">裁判離婚</text>
+      <text x="820" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法770条</text>
+      <text x="820" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">法定離婚原因を主張</text>
+
+      <rect x="100" y="400" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="260" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">未成年の子がいる場合</text>
+      <text x="260" y="456" text-anchor="middle" font-size="12" fill="#7c2d12">民法765条・766条</text>
+      <text x="260" y="476" text-anchor="middle" font-size="12" fill="#7c2d12">親権者・監護・養育費等</text>
+
+      <rect x="660" y="400" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="820" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">770条の離婚原因</text>
+      <text x="820" y="456" text-anchor="middle" font-size="12" fill="#7c2d12">不貞・悪意の遺棄</text>
+      <text x="820" y="476" text-anchor="middle" font-size="12" fill="#7c2d12">生死不明・重大事由</text>
+
+      <rect x="40" y="612" width="280" height="72" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="180" y="642" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">子の監護</text>
+      <text x="180" y="666" text-anchor="middle" font-size="12" fill="#9f1239">子の利益を最優先</text>
+
+      <rect x="340" y="612" width="160" height="72" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="420" y="642" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">氏</text>
+      <text x="420" y="666" text-anchor="middle" font-size="12" fill="#9f1239">復氏・続称</text>
+
+      <rect x="540" y="612" width="240" height="72" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="660" y="642" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">財産分与</text>
+      <text x="660" y="666" text-anchor="middle" font-size="12" fill="#9f1239">離婚時から五年</text>
+
+      <rect x="800" y="612" width="200" height="72" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="900" y="642" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">祭祀財産</text>
+      <text x="900" y="666" text-anchor="middle" font-size="12" fill="#9f1239">承継者を協議</text>
+    </svg>
+  </div>
+
+  <p>離婚は、協議離婚なら合意と届出、裁判離婚なら民法770条の離婚原因というように、入口の要件が大きく異なる。どちらの離婚でも、離婚後の子の監護、氏、財産分与、祭祀財産承継などの効果処理は別途問題になる。特に未成年の子がいる場合は、離婚そのものの成立だけでなく、親権者、子の監護、父又は母と子との交流、監護費用分担を子の利益を最優先して整理する必要がある。裁判離婚では、離婚原因がある場合でも、裁判所が一切の事情を考慮して請求を棄却できる余地がある点も重要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>婚姻の無効・取消し・離婚の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">婚姻無効</th>
+        <th class="col--b">婚姻取消し</th>
+        <th class="col--c">離婚</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">初めから婚姻効果が生じない</span>もの。婚姻意思なし又は届出なしが中心。</td>
+        <td class="col--b"><span class="em-b">有効に成立した婚姻を将来に向かって覆す</span>制度。取消事由と請求権者が限定される。</td>
+        <td class="col--c"><span class="em-c">有効な婚姻を将来に向かって解消</span>する制度。協議又は裁判で行う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法742条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法743条</mark></strong>から<strong><mark class="kw">民法749条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法763条</mark></strong>、<strong><mark class="kw">民法770条</mark></strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">典型場面</td>
+        <td class="col--a">偽装婚姻、意思を欠く届出、届出そのものがない事実婚。</td>
+        <td class="col--b">不適齢、重婚、近親婚、詐欺又は強迫による婚姻。</td>
+        <td class="col--c">協議離婚、調停・審判・判決による離婚、破綻後の処理。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">原則として婚姻効果を認めない。配偶者相続権なども発生しない。</td>
+        <td class="col--b">取消しは将来効。善意・悪意に応じた利益返還や損害賠償が問題になる。</td>
+        <td class="col--c">婚姻関係は将来に向かって終了し、氏、子の監護、財産分与を処理する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「届出があれば婚姻意思がなくても常に有効」は誤り。</td>
+        <td class="col--b">「重婚は当然無効」「取消しは遡及効」は誤り。</td>
+        <td class="col--c">「離婚原因があれば裁判所は必ず離婚を認める」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>夫婦間の財産・生活関係の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">婚姻費用分担</th>
+        <th class="col--b">日常家事債務</th>
+        <th class="col--c">特有財産</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">夫婦内部で生活費・子の費用をどう負担するか。</td>
+        <td class="col--b">夫婦の一方と第三者との取引について他方も責任を負うか。</td>
+        <td class="col--c">財産が夫婦のどちらに帰属するか。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法760条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法761条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法762条</mark></strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">判断基準</td>
+        <td class="col--a"><span class="em-a">資産・収入その他一切の事情</span>を考慮する。</td>
+        <td class="col--b"><span class="em-b">日常の家事</span>に関する法律行為かを、生活状況と取引性質から判断する。</td>
+        <td class="col--c"><span class="em-c">婚姻前財産と婚姻中自己名義取得財産</span>は単独所有。帰属不明なら共有推定。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">夫婦内部で分担額が問題となり、家庭裁判所の審判につながる。</td>
+        <td class="col--b">第三者に対し他方配偶者も連帯責任を負う。</td>
+        <td class="col--c">他方配偶者の債権者から当然に責任財産とされない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での注意</td>
+        <td class="col--a">別居中でも婚姻が続く限り問題になる。</td>
+        <td class="col--b">高額な不動産取引や投機取引まで当然に含まれない。</td>
+        <td class="col--c">特有財産と財産分与の対象判断を機械的に同一視しない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>協議離婚と裁判離婚の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">協議離婚</th>
+        <th class="col--b">裁判離婚</th>
+        <th class="col--c">共通して処理する効果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">成立要件</td>
+        <td class="col--a">夫婦の離婚意思と届出。</td>
+        <td class="col--b">民法770条の離婚原因と判決等。</td>
+        <td class="col--c">離婚により婚姻関係は将来に向かって終了する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">未成年の子</td>
+        <td class="col--a">受理段階で親権者の定め等が確認される。</td>
+        <td class="col--b">裁判手続内で親権・監護等が争点化し得る。</td>
+        <td class="col--c">子の監護者、監護分掌、父又は母と子との交流、監護費用を子の利益最優先で定める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">財産処理</td>
+        <td class="col--a">当事者協議で財産分与を定める。</td>
+        <td class="col--b">離婚訴訟・家庭裁判所の処分で問題になる。</td>
+        <td class="col--c">財産分与は離婚後の財産上の衡平を図る制度で、請求期間は離婚時から五年。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「合意だけで届出なしに協議離婚が成立する」は誤り。</td>
+        <td class="col--b">「不貞があれば一切の事情を考慮せず必ず認容」は誤り。</td>
+        <td class="col--c">「離婚後も婚姻中の氏を当然に称し続ける」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類で迷ったら、まず「婚姻が成立する前の問題か、成立した婚姻を覆す問題か、成立後の婚姻を解消する問題か」を見る。婚姻意思や届出が欠けるなら無効、婚姻障害や詐欺・強迫なら取消し、有効な婚姻関係を終了させるなら離婚である。夫婦財産関係では、夫婦内部の生活費は婚姻費用、第三者との日常取引は日常家事債務、財産帰属は特有財産として分ける。離婚では、入口が協議か裁判かで要件は異なるが、子・氏・財産分与の処理は共通して確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">婚姻の成立要件</span>
+    </div>
+    <div class="box__bd">
+      <h3>民法731条・739条・742条</h3>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法731条</mark></strong>　婚姻は、十八歳にならなければ、することができない。</p>
+        <p><strong><mark class="kw">民法739条</mark></strong>　婚姻は、戸籍法の定めるところにより届け出ることによって、その効力を生ずる。<br>2　前項の届出は、当事者双方及び成年の証人二人以上が署名した書面で、又はこれらの者から口頭で、しなければならない。</p>
+        <p><strong><mark class="kw">民法742条</mark></strong>　婚姻は、次に掲げる場合に限り、無効とする。<br>一　人違いその他の事由によって当事者間に婚姻をする意思がないとき。<br>二　当事者が婚姻の届出をしないとき。ただし、その届出が第七百三十九条第二項に定める方式を欠くだけであるときは、婚姻は、そのためにその効力を妨げられない。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法731条</mark></strong>は婚姻適齢を男女とも十八歳に統一している。成年年齢引下げ後は、親の同意を要する未成年婚という旧法の整理は現行法の中心ではない。<strong><mark class="kw">民法739条</mark></strong>は届出主義を採り、婚姻意思があっても届出がなければ法律婚は成立しない。<strong><mark class="kw">民法742条</mark></strong>は無効事由を限定し、意思なしと届出なしに絞っている。条文上「人違いその他の事由」とあるため、人違いだけでなく、偽装婚姻のように夫婦共同生活を作る意思がない場合も含む。二号ただし書は、方式違反が常に婚姻無効を招くと身分関係が不安定になるため、届出自体がある場合の軽微な方式欠缺を無効と直結させない趣旨である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">婚姻障害と取消し</span>
+    </div>
+    <div class="box__bd">
+      <h3>民法732条・734条から736条・747条・748条</h3>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法732条</mark></strong>　配偶者のある者は、重ねて婚姻をすることができない。</p>
+        <p><strong><mark class="kw">民法734条</mark></strong>　直系血族又は三親等内の傍系血族の間では、婚姻をすることができない。ただし、養子と養方の傍系血族との間では、この限りでない。<br>2　第八百十七条の九の規定により親族関係が終了した後も、前項と同様とする。</p>
+        <p><strong><mark class="kw">民法747条</mark></strong>　詐欺又は強迫によって婚姻をした者は、その婚姻の取消しを家庭裁判所に請求することができる。<br>2　前項の規定による取消権は、当事者が、詐欺を発見し、若しくは強迫を免れた後三箇月を経過し、又は追認をしたときは、消滅する。</p>
+        <p><strong><mark class="kw">民法748条</mark></strong>　婚姻の取消しは、将来に向かってのみその効力を生ずる。</p>
+      </blockquote>
+      <p>重婚禁止、近親婚禁止、直系姻族間の婚姻禁止、養親子関係に由来する婚姻禁止は、身分関係の秩序と親族倫理を維持する規律である。これらに違反した婚姻は、原則として当然無効ではなく、<strong><mark class="kw">民法744条</mark></strong>により取消請求の対象となる。詐欺・強迫による婚姻も、一般の意思表示取消しではなく、<strong><mark class="kw">民法747条</mark></strong>の特則で家庭裁判所に取消しを請求する。取消権は詐欺発見又は強迫脱却後三箇月、又は追認で消滅するため、通常の法律行為取消しより身分関係の安定が強く意識されている。<strong><mark class="kw">民法748条</mark></strong>の将来効は、取消しまでの夫婦関係や子の身分を不安定にしないための規定である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">婚姻の効力</span>
+    </div>
+    <div class="box__bd">
+      <h3>民法750条・752条・760条・761条・762条</h3>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法750条</mark></strong>　夫婦は、婚姻の際に定めるところに従い、夫又は妻の氏を称する。</p>
+        <p><strong><mark class="kw">民法752条</mark></strong>　夫婦は同居し、互いに協力し扶助しなければならない。</p>
+        <p><strong><mark class="kw">民法760条</mark></strong>　夫婦は、その資産、収入その他一切の事情を考慮して、婚姻から生ずる費用を分担する。</p>
+        <p><strong><mark class="kw">民法761条</mark></strong>　夫婦の一方が日常の家事に関して第三者と法律行為をしたときは、他の一方は、これによって生じた債務について、連帯してその責任を負う。ただし、第三者に対し責任を負わない旨を予告した場合は、この限りでない。</p>
+        <p><strong><mark class="kw">民法762条</mark></strong>　夫婦の一方が婚姻前から有する財産及び婚姻中自己の名で得た財産は、その特有財産とする。<br>2　夫婦のいずれに属するか明らかでない財産は、その共有に属するものと推定する。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法750条</mark></strong>は、婚姻に伴う氏の統一を定める。氏は戸籍・親族関係・社会生活上の表示に関わるため、身分法と憲法上の個人の尊厳・平等との接点になる。<strong><mark class="kw">民法752条</mark></strong>は、夫婦共同生活の中核的義務であり、同居義務、協力義務、扶助義務を一体として定める。<strong><mark class="kw">民法760条</mark></strong>は、夫婦内部の費用分担を定め、別居中でも婚姻が継続していれば問題となる。<strong><mark class="kw">民法761条</mark></strong>は第三者との取引安全を保護する規定であり、夫婦内部の家計負担だけを定める760条とは局面が違う。<strong><mark class="kw">民法762条</mark></strong>は夫婦別産制を採るが、帰属不明財産は共有推定され、離婚時の財産分与では名義と実質的寄与を分けて見る必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">離婚と離婚後の処理</span>
+    </div>
+    <div class="box__bd">
+      <h3>民法763条・765条・766条・767条・768条・770条</h3>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法763条</mark></strong>　夫婦は、その協議で、離婚をすることができる。</p>
+        <p><strong><mark class="kw">民法765条</mark></strong>　離婚の届出は、その離婚が前条において準用する第七百三十九条第二項の規定その他の法令の規定に違反しないこと及び夫婦間に成年に達しない子がある場合には次の各号のいずれかに該当することを認めた後でなければ、受理することができない。<br>一　親権者の定めがされていること。<br>二　親権者の指定を求める家事審判又は家事調停の申立てがされていること。</p>
+        <p><strong><mark class="kw">民法766条</mark></strong>　父母が協議上の離婚をするときは、子の監護をすべき者又は子の監護の分掌、父又は母と子との交流、子の監護に要する費用の分担その他の子の監護について必要な事項は、その協議で定める。この場合においては、子の利益を最も優先して考慮しなければならない。</p>
+        <p><strong><mark class="kw">民法768条</mark></strong>　協議上の離婚をした者の一方は、相手方に対して財産の分与を請求することができる。</p>
+        <p><strong><mark class="kw">民法770条</mark></strong>　夫婦の一方は、次に掲げる場合に限り、離婚の訴えを提起することができる。<br>一　配偶者に不貞な行為があったとき。<br>二　配偶者から悪意で遺棄されたとき。<br>三　配偶者の生死が三年以上明らかでないとき。<br>四　その他婚姻を継続し難い重大な事由があるとき。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法763条</mark></strong>は協議離婚を認めるが、合意だけで足りるのではなく、民法764条により婚姻届出規定などが準用される。<strong><mark class="kw">民法765条</mark></strong>は、未成年の子がいる場合の受理審査を定め、親権者の定め又は親権者指定を求める家事審判・家事調停の申立てがされていることを確認する。<strong><mark class="kw">民法766条</mark></strong>は、監護者、監護分掌、親子交流、監護費用などを子の利益最優先で定める規定であり、離婚原因とは別に必ず確認する。<strong><mark class="kw">民法768条</mark></strong>の財産分与は、清算、扶養、慰謝料的要素を含み得るが、現行法は衡平判断の考慮要素を明文化し、請求期間を離婚時から五年としている。<strong><mark class="kw">民法770条</mark></strong>は裁判離婚の入口であり、旧法にあった不治の精神病の独立号は現行法では削除されている点に注意する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和44年10月31日 昭和42年(オ)第1108号 民集23巻10号1894頁</div>
+      <div class="case-card__title">婚姻意思事件（婚姻無効確認本訴並びに反訴請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法742条</span>
+        <span class="badge badge--law">婚姻意思</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>当事者間で婚姻届が提出され、戸籍上は法律婚が成立した形になっていた。しかし、一方当事者は、その届出が真に夫婦共同生活を作るためのものではなく、別の目的を達するための便法として利用されたにすぎないとして、婚姻の無効確認を求めた。争点は、<strong><mark class="kw">民法742条</mark></strong>一号の「当事者間に婚姻をする意思がないとき」とは、婚姻届を出す意思がない場合だけをいうのか、それとも届出意思があっても夫婦としての実質的関係を形成する意思がない場合を含むのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">民法742条</mark></strong>一号にいう「当事者間に婚姻をする意思がないとき」とは、当事者間に真に社会観念上夫婦であると認められる関係の設定を欲する効果意思を有しない場合を指すと判示した。そして、婚姻の届出自体について当事者間に意思の合致があったとしても、それが単に他の目的を達するための便法として仮託されたものにすぎないときは、婚姻は効力を生じないとした。つまり、形式的な届出意思と、身分法上の婚姻意思を区別し、法律婚には後者が必要であるという枠組みを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">婚姻意思</mark></strong>の定義を問う最重要判例である。典型的な誤答は、「婚姻届を提出する意思があれば、夫婦共同生活を形成する意思がなくても婚姻は有効である」という肢である。正しくは、届出意思だけでは足りず、社会観念上夫婦と認められる関係を設定する意思が必要である。反対に、婚姻後すぐ別居した、経済的事情で同居できなかったというだけで直ちに婚姻意思を否定するわけでもない。問題文では、届出の目的、共同生活の実態、当事者の行動を読み、形式的届出と実質的婚姻意思を分ける必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法739条</mark></strong>、<strong><mark class="kw">民法742条</mark></strong>が中心である。婚姻届作成後、受理時に意識を失っていた事案で婚姻成立を認めた判例とは、受理時の意思表示能力だけでなく、届書作成時の婚姻意思と受理前の翻意の有無を見る点で接続する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和44年12月18日 昭和43年(オ)第971号 民集23巻12号2476頁</div>
+      <div class="case-card__title">日常家事債務と表見代理事件（土地建物所有権移転登記抹消登記手続請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法761条</span>
+        <span class="badge badge--law">民法110条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>夫婦の一方が、他方配偶者の財産に関する取引を第三者との間で行い、後に他方配偶者側が、その行為は権限を超えているとして登記抹消等を求めた。第三者側は、夫婦であれば日常家事に関する代理権があり、その代理権を基礎として民法110条の表見代理が成立するはずだと主張した。争点は、<strong><mark class="kw">民法761条</mark></strong>が夫婦相互にどのような代理権を認めるのか、また日常家事の範囲を超えた行為について、その代理権を一般的に表見代理の基本代理権として扱えるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">民法761条</mark></strong>は、夫婦が相互に日常の家事に関する法律行為について他方を代理する権限を有することをも規定していると解した。その一方で、夫婦の一方が日常家事の範囲を超えて第三者と法律行為をした場合に、この代理権を基礎として広く一般的に民法110条の表見代理成立を肯定すべきではないとした。第三者保護は、その行為が当該夫婦の日常家事に属すると信じるにつき正当な理由がある場合に限り、民法110条の趣旨を類推適用すれば足りると判示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">日常家事債務</mark></strong>を「夫婦の一方がした取引なら何でも連帯責任」と誤解しないための基準である。誤答パターンは、「日常家事代理権は民法110条の基本代理権となるので、夫婦の一方の越権行為について表見代理が常に成立する」という肢である。正しくは、日常家事の範囲内なら民法761条の連帯責任が問題になり、範囲外なら一般的な表見代理を広げず、第三者が日常家事に属すると信じる正当理由がある場合に限って保護を考える。夫婦財産制の独立と取引安全の調整を示すため、行政書士試験でも頻出である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法761条</mark></strong>、<strong><mark class="kw">民法110条</mark></strong>、<strong><mark class="kw">民法762条</mark></strong>が関連する。婚姻費用分担義務とは夫婦内部の負担関係、日常家事債務は第三者に対する外部責任という違いも合わせて押さえる必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 平成27年12月16日 平成26年(オ)第1023号 民集69巻8号2586頁</div>
+      <div class="case-card__title">夫婦同氏制度合憲判決（損害賠償請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法750条</span>
+        <span class="badge badge--law">憲法24条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>婚姻により氏を改めた者らが、夫婦が同じ氏を称しなければならないとする<strong><mark class="kw">民法750条</mark></strong>は、人格権、憲法13条、憲法14条、憲法24条に反し違憲であるなどと主張し、国に対して国家賠償を求めた。婚姻により実際には多くの場合で妻が氏を改める社会実態があり、氏の変更による職業上・生活上の不利益が問題となった。争点は、夫婦同氏制度が婚姻制度の設計として国会の裁量を超え、憲法に違反するかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、氏名が個人の人格の象徴であり、氏を改める者に一定の不利益が生じ得ることを認めつつ、民法750条の夫婦同氏制度自体は直ちに憲法に違反しないと判断した。夫婦が同じ氏を称することには、家族の呼称を一つに定める制度上の意味があり、婚姻制度をどのように構築するかは国会の合理的な立法裁量に委ねられる部分が大きいとした。ただし、選択的夫婦別氏制度の採否は、制度の在り方として国会で論ぜられ判断されるべき事項であるとの趣旨も示されている。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法750条</mark></strong>を単なる条文暗記にとどめず、憲法の家族生活における個人の尊厳・両性の本質的平等と結び付けて理解するために重要である。民法の問題では「夫婦は婚姻時に定めるところに従い、夫又は妻の氏を称する」という条文効果が問われ、憲法の問題では立法裁量、個人の尊厳、平等原則が問われる。誤答パターンは、「最高裁は民法750条を違憲無効とした」「夫の氏を称することが法律上義務づけられている」という肢である。正しくは、夫又は妻の氏のどちらかを選ぶ制度であり、最高裁は合憲判断をしたが、制度論としての議論は残る。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法750条</mark></strong>、憲法13条、14条、24条が関連する。婚姻単元では氏の効果として、憲法単元では家族制度に対する立法裁量として位置づけると、横断問題に対応しやすい。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和62年9月2日 昭和61年(オ)第260号 民集41巻6号1423頁</div>
+      <div class="case-card__title">有責配偶者からの離婚請求事件（離婚請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法770条</span>
+        <span class="badge badge--law">信義則</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>夫婦は婚姻後に不和となり、夫は別の女性と不貞関係を継続し、その女性との間に子ももうけて長期間別居した。夫は妻に対して離婚を求めたが、妻は夫こそ婚姻破綻の原因を作った有責配偶者であり、そのような者からの離婚請求は許されないと争った。夫婦の別居期間は三十六年に及び、未成熟子はいない状況であった。争点は、婚姻破綻の主たる責任を負う有責配偶者からの離婚請求が、民法770条と信義則に照らしてどのような場合に認められるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、有責配偶者からされた離婚請求であっても、その一事をもって常に許されないとはしなかった。夫婦がその年齢及び同居期間と対比して相当の長期間別居し、その間に未成熟子がいない場合には、相手方配偶者が離婚によって精神的・社会的・経済的に極めて苛酷な状態に置かれるなど、離婚請求を認容することが著しく社会正義に反するといえる特段の事情がない限り、有責配偶者からの請求であることだけを理由に排斥することはできないとした。つまり、責任の有無だけでなく、別居期間、未成熟子の有無、相手方の苛酷状態という複数要素を総合する判断枠組みを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">裁判離婚</mark></strong>と信義則の最重要判例である。誤答パターンは、「有責配偶者からの離婚請求は常に認められない」「別居期間が長ければ、相手方が苛酷な状態に置かれても必ず認められる」という両極端の肢である。正しくは、有責配偶者からの請求でも例外的に認められ得るが、相当長期間の別居、未成熟子の不存在、相手方が精神的・社会的・経済的に極めて苛酷な状態に置かれないことなどを総合して判断する。行政書士試験では、民法770条の「婚姻を継続し難い重大な事由」と、民法1条2項の信義則を結び付けて問われる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法770条</mark></strong>、<strong><mark class="kw">民法1条2項</mark></strong>が中心である。財産分与、慰謝料、婚姻費用、子の監護の処理が十分かどうかは、相手方が苛酷な状態に置かれるかの判断と接続する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">婚姻意思</mark></strong>は、婚姻届を出す意思ではなく、真に社会観念上夫婦である関係を設定する意思である。</li>
+        <li><strong><mark class="kw">婚姻</mark></strong>は届出によって効力を生ずる。事実婚は法律婚と同じ成立効果を当然には生じない。</li>
+        <li><strong><mark class="kw">民法733条</mark></strong>は削除条文であり、令和六年四月一日以後の婚姻では女性の再婚禁止期間は廃止されている。</li>
+        <li><strong><mark class="kw">成年被後見人</mark></strong>が婚姻をするには、成年後見人の同意を要しない。</li>
+        <li><strong><mark class="kw">婚姻の無効</mark></strong>は民法742条の二類型に限定され、重婚や近親婚は原則として取消しの問題になる。</li>
+        <li><strong><mark class="kw">婚姻の取消し</mark></strong>は将来効であり、一般の法律行為取消しのように当然に遡及効で処理しない。</li>
+        <li><strong><mark class="kw">日常家事債務</mark></strong>は日常家事の範囲内に限られ、夫婦の一方の高額取引まで当然に他方配偶者が連帯責任を負うわけではない。</li>
+        <li><strong><mark class="kw">裁判離婚</mark></strong>では民法770条の離婚原因を確認し、有責配偶者からの請求は信義則上の制限を検討する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「婚姻届の提出について当事者間に合意があれば、夫婦共同生活を形成する意思がなくても婚姻は常に有効である。」これは誤りである。<strong><mark class="kw">婚姻意思</mark></strong>は、真に社会観念上夫婦である関係を設定する意思であり、届出意思だけでは足りない。</p>
+      <p><strong>誤りの選択肢例2：</strong>「配偶者のある者が重ねて婚姻した場合、その婚姻は民法742条により当然無効である。」これは誤りである。重婚は<strong><mark class="kw">民法732条</mark></strong>違反であり、<strong><mark class="kw">民法744条</mark></strong>の取消しの問題として処理する。</p>
+      <p><strong>誤りの選択肢例3：</strong>「詐欺による婚姻の取消権は、詐欺を発見した時から五年間行使できる。」これは誤りである。<strong><mark class="kw">民法747条</mark></strong>二項により、詐欺を発見し、又は強迫を免れた後三箇月を経過し、又は追認をしたときに消滅する。</p>
+      <p><strong>誤りの選択肢例4：</strong>「夫婦の一方が第三者とした法律行為については、日常家事に関するものかを問わず他方配偶者も連帯責任を負う。」これは誤りである。<strong><mark class="kw">民法761条</mark></strong>は日常の家事に関する法律行為に限定している。</p>
+      <p><strong>誤りの選択肢例5：</strong>「協議離婚は夫婦の合意だけで成立し、届出は対抗要件にすぎない。」これは誤りである。協議離婚には<strong><mark class="kw">民法764条</mark></strong>により届出規定が準用され、届出によって効力が生じる。</p>
+      <p><strong>誤りの選択肢例6：</strong>「有責配偶者からの離婚請求は、どのような事情があっても信義則上許されない。」これは誤りである。最高裁は、相当長期間の別居、未成熟子の不存在、相手方が極めて苛酷な状態に置かれないことなどを考慮し、例外的に認容され得る枠組みを示している。</p>
+    </div>
+  </div>
+
+  <p>解答順序は、第一に婚姻又は離婚の「成立段階」か「効果段階」かを分ける。婚姻成立なら、婚姻意思、届出、婚姻障害、受理審査を確認する。成立後の効力なら、氏、同居協力扶助、婚姻費用、日常家事債務、夫婦財産制を問う。離婚なら、協議離婚か裁判離婚かを確認し、未成年の子、氏、財産分与、祭祀財産を別途処理する。問題文が「夫婦の一方が第三者と契約した」と書く場合は日常家事債務、「夫婦内部で生活費を請求した」と書く場合は婚姻費用、「離婚後の財産清算」と書く場合は財産分与である。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻</mark></strong>は、民法総則、物権・債権、相続、憲法、行政実務と接続する。婚姻意思や詐欺・強迫は意思表示論と似ているが、婚姻無効・取消しは身分法上の特則で処理する。日常家事債務は代理・表見代理と接続し、夫婦財産制は債権者から見た責任財産や財産分与の対象判断に影響する。相続では、法律上の配偶者であるかどうかが相続人資格に直結し、婚姻無効と離婚の違いが大きな差を生む。憲法では、夫婦同氏、婚姻の自由、家族生活における個人の尊厳、両性の本質的平等が問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">近年の親族法改正</span>
+    </div>
+    <div class="box__bd">
+      <p>令和六年四月一日には、嫡出推定制度の見直し等に関する改正が施行され、女性の再婚禁止期間が廃止された。これは、再婚後に生まれた子を再婚後の夫の子と推定するなど、嫡出推定の仕組みが見直されたことにより、旧来の待婚期間を置く必要性が低下したためである。したがって、現行法の婚姻障害を整理するときは、<strong><mark class="kw">民法733条</mark></strong>を積極要件として覚えない。さらに令和八年四月一日には、父母の離婚後等の子の養育に関する民法等改正が施行され、離婚後の親権、監護、養育費、親子交流、財産分与等の規律が見直された。行政書士試験では、旧法知識が残った選択肢が誤りとして出やすいため、施行日と現行条文を明確に区別する必要がある。</p>
+    </div>
+  </div>
+
+  <p>婚姻分野の学習では、条文を「成立」「瑕疵」「効力」「解消」の四群に分けるとよい。成立は<strong><mark class="kw">民法731条</mark></strong>から<strong><mark class="kw">民法741条</mark></strong>、瑕疵は<strong><mark class="kw">民法742条</mark></strong>から<strong><mark class="kw">民法749条</mark></strong>、効力は<strong><mark class="kw">民法750条</mark></strong>から<strong><mark class="kw">民法762条</mark></strong>、解消は<strong><mark class="kw">民法763条</mark></strong>から<strong><mark class="kw">民法771条</mark></strong>である。この順序で読むと、婚姻意思が欠ける場合、届出がない場合、婚姻障害がある場合、婚姻後に夫婦間で費用が問題になる場合、離婚後に子や財産を処理する場合を自然に切り分けられる。</p>
+
+  <p>実務では、婚姻届・離婚届は戸籍事務と密接に関係する。届出が受理されるかどうかは戸籍上の公証に直結するため、民法だけでなく戸籍法の手続も重要である。ただし、行政書士試験の民法では、戸籍実務の細部よりも、届出が効力発生要件であること、受理審査で何が確認されるか、受理後でも婚姻無効・取消しの問題が残るかを押さえることが優先である。離婚届についても、未成年の子がいる場合の親権者の定め等の確認と、届出違反が離婚の効力を当然に妨げるわけではないという条文構造を区別する。</p>
+
+  <p>判例学習では、婚姻意思、日常家事債務、有責配偶者からの離婚請求を必ずセットで押さえる。婚姻意思判例は、届出意思と婚姻意思を分ける。日常家事債務判例は、日常家事代理権と表見代理の拡張を制限する。有責配偶者判例は、離婚原因があっても信義則により請求が制限される場合と、例外的に認容される場合を整理する。これらは、いずれも条文を形式的に読むだけでは結論を誤る領域であり、事実関係から制度趣旨を読み取る力が問われる。</p>
+
+  <p>最後に、婚姻単元は相続・親子・親権・扶養への入口でもある。婚姻が有効なら配偶者は相続人となり、離婚すれば姻族関係は終了し、子の監護や親権の処理が必要になる。婚姻の効力としての同居協力扶助義務や婚姻費用分担義務は、扶養単元にもつながる。法律婚と事実婚、婚姻無効と取消し、協議離婚と裁判離婚を正確に区別できると、後続の親子・親権・相続単元の理解が安定する。</p>
+</section>
+
+</body>
+</html>

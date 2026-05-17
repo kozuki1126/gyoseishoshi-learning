@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債権者代位権（民法423条） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">債権者代位権（民法423条）</h1>
+  <p class="page-title-block__sub">債務者が権利を放置するとき、責任財産を守るために債権者が代わって行使する制度を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法423条</span>
+    <span class="badge badge--info">民法423条の2</span>
+    <span class="badge badge--info">民法423条の3</span>
+    <span class="badge badge--info">民法423条の5</span>
+    <span class="badge badge--info">民法423条の7</span>
+    <span class="badge badge--info">責任財産保全</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権者代位権</mark></strong>とは、債務者が第三者に対して有する権利を行使しないために債権者の債権回収が危うくなる場合、債権者が自己の債権を保全するため、債務者に代わってその権利を行使できる制度である。たとえば、A銀行がB会社に貸金債権を持っているが、B会社が資金繰りに困っているにもかかわらず、注文者Cに対する請負代金債権を放置している場合、A銀行はB会社の責任財産を保全するため、B会社に代わってCに請負代金の支払を求めることがある。このように、<strong><mark class="kw">債権者代位権</mark></strong>は債権者が他人である債務者の財産管理へ例外的に介入する制度であり、だからこそ要件と限界が厳格に問題になる。</p>
+
+  <p>制度の中心は、<strong><mark class="kw">責任財産</mark></strong>の保全である。金銭債権の債権者は、通常、債務名義を得て債務者の財産へ強制執行することで満足を受ける。その前提として、債務者の一般財産が残っていなければならない。債務者が第三債務者に対する売掛金、貸金、損害賠償請求権などを放置していれば、責任財産が回復せず、債権者の強制執行が空振りになる。そこで民法は、<strong><mark class="kw">民法423条</mark></strong>を起点に、代位行使の要件、範囲、直接請求、相手方の抗弁、債務者の処分権限、訴訟告知、登記請求権保全の転用型を定めている。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">債権者代位権</mark></strong>と<strong><mark class="kw">詐害行為取消権</mark></strong>の比較、被保全債権の履行期、債務者の無資力、被代位権利の範囲、一身専属権・差押禁止債権の除外、債権者への直接支払、債務者が自ら権利行使している場合の処理が頻出である。令和2年施行の債権法改正後は、代位行使後も債務者が取立てや処分を妨げられないこと、訴えを提起した債権者に訴訟告知義務があること、登記・登録請求権保全の転用型が<strong><mark class="kw">民法423条の7</mark></strong>に明文化されたことを、旧判例法理と区別して押さえる必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに対して300万円の貸金債権を持ち、BはCに対して500万円の売掛金債権を持っている。Bが無資力で、Cへの請求を怠っている場合、Aは<strong><mark class="kw">債権者代位権</mark></strong>により、Bに代わってCへ売掛金の支払を求めることができる。ただし、売掛金は可分な金銭債権であるため、Aが代位行使できる範囲は原則として自己の債権額である300万円までである。CがAへ300万円を支払えば、BのCに対する売掛金債権はその範囲で消滅するが、Aが他の債権者に優先する担保権を得るわけではない。ここが<strong><mark class="kw">責任財産保全</mark></strong>の制度であって、当然の優先弁済制度ではないという重要な理解につながる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権者代位権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権者代位権</mark></strong>は、債権者が自己の債権を保全するため必要があるときに、債務者に属する権利を債務者に代わって行使する権利である。制度趣旨は、債務者が第三者に対する権利を放置することで責任財産が減少または回復しない場合に、債権者の強制執行の基礎を守る点にある。債権者は債務者の代理人になるのではなく、法律上認められた自己の権限として債務者の権利を行使する。したがって、相手方は債務者に対して主張できる抗弁を代位債権者にも対抗でき、代位行使の効果は本来、債務者の財産へ帰属する。試験では、「債権者が当然に優先弁済権を取得する」とする肢が誤りであり、あくまで責任財産を保全する制度であることを起点にする。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">被保全債権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">被保全債権</mark></strong>は、債権者が債務者に対して有する、保全される側の債権である。典型は貸金債権、売買代金債権、損害賠償債権などの金銭債権である。<strong><mark class="kw">民法423条2項</mark></strong>により、原則として被保全債権の期限が到来していなければ代位行使できない。まだ弁済期が来ていない段階で債務者の財産管理に介入するのは過剰だからである。ただし、時効完成を防ぐための措置や未登記権利の保存など、財産の現状を維持する<strong><mark class="kw">保存行為</mark></strong>は履行期前でも認められる。さらに、<strong><mark class="kw">民法423条3項</mark></strong>は、強制執行で実現できない債権を被保全債権とする代位行使を否定しており、責任財産保全という制度目的と連動している。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">被代位権利</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">被代位権利</mark></strong>は、債務者が第三債務者などに対して有している、代位行使される側の権利である。金銭債権や動産引渡請求権だけでなく、登記請求権、妨害排除請求権、解除権、取消権、時効援用権なども、要件を満たせば対象になり得る。もっとも、<strong><mark class="kw">民法423条1項ただし書</mark></strong>は、債務者の一身に専属する権利と差押えを禁じられた権利を除外している。慰謝料請求権や財産分与請求権のように身分的・人格的要素を含む権利は、具体的内容が確定して財産権として扱える段階かどうかが問題になる。試験では、「債権者代位権の対象は金銭債権に限られる」とする肢と、「一身専属権も常に代位できる」とする肢の双方が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">保全の必要性と無資力要件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">保全の必要性</mark></strong>は、債務者の権利を債権者が代位行使しなければ、自己の債権の実現が危うくなる関係をいう。本来型の債権者代位権では、債務者が無資力であることが典型的な要件として扱われる。債務者に十分な財産があれば、債権者は通常の強制執行で満足を受ければ足り、他人の権利行使に介入する必要がないからである。これに対し、不動産買主が自己の登記請求権を保全するため売主の前主に対する登記請求権を行使する場合や、賃借人が使用収益権を保全するため賃貸人の妨害排除請求権を行使する場合のような転用型では、無資力を厳格に要求しない。試験では、本来型では無資力を意識し、特定債権・登記請求権保全などの転用型では保全関係の具体性を読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代位行使の範囲と直接請求</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代位行使の範囲</mark></strong>は、被代位権利の目的が可分である場合、自己の債権額の限度に限られる。これは<strong><mark class="kw">民法423条の2</mark></strong>が明文化した規律であり、金銭債権のような可分債権について、代位債権者が必要を超えて債務者の財産管理に介入することを防ぐ。もっとも、<strong><mark class="kw">民法423条の3</mark></strong>は、被代位権利が金銭の支払または動産の引渡しを目的とするとき、債権者が相手方に自己への支払または引渡しを求められると定める。直接受領は手続上の便宜を認めるものであり、担保権のような優先弁済権を与えるものではない。したがって、他の債権者との競合や差押えがある場合には、債権者代位権だけで当然に優先順位が決まるわけではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債務者の処分権限と訴訟告知</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法423条の5</mark></strong>は、債権者が被代位権利を行使した場合でも、債務者が自ら取立てその他の処分をすることを妨げられないとする。改正前は、代位訴訟の提起を債務者が知った後は債務者の処分権限が制限されるという判例法理があったが、現行法は債務者の財産管理権を過度に奪わない方向へ整理した。相手方も、被代位権利について債務者に履行することを妨げられない。もっとも、債権者が訴えを提起した場合、その判決効が債務者にも及び得るため、<strong><mark class="kw">民法423条の6</mark></strong>は遅滞なく債務者へ訴訟告知をする義務を置く。試験では、旧法型の「代位行使後は債務者が一切処分できない」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">転用型債権者代位権</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">転用型債権者代位権</mark></strong>は、金銭債権者が責任財産を保全する本来型ではなく、特定の権利や法律関係を実現するために債権者代位権の構造を利用する類型である。典型は、順次売買された不動産の買主が自己の登記請求権を保全するため、売主の前主に対する登記請求権を代位行使する場合である。現行<strong><mark class="kw">民法423条の7</mark></strong>は、登記または登録をしなければ権利変動を第三者に対抗できない財産を譲り受けた者について、この登記・登録請求権保全の代位行使を明文化した。転用型では、債務者の無資力よりも、代位行使によって債務者が利益を受け、その利益によって債権者の特定債権が保全される関係が重要になる。試験では、転用型を本来型と同じ要件で機械的に処理しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 760" role="img" aria-label="債権者代位権の要件と効果の全体構造">
+      <defs>
+        <marker id="arr22a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr22a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr22a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="540" y1="120" x2="540" y2="168" stroke="#2563eb" stroke-width="3"/>
+      <line x1="160" y1="168" x2="920" y2="168" stroke="#2563eb" stroke-width="3"/>
+      <line x1="160" y1="168" x2="160" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22a-blue)"/>
+      <line x1="415" y1="168" x2="415" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22a-blue)"/>
+      <line x1="665" y1="168" x2="665" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22a-blue)"/>
+      <line x1="920" y1="168" x2="920" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22a-blue)"/>
+      <line x1="415" y1="388" x2="415" y2="478" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr22a-orange)"/>
+      <line x1="665" y1="388" x2="665" y2="478" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr22a-red)"/>
+      <line x1="920" y1="388" x2="920" y2="478" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr22a-blue)"/>
+      <rect x="345" y="40" width="390" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">債権者代位権</text>
+      <text x="540" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">責任財産保全のための法定権限</text>
+      <rect x="40" y="248" width="240" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="160" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">被保全債権</text>
+      <text x="160" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法423条2項・3項</text>
+      <text x="160" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">原則として履行期到来</text>
+      <text x="160" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">強制執行可能な債権</text>
+      <rect x="295" y="248" width="240" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="415" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">保全の必要性</text>
+      <text x="415" y="310" text-anchor="middle" font-size="13" fill="#7c2d12">本来型は無資力が焦点</text>
+      <text x="415" y="338" text-anchor="middle" font-size="13" fill="#7c2d12">債務者の放置で回収危険</text>
+      <text x="415" y="364" text-anchor="middle" font-size="13" fill="#7c2d12">過剰介入を防ぐ要件</text>
+      <rect x="545" y="248" width="240" height="140" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="665" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">被代位権利</text>
+      <text x="665" y="310" text-anchor="middle" font-size="13" fill="#9f1239">民法423条1項ただし書</text>
+      <text x="665" y="338" text-anchor="middle" font-size="13" fill="#9f1239">一身専属・差押禁止は除外</text>
+      <text x="665" y="364" text-anchor="middle" font-size="13" fill="#9f1239">債務者に属する権利</text>
+      <rect x="800" y="248" width="240" height="140" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="920" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">行使効果</text>
+      <text x="920" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法423条の2から6</text>
+      <text x="920" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">範囲・直接請求・抗弁</text>
+      <text x="920" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">処分権限・訴訟告知</text>
+      <rect x="295" y="478" width="240" height="105" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="415" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">保存行為</text>
+      <text x="415" y="544" text-anchor="middle" font-size="13" fill="#7c2d12">履行期前でも可能</text>
+      <text x="415" y="568" text-anchor="middle" font-size="13" fill="#7c2d12">財産現状の維持</text>
+      <rect x="545" y="478" width="240" height="105" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="665" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">相手方の抗弁</text>
+      <text x="665" y="544" text-anchor="middle" font-size="13" fill="#9f1239">民法423条の4</text>
+      <text x="665" y="568" text-anchor="middle" font-size="13" fill="#9f1239">債務者への抗弁を対抗</text>
+      <rect x="800" y="478" width="240" height="105" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="920" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">直接支払・引渡し</text>
+      <text x="920" y="544" text-anchor="middle" font-size="13" fill="#1e3a8a">民法423条の3</text>
+      <text x="920" y="568" text-anchor="middle" font-size="13" fill="#1e3a8a">優先弁済権とは別</text>
+      <rect x="60" y="640" width="960" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="540" y="670" text-anchor="middle" font-size="13" fill="#9f1239">本来型では責任財産保全が中心。転用型では特定債権の実現との具体的な保全関係を確認する。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">債権者代位権</mark></strong>を「被保全債権」「保全の必要性」「被代位権利」「行使効果」の四つに分解している。最初に確認するのは、債権者が債務者に対して強制執行で実現できる債権を持ち、その履行期が到来しているかである。次に、債務者が無資力で、被代位権利を放置しているため、債権者の債権回収が危ういかを見る。最後に、被代位権利が一身専属権や差押禁止債権でないか、相手方が債務者に対して持つ抗弁を代位債権者に対抗できるかを確認する。直接支払や直接引渡しは便利な効果だが、担保権と同じ優先弁済権ではない点を図の末尾で押さえる。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 700" role="img" aria-label="本来型と転用型の判断構造">
+      <defs>
+        <marker id="arr22b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr22b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr22b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="540" y1="118" x2="540" y2="165" stroke="#2563eb" stroke-width="3"/>
+      <line x1="270" y1="165" x2="810" y2="165" stroke="#2563eb" stroke-width="3"/>
+      <line x1="270" y1="165" x2="270" y2="245" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22b-blue)"/>
+      <line x1="810" y1="165" x2="810" y2="245" stroke="#2563eb" stroke-width="3" marker-end="url(#arr22b-blue)"/>
+      <line x1="270" y1="385" x2="270" y2="475" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr22b-orange)"/>
+      <line x1="810" y1="385" x2="810" y2="475" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr22b-red)"/>
+      <polyline points="390,312 500,312 500,525 660,525" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr22b-red)"/>
+      <rect x="345" y="38" width="390" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">代位権の二類型</text>
+      <text x="540" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">責任財産保全か、特定債権実現か</text>
+      <rect x="100" y="245" width="340" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="270" y="280" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">本来型</text>
+      <text x="270" y="308" text-anchor="middle" font-size="13" fill="#1e3a8a">金銭債権の責任財産保全</text>
+      <text x="270" y="334" text-anchor="middle" font-size="13" fill="#1e3a8a">債務者の無資力が焦点</text>
+      <text x="270" y="360" text-anchor="middle" font-size="13" fill="#1e3a8a">例：売掛金・貸金の取立て</text>
+      <rect x="640" y="245" width="340" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="810" y="280" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">転用型</text>
+      <text x="810" y="308" text-anchor="middle" font-size="13" fill="#7c2d12">特定債権や物権的利益の保全</text>
+      <text x="810" y="334" text-anchor="middle" font-size="13" fill="#7c2d12">無資力より保全関係を重視</text>
+      <text x="810" y="360" text-anchor="middle" font-size="13" fill="#7c2d12">例：登記請求権・妨害排除</text>
+      <rect x="100" y="475" width="340" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="270" y="512" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">民法423条から423条の6</text>
+      <text x="270" y="540" text-anchor="middle" font-size="13" fill="#7c2d12">範囲・直接請求・抗弁を確認</text>
+      <text x="270" y="564" text-anchor="middle" font-size="13" fill="#7c2d12">債務者の処分権限も残る</text>
+      <rect x="640" y="475" width="340" height="110" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="810" y="512" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">民法423条の7</text>
+      <text x="810" y="540" text-anchor="middle" font-size="13" fill="#9f1239">登記・登録請求権保全を明文化</text>
+      <text x="810" y="564" text-anchor="middle" font-size="13" fill="#9f1239">前三条を準用する</text>
+      <rect x="80" y="628" width="920" height="44" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="540" y="656" text-anchor="middle" font-size="13" fill="#1e3a8a">分類の決め手は、債権者が一般財産の回復を狙うのか、登記や使用収益など特定の法的地位を守るのかである。</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、<strong><mark class="kw">本来型債権者代位権</mark></strong>と<strong><mark class="kw">転用型債権者代位権</mark></strong>の判断構造を分けている。本来型は、債務者の一般財産を回復させ、強制執行の引当てを確保する制度であるため、債務者の無資力が重要な意味を持つ。転用型は、債権者の特定の権利を実現するため、債務者が第三者に対する権利を行使しない状態を補うものであり、無資力よりも保全関係の具体性が重視される。特に不動産の順次売買では、最終買主が自己名義の登記を得るために、中間者の登記請求権を順に代位行使する構造を理解する必要がある。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">債権者代位権</th>
+        <th class="col--b">詐害行為取消権</th>
+        <th class="col--c">強制執行</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">制度目的</td>
+        <td class="col--a"><span class="em-a">債務者が行使しない権利</span>を代わって行使し、責任財産を保全する。</td>
+        <td class="col--b"><span class="em-b">債務者がした財産減少行為</span>を取り消し、逸出財産を回復する。</td>
+        <td class="col--c"><span class="em-c">債務名義に基づき財産を換価</span>し、債権者へ配当・弁済する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題場面</td>
+        <td class="col--a">債務者が売掛金、貸金、登記請求権などを放置している。</td>
+        <td class="col--b">債務者が不動産を贈与するなど、債権者を害する処分をした。</td>
+        <td class="col--c">債権者が判決・公正証書などを得て、債務者財産を差し押さえる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">主な要件</td>
+        <td class="col--a">被保全債権、保全の必要性、履行期到来、被代位権利の適格性、債務者の不行使。</td>
+        <td class="col--b">被保全債権、詐害行為、詐害意思、受益者等の主観的要件、財産権目的行為。</td>
+        <td class="col--c">債務名義、執行文、送達、差押対象財産の存在など手続要件。</td>
+      </tr>
+      <tr>
+        <td class="col--label">行使方法</td>
+        <td class="col--a">裁判外でも行使できるが、訴えを提起した場合は債務者へ訴訟告知する。</td>
+        <td class="col--b">裁判上の請求による。受益者または転得者を被告とする。</td>
+        <td class="col--c">執行裁判所や執行官を通じた公的手続として行われる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">被代位権利が行使され、金銭・動産は債権者への直接支払・引渡しも可能。</td>
+        <td class="col--b">詐害行為が取り消され、財産返還または価額償還が問題になる。</td>
+        <td class="col--c">差押え、換価、配当によって債権の満足を図る。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「代位債権者は常に優先弁済を受ける」とする肢は誤り。</td>
+        <td class="col--b">「財産権を目的としない身分行為も当然に取り消せる」とする肢は誤り。</td>
+        <td class="col--c">「債務名義なしに強制執行できる」とする肢は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>区別の実践的な判断基準は、債務者が「何もしない」のか「財産を外へ出した」のかである。債務者がCに対する売掛金を放置しているなら<strong><mark class="kw">債権者代位権</mark></strong>、債務者が不動産を親族に贈与して責任財産を減らしたなら<strong><mark class="kw">詐害行為取消権</mark></strong>が問題になる。すでに判決を得て債務者財産を差し押さえる段階なら強制執行の問題であり、債権者代位権とは手続の段階が違う。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">本来型債権者代位権</th>
+        <th class="col--b">登記請求権保全型</th>
+        <th class="col--c">賃借権・担保価値保全型</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">保全対象</td>
+        <td class="col--a"><span class="em-a">金銭債権</span>の回収可能性、責任財産の維持。</td>
+        <td class="col--b"><span class="em-b">所有権移転登記請求権</span>など、対抗要件取得のための特定債権。</td>
+        <td class="col--c"><span class="em-c">使用収益権や担保価値</span>など、特定の法的利益。</td>
+      </tr>
+      <tr>
+        <td class="col--label">無資力の扱い</td>
+        <td class="col--a">原則として重要。債務者に十分な財産があれば介入の必要性が乏しい。</td>
+        <td class="col--b">無資力を厳格に要求しない。登記を得られないこと自体が保全上の問題になる。</td>
+        <td class="col--c">権利の実効性を守る具体的必要性を重視する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法423条</mark></strong>から<strong><mark class="kw">民法423条の6</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法423条の7</mark></strong>。前三条を準用する。</td>
+        <td class="col--c"><strong><mark class="kw">民法423条</mark></strong>の法意、賃貸借・担保物権の保護規定との接続。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">貸金債権者が、債務者の第三債務者に対する売掛金を代位行使する。</td>
+        <td class="col--b">不動産の買主が、売主の前主に対する登記請求権を代位行使する。</td>
+        <td class="col--c">建物賃借人が、賃貸人の不法占拠者に対する明渡請求権を代位行使する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での注意</td>
+        <td class="col--a">被保全債権の履行期、保存行為、強制執行可能性、債務者の不行使を確認する。</td>
+        <td class="col--b">登記・登録をしなければ対抗できない財産か、譲渡人が第三者への請求権を行使しないかを見る。</td>
+        <td class="col--c">代位行使により債務者が利益を受け、その利益が債権者の権利保全につながるかを見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>同じ<strong><mark class="kw">債権者代位権</mark></strong>でも、本来型と転用型では読むべき事実が違う。本来型では、債務者の無資力、被代位権利の放置、責任財産の不足を確認する。登記請求権保全型では、順次売買や中間省略に近い事案で、誰が誰に対する登記請求権を持ち、その権利を行使しないために最終買主が対抗要件を得られないのかを図式化する。賃借権・担保価値保全型では、代位行使によって債務者側にどのような利益が生じ、それが債権者側の使用収益や担保価値の保全にどう結びつくかを説明できることが重要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法423条 債権者代位権の要件</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法423条1項</mark></strong>　債権者は、自己の債権を保全するため必要があるときは、債務者に属する権利（以下「被代位権利」という。）を行使することができる。ただし、債務者の一身に専属する権利及び差押えを禁じられた権利は、この限りでない。<br>
+        <strong><mark class="kw">民法423条2項</mark></strong>　債権者は、その債権の期限が到来しない間は、被代位権利を行使することができない。ただし、保存行為は、この限りでない。<br>
+        <strong><mark class="kw">民法423条3項</mark></strong>　債権者は、その債権が強制執行により実現することのできないものであるときは、被代位権利を行使することができない。
+      </blockquote>
+      <p><strong><mark class="kw">民法423条</mark></strong>は、債権者代位権の入口となる条文である。1項本文は、自己の債権を保全する必要があるときに限り、債務者に属する権利を行使できるとする。1項ただし書は、債務者の人格や身分に密接に結びつく一身専属権と、差押禁止債権を除外する。2項は、被保全債権の履行期到来を原則とし、保存行為だけを例外にする。3項は、強制執行で実現できない債権を保全するためには代位行使できないとし、制度を責任財産保全の枠内に置いている。試験では、1項だけで判断せず、2項・3項まで読んで、履行期前の保存行為と執行不能債権の除外を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法423条の2・423条の3 代位行使の範囲と直接請求</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法423条の2</mark></strong>　債権者は、被代位権利を行使する場合において、被代位権利の目的が可分であるときは、自己の債権の額の限度においてのみ、被代位権利を行使することができる。<br>
+        <strong><mark class="kw">民法423条の3</mark></strong>　債権者は、被代位権利を行使する場合において、被代位権利が金銭の支払又は動産の引渡しを目的とするものであるときは、相手方に対し、その支払又は引渡しを自己に対してすることを求めることができる。この場合において、相手方が債権者に対してその支払又は引渡しをしたときは、被代位権利は、これによって消滅する。
+      </blockquote>
+      <p><strong><mark class="kw">民法423条の2</mark></strong>は、被代位権利が可分であるときの過剰行使を制限する。AのBに対する債権が300万円で、BのCに対する債権が500万円なら、Aは原則として300万円の限度でしか代位行使できない。<strong><mark class="kw">民法423条の3</mark></strong>は、金銭支払や動産引渡しについて、相手方に対し債権者への直接支払・直接引渡しを求められるとする。これは、いったん債務者に支払わせてから差押えをする迂遠さを避ける趣旨である。ただし、直接受領が認められることと、他の債権者に対して優先することは別である。試験では、直接支払を優先弁済権と混同しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法423条の4 相手方の抗弁</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法423条の4</mark></strong>　債権者が被代位権利を行使したときは、相手方は、債務者に対して主張することができる抗弁をもって、債権者に対抗することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法423条の4</mark></strong>は、第三債務者など相手方の防御を保護する規定である。代位債権者は債務者に代わって被代位権利を行使するだけなので、相手方は債務者に対して有していた同時履行の抗弁、弁済、相殺、解除、期限未到来などの抗弁を代位債権者にも主張できる。もし相手方が債務者には拒めるのに代位債権者には拒めないとすれば、債権者代位権の行使によって相手方の地位が不当に悪化する。試験では、「債権者代位権が行使されると、相手方は債務者に対する抗弁を失う」とする肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法423条の5・423条の6 債務者の処分権限と訴訟告知</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法423条の5</mark></strong>　債権者が被代位権利を行使した場合であっても、債務者は、被代位権利について、自ら取立てその他の処分をすることを妨げられない。この場合においては、相手方も、被代位権利について、債務者に対して履行をすることを妨げられない。<br>
+        <strong><mark class="kw">民法423条の6</mark></strong>　債権者は、被代位権利の行使に係る訴えを提起したときは、遅滞なく、債務者に対し、訴訟告知をしなければならない。
+      </blockquote>
+      <p><strong><mark class="kw">民法423条の5</mark></strong>は、債権者の代位行使後も債務者が被代位権利について取立てや処分をできるとする。これは令和2年施行の債権法改正で明文化された重要な変更点であり、旧判例法理のように、代位訴訟を知った債務者の処分権限を当然に奪う整理ではない。<strong><mark class="kw">民法423条の6</mark></strong>は、訴えによる代位行使について債務者への訴訟告知を求める。代位訴訟の判決効が債務者にも及び得るため、債務者に手続参加の機会を与える趣旨である。試験では、債務者の処分権限が残ることと、訴訟告知が必要であることをセットで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法423条の7 登記又は登録の請求権を保全するための債権者代位権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法423条の7</mark></strong>　登記又は登録をしなければ権利の得喪及び変更を第三者に対抗することができない財産を譲り受けた者は、その譲渡人が第三者に対して有する登記手続又は登録手続をすべきことを請求する権利を行使しないときは、その権利を行使することができる。この場合においては、前三条の規定を準用する。
+      </blockquote>
+      <p><strong><mark class="kw">民法423条の7</mark></strong>は、転用型債権者代位権のうち、登記または登録請求権を保全する類型を明文化した規定である。不動産、自動車、船舶など、登記・登録をしなければ権利変動を第三者に対抗できない財産を譲り受けた者が、譲渡人の前主に対する登記・登録請求権を代位行使できる。たとえば、AからB、BからCへ土地が順次売買されたが、AからBへの登記が未了でBがAへの登記請求をしない場合、Cは自己の登記請求権を保全するため、BのAに対する登記請求権を行使する構造になる。条文は前三条、すなわち相手方の抗弁、債務者の処分権限、訴訟告知の規律を準用するため、本来型と共通する手続保障も意識する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和44年6月24日 昭和41年(オ)第981号 民集23巻7号1079頁</div>
+      <div class="case-card__title">金銭債権について債権者代位権を行使しうる範囲</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法423条の2</span>
+        <span class="badge badge--law">代位行使の範囲</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債権者が債務者に対して金銭債権を有し、債務者はさらに第三債務者に対して金銭債権を有していた。債務者が第三債務者に対する債権を十分に行使しなかったため、債権者は債務者に代位して第三債務者へ支払を求めた。問題は、債務者の第三債務者に対する金銭債権額が、債権者自身の債権額を上回る場合に、債権者が被代位権利の全部を行使できるのか、それとも自己の債権額の範囲に限られるのかであった。金銭債権は可分であり、代位行使は債権者の保全に必要な限度にとどめるべきかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債権者が債務者に対する金銭債権に基づいて、債務者が第三債務者に対して有する金銭債権を代位行使する場合、債権者は自己の債権額の範囲においてのみ債務者の債権を行使できると判示した。債権者代位権は、債務者の財産管理へ例外的に介入する制度であり、債権者の保全に必要な範囲を超えて債務者の権利全部を処理させる必要はない。金銭債権のような可分債権では、債権者の債権額を基準に行使範囲を切り分けることができるため、必要限度で足りる。この判断は、現行<strong><mark class="kw">民法423条の2</mark></strong>の「自己の債権の額の限度」ルールにつながる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、代位行使の範囲を問う最重要判例である。誤答パターンは、「債務者の第三債務者に対する金銭債権が500万円なら、代位債権者の債権が100万円でも500万円全額を当然に行使できる」という形で出る。正しくは、被代位権利の目的が可分であるときは、自己の債権額の限度に限られる。もっとも、不可分な登記請求権や明渡請求権のような場合は金銭債権と同じ切り分けができないため、対象権利が可分か不可分かを先に判断する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法423条</mark></strong>、<strong><mark class="kw">民法423条の2</mark></strong>、<strong><mark class="kw">民法423条の3</mark></strong>が関連する。債権者代位権による直接支払と優先弁済権の有無、他の債権者による差押えとの競合もあわせて確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和28年12月14日 昭和24年(オ)第58号 民集7巻12号1386頁</div>
+      <div class="case-card__title">債務者が自ら権利を行使している場合の代位行使</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法423条</span>
+        <span class="badge badge--law">債務者の不行使</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債権者が、債務者の第三者に対する権利を代位行使しようとしたところ、債務者自身もすでにその権利について訴えを提起するなど、自ら権利行使をしていた。債権者から見ると、債務者の権利行使の方法が不十分または不適切であり、そのままでは債権者の債権保全に役立たない可能性があった。そこで、債務者が一応権利行使をしている場合でも、債権者がより適切な方法で重ねて代位行使できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債務者がすでに自ら権利を行使している場合には、その行使の方法または結果の良否にかかわらず、債権者は債権者代位権を行使できないと判示した。債権者代位権は、債務者が権利を行使しないために責任財産の保全が危うい場合に認められる補充的な制度である。債務者が自ら権利行使している以上、債権者がその方法に不満を持つだけで債務者の財産管理へ重ねて介入することは、債務者の主体的な財産管理権を害する。したがって、代位行使の前提には、債務者が被代位権利を行使していないことが必要である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">債務者の不行使</mark></strong>を要件として押さえるために重要である。誤答パターンは、「債務者が権利行使をしていても、その方法が債権者にとって不十分なら債権者は常に代位行使できる」という肢である。正しくは、債務者がすでに権利を行使していれば、原則として債権者は重ねて代位行使できない。現行<strong><mark class="kw">民法423条の5</mark></strong>は代位行使後の債務者の処分権限を残すが、それは債務者が行使していないことを出発点に債権者が代位行使できるかという要件論とは区別する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法423条</mark></strong>、<strong><mark class="kw">民法423条の5</mark></strong>、訴訟告知、債務者の財産管理権が関連する。代位行使の補充性を理解することで、過剰介入を防ぐ制度趣旨が見える。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和29年9月24日 昭和28年(オ)第812号</div>
+      <div class="case-card__title">建物賃借人による明渡請求権の代位行使</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法423条</span>
+        <span class="badge badge--law">転用型</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物の新たな賃借人が、賃貸人である建物所有者から建物を使用収益する権利を取得したが、前賃借人などの不法占拠者が建物を占有し続けていた。賃貸人が所有権に基づく明渡請求を十分に行使しないため、新賃借人は建物を現実に使用できない状態に置かれた。そこで、新賃借人が自己の賃借権を保全するため、賃貸人が不法占拠者に対して有する所有権に基づく明渡請求権を代位行使し、しかも建物を賃貸人ではなく直接自己へ明け渡すよう求められるかが問題になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、建物賃借人がその賃借権を保全するため、賃貸人である建物所有者に代位して、不法占拠者に対し建物明渡しを請求する場合、直接自己に対して明渡しをするよう求めることができると判断した。賃借人の目的は、賃貸人の所有権を抽象的に回復することではなく、賃借物を使用収益できる状態を実現することにある。いったん賃貸人へ明け渡させてから賃借人へ引き渡す形式を要求すると、賃借権保全の実効性が損なわれる。そのため、転用型の場面でも直接引渡しを認めることで、債権者側の権利保全を実効的にした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">債権者代位権</mark></strong>が金銭債権の責任財産保全だけでなく、賃借権の使用収益を守る転用型にも使われることを示す。誤答パターンは、「債権者代位権の対象は金銭債権に限られ、賃借人は賃貸人の明渡請求権を代位行使できない」という肢である。正しくは、賃貸人が有する所有権に基づく請求権を代位行使でき、直接自己への明渡しも認められる。ただし、現行民法では不動産賃借権に基づく妨害排除請求等の規定も整備されているため、判例の歴史的位置づけも押さえる。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法423条</mark></strong>、不動産賃借権、妨害排除請求、使用収益権の保全が関連する。転用型の要件として、代位行使により債務者が利益を受け、その利益により債権者の権利が保全される関係を確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和50年3月6日 昭和49年(オ)第74号 民集29巻3号203頁</div>
+      <div class="case-card__title">同時履行の抗弁と登記請求権の代位行使</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法423条の7</span>
+        <span class="badge badge--law">登記請求権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地売買において、売主側の共同相続人の一部が買主に対する所有権移転登記手続義務の履行を拒んでいた。そのため買主は、相続人全員による登記手続義務の履行の提供があるまで、代金全額について同時履行の抗弁権を行使して支払を拒んだ。登記手続に協力する意思のある他の相続人は、自分が相続した代金債権を回収できない状態に置かれた。そこで、その相続人が自己の代金債権を保全するため、買主が登記手続を拒む相続人に対して有する所有権移転登記手続請求権を代位行使できるか、また買主が無資力でない場合にも代位行使できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、買主が相続人全員による登記手続義務の履行の提供があるまで代金全額の弁済を拒絶している場合、他の相続人は、自己の相続した代金債権を保全するため、買主が無資力でなくても、買主に代位して、登記手続義務の履行を拒絶している相続人に対し、買主の所有権移転登記手続請求権を行使できるとした。ここでは、買主の無資力による一般財産不足ではなく、登記手続が完了しないために同時履行の抗弁が存続し、代金債権の実現が妨げられていることが保全の必要性を基礎づける。登記請求権を代位行使することで買主側の抗弁を解消し、代金債権の実現を可能にする転用型の判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">転用型債権者代位権</mark></strong>と無資力不要の理解に重要である。誤答パターンは、「債権者代位権は常に債務者の無資力を要するため、買主が無資力でなければ登記請求権の代位行使は一切できない」という形で現れる。正しくは、特定の債権の実現が、債務者の第三者に対する権利不行使によって妨げられている場合には、無資力を要しないことがある。現行<strong><mark class="kw">民法423条の7</mark></strong>は登記・登録請求権保全の転用型を明文化しており、この判例の考え方を学ぶと条文の位置づけを理解しやすい。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法423条</mark></strong>、<strong><mark class="kw">民法423条の7</mark></strong>、<strong><mark class="kw">民法533条</mark></strong>の同時履行の抗弁権、所有権移転登記請求権が関連する。契約の効力、物権変動、登記の対抗要件とも接続する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和38年4月23日 昭和35年(オ)第955号 民集17巻3号536頁</div>
+      <div class="case-card__title">建物買取請求権の代位行使否定</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法423条</span>
+        <span class="badge badge--law">保全関係</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>借地上の建物を賃借している者が、自己の建物賃借権を守るため、建物賃貸人である借地人に代位して、土地賃貸人に対する借地法上の建物買取請求権を行使しようとした。建物買取請求権が行使されると、土地賃貸人と建物所有者との間に建物売買と同様の法律関係が生じ、建物所有者は代金債権を取得するが、建物所有権を失う。問題は、建物賃借人が自己の賃借権を保全するために、建物所有者にとって所有権喪失を伴う形成権を代位行使できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債権者が<strong><mark class="kw">民法423条</mark></strong>により債務者の権利を代位行使するには、その権利の行使により債務者が利益を享受し、その利益によって債権者の権利が保全される関係が必要であるとした。そのうえで、建物買取請求権の行使により建物所有者が得るのは建物代金債権という金銭的利益であり、同時に建物所有権を失う不利益を受ける。さらに、その金銭債権によって建物賃借人の賃借権が保全される関係もない。したがって、建物賃借人による建物買取請求権の代位行使は許されないと判断した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、転用型なら何でも代位行使できるわけではないことを示す限界判例である。誤答パターンは、「債権者の権利保全に役立ちそうであれば、債務者の形成権を常に代位行使できる」という肢である。正しくは、代位行使される権利により債務者が利益を受け、その利益が債権者の権利保全につながる関係が必要である。建物買取請求権のように、債務者に所有権喪失という重大な不利益をもたらし、債権者の権利保全にも結びつかない場合には、代位行使は否定される。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法423条</mark></strong>、形成権の代位行使、借地借家法上の建物買取請求権、賃借権保全が関連する。転用型では「債務者が利益を受けるか」「その利益で債権者の権利が保全されるか」を必ず確認する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">債権者代位権</mark></strong>は、債務者の権利不行使を補う制度であり、債務者がすでに自ら権利行使している場合は原則として使えない。</li>
+        <li>本来型では、被保全債権の履行期到来、債務者の無資力、保全の必要性、被代位権利の適格性を順に確認する。</li>
+        <li><strong><mark class="kw">民法423条2項</mark></strong>の保存行為は、履行期前でも例外的に代位行使できる。</li>
+        <li><strong><mark class="kw">民法423条の2</mark></strong>では、可分な被代位権利は自己の債権額の限度に限られる。</li>
+        <li><strong><mark class="kw">民法423条の3</mark></strong>の直接支払・直接引渡しは、優先弁済権ではなく直接受領を認める規律である。</li>
+        <li><strong><mark class="kw">民法423条の5</mark></strong>により、代位行使後も債務者の取立て・処分権限は妨げられない。</li>
+        <li><strong><mark class="kw">民法423条の7</mark></strong>では、登記・登録請求権保全型の転用を本来型と区別する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「債権者は、自己の債権の期限が到来していなくても、常に債権者代位権を行使できる。」これは誤りである。<strong><mark class="kw">民法423条2項</mark></strong>により、履行期前は原則として行使できず、保存行為だけが例外である。</p>
+      <p><strong>誤りの選択肢例2：</strong>「債務者の一身に専属する権利も、責任財産を増やす可能性があれば代位行使できる。」これは誤りである。<strong><mark class="kw">民法423条1項ただし書</mark></strong>は、一身専属権と差押禁止権利を除外する。</p>
+      <p><strong>誤りの選択肢例3：</strong>「債権者代位権を行使した債権者は、他の債権者に優先して弁済を受ける権利を取得する。」これは誤りである。直接支払を受けられる場合があっても、<strong><mark class="kw">債権者代位権</mark></strong>自体は優先弁済権を与える制度ではない。</p>
+      <p><strong>誤りの選択肢例4：</strong>「債権者が被代位権利を行使した後は、債務者はその権利を自ら取り立てることができない。」これは現行法では誤りである。<strong><mark class="kw">民法423条の5</mark></strong>は、代位行使後も債務者の取立てその他の処分を妨げないと定める。</p>
+      <p><strong>誤りの選択肢例5：</strong>「不動産の買主が登記請求権を保全するために代位行使する場合も、常に譲渡人の無資力が必要である。」これは誤りである。<strong><mark class="kw">民法423条の7</mark></strong>の登記・登録請求権保全型では、無資力ではなく登記取得の保全関係が焦点になる。</p>
+      <p><strong>誤りの選択肢例6：</strong>「相手方は、債務者に対して有していた抗弁を代位債権者には対抗できない。」これは誤りである。<strong><mark class="kw">民法423条の4</mark></strong>により、相手方は債務者に対して主張できる抗弁を債権者にも対抗できる。</p>
+    </div>
+  </div>
+
+  <p>解答手順は、第一に、問題文の債権者、債務者、第三債務者を整理する。第二に、債権者が保全したい権利が金銭債権なのか、登記請求権や賃借権のような特定債権なのかを判定する。第三に、本来型なら履行期到来、無資力、債務者の不行使、一身専属権・差押禁止権利でないことを確認する。第四に、転用型なら代位行使によって債務者に利益が生じ、その利益によって債権者の権利が保全されるかを見る。第五に、効果として自己への直接支払・引渡し、相手方の抗弁、債務者の処分権限、訴訟告知の有無を条文番号に結びつける。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">債権者代位権</mark></strong>について、判例で形成されていた具体的ルールの多くが条文化された。<strong><mark class="kw">民法423条の2</mark></strong>は可分な被代位権利の行使範囲、<strong><mark class="kw">民法423条の3</mark></strong>は債権者への直接支払・引渡し、<strong><mark class="kw">民法423条の4</mark></strong>は相手方の抗弁を明文化した。特に重要なのは、<strong><mark class="kw">民法423条の5</mark></strong>が、代位行使後も債務者の取立て・処分権限を妨げないとした点である。旧判例法理をそのまま覚えていると、現行法の問題で誤る。</p>
+    </div>
+  </div>
+
+  <p><strong><mark class="kw">債権者代位権</mark></strong>は、実務では債権回収、売掛金回収、登記手続、賃貸物件の明渡し、担保価値の保全などで使われる。もっとも、債権者が債務者の権利に介入する制度であるため、通常の請求権行使よりも利害関係が複雑になる。相手方は債務者に対する抗弁を失わず、債務者も現行法上は処分権限を失わない。したがって、債権者、債務者、相手方、他の債権者の利害を同時に見る必要がある。</p>
+
+  <p><strong><mark class="kw">詐害行為取消権</mark></strong>との接点も重要である。どちらも責任財産保全制度だが、債権者代位権は債務者が第三者への権利を行使しない場面、詐害行為取消権は債務者が財産を流出させる行為をした場面で使う。行政書士試験では、両制度を一つの表で比較させる問題や、事例文からどちらの制度が問題になるかを選ばせる問題が出やすい。債務者が「放置」しているのか「処分」しているのかを読むと、制度選択を誤りにくい。</p>
+
+  <p>学習上は、<strong><mark class="kw">民法423条</mark></strong>だけを暗記するのではなく、<strong><mark class="kw">民法423条の2</mark></strong>から<strong><mark class="kw">民法423条の7</mark></strong>までを一連の手続として整理する。要件は423条、範囲は423条の2、直接請求は423条の3、相手方の抗弁は423条の4、債務者の処分権限は423条の5、訴訟告知は423条の6、登記・登録請求権保全は423条の7である。この番号対応を理解しておけば、条文番号の引っかけに対応しやすい。</p>
+
+  <p>他分野との接点として、<strong><mark class="kw">債権者代位権</mark></strong>は、時効、相殺、債権譲渡、同時履行の抗弁、不動産物権変動、登記、賃貸借、担保物権とつながる。特に登記請求権保全型は物権変動の対抗要件と結びつき、賃借権保全型は不動産賃貸借の使用収益権と結びつく。民法の中でも債権総論だけに閉じない横断論点であるため、問題文に登記、同時履行、賃借権、抵当権などが出たら、転用型の可能性を意識して読む。</p>
+</section>
+
+</body>
+</html>

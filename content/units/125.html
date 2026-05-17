@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>契約の効力（同時履行の抗弁権、危険負担） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">契約の効力（同時履行の抗弁権、危険負担）</h1>
+  <p class="page-title-block__sub">双務契約で相手方の履行を待てる場面と、履行不能リスクの分配を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法533条</span>
+    <span class="badge badge--info">民法536条</span>
+    <span class="badge badge--info">民法567条</span>
+    <span class="badge badge--info">同時履行の抗弁権</span>
+    <span class="badge badge--info">危険負担</span>
+    <span class="badge badge--info">双務契約</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">契約の効力</mark></strong>のうち、行政書士試験で特に問われるのが、双務契約における「相手が履行しないなら自分も履行を待てるか」と、「契約後に一方の債務が履行不能になったとき、反対給付を支払う必要があるか」である。前者が<strong><mark class="kw">同時履行の抗弁権</mark></strong>、後者が<strong><mark class="kw">危険負担</mark></strong>である。どちらも、売買、賃貸借、請負など、当事者双方が対価的な債務を負う契約で、公平を保つための制度である。</p>
+
+  <p>売買を例にすると、売主は目的物を引き渡す債務を負い、買主は代金を支払う債務を負う。この二つの債務は、単に同じ契約から発生したというだけでなく、互いに対価として結び付いている。売主が引渡しを提供しないのに代金だけを請求できるとすれば、買主に一方的な負担が生じる。逆に、買主が代金を提供しないのに目的物だけを受け取れるとすれば、売主に一方的な負担が生じる。そこで<strong><mark class="kw">民法533条</mark></strong>は、相手方が履行を提供するまでは自己の履行を拒めると定める。</p>
+
+  <p><strong><mark class="kw">危険負担</mark></strong>は、契約成立後に、当事者双方の責めに帰することができない事由で一方の債務が履行不能となった場合に問題になる。たとえば、売買契約締結後、引渡し前の建物が落雷で焼失し、売主にも買主にも帰責事由がない場合、買主はなお代金を支払わなければならないのかが問われる。現行民法は、原則として債権者に反対給付の履行拒絶権を与える構成を採り、改正前民法の特定物売買における広い債権者主義を削除した。この改正点は、古い知識との混同が起きやすい。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに中古機械を300万円で売る契約をした。引渡日と支払日は同日である。Aが機械を用意せずに「代金を払え」と請求した場合、Bは<strong><mark class="kw">同時履行の抗弁権</mark></strong>により支払を拒める。反対に、Aが契約内容どおりの機械を現実に引き渡す準備をしてBに受領を求めたのに、Bが理由なく受け取らない場合、Bは以後のリスクを負う方向に傾く。さらに、引渡し前に落雷で機械が滅失し、AにもBにも帰責事由がないなら、原則としてBは代金の履行を拒める。問題文では、第一に双務契約か、第二に相手方の債務が弁済期にあるか、第三に履行提供があるか、第四に履行不能の原因が誰の帰責事由かを順に確認する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">双務契約の牽連性</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">双務契約の牽連性</mark></strong>とは、当事者双方の債務が互いに対価的な関係で結び付いていることをいう。牽連性は、成立上、履行上、存続上の三つの場面で考えると整理しやすい。成立上の牽連性は、一方の債務が契約成立の基礎になって他方の債務も発生するという関係である。履行上の牽連性は、相手が履行しないなら自己も履行を拒めるという関係であり、<strong><mark class="kw">民法533条</mark></strong>に現れる。存続上の牽連性は、一方の債務が履行不能になったとき、反対給付債務をどう扱うかという関係であり、<strong><mark class="kw">民法536条</mark></strong>に現れる。試験では、この三つを抽象的に覚えるより、売買契約の「引渡し」と「代金支払」を対応させて考えると誤りにくい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">同時履行の抗弁権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">同時履行の抗弁権</mark></strong>は、双務契約の当事者の一方が、相手方がその債務の履行を提供するまでは、自己の債務の履行を拒むことができる権利である。根拠条文は<strong><mark class="kw">民法533条</mark></strong>であり、令和2年施行の債権法改正後は、債務の履行に代わる損害賠償債務の履行も含むことが明文化された。制度趣旨は、対価関係にある債務について、一方だけが先に履行を強制される不公平を避ける点にある。要件は、同一の双務契約から対価的な債務が生じていること、相手方の債務が弁済期にあること、相手方が履行または履行の提供をしないで請求していることである。効果は、履行拒絶が適法になり、原則として履行遅滞責任を負わない点にある。試験では、「相手が一度だけ履行を提供すれば、その後は抗弁権が当然に消滅する」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行の提供</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行の提供</mark></strong>とは、債務者が債務の本旨に従った履行を現実に行う準備をし、相手方が受領すれば履行が完了する状態を作ることである。金銭債務なら支払える状態で差し出すこと、不動産売買なら所有権移転登記や引渡しに必要な準備を整えて相手方に受領を求めることが典型である。<strong><mark class="kw">同時履行の抗弁権</mark></strong>との関係では、相手方が履行の提供をしない限り、自己の履行を拒むことができる。ただし、相手方が履行しない意思を明確に示している場合には、形式的な提供を要求しても無意味であるため、判例は履行提供なしに遅滞責任を問える余地を認める。試験では、「履行提供」は単なる口頭の催告や抽象的な準備だけでは足りない場合があること、反対に受領拒絶が明確なら提供の要否が緩和されることを区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行遅滞阻却効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行遅滞阻却効</mark></strong>とは、同時履行の抗弁権を有する債務者が、相手方の履行提供がないために自己の履行を拒んでいる間、履行遅滞責任を負わないという効果である。履行遅滞になるには、履行期が到来し、履行が可能で、債務者に違法な不履行があることが必要である。しかし、相手方が対価的債務を提供しないまま一方的に履行を求めている場合、債務者の拒絶は<strong><mark class="kw">民法533条</mark></strong>に基づく適法な防御である。したがって、相手方が解除や損害賠償を主張するには、原則として自分の債務を提供して相手方の抗弁権を失わせる必要がある。もっとも、相手方が受領拒絶や履行拒絶を明確にした場合には、履行提供を要求しない判例法理が働く。試験では、抗弁権の存在と、抗弁権を現に主張したかという訴訟上の扱いを混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">危険負担</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">危険負担</mark></strong>は、双務契約の一方の債務が、当事者双方の責めに帰することができない事由で履行不能になった場合、反対給付をなお履行すべきかを決める制度である。現行の<strong><mark class="kw">民法536条1項</mark></strong>は、債権者は反対給付の履行を拒むことができると定め、反対給付債務を当然消滅させるのではなく、履行拒絶権として構成している。これは、解除制度と危険負担制度の関係を整理し、債権者が契約関係を清算するか、履行拒絶で対応するかを判断できるようにする趣旨を持つ。改正前民法では、特定物に関する物権設定・移転の双務契約で債権者主義を定める旧534条があり、契約成立時から買主が危険を負うように見える場面があった。現行法ではこの規定が削除され、売買では<strong><mark class="kw">民法567条</mark></strong>が引渡し後または受領拒絶後の危険移転を定める。試験では、改正前の債権者主義を現行法に持ち込む肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権者の責めに帰すべき事由</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権者の責めに帰すべき事由</mark></strong>とは、履行不能が債権者側の故意・過失や信義則上これと同視できる事情によって生じた場合をいう。<strong><mark class="kw">民法536条2項</mark></strong>は、この場合、債権者は反対給付の履行を拒むことができないと定める。たとえば、注文者が必要な協力を拒んだため請負人が仕事を完成できなくなった場合、請負人は残債務を免れる一方で、注文者に報酬を請求できる方向に働く。ただし、債務者が自己の債務を免れたことにより利益を得たときは、その利益を債権者に償還しなければならない。制度趣旨は、履行不能の原因を作った債権者に反対給付拒絶を認めるのは公平に反するという点にある。試験では、「債権者に帰責事由がある場合でも、常に反対給付を拒める」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">危険の移転</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">危険の移転</mark></strong>とは、目的物の滅失・損傷リスクを、売主側ではなく買主側に負わせる時点をいう。売買では<strong><mark class="kw">民法567条</mark></strong>が重要であり、売主が買主に目的物を引き渡した後、当事者双方の帰責事由によらず目的物が滅失・損傷したとき、買主は追完、代金減額、損害賠償、解除を主張できず、代金支払も拒めない。また、売主が契約内容に適合する目的物をもって履行提供したのに、買主が受領を拒み、または受領できない場合も、同様に扱われる。これは、目的物の支配や受領可能性が買主側に移った以上、その後の偶然の危険を売主に負わせ続けるのは公平でないという考え方である。試験では、引渡し前の偶然滅失と、引渡し後または受領拒絶後の偶然滅失を区別することが核心である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 720" role="img" aria-label="同時履行の抗弁権の判断構造">
+      <defs>
+        <marker id="arr25a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr25a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr25a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="104" x2="560" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="175" y1="148" x2="945" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="175" y1="148" x2="175" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25a-blue)"/>
+      <line x1="560" y1="148" x2="560" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25a-blue)"/>
+      <line x1="945" y1="148" x2="945" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25a-blue)"/>
+      <rect x="494" y="126" width="132" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">要件を確認</text>
+
+      <line x1="560" y1="326" x2="560" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="220" y1="378" x2="900" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="220" y1="378" x2="220" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr25a-orange)"/>
+      <line x1="560" y1="378" x2="560" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr25a-orange)"/>
+      <line x1="900" y1="378" x2="900" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr25a-orange)"/>
+      <rect x="494" y="356" width="132" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">効果を判断</text>
+
+      <polyline points="900,532 900,575 560,575 560,614" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr25a-red)"/>
+      <rect x="676" y="558" width="168" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="760" y="575" text-anchor="middle" font-size="13" fill="#9f1239">抗弁権が封じられる</text>
+
+      <rect x="400" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">同時履行の抗弁権</text>
+      <text x="560" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">履行上の牽連性を守る防御権</text>
+
+      <rect x="55" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="175" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">同一双務契約</text>
+      <text x="175" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">対価的債務が向き合う</text>
+      <text x="175" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">売買・賃貸借・請負</text>
+
+      <rect x="440" y="230" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">相手方債務の弁済期</text>
+      <text x="560" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">未到来なら抗弁不可</text>
+      <text x="560" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">民法533条ただし書</text>
+
+      <rect x="825" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="945" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">履行提供なしの請求</text>
+      <text x="945" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">単純請求なら拒絶可</text>
+      <text x="945" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">提供継続が問題</text>
+
+      <rect x="100" y="450" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="220" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">履行拒絶が適法</text>
+      <text x="220" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">自己の債務を待てる</text>
+
+      <rect x="440" y="450" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">履行遅滞を阻却</text>
+      <text x="560" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">損害賠償・解除を防ぐ</text>
+
+      <rect x="780" y="450" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="900" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">相手方が履行拒絶</text>
+      <text x="900" y="504" text-anchor="middle" font-size="12" fill="#9f1239">提供不要となる余地</text>
+
+      <rect x="400" y="622" width="320" height="58" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="647" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">債務不履行責任へ進む</text>
+      <text x="560" y="670" text-anchor="middle" font-size="12" fill="#9f1239">明確な履行拒絶なら遅滞責任を免れない</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">同時履行の抗弁権</mark></strong>を要件と効果に分けて示している。まず、同一の双務契約から対価的債務が生じているか、相手方の債務が弁済期にあるか、相手方が履行提供なしに請求しているかを確認する。要件を満たせば、履行拒絶は適法となり、履行遅滞責任も原則として阻却される。もっとも、相手方が履行しない意思を明確にしている場合には、形式的な履行提供を要求しても意味がないため、判例は抗弁権による遅滞責任免除を制限する。図の赤い流れは、抗弁権が公平のための制度であり、信義則に反する使い方までは保護しないことを示している。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 760" role="img" aria-label="危険負担と解除の判断構造">
+      <defs>
+        <marker id="arr25b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr25b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr25b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="104" x2="560" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="940" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="180" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25b-blue)"/>
+      <line x1="560" y1="148" x2="560" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25b-blue)"/>
+      <line x1="940" y1="148" x2="940" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25b-blue)"/>
+      <rect x="492" y="126" width="136" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">原因を分岐</text>
+
+      <line x1="180" y1="326" x2="180" y2="418" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25b-blue)"/>
+      <line x1="560" y1="326" x2="560" y2="418" stroke="#ea580c" stroke-width="2" marker-end="url(#arr25b-orange)"/>
+      <line x1="940" y1="326" x2="940" y2="418" stroke="#e11d48" stroke-width="2" marker-end="url(#arr25b-red)"/>
+      <rect x="102" y="370" width="156" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="180" y="387" text-anchor="middle" font-size="13" fill="#1d4ed8">536条1項</text>
+      <rect x="482" y="370" width="156" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="387" text-anchor="middle" font-size="13" fill="#7c2d12">536条2項</text>
+      <rect x="862" y="370" width="156" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="940" y="387" text-anchor="middle" font-size="13" fill="#9f1239">415条・解除</text>
+
+      <polyline points="180,510 180,570 420,570 420,622" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arr25b-blue)"/>
+      <polyline points="560,510 560,570 700,570 700,622" fill="none" stroke="#ea580c" stroke-width="2" marker-end="url(#arr25b-orange)"/>
+      <polyline points="940,510 940,570 700,570 700,622" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr25b-red)"/>
+
+      <rect x="400" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">履行不能後のリスク処理</text>
+      <text x="560" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">危険負担・解除・損害賠償を分ける</text>
+
+      <rect x="60" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">双方無帰責</text>
+      <text x="180" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">落雷・不可抗力など</text>
+      <text x="180" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">反対給付を拒める</text>
+
+      <rect x="440" y="230" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">債権者帰責</text>
+      <text x="560" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">受領拒絶・協力拒否</text>
+      <text x="560" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">反対給付を拒めない</text>
+
+      <rect x="820" y="230" width="240" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="940" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">債務者帰責</text>
+      <text x="940" y="287" text-anchor="middle" font-size="12" fill="#9f1239">過失・履行拒絶</text>
+      <text x="940" y="307" text-anchor="middle" font-size="12" fill="#9f1239">損害賠償・解除へ</text>
+
+      <rect x="60" y="426" width="240" height="84" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">履行拒絶権</text>
+      <text x="180" y="480" text-anchor="middle" font-size="12" fill="#1e3a8a">反対債務は当然消滅でない</text>
+
+      <rect x="440" y="426" width="240" height="84" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">反対給付維持</text>
+      <text x="560" y="480" text-anchor="middle" font-size="12" fill="#7c2d12">免れた利益は償還</text>
+
+      <rect x="820" y="426" width="240" height="84" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="940" y="456" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">債務不履行責任</text>
+      <text x="940" y="480" text-anchor="middle" font-size="12" fill="#9f1239">415条・541条以下</text>
+
+      <rect x="260" y="630" width="320" height="58" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="420" y="655" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">売買の危険移転</text>
+      <text x="420" y="678" text-anchor="middle" font-size="12" fill="#1e3a8a">引渡し後は民法567条</text>
+
+      <rect x="620" y="630" width="320" height="58" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="780" y="655" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">清算方法の選択</text>
+      <text x="780" y="678" text-anchor="middle" font-size="12" fill="#7c2d12">危険負担と解除を区別</text>
+
+      <rect x="120" y="706" width="880" height="34" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="560" y="728" text-anchor="middle" font-size="13" fill="#9f1239">改正前534条の特定物債権者主義は削除。現行法では引渡し・受領拒絶・帰責事由を確認する。</text>
+    </svg>
+  </div>
+
+  <p>この図は、履行不能後の処理を「誰の責めに帰すべき事由か」で分岐させている。双方に帰責事由がなければ、<strong><mark class="kw">民法536条1項</mark></strong>により債権者は反対給付の履行を拒むことができる。債権者に帰責事由があれば、<strong><mark class="kw">民法536条2項</mark></strong>により反対給付を拒めず、債務者が免れた利益の償還だけが問題になる。債務者に帰責事由があれば、危険負担ではなく<strong><mark class="kw">債務不履行</mark></strong>、損害賠償、解除の問題として処理する。売買では、引渡し後や受領拒絶後の危険移転を<strong><mark class="kw">民法567条</mark></strong>で別に確認する必要がある。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">同時履行の抗弁権</th>
+        <th class="col--b">危険負担</th>
+        <th class="col--c">債務不履行</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a"><span class="em-a">双方の債務が履行可能</span>で、相手方が履行提供なしに請求する場面。</td>
+        <td class="col--b"><span class="em-b">一方の債務が履行不能</span>になり、反対給付の要否が問題になる場面。</td>
+        <td class="col--c"><span class="em-c">債務者に帰責事由</span>があり、履行遅滞・履行不能・不完全履行が問題になる場面。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法533条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法536条</mark></strong>、売買では<strong><mark class="kw">民法567条</mark></strong>も重要。</td>
+        <td class="col--c"><strong><mark class="kw">民法415条</mark></strong>、解除は<strong><mark class="kw">民法541条</mark></strong>以下。</td>
+      </tr>
+      <tr>
+        <td class="col--label">要件の中心</td>
+        <td class="col--a">同一双務契約、対価的債務、相手方債務の弁済期、履行提供なしの請求。</td>
+        <td class="col--b">履行不能、双方無帰責または債権者帰責、反対給付との対価関係。</td>
+        <td class="col--c">債務の本旨不履行または履行不能、帰責事由、損害との因果関係。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">自己の履行を拒め、履行遅滞責任を原則として負わない。</td>
+        <td class="col--b">双方無帰責なら反対給付を拒める。債権者帰責なら拒めない。</td>
+        <td class="col--c">損害賠償、解除、履行に代わる損害賠償などが問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">一度の履行提供だけで抗弁権が永久に消滅するとする。</td>
+        <td class="col--b">現行法でも特定物売買は契約時から当然に買主危険負担とする。</td>
+        <td class="col--c">双方無帰責の履行不能でも、常に損害賠償請求できるとする。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">双方無帰責</th>
+        <th class="col--b">債権者帰責</th>
+        <th class="col--c">債務者帰責</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">落雷・地震・第三者の不可抗力で目的物が引渡し前に滅失した。</td>
+        <td class="col--b">買主が正当理由なく受領を拒み、その後に目的物が偶然滅失した。</td>
+        <td class="col--c">売主の保管過失で目的物が滅失した。</td>
+      </tr>
+      <tr>
+        <td class="col--label">反対給付</td>
+        <td class="col--a"><span class="em-a">履行拒絶可</span>。反対債務を当然消滅と見るのではなく拒絶権で処理する。</td>
+        <td class="col--b"><span class="em-b">履行拒絶不可</span>。債務者の免れた利益は償還される。</td>
+        <td class="col--c"><span class="em-c">危険負担では処理しない</span>。損害賠償・解除へ進む。</td>
+      </tr>
+      <tr>
+        <td class="col--label">売買との関係</td>
+        <td class="col--a">引渡し前なら536条1項が基本。引渡し後は567条を確認する。</td>
+        <td class="col--b">受領拒絶後は567条2項により買主側へ危険が移る場面がある。</td>
+        <td class="col--c">契約不適合、履行不能、債務不履行解除が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の見方</td>
+        <td class="col--a">「誰にも落ち度がない」なら、まず536条1項の履行拒絶権。</td>
+        <td class="col--b">「受領拒絶」「協力拒否」「注文者側の事情」なら536条2項を疑う。</td>
+        <td class="col--c">「過失」「履行拒絶」「保管義務違反」なら415条と解除を疑う。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、まず債務がまだ履行可能かを確認する。履行可能なら<strong><mark class="kw">同時履行の抗弁権</mark></strong>の問題であり、履行不能なら<strong><mark class="kw">危険負担</mark></strong>または<strong><mark class="kw">債務不履行</mark></strong>の問題である。次に、履行不能の原因が双方無帰責、債権者帰責、債務者帰責のどれかを分類する。最後に、売買では引渡しや受領拒絶があったかを確認し、<strong><mark class="kw">民法567条</mark></strong>による危険移転が働くかを判断する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法533条 同時履行の抗弁</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百三十三条　双務契約の当事者の一方は、相手方がその債務の履行（債務の履行に代わる損害賠償の債務の履行を含む。）を提供するまでは、自己の債務の履行を拒むことができる。ただし、相手方の債務が弁済期にないときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法533条</mark></strong>は、双務契約の履行上の牽連性を定める中心条文である。「双務契約」とは、双方が互いに対価的な債務を負う契約をいう。「相手方がその債務の履行を提供するまでは」という文言から、相手方の単なる請求では足りず、相手方が債務の本旨に従った履行を提供することが抗弁権消滅の前提になる。「債務の履行に代わる損害賠償の債務」を含むと明記されたため、目的物引渡債務が履行不能となり損害賠償債務に転化した場合にも、対価関係が維持される限り同時履行関係が問題になる。ただし書は、相手方債務の弁済期がまだ到来していない場合には、先履行義務を負う者が同時履行を主張できないことを示す。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法536条 債務者の危険負担等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百三十六条　当事者双方の責めに帰することができない事由によって債務を履行することができなくなったときは、債権者は、反対給付の履行を拒むことができる。<br>２　債権者の責めに帰すべき事由によって債務を履行することができなくなったときは、債権者は、反対給付の履行を拒むことができない。この場合において、債務者は、自己の債務を免れたことによって利益を得たときは、これを債権者に償還しなければならない。</blockquote>
+      <p><strong><mark class="kw">民法536条</mark></strong>は、履行不能後の反対給付をどう扱うかを定める。1項は、双方無帰責の履行不能では債権者に反対給付の履行拒絶権を認める。ここで重要なのは、現行法が「反対給付債務が当然に消滅する」とは書かず、「履行を拒むことができる」としている点である。2項は、履行不能の原因が債権者側にある場合には、債権者が反対給付を拒めないとする。後段の利益償還は、債務者が仕事をしなくて済んだため材料費や労務費を免れたような場合、その利益を債権者に戻すことで過剰な利得を防ぐ規定である。試験では、1項と2項を「誰の帰責事由か」で正確に分ける。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法412条の2 履行不能</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第四百十二条の二　債務の履行が契約その他の債務の発生原因及び取引上の社会通念に照らして不能であるときは、債権者は、その債務の履行を請求することができない。<br>２　契約に基づく債務の履行がその契約の成立の時に不能であったことは、第四百十五条の規定によりその履行の不能によって生じた損害の賠償を請求することを妨げない。</blockquote>
+      <p><strong><mark class="kw">民法412条の2</mark></strong>は、履行不能の判断基準を示す。物理的に絶対不可能な場合だけでなく、契約その他の債務発生原因と取引上の社会通念に照らして履行を請求できない場合も履行不能となる。危険負担は、履行不能が生じた後に反対給付をどうするかの問題であるため、まずこの条文で履行不能といえるかを確認する。2項は、契約成立時にすでに履行不能であっても、契約自体が当然に無効になるのではなく、損害賠償請求が問題になり得ることを示す。危険負担の典型は後発的不能だが、履行不能の一般的理解としてこの条文を前提にする。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法541条・542条・543条 解除との関係</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百四十一条　当事者の一方がその債務を履行しない場合において、相手方が相当の期間を定めてその履行の催告をし、その期間内に履行がないときは、相手方は、契約の解除をすることができる。ただし、その期間を経過した時における債務の不履行がその契約及び取引上の社会通念に照らして軽微であるときは、この限りでない。<br>第五百四十二条　次に掲げる場合には、債権者は、前条の催告をすることなく、直ちに契約の解除をすることができる。<br>一　債務の全部の履行が不能であるとき。<br>二　債務者がその債務の全部の履行を拒絶する意思を明確に表示したとき。<br>第五百四十三条　債務の不履行が債権者の責めに帰すべき事由によるものであるときは、債権者は、前二条の規定による契約の解除をすることができない。</blockquote>
+      <p><strong><mark class="kw">民法541条</mark></strong>、<strong><mark class="kw">民法542条</mark></strong>、<strong><mark class="kw">民法543条</mark></strong>は、危険負担と隣接する解除制度を定める。現行法では、解除に債務者の帰責事由は不要となったため、双方無帰責の履行不能でも、要件を満たせば解除が問題になり得る。これにより、危険負担は「反対給付の履行を拒む」制度、解除は「契約関係を終了させ清算する」制度として役割分担する。542条1項1号は、全部履行不能なら無催告解除を認める。543条は、履行不能が債権者の責めに帰すべき事由による場合、債権者が解除できないことを定め、536条2項と同じ公平の発想を共有する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法546条・567条 解除後と売買の危険移転</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百四十六条　第五百三十三条の規定は、前条の場合について準用する。<br>第五百六十七条　売主が買主に目的物（売買の目的として特定したものに限る。以下この条において同じ。）を引き渡した場合において、その引渡しがあった時以後にその目的物が当事者双方の責めに帰することができない事由によって滅失し、又は損傷したときは、買主は、その滅失又は損傷を理由として、履行の追完の請求、代金の減額の請求、損害賠償の請求及び契約の解除をすることができない。この場合において、買主は、代金の支払を拒むことができない。<br>２　売主が契約の内容に適合する目的物をもって、その引渡しの債務の履行を提供したにもかかわらず、買主がその履行を受けることを拒み、又は受けることができない場合において、その履行の提供があった時以後に当事者双方の責めに帰することができない事由によってその目的物が滅失し、又は損傷したときも、前項と同様とする。</blockquote>
+      <p><strong><mark class="kw">民法546条</mark></strong>は、解除による原状回復義務について<strong><mark class="kw">民法533条</mark></strong>を準用する。つまり、解除後に互いに受け取ったものを返す場面でも、相手方が返還を提供するまでは自己の返還を拒むという同時履行関係が認められる。<strong><mark class="kw">民法567条</mark></strong>は、売買における危険移転の重要規定である。1項は引渡し後、2項は契約内容に適合する目的物の履行提供後に買主が受領拒絶または受領不能となった場合を扱う。引渡し前の双方無帰責なら536条1項が基本だが、引渡し後または受領拒絶後は567条により買主が代金支払を拒めない場面がある。この区別は、債権法改正後の最重要ポイントである。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和34年5月14日 昭和32年(オ)第391号 民集13巻5号609頁</div>
+      <div class="case-card__title">引受債務金請求事件（履行提供と同時履行の抗弁権の消滅）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法533条</span>
+        <span class="badge badge--law">履行提供</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>売主側は、買主に対して機械全部を約束の期日までに引き渡したとして、代金債務の履行を求めた。買主側は、売主側の代理人が後に機械の一部である部品を取り外して持ち帰ったことなどを理由に、売主側の履行提供は継続しておらず、なお<strong><mark class="kw">同時履行の抗弁権</mark></strong>を主張できると争った。争点は、双務契約で相手方がいったん履行の提供をした場合、その提供が継続されない限り同時履行の抗弁権は残るのか、また本件で買主は機械引渡しを受けた後も抗弁権を主張できるのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、一般論として、双務契約の当事者の一方は、相手方の履行の提供があっても、その提供が継続されない限り、<strong><mark class="kw">同時履行の抗弁権</mark></strong>を失うものではないとした。この点は、履行提供が一瞬だけ行われれば以後永久に抗弁権が消滅するわけではないことを示す重要な規範である。ただし、本件では、売主が機械全部を約束どおり引き渡し、買主がその引渡しを受けたと認定されていたため、買主は引渡しを受けた時点で同時履行の抗弁権を失ったと判断された。その後に売主側代理人が部品を取り外したことは、別個の責任を生じさせる可能性はあるが、すでにされた売主の債務履行を未履行に戻すものではないとされた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">同時履行の抗弁権</mark></strong>と<strong><mark class="kw">履行の提供</mark></strong>の関係を問う頻出判例である。誤答パターンは二つある。第一は、「相手方が一度でも履行提供をすれば、提供が継続していなくても当然に抗弁権が消滅する」という肢である。これは一般論として誤りである。第二は、「本件では買主が引渡しを受けた後もなお抗弁権を失わなかった」という肢である。これは事案へのあてはめとして誤りである。規範と結論を分け、提供継続の一般原則と、実際に履行を受けた場合の抗弁権消滅を区別する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法533条</mark></strong>、弁済の提供、履行遅滞、引換給付判決と関連する。解除前の履行提供の要否や、履行提供後の受領拒絶による危険移転を学ぶ際にも前提になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和41年3月22日 昭和38年(オ)第322号 民集20巻3号468頁</div>
+      <div class="case-card__title">手附金返還請求事件（履行拒絶意思と同時履行の抗弁権）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法533条</span>
+        <span class="badge badge--law">履行遅滞</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>買主は、売主から土地と建物を代金300万円で買い受け、所有権移転登記義務と代金支払義務の履行期を昭和33年4月30日とする契約を結んだ。ところが売主は、履行期前の昭和33年4月3日、買主に債務不履行があるとして売買契約を解除する意思表示をし、さらに売買目的物である建物を第三者に賃貸した。買主は、売主が履行しない意思を明確にした以上、買主側が代金の弁済提供をしなくても、売主の債務不履行を問題にできると主張した。売主側は、買主が代金提供をしていない以上、売主は<strong><mark class="kw">同時履行の抗弁権</mark></strong>により遅滞責任を免れると争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、双務契約において当事者の一方が自己の債務の履行をしない意思を明確にした場合には、相手方が自己の債務の弁済の提供をしなくても、その当事者は自己の債務不履行について履行遅滞の責任を免れることはできないとした。本件では、売主が履行期前に解除を主張し、目的物である建物を第三者に賃貸していたため、売主が自己の債務を履行しない意思を明確にしていたと評価された。したがって、買主が代金の弁済提供をしなかったとしても、売主は<strong><mark class="kw">同時履行の抗弁権</mark></strong>を盾に履行遅滞責任を免れることはできないと判断された。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">同時履行の抗弁権</mark></strong>が公平のための制度であり、履行しない意思を明確にした者を形式的に保護する制度ではないことを示す。誤答パターンは、「双務契約では、相手方が自己の債務を現実に提供しない限り、どのような場合でも履行遅滞責任を問えない」という肢である。正しくは、相手方の履行拒絶が明確なら、弁済提供をしなくても遅滞責任を追及できる場合がある。記述式では、「履行しない意思を明確に表示した者は、相手方の弁済提供がなくても履行遅滞責任を免れない」と表現できるようにしておく。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法533条</mark></strong>、<strong><mark class="kw">民法415条</mark></strong>、<strong><mark class="kw">民法542条1項2号</mark></strong>が関連する。現行法では、債務者が全部の履行を拒絶する意思を明確に表示した場合、無催告解除や履行に代わる損害賠償にもつながる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和52年2月22日 民集31巻1号79頁</div>
+      <div class="case-card__title">請負代金請求事件（注文者帰責による完成不能と民法536条2項）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法536条2項</span>
+        <span class="badge badge--law">請負</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>請負人は、注文者所有の家屋について冷暖房工事を請け負い、ボイラーとチラーの据付工事を残す段階まで工事を進めていた。ところが、据付けのためには地下室の防水工事が必要であったにもかかわらず、注文者はこれを行わず、請負人による据付工事を拒む状態になった。その結果、請負人は冷暖房工事を完成できなくなり、請負代金を請求した。争点は、仕事が完成していない以上、請負人は報酬を請求できないのか、それとも完成不能が注文者の責めに帰すべき事由による以上、<strong><mark class="kw">民法536条2項</mark></strong>により請負代金を請求できるのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、請負契約において仕事が完成しない間に、注文者の責めに帰すべき事由によりその完成が不能となった場合、請負人は自己の残債務を免れるが、<strong><mark class="kw">民法536条2項</mark></strong>により注文者に請負代金全額を請求できるとした。ただし、請負人が自己の債務を免れたことによって利益を得たときは、その利益を注文者に償還すべきである。裁判所は、完成していないという形式だけで報酬請求を否定するのではなく、完成不能の原因が注文者側にあることを重視した。これは、債権者が履行不能の原因を作りながら反対給付を拒むことは公平に反するという536条2項の趣旨を、請負契約に具体的に適用したものである。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">危険負担</mark></strong>のうち債権者帰責の場合を理解するために重要である。誤答パターンは、「請負では仕事が完成していない以上、注文者側の責任で完成不能となった場合でも請負人は一切報酬を請求できない」という肢である。正しくは、注文者の責めに帰すべき事由により完成不能となった場合、請負人は残債務を免れ、報酬請求権を失わない。ただし、未施工部分の材料費や労務費を免れた利益があれば償還が問題になる。条文の後段まで問われることがあるため、「全額請求」と「利益償還」をセットで押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法536条2項</mark></strong>、請負契約の報酬、債権者の協力拒否、履行不能が関連する。雇用契約の休業、システム開発契約の発注者協力義務、売買の受領拒絶にも応用できる考え方である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">同時履行の抗弁権</mark></strong>は、同一双務契約から生じた対価的債務について認められる。</li>
+        <li><strong><mark class="kw">民法533条ただし書</mark></strong>により、相手方の債務が弁済期にないときは、同時履行を主張できない。</li>
+        <li>相手方の<strong><mark class="kw">履行の提供</mark></strong>が継続されない限り、抗弁権は原則として失われない。</li>
+        <li>相手方が自己の債務を履行しない意思を明確にした場合、弁済提供がなくても履行遅滞責任を問える余地がある。</li>
+        <li><strong><mark class="kw">危険負担</mark></strong>は、履行不能の原因が双方無帰責か債権者帰責かで結論が分かれる。</li>
+        <li>現行法の<strong><mark class="kw">民法536条1項</mark></strong>は、反対給付債務の当然消滅ではなく履行拒絶権構成である。</li>
+        <li>債権者帰責の場合、債権者は反対給付を拒めないが、債務者が免れた利益の償還が問題になる。</li>
+        <li>売買では、引渡し後または受領拒絶後の危険移転を<strong><mark class="kw">民法567条</mark></strong>で確認する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「双務契約の当事者は、相手方の債務がまだ弁済期にない場合でも、常に自己の債務の履行を拒むことができる。」これは誤りである。<strong><mark class="kw">民法533条ただし書</mark></strong>により、相手方の債務が弁済期にないときは同時履行の抗弁権を主張できない。</p>
+      <p><strong>誤りの選択肢例2：</strong>「相手方が一度履行の提供をした以上、その提供が継続されなくても同時履行の抗弁権は当然に消滅する。」これは誤りである。最高裁昭和34年5月14日は、履行提供が継続されない限り抗弁権を失わないという一般論を示している。</p>
+      <p><strong>誤りの選択肢例3：</strong>「相手方が履行しない意思を明確にしている場合でも、自己の債務を現実に提供しなければ相手方の履行遅滞責任を問えない。」これは誤りである。最高裁昭和41年3月22日は、履行拒絶意思が明確な場合には、弁済提供がなくても履行遅滞責任を問えるとした。</p>
+      <p><strong>誤りの選択肢例4：</strong>「双方無帰責で目的物が履行不能になった場合、現行民法では反対給付債務が当然に消滅する。」これは誤りである。<strong><mark class="kw">民法536条1項</mark></strong>は、債権者が反対給付の履行を拒むことができるとする履行拒絶権構成である。</p>
+      <p><strong>誤りの選択肢例5：</strong>「債権者の責めに帰すべき事由で履行不能となった場合でも、債権者は反対給付を拒むことができる。」これは誤りである。<strong><mark class="kw">民法536条2項</mark></strong>により、債権者は反対給付の履行を拒めない。</p>
+      <p><strong>誤りの選択肢例6：</strong>「売買目的物が引渡し後に双方無帰責で滅失した場合、買主は代金支払を拒むことができる。」これは誤りである。<strong><mark class="kw">民法567条1項</mark></strong>により、引渡し後は買主が代金支払を拒めない。</p>
+    </div>
+  </div>
+
+  <p>記述式での解答手順は、第一に、契約が双務契約であり、問題となる債務が対価関係にあるかを確認する。第二に、履行可能な場面なら<strong><mark class="kw">同時履行の抗弁権</mark></strong>、履行不能の場面なら<strong><mark class="kw">危険負担</mark></strong>または<strong><mark class="kw">債務不履行</mark></strong>に分類する。第三に、相手方の債務の弁済期、履行提供の有無、履行拒絶意思の明確性を時系列で整理する。第四に、履行不能なら帰責事由を双方無帰責、債権者帰責、債務者帰責に分ける。第五に、売買では引渡しまたは受領拒絶の有無を確認し、567条に接続する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">同時履行の抗弁権</mark></strong>は、解除後の原状回復、売買の代金支払と引渡し、請負の報酬支払と仕事完成、賃貸借の賃料支払と使用収益の提供に接続する。<strong><mark class="kw">危険負担</mark></strong>は、債務不履行、解除、契約不適合責任、売買の危険移転と接続する。行政法の契約問題や国家賠償の損害論とは直接の条文関係は薄いが、行政書士実務では契約書作成時に危険移転時期、受領拒絶、不可抗力条項をどう定めるかが重要になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">同時履行の抗弁権</mark></strong>と<strong><mark class="kw">危険負担</mark></strong>の両方で重要な整理が行われた。<strong><mark class="kw">民法533条</mark></strong>には、債務の履行に代わる損害賠償債務も同時履行関係に含まれることが明文化された。<strong><mark class="kw">民法536条</mark></strong>は、反対給付債務の当然消滅ではなく履行拒絶権として再構成された。さらに、改正前民法534条・535条の特定物に関する債権者主義は削除され、売買の危険移転は<strong><mark class="kw">民法567条</mark></strong>で引渡しや受領拒絶を基準に整理された。</p>
+    </div>
+  </div>
+
+  <p>実務では、<strong><mark class="kw">同時履行の抗弁権</mark></strong>は、契約書に「引換えに」「同時に」「支払確認後に引渡し」といった条項を置くことで、履行順序を明確にする形で現れる。履行順序を明確にしておけば、どちらが先に動くべきか、相手方の不履行に対して支払や引渡しを止められるかを判断しやすい。反対に、履行期や引渡条件が曖昧な契約では、同時履行関係か、先履行義務か、単なる準備義務かが争われやすい。</p>
+
+  <p><strong><mark class="kw">危険負担</mark></strong>は、契約書の危険移転条項と密接に関わる。売買契約では「目的物の引渡時に危険が買主へ移転する」と定めることが多く、現行民法567条の考え方にも沿う。配送を伴う売買では、出荷時、運送人引渡時、買主受領時のどこで危険が移るかを明示しなければ、滅失・損傷時の代金支払、保険、再送義務をめぐって紛争になる。行政書士実務でも、契約書作成時に危険移転時期と検収・受領拒絶の手続を整えることが重要である。</p>
+
+  <p>学習上は、<strong><mark class="kw">民法533条</mark></strong>を「履行可能な場面の防御」、<strong><mark class="kw">民法536条</mark></strong>を「履行不能になった後の反対給付」、<strong><mark class="kw">民法567条</mark></strong>を「売買で引渡し後の危険移転」と位置づけるとよい。問題文に「履行を拒むことができる」とあれば533条または536条が疑われるが、533条は相手の履行提供がないための拒絶であり、536条は一方債務が履行不能になったための拒絶である。この違いを一文で説明できれば、択一だけでなく記述式にも対応しやすい。</p>
+
+  <p>後続単元との関係では、<strong><mark class="kw">契約の解除</mark></strong>で原状回復義務の同時履行関係を扱い、<strong><mark class="kw">売買契約</mark></strong>で手付、契約不適合責任、危険移転を扱う。<strong><mark class="kw">請負契約</mark></strong>では、仕事完成前の報酬請求、注文者の協力拒否、出来高部分の評価が問題になる。単元を横断しても、判断順序は同じである。まず履行可能か、次に誰に帰責事由があるか、最後に条文上どの効果が生じるかを確認する。</p>
+</section>
+
+</body>
+</html>

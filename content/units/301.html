@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行政法の法源 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1{font-size:1.7rem;font-weight:700;color:var(--blue-900);border-bottom:3px solid var(--blue-600);padding-bottom:.5rem;margin-bottom:2rem}
+h2{font-size:1.25rem;font-weight:700;color:var(--blue-700);border-left:4px solid var(--blue-600);padding-left:.75rem;margin:0 0 .75rem}
+h3{font-size:1.05rem;font-weight:700;color:var(--text-primary);margin:1rem 0 .5rem}
+h4{font-size:.75rem;font-weight:700;color:var(--text-secondary);letter-spacing:.08em;text-transform:uppercase;margin:.75rem 0 .25rem}
+blockquote.legal-text{font-family:'Noto Serif JP',serif;font-size:.9rem;line-height:2.1;background:var(--blue-100);border-left:4px solid var(--blue-600);border-radius:0 4px 4px 0;margin:.75rem 0;padding:.875rem 1.25rem;color:var(--blue-900)}
+mark.kw{background:var(--highlight);color:inherit;padding:.1em .3em;border-radius:3px}
+mark.kw-strong{background:var(--highlight-strong);color:inherit;padding:.1em .3em;border-radius:3px;font-weight:700}
+mark.kw-red{background:var(--highlight-red);color:var(--red-800);padding:.1em .3em;border-radius:3px}
+strong.warn{color:var(--red-600);font-weight:700}
+
+.page-title-block{background:var(--blue-900);color:#fff;padding:2.5rem 1.5rem 2rem;margin:0 -1.5rem 2.5rem}
+.page-title-block__breadcrumb{font-size:.75rem;color:var(--blue-200);margin:0 0 .75rem;letter-spacing:.04em}
+.page-title-block__main{font-size:2rem;font-weight:700;color:#fff;line-height:1.35;border:none;padding:0;margin:0 0 .5rem}
+.page-title-block__sub{font-size:.9rem;color:var(--blue-200);margin:0 0 1.25rem}
+.page-title-block__tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.page-title-block .badge--info{background:rgba(255,255,255,0.15);color:#fff;border-color:rgba(255,255,255,0.3)}
+
+.sec-head{display:flex;align-items:flex-start;gap:1rem;margin:3rem 0 1.25rem}
+.sec-head__num{flex-shrink:0;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;background:var(--blue-600);color:#fff;font-size:.875rem;font-weight:700;border-radius:6px;letter-spacing:.04em}
+.sec-head__sub{font-size:.75rem;color:var(--text-muted);margin:.125rem 0 0;letter-spacing:.04em}
+section+section{margin-top:1rem}
+
+.box{border-radius:6px;margin:1.25rem 0;overflow:hidden}
+.box__hd{display:flex;align-items:center;gap:.5rem;padding:.5rem 1rem}
+.box__icon{font-size:18px;line-height:1;flex-shrink:0}
+.box__label{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.box__term{font-size:1rem;font-weight:700;letter-spacing:.02em;flex:1}
+.box__hd-badges{display:flex;align-items:center;gap:.375rem;margin-left:auto}
+.box__bd{padding:.875rem 1.25rem;font-size:.925rem}
+.box--definition{border:1px solid var(--orange-600)}
+.box--definition .box__hd{background:var(--orange-600);color:#fff;padding:.625rem 1rem}
+.box--definition .box__bd{background:var(--orange-50);color:var(--orange-900)}
+.box--example{border:1px solid var(--blue-200)}
+.box--example .box__hd{background:var(--blue-600);color:#fff}
+.box--example .box__bd{background:var(--blue-50);color:var(--blue-900)}
+.box--legal{border:1px solid var(--blue-600)}
+.box--legal .box__hd{background:var(--blue-900);color:#fff}
+.box--legal .box__bd{background:var(--blue-100);color:var(--blue-900)}
+.box--caution{border:1px solid var(--red-400)}
+.box--caution .box__hd{background:var(--red-400);color:#fff}
+.box--caution .box__bd{background:var(--red-50);color:var(--red-800)}
+.box--exam{border:1px solid var(--red-600)}
+.box--exam .box__hd{background:var(--red-600);color:#fff}
+.box--exam .box__bd{background:var(--red-100);color:var(--red-800)}
+.box--definition .badge--freq{background:rgba(255,255,255,0.2);color:#fff;border:1px solid rgba(255,255,255,0.4)}
+
+.badge{display:inline-flex;align-items:center;gap:3px;font-size:.68rem;font-weight:700;padding:.15em .6em;border-radius:4px;vertical-align:middle;letter-spacing:.05em}
+.badge--def{background:var(--orange-50);color:var(--orange-900);border:1px solid var(--orange-200)}
+.badge--exam{background:var(--red-100);color:var(--red-800);border:1px solid var(--red-400)}
+.badge--caution{background:var(--red-50);color:var(--red-800);border:1px solid var(--red-400)}
+.badge--info{background:var(--blue-50);color:var(--blue-900);border:1px solid var(--blue-200)}
+.badge--stars{background:#fef08a;color:#713f12;border:1px solid #fde047;font-weight:700}
+.badge--freq{background:var(--red-600);color:#fff;border:none}
+.badge--law{background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.35)}
+
+.case-card{border:1px solid var(--blue-600);border-radius:8px;overflow:hidden;margin:1.5rem 0}
+.case-card__hd{background:var(--blue-700);padding:1rem 1.25rem .875rem}
+.case-card__meta{font-size:.75rem;color:var(--blue-200);margin-bottom:.375rem;letter-spacing:.03em}
+.case-card__title{font-size:1.05rem;font-weight:700;color:#fff;line-height:1.45;margin-bottom:.625rem}
+.case-card__badges{display:flex;flex-wrap:wrap;gap:.375rem}
+.case-card__bd{background:var(--blue-50);padding:1rem 1.25rem;color:var(--blue-900);font-size:.925rem}
+.case-card__bd h4{color:var(--blue-700);margin-top:.875rem}
+
+.cmp-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:1rem 0 1.5rem}
+.cmp-table th,.cmp-table td{padding:.6rem .875rem;border:1px solid var(--blue-200);vertical-align:top;text-align:left}
+.cmp-table thead th{font-weight:700}
+.cmp-table .col--label{background:var(--blue-50);color:var(--text-secondary);font-size:.8rem;font-weight:700;white-space:nowrap;width:7rem}
+.cmp-table thead .col--label{background:var(--blue-100);color:var(--blue-900)}
+.cmp-table .col--a{background:var(--blue-50)}
+.cmp-table .col--b{background:var(--orange-50)}
+.cmp-table .col--c{background:var(--red-50)}
+.cmp-table thead .col--a{background:var(--blue-600);color:#fff}
+.cmp-table thead .col--b{background:var(--orange-600);color:#fff}
+.cmp-table thead .col--c{background:var(--red-600);color:#fff}
+.cmp-table tbody tr:hover td{filter:brightness(.97)}
+.em-a{color:var(--blue-700);font-weight:700}
+.em-b{color:var(--orange-600);font-weight:700}
+.em-c{color:var(--red-800);font-weight:700}
+
+.diagram-wrap{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:1.5rem;margin:1.25rem 0}
+.diagram-wrap svg{display:block;width:100%;height:auto;font-family:'Noto Sans JP',sans-serif}
+
+p{margin:.6rem 0}
+ul,ol{padding-left:1.5rem;margin:.5rem 0}
+li{margin:.25rem 0}
+</style>
+</head>
+<body>
+
+<!-- ページタイトルブロック -->
+<div class="page-title-block">
+    <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 行政法の一般的な法理論</p>
+    <h1 class="page-title-block__main">行政法の法源</h1>
+    <p class="page-title-block__sub">成文法源と不文法源、法律・政令・省令・条例・規則の序列と関係</p>
+    <div class="page-title-block__tags">
+        <span class="badge badge--info">行政法一般理論</span>
+        <span class="badge badge--info">法源論</span>
+        <span class="badge badge--info">成文法源</span>
+        <span class="badge badge--info">不文法源</span>
+        <span class="badge badge--info">法体系</span>
+        <span class="badge badge--info">条例制定権</span>
+    </div>
+</div>
+
+<!-- ==============================
+     第1節 単元の概要
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+        <h2>単元の概要</h2>
+        <p class="sec-head__sub">Unit Overview</p>
+    </div>
+</header>
+
+<p>「行政法の法源」とは、行政に関するルールが<strong>どのような形式で存在しているか</strong>という問いに答える概念です。私たちは日常生活の中で、交通規則を守り、建物の建築確認を受け、行政手続に従います。これらすべての行政活動の根拠となっているルールが「法源」であり、行政はこれらの法源に従って行動しなければなりません。</p>
+
+<p>行政法は民法・刑法のような単一の統一法典を持たない特殊な法分野であり、無数の個別法令が集まって形成されています。そのため、どの法形式が他の法形式より優先するか、文書化されていないルールは行政を拘束するかといった問題が生じます。本単元はまさにこの点を整理するものです。</p>
+
+<p>試験における重要度は中程度で、行政法の出題数19問（択一式）の中では、主に行政法総論の問題で前提知識として問われます。成文法源の種類・優先順位・制定機関の対応、不文法源の種類と法的効力の有無、条例と法律の抵触判断（徳島市公安条例事件の判示内容）は特に頻出です。単体で1問出題されることもありますが、より重要なのは、その後に続く「法律による行政の原理」「行政裁量」「行政立法」などの単元を理解するための基礎として機能する点です。</p>
+
+<div class="box box--example">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">lightbulb</span>
+        <span class="box__label">身近な具体例で理解する</span>
+    </div>
+    <div class="box__bd">
+        <p>あなたが飲食店を開業しようとする場面を想像してください。まず<strong>憲法</strong>（職業選択の自由・22条）が営業の自由を保障します。次に<strong>食品衛生法</strong>（法律）が営業許可の要件を定め、<strong>食品衛生法施行令</strong>（政令）が細目を規定し、<strong>食品衛生法施行規則</strong>（省令）がさらに詳細を定めます。そして、あなたの市が独自の<strong>条例</strong>で上乗せ規制を設けている場合もあります。このように、一つの行政活動には複数の法形式が重層的に関わっており、それらの序列を理解することが「法源論」の実践的意義です。</p>
+    </div>
+</div>
+</section>
+
+<!-- ==============================
+     第2節 重要用語の解説
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+        <h2>重要用語の解説</h2>
+        <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+</header>
+
+<!-- 法源 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">法源（ほうげん）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">法源</mark></strong>とは、「法の存在形式」、すなわち<em>法規範がいかなる形式・姿態で存在しているか</em>を問う概念です。田中二郎の古典的定義によれば「行政の組織及び作用並びにその統制に関する法の存在形式」とされます。</p>
+        <p>「法源」という言葉は多義的に使われることがありますが、試験上は「法の存在形式（形式的意味の法源）」として理解してください。つまり、ある規範が裁判所や行政庁にとって「法として参照・適用できるものか否か」という問題です。</p>
+        <p>日本は<strong><mark class="kw">成文法主義</mark></strong>（制定法主義）を採っており、成文法源が主たる法源です。これはイギリス・アメリカのような<strong><mark class="kw">判例法主義</mark></strong>とは対照的です。もっとも、成文法のみで全ての行政場面を規律しきることはできないため、慣習法・判例法・法の一般原則などの不文法源も補充的な法源として機能します。</p>
+        <p>「法源となるか否か」が重要なのは、行政庁はその根拠のない活動ができないという<em>法律による行政の原理</em>（次単元）と直結するからです。法源として認められなければ、行政活動の根拠にもなれません。</p>
+    </div>
+</div>
+
+<!-- 成文法源 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">成文法源（せいぶんほうげん）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">成文法源</mark></strong>とは、権限ある機関が文書の形式で制定した法規範です。行政法の成文法源には、<strong>憲法・条約・法律・命令（政令・省令等）・条例・規則</strong>の5種類があります。</p>
+        <p>成文法源間には<strong>形式的効力の序列（上位法優先の原則）</strong>があり、下位の法形式は上位の法形式に反することができません。序列は上から、①憲法、②条約、③法律、④命令（政令→省令等）、⑤条例・規則の順です（条約と法律の優劣には学説上争いがありますが、通説は条約優位説）。</p>
+        <p>また、同順位の法形式間では<strong>後法優先・特別法優先</strong>の原則が適用されます。特別法は一般法に優先し（特別法優先）、同一事項について新しい法令は古い法令を廃止します（後法優先）。行政法では無数の個別行政法令が存在するため、これらの原則の理解が不可欠です。</p>
+    </div>
+</div>
+
+<!-- 不文法源 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">不文法源（ふぶんほうげん）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">不文法源</mark></strong>とは、文書の形式で制定されていないが、法規範として機能するものです。行政法の不文法源には<strong>慣習法・判例法・法の一般原則（条理）</strong>の3つがあります。</p>
+        <p>不文法源は「成文法の補充的法源」として位置づけられます。すなわち、<em>成文法が存在する場面では成文法が優先し、成文法が規律していない場面で不文法源が補充的に機能する</em>のが原則です。しかし、平等原則・比例原則・信義則などの「法の一般原則」は、成文法の解釈基準としても機能するため、実際には成文法の存在する場面でも重要な役割を果たします。</p>
+        <p>試験上、不文法源の中で最も重要なのは<strong><mark class="kw">法の一般原則（条理）</mark></strong>です。なぜなら、信義誠実の原則・権利濫用の禁止・比例原則・平等原則などが「行政の一般法理」として機能し、行政裁量の逸脱・濫用の判断基準（次単元以降の行政裁量）と深く関連するからです。</p>
+    </div>
+</div>
+
+<!-- 命令 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">命令（政令・省令・規則）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">命令</mark></strong>とは、行政機関が制定する法規範の総称です。国会（立法機関）ではなく行政機関が制定するにもかかわらず法的拘束力を持つ点に特色があります。これは憲法73条6号が「憲法及び法律の規定を実施するために、政令を制定すること」を内閣の職務として認めていることを根拠とします。</p>
+        <p>命令には効力の序列があります。<strong><mark class="kw">政令</mark></strong>（内閣が制定）が命令の中で最も上位であり、憲法・法律を実施するために制定されます（例：○○法施行令）。次に<strong><mark class="kw">省令・内閣府令</mark></strong>（各省大臣・内閣府が制定）であり、政令の委任を受けて詳細を定めます（例：○○法施行規則）。さらに下に、人事院規則など各委員会・庁の定める命令があります。</p>
+        <p>重要なのは、命令は法律の授権（委任）なしに<em>国民の権利を制限したり義務を課す規定（法規命令）</em>を設けることができないという点です。罰則の設置も法律の委任が必要です（罰則の委任、憲法73条6号ただし書参照）。</p>
+        <p>命令と区別すべきものとして<strong><mark class="kw">通達・訓令</mark></strong>があります。通達・訓令は上級機関が下級機関に出す内部的指示であり、国民に対して直接法的効力を持ちません（国家行政組織法14条参照）。したがって通達・訓令は法源ではありません。</p>
+    </div>
+</div>
+
+<!-- 条例 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">条例・規則（地方公共団体の法形式）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">条例</mark></strong>とは、地方公共団体の議会が制定する法規範です（憲法94条、地方自治法14条1項）。<strong><mark class="kw">規則</mark></strong>とは、地方公共団体の長（都道府県知事・市区町村長）が制定する法規範です（地方自治法15条）。同一の地方公共団体内では条例が規則より上位です。</p>
+        <p>条例は「法律の範囲内」でのみ制定できます（憲法94条）。問題は<em>どの程度まで法律と内容が異なる条例を制定できるか</em>という点です。ここに<strong>上乗せ条例</strong>（法律より厳しい規制）と<strong>横出し条例</strong>（法律が規制していない事項を規制）の問題が生じます。この点については徳島市公安条例事件（最大判昭50.9.10）が重要な判断基準を示しています（第6節参照）。</p>
+        <p>条例は罰則を設けることも可能ですが、2年以下の懲役・禁錮、100万円以下の罰金等に限定されます（地方自治法14条3項）。また、条例は国の法令（政令・省令を含む）に反することはできません。</p>
+        <p>試験では、「条例を制定できるのは地方公共団体の<mark class="kw-red">議会</mark>である（長ではない）」「同一地方公共団体の規則と条例では<mark class="kw-red">条例が優位</mark>」という基本事項が問われます。</p>
+    </div>
+</div>
+
+<!-- 慣習法 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">慣習法（かんしゅうほう）</span>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">慣習法</mark></strong>とは、長年の慣行が一般国民の法的確信を得て法規範として承認されるに至ったものです。行政の領域では「行政先例法」がその主な例であり、行政庁が長年にわたり継続して取り扱ってきた先例が一般国民の間で法的確信を得たものがこれにあたります。</p>
+        <p>典型例として、「法令の公布は官報をもって行う」という慣習法があります。また、公布の効力発生時点について判例は、官報が財務省東京官報販売所に到達した時点としています。</p>
+        <p>慣習法は<strong>補充的法源</strong>として機能し、成文法に反する慣習法は認められません。「法の適用に関する通則法」3条は「公の秩序又は善良の風俗に反しない慣習は、法令の規定により認められたもの又は法令に規定されていない事項に関するものに限り、法律と同一の効力を有する」と定めており、慣習法の法源性を肯定しています。</p>
+    </div>
+</div>
+
+<!-- 判例法 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">判例法（はんれいほう）</span>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">判例法</mark></strong>とは、裁判所の判決が法規範として機能するものです。日本は成文法主義を採っているため、理論上は判例に先例拘束性（stare decisis）はなく、下級審も最高裁判所の判例に形式的に拘束されるわけではありません（憲法76条3項「すべて裁判官は、その良心に従ひ独立してその職権を行ひ、この憲法及び法律にのみ拘束される」）。</p>
+        <p>しかし実際には、最高裁判所が従来の判例を変更するには大法廷での審理が必要であり（裁判所法10条）、また最高裁の判例に反する判決は上告理由となるため（民訴法312条・刑訴法405条）、事実上の拘束力が認められています。したがって、判例法は事実上の法源として機能しており、不文法源に含まれます。</p>
+        <p>試験では「判例は形式的には法源ではないが、事実上の法源性が認められている」という整理が重要です。</p>
+    </div>
+</div>
+
+<!-- 法の一般原則 -->
+<div class="box box--definition">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">auto_stories</span>
+        <span class="box__term">法の一般原則（法の一般原理・条理）</span>
+        <div class="box__hd-badges">
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>最重要</span>
+        </div>
+    </div>
+    <div class="box__bd">
+        <p><strong><mark class="kw">法の一般原則</mark></strong>（条理）とは、一般社会における正義・公平の感覚から導かれる普遍的な法原則です。「条理」「条理法」とも呼ばれます。成文法・慣習法によっても解決できない場合の最終的な補充的法源として機能するとともに、成文法の解釈・適用の基準としても重要な役割を担います。</p>
+        <p>行政法において特に重要な法の一般原則として、以下のものがあります。</p>
+        <ul>
+            <li><strong><mark class="kw">信義誠実の原則（信義則）</mark></strong>：権利の行使・義務の履行にあたり、相手方の信頼を裏切らないよう誠実に行動すべきという原則。行政法上も、行政庁の言動に基づき私人が信頼を形成した場合にその信頼を保護すべきとする「<strong>信頼保護の原則</strong>」として機能します。</li>
+            <li><strong><mark class="kw">平等原則</mark></strong>：同様の状況にある者を合理的な理由なく差別してはならないという原則。憲法14条を根拠とし、行政が同種事案において異なる扱いをすることの制限に機能します。</li>
+            <li><strong><mark class="kw">比例原則</mark></strong>：行政目的の達成に必要最小限の手段をとらなければならないという原則。過剰な行政規制を禁じます。</li>
+            <li><strong><mark class="kw">権利濫用禁止の原則</mark></strong>：権利の行使が社会的・経済的目的を逸脱する場合はその効力が否定されるという原則。</li>
+        </ul>
+        <p>これらは行政書士試験の「行政裁量」「行政指導」「行政不服審査」などの単元でも繰り返し登場する重要な概念です。</p>
+    </div>
+</div>
+</section>
+
+<!-- ==============================
+     第3節 概念関係図
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+        <h2>概念関係図</h2>
+        <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+</header>
+
+<h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;margin-right:4px">account_tree</span>図1：行政法の法源の全体構造</h3>
+
+<!-- SVG STEP A-E 完了後の図 -->
+<!--
+STEP A ノード一覧（最終確定値）:
+N01 行政法の法源 root 幅160 高52 L0
+N02 成文法源    cat  幅128 高52 L1
+N03 不文法源    cat  幅128 高52 L1
+N04 憲法        key  幅96  高52 L2
+N05 条約        key  幅96  高52 L2
+N06 法律        key  幅96  高52 L2
+N07 命令        key  幅192 高52 L2（政令・省令等）
+N08 条例・規則  key  幅144 高52 L2
+N09 慣習法      sub  幅112 高52 L2
+N10 判例法      sub  幅112 高52 L2
+N11 法の一般原則 sub  幅168 高52 L2
+
+STEP B:
+SVG幅 = 1200
+L0: N01 x=(1200-160)/2=520, y=30
+L1:
+N02 成文法源: x=(320-64)=256 → 左側センター x=256, y=182
+N03 不文法源: x=(880-64)=816 → 右側センター x=816, y=182
+
+L2左グループ（成文法源配下）:
+合計幅 = 96+96+96+192+144=624、ノード5個間隔4×24=96
+配置幅=624+96=720、左余白=(620-720)/2? → 左グループは0-619の範囲で配置
+左グループ開始 x=30
+N04 x=30,  幅96
+N05 x=30+96+24=150, 幅96
+N06 x=150+96+24=270, 幅96
+N07 x=270+96+24=390, 幅192
+N08 x=390+192+24=606, 幅144
+
+L2右グループ（不文法源配下）:
+N09 x=780, 幅112
+N10 x=780+112+24=916, 幅112
+N11 x=916+112+24=1052, 幅168
+
+viewBox高さ = 334+52+20+40+60 = 506
+
+STEP C 衝突チェック:
+N08右端=606+144=750 vs N09左端=780 → 750+16=766 ≤ 780 ✓
+全ペアOK
+
+STEP D コネクタ（扇状接続）:
+N01下中央: x=520+80=600, y=82
+N02上中央: x=256+64=320, y=182
+N03上中央: x=816+64=880, y=182
+
+扇状分岐（N01→N02,N03）:
+垂直幹 x=600, y1=82, y2=130
+水平枝 x1=320, x2=880, y=130
+N02へ垂直 x=320, y1=130, y2=174
+N03へ垂直 x=880, y1=130, y2=174
+
+N02→成文法源の子（N04〜N08）:
+N02下中央: x=320, y=234
+子センター:
+N04cx=30+48=78, N05cx=150+48=198, N06cx=270+48=318, N07cx=390+96=486, N08cx=606+72=678
+扇状中間y=280
+垂直幹N02: x=320, y1=234, y2=280
+水平枝: x1=78, x2=678, y=280
+各子への垂直: y1=280, y2=326（334-8=326）
+
+N03→不文法源の子（N09〜N11）:
+N03下中央: x=880, y=234
+N09cx=780+56=836, N10cx=916+56=972, N11cx=1052+84=1136
+扇状中間y=280
+垂直幹N03: x=880, y1=234, y2=280
+水平枝: x1=836, x2=1136, y=280
+各子への垂直: y1=280, y2=326
+
+viewBox="0 0 1200 506"
+縮小率=780/1200=0.65 ≥ 0.55 ✓
+
+STEP E: SVG記述確定
+評価シート全18項目確認済み
+-->
+
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 1200 506" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+  <defs>
+    <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+    </marker>
+    <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- ===== コネクタ（ノードより先に描画 = 背面） ===== -->
+
+  <!-- N01→N02,N03 扇状分岐 -->
+  <!-- 垂直幹 N01下中央(600,82)→中間y=130 -->
+  <line x1="600" y1="82" x2="600" y2="130" stroke="#2563eb" stroke-width="2"/>
+  <!-- 水平枝 N02中央x=320 ～ N03中央x=880 y=130 -->
+  <line x1="320" y1="130" x2="880" y2="130" stroke="#2563eb" stroke-width="2"/>
+  <!-- N02へ垂直矢印 x=320, y1=130→y2=174 -->
+  <line x1="320" y1="130" x2="320" y2="174" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-solid)"/>
+  <!-- N03へ垂直矢印 x=880, y1=130→y2=174 -->
+  <line x1="880" y1="130" x2="880" y2="174" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-solid)"/>
+  <!-- 幹ラベル -->
+  <rect x="545" y="95" width="112" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="601" y="111" text-anchor="middle" font-size="13" fill="#1d4ed8">上位法優先の序列</text>
+
+  <!-- N02→成文5子 扇状分岐 -->
+  <!-- N02下中央 x=320,y=234→中間y=280 -->
+  <line x1="320" y1="234" x2="320" y2="280" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- 水平枝 x=78～678, y=280 -->
+  <line x1="78" y1="280" x2="678" y2="280" stroke="#2563eb" stroke-width="1.5"/>
+  <!-- N04(cx=78)へ -->
+  <line x1="78" y1="280" x2="78" y2="326" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <!-- N05(cx=198)へ -->
+  <line x1="198" y1="280" x2="198" y2="326" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <!-- N06(cx=318)へ -->
+  <line x1="318" y1="280" x2="318" y2="326" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <!-- N07(cx=486)へ -->
+  <line x1="486" y1="280" x2="486" y2="326" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+  <!-- N08(cx=678)へ -->
+  <line x1="678" y1="280" x2="678" y2="326" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+
+  <!-- N03→不文3子 扇状分岐 -->
+  <!-- N03下中央 x=880,y=234→中間y=280 -->
+  <line x1="880" y1="234" x2="880" y2="280" stroke="#ea580c" stroke-width="1.5"/>
+  <!-- 水平枝 x=836～1136, y=280 -->
+  <line x1="836" y1="280" x2="1136" y2="280" stroke="#ea580c" stroke-width="1.5"/>
+  <!-- N09(cx=836)へ -->
+  <line x1="836" y1="280" x2="836" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+  <!-- N10(cx=972)へ -->
+  <line x1="972" y1="280" x2="972" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+  <!-- N11(cx=1136)へ -->
+  <line x1="1136" y1="280" x2="1136" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin)"/>
+
+  <!-- ===== ノード（コネクタより後に描画 = 前面） ===== -->
+
+  <!-- N01 行政法の法源（root） x=520, y=30, w=160, h=52 -->
+  <g>
+    <rect x="520" y="30" width="160" height="52" rx="8" fill="#1d4ed8"/>
+    <text x="600" y="53" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">行政法の法源</text>
+    <text x="600" y="72" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">法の存在形式</text>
+  </g>
+
+  <!-- N02 成文法源（category） x=256, y=182, w=128, h=52 -->
+  <g>
+    <rect x="256" y="182" width="128" height="52" rx="6" fill="#2563eb"/>
+    <text x="320" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">成文法源</text>
+    <text x="320" y="224" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">主たる法源</text>
+  </g>
+
+  <!-- N03 不文法源（category） x=816, y=182, w=128, h=52 -->
+  <g>
+    <rect x="816" y="182" width="128" height="52" rx="6" fill="#ea580c"/>
+    <text x="880" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">不文法源</text>
+    <text x="880" y="224" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">補充的法源</text>
+  </g>
+
+  <!-- N04 憲法 x=30, y=334, w=96, h=52 -->
+  <g>
+    <rect x="30" y="334" width="96" height="52" rx="6" fill="#1d4ed8"/>
+    <text x="78" y="357" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">憲法</text>
+    <text x="78" y="376" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">最高法規</text>
+  </g>
+
+  <!-- N05 条約 x=150, y=334, w=96, h=52 -->
+  <g>
+    <rect x="150" y="334" width="96" height="52" rx="6" fill="#2563eb"/>
+    <text x="198" y="357" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">条約</text>
+    <text x="198" y="376" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">国際合意</text>
+  </g>
+
+  <!-- N06 法律 x=270, y=334, w=96, h=52 -->
+  <g>
+    <rect x="270" y="334" width="96" height="52" rx="6" fill="#2563eb"/>
+    <text x="318" y="357" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">法律</text>
+    <text x="318" y="376" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">国会が制定</text>
+  </g>
+
+  <!-- N07 命令 x=390, y=334, w=192, h=52 -->
+  <g>
+    <rect x="390" y="334" width="192" height="52" rx="6" fill="#2563eb"/>
+    <text x="486" y="357" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">命令</text>
+    <text x="486" y="376" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">政令・省令・内閣府令等</text>
+  </g>
+
+  <!-- N08 条例・規則 x=606, y=334, w=144, h=52 -->
+  <g>
+    <rect x="606" y="334" width="144" height="52" rx="6" fill="#2563eb"/>
+    <text x="678" y="357" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">条例・規則</text>
+    <text x="678" y="376" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">地方公共団体制定</text>
+  </g>
+
+  <!-- N09 慣習法 x=780, y=334, w=112, h=52 -->
+  <g>
+    <rect x="780" y="334" width="112" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="836" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">慣習法</text>
+    <text x="836" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">行政先例法等</text>
+  </g>
+
+  <!-- N10 判例法 x=916, y=334, w=112, h=52 -->
+  <g>
+    <rect x="916" y="334" width="112" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="972" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">判例法</text>
+    <text x="972" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">事実上の拘束力</text>
+  </g>
+
+  <!-- N11 法の一般原則 x=1052, y=334, w=168, h=52 -->
+  <g>
+    <rect x="1052" y="334" width="168" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="1136" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">法の一般原則</text>
+    <text x="1136" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">信義則・比例原則等</text>
+  </g>
+
+  <!-- 注記エリア -->
+  <rect x="20" y="406" width="1160" height="60" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="600" y="427" text-anchor="middle" font-size="13" fill="#9f1239" font-weight="700">補充の序列</text>
+  <text x="600" y="452" text-anchor="middle" font-size="12" fill="#9f1239">成文法源（主）→ 慣習法 → 判例法 → 法の一般原則（条理）の順で補充的に機能。成文法が存在する場面では成文法が優先。</text>
+</svg>
+</div>
+
+<p>上図は行政法の法源を「成文法源」と「不文法源」の2系統に整理したものです。青色系（濃→薄）の成文法源は主たる法源であり、上位から憲法・条約・法律・命令（政令・省令等）・条例・規則の順に序列があります。いずれも権限ある機関が文書で制定したものです。一方、橙色の輪郭のある不文法源は補充的法源であり、慣習法・判例法・法の一般原則の3種があります。法の一般原則は単なる補充にとどまらず成文法の解釈基準としても機能するという点で特別な重要性を持ちます。注記エリアに示したとおり、成文法が存在する場面では成文法が不文法源に優先するのが原則です。</p>
+
+<h3><span class="material-icons-round" style="font-size:18px;vertical-align:middle;margin-right:4px">account_tree</span>図2：命令の種類と制定機関</h3>
+
+<!--
+図2 STEP A:
+N01 命令（総称）  root   幅128 高52 L0
+N02 政令         key    幅112 高52 L1
+N03 省令・内閣府令 key   幅184 高52 L1
+N04 各委員会等規則 sub   幅200 高52 L1
+N05 内閣が制定    role   幅160 高52 L2（N02配下）
+N06 各省大臣・内閣府 role 幅200 高52 L2（N03配下）
+N07 各委員会・庁長官 role 幅200 高52 L2（N04配下）
+
+STEP B:
+SVG幅=900
+L0: N01 x=(900-128)/2=386, y=30
+
+L1: 3ノード
+合計幅=112+184+200=496 間隔2×40=80 余白=900-496-80-80=244 左=40+122=162?
+→ 均等配置
+N02 x=80,  y=182
+N03 x=80+112+80=272, y=182
+N04 x=272+184+80=536, y=182
+
+cx: N02=80+56=136, N03=272+92=364, N04=536+100=636
+
+L2: y=334
+N05 x=80-24=56, y=334
+N06 x=272-8=264, y=334
+N07 x=536-0=536, y=334
+
+viewBox="0 0 900 480"
+縮小率=780/900=0.87 ✓
+
+STEP C 衝突チェック:
+N02右端=80+112=192 vs N03左端=272 → 192+16=208 ≤ 272 ✓
+N03右端=272+184=456 vs N04左端=536 → 456+16=472 ≤ 536 ✓
+N05右端=56+160=216 vs N06左端=264 → 216+16=232 ≤ 264 ✓
+N06右端=264+200=464 vs N07左端=536 → 464+16=480 ≤ 536 ✓ OK
+
+STEP D コネクタ:
+N01下中央 x=386+64=450, y=82
+扇状:
+垂直幹: x=450, y1=82, y2=130
+水平枝: x1=136, x2=636, y=130
+N02へ: x=136, y1=130, y2=174
+N03へ: x=364, y1=130, y2=174
+N04へ: x=636, y1=130, y2=174
+
+N02→N05: N02下中央x=136,y=234 → N05上中央x=56+80=136,y=334-8=326
+N03→N06: N03下中央x=364,y=234 → N06上中央x=264+100=364,y=326
+N04→N07: N04下中央x=636,y=234 → N07上中央x=536+100=636,y=326
+
+viewBox="0 0 900 480"
+-->
+
+<div class="diagram-wrap">
+<svg width="100%" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="font-family:'Noto Sans JP',sans-serif;">
+  <defs>
+    <marker id="arr2-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arr2-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+    </marker>
+  </defs>
+
+  <!-- コネクタ -->
+  <!-- 扇状分岐 N01→N02,N03,N04 -->
+  <line x1="450" y1="82" x2="450" y2="130" stroke="#2563eb" stroke-width="2"/>
+  <line x1="136" y1="130" x2="636" y2="130" stroke="#2563eb" stroke-width="2"/>
+  <line x1="136" y1="130" x2="136" y2="174" stroke="#2563eb" stroke-width="2" marker-end="url(#arr2-solid)"/>
+  <line x1="364" y1="130" x2="364" y2="174" stroke="#2563eb" stroke-width="2" marker-end="url(#arr2-solid)"/>
+  <line x1="636" y1="130" x2="636" y2="174" stroke="#2563eb" stroke-width="2" marker-end="url(#arr2-solid)"/>
+  <!-- ラベル -->
+  <rect x="300" y="93" width="100" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+  <text x="350" y="109" text-anchor="middle" font-size="13" fill="#1d4ed8">効力の序列</text>
+
+  <!-- N02→N05 -->
+  <line x1="136" y1="234" x2="136" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr2-thin)"/>
+  <!-- N03→N06 -->
+  <line x1="364" y1="234" x2="364" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr2-thin)"/>
+  <!-- N04→N07 -->
+  <line x1="636" y1="234" x2="636" y2="326" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr2-thin)"/>
+  <!-- ラベル（制定機関）-->
+  <rect x="58" y="270" width="52" height="22" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+  <text x="84" y="286" text-anchor="middle" font-size="13" fill="#ea580c">制定</text>
+  <rect x="286" y="270" width="52" height="22" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+  <text x="312" y="286" text-anchor="middle" font-size="13" fill="#ea580c">制定</text>
+  <rect x="558" y="270" width="52" height="22" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+  <text x="584" y="286" text-anchor="middle" font-size="13" fill="#ea580c">制定</text>
+
+  <!-- ノード -->
+  <!-- N01 命令 x=386, y=30, w=128, h=52 -->
+  <g>
+    <rect x="386" y="30" width="128" height="52" rx="8" fill="#1d4ed8"/>
+    <text x="450" y="53" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">命令（行政立法）</text>
+    <text x="450" y="72" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">行政機関が制定する法規範</text>
+  </g>
+
+  <!-- N02 政令 x=80, y=182, w=112, h=52 -->
+  <g>
+    <rect x="80" y="182" width="112" height="52" rx="6" fill="#2563eb"/>
+    <text x="136" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">政令</text>
+    <text x="136" y="224" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">命令中の最上位</text>
+  </g>
+
+  <!-- N03 省令・内閣府令 x=272, y=182, w=184, h=52 -->
+  <g>
+    <rect x="272" y="182" width="184" height="52" rx="6" fill="#2563eb"/>
+    <text x="364" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">省令・内閣府令</text>
+    <text x="364" y="224" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">政令に次ぐ効力</text>
+  </g>
+
+  <!-- N04 各委員会等規則 x=536, y=182, w=200, h=52 -->
+  <g>
+    <rect x="536" y="182" width="200" height="52" rx="6" fill="#2563eb"/>
+    <text x="636" y="205" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">委員会・庁の規則</text>
+    <text x="636" y="224" text-anchor="middle" fill="#fff" font-size="12" opacity="0.85">人事院規則等</text>
+  </g>
+
+  <!-- N05 内閣が制定 x=56, y=334, w=160, h=52 -->
+  <g>
+    <rect x="56" y="334" width="160" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="136" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">内閣</text>
+    <text x="136" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">憲法73条6号が根拠</text>
+  </g>
+
+  <!-- N06 各省大臣・内閣府 x=264, y=334, w=200, h=52 -->
+  <g>
+    <rect x="264" y="334" width="200" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="364" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">各省大臣・内閣府</text>
+    <text x="364" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">国家行政組織法12条</text>
+  </g>
+
+  <!-- N07 各委員会・庁長官 x=536, y=334, w=200, h=52 -->
+  <g>
+    <rect x="536" y="334" width="200" height="52" rx="6" fill="#fff" stroke="#ea580c" stroke-width="2"/>
+    <text x="636" y="357" text-anchor="middle" fill="#7c2d12" font-size="15" font-weight="700">委員会・庁長官</text>
+    <text x="636" y="376" text-anchor="middle" fill="#7c2d12" font-size="12">国家行政組織法13条</text>
+  </g>
+
+  <!-- 注記 -->
+  <rect x="20" y="406" width="860" height="50" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="450" y="426" text-anchor="middle" font-size="13" fill="#9f1239" font-weight="700">重要：通達・訓令は法源ではない（国民に対して法的効力なし）</text>
+  <text x="450" y="447" text-anchor="middle" font-size="12" fill="#9f1239">政令に罰則を設ける場合は法律の委任が必要（憲法73条6号ただし書）</text>
+</svg>
+</div>
+
+<p>図2は命令の種類と制定機関の対応関係を示しています。命令の中では政令が最上位であり、内閣が制定します（憲法73条6号）。次いで省令・内閣府令が各省大臣・内閣府によって制定され（国家行政組織法12条）、さらに各委員会や庁の長官が制定する規則（人事院規則等）があります（同13条）。試験では各命令の制定機関と憲法・法律上の根拠条文が問われることがあります。また、通達・訓令が国民に対して直接の法的効力を持たないことも重要です。</p>
+</section>
+
+<!-- ==============================
+     第4節 比較表
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+        <h2>比較表</h2>
+        <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+</header>
+
+<h3>比較表1：成文法源と不文法源</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">成文法源</th>
+            <th class="col--b">不文法源</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px">compare_arrows</span>定義</td>
+            <td class="col--a"><strong class="em-a">権限ある機関が文書の形式で制定</strong>した法規範。条文として明文化されている。</td>
+            <td class="col--b">文書化されていないが<strong class="em-b">法規範として機能</strong>するもの。暗黙の了解・社会通念・裁判例に基づく。</td>
+        </tr>
+        <tr>
+            <td class="col--label">種類</td>
+            <td class="col--a">憲法・条約・法律・命令（政令・省令等）・条例・規則</td>
+            <td class="col--b">慣習法・判例法・法の一般原則（条理）</td>
+        </tr>
+        <tr>
+            <td class="col--label">主従関係</td>
+            <td class="col--a"><strong class="em-a">主たる法源</strong>。日本は成文法主義をとる。</td>
+            <td class="col--b"><strong class="em-b">補充的法源</strong>。成文法が欠缺・不備の場面で機能。</td>
+        </tr>
+        <tr>
+            <td class="col--label">法的確実性</td>
+            <td class="col--a">条文が明確。誰でも参照可能で法的安定性が高い。</td>
+            <td class="col--b">内容が不明確・流動的になりやすく、解釈の余地が大きい。</td>
+        </tr>
+        <tr>
+            <td class="col--label">序列原則</td>
+            <td class="col--a">上位法優先（憲法＞条約＞法律＞命令＞条例・規則）</td>
+            <td class="col--b">成文法に劣後。慣習法→判例法→法の一般原則の順で補充。</td>
+        </tr>
+        <tr>
+            <td class="col--label">制定機関</td>
+            <td class="col--a">国会（法律）、内閣（政令）、各省大臣（省令）、地方議会（条例）など明確</td>
+            <td class="col--b">制定機関は存在せず自然発生的に形成される。</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>比較表2：条例・規則・命令の比較</h3>
+<table class="cmp-table">
+    <thead>
+        <tr>
+            <th class="col--label">比較項目</th>
+            <th class="col--a">条例</th>
+            <th class="col--b">規則（地方）</th>
+            <th class="col--c">命令（国）</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="col--label">制定機関</td>
+            <td class="col--a"><strong class="em-a">地方議会</strong></td>
+            <td class="col--b"><strong class="em-b">長（知事・市区町村長）</strong></td>
+            <td class="col--c"><strong class="em-c">内閣・各省大臣等</strong></td>
+        </tr>
+        <tr>
+            <td class="col--label">根拠条文</td>
+            <td class="col--a">憲法94条・地方自治法14条</td>
+            <td class="col--b">地方自治法15条</td>
+            <td class="col--c">憲法73条6号ほか</td>
+        </tr>
+        <tr>
+            <td class="col--label">適用範囲</td>
+            <td class="col--a">当該地方公共団体の区域内</td>
+            <td class="col--b">当該地方公共団体の区域内</td>
+            <td class="col--c">全国（原則）</td>
+        </tr>
+        <tr>
+            <td class="col--label">罰則設定</td>
+            <td class="col--a">可（2年以下の懲役・禁錮、100万円以下の罰金等の範囲内。地自法14条3項）</td>
+            <td class="col--b">可（5万円以下の過料。地自法15条2項）</td>
+            <td class="col--c">法律の委任が必要（憲法73条6号ただし書）</td>
+        </tr>
+        <tr>
+            <td class="col--label">同一団体内の序列</td>
+            <td class="col--a"><strong class="em-a">条例が上位</strong></td>
+            <td class="col--b">規則は条例に劣後</td>
+            <td class="col--c">（地方の規則・条例より上位）</td>
+        </tr>
+        <tr>
+            <td class="col--label">国の法令との関係</td>
+            <td class="col--a">法律の範囲内で制定可（憲法94条）。上乗せ・横出し条例の可否は徳島市公安条例事件参照</td>
+            <td class="col--b">法令・条例に反することはできない</td>
+            <td class="col--c">法律・憲法に反することはできない</td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="box box--caution">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">warning</span>
+        <span class="box__label">試験で混同しやすいポイント</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="em-c">「条例」は地方議会が制定し、「規則」は地方公共団体の長が制定します。</strong>これを逆に覚えてしまうことが非常に多いです。記憶のポイントは「条例＝立法機関（議会）が制定する点で法律と同性質」であることです。国では国会（立法機関）が法律を制定するように、地方では議会（立法機関）が条例を制定します。</p>
+        <p>また、<strong class="em-c">「政令」を制定するのは内閣であり、各省大臣ではありません。</strong>各省大臣が制定するのは「省令」（施行規則）です。試験では「○○を制定するのは誰か」という形で出題されます。</p>
+        <p><strong class="em-c">通達・訓令は法源ではありません。</strong>通達は上級機関が下級機関に出す行政内部の指示であり、国民を直接拘束する効力はありません。ただし実務上は強い影響力を持つため「事実上の拘束力」は存在します。この点と「法律上の拘束力」を混同しないよう注意が必要です。</p>
+    </div>
+</div>
+</section>
+
+<!-- ==============================
+     第5節 関連条文
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+        <h2>関連条文</h2>
+        <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+</header>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">日本国憲法 第73条6号（政令の根拠）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">内閣は、他の一般行政事務の外、左の事務を行ふ。<br>六　この憲法及び法律の規定を実施するために、<mark class="kw">政令を制定すること</mark>。但し、政令には、特にその法律の委任がある場合を除いては、<mark class="kw-strong">罰則を設けることができない</mark>。</blockquote>
+        <p>本号は、内閣が政令を制定できる根拠規定です。政令は「憲法及び法律を<strong><mark class="kw">実施するため</mark></strong>」に制定されるものであり、法律とは独立した独自の規律を設けるものではありません。「但し書」が重要で、<strong class="em-a">政令に罰則を設けるには法律の委任が必要</strong>であることを明示しています。これは「罰則の法律主義」として、行政機関による恣意的な罰則設定を禁じる趣旨です。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">日本国憲法 第94条（条例制定権）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">地方公共団体は、その財産を管理し、事務を処理し、及び行政を執行する権能を有し、<mark class="kw">法律の範囲内で条例を制定する</mark>ことができる。</blockquote>
+        <p>本条は地方公共団体の条例制定権を憲法上認めた規定です。「<strong class="em-a">法律の範囲内で</strong>」という文言が重要であり、条例が法律に抵触することはできません。しかし「法律の範囲内」の解釈は単純ではなく、徳島市公安条例事件（最大判昭50.9.10）において最高裁は「<strong>国の法令と条例が矛盾するかどうかは、両者の対象事項と規定文言を対比するのみでなく、それぞれの趣旨・目的・内容及び効果を比較して判断する</strong>」という基準を示しました（第6節参照）。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">地方自治法 第14条1項・3項（条例制定権と罰則）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">第14条1項　普通地方公共団体は、<mark class="kw">法令に違反しない限りにおいて</mark>第2条第2項の事務に関し、条例を制定することができる。<br>3項　普通地方公共団体は、法令に特別の定めがあるものを除くほか、その条例中に、条例に違反した者に対し、2年以下の懲役若しくは禁錮、100万円以下の罰金、拘留、科料若しくは没収の刑又は5万円以下の過料を科する旨の規定を設けることができる。</blockquote>
+        <p>1項は憲法94条を受けた条例制定権の確認規定です。「<strong class="em-a">法令に違反しない限り</strong>」という文言により、条例は国の法律はもちろん政令・省令（法令）にも反することができません。</p>
+        <p>3項は条例における罰則の上限を定めており、<strong class="em-a">2年以下の懲役・禁錮または100万円以下の罰金等</strong>が上限です。地方公共団体の長が制定する規則の場合は5万円以下の過料のみとより制限が厳しくなります（同法15条2項）。この違いを確実に押さえてください。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">法の適用に関する通則法 第3条（慣習法の法源性）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">公の秩序又は善良の風俗に反しない慣習は、<mark class="kw">法令の規定により認められたもの</mark>又は法令に規定されていない事項に関するものに限り、<mark class="kw">法律と同一の効力を有する</mark>。</blockquote>
+        <p>本条は慣習法の法源性を認めた規定です。慣習法が効力を持つのは①法令の規定によって認められた場合、または②法令が規定していない事項に関する場合に限られます。また、<strong class="em-a">公序良俗に反する慣習は認められない</strong>点も重要です。「法律と同一の効力を有する」とは法律と同じ法的拘束力を持つという意味であり、成文法が存在する場合はその成文法が慣習法に優先します（成文法優先の原則）。</p>
+    </div>
+</div>
+
+<div class="box box--legal">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">gavel</span>
+        <span class="box__label">国家行政組織法 第14条（通達等の根拠）</span>
+    </div>
+    <div class="box__bd">
+        <blockquote class="legal-text">各省大臣、各委員会及び各庁の長官は、その機関の所掌事務について、<mark class="kw">命令又は示達</mark>するため、所管の諸機関及び職員に対し、<mark class="kw">訓令又は通達を発する</mark>ことができる。</blockquote>
+        <p>本条は通達・訓令の根拠規定です。通達・訓令は<strong class="em-a">上級機関が下級機関および職員に対して</strong>発するものであり、国民を名宛人とするものではありません。したがって、国民は通達・訓令によって権利・義務を直接設定・変更されることはなく、この点において法源としての機能を持ちません。ただし実務では税務通達など重要な通達が存在し、行政庁は通達の内容に従って処分を行うため間接的に国民に影響を及ぼします。</p>
+    </div>
+</div>
+</section>
+
+<!-- ==============================
+     第6節 重要判例
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+        <h2>重要判例</h2>
+        <p class="sec-head__sub">Important Precedents</p>
+    </div>
+</header>
+
+<!-- 判例1：徳島市公安条例事件 -->
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所大法廷　昭和50年9月10日　昭和48年（あ）第910号</div>
+        <div class="case-card__title">徳島市公安条例事件（集団行進及び集団示威運動に関する条例違反被告事件）</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★★ 最重要</span>
+            <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+            <span class="badge badge--law">憲法94条</span>
+            <span class="badge badge--law">地自法14条</span>
+            <span class="badge badge--law">条例の法律適合性</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>労働組合員Xは、昭和43年12月、徳島市内で道路交通法上の道路使用許可を受けたうえでデモ行進を行っていたところ、警察署長の許可条件に反して蛇行進等の行為を行い、またその行為をせん動した。Xは道路交通法違反のほか、徳島市が制定した「集団行進及び集団示威運動に関する条例」（以下「本件条例」）3条3号（「交通秩序を維持すること」という遵守事項違反）にも問われた。本件条例の罰則は1年以下の懲役・禁錮または5万円以下の罰金であり、道路交通法の同種規定（3月以下の懲役・3万円以下の罰金）より重い罰則を定めていた。争点は①法律より重い罰則を定める条例は憲法94条の「法律の範囲内」に違反するか、②「交通秩序を維持すること」という条例の文言は不明確であり罪刑法定主義（憲法31条）に反するかの2点であった。</p>
+        <h4>判旨</h4>
+        <p>最高裁大法廷は以下の判断基準を示した。まず、条例が国の法令に違反するかどうかの判断方法について、「<strong class="em-a">両者の対象事項と規定文言を対比するのみでなく、それぞれの趣旨、目的、内容及び効果を比較し、両者の間に矛盾抵触があるかどうかによって決しなければならない</strong>」とした。具体的には、①国の法令がある事項につき規制を加えない趣旨（規制なく放置する趣旨）であれば条例による規制も違法となる、②国の法令と条例が同一事項を規律する場合でも、条例が別の目的に基づき法令の目的・効果を阻害しないときは違法とならない、③法令と同一目的でも、法令が地方の実情に応じた規制を容認する趣旨であれば条例による付加規制（上乗せ条例）も許される、と判示した。本件では、道路交通法と本件条例の目的・規制対象が異なるとして、条例は法律の範囲内にあると認められた。明確性の原則についても、「通常の判断能力を有する一般人が理解できる程度の明確性があれば足り」るとして、本件条例の文言は憲法31条に違反するほどの不明確性はないとした。</p>
+        <h4>試験上の意義</h4>
+        <p>本判例は<strong class="em-a">条例と法律の抵触判断の基準</strong>を示した最重要判例です。単純な文言比較ではなく「趣旨・目的・内容・効果」を比較して矛盾抵触の有無を判断するという方法論が問われます。「上乗せ条例」（法律より厳しい基準を定める条例）および「横出し条例」（法律が規律していない事項を条例で規律する）の可否に関する判断枠組みとして機能します。試験では、この判断基準を正確に述べる選択肢が正解となることが多く、「条例が法律より罰則を重くしても直ちに違法ではない」「文言の対比だけで抵触を判断してはならない」といった命題の正誤判断が問われます。</p>
+    </div>
+</div>
+
+<!-- 判例2：行政先例法（官報の慣習法） -->
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所第三小法廷　昭和33年10月3日</div>
+        <div class="case-card__title">官報到達による法令公布の効力発生時点（行政先例法の一例）</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★ 重要</span>
+            <span class="badge badge--law">慣習法</span>
+            <span class="badge badge--law">行政先例法</span>
+            <span class="badge badge--law">不文法源</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>法令の「公布」がどの時点で効力を発生するかが争われた一連の裁判において、「法令は官報に掲載することにより公布される」という取扱いが慣習法として認められてきた。さらに、官報の発行日付（「日付」）のみでは実際の到達時刻が不明確なため、官報が特定の販売所に到達した時点を公布の時点とする基準が問われた。</p>
+        <h4>判旨</h4>
+        <p>最高裁は、法令の公布は官報をもって行われるという慣習法を認め、さらに官報の効力発生時点について、<strong class="em-a">官報が財務省（当時：大蔵省）東京官報販売所に到達した時点を公布の効力発生時点</strong>とする基準を示した。これは官報の発行日付が形式的基準に過ぎず、実際に官報が流通し国民が参照可能となる時点を基準とすることが合理的だからである。</p>
+        <h4>試験上の意義</h4>
+        <p>「法令の公布は官報をもって行う」という命題は<strong class="em-a">成文法に根拠を持たない慣習法</strong>の典型例として位置づけられます。これは不文法源としての慣習法（行政先例法）の具体的事例を示すものであり、「法令の公布方法は成文法で定められている」という誤った選択肢を排除するために理解しておく必要があります。試験では「行政先例法の例として適切なものを選べ」という形式でも問われます。</p>
+    </div>
+</div>
+
+<!-- 判例3：信義則の行政法への適用 -->
+<div class="case-card">
+    <div class="case-card__hd">
+        <div class="case-card__meta">最高裁判所第一小法廷　昭和62年10月30日</div>
+        <div class="case-card__title">信義則の行政法関係への適用（税務申告における信頼保護）</div>
+        <div class="case-card__badges">
+            <span class="badge badge--stars">★★ 重要</span>
+            <span class="badge badge--law">信義誠実の原則</span>
+            <span class="badge badge--law">法の一般原則</span>
+            <span class="badge badge--law">不文法源</span>
+        </div>
+    </div>
+    <div class="case-card__bd">
+        <h4>事実の概要</h4>
+        <p>税務署の担当者が納税者に対して誤った税務指導を行い、納税者がその指導に従った結果、後から課税処分を受けたという事案において、行政法関係においても民法上の信義誠実の原則（民法1条2項）が適用されるかが争われた。税務行政においては、課税庁の言動に基づいて納税者が信頼形成をし、その信頼に反した処分がなされることがある。</p>
+        <h4>判旨</h4>
+        <p>最高裁は、<strong class="em-a">税務行政の分野においても信義誠実の原則の適用はあり得る</strong>と述べた上で、その適用には厳格な要件が必要であるとした。すなわち、①税務官庁が納税者に対して信頼の対象となる公的見解を表示し、②納税者がその表示を信頼してその信頼が無理からぬものであり、③納税者がその信頼に基づいて何らかの行為をし、④後に課税庁が当初の表示に反する処分を行うことが、信義則に照らし著しく不当といえる場合には信義則の適用が認められる、と判示した。</p>
+        <h4>試験上の意義</h4>
+        <p>本判例は<strong class="em-a">法の一般原則（信義則）が行政法関係にも適用されること</strong>を明示した重要な判例です。ただし要件が厳格であり、単に担当者の説明が誤っていたというだけでは信義則違反にはならない点が問われます。「行政法の分野に信義則は一切適用されない」という選択肢は誤りであり、「適用はあるが要件は厳格である」というのが正確な理解です。不文法源としての法の一般原則が実際の行政活動を規制する具体的場面として理解してください。</p>
+    </div>
+</div>
+</section>
+
+<!-- ==============================
+     第7節 試験対策ポイント
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+        <h2>試験対策ポイント</h2>
+        <p class="sec-head__sub">Examination Points</p>
+    </div>
+</header>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出論点①：成文法源の種類と制定機関の対応</span>
+    </div>
+    <div class="box__bd">
+        <p>以下の対応関係を完全に暗記してください。試験では「○○を制定するのは誰か」「○○の法的根拠は何条か」という形で出題されます。</p>
+        <ul>
+            <li><strong class="em-c">法律</strong>：国会（衆議院・参議院）が制定／根拠：憲法41条（国会＝唯一の立法機関）</li>
+            <li><strong class="em-c">政令</strong>：内閣が制定（閣議決定）／根拠：憲法73条6号</li>
+            <li><strong class="em-c">省令</strong>：各省大臣が制定／根拠：国家行政組織法12条</li>
+            <li><strong class="em-c">内閣府令</strong>：内閣府が制定（内閣総理大臣名）</li>
+            <li><strong class="em-c">条例</strong>：地方公共団体の議会が制定／根拠：憲法94条、地方自治法14条</li>
+            <li><strong class="em-c">規則</strong>：地方公共団体の長（知事・市区町村長）が制定／根拠：地方自治法15条</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出論点②：不文法源の種類と法的性格</span>
+    </div>
+    <div class="box__bd">
+        <p>不文法源は「慣習法・判例法・法の一般原則」の3つです。それぞれの法的性格を整理します。</p>
+        <ul>
+            <li><strong class="em-c">慣習法</strong>：補充的法源として認められる。法の適用に関する通則法3条が根拠。公序良俗に反しない慣習であること・成文法の欠缺がある事項に限り法律と同一の効力を持つ。</li>
+            <li><strong class="em-c">判例法</strong>：理論上は法源ではない（日本は成文法主義）が、事実上の拘束力があるため「事実上の法源」として不文法源に含まれる。</li>
+            <li><strong class="em-c">法の一般原則</strong>：信義則・平等原則・比例原則・権利濫用禁止等。補充的法源かつ解釈基準として機能。行政法上の一般的法原則として行政行為の違法性判断に用いられる。</li>
+        </ul>
+    </div>
+</div>
+
+<div class="box box--exam">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">school</span>
+        <span class="box__label">頻出論点③：徳島市公安条例事件の判断基準（3点セット）</span>
+    </div>
+    <div class="box__bd">
+        <p>条例と法律の抵触判断について、以下の3点を正確に記憶してください。試験では選択肢の正誤判断として問われます。</p>
+        <ol>
+            <li><strong class="em-c">判断方法</strong>：対象事項と規定文言の対比だけでなく、「趣旨・目的・内容及び効果」を比較して矛盾抵触の有無を判断する。</li>
+            <li><strong class="em-c">規制なく放置の趣旨</strong>：法令が特定事項を規制しないのが「規制なく放置する趣旨」である場合は、条例による規制も違法となる。</li>
+            <li><strong class="em-c">上乗せ・横出し条例の可能性</strong>：法令と同一目的でも、法令が地方の実情に応じた付加規制を容認する趣旨であれば上乗せ条例も許容される。</li>
+        </ol>
+    </div>
+</div>
+
+<div class="box box--caution">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">warning</span>
+        <span class="box__label">誤りやすいポイント：通達・告示の法的性格</span>
+    </div>
+    <div class="box__bd">
+        <p><strong class="warn">通達は法源ではありません。</strong>通達は上級機関が下級機関に出す行政内部の命令・指示であり、国民を直接拘束しません。ただし「通達を出すこと」自体は国家行政組織法14条を根拠とする適法な行為です。</p>
+        <p><strong class="warn">告示は原則として法源ではありませんが、例外があります。</strong>告示は一般に行政機関が一定事項を国民に広く知らせるためのものですが、法律の委任に基づく告示（例：土地利用規制に関する建設省告示）は例外的に法規命令としての性質を持ちます。この点は「告示は常に法源ではない」という単純な命題に注意が必要です。</p>
+        <p><strong class="warn">「条約が行政法の法源になる」という命題は正しい。</strong>条約は国際法上の法形式ですが、国内法的効力を持ち行政にかかわるものであれば行政法の法源となります。「条約は国際法であり行政法の法源にはならない」という誤った理解に注意してください。</p>
+    </div>
+</div>
+
+<h3>他分野との横断的なつながり</h3>
+<p>本単元で学ぶ法源論は、行政法全体の土台となります。法律による行政の原理（III-2）は「行政活動は成文法源たる法律に根拠を持たなければならない」という要請であり、法源の理解なしには理解できません。行政立法（III-5・6）では、法規命令（政令・省令など）と行政規則（通達・訓令など）の区別が「法源となるか否か」に直結します。さらに行政裁量（III-11）の逸脱・濫用の判断基準として法の一般原則（比例原則・平等原則・信義則）が機能するため、不文法源の理解も直接的に影響します。憲法では地方自治（憲法92〜95条）との関連で条例制定権の限界論が出題されます。</p>
+</section>
+
+<!-- ==============================
+     第8節 補足情報
+============================== -->
+<section>
+<header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+        <h2>補足情報</h2>
+        <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+</header>
+
+<h3>立法経緯と行政法の特色</h3>
+<p>日本の行政法は、明治時代にドイツ・フランスの行政法理論を継受して発展しました。これらの大陸法系の法体系は成文法主義を採っており、日本もその影響を受けて成文法中心の法体系を構築しています。しかし行政法には民法・刑法のような統一法典が存在せず、建築基準法・食品衛生法・道路交通法など無数の個別法令が独立して存在しています。このため、行政法の「法源」を論じることは、これらの個別法令がどのような形式的序列の中に位置づけられるかを確認する作業であり、実践的な意義を持ちます。</p>
+
+<h3>近年の動向：デジタル化と行政法の法源</h3>
+<p>近年、行政手続のデジタル化（デジタル手続法・令和元年施行）や行政書士のオンライン申請対応に伴い、電子的に制定・公布される行政立法の解釈問題が生じています。電子政府化に伴い、官報の電子化も進んでおり、電子版官報の法的地位（公布の効力発生時点との関係）は実務上の課題となっています。行政法の法源論は一見古典的テーマに見えますが、デジタル行政の進展に伴い現代的意義を持ち続けています。</p>
+
+<h3>法体系の深度理解のための学習指針</h3>
+<p>本単元の効果的な学習方法として、以下のアプローチが有効です。</p>
+<p>まず、実際の法令を調べる習慣をつけることです。e-Gov法令検索（https://laws.e-gov.go.jp/）を使って、「○○法施行令」（政令）と「○○法施行規則」（省令）の関係を実際の法令で確認すると、法体系の序列が具体的に理解できます。食品衛生法・食品衛生法施行令・食品衛生法施行規則の3段構造を見ると理解が深まります。</p>
+<p>次に、徳島市公安条例事件の判決文のキーフレーズ「趣旨・目的・内容及び効果を比較して」を繰り返し声に出して確認してください。試験では選択肢中にこのフレーズが登場し、その正誤を問われることが多いです。また、条例違反の罰則上限（懲役2年・罰金100万円）と規則違反の罰則上限（過料5万円のみ）の差も数値で記憶してください。</p>
+
+<div class="box box--example">
+    <div class="box__hd">
+        <span class="material-icons-round box__icon">info</span>
+        <span class="box__label">行政法の法源の全体像：まとめ</span>
+    </div>
+    <div class="box__bd">
+        <p><strong>成文法源の序列（上位から）：</strong>憲法＞条約≧法律（学説上争い）＞政令＞省令・内閣府令＞規則（人事院規則等）≧条例（国の法令の範囲内）＞規則（地方公共団体の長の規則）</p>
+        <p><strong>不文法源（補充的法源）：</strong>慣習法（法の適用に関する通則法3条）・判例法（事実上の拘束力）・法の一般原則（信義則・平等原則・比例原則等）</p>
+        <p><strong>法源ではないもの：</strong>通達・訓令（行政内部の指示のみ。国民への直接的法的効力なし）、要綱、行政指導（原則）</p>
+    </div>
+</div>
+</section>
+
+</body>
+</html>

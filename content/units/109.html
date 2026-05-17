@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>条件と期限 | 行政書士試験 民法 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">条件と期限</h1>
+  <p class="page-title-block__sub">法律行為の効力を、将来の事実に結び付ける付款を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法127条から137条</span>
+    <span class="badge badge--info">停止条件</span>
+    <span class="badge badge--info">解除条件</span>
+    <span class="badge badge--info">期限の利益</span>
+    <span class="badge badge--info">条件成就妨害</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">条件</mark></strong>と<strong><mark class="kw">期限</mark></strong>は、どちらも法律行為の効力を将来の事実に結び付ける付款である。売買契約、贈与契約、消費貸借契約、報酬契約などでは、「試験に合格したら贈与する」「来年四月一日に引き渡す」「出世したら返済する」といった約定が置かれることがある。このとき、その将来事実が発生するかどうか不確実なら条件、発生することは確実で時期だけが問題なら期限になる。</p>
+  <p>この単元の難しさは、日常語の「条件」と法律上の<strong><mark class="kw">条件</mark></strong>が一致しない点にある。日常では「農地売買は知事の許可を条件とする」と言うことがあるが、最高裁は、農地法上の許可は公益上要求される効力発生要件であり、民法上の停止条件そのものではないと扱う。逆に、「出世したら返す」という約束は、一見すると出世するかどうか不確実な条件に見えるが、判例上は当事者の合理的意思を踏まえて不確定期限と整理されることがある。</p>
+  <p>行政書士試験では、<strong><mark class="kw">停止条件</mark></strong>と<strong><mark class="kw">解除条件</mark></strong>の効果、<strong><mark class="kw">条件成就妨害</mark></strong>、<strong><mark class="kw">不法条件</mark></strong>・<strong><mark class="kw">不能条件</mark></strong>・<strong><mark class="kw">随意条件</mark></strong>の効力、<strong><mark class="kw">期限の利益</mark></strong>とその喪失、確定期限・不確定期限の履行遅滞が問われる。条文番号は民法127条から137条に集中しているが、債権総論の<strong><mark class="kw">民法412条</mark></strong>、相殺の<strong><mark class="kw">民法506条</mark></strong>、農地法や契約各論とも接続するため、単なる暗記ではなく事例を分類する力が必要になる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る分類</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに対し「Bが行政書士試験に合格したら百万円を贈与する」と約束した場合、合格するかどうかは将来不確実であるため、これは<strong><mark class="kw">停止条件</mark></strong>付贈与である。合格前は贈与の効力が発生せず、合格時に効力が発生する。</p>
+      <p>これに対し、「Bが大学を卒業するまで毎月十万円を支払う」という約束では、卒業によって既に発生している支払義務が消滅するため、卒業を<strong><mark class="kw">解除条件</mark></strong>と見る余地がある。さらに、「父が死亡した時に土地を贈与する」という約束では、死亡は時期が不確定でも必ず到来するため、一般に<strong><mark class="kw">不確定期限</mark></strong>として整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">条件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">条件</mark></strong>とは、法律行為の効力の発生または消滅を、将来発生するかどうか不確実な事実にかからせる付款である。付款とは、法律行為の効力を限定するために当事者が付け加える特別の定めをいう。条件の本質は「成就するかどうかが分からない」点にあり、単に将来の事実であるだけでは足りない。</p>
+      <p>制度趣旨は、当事者の意思自治を尊重し、取引の効力を柔軟に設計できるようにする点にある。たとえば、合格したら贈与する、許認可を得られたら設備を売る、一定の売上を達成したら報酬を支払うといった設計が可能になる。ただし、条件成就前にも当事者間には将来効力が発生し得る期待関係が生じるため、民法128条は相手方の利益侵害を禁止し、民法129条は条件成就前の権利処分を認める。</p>
+      <p>試験では、日常語の「条件」と混同させる問題が作られる。法令上当然必要な許可、契約成立の前提となる要件、単なる履行期の指定は、民法上の条件とは限らない。まず「発生するかどうか不確実か」を見て、その次に「効力の発生を止めるのか、効力を消滅させるのか」を判定する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">停止条件</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">停止条件</mark></strong>とは、条件が成就するまで法律行為の効力発生を停止させる条件である。民法127条1項は、停止条件付法律行為は、停止条件が成就した時から効力を生ずると定める。契約自体は成立していても、条件成就前は権利義務の本体的効力がまだ発生しない。</p>
+      <p>典型例は「試験に合格したら贈与する」「売買対象の土地について購入希望者を見つけ、売買契約に至れば仲介報酬を支払う」という約束である。条件成就前の当事者は完全な権利者ではないが、期待利益を有するため、相手方は信義則に反して条件成就を妨げてはならない。民法130条1項は、この信義則違反への制裁として、相手方に条件が成就したものとみなす選択を認める。</p>
+      <p>試験では「条件成就前から効力が発生している」とする選択肢が誤りになる。また、条件成就時の効果は原則として将来効であり、当然に法律行為時へさかのぼるわけではない。民法127条3項により、当事者が遡及効を表示した場合に限り、その意思に従う。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">解除条件</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">解除条件</mark></strong>とは、条件が成就すると法律行為の効力を消滅させる条件である。民法127条2項は、解除条件付法律行為は、解除条件が成就した時から効力を失うと定める。停止条件と異なり、条件成就前には効力が既に発生している点が核心である。</p>
+      <p>たとえば「大学に在学している間は生活費を支払うが、退学したら支払いを終了する」という約定では、退学という将来不確実な事実により、既に発生している支払関係が消滅する。解除条件は契約解除とは別概念である。契約解除は債務不履行などを理由とする意思表示により契約関係を解消する制度であるのに対し、解除条件はあらかじめ定めた条件成就によって当然に効力が失われる。</p>
+      <p>試験では、停止条件と解除条件の効果を入れ替える選択肢が典型的な誤答である。「条件成就で発生」なら停止条件、「条件成就で消滅」なら解除条件と、効力の向きから分類する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">既成条件・不法条件・不能条件</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">既成条件</mark></strong>とは、法律行為時に既に成就している条件、または既に成就しないことが確定している条件である。民法131条は、条件成就済みの場合の停止条件を無条件、解除条件を無効とし、条件不成就が確定している場合の停止条件を無効、解除条件を無条件と扱う。将来の不確実性がないため、条件としての働きを整理し直す規定である。</p>
+      <p><strong><mark class="kw">不法条件</mark></strong>とは、条件内容が不法なもの、または不法行為をしないことを条件とするものである。民法132条は、不法条件を付した法律行為を無効とする。犯罪をしたら贈与する、不正な営業を続けたら報酬を支払うといった約束を有効にすると、法秩序が不法を誘発するためである。不法行為をしないことを条件とする場合も、「違法行為をしないなら利益を与える」という形で法秩序上不適切な誘因になるため無効とされる。</p>
+      <p><strong><mark class="kw">不能条件</mark></strong>とは、成就することができない条件である。民法133条は、不能の停止条件を付した法律行為を無効とし、不能の解除条件を付した法律行為を無条件とする。停止条件が絶対に成就しないなら効力は永遠に発生しないため無効となり、解除条件が絶対に成就しないなら効力消滅が起こらないため条件がないものとして扱われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">随意条件</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">随意条件</mark></strong>とは、条件成就が当事者の意思にかかる条件である。このうち、停止条件付法律行為において、条件が単に債務者の意思のみにかかる場合、民法134条によりその法律行為は無効となる。たとえば「贈与者が支払う気になったら百万円を贈与する」という約束は、債務者が払いたいと思うまで効力が発生せず、実質的な拘束力を欠く。</p>
+      <p>随意条件が常に無効になるわけではない。民法134条が直接問題にするのは、停止条件が単に債務者の意思のみにかかる場面である。債権者の意思にかかる条件や、債務者の意思だけでなく外部事情も関わる混合条件は、当然に同条の無効となるわけではない。</p>
+      <p>試験では「本人が支払う気になったら」という表現が出やすい。この場合は、条件の不確実性ではなく、法律行為に拘束力があるかという観点から民法134条を使う。単に当事者の努力が条件成就に影響するだけの事案まで無効に広げないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">期限</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">期限</mark></strong>とは、法律行為の効力の発生・消滅または債務の履行を、将来到来することが確実な事実にかからせる付款である。到来することが確実である点で、条件と区別される。期限には、到来時期が確定している<strong><mark class="kw">確定期限</mark></strong>と、到来は確実だが時期が不確定な<strong><mark class="kw">不確定期限</mark></strong>がある。</p>
+      <p>「令和八年四月一日に代金を支払う」は確定期限である。「父が死亡した時に支払う」は、死亡の時期は不確定でも、自然人の死亡自体は確実に到来するため不確定期限である。期限の効果は民法135条に定められ、始期付き法律行為は期限到来まで効力を生じず、終期付き法律行為は期限到来時に効力を失う。</p>
+      <p>条件と異なり、期限は将来必ず到来する事実であるため、原則として遡及効を予定しない。試験では「条件は不確実、期限は確実」という入口を押さえたうえで、履行遅滞の起算点まで結び付ける。確定期限は期限到来時から遅滞、不確定期限は到来後に請求を受けた時または到来を知った時のいずれか早い時から遅滞となる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">期限の利益</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">期限の利益</mark></strong>とは、期限が到来しないことによって当事者が受ける利益である。民法136条1項は、期限は債務者の利益のために定めたものと推定する。消費貸借で返済日が一年後と定められた場合、債務者は一年間返済を猶予され、その資金を利用できる。これが典型的な期限の利益である。</p>
+      <p>期限の利益は放棄できるが、民法136条2項ただし書により、相手方の利益を害することはできない。利息付き貸金を期限前に弁済する場合、債権者は本来の期間まで利息を得る利益を持つことがあるため、残存期間分の利息相当額が問題になる。つまり、期限の利益は常に債務者だけの利益とは限らず、債権者にも期限まで受け取らない利益がある場合がある。</p>
+      <p>民法137条は、債務者が破産手続開始決定を受けたとき、担保を滅失・損傷・減少させたとき、担保提供義務を負うのにこれを供しないときは、期限の利益を主張できないとする。試験では、期限の利益の放棄と喪失を混同させる。放棄は利益を持つ者の意思による処理であり、喪失は法定事由によって期限まで待ってもらえなくなる処理である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>図1：付款の全体構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 640" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-main-9a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-sub-9a" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="var(--orange-600)"/>
+        </marker>
+        <marker id="arr-warn-9a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="520" y1="106" x2="520" y2="156" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="160" y1="156" x2="880" y2="156" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="160" y1="156" x2="160" y2="202" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-9a)"/>
+      <line x1="520" y1="156" x2="520" y2="202" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-9a)"/>
+      <line x1="880" y1="156" x2="880" y2="202" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-9a)"/>
+      <rect x="454" y="142" width="132" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="520" y="159" text-anchor="middle" font-size="13" fill="var(--blue-700)">将来事実で分類</text>
+
+      <line x1="160" y1="288" x2="160" y2="394" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-9a)"/>
+      <rect x="94" y="336" width="132" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="160" y="353" text-anchor="middle" font-size="13" fill="var(--orange-600)">効力の向き</text>
+
+      <line x1="520" y1="288" x2="520" y2="394" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-9a)"/>
+      <rect x="454" y="336" width="132" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="520" y="353" text-anchor="middle" font-size="13" fill="var(--orange-600)">時期の確定性</text>
+
+      <line x1="880" y1="288" x2="880" y2="394" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-9a)"/>
+      <rect x="806" y="336" width="148" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="880" y="353" text-anchor="middle" font-size="13" fill="var(--orange-600)">債務履行へ接続</text>
+
+      <polyline points="270,249 316,249 316,435 258,435" fill="none" stroke="var(--red-600)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-warn-9a)"/>
+      <rect x="260" y="318" width="112" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="316" y="335" text-anchor="middle" font-size="13" fill="var(--red-800)">信義則で補正</text>
+
+      <g>
+        <rect x="370" y="38" width="300" height="68" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="520" y="67" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">付款</text>
+        <text x="520" y="90" text-anchor="middle" font-size="12" fill="var(--blue-700)">法律行為の効力を将来事実に結び付ける</text>
+      </g>
+      <g>
+        <rect x="50" y="210" width="220" height="78" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="160" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">条件</text>
+        <text x="160" y="266" text-anchor="middle" font-size="12" fill="var(--orange-900)">成就が不確実な事実</text>
+      </g>
+      <g>
+        <rect x="410" y="210" width="220" height="78" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="520" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">期限</text>
+        <text x="520" y="266" text-anchor="middle" font-size="12" fill="var(--orange-900)">到来が確実な事実</text>
+      </g>
+      <g>
+        <rect x="770" y="210" width="220" height="78" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="880" y="242" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">履行期</text>
+        <text x="880" y="266" text-anchor="middle" font-size="12" fill="var(--blue-700)">遅滞責任の開始時を決める</text>
+      </g>
+      <g>
+        <rect x="50" y="402" width="208" height="76" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="154" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">停止条件・解除条件</text>
+        <text x="154" y="456" text-anchor="middle" font-size="12" fill="var(--blue-700)">発生か消滅かで区別</text>
+      </g>
+      <g>
+        <rect x="300" y="402" width="210" height="76" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1.5"/>
+        <text x="405" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="var(--red-800)">条件成就妨害</text>
+        <text x="405" y="456" text-anchor="middle" font-size="12" fill="var(--red-800)">民法130条でみなし処理</text>
+      </g>
+      <g>
+        <rect x="560" y="402" width="210" height="76" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="665" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">確定期限・不確定期限</text>
+        <text x="665" y="456" text-anchor="middle" font-size="12" fill="var(--blue-700)">時期が確定か不確定か</text>
+      </g>
+      <g>
+        <rect x="810" y="402" width="190" height="76" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="905" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">期限の利益</text>
+        <text x="905" y="456" text-anchor="middle" font-size="12" fill="var(--blue-700)">放棄と喪失を区別</text>
+      </g>
+      <rect x="50" y="548" width="940" height="42" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="520" y="574" text-anchor="middle" font-size="12" fill="var(--red-800)">判断順序：将来事実が不確実か確実か → 効力の発生・消滅か履行期か → 信義則・無効規定・期限利益を確認</text>
+    </svg>
+  </div>
+  <p>図1は、<strong><mark class="kw">条件</mark></strong>と<strong><mark class="kw">期限</mark></strong>を同じ付款の中で整理している。最初の分岐は、将来事実が不確実か確実かである。不確実なら条件として、停止条件・解除条件、条件成就前の利益保護、条件成就妨害、不法条件・不能条件・随意条件を確認する。確実なら期限として、始期・終期、確定期限・不確定期限、期限の利益、履行遅滞の開始時を確認する。試験では、事例文の「したら」「なったら」という表現だけに引きずられず、図の上から順に分類することが重要である。</p>
+
+  <h3>図2：条件と期限の効果発生タイムライン</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-main-9b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-warn-9b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="110" y1="120" x2="850" y2="120" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-main-9b)"/>
+      <line x1="110" y1="250" x2="850" y2="250" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-main-9b)"/>
+      <line x1="110" y1="380" x2="850" y2="380" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-main-9b)"/>
+
+      <rect x="70" y="72" width="150" height="54" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+      <text x="145" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">停止条件</text>
+      <text x="145" y="116" text-anchor="middle" font-size="12" fill="var(--orange-900)">契約成立・効力未発生</text>
+      <rect x="440" y="72" width="170" height="54" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+      <text x="525" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">条件成就</text>
+      <text x="525" y="116" text-anchor="middle" font-size="12" fill="var(--blue-700)">その時から効力発生</text>
+      <rect x="698" y="72" width="180" height="54" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1.5"/>
+      <text x="788" y="96" text-anchor="middle" font-size="15" font-weight="700" fill="var(--red-800)">特約がある場合</text>
+      <text x="788" y="116" text-anchor="middle" font-size="12" fill="var(--red-800)">遡及効を認め得る</text>
+
+      <rect x="70" y="202" width="150" height="54" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+      <text x="145" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">解除条件</text>
+      <text x="145" y="246" text-anchor="middle" font-size="12" fill="var(--orange-900)">契約成立・効力発生中</text>
+      <rect x="440" y="202" width="170" height="54" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+      <text x="525" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">条件成就</text>
+      <text x="525" y="246" text-anchor="middle" font-size="12" fill="var(--blue-700)">その時から効力消滅</text>
+      <rect x="698" y="202" width="180" height="54" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1.5"/>
+      <text x="788" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="var(--red-800)">妨害・不正成就</text>
+      <text x="788" y="246" text-anchor="middle" font-size="12" fill="var(--red-800)">民法130条で補正</text>
+
+      <rect x="70" y="332" width="150" height="54" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+      <text x="145" y="356" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">期限</text>
+      <text x="145" y="376" text-anchor="middle" font-size="12" fill="var(--orange-900)">到来は確実</text>
+      <rect x="440" y="332" width="170" height="54" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+      <text x="525" y="356" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">期限到来</text>
+      <text x="525" y="376" text-anchor="middle" font-size="12" fill="var(--blue-700)">始期なら発生・終期なら消滅</text>
+      <rect x="698" y="332" width="180" height="54" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1.5"/>
+      <text x="788" y="356" text-anchor="middle" font-size="15" font-weight="700" fill="var(--red-800)">遅滞責任</text>
+      <text x="788" y="376" text-anchor="middle" font-size="12" fill="var(--red-800)">民法412条で判断</text>
+
+      <polyline points="526,128 526,158 786,158 786,194" fill="none" stroke="var(--red-600)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-warn-9b)"/>
+      <rect x="604" y="145" width="146" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="677" y="162" text-anchor="middle" font-size="13" fill="var(--red-800)">不正操作を防ぐ</text>
+
+      <rect x="70" y="468" width="810" height="44" rx="4" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="475" y="495" text-anchor="middle" font-size="12" fill="var(--blue-900)">条件は「成就するか」を待つ。期限は「いつ到来するか」を待つ。履行遅滞では確定期限と不確定期限を分ける。</text>
+    </svg>
+  </div>
+  <p>図2は、停止条件、解除条件、期限を時間軸で比較している。<strong><mark class="kw">停止条件</mark></strong>では、契約成立時には効力が止まっており、条件成就時に効力が発生する。<strong><mark class="kw">解除条件</mark></strong>では、契約成立時から効力が発生し、条件成就時に効力が消滅する。<strong><mark class="kw">期限</mark></strong>では、到来すること自体は確実で、始期なら効力発生、終期なら効力消滅、履行期なら履行遅滞の開始時が問題になる。条件と期限を時間軸で並べると、「発生するかどうか」と「いつ到来するか」の違いが見えやすくなる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>表1：条件と期限の基本比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">条件</th>
+        <th class="col--b">期限</th>
+        <th class="col--c">試験での見分け方</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">定義</th>
+        <td class="col--a"><span class="em-a">将来成就するか不確実</span>な事実に効力をかからせる付款。</td>
+        <td class="col--b"><span class="em-b">将来到来することが確実</span>な事実に効力や履行をかからせる付款。</td>
+        <td class="col--c"><span class="em-c">発生するか不明</span>なら条件、発生は確実で時期だけ不明なら期限。</td>
+      </tr>
+      <tr>
+        <th class="col--label">中心条文</th>
+        <td class="col--a"><strong><mark class="kw">民法127条</mark></strong>から<strong><mark class="kw">民法134条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法135条</mark></strong>から<strong><mark class="kw">民法137条</mark></strong>。</td>
+        <td class="col--c">条文番号の並びで、条件は127から134、期限は135から137と整理する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">効力発生</th>
+        <td class="col--a"><span class="em-a">停止条件</span>は成就時から効力発生、<span class="em-a">解除条件</span>は成就時から効力消滅。</td>
+        <td class="col--b"><span class="em-b">始期</span>は到来まで効力不発生、<span class="em-b">終期</span>は到来時に効力消滅。</td>
+        <td class="col--c">「成就」という語なら条件、「到来」という語なら期限を疑う。</td>
+      </tr>
+      <tr>
+        <th class="col--label">遡及効</th>
+        <td class="col--a">原則として将来効。ただし、当事者が条件成就の効果を成就前にさかのぼらせる意思を表示すれば、その意思に従う。</td>
+        <td class="col--b">期限到来は時点を定める機能であり、通常は遡及効を問題にしない。</td>
+        <td class="col--c">「条件は特約で遡及効を認め得る」と覚え、期限と混同しない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">保護規定</th>
+        <td class="col--a">条件成就前の相手方利益侵害禁止、権利処分、条件成就妨害が定められる。</td>
+        <td class="col--b">期限の利益、期限利益の放棄、期限利益の喪失が定められる。</td>
+        <td class="col--c">条件は期待利益保護、期限は待ってもらう利益の処理が中心。</td>
+      </tr>
+      <tr>
+        <th class="col--label">代表例</th>
+        <td class="col--a">合格したら贈与する、売買成立に至れば仲介報酬を支払う。</td>
+        <td class="col--b">来月一日に支払う、父が死亡した時に支払う、出世払い。</td>
+        <td class="col--c">出世払いは「出世しなければ免除」か「出世の見込みがなくなれば弁済期到来」か、意思解釈に注意する。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>表1では、最初に将来事実の確実性を見分けることが重要である。問題文に「したら」と書かれていても、それだけで条件とは決まらない。人の死亡、一定の日付、期限の到来、出世の成否が判明する時点のように、いずれ弁済期を確定させる趣旨なら期限に分類される。反対に、効力そのものを「起こるかどうか分からない事実」に結び付けるなら条件である。</p>
+
+  <h3>表2：特殊な条件の効力比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">種類</th>
+        <th class="col--a">停止条件の場合</th>
+        <th class="col--b">解除条件の場合</th>
+        <th class="col--c">誤答パターン</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">既成条件</th>
+        <td class="col--a">条件が既に成就していれば<span class="em-a">無条件</span>。成就しないことが確定していれば<span class="em-a">無効</span>。</td>
+        <td class="col--b">条件が既に成就していれば<span class="em-b">無効</span>。成就しないことが確定していれば<span class="em-b">無条件</span>。</td>
+        <td class="col--c">停止条件と解除条件で結論が逆になる点を入れ替える。</td>
+      </tr>
+      <tr>
+        <th class="col--label">不法条件</th>
+        <td class="col--a">不法な条件を付した法律行為は<span class="em-a">無効</span>。</td>
+        <td class="col--b">不法な条件を付した法律行為は<span class="em-b">無効</span>。</td>
+        <td class="col--c">条件部分だけを切り離して有効とする、とする選択肢に注意。</td>
+      </tr>
+      <tr>
+        <th class="col--label">不能条件</th>
+        <td class="col--a">成就不能の停止条件付き法律行為は<span class="em-a">無効</span>。</td>
+        <td class="col--b">成就不能の解除条件付き法律行為は<span class="em-b">無条件</span>。</td>
+        <td class="col--c">停止なら永遠に効力不発生、解除なら永遠に消滅しないと考える。</td>
+      </tr>
+      <tr>
+        <th class="col--label">随意条件</th>
+        <td class="col--a">停止条件が単に債務者の意思のみにかかる場合は<span class="em-a">無効</span>。</td>
+        <td class="col--b">民法134条は解除条件一般を直接無効にする規定ではない。</td>
+        <td class="col--c">「債務者の意思のみ」「停止条件」という二つの限定を落とす。</td>
+      </tr>
+      <tr>
+        <th class="col--label">条件成就妨害</th>
+        <td class="col--a">不利益を受ける者が故意に妨げたとき、相手方は<span class="em-a">成就したものとみなす</span>ことができる。</td>
+        <td class="col--b">利益を受ける者が不正に成就させたとき、相手方は<span class="em-b">成就しなかったものとみなす</span>ことができる。</td>
+        <td class="col--c">令和2年施行改正で2項が明文化された点を見落とす。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>表2は、特殊な条件を停止条件と解除条件で分けて処理する表である。判断のコツは、条件が成就した時に効力が発生するのか消滅するのかを先に置くことである。停止条件では条件が成就しなければ効力は発生しないため、成就不能なら無効になりやすい。解除条件では条件が成就しなければ効力が消滅しないため、成就不能なら条件がないものとして扱われる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法127条から130条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百二十七条　停止条件付法律行為は、停止条件が成就した時からその効力を生ずる。</p>
+        <p>2　解除条件付法律行為は、解除条件が成就した時からその効力を失う。</p>
+        <p>3　当事者が条件が成就した場合の効果をその成就した時以前にさかのぼらせる意思を表示したときは、その意思に従う。</p>
+        <p>第百二十八条　条件付法律行為の各当事者は、条件の成否が未定である間は、条件が成就した場合にその法律行為から生ずべき相手方の利益を害することができない。</p>
+        <p>第百二十九条　条件の成否が未定である間における当事者の権利義務は、一般の規定に従い、処分し、相続し、若しくは保存し、又はそのために担保を供することができる。</p>
+        <p>第百三十条　条件が成就することによって不利益を受ける当事者が故意にその条件の成就を妨げたときは、相手方は、その条件が成就したものとみなすことができる。</p>
+        <p>2　条件が成就することによって利益を受ける当事者が不正にその条件を成就させたときは、相手方は、その条件が成就しなかったものとみなすことができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法127条</mark></strong>は、<strong><mark class="kw">停止条件</mark></strong>と<strong><mark class="kw">解除条件</mark></strong>の効果を定める中心条文である。1項と2項は「効力を生ずる」「効力を失う」の向きが逆であり、ここを入れ替える選択肢がよく出る。3項は条件成就の効果について当事者が遡及効を定められることを示すが、これは当然の遡及効ではなく意思表示がある場合の処理である。</p>
+      <p><strong><mark class="kw">民法128条</mark></strong>と<strong><mark class="kw">民法129条</mark></strong>は、条件成就前の法律関係を保護する規定である。条件成就前でも、相手方の利益を害してはならず、将来の権利義務は処分・相続・保存・担保供与の対象となる。完全な権利ではないが、法律上保護される期待関係があると理解する。</p>
+      <p><strong><mark class="kw">民法130条</mark></strong>は信義則を具体化する条文である。1項は条件成就で不利益を受ける者が故意に成就を妨げた場合、2項は条件成就で利益を受ける者が不正に成就させた場合を扱う。2項は平成29年改正、令和2年施行により、従前の判例法理を明文化した点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法131条から134条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百三十一条　条件が法律行為の時に既に成就していた場合において、その条件が停止条件であるときはその法律行為は無条件とし、その条件が解除条件であるときはその法律行為は無効とする。</p>
+        <p>2　条件が成就しないことが法律行為の時に既に確定していた場合において、その条件が停止条件であるときはその法律行為は無効とし、その条件が解除条件であるときはその法律行為は無条件とする。</p>
+        <p>第百三十二条　不法な条件を付した法律行為は、無効とする。不法な行為をしないことを条件とするものも、同様とする。</p>
+        <p>第百三十三条　不能の停止条件を付した法律行為は、無効とする。</p>
+        <p>2　不能の解除条件を付した法律行為は、無条件とする。</p>
+        <p>第百三十四条　停止条件付法律行為は、その条件が単に債務者の意思のみに係るときは、無効とする。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法131条</mark></strong>は、既成条件を停止条件と解除条件で逆に処理する規定である。既に成就している停止条件は効力発生を止める意味がないため無条件となるが、既に成就している解除条件は最初から効力が消えるため無効になる。成就しないことが確定している場合は、この結論が逆転する。</p>
+      <p><strong><mark class="kw">民法132条</mark></strong>は、不法な条件を付した法律行為を無効とする。法が不法な誘因を承認しないという趣旨であり、不法行為をしないことを条件とする場合も同様に無効である。<strong><mark class="kw">民法133条</mark></strong>は不能条件を扱い、不能の停止条件は無効、不能の解除条件は無条件とする。</p>
+      <p><strong><mark class="kw">民法134条</mark></strong>は、債務者の意思だけで効力発生を決められる停止条件を無効とする。法律行為に拘束力がなくなるためである。「支払う気になったら支払う」という表現が出たら、単なる条件分類ではなく随意条件の無効を検討する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法135条から137条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百三十五条　法律行為に始期を付したときは、その法律行為は、期限が到来するまで、その効力を生じない。</p>
+        <p>2　法律行為に終期を付したときは、その法律行為は、期限が到来した時にその効力を失う。</p>
+        <p>第百三十六条　期限は、債務者の利益のために定めたものと推定する。</p>
+        <p>2　期限の利益は、放棄することができる。ただし、これによって相手方の利益を害することはできない。</p>
+        <p>第百三十七条　次に掲げる場合には、債務者は、期限の利益を主張することができない。</p>
+        <p>一　債務者が破産手続開始の決定を受けたとき。</p>
+        <p>二　債務者が担保を滅失させ、損傷させ、又は減少させたとき。</p>
+        <p>三　債務者が担保を供する義務を負う場合において、これを供しないとき。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法135条</mark></strong>は期限の効力を定める。始期は期限到来まで効力不発生、終期は期限到来時に効力消滅である。条件と違い、期限は到来すること自体が確実であるため、効力をいつから、いつまでにするかを確定する機能を持つ。</p>
+      <p><strong><mark class="kw">民法136条</mark></strong>は、期限の利益を債務者のためと推定し、放棄を認める。ただし、相手方の利益を害することはできないため、利息付き取引や保管関係のように債権者側にも期限までの利益がある場合は、単純に早く履行すればよいとは限らない。</p>
+      <p><strong><mark class="kw">民法137条</mark></strong>は、債務者が期限まで待ってもらう基礎を失う場面を列挙する。破産手続開始決定、担保の滅失・損傷・減少、担保提供義務違反の三つである。試験では、単なる資力低下や債務不履行一般を当然に137条へ入れる選択肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法412条・506条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第四百十二条　債務の履行について確定期限があるときは、債務者は、その期限の到来した時から遅滞の責任を負う。</p>
+        <p>2　債務の履行について不確定期限があるときは、債務者は、その期限の到来した後に履行の請求を受けた時又はその期限の到来したことを知った時のいずれか早い時から遅滞の責任を負う。</p>
+        <p>3　債務の履行について期限を定めなかったときは、債務者は、履行の請求を受けた時から遅滞の責任を負う。</p>
+        <p>第五百六条　相殺は、当事者の一方から相手方に対する意思表示によってする。この場合において、その意思表示には、条件又は期限を付することができない。</p>
+        <p>2　前項の意思表示は、双方の債務が互いに相殺に適するようになった時にさかのぼってその効力を生ずる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法412条</mark></strong>は、期限の学習を債務不履行へ接続する条文である。確定期限では期限到来時から当然に遅滞責任を負う。不確定期限では、期限到来だけでは足りず、履行請求を受けた時または期限到来を知った時のいずれか早い時から遅滞責任を負う。期限の定めがない場合は、履行請求時から遅滞となる。</p>
+      <p><strong><mark class="kw">民法506条</mark></strong>は、相殺の意思表示に条件または期限を付すことを禁止する。相殺は一方的意思表示で相手方の債権債務を消滅させる制度であり、条件を付けると相手方を不安定な地位に置く。期限を付けることも、相殺の遡及効との関係で意味を持たない。条件・期限に親しまない単独行為の代表例として押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和39年1月23日　昭和36(オ)1307　民集18巻1号99頁</div>
+      <div class="case-card__title">山林売却斡旋報酬事件（債務不存在確認等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法130条</span>
+        <span class="badge badge--law">停止条件</span>
+        <span class="badge badge--law">期待権侵害</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>山林所有者が、相手方に自己所有山林の売却斡旋を依頼した。あわせて、売却代金が百八十万円なら報酬二十万円、二百万円なら報酬三十万円、それ以上なら三十万円と超過額を与え、さらに相手方が負担していた十万円の借入金債務を免除するという停止条件付報酬契約を締結した。ところが所有者は、斡旋を受けた者を介さず、別の第三者へ代金百六十五万円で山林を売却した。その結果、受任者の斡旋による売買成立という停止条件は現実には成就しなかったため、受任者が約定報酬や期待権侵害を主張できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、所有者が山林を第三者に売却したことにより、受任者の斡旋事務の処理は履行不能になったと捉え、所有者は故意に停止条件の成就を妨げたものと判断した。所有者が受任者へ相談しようと妻を遣わした事情があっても、停止条件付報酬契約の存在を知っていた以上、条件成就を妨げる故意がないとはいえないとした。そのため、受任者は条件が成就したものとみなすことができ、所有者は少なくとも報酬三十万円の支払義務を免れず、債務免除の特約も効力を生じるとされた。さらに、条件成就を故意に妨げた場合には、条件成就で取得できたであろう報酬や債務免除に関する期待権を侵害する不法行為責任も成立し得るとした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法130条</mark></strong>の典型事例である。停止条件が現実には成就していなくても、条件成就により不利益を受ける者が故意に成就を妨げた場合、相手方は条件が成就したものとして権利を主張できる。試験では、仲介・斡旋・報酬契約の事案で、依頼者が受任者を外して直接第三者と契約した場合に報酬請求を否定する選択肢が出る。正しくは、事案によって条件成就妨害が認められ、約定報酬請求や期待権侵害が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　平成6年5月31日　平成2(オ)295　民集48巻4号1029頁</div>
+      <div class="case-card__title">不正な条件成就事件（執行文付与に対する異議）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法130条2項</span>
+        <span class="badge badge--law">令和2年施行改正</span>
+        <span class="badge badge--law">信義則</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>裁判上の和解において、被上告人らは櫛歯ピンを付着した部分かつらを製造販売しないこと、これに違反した場合には連帯して違約金一千万円を支払うことを約束していた。上告人の取引先関係者Dは、上告人の指示の下で通常の客を装い、まず櫛歯ピンとは異なるピンを付けた部分かつらの購入契約をした。その後、製作が進んだ段階で、櫛歯ピンのようなストッパーを付けてほしいと強く求め、困惑した従業員が契約変更を承諾して櫛歯ピン付き部分かつらを引き渡した。上告人はこれを和解条項違反として違約金支払条件が成就したと主張し、執行文の付与を受けた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、被上告人が櫛歯ピン付き部分かつらを販売した行為自体は和解条項違反に当たると認めた。しかし、上告人は単に違反行為の有無を調査・確認する範囲を超え、Dを介して積極的に違反行為をするよう誘引していた。このため、条件成就によって利益を受ける上告人が故意に条件を成就させたものというべきであり、改正前民法130条の類推適用により、被上告人らは条件が成就していないものとみなすことができると判断した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、現在の<strong><mark class="kw">民法130条2項</mark></strong>の前提となった判例法理である。条件成就で利益を受ける者が不正に条件を成就させた場合、相手方は条件が成就しなかったものとみなすことができる。平成29年改正・令和2年施行により、このルールは条文上明文化された。試験では「故意に条件を成就させた」だけでなく「不正に」という文言が入った意味も重要である。試験合格を条件とする贈与で、受贈者が努力して合格したような通常の条件成就は不正ではない。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和36年5月26日　昭和32(オ)923　民集15巻5号1404頁</div>
+      <div class="case-card__title">農地売買と法定条件事件（農地売買契約無効確認等請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法127条</span>
+        <span class="badge badge--law">民法130条</span>
+        <span class="badge badge--law">農地法3条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>農地の所有権移転を目的とする売買契約で、当事者は都道府県知事の許可を得ることを条件としていた。ところが、売主側が許可取得を妨げたとして、買主が民法130条により条件が成就したものとみなし、既に農地所有者になったことを前提に請求した。争点は、農地法上の知事許可を、当事者が付けた民法上の停止条件と同じように扱い、売主の妨害によって所有権移転の効力を擬制できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、農地の所有権移転を目的とする法律行為は、都道府県知事の許可を受けない以上、法律上の効力を生じないとした。知事の許可は農地法上の効力発生要件であり、当事者が「許可を得ることを条件」としたとしても、それは法律上当然必要なことを約定したにとどまり、民法上の停止条件を付したものとはいえない。仮に法定条件にも性質の許す限り民法の条件規定の類推適用があり得るとしても、現実に知事の許可がない以上、当事者の「みなす」という擬制的効果により農地所有権移転の効力を左右することは性質上許されないとした。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、民法上の<strong><mark class="kw">条件</mark></strong>と、法令上の許可・認可などの効力発生要件を区別するために重要である。農地法の許可は公益上要求されるものであり、当事者間の信義則上の擬制だけで代替できない。試験では「許可取得を売主が妨げたから、民法130条により農地所有権が移転したものとみなせる」とする選択肢が誤りになる。条件成就妨害の規定は強力だが、公法上の許可を不要にするものではない。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">大審院第三民事部　大正4年3月24日　大正3(オ)555　民録21輯10巻439頁</div>
+      <div class="case-card__title">出世払い債務事件（貸金請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">不確定期限</span>
+        <span class="badge badge--law">条件と期限の区別</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>金銭消費貸借において、「将来出世した際には返還する」という趣旨のいわゆる出世払い特約が付された。借主が出世しない場合に返還義務を免れるのか、それとも出世するかどうかが判明する時点を履行期とするのかが争われた。出世という事実は発生するかどうか不確実であるため、一見すると停止条件に見える。しかし、貸金である以上、当事者が完全な贈与や免除を意図していたのか、それとも返済時期を猶予しただけなのかという意思解釈が中心問題となった。</p>
+      <h4>判旨</h4>
+      <p>大審院は、出世払いの約束を、出世しなければ返済義務が消える停止条件ではなく、不確定期限を定めたものと解した。つまり、出世した時だけでなく、出世する見込みがなくなった時にも弁済期が到来し、貸主は返還を請求できるという整理である。判断の根底には、金銭を貸したという取引類型では、特段の事情がない限り、返済義務自体を消滅させる意思ではなく、返済時期を将来に猶予する意思と見るのが合理的だという考え方がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">条件</mark></strong>と<strong><mark class="kw">不確定期限</mark></strong>の区別を問う典型である。「出世したら返す」という文言だけを見ると、出世の有無は不確実なので条件に見える。しかし、当事者の合理的意思解釈により、返済義務の発生を出世にかからせたのではなく、履行期を将来に延ばしたものと理解される。試験では「出世しないことが確定すれば当然に返還義務を免れる」とする選択肢が誤りになる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ1 条件と期限の分類</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「将来発生する事実に効力をかからせる付款は、すべて条件である。」これは誤りである。将来事実でも、到来すること自体が確実なら<strong><mark class="kw">期限</mark></strong>である。人の死亡、一定の日付、権利者が履行請求する時、出世するかどうかが判明する時点などは、事案により期限として扱われる。</p>
+      <p>誤りの選択肢例：「出世払いの債務では、債務者が出世しないことが確定すると、当然に返還義務を免れる。」これも誤りである。判例は、出世払いを不確定期限付き債務と解し、出世する見込みがなくなった時にも弁済期が到来し得るとする。文言だけでなく、貸金契約という取引の性質を読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ2 停止条件と解除条件の効果</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「停止条件付法律行為は、条件成就まで有効に効力を生じ、条件成就時に効力を失う。」これは<strong><mark class="kw">解除条件</mark></strong>の説明である。停止条件は条件成就時に効力が発生する。解除条件は条件成就時に効力が消滅する。</p>
+      <p>誤りの選択肢例：「条件成就の効果は、当事者の意思にかかわらず常に法律行為時にさかのぼる。」正しくは、民法127条3項により、当事者がさかのぼらせる意思を表示したときにその意思に従う。原則は条件成就時からの将来効である。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ3 条件成就妨害と不正成就</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「条件成就により不利益を受ける当事者が故意に条件成就を妨げても、条件は現実には成就していないから、相手方は権利を主張できない。」これは<strong><mark class="kw">民法130条1項</mark></strong>に反する。相手方は条件が成就したものとみなすことができる。</p>
+      <p>誤りの選択肢例：「条件成就により利益を受ける当事者が不正に条件を成就させた場合の規定は、現行民法には存在しない。」これは令和2年施行後の現行法では誤りである。現行<strong><mark class="kw">民法130条2項</mark></strong>は、相手方が条件不成就とみなすことができると明文化している。</p>
+      <p>ただし、単に条件成就に向けて努力しただけでは不正ではない。合格したら贈与するという約束で、受贈者が勉強して合格した場合まで不正成就と扱うわけではない。信義則に反する誘引・操作があるかを事実から判断する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ4 特殊条件と期限の利益</span>
+    </div>
+    <div class="box__bd">
+      <p>既成条件・不能条件は、停止条件と解除条件で結論が逆になる。停止条件は効力発生を止める条件なので、成就不能なら無効になる。解除条件は効力消滅を起こす条件なので、成就不能なら効力消滅が起こらず無条件となる。この構造で考えれば、丸暗記の負担を減らせる。</p>
+      <p><strong><mark class="kw">期限の利益</mark></strong>では、放棄と喪失を分ける。放棄は利益を受ける者が期限を待たずに履行する処理であり、相手方の利益を害することはできない。喪失は破産手続開始決定、担保の滅失・損傷・減少、担保提供義務違反という民法137条の列挙事由により、債務者が期限まで待ってもらえなくなる処理である。</p>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p><strong><mark class="kw">債務不履行</mark></strong>との関係では、期限到来と履行遅滞の開始時を民法412条で確認する。確定期限、不確定期限、期限の定めなしの三分類は債権の効力で再び出てくる。<strong><mark class="kw">相殺</mark></strong>との関係では、民法506条により、相殺の意思表示に条件や期限を付せない点を押さえる。相殺は単独行為で相手方の地位を不安定にするため、条件・期限に親しまない典型である。</p>
+  <p><strong><mark class="kw">農地法</mark></strong>との関係では、知事の許可のような公法上の効力発生要件を、民法上の停止条件と同一視しない。<strong><mark class="kw">委任・準委任</mark></strong>との関係では、斡旋報酬契約に停止条件が付され、依頼者が受任者を排除して直接契約した場合に条件成就妨害が問題になる。<strong><mark class="kw">保証・担保</mark></strong>との関係では、期限の利益喪失が保証人への情報提供や担保権実行の前提として重要になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行 民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年改正・令和2年施行の民法改正では、<strong><mark class="kw">民法130条</mark></strong>に2項が追加された。改正前は、条件成就によって利益を受ける当事者が故意に条件を成就させた場合について明文がなかった。しかし最高裁平成6年5月31日判決は、改正前民法130条を類推適用し、相手方は条件が成就していないものとみなすことができると判断した。</p>
+      <p>現行法はこの判例法理を明文化したが、条文上は単なる「故意」ではなく「不正に」という文言を用いている。これは、条件成就に向けて通常の努力をした場合まで排除しないためである。行政書士試験では、令和2年施行後の現行条文として、1項が妨害、2項が不正成就と整理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">実務での契約書確認</span>
+    </div>
+    <div class="box__bd">
+      <p>契約書では、「条件」「期限」「履行期」「解除事由」「期限の利益喪失事由」が混在しやすい。たとえば融資契約では、返済日という期限、債務者の破産や担保毀損による期限の利益喪失、一定の許認可取得を前提とする効力発生、期限前弁済による相手方利益の調整が同時に問題になる。</p>
+      <p>行政書士実務に近い許認可関連書類でも、法令上の許可がなければ効力を生じない場面を、当事者間の条件と混同しないことが重要である。農地法上の許可のような公法上の要件は、当事者の意思や民法130条のみなしで代替できない。契約書を読むときは、まず民法上の付款か、法令上の効力発生要件かを分ける。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">学習整理の注意</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="warn">条件・期限は、言葉ではなく機能で分類する。</strong>「したら」「なったら」という日本語表現だけで条件に飛びつくと、出世払い、不確定期限、法定許可、履行期の問題を誤る。第一に成就が不確実か到来が確実か、第二に効力発生・消滅か履行期か、第三に信義則や無効規定が働くか、という順序で検討する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">最終整理</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元は、民法総則の中では条文数が少ないが、事例問題での分類力を問う。覚えるべき軸は三つである。第一に、条件は不確実、期限は確実。第二に、停止条件は成就時に効力発生、解除条件は成就時に効力消滅。第三に、期限の利益は原則債務者の利益と推定されるが、放棄は相手方利益を害せず、喪失は民法137条の列挙事由で処理する。</p>
+      <p>判例では、山林売却斡旋報酬事件で条件成就妨害、平成6年の不正な条件成就事件で現行民法130条2項の基礎、農地売買事件で法定許可と民法上の条件の区別、出世払い事件で条件と不確定期限の区別を押さえる。これらを条文と結び付けると、短い事例文でもどの規定を使うべきか判断しやすくなる。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

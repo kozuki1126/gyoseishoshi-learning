@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I. 民法 - 41.相続の効力（相続の一般的効力、相続財産の範囲、共同相続における権利義務の承継）</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">相続の効力</h1>
+  <p class="page-title-block__sub">相続開始により何が、誰に、どの範囲で承継されるかを、相続財産・遺産共有・対抗要件から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法896条</span>
+    <span class="badge badge--info">民法897条</span>
+    <span class="badge badge--info">民法898条</span>
+    <span class="badge badge--info">民法899条</span>
+    <span class="badge badge--info">民法899条の2</span>
+    <span class="badge badge--info">民法909条の2</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">相続の効力</mark></strong>は、被相続人の死亡によって、被相続人に属していた権利義務がどのように移るかを扱う単元である。前の単元で「誰が相続人か」「相続分はいくらか」を決めた後、本単元では「何が相続されるか」「相続人が複数いるときに財産はどの状態になるか」「債権者や第三者に対してどこまで主張できるか」を判断する。条文の中心は、包括承継を定める<strong><mark class="kw">民法896条</mark></strong>、祭祀財産の特則である<strong><mark class="kw">民法897条</mark></strong>、共同相続財産の共有を定める<strong><mark class="kw">民法898条</mark></strong>、相続分に応じた承継を定める<strong><mark class="kw">民法899条</mark></strong>である。</p>
+  <p>相続は、売買や贈与のように一つ一つの財産を選んで移す制度ではない。相続開始の時から、被相続人の財産に属した一切の権利義務が、相続人へ包括的に承継される。もっとも、被相続人の一身に専属した権利義務、たとえば扶養請求権や代理人の地位のように本人の人格や信頼関係と切り離せないものは承継されない。また、系譜、祭具、墳墓の所有権は相続財産の通常ルールではなく、祭祀主宰者が承継する。</p>
+  <p>行政書士試験では、プラス財産だけでなくマイナス財産も承継する点、共同相続では相続財産がいったん共有になる点、預貯金債権は現在は遺産分割の対象となる点、相続債務は原則として法定相続分で分割承継される点が問われやすい。特に、<strong><mark class="kw">預貯金債権</mark></strong>については最高裁平成28年12月19日大法廷決定と、改正後の<strong><mark class="kw">民法909条の2</mark></strong>をセットで理解する必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る相続の効力</span>
+    </div>
+    <div class="box__bd">
+      <p>被相続人Aが死亡し、相続人が子Bと子Cだけであるとする。Aの自宅、預貯金、貸金債権、株式、借入金は、相続開始時に相続人へ承継される。しかしAが受けていた扶養請求権や、A本人の信用を前提とする委任契約上の地位は、原則として承継されない。自宅や預貯金は遺産分割で誰が取得するかを決める対象になるが、借入金のような可分債務は、債権者との関係ではBとCが相続分に応じて当然に負担する。BとCが遺産分割協議で「借金はBだけが負担する」と決めても、債権者が承認しない限り、Cは債権者にその内部合意を主張できない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">包括承継</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">包括承継</mark></strong>とは、相続開始時に、被相続人の財産に属した一切の権利義務が一体として相続人に承継されることをいう。根拠は<strong><mark class="kw">民法896条</mark></strong>であり、個別の譲渡行為や承諾を一つずつ要しない点に制度上の意味がある。売買なら売主から買主へ特定財産が移転するが、相続では不動産、動産、債権、債務などが死亡という事実によりまとめて相続人へ移る。したがって、相続人は預貯金や不動産のようなプラス財産だけでなく、借入金や損害賠償債務のようなマイナス財産も承継する。試験では「相続はプラス財産だけを承継する」「相続人が承諾して初めて権利義務が移る」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">一身専属権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">一身専属権</mark></strong>とは、権利義務の性質上、特定の本人の人格、身分、信用、技能、信頼関係と切り離して他人に移すことができないものをいう。<strong><mark class="kw">民法896条ただし書</mark></strong>は、被相続人の一身に専属したものを相続承継から除外する。制度趣旨は、本人だけに帰属させることが予定された法律関係を、死亡後に無理に相続人へ移すと、相手方や制度目的に反するためである。扶養請求権、生活保護を受ける地位、委任契約で受任者本人の信頼に基づく地位などが典型的に問題になる。試験では「財産的価値があればすべて相続される」と考えず、その権利義務が本人の人格や身分と不可分かを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相続財産</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相続財産</mark></strong>とは、相続開始時に被相続人の財産に属し、相続人に承継される権利義務の総体である。不動産、動産、現金、預貯金、株式、貸金債権、損害賠償請求権、借入金債務などが問題になる。相続税の課税対象や遺産分割の対象と完全に一致する概念ではない点に注意する。たとえば受取人指定のある生命保険金請求権は、受取人固有の権利とされ、原則として相続財産そのものではない。祭祀財産は<strong><mark class="kw">民法897条</mark></strong>により通常の相続財産とは別に承継される。試験では、「相続されるか」「遺産分割の対象になるか」「相続税上扱われるか」を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">祭祀財産</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">祭祀財産</mark></strong>とは、系譜、祭具、墳墓の所有権をいう。<strong><mark class="kw">民法897条</mark></strong>は、これらを前条、つまり一般的な相続効力の規定にかかわらず、祖先の祭祀を主宰すべき者が承継すると定める。制度趣旨は、墓や仏壇のように家族の祭祀・追悼と結び付く物を、通常の財産分割の対象として細分化するのではなく、祭祀を主宰する者にまとめて帰属させる点にある。承継者は、被相続人の指定があればその者、指定がなければ慣習、慣習が明らかでなければ家庭裁判所が定める。試験では、祭祀財産を当然に法定相続分で共同相続人が分割取得するという肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">遺産共有</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">遺産共有</mark></strong>とは、相続人が数人あるとき、遺産分割前の相続財産が共同相続人の共有に属する状態をいう。根拠は<strong><mark class="kw">民法898条</mark></strong>である。通常の共有と同じように持分を観念できるが、遺産全体を遺産分割手続で総合的に処理する点に特色がある。各共同相続人の共有持分は、原則として法定相続分又は代襲相続分によって算定される。遺産共有を理解しないと、不動産、預貯金、株式などを誰が単独で処分できるか、遺産分割でどの財産を誰が取得するかを判断できない。試験では、共同相続が開始した瞬間に各財産が当然に単独所有へ分かれるという肢を警戒する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">可分債権・可分債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">可分債権</mark></strong>と<strong><mark class="kw">可分債務</mark></strong>は、金銭債権や金銭債務のように数量的に分けて行使・履行できる債権債務である。従来、預貯金を含む金銭債権は相続開始と同時に当然分割されると考えられていたが、預貯金債権については最高裁平成28年12月19日大法廷決定により、遺産分割の対象となる扱いに変更された。他方、貸金債権や損害賠償請求権などの一般的な可分債権は、なお当然分割の法理が問題になる。可分債務については、相続債権者との関係で、各共同相続人が相続分に応じて当然に承継するのが判例法理であり、改正後の<strong><mark class="kw">民法902条の2</mark></strong>も、指定相続分がある場合の債権者保護を定める。試験では、預貯金債権と一般可分債権、相続債務を同じ結論で処理しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">共同相続における対抗要件</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">共同相続における対抗要件</mark></strong>とは、相続によって取得した権利を第三者に主張するために、登記、登録、通知などを備える必要があるかという問題である。<strong><mark class="kw">民法899条の2</mark></strong>は、遺産分割によるものかどうかにかかわらず、法定相続分を超える部分については、登記、登録その他の対抗要件を備えなければ第三者に対抗できないとする。制度趣旨は、相続による権利取得を尊重しつつ、第三者が登記や登録を信頼して取引する利益も保護する点にある。改正前判例では、相続分の指定による取得を第三者に登記なく対抗できる場面があったが、現行法では法定相続分を超える部分の対抗要件を確認する必要がある。試験では、相続なら常に登記不要とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="相続財産の範囲と除外される権利義務">
+      <defs>
+        <marker id="arr41a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr41a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr41a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <path d="M590 105 V155 H210 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+      <path d="M590 155 H590 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+      <path d="M590 155 H970 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+      <path d="M210 330 V395 H400" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr41a-orange)"/>
+      <path d="M590 330 V395 H590" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr41a-orange)"/>
+      <path d="M970 330 V395 H780" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr41a-red)"/>
+      <path d="M400 505 V585 H590" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+      <path d="M590 505 V585" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+      <path d="M780 505 V585 H590" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41a-blue)"/>
+
+      <rect x="390" y="35" width="400" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">相続開始時の承継判断</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">民法896条の包括承継から出発</text>
+
+      <rect x="55" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">プラス財産</text>
+      <text x="210" y="281" text-anchor="middle" font-size="13" fill="#1e3a8a">不動産・動産・債権</text>
+      <text x="210" y="305" text-anchor="middle" font-size="13" fill="#1e3a8a">原則として相続財産</text>
+
+      <rect x="435" y="220" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">マイナス財産</text>
+      <text x="590" y="281" text-anchor="middle" font-size="13" fill="#7c2d12">借入金・損害賠償債務</text>
+      <text x="590" y="305" text-anchor="middle" font-size="13" fill="#7c2d12">相続分に応じて承継</text>
+
+      <rect x="815" y="220" width="310" height="110" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="970" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">承継除外・特則</text>
+      <text x="970" y="281" text-anchor="middle" font-size="13" fill="#9f1239">一身専属権・祭祀財産</text>
+      <text x="970" y="305" text-anchor="middle" font-size="13" fill="#9f1239">性質又は条文で別処理</text>
+
+      <rect x="250" y="395" width="300" height="110" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="400" y="430" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">遺産分割対象</text>
+      <text x="400" y="457" text-anchor="middle" font-size="13" fill="#1e3a8a">不動産・預貯金・現金等</text>
+      <text x="400" y="481" text-anchor="middle" font-size="13" fill="#1e3a8a">誰が取得するかを決定</text>
+
+      <rect x="630" y="395" width="300" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="780" y="430" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">当然分割対象</text>
+      <text x="780" y="457" text-anchor="middle" font-size="13" fill="#7c2d12">一般可分債権・可分債務</text>
+      <text x="780" y="481" text-anchor="middle" font-size="13" fill="#7c2d12">預貯金は別扱いに注意</text>
+
+      <rect x="350" y="585" width="480" height="95" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="620" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">試験の判断軸</text>
+      <text x="590" y="647" text-anchor="middle" font-size="13" fill="#9f1239">相続されるか・分割対象か・対抗要件が必要か</text>
+      <text x="590" y="670" text-anchor="middle" font-size="13" fill="#9f1239">三つを分けて結論を出す</text>
+    </svg>
+  </div>
+  <p>この図は、相続開始時の承継判断を、プラス財産、マイナス財産、承継除外又は特則に分けて整理している。まず<strong><mark class="kw">民法896条</mark></strong>により包括承継が原則となるが、被相続人の一身に専属したものは除外される。さらに、<strong><mark class="kw">祭祀財産</mark></strong>は通常の遺産分割ではなく祭祀主宰者の承継に回る。試験では、相続財産に入るか、遺産分割の対象になるか、第三者に対抗できるかを一つの問題として混ぜて聞いてくるため、この三段階を分けて考える。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 780" role="img" aria-label="共同相続後の権利義務承継と第三者対抗">
+      <defs>
+        <marker id="arr41b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr41b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr41b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <path d="M590 105 V160 H210 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+      <path d="M590 160 H590 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+      <path d="M590 160 H970 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+      <path d="M210 330 V390 H210 V445" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr41b-orange)"/>
+      <path d="M590 330 V390 H590 V445" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr41b-orange)"/>
+      <path d="M970 330 V390 H970 V445" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr41b-red)"/>
+      <path d="M210 555 V620 H590" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+      <path d="M590 555 V620" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+      <path d="M970 555 V620 H590" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr41b-blue)"/>
+
+      <rect x="390" y="35" width="400" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">共同相続の発生</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">相続人が数人ある場合</text>
+
+      <rect x="55" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">遺産共有</text>
+      <text x="210" y="281" text-anchor="middle" font-size="13" fill="#1e3a8a">民法898条</text>
+      <text x="210" y="305" text-anchor="middle" font-size="13" fill="#1e3a8a">相続財産は共有に属する</text>
+
+      <rect x="435" y="220" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">相続分承継</text>
+      <text x="590" y="281" text-anchor="middle" font-size="13" fill="#7c2d12">民法899条</text>
+      <text x="590" y="305" text-anchor="middle" font-size="13" fill="#7c2d12">権利義務を相続分で承継</text>
+
+      <rect x="815" y="220" width="310" height="110" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="970" y="254" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">第三者関係</text>
+      <text x="970" y="281" text-anchor="middle" font-size="13" fill="#9f1239">民法899条の2</text>
+      <text x="970" y="305" text-anchor="middle" font-size="13" fill="#9f1239">法定相続分超過部分は対抗要件</text>
+
+      <rect x="55" y="445" width="310" height="110" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="480" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">遺産分割で帰属確定</text>
+      <text x="210" y="507" text-anchor="middle" font-size="13" fill="#1e3a8a">民法909条で相続開始時に遡及</text>
+      <text x="210" y="531" text-anchor="middle" font-size="13" fill="#1e3a8a">ただし第三者の権利は害せない</text>
+
+      <rect x="435" y="445" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="480" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">預貯金の特則</text>
+      <text x="590" y="507" text-anchor="middle" font-size="13" fill="#7c2d12">遺産分割対象</text>
+      <text x="590" y="531" text-anchor="middle" font-size="13" fill="#7c2d12">民法909条の2で一部払戻し</text>
+
+      <rect x="815" y="445" width="310" height="110" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="970" y="480" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">相続債務</text>
+      <text x="970" y="507" text-anchor="middle" font-size="13" fill="#9f1239">債権者は法定相続分で請求可</text>
+      <text x="970" y="531" text-anchor="middle" font-size="13" fill="#9f1239">指定相続分は承認がなければ対抗不可</text>
+
+      <rect x="330" y="620" width="520" height="92" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="654" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">結論の出し方</text>
+      <text x="590" y="681" text-anchor="middle" font-size="13" fill="#9f1239">内部関係・対債務者関係・対第三者関係を分ける</text>
+      <text x="590" y="704" text-anchor="middle" font-size="13" fill="#9f1239">遺産分割協議だけで外部者を当然拘束しない</text>
+    </svg>
+  </div>
+  <p>この図は、共同相続が起きた後の財産状態を示している。相続人が複数いると、相続財産は<strong><mark class="kw">遺産共有</mark></strong>となり、各共同相続人は相続分に応じて権利義務を承継する。遺産分割で最終的な帰属が決まるが、法定相続分を超えて取得する権利は、第三者との関係では<strong><mark class="kw">民法899条の2</mark></strong>の対抗要件が問題になる。相続債務は、相続人間の内部合意だけでは債権者を拘束できないため、債権者保護の視点を必ず入れて判断する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">通常の相続財産</th>
+        <th class="col--b">一身専属権</th>
+        <th class="col--c">祭祀財産・固有権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">基本分類</td>
+        <td class="col--a"><span class="em-a">被相続人の財産に属した権利義務</span>として承継される。</td>
+        <td class="col--b"><span class="em-b">本人だけに帰属</span>するため承継されない。</td>
+        <td class="col--c"><span class="em-c">特別ルール又は受取人固有権</span>として通常相続と別に処理する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><strong><mark class="kw">民法896条本文</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法896条ただし書</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法897条</mark></strong>、保険契約の受取人指定など</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">不動産、動産、現金、預貯金、株式、貸金債権、借入金債務。</td>
+        <td class="col--b">扶養請求権、生活保護を受ける地位、本人の信頼を前提とする委任上の地位。</td>
+        <td class="col--c">系譜、祭具、墳墓、受取人指定のある生命保険金請求権。</td>
+      </tr>
+      <tr>
+        <td class="col--label">判断基準</td>
+        <td class="col--a">死亡時に被相続人に帰属し、性質上移転可能かを見る。</td>
+        <td class="col--b">人格・身分・信用・技能と不可分かを見る。</td>
+        <td class="col--c">条文上の特則又は第三者のためにする契約上の固有取得かを見る。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">プラス財産だけを承継するとする肢。</td>
+        <td class="col--b">財産的価値があるものはすべて相続されるとする肢。</td>
+        <td class="col--c">墓や保険金を当然に法定相続分で遺産分割するとする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">遺産共有・遺産分割対象</th>
+        <th class="col--b">当然分割される権利義務</th>
+        <th class="col--c">第三者対抗が問題になる取得</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">意味</td>
+        <td class="col--a">相続人全員の共有状態を経て、遺産分割で取得者を決める。</td>
+        <td class="col--b">相続開始時に相続分に応じて各相続人へ分かれる。</td>
+        <td class="col--c">相続取得自体は認められるが、外部者に主張するには対抗要件が必要になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><strong><mark class="kw">民法898条</mark></strong>、<strong><mark class="kw">民法909条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法899条</mark></strong>、判例法理、<strong><mark class="kw">民法902条の2</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法899条の2</mark></strong></td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">不動産、現金、預貯金、株式など。</td>
+        <td class="col--b">一般可分債権、金銭債務、連帯債務の相続分相当部分。</td>
+        <td class="col--c">遺言や遺産分割により法定相続分を超えて取得した不動産持分や債権。</td>
+      </tr>
+      <tr>
+        <td class="col--label">重要判例</td>
+        <td class="col--a">最高裁平成28年12月19日大法廷決定は預貯金を遺産分割対象とした。</td>
+        <td class="col--b">最高裁昭和29年4月8日判決は金銭その他の可分債権の当然分割を示した。</td>
+        <td class="col--c">改正前の指定相続分対抗判例は、現行法では民法899条の2と対比して学ぶ。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の見方</td>
+        <td class="col--a">遺産分割前に一人で全額払戻しや処分ができるかを疑う。</td>
+        <td class="col--b">相続人間の内部合意で債権者を当然拘束できるかを疑う。</td>
+        <td class="col--c">法定相続分を超える部分か、登記・通知を備えたかを見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践的な判断基準は、まず死亡時に被相続人へ帰属していたかを確認し、次に性質上相続されるかを確認し、最後に共同相続後の処理を確認することである。預貯金は金銭債権という外形だけを見ると当然分割に見えるが、判例変更により遺産分割対象とされている。相続債務は、相続人間の分担合意と債権者に対する責任を分けて判断する。法定相続分を超える権利取得では、相続だから登記不要と決めつけず、<strong><mark class="kw">民法899条の2</mark></strong>を確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Related Articles</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法896条 相続の一般的効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百九十六条　相続人は、相続開始の時から、被相続人の財産に属した一切の権利義務を承継する。<br>ただし、被相続人の一身に専属したものは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法896条</mark></strong>は、相続の包括承継性を定める中心条文である。「相続開始の時から」とあるため、遺産分割協議や相続人の承諾を待たず、死亡時に法律上当然に承継が生じる。「一切の権利義務」は、所有権や債権だけでなく債務も含む広い表現である。ただし書は、扶養請求権のような<strong><mark class="kw">一身専属権</mark></strong>を除外する。試験では、本文の包括承継とただし書の除外を同時に読むことが必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法897条 祭祀に関する権利の承継</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百九十七条　系譜、祭具及び墳墓の所有権は、前条の規定にかかわらず、慣習に従って祖先の祭祀を主宰すべき者が承継する。ただし、被相続人の指定に従って祖先の祭祀を主宰すべき者があるときは、その者が承継する。<br>２　前項本文の場合において慣習が明らかでないときは、同項の権利を承継すべき者は、家庭裁判所が定める。</blockquote>
+      <p><strong><mark class="kw">民法897条</mark></strong>は、系譜、祭具、墳墓を通常の相続分で処理しない特則である。「前条の規定にかかわらず」とあるため、<strong><mark class="kw">民法896条</mark></strong>の包括承継ルールより優先する。承継者は、まず被相続人の指定、指定がなければ慣習、慣習が明らかでなければ家庭裁判所の決定という順で決まる。祭祀財産は金銭的価値を有する場合があっても、祖先祭祀の継続という制度目的が強いため、法定相続分による分割取得とは異なる。試験では、墓や仏壇を共同相続人が当然に共有し、遺産分割で等分するとする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法898条 共同相続の効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百九十八条　相続人が数人あるときは、相続財産は、その共有に属する。<br>２　相続財産について共有に関する規定を適用するときは、第九百条から第九百二条までの規定により算定した相続分をもって各相続人の共有持分とする。</blockquote>
+      <p><strong><mark class="kw">民法898条</mark></strong>は、共同相続人がいる場合の相続財産の状態を定める。相続財産は一人ずつの単独所有に直ちに分かれるのではなく、遺産分割まで共有状態になる。二項は、共有規定を適用するときの持分を、法定相続分、代襲相続分、指定相続分によって算定する趣旨である。もっとも、遺産共有は遺産全体の分割手続に服するため、通常の共有物分割と完全に同じではない。試験では、遺産共有を前提に、誰が単独で処分できるか、遺産分割の対象になるかを判断する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法899条・899条の2 相続分承継と対抗要件</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百九十九条　各共同相続人は、その相続分に応じて被相続人の権利義務を承継する。<br>第八百九十九条の二　相続による権利の承継は、遺産の分割によるものかどうかにかかわらず、次条及び第九百一条の規定により算定した相続分を超える部分については、登記、登録その他の対抗要件を備えなければ、第三者に対抗することができない。<br>２　前項の権利が債権である場合において、次条及び第九百一条の規定により算定した相続分を超えて当該債権を承継した共同相続人が当該債権に係る遺言の内容（遺産の分割により当該債権を承継した場合にあっては、当該債権に係る遺産の分割の内容）を明らかにして債務者にその承継の通知をしたときは、共同相続人の全員が債務者に通知をしたものとみなして、同項の規定を適用する。</blockquote>
+      <p><strong><mark class="kw">民法899条</mark></strong>は、各共同相続人が相続分に応じて権利義務を承継することを定める。これは、遺産共有の中で各人の持分や債務負担を考える出発点である。<strong><mark class="kw">民法899条の2</mark></strong>は、令和元年施行の相続法改正で設けられ、法定相続分を超える部分について第三者対抗要件を要求する。趣旨は、遺言や遺産分割による相続取得を尊重しつつ、取引安全を保護する点にある。債権については二項により、承継した共同相続人が遺言又は遺産分割の内容を明らかにして通知すれば、共同相続人全員の通知とみなされる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法902条の2・909条の2 相続債務と預貯金払戻し</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第九百二条の二　被相続人が相続開始の時において有した債務の債権者は、前条の規定による相続分の指定がされた場合であっても、各共同相続人に対し、第九百条及び第九百一条の規定により算定した相続分に応じてその権利を行使することができる。ただし、その債権者が共同相続人の一人に対してその指定された相続分に応じた債務の承継を承認したときは、この限りでない。<br>第九百九条の二　各共同相続人は、遺産に属する預貯金債権のうち相続開始の時の債権額の三分の一に第九百条及び第九百一条の規定により算定した当該共同相続人の相続分を乗じた額（標準的な当面の必要生計費、平均的な葬式の費用の額その他の事情を勘案して預貯金債権の債務者ごとに法務省令で定める額を限度とする。）については、単独でその権利を行使することができる。<br>この場合において、当該権利の行使をした預貯金債権については、当該共同相続人が遺産の一部の分割によりこれを取得したものとみなす。</blockquote>
+      <p><strong><mark class="kw">民法902条の2</mark></strong>は、指定相続分がある場合でも、相続債権者は原則として法定相続分に応じて各共同相続人へ請求できるとする。債権者は被相続人の遺言内容や相続人間の内部事情を把握しにくいため、法定相続分という外部から明確な基準で保護される。ただし、債権者が指定相続分に応じた債務承継を承認した場合は別である。<strong><mark class="kw">民法909条の2</mark></strong>は、預貯金が遺産分割対象となったことにより、葬儀費用や当面の生活費を支出しにくくなる不都合に対応する規定である。共同相続人は一定額に限り、遺産分割前でも単独で払戻しを受けられる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第一小法廷 昭和29年4月8日 昭和27年(オ)第1119号 損害賠償請求事件 民集8巻4号819頁</p>
+      <h3 class="case-card__title">可分債権の共同相続と当然分割</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法898条</span>
+        <span class="badge badge--law">民法899条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人の死亡により相続人が数人となり、相続財産中に金銭その他の可分債権が含まれていた。共同相続人の一部が、被相続人に属していた金銭債権について、自分の相続分に応じた権利を取得したとして請求したため、可分債権が遺産共有のまま全員で行使すべきものか、それとも相続開始と同時に各相続人へ分割帰属するかが争われた。金銭債権は数量的に分けられるため、相続財産全体の共有構造との関係が問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、相続人が数人ある場合に、相続財産中に金銭その他の可分債権があるときは、その債権は法律上当然に分割され、各共同相続人が相続分に応じて権利を承継すると判示した。判断の基礎には、可分債権は給付内容を数量的に分けても債権の性質を失わず、各相続人の持分割合に応じた権利行使を認めても債務者に過度な不利益を与えないという理解がある。もっとも、この法理は後に預貯金債権について修正され、預貯金は当然分割されず遺産分割対象になるとされたため、現行学習では射程を限定して読む必要がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法898条</mark></strong>の遺産共有と<strong><mark class="kw">民法899条</mark></strong>の相続分承継の関係を理解する基本判例である。試験では「金銭その他の可分債権は常に遺産分割が成立するまで一切行使できない」とする肢や、「可分債権も不可分債権と同じく共同相続人全員でのみ行使できる」とする肢が誤りになりやすい。ただし、預貯金債権については平成28年大法廷決定で別扱いになっているため、本判例を預貯金にそのまま適用しないことが重要である。関連条文は<strong><mark class="kw">民法898条</mark></strong>、<strong><mark class="kw">民法899条</mark></strong>であり、後掲の平成28年大法廷決定と対比して押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第三小法廷 昭和40年2月2日 昭和36年(オ)第1028号 民集19巻1号1頁</p>
+      <h3 class="case-card__title">受取人指定のある生命保険金請求権と相続財産性</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">相続財産の範囲</span>
+        <span class="badge badge--law">固有権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人が生命保険契約を締結し、死亡保険金の受取人として特定の者を指定していた。被保険者である被相続人の死亡により保険金請求権が発生したが、その請求権が被相続人の相続財産に含まれて共同相続人が相続分に応じて取得するのか、それとも指定された保険金受取人が固有の権利として取得するのかが争われた。生命保険金は死亡という相続開始原因と同時に問題になるため、相続財産との混同が生じやすい。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、保険金受取人が指定されている生命保険契約では、保険金請求権は保険金受取人が固有の権利として取得するものと解した。被相続人が生前に有していた財産が死亡により相続人へ移転するのではなく、保険契約の効果として、保険事故発生時に受取人に直接請求権が発生する構造である。したがって、受取人指定のある生命保険金請求権は、原則として被相続人の<strong><mark class="kw">相続財産</mark></strong>に属せず、遺産分割の対象にもならない。もっとも、相続税法上の扱いや特別受益との関係は別問題として整理する必要がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">相続財産</mark></strong>の範囲を判断するうえで最重要である。試験では「死亡保険金は被相続人の死亡によって発生するから、当然に相続財産となり法定相続分で分割される」という肢が典型的な誤りになる。正しくは、受取人指定の有無と、誰がどの契約上の地位に基づいて請求権を取得するかを見る。相続法上の遺産性、税法上のみなし相続財産、共同相続人間の公平調整を混同しないことが、誤答回避のポイントである。関連条文は<strong><mark class="kw">民法896条</mark></strong>であり、「被相続人の財産に属した」かどうかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第二小法廷 昭和34年6月19日 昭和32年(オ)第1347号 民集13巻6号757頁</p>
+      <h3 class="case-card__title">連帯債務者死亡時の相続債務の分割承継</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">相続債務</span>
+        <span class="badge badge--law">民法902条の2</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>連帯債務者の一人が死亡し、その相続人が複数存在した。債権者は、死亡した連帯債務者の相続人に対し、債務の履行を求めた。争点は、連帯債務という強い債務関係が相続によりどのように承継されるかであった。相続人が複数いる場合、被相続人の債務全体を共同相続人全員が不可分的に負担するのか、それとも各相続人が相続分に応じて分割された部分だけを承継し、その範囲で連帯債務者となるのかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債務者が死亡し相続人が数人ある場合、被相続人の金銭債務その他の可分債務は法律上当然に分割され、各共同相続人が相続分に応じてこれを承継するとした。そのうえで、連帯債務者の一人が死亡した場合でも、相続人らは被相続人の債務の分割されたものを承継し、各自その承継した範囲において、本来の債務者とともに連帯債務者となると判示した。つまり、相続人全員が被相続人の債務全額を当然に負うわけではなく、相続分に応じた範囲で債務を承継する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、相続がプラス財産だけでなく<strong><mark class="kw">相続債務</mark></strong>にも及ぶこと、しかし可分債務は各共同相続人に相続分で分割承継されることを示す基本判例である。試験では、共同相続人間の遺産分割協議で「長男が債務を全部負担する」と決めた場合に、債権者が承認していないのに他の相続人が債権者への責任を免れるとする肢が誤りになりやすい。現行法では<strong><mark class="kw">民法902条の2</mark></strong>が、指定相続分がある場合でも債権者が法定相続分に応じて請求できることを明文化しており、本判例法理と債権者保護の考え方が接続している。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所大法廷 平成28年12月19日 平成27年(許)第11号 遺産分割審判に対する抗告棄却決定に対する許可抗告事件 民集70巻8号2121頁</p>
+      <h3 class="case-card__title">預貯金債権の遺産分割対象性</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">預貯金債権</span>
+        <span class="badge badge--law">民法909条の2</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被相続人の遺産の中に普通預金、通常貯金、定期貯金などの預貯金債権が含まれていた。共同相続人の一部には生前贈与などの特別受益があり、預貯金が相続開始と同時に法定相続分で当然分割されると、遺産分割で実質的公平を調整する余地が狭くなる状況であった。争点は、従来の可分債権当然分割の考え方を預貯金債権にもそのまま適用し、各相続人が遺産分割を待たずに法定相続分相当額を取得するのか、それとも預貯金を遺産分割の対象とするのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、共同相続された普通預金債権、通常貯金債権、定期貯金債権は、いずれも相続開始と同時に当然に相続分に応じて分割されることはなく、遺産分割の対象となると判断した。預貯金は現金に近い性質を持ち、遺産分割における調整手段として重要である。また、預貯金契約上の地位や口座管理の仕組みを考えると、各共同相続人が当然に確定額の債権を単独取得するとはいえない。これにより、従来の可分債権当然分割の判例法理は、預貯金債権について大きく修正された。</p>
+      <h4>試験上の意義</h4>
+      <p>本決定は、現行相続法の出題で最も重要な判例の一つである。試験では「預貯金債権は金銭債権で可分だから、各共同相続人が相続開始と同時に当然に法定相続分を単独取得し、遺産分割の対象にならない」という肢が誤りになる。もっとも、預貯金を遺産分割対象にすると葬儀費用や当面の生活費に対応しにくくなるため、改正法は<strong><mark class="kw">民法909条の2</mark></strong>で遺産分割前の一部払戻し制度を設けた。昭和29年判例との違い、平成28年決定による判例変更、改正後の条文対応を三点セットで押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">民法896条</mark></strong>は、プラス財産だけでなくマイナス財産も含む包括承継を定める。</li>
+        <li><strong><mark class="kw">一身専属権</mark></strong>は相続されない。財産的価値の有無だけで判断しない。</li>
+        <li><strong><mark class="kw">祭祀財産</mark></strong>は通常の相続分ではなく、指定、慣習、家庭裁判所の順で祭祀主宰者が承継する。</li>
+        <li><strong><mark class="kw">遺産共有</mark></strong>は遺産分割前の状態であり、相続人が数人あるときの基本構造である。</li>
+        <li><strong><mark class="kw">預貯金債権</mark></strong>は平成28年大法廷決定により、当然分割ではなく遺産分割対象として扱う。</li>
+        <li><strong><mark class="kw">相続債務</mark></strong>は、債権者との関係では法定相続分に応じた請求が基本であり、内部合意だけでは債権者を拘束しない。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例として、「相続人は被相続人の権利だけを承継し、債務は承継しない」がある。これは<strong><mark class="kw">民法896条</mark></strong>の「一切の権利義務」に反する。正しくは、債務も承継され、相続放棄や限定承認をしない限り負担の問題が生じる。</p>
+      <p>次に、「受取人指定のある生命保険金は、常に相続財産として法定相続分で分割される」という肢は誤りである。最高裁昭和40年2月2日判決の考え方では、保険金受取人が固有の権利として取得する。相続税や特別受益の問題と、相続財産性を混同しない。</p>
+      <p>また、「共同相続された預貯金債権は、相続開始と同時に当然に各共同相続人へ法定相続分で分割される」という肢も現行理解では誤りである。最高裁平成28年12月19日大法廷決定以降、預貯金債権は遺産分割対象となる。ただし、<strong><mark class="kw">民法909条の2</mark></strong>により一定額の単独払戻しが認められる点まで押さえる。</p>
+      <p>最後に、「遺産分割協議で相続債務を一人が負担すると決めれば、債権者は他の相続人に請求できない」という肢は誤りである。債権者が承認しない限り、債権者は法定相続分に応じて各共同相続人へ請求できる。内部関係と外部関係を分けることが正答への鍵である。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">解答アプローチ</span>
+    </div>
+    <div class="box__bd">
+      <p>相続の効力問題は、第一に「その権利義務は被相続人の財産に属したか」、第二に「一身専属又は特則で除外されないか」、第三に「共同相続では共有・当然分割・固有取得のどれか」、第四に「第三者や債権者に対抗するための要件があるか」の順で解く。特に<strong><mark class="kw">民法899条の2</mark></strong>、<strong><mark class="kw">民法902条の2</mark></strong>、<strong><mark class="kw">民法909条の2</mark></strong>は、改正後の現行ルールとして問われやすい。古い判例の結論をそのまま覚えるのではなく、改正条文で修正された部分を見分ける。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p>相続の効力は、近年の相続法改正と判例変更の影響を強く受ける単元である。平成28年大法廷決定により、預貯金債権は当然分割ではなく遺産分割対象とされた。これにより、特別受益や寄与分を踏まえた実質的公平を図りやすくなった一方、遺産分割前に葬儀費用や生活費を引き出しにくいという実務上の問題が生じた。そこで改正法は、<strong><mark class="kw">民法909条の2</mark></strong>により、一定額の預貯金を各共同相続人が単独で行使できる仕組みを設けた。</p>
+  <p>また、令和元年施行の相続法改正では、<strong><mark class="kw">民法899条の2</mark></strong>が新設され、法定相続分を超える権利取得について第三者対抗要件が明確化された。改正前の判例では、相続による承継の特殊性から登記なく第三者へ対抗できるとされた場面があったが、現行法では、法定相続分を超える部分について登記、登録、通知などを確認する必要がある。行政書士試験では、改正前判例の知識を問うだけでなく、現行条文で結論がどう変わるかを問う出題が想定される。</p>
+  <p>学習上は、相続財産の範囲を一覧で暗記するだけでなく、分類理由を説明できるようにすることが大切である。受取人指定の生命保険金は、被相続人が死亡時に有していた財産が相続人へ移るのではなく、保険契約により受取人に直接発生する権利だから相続財産ではない。祭祀財産は、祖先祭祀を継続するため通常の財産分割と異なる。相続債務は、債権者保護のため内部合意と外部責任を分ける。このように「なぜその結論になるか」まで押さえると、未知の選択肢にも対応しやすい。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">学習整理法</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元は、相続人・相続分、遺産分割、遺言、遺留分の各単元と接続する。まず<strong><mark class="kw">民法896条</mark></strong>で相続されるかを決め、次に<strong><mark class="kw">民法898条</mark></strong>で共同相続財産の状態を押さえ、最後に<strong><mark class="kw">民法899条の2</mark></strong>、<strong><mark class="kw">民法902条の2</mark></strong>、<strong><mark class="kw">民法909条の2</mark></strong>で外部関係と改正後の特則を確認する流れで整理する。判例は、昭和29年可分債権、昭和40年生命保険金、昭和34年相続債務、平成28年預貯金の四つを比較し、どの財産類型にどの結論が対応するかを表にして復習するとよい。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>和解契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">和解契約</h1>
+  <p class="page-title-block__sub">互譲によって争いを終わらせる契約を、成立要件・確定効・錯誤・示談の射程から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法695条</span>
+    <span class="badge badge--info">民法696条</span>
+    <span class="badge badge--info">民法95条</span>
+    <span class="badge badge--info">民法709条</span>
+    <span class="badge badge--info">民法722条</span>
+    <span class="badge badge--info">示談</span>
+    <span class="badge badge--info">確定効</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">和解契約</mark></strong>は、当事者が互いに譲歩して、当事者間に存在する争いをやめることを約する契約である。売買や賃貸借のように新しい取引関係を作る契約ではなく、すでに発生している紛争を終局的に処理するための契約である。典型例は、貸金の有無や額に争いがあるときに一部支払で決着する、交通事故の損害賠償について示談する、契約不適合をめぐる代金減額と追加請求放棄を合意する、といった場面である。</p>
+
+  <p>行政書士試験で重要なのは、<strong><mark class="kw">和解契約</mark></strong>が単なる「仲直り」ではなく、権利関係を確定させる契約である点である。根拠条文は<strong><mark class="kw">民法695条</mark></strong>と<strong><mark class="kw">民法696条</mark></strong>である。<strong><mark class="kw">民法695条</mark></strong>は成立要件を示し、<strong><mark class="kw">民法696条</mark></strong>は、後から真実の権利関係が違っていたと分かっても、和解で決めた権利関係を維持する効力を定める。この効力は一般に<strong><mark class="kw">確定効</mark></strong>と呼ばれる。</p>
+
+  <p>もっとも、<strong><mark class="kw">確定効</mark></strong>は万能ではない。和解でまさに争った事項についての誤りは、原則として蒸し返せない。しかし、和解の前提として当然共有されていた事実に錯誤がある場合や、示談当時には予想できなかった後遺症が後から判明した場合には、和解の効力が及ばないことがある。この単元は、条文自体は二条しかないが、<strong><mark class="kw">錯誤</mark></strong>、<strong><mark class="kw">契約自由の原則</mark></strong>、<strong><mark class="kw">公序良俗</mark></strong>、<strong><mark class="kw">不法行為</mark></strong>、<strong><mark class="kw">訴訟上の和解</mark></strong>と接続するため、判例の射程を丁寧に押さえる必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る和解契約</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに百万円を貸したと主張し、Bが五十万円しか借りていないと争っている。両者が、Bは七十万円を支払い、Aは残額請求をしないと合意した場合、Aは三十万円を譲歩し、Bは二十万円を譲歩している。この互譲によって貸金額の争いを終わらせるため、<strong><mark class="kw">和解契約</mark></strong>が成立する。後日、実際の貸付額が百万円であったことを示す資料が見つかっても、原則としてAは「やはり百万円だった」と蒸し返せない。これが<strong><mark class="kw">民法696条</mark></strong>の発想である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">和解契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">和解契約</mark></strong>とは、当事者が互いに譲歩して、その間に存する争いをやめることを約する契約である。根拠は<strong><mark class="kw">民法695条</mark></strong>である。成立には、当事者間に法律関係・事実関係をめぐる争いがあること、双方に互譲があること、争いを終局的にやめる合意があることが必要である。互譲とは、双方が自分の主張を一定程度控えることであり、一方だけが全面的に請求を放棄する場合は、贈与、免除、債務承認など別の法律構成を考える。制度趣旨は、紛争を当事者の自主的判断で解決させ、裁判による確定を待たなくても法律関係を安定させる点にある。<strong><mark class="kw">和解契約</mark></strong>は有償・双務・諾成契約と整理されるが、売買のような対価交換ではなく、互いの譲歩が対価的関係に立つ。試験では、「争いがなくても将来の取引条件を合意すれば民法695条の和解である」とする肢や、「一方のみが譲歩すれば足りる」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">互譲</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">互譲</mark></strong>とは、紛争当事者の双方が、それぞれ自己の主張や利益を一部譲ることである。たとえば、請求者が請求額を下げ、相手方が支払義務の一部を認める場合が典型である。互譲が要求されるのは、和解が「どちらが正しいか」を最後まで判断する制度ではなく、双方が不確実性を引き受けて紛争を終わらせる制度だからである。一方の全面勝訴と同じ内容の合意でも、その合意に相手方の譲歩が含まれなければ、<strong><mark class="kw">民法695条</mark></strong>の和解ではなく、債務承認、弁済契約、免除、贈与などとして評価される。もっとも、譲歩は金額だけでなく、支払時期、分割払い、担保設定、謝罪、将来請求の放棄などにも現れる。試験では、表面上は「和解書」と題されていても、実質的に双方の譲歩があるかを読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">確定効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">確定効</mark></strong>とは、和解によって争いの対象となった権利関係が確定され、後から真実が異なると分かっても、原則として和解内容どおりに扱う効力である。根拠は<strong><mark class="kw">民法696条</mark></strong>である。条文は、和解によって一方が権利を有すると認められた場合に、実はその者が従来権利を有していなかった確証が得られても、その権利は和解によって移転したものとすると定める。また、相手方が権利を有しないと認められた場合に、実は相手方が権利を有していた確証が得られても、その権利は和解によって消滅したものとする。これは、和解後に紛争を蒸し返すと、互譲して終局解決を図った意味がなくなるためである。試験では、「和解後に証拠が見つかれば常に元の権利関係へ戻る」とする肢が誤りである。他方で、和解の対象外だった事項や、和解の当然の前提に関する錯誤には確定効が及ばないことがあり、この限界が判例問題の中心になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">示談</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">示談</mark></strong>とは、実務上、裁判外で当事者が紛争を解決する合意を指す語であり、法的性質は多くの場合<strong><mark class="kw">和解契約</mark></strong>である。交通事故、近隣紛争、契約不履行、労務トラブルなどで広く用いられる。示談書には、支払金額、支払時期、清算条項、秘密保持、謝罪、今後請求しない旨などが記載される。<strong><mark class="kw">示談</mark></strong>の重要性は、裁判を経ずに紛争を終わらせる迅速性にあるが、安易に「一切請求しない」と合意すると、後日追加請求が制限される危険がある。もっとも、最高裁昭和43年3月15日判決は、全損害を正確に把握し難い状況で早急に少額の賠償金により示談した場合、示談当時予想できなかった後遺症等については後日請求できるとした。試験では、「示談書に清算条項があれば、どのような不測の損害も常に請求できない」とする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">訴訟上の和解</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">訴訟上の和解</mark></strong>とは、訴訟係属中に、当事者が裁判所の期日等で互いに譲歩し、訴訟を終了させる合意である。実体法上は紛争解決の合意である点で<strong><mark class="kw">和解契約</mark></strong>に近いが、手続法上は和解調書が作成されると確定判決と同一の効力を持つ点が重要である。したがって、訴訟上の和解は、権利義務を確定する実体法上の効果と、訴訟を終了させ強制執行の基礎となる手続法上の効果を併せ持つ。行政書士試験の民法では、手続法の細部よりも、和解内容が錯誤で争われる場合に、和解の対象となった争点か、前提事実かを区別する視点が重要である。試験では、「訴訟上の和解は裁判所で行われるから契約的性質を一切持たない」とする肢や、「裁判外の和解と完全に同じ効力しかない」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">錯誤と和解</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">錯誤と和解</mark></strong>の関係では、何について勘違いしたのかが決定的に重要である。和解でまさに争い、互譲によって決めた事項についての錯誤であれば、原則として<strong><mark class="kw">民法696条</mark></strong>の<strong><mark class="kw">確定効</mark></strong>により蒸し返しは許されない。たとえば、貸金額が五十万円か百万円かを争い、七十万円で合意した後に、本当は百万円だったと分かっても、その争点自体は和解対象である。他方で、当事者双方が争いの前提として当然視していた事実が誤っていた場合には、和解の基礎が崩れるため、錯誤取消しが問題になる。最高裁昭和33年6月14日判決は、仮差押えの目的物であるジャムが一定の品質を有することを前提に和解したところ、実際には粗悪品であった事案で、和解が要素の錯誤により無効とされた。現行法では<strong><mark class="kw">民法95条</mark></strong>により錯誤取消しとして処理される。試験では、「和解では錯誤主張が一切できない」とする肢も、「錯誤があれば常に和解を取り消せる」とする肢も、どちらも危険である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">清算条項</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">清算条項</mark></strong>とは、和解書や示談書で「本件に関し、当事者間に何らの債権債務がないことを相互に確認する」といった形で、残存請求を排除する条項である。紛争を終局的に終わらせるためには重要な条項であり、<strong><mark class="kw">和解契約</mark></strong>の実務では頻繁に用いられる。しかし、清算条項の文言が広くても、当事者が実際に何を対象として清算したのか、当時予想できた損害か、合意の基礎に含まれていたかを解釈する必要がある。交通事故の早期示談のように、治療経過が不明で全損害を正確に把握し難い場合、後日判明した重大な後遺症まで当然に放棄したとは解されないことがある。試験では、清算条項があるかどうかだけでなく、その対象範囲、金額の程度、示談時期、損害把握の可能性を読み取る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 720" role="img" aria-label="和解契約の成立から確定効までの構造">
+      <defs>
+        <marker id="arr33a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr33a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr33a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="520" y1="112" x2="520" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="165" y1="150" x2="875" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="165" y1="150" x2="165" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33a-blue)"/>
+      <line x1="520" y1="150" x2="520" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33a-blue)"/>
+      <line x1="875" y1="150" x2="875" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33a-blue)"/>
+      <rect x="445" y="126" width="150" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="520" y="144" text-anchor="middle" font-size="13" fill="#1d4ed8">成立要件</text>
+
+      <line x1="165" y1="320" x2="165" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33a-orange)"/>
+      <line x1="520" y1="320" x2="520" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33a-orange)"/>
+      <line x1="875" y1="320" x2="875" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33a-orange)"/>
+      <rect x="95" y="350" width="140" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="165" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">紛争終局化</text>
+      <rect x="442" y="350" width="156" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="520" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">権利関係の確定</text>
+      <rect x="805" y="350" width="140" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="875" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">蒸し返し防止</text>
+
+      <line x1="520" y1="492" x2="520" y2="558" stroke="#e11d48" stroke-width="2" marker-end="url(#arr33a-red)"/>
+      <rect x="418" y="520" width="204" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="520" y="537" text-anchor="middle" font-size="13" fill="#9f1239">例外は対象範囲で判断</text>
+
+      <rect x="350" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="69" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">和解契約</text>
+      <text x="520" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">民法695条・互譲による紛争終了</text>
+
+      <rect x="25" y="226" width="280" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="165" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">争いの存在</text>
+      <text x="165" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">権利・事実・金額などに対立</text>
+      <text x="165" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">将来の取引条件だけでは不足</text>
+
+      <rect x="380" y="226" width="280" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">互譲</text>
+      <text x="520" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">双方が主張・利益を一部譲る</text>
+      <text x="520" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">金額・期限・放棄でも成立</text>
+
+      <rect x="735" y="226" width="280" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="875" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">争いをやめる合意</text>
+      <text x="875" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">紛争を終局的に処理</text>
+      <text x="875" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">清算条項で範囲を明確化</text>
+
+      <rect x="25" y="398" width="280" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="165" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">契約上の拘束力</text>
+      <text x="165" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">合意内容に従って履行義務</text>
+      <text x="165" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">不履行なら債務不履行問題</text>
+
+      <rect x="380" y="398" width="280" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="520" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">確定効</text>
+      <text x="520" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法696条</text>
+      <text x="520" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">後の確証でも原則蒸し返せない</text>
+
+      <rect x="735" y="398" width="280" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="875" y="430" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">訴訟上の和解</text>
+      <text x="875" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">和解調書に確定判決同一効</text>
+      <text x="875" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">手続終了・執行力と接続</text>
+
+      <rect x="260" y="566" width="520" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="520" y="600" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">限界</text>
+      <text x="520" y="624" text-anchor="middle" font-size="12" fill="#9f1239">和解対象外の事項・当然の前提事実・予想不能な後発損害</text>
+      <text x="520" y="644" text-anchor="middle" font-size="12" fill="#9f1239">錯誤取消し又は効力範囲の限定が問題になる</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">和解契約</mark></strong>を成立要件と効果に分けて整理している。上段の三要素である争いの存在、<strong><mark class="kw">互譲</mark></strong>、争いをやめる合意がそろうと、<strong><mark class="kw">民法695条</mark></strong>の和解が成立する。中段では、成立した和解が契約として当事者を拘束し、さらに<strong><mark class="kw">民法696条</mark></strong>によって権利関係を確定させることを示している。下段の限界は、和解の効力を判断するときに必ず確認すべき部分であり、和解の対象外だった事項や予想不能な後発損害まで一律に閉じ込めるわけではない。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 760" role="img" aria-label="和解後の錯誤と追加請求の判断構造">
+      <defs>
+        <marker id="arr33b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr33b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr33b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="520" y1="116" x2="520" y2="154" stroke="#2563eb" stroke-width="2"/>
+      <line x1="210" y1="154" x2="830" y2="154" stroke="#2563eb" stroke-width="2"/>
+      <line x1="210" y1="154" x2="210" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33b-blue)"/>
+      <line x1="520" y1="154" x2="520" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33b-blue)"/>
+      <line x1="830" y1="154" x2="830" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr33b-blue)"/>
+      <rect x="440" y="130" width="160" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="520" y="148" text-anchor="middle" font-size="13" fill="#1d4ed8">何を誤ったか</text>
+
+      <line x1="210" y1="324" x2="210" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33b-orange)"/>
+      <line x1="520" y1="324" x2="520" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33b-orange)"/>
+      <line x1="830" y1="324" x2="830" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr33b-orange)"/>
+      <rect x="145" y="354" width="130" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="210" y="371" text-anchor="middle" font-size="13" fill="#7c2d12">蒸し返し不可</text>
+      <rect x="445" y="354" width="150" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="520" y="371" text-anchor="middle" font-size="13" fill="#7c2d12">錯誤取消し余地</text>
+      <rect x="746" y="354" width="168" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="830" y="371" text-anchor="middle" font-size="13" fill="#7c2d12">効力範囲を限定</text>
+
+      <line x1="520" y1="494" x2="520" y2="562" stroke="#e11d48" stroke-width="2" marker-end="url(#arr33b-red)"/>
+      <rect x="424" y="526" width="192" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="520" y="543" text-anchor="middle" font-size="13" fill="#9f1239">答案では事実を拾う</text>
+
+      <rect x="330" y="42" width="380" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">和解後に新事実が判明</text>
+      <text x="520" y="98" text-anchor="middle" font-size="12" fill="#1e3a8a">錯誤・追加請求・清算条項の射程を判断</text>
+
+      <rect x="60" y="230" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="210" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">争いの目的そのもの</text>
+      <text x="210" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">権利の有無・金額・帰属</text>
+      <text x="210" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法696条の中心領域</text>
+
+      <rect x="370" y="230" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">当然の前提事実</text>
+      <text x="520" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">品質・存在・対象物の同一性</text>
+      <text x="520" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">和解の基礎が崩れるか</text>
+
+      <rect x="680" y="230" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="830" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">予想不能な後発損害</text>
+      <text x="830" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">治療中の早期示談など</text>
+      <text x="830" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">清算条項の合理的解釈</text>
+
+      <rect x="60" y="400" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="210" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">確定効が及ぶ</text>
+      <text x="210" y="456" text-anchor="middle" font-size="12" fill="#7c2d12">後の確証で元に戻さない</text>
+      <text x="210" y="476" text-anchor="middle" font-size="12" fill="#7c2d12">和解の安定性を優先</text>
+
+      <rect x="370" y="400" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="520" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">昭和33年ジャム事件</text>
+      <text x="520" y="456" text-anchor="middle" font-size="12" fill="#7c2d12">品質を当然の前提として和解</text>
+      <text x="520" y="476" text-anchor="middle" font-size="12" fill="#7c2d12">粗悪品なら錯誤が問題</text>
+
+      <rect x="680" y="400" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="830" y="432" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">昭和43年交通事故示談</text>
+      <text x="830" y="456" text-anchor="middle" font-size="12" fill="#7c2d12">早急な少額示談</text>
+      <text x="830" y="476" text-anchor="middle" font-size="12" fill="#7c2d12">予想外の後遺症は追加請求可</text>
+
+      <rect x="260" y="570" width="520" height="106" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="520" y="604" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">判断要素</text>
+      <text x="520" y="628" text-anchor="middle" font-size="12" fill="#9f1239">和解書の文言・対象紛争・金額・時期・情報格差・予測可能性</text>
+      <text x="520" y="648" text-anchor="middle" font-size="12" fill="#9f1239">試験では「対象事項」か「前提事実」かを最初に分類する</text>
+    </svg>
+  </div>
+
+  <p>この図は、和解後に新しい事実が判明した場合の判断構造を示す。左列のように、和解でまさに争った権利の有無や金額について後から証拠が出ても、原則として<strong><mark class="kw">確定効</mark></strong>が働く。中央列のように、当事者双方が当然の前提としていた対象物の品質や存在に重大な誤りがある場合は、<strong><mark class="kw">錯誤</mark></strong>の問題として扱われる余地がある。右列のように、示談当時には全損害を把握できず、後から予想できない後遺症が判明した場合は、清算条項の効力範囲を限定する方向で検討する。問題文では、和解時点で何が争点化され、何が前提にすぎず、何が予想不能だったのかを区別する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>和解・示談・訴訟上の和解の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">和解契約</th>
+        <th class="col--b">示談</th>
+        <th class="col--c">訴訟上の和解</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">基本性質</th>
+        <td class="col--a"><strong class="em-a">民法上の典型契約</strong>。互譲により争いをやめる。</td>
+        <td class="col--b"><strong class="em-b">裁判外の紛争解決合意</strong>。多くは和解契約に当たる。</td>
+        <td class="col--c"><strong class="em-c">訴訟手続内の合意</strong>。実体法上の合意と手続法上の効力を持つ。</td>
+      </tr>
+      <tr>
+        <th class="col--label">成立場所</th>
+        <td class="col--a">裁判内外を問わず、<strong><mark class="kw">民法695条</mark></strong>の要件で成立する。</td>
+        <td class="col--b">通常は裁判外で、当事者間又は代理人間で成立する。</td>
+        <td class="col--c">訴訟係属中に、裁判所の関与のもとで成立する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">互譲の要否</th>
+        <td class="col--a">必要。双方が何らかの譲歩をする。</td>
+        <td class="col--b">和解契約として構成するには必要。実質を確認する。</td>
+        <td class="col--c">通常は必要。訴訟上の請求・抗弁を調整する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">主な効力</th>
+        <td class="col--a">合意内容に従う履行義務と<strong><mark class="kw">確定効</mark></strong>。</td>
+        <td class="col--b">支払義務、請求放棄、清算条項など。射程の解釈が重要。</td>
+        <td class="col--c">訴訟終了、和解調書による確定判決同一効、執行力。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験での誤答</th>
+        <td class="col--a">「後で真実が分かれば常に元に戻る」は誤り。</td>
+        <td class="col--b">「清算条項があれば予想不能損害も常に放棄」は誤り。</td>
+        <td class="col--c">「契約的性質がない」「裁判外和解と完全に同じ」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的な判断基準は、まず合意がどこでされたかを見ることである。裁判外の交通事故処理や契約紛争処理なら<strong><mark class="kw">示談</mark></strong>と呼ばれることが多いが、実質的には<strong><mark class="kw">和解契約</mark></strong>である。訴訟係属中に裁判所で調書化されれば、<strong><mark class="kw">訴訟上の和解</mark></strong>として手続法上の効力が加わる。いずれの場合も、双方の譲歩、対象となった紛争、清算条項の射程を確認する。</p>
+
+  <h3>確定効が及ぶ場合・及ばない場合の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">確定効が及ぶ典型</th>
+        <th class="col--b">錯誤取消しが問題になる典型</th>
+        <th class="col--c">効力範囲が限定される典型</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">問題局面</th>
+        <td class="col--a">和解で争った権利の有無・額・帰属について後から証拠が出た。</td>
+        <td class="col--b">和解の当然の前提とされた事実が、実は誤っていた。</td>
+        <td class="col--c">示談時には全損害を把握できず、後から予想外の損害が判明した。</td>
+      </tr>
+      <tr>
+        <th class="col--label">判断の中心</th>
+        <td class="col--a"><strong class="em-a">争点そのもの</strong>かどうか。</td>
+        <td class="col--b"><strong class="em-b">合意の基礎</strong>が崩れるかどうか。</td>
+        <td class="col--c"><strong class="em-c">清算条項の合理的射程</strong>がどこまでか。</td>
+      </tr>
+      <tr>
+        <th class="col--label">条文・判例</th>
+        <td class="col--a"><strong><mark class="kw">民法696条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法95条</mark></strong>、最高裁昭和33年6月14日判決。</td>
+        <td class="col--c"><strong><mark class="kw">民法695条</mark></strong>、<strong><mark class="kw">民法696条</mark></strong>、最高裁昭和43年3月15日判決。</td>
+      </tr>
+      <tr>
+        <th class="col--label">効果</th>
+        <td class="col--a">和解内容どおりに権利移転又は消滅を認め、蒸し返しを許さない。</td>
+        <td class="col--b">要件を満たせば錯誤取消しにより和解の効力を否定し得る。</td>
+        <td class="col--c">示談当時予想していた損害のみを放棄対象と解し、追加請求を認め得る。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「真実と違えば常に和解は無効」は誤り。</td>
+        <td class="col--b">「和解では錯誤主張が一切できない」は誤り。</td>
+        <td class="col--c">「清算条項の文言だけで予想不能損害も必ず放棄」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>区別の実践的なポイントは、問題文の「後から分かった事実」が、和解で争った対象そのものなのか、和解の土台だった前提事実なのか、和解時点では予測困難だった後発事情なのかを分類することである。貸金額や所有権の帰属を争って譲歩したなら、後の証拠は原則として<strong><mark class="kw">確定効</mark></strong>に吸収される。対象物の品質や存在を双方が当然の前提としていたなら、<strong><mark class="kw">錯誤</mark></strong>の余地がある。治療中の早期示談で後遺症が後から判明したなら、清算条項の射程を限定するかを検討する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Related Articles</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法695条 和解</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第六百九十五条　和解は、当事者が互いに譲歩をしてその間に存する争いをやめることを約することによって、その効力を生ずる。
+      </blockquote>
+      <p><strong><mark class="kw">民法695条</mark></strong>は、<strong><mark class="kw">和解契約</mark></strong>の成立要件を定める。第一に、当事者間に「争い」が必要である。争いは、訴訟になっている必要はなく、権利の有無、金額、履行時期、損害範囲、対象物の品質などについて対立があれば足りる。第二に、「互いに譲歩」が必要である。一方の全面的な請求放棄や、相手方の全面的な債務承認だけでは、和解ではなく別の契約類型又は単独行為として評価されることがある。第三に、「争いをやめることを約する」必要があるため、暫定的な交渉メモや将来協議の約束だけでは足りない。違反時の効果は、通常の契約と同じく履行請求、損害賠償、解除の問題として処理される。<strong><mark class="kw">民法696条</mark></strong>との関係では、695条で成立した和解に、争点を確定する効果が付与される。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法696条 和解の効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第六百九十六条　当事者の一方が和解によって争いの目的である権利を有するものと認められ、又は相手方がこれを有しないものと認められた場合において、その当事者の一方が従来その権利を有していなかった旨の確証又は相手方がこれを有していた旨の確証が得られたときは、その権利は、和解によってその当事者の一方に移転し、又は消滅したものとする。
+      </blockquote>
+      <p><strong><mark class="kw">民法696条</mark></strong>は、和解によって確定された権利関係を、後から得られた確証によって覆さないことを定める。前段の「当事者の一方が権利を有するものと認められた場合」は、和解によって権利帰属を肯定した場面である。後から、その当事者が従来権利を有していなかったと分かっても、権利は和解によって移転したものと扱う。後段の「相手方がこれを有しないものと認められた場合」は、相手方の権利を否定した場面である。後から相手方に権利があったと分かっても、権利は和解によって消滅したものと扱う。条文の趣旨は、和解後の安定性と紛争の終局解決である。ただし、条文が守るのは、和解で争いの目的となった権利関係である。和解の対象外の事項、当然の前提事実、予想できない後発損害まで無制限に封じるものではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法95条 錯誤</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法95条</mark></strong>は、意思表示に法律行為の目的及び取引上の社会通念に照らして重要な錯誤がある場合に、一定の要件のもとで取り消すことができるとする規定である。和解との関係では、錯誤の対象が和解で争った事項そのものか、和解の当然の前提事実かが重要である。争点そのものなら<strong><mark class="kw">民法696条</mark></strong>の<strong><mark class="kw">確定効</mark></strong>が優先しやすい。他方で、対象物の存在や品質のように、当事者双方が争いの前提として疑っていなかった事項に錯誤がある場合は、和解の基礎が崩れるため錯誤取消しが問題になる。現行法では錯誤の効果は取消しであり、旧法下の判例で「錯誤無効」と表現されたものは、現行法では取消しとして読み替える必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法709条・722条 不法行為損害賠償</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法709条</mark></strong>は、不法行為による損害賠償責任の基本規定である。交通事故の示談では、被害者の損害賠償請求権をどの範囲で清算したかが問題になる。<strong><mark class="kw">民法722条</mark></strong>は、不法行為による損害賠償の方法や過失相殺を定める。示談では、過失割合、治療費、休業損害、慰謝料、後遺障害の有無などが交渉対象になる。最高裁昭和43年3月15日判決は、全損害を正確に把握し難い状況で早急に少額の賠償金により示談した場合、示談当時予想していた損害についてのみ放棄したと解し、予想できなかった後遺症等について後日請求を認めた。したがって、<strong><mark class="kw">清算条項</mark></strong>の文言だけでなく、示談時点の損害把握可能性を読むことが必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法90条 公序良俗</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法90条</mark></strong>は、公の秩序又は善良の風俗に反する法律行為を無効とする。和解との関係では、和解の内容や締結経緯が著しく不当である場合に問題になる。最高裁平成29年7月24日判決は、認定司法書士が弁護士法72条に違反して裁判外の和解契約を締結した場合であっても、その和解契約は、内容及び締結に至る経緯等に照らして<strong><mark class="kw">公序良俗</mark></strong>違反の性質を帯びる特段の事情がない限り、当然には無効とならないとした。試験では、資格者の権限違反と和解契約の効力を直結させず、契約内容・締結過程・公序良俗違反の有無を分けて判断する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Leading Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和33年6月14日 昭和32年(オ)第1171号 民集12巻9号1492頁</div>
+      <div class="case-card__title">商品代金請求事件（ジャム和解錯誤事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">錯誤</span>
+        <span class="badge badge--law">民法696条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>商品代金をめぐる紛争で、仮差押えの目的物となっていたジャムについて、当事者は一定の品質を有する商品であることを前提に和解契約を締結した。和解は、当該ジャムが通常の取引対象となる品質を備えているという理解のもとで、代金関係を処理する内容であった。ところが、後にそのジャムが原審の認定するような粗悪品であり、当事者が想定した品質とは大きく異なることが明らかになった。そこで、和解契約は錯誤により効力を失うか、また契約不適合に相当する問題として担保責任で処理すべきかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、仮差押えの目的となっているジャムが一定の品質を有することを前提として和解契約をしたところ、実際には粗悪品であった場合には、和解は要素の錯誤により無効であると解すべきであるとした。また、契約の要素に錯誤があって無効であるときは、旧民法570条の瑕疵担保規定の適用は排除されると判示した。判断の核心は、錯誤の対象が和解で争った権利額そのものではなく、和解の基礎となった商品の品質という前提事実にあった点である。和解は紛争を終わらせる制度であるから、争点そのものについての錯誤主張は制限される。しかし、当事者双方が当然の前提としていた対象物の品質が大きく違うなら、和解による紛争解決の基礎が失われる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">和解契約</mark></strong>と<strong><mark class="kw">錯誤</mark></strong>の関係を理解するための最重要判例である。誤答パターンは二つある。第一は、「和解契約では民法696条があるため、錯誤を理由に効力を争うことは一切できない」という肢である。これは、和解の前提事実に関する錯誤を無視している。第二は、「和解後に事実が違っていたと分かれば、常に錯誤取消しできる」という肢である。これは、争点そのものに関する確定効を無視している。正しい処理は、錯誤の対象が和解の目的である権利関係そのものか、和解の基礎である前提事実かを分けることである。現行法では、旧法の「錯誤無効」という表現は<strong><mark class="kw">民法95条</mark></strong>の錯誤取消しとして整理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法695条</mark></strong>、<strong><mark class="kw">民法696条</mark></strong>、<strong><mark class="kw">民法95条</mark></strong>が関連する。和解の確定効が及ぶ範囲と、錯誤取消しが認められる範囲を区別するための基準として押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和43年3月15日 昭和40年(オ)第347号 民集22巻3号587頁</div>
+      <div class="case-card__title">交通事故示談後の後遺症事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">示談</span>
+        <span class="badge badge--law">後発損害</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>交通事故の被害者は、事故により左前腕骨複雑骨折の傷害を受けた。事故直後の医師の診断では全治十五週間程度と見込まれ、被害者側も比較的軽い傷害であり、自動車損害賠償保険金で治療費等を賄えると考えていた。事故から十日も経たない入院中の段階で、被害者と加害者側会社との間に、会社が十万円を支払い、被害者は今後本件事故による治療費その他慰謝料等の一切の要求を申し立てない旨の示談が成立した。しかし、事故後一か月以上経過してから、傷害は当初の予想に反する重傷であることが判明し、再手術を要し、左前腕関節の用を廃する程度の機能障害が残った。そこで、被害者側が追加損害の賠償を請求した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、一般には、不法行為の損害賠償について示談し、被害者が一定額の支払を受けて満足し、その余の請求権を放棄したときは、示談額を上回る損害について事後に請求できない趣旨と解するのが相当であるとした。しかし、本件では、全損害を正確に把握し難い状況のもとで、早急に少額の賠償金により示談がされた。そうした事情では、被害者が放棄した損害賠償請求権は、示談当時予想していた損害についてのみと解すべきであり、その当時予想できなかった後遺症等については、後日その損害の賠償を請求できるとした。裁判所は、清算条項の文言だけでなく、示談時期、金額、損害把握の困難性、当事者の合理的意思を総合して、示談の効力範囲を限定した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">示談</mark></strong>と<strong><mark class="kw">清算条項</mark></strong>の射程を問う代表判例である。誤答パターンは、「示談書に一切請求しないと書いてあれば、どのような後遺症が後から判明しても追加請求はできない」という肢である。正しくは、全損害を正確に把握し難い状況、早急な示談、少額の賠償金、示談当時予想できなかった後遺症という事情があれば、示談の効力は予想していた損害に限られることがある。逆に、損害が十分に判明した後で相当額を受け取り、後遺障害も含めて明確に清算した場合には、追加請求は制限されやすい。したがって、問題では「示談時に何が分かっていたか」を丁寧に読む。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法695条</mark></strong>、<strong><mark class="kw">民法696条</mark></strong>、<strong><mark class="kw">民法709条</mark></strong>、<strong><mark class="kw">民法722条</mark></strong>が関連する。不法行為の損害賠償と和解契約の効力範囲が交差する判例である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成29年7月24日 平成28年(受)第1463号 民集71巻6号969頁</div>
+      <div class="case-card__title">認定司法書士による裁判外和解契約の効力事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">公序良俗</span>
+        <span class="badge badge--law">非弁行為</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>過払金返還請求に関する債務整理の場面で、認定司法書士が委任者を代理して貸金業者との間で裁判外の和解契約を締結した。ところが、司法書士が代理できる範囲との関係で、その裁判外和解が弁護士法72条に違反するのではないかが問題となった。委任者側は、認定司法書士による代理が権限を超える違法な法律事務に当たる以上、その和解契約自体も無効であると主張した。争点は、資格規制に違反した代理行為がある場合に、相手方との間で成立した裁判外の和解契約の効力を当然に否定できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、認定司法書士が委任者を代理して裁判外の和解契約を締結することが弁護士法72条に違反する場合であっても、その和解契約は、内容及び締結に至る経緯等に照らし、<strong><mark class="kw">公序良俗</mark></strong>違反の性質を帯びるに至るような特段の事情がない限り、無効とはならないと判示した。資格規制違反は、代理人側の業務規制として重大であるが、それだけで相手方との合意内容を当然に無効にすると、取引安全や紛争解決の安定性を害する。したがって、和解契約の効力は、違反の存在だけで機械的に否定せず、契約内容の不当性、締結過程の問題、当事者保護の必要性が公序良俗違反といえる程度に達しているかで判断する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">和解契約</mark></strong>の効力を、代理人資格の問題と切り分けて考えるために重要である。誤答パターンは、「弁護士法72条に違反して締結された裁判外の和解契約は常に無効である」という肢である。正しくは、当然無効ではなく、内容及び締結経緯等に照らして<strong><mark class="kw">民法90条</mark></strong>の<strong><mark class="kw">公序良俗</mark></strong>違反に至る特段の事情が必要である。行政書士試験では、行政書士・司法書士・弁護士の業務範囲に関する一般知識と民法上の法律行為の効力が接続する可能性がある。資格違反があるから契約無効、と短絡しないことが重要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法90条</mark></strong>、<strong><mark class="kw">民法695条</mark></strong>、弁護士法72条、司法書士法3条が関連する。和解の安定性と資格規制の目的を調整する判例として押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">和解契約</mark></strong>は、争いの存在、<strong><mark class="kw">互譲</mark></strong>、争いをやめる合意によって成立する。</li>
+        <li>一方だけの譲歩では、<strong><mark class="kw">民法695条</mark></strong>の和解ではなく、免除、贈与、債務承認などが問題になる。</li>
+        <li><strong><mark class="kw">民法696条</mark></strong>は、和解で確定した権利関係について、後から真実と違う確証が得られても蒸し返しを許さない。</li>
+        <li><strong><mark class="kw">確定効</mark></strong>が及ぶのは、和解で争いの目的となった事項である。</li>
+        <li>和解の当然の前提事実に錯誤がある場合は、<strong><mark class="kw">民法95条</mark></strong>の錯誤取消しが問題になる。</li>
+        <li>交通事故の早期示談では、示談時に予想できなかった後遺症等について追加請求が認められることがある。</li>
+        <li><strong><mark class="kw">清算条項</mark></strong>は重要だが、文言だけでなく、示談時の事情と対象範囲を解釈する。</li>
+        <li>資格規制違反が関係する和解でも、当然無効ではなく、<strong><mark class="kw">公序良俗</mark></strong>違反に至る特段の事情の有無を検討する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「和解契約は、当事者の一方が譲歩すれば成立し、相手方の譲歩は不要である。」これは誤りである。<strong><mark class="kw">民法695条</mark></strong>は、当事者が互いに譲歩することを要求している。</p>
+      <p><strong>誤りの選択肢例2：</strong>「和解後に、和解内容と異なる真実の権利関係を示す確証が得られた場合、和解は当然に効力を失う。」これは誤りである。<strong><mark class="kw">民法696条</mark></strong>は、和解による権利移転又は消滅を認め、蒸し返しを防ぐ。</p>
+      <p><strong>誤りの選択肢例3：</strong>「和解契約については、錯誤を理由として効力を争うことは一切できない。」これは誤りである。和解で争った事項そのものではなく、和解の当然の前提事実に錯誤がある場合は、<strong><mark class="kw">民法95条</mark></strong>の問題になる。</p>
+      <p><strong>誤りの選択肢例4：</strong>「交通事故の示談で一切の請求をしないと合意した以上、示談当時予想できなかった重大な後遺症についても常に追加請求できない。」これは誤りである。最高裁昭和43年3月15日判決は、全損害を把握し難い状況で早急に少額の示談をした場合、予想できなかった後遺症等の追加請求を認め得るとした。</p>
+      <p><strong>誤りの選択肢例5：</strong>「認定司法書士が弁護士法72条に違反して裁判外和解を締結した場合、その和解契約は常に無効である。」これは誤りである。最高裁平成29年7月24日判決は、内容及び締結経緯等に照らし、<strong><mark class="kw">公序良俗</mark></strong>違反に至る特段の事情がない限り無効とはならないとした。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、第一に、そもそも<strong><mark class="kw">和解契約</mark></strong>が成立しているかを確認することである。争いがあり、双方に譲歩があり、争いを終わらせる合意があるかを見る。第二に、和解後に問題となっている新事実が、和解で争った事項か、前提事実か、後発損害かを分類する。第三に、清算条項の文言を読み、どの範囲の請求を放棄したのかを判断する。第四に、代理人の資格違反や交渉過程の不当性がある場合でも、ただちに無効とせず、<strong><mark class="kw">民法90条</mark></strong>、<strong><mark class="kw">民法95条</mark></strong>、意思表示の瑕疵、代理権限の問題に分ける。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">和解契約</mark></strong>は、民法総則の<strong><mark class="kw">錯誤</mark></strong>、<strong><mark class="kw">詐欺</mark></strong>、<strong><mark class="kw">強迫</mark></strong>、<strong><mark class="kw">公序良俗</mark></strong>と接続する。債権総論では、弁済、免除、債務承認、時効援用との関係が問題になる。契約各論では、売買の契約不適合責任、請負の報酬・解除、委任の代理交渉と接続する。不法行為では、交通事故の示談、過失相殺、後遺障害、損害範囲の確定が重要である。手続法では、<strong><mark class="kw">訴訟上の和解</mark></strong>、和解調書、強制執行と接続する。行政書士実務では、契約書作成や示談書作成に関わる場面があるため、和解の対象範囲を曖昧にしないことが実務上も重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、<strong><mark class="kw">民法695条</mark></strong>と<strong><mark class="kw">民法696条</mark></strong>の文言自体は大きく変えられていない。他方で、<strong><mark class="kw">錯誤</mark></strong>の効果は、旧法下の「無効」から現行法上の「取消し」へ整理された。そのため、旧法時代の判例で「錯誤無効」と表現されているものを学習するときは、現行法では<strong><mark class="kw">民法95条</mark></strong>の錯誤取消しとして読み替える必要がある。条文の暗記だけでなく、判例の言葉を現行法の効果に置き換えられることが重要である。</p>
+    </div>
+  </div>
+
+  <p><strong><mark class="kw">和解契約</mark></strong>の実務では、何を解決対象にするのかを明確に書くことが最も重要である。「本件事故に関する一切の損害」と書くのか、「本日までに判明している治療費及び休業損害」と書くのかで、後日の解釈は大きく変わる。清算条項を広く置く場合でも、将来判明する後遺障害、税金、第三者からの請求、担保権、秘密保持、違反時の損害賠償などをどう扱うかを具体的に定める必要がある。</p>
+
+  <p>また、<strong><mark class="kw">和解契約</mark></strong>は紛争を終わらせる便利な制度である反面、情報格差や交渉力格差がある場面では不当な内容になりやすい。高齢者、消費者、交通事故被害者、専門知識のない当事者が、十分な情報を得ないまま低額で清算する場合には、<strong><mark class="kw">錯誤</mark></strong>、<strong><mark class="kw">詐欺</mark></strong>、<strong><mark class="kw">強迫</mark></strong>、<strong><mark class="kw">公序良俗</mark></strong>、消費者契約法上の問題が生じ得る。試験では、和解の安定性と当事者保護の緊張関係を意識する。</p>
+
+  <p>学習上は、まず条文を二段階で覚える。<strong><mark class="kw">民法695条</mark></strong>は成立要件であり、「争い、互譲、終了合意」で整理する。<strong><mark class="kw">民法696条</mark></strong>は効力であり、「後から確証が出ても、権利は和解で移転又は消滅」と整理する。次に、判例を三類型で覚える。昭和33年6月14日判決は、前提事実の錯誤である。昭和43年3月15日判決は、示談時に予想できなかった後遺症である。平成29年7月24日判決は、資格規制違反があっても当然無効ではないという事案である。この三つを並べると、和解の安定性、錯誤による修正、効力範囲の限定、公序良俗による制限が一つの体系として見える。</p>
+
+  <p>最後に、問題文で「和解」「示談」「合意書」「清算条項」という言葉が出たら、すぐに結論を出さないことが大切である。名称ではなく、合意の中身を見る。双方が譲歩しているか、何を争っていたか、何を清算したか、後から判明した事実は何か、当時予想できたか、相手方の説明や代理人の権限に問題があるかを順に確認する。この読み方を徹底すると、和解契約の問題は単なる条文暗記ではなく、事案分析の問題として安定して解ける。</p>
+</section>
+
+</body>
+</html>

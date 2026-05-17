@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>用益物権 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">用益物権</h1>
+  <p class="page-title-block__sub">地上権・永小作権・地役権の目的、存続期間、譲渡性、登記対抗関係を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法265条</span>
+    <span class="badge badge--info">民法268条</span>
+    <span class="badge badge--info">民法270条</span>
+    <span class="badge badge--info">民法278条</span>
+    <span class="badge badge--info">民法280条</span>
+    <span class="badge badge--info">民法281条</span>
+    <span class="badge badge--info">民法283条</span>
+    <span class="badge badge--info">民法289条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">用益物権</mark></strong>とは、他人の物を利用して利益を得ることを内容とする制限物権である。民法上この単元で中心となるのは、他人の土地に工作物又は竹木を所有するため土地を使用する<strong><mark class="kw">地上権</mark></strong>、小作料を支払って他人の土地で耕作又は牧畜をする<strong><mark class="kw">永小作権</mark></strong>、自己の土地の便益のため他人の土地を利用する<strong><mark class="kw">地役権</mark></strong>である。いずれも所有権ほど全面的な支配権ではないが、賃借権のような債権とは異なり、物を直接支配する物権として第三者に対抗し得る構造を持つ。</p>
+
+  <p>この単元の学習で最初に押さえるべきことは、<strong><mark class="kw">利用目的</mark></strong>の違いである。建物、鉄塔、トンネル、地下施設、太陽光設備、竹木などを他人の土地上・地下・空中に所有するなら地上権が問題になる。農地や牧草地で長期に耕作・牧畜を行い、土地利用から収益を得るなら永小作権が問題になる。自分の土地に接道、通水、眺望、排水などの便益を与えるため、隣地や近隣地を一定範囲で利用するなら地役権が問題になる。行政書士試験では、目的の言い換えだけでどの物権かを選ばせる問題が出しやすい。</p>
+
+  <p>次に重要なのは、<strong><mark class="kw">物権性</mark></strong>と<strong><mark class="kw">登記</mark></strong>である。地上権や永小作権は、土地所有者との契約で設定されることが多いが、成立後は物権として譲渡や抵当権設定の対象になり得る。地役権は要役地に従たる権利であり、要役地の所有権とともに移転する一方、要役地から切り離して単独で譲渡することはできない。もっとも、不動産に関する物権変動を第三者に対抗するには原則として登記が必要であるため、各権利の内容だけでなく、誰に対抗できるかを登記制度と一緒に考える必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">実生活でのイメージ</span>
+    </div>
+    <div class="box__bd">
+      <p>土地所有者Aが、Bに「この土地上に建物を所有してよい」と約束し、Bが長期間建物を所有する場合は、賃貸借ではなく<strong><mark class="kw">地上権</mark></strong>が設定されることがある。Aの土地の奥にCの土地があり、Cが公道へ出るためAの土地の一部を通路として使うなら、Cの土地を要役地、Aの土地を承役地とする<strong><mark class="kw">通行地役権</mark></strong>が問題になる。どちらも「他人の土地を使う」点は共通するが、地上権は土地上の工作物等の所有を目的とし、地役権は自己の土地の便益を目的とする。この目的の違いを読み落とすと、権利の譲渡性、存続期間、時効取得の要件を取り違える。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">用益物権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">用益物権</mark></strong>は、他人の土地などを利用し、使用価値・収益価値を得ることを内容とする制限物権である。所有権は物を全面的に使用・収益・処分できる権利であるのに対し、用益物権は設定された目的の範囲で他人の物を利用する。担保物権が交換価値を把握して債権回収を確保する制度であるのに対し、用益物権は土地の利用価値そのものを把握する点で異なる。効果として、権利者は土地所有者に対してだけでなく、一定の第三者に対しても自己の利用権を主張し得る。もっとも、不動産物権である以上、対抗関係では民法177条の登記が問題になる。試験では、用益物権を「契約上の利用権」にすぎないとする選択肢や、担保物権と同じく債権回収を目的とするとする選択肢が誤りにされやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">地上権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">地上権</mark></strong>とは、他人の土地において工作物又は竹木を所有するため、その土地を使用する物権である。工作物には建物のほか、橋、鉄塔、地下構造物、トンネル、線路、送電設備などが含まれ得る。制度趣旨は、土地所有権と建物・工作物の所有を分離し、土地を所有しない者にも長期安定的な利用を認める点にある。地上権は物権であるため、原則として地上権者は土地所有者の承諾なく譲渡や抵当権設定をすることができるが、第三者への対抗には登記が必要になる。地代の有無は地上権の成立要件ではなく、無償の地上権もあり得る。存続期間を定めなかった場合は、地上権者の放棄や裁判所による二十年以上五十年以下の期間決定が問題になる。試験では、地上権を賃借権と混同し、「譲渡には常に土地所有者の承諾が必要」とする選択肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">区分地上権</span>
+      <div class="box__hd-badges"><span class="badge badge--info">補助論点</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">区分地上権</mark></strong>とは、地下又は空間の上下の範囲を定めて工作物を所有するために設定される地上権である。典型例は地下鉄、地下通路、高架設備、送電線、地下貯蔵施設などである。土地所有権は本来土地の上下に及ぶが、都市部では地表、地下、空中を別々の主体が利用する必要がある。そこで区分地上権により、土地全体ではなく一定の立体的範囲について物権的利用権を設定できる。通常の地上権と同じく工作物所有を目的とするが、利用範囲が水平面ではなく立体的に限定される点が特徴である。行政書士試験では深い技術論よりも、「地下又は空間の一部を対象にする地上権」という位置づけ、そして賃借権ではなく物権である点を押さえればよい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">永小作権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">永小作権</mark></strong>とは、小作料を支払って他人の土地において耕作又は牧畜をする物権である。目的は農業的利用に限定され、建物所有や通行のための権利ではない。地上権と異なり、小作料の支払が条文上の内容として明示されている点が特徴である。永小作人は原則として権利を譲渡でき、存続期間内で耕作又は牧畜のため土地を賃貸することもできるが、設定行為で禁じられた場合はこの限りでない。存続期間は二十年以上五十年以下で、五十年を超える定めは五十年に短縮され、期間を定めないときは別段の慣習がない限り三十年となる。実務上の利用頻度は高くないが、試験では数字と効果が問われる。特に「不可抗力による収益損失があっても小作料の免除又は減額を請求できない」点と、「三年以上全く収益を得ない、又は五年以上小作料より少ない収益しか得ないときは放棄できる」点が誤答誘発箇所である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">地役権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">地役権</mark></strong>とは、設定行為で定めた目的に従い、他人の土地を自己の土地の便益に供する権利である。便益を受ける土地を<strong><mark class="kw">要役地</mark></strong>、便益に供される土地を<strong><mark class="kw">承役地</mark></strong>という。典型例は、通行地役権、引水地役権、排水地役権、眺望・日照に関する地役権である。地役権の本質は、土地と土地の利用関係を調整する点にあり、特定人の生活上の便宜だけを目的とする権利ではない。そのため地役権は要役地の所有権に従たる権利として移転し、要役地から分離して譲渡したり担保に入れたりすることはできない。効果は設定目的により異なるが、承役地所有者は地役権の行使を妨げてはならず、地役権者は目的を超えて承役地を利用できない。試験では、地役権を「人に付く権利」と誤解させる選択肢や、要役地から切り離して単独譲渡できるとする選択肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">付従性・不可分性</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">地役権の付従性</mark></strong>とは、地役権が要役地の所有権に従い、要役地の移転とともに移転する性質である。地役権は要役地の便益を高めるための権利であり、地役権だけを要役地から切り離して売却することはできない。これに対し、<strong><mark class="kw">地役権の不可分性</mark></strong>とは、要役地又は承役地が共有、分割、一部譲渡された場合でも、原則として地役権が各部のため又は各部について存続する性質である。土地の便益は土地全体の利用価値に結び付くため、持分だけ、または土地の一部だけを取り出して権利を消滅させることを広く認めると、地役権の機能が壊れてしまう。もっとも、地役権がその性質上土地の一部のみに関するときは、その限度で処理される。試験では、共有者の一人が自己の持分について地役権を消滅させられるか、土地分割後に地役権がどうなるかが問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">地役権の時効取得</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">地役権の時効取得</mark></strong>は、地役権が継続的に行使され、かつ外形上認識できるものに限って認められる。これは、承役地所有者にとって、他人が自分の土地を一定目的で利用していることが外部から分かり、しかもその状態が継続している場合に初めて、時効取得を認めても不意打ちにならないからである。通行地役権でいえば、単に他人の土地を通っていたというだけでは足りず、道路の開設、舗装、橋の設置、門扉の利用状況など、外形的に通路として認識できる事情が重要になる。取得時効の一般要件である所有の意思や占有期間をそのまま当てはめるだけではなく、地役権固有の継続・表現要件を追加で見る必要がある。試験では「地役権はすべて時効取得できる」「一度でも通行すれば時効取得に向かう」とする選択肢が誤りになる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" role="img" aria-label="用益物権の全体構造図">
+      <defs>
+        <marker id="arr-use1-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-use1-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="810" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="170" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use1-blue)"/>
+      <line x1="490" y1="134" x2="490" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use1-blue)"/>
+      <line x1="810" y1="134" x2="810" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use1-blue)"/>
+      <line x1="170" y1="254" x2="170" y2="354" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-use1-orange)"/>
+      <line x1="490" y1="254" x2="490" y2="354" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-use1-orange)"/>
+      <line x1="810" y1="254" x2="810" y2="354" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-use1-orange)"/>
+      <rect x="340" y="30" width="300" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">用益物権</text>
+      <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">他人の土地の使用価値を把握する制限物権</text>
+      <g>
+        <rect x="40" y="184" width="260" height="70" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">地上権</text>
+        <text x="170" y="233" text-anchor="middle" font-size="12" fill="#dbeafe">工作物・竹木所有のため土地使用</text>
+      </g>
+      <g>
+        <rect x="360" y="184" width="260" height="70" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">永小作権</text>
+        <text x="490" y="233" text-anchor="middle" font-size="12" fill="#fff7ed">小作料を払い耕作・牧畜</text>
+      </g>
+      <g>
+        <rect x="680" y="184" width="260" height="70" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">地役権</text>
+        <text x="810" y="233" text-anchor="middle" font-size="12" fill="#ffe4e6">自己の土地の便益のため他人地利用</text>
+      </g>
+      <g>
+        <rect x="40" y="362" width="260" height="86" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">主な確認点</text>
+        <text x="170" y="413" text-anchor="middle" font-size="12" fill="#1e3a8a">地代は要件ではない</text>
+        <text x="170" y="433" text-anchor="middle" font-size="12" fill="#1e3a8a">譲渡・抵当設定が可能</text>
+      </g>
+      <g>
+        <rect x="360" y="362" width="260" height="86" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">主な確認点</text>
+        <text x="490" y="413" text-anchor="middle" font-size="12" fill="#7c2d12">二十年以上五十年以下</text>
+        <text x="490" y="433" text-anchor="middle" font-size="12" fill="#7c2d12">小作料・放棄・消滅請求</text>
+      </g>
+      <g>
+        <rect x="680" y="362" width="260" height="86" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">主な確認点</text>
+        <text x="810" y="413" text-anchor="middle" font-size="12" fill="#9f1239">要役地・承役地</text>
+        <text x="810" y="433" text-anchor="middle" font-size="12" fill="#9f1239">付従性・不可分性・時効取得</text>
+      </g>
+      <rect x="88" y="520" width="804" height="54" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="490" y="543" text-anchor="middle" font-size="13" fill="#1e3a8a">判断順序：利用目的を読む、物権性を確認する、登記対抗関係と存続期間を点検する。</text>
+      <text x="490" y="563" text-anchor="middle" font-size="12" fill="#1e3a8a">地役権だけは「土地の便益」に従うため、単独譲渡できない点が大きな分岐点になる。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">用益物権</mark></strong>を三つの権利に分け、目的と試験上の確認点を対応させている。地上権は土地上・地下・空中で工作物や竹木を所有するための権利であり、永小作権は農業的利用に特化した権利である。地役権は、権利者本人の生活上の便宜ではなく、要役地という土地の便益を高める権利である点が決定的に異なる。試験では、まず目的を読むことで権利類型を特定し、その後に存続期間、譲渡性、登記、時効取得の要件へ進むと誤答を避けやすい。</p>
+
+  <h3>図2：地役権の判断構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 660" role="img" aria-label="地役権の判断構造図">
+      <defs>
+        <marker id="arr-use2-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-use2-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="98" x2="490" y2="142" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="205" y1="142" x2="775" y2="142" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="205" y1="142" x2="205" y2="184" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use2-blue)"/>
+      <line x1="490" y1="142" x2="490" y2="184" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use2-blue)"/>
+      <line x1="775" y1="142" x2="775" y2="184" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use2-blue)"/>
+      <polyline points="205,270 205,330 490,330 490,372" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-use2-red)"/>
+      <polyline points="775,270 775,330 490,330" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <line x1="490" y1="458" x2="490" y2="514" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-use2-blue)"/>
+      <rect x="340" y="32" width="300" height="66" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="490" y="60" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">地役権</text>
+      <text x="490" y="82" text-anchor="middle" font-size="12" fill="#dbeafe">他人の土地を自己の土地の便益に供する</text>
+      <g>
+        <rect x="65" y="192" width="280" height="78" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="205" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">要役地</text>
+        <text x="205" y="245" text-anchor="middle" font-size="12" fill="#dbeafe">便益を受ける土地</text>
+      </g>
+      <g>
+        <rect x="350" y="192" width="280" height="78" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">設定目的</text>
+        <text x="490" y="245" text-anchor="middle" font-size="12" fill="#fff7ed">通行・用水・排水・眺望など</text>
+      </g>
+      <g>
+        <rect x="635" y="192" width="280" height="78" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="775" y="222" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">承役地</text>
+        <text x="775" y="245" text-anchor="middle" font-size="12" fill="#ffe4e6">便益に供される土地</text>
+      </g>
+      <g>
+        <rect x="300" y="380" width="380" height="78" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+        <text x="490" y="410" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">地役権固有の性質</text>
+        <text x="490" y="433" text-anchor="middle" font-size="12" fill="#9f1239">付従性：要役地とともに移転</text>
+      </g>
+      <g>
+        <rect x="300" y="522" width="380" height="82" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+        <text x="490" y="551" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">時効取得・消滅時効</text>
+        <text x="490" y="574" text-anchor="middle" font-size="12" fill="#1e3a8a">取得は継続的行使かつ外形上認識可能なものに限る</text>
+      </g>
+      <text x="260" y="324" text-anchor="middle" font-size="13" fill="#9f1239">土地の便益に結び付く</text>
+      <text x="715" y="324" text-anchor="middle" font-size="13" fill="#9f1239">利用負担を受ける</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">地役権</mark></strong>を要役地、承役地、設定目的の三点から読む構造を示している。地役権は、要役地の価値や利用可能性を高めるために承役地を利用する権利であり、要役地と切り離して独立の商品として扱うことはできない。この点から付従性と不可分性が導かれ、共有、分割、一部譲渡の場面でも独特の効果が生じる。さらに、地役権の時効取得では、取得時効一般の考え方に加えて、継続的行使と外形上認識可能性という地役権固有の要件を確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparative Tables</p>
+    </div>
+  </header>
+
+  <h3>用益物権三類型の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">地上権</th>
+        <th class="col--b">永小作権</th>
+        <th class="col--c">地役権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">工作物又は竹木を所有するため</span>他人の土地を使用する。</td>
+        <td class="col--b"><span class="em-b">小作料を支払い</span>耕作又は牧畜をする。</td>
+        <td class="col--c"><span class="em-c">自己の土地の便益のため</span>他人の土地を利用する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">目的物の読み方</td>
+        <td class="col--a">土地を利用して建物、橋、地下施設、竹木などを所有する。</td>
+        <td class="col--b">農地・牧草地を利用して収益を得る。</td>
+        <td class="col--c">承役地の一部利用により要役地の価値・利便を高める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対価</td>
+        <td class="col--a">地代の支払はあり得るが、権利の成立要件ではない。</td>
+        <td class="col--b">小作料の支払が内容として明示される。</td>
+        <td class="col--c">有償・無償のいずれもあり得る。設定行為で内容を定める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">存続期間</td>
+        <td class="col--a">期間定めなしの場合、放棄又は裁判所による二十年以上五十年以下の決定が問題となる。</td>
+        <td class="col--b">二十年以上五十年以下。期間定めなしなら原則三十年。</td>
+        <td class="col--c">設定目的に従う。消滅時効や承役地の時効取得による消滅が問題となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">譲渡性</td>
+        <td class="col--a">物権として譲渡・抵当権設定が可能。対抗には登記が重要。</td>
+        <td class="col--b">原則譲渡・賃貸可能。ただし設定行為で禁止できる。</td>
+        <td class="col--c">要役地から分離して譲渡できない。要役地の所有権とともに移転する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型的な誤答</td>
+        <td class="col--a">「地上権の譲渡には常に土地所有者の承諾が必要」とする。</td>
+        <td class="col--b">「不可抗力による収益減少があれば当然に小作料減額を請求できる」とする。</td>
+        <td class="col--c">「地役権は要役地から切り離して単独で売却できる」とする。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、問題文に「建物・工作物・竹木」が出れば<strong><mark class="kw">地上権</mark></strong>、「耕作・牧畜・小作料」が出れば<strong><mark class="kw">永小作権</mark></strong>、「要役地・承役地・通行・用水」が出れば<strong><mark class="kw">地役権</mark></strong>を疑う。さらに、地役権だけは土地の便益に従属するため、譲渡性の処理が他の二つと大きく異なる。単に「他人の土地を利用する権利」と覚えるのではなく、利用目的の言葉で分類することが重要である。</p>
+
+  <h3>地役権と隣地利用制度の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">地役権</th>
+        <th class="col--b">囲繞地通行権等の相隣関係</th>
+        <th class="col--c">賃借権・使用貸借</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">発生根拠</td>
+        <td class="col--a">設定行為、時効取得などにより成立する物権。</td>
+        <td class="col--b">民法の相隣関係規定により法律上当然に生じる調整制度。</td>
+        <td class="col--c">契約により発生する債権的利用権。</td>
+      </tr>
+      <tr>
+        <td class="col--label">目的</td>
+        <td class="col--a">要役地の便益のため承役地を利用する。</td>
+        <td class="col--b">隣接不動産の利用衝突を公平に調整する。</td>
+        <td class="col--c">当事者間で特定の使用収益を認める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対抗関係</td>
+        <td class="col--a">不動産物権として登記が重要。ただし判例上、背信的悪意者など第三者性が問題となる。</td>
+        <td class="col--b">法律上の制限として所有権の内容を画する。</td>
+        <td class="col--c">原則として債権。賃借権登記や特別法上の対抗要件が別途問題となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">利用範囲</td>
+        <td class="col--a">設定目的に従い、必要な範囲で承役地を利用する。</td>
+        <td class="col--b">必要性と損害最小化の観点から範囲が限定される。</td>
+        <td class="col--c">契約内容により決まる。契約を超える使用は債務不履行となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での分岐</td>
+        <td class="col--a">「土地の便益」「要役地・承役地」「付従性」が出るかを見る。</td>
+        <td class="col--b">「法律上当然」「隣地所有者間の調整」「必要な範囲」が出るかを見る。</td>
+        <td class="col--c">「契約当事者間」「賃料」「使用貸借終了」が出るかを見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong><mark class="kw">通行</mark></strong>という同じ事実でも、法的根拠は一つではない。要役地の便益として設定・取得された通行権なら地役権、袋地など隣地関係から法律上認められる通行なら相隣関係、当事者間で通路使用を約束しただけなら契約上の利用権である。問題文では「なぜ通れるのか」という根拠を読むことが、分類の決め手になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Relevant Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法265条 地上権の内容</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">地上権者は、他人の土地において工作物又は竹木を所有するため、その土地を使用する権利を有する。</blockquote>
+      <p><strong><mark class="kw">民法265条</mark></strong>は、地上権の目的を「工作物又は竹木の所有」と定める。土地を一時的に置場として使うだけ、又は通行するだけなら通常は地上権ではない。工作物の所有を安定させるための物権であるため、賃借権と異なり、物権としての譲渡性・対抗関係が問題になる。行政書士試験では、地代の有無よりも「何を所有するための利用か」を読むことが中心である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法268条 地上権の存続期間</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">設定行為で地上権の存続期間を定めなかった場合において、別段の慣習がないときは、地上権者は、いつでもその権利を放棄することができる。ただし、地代を支払うべきときは、一年前に予告をし、又は期限の到来していない一年分の地代を支払わなければならない。<br>２ 地上権者が前項の規定によりその権利を放棄しないときは、裁判所は、当事者の請求により、二十年以上五十年以下の範囲内において、工作物又は竹木の種類及び状況その他地上権の設定当時の事情を考慮して、その存続期間を定める。</blockquote>
+      <p><strong><mark class="kw">民法268条</mark></strong>は、期間定めのない地上権について、地上権者の放棄と裁判所による期間決定を定める。地代を支払うべき場合は、土地所有者の期待を保護するため、一年前の予告又は期限未到来の一年分の地代支払が必要になる。放棄しない場合に裁判所が定める期間は二十年以上五十年以下であり、工作物や竹木の種類・状況、設定当時の事情を考慮する。試験では、永小作権の期間規定と混同しないよう、地上権は「定めなし」の場合の処理として覚える。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法269条 工作物等の収去等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">地上権者は、その権利が消滅した時に、土地を原状に復してその工作物及び竹木を収去することができる。ただし、土地の所有者が時価相当額を提供してこれを買い取る旨を通知したときは、地上権者は、正当な理由がなければ、これを拒むことができない。<br>２ 前項の規定と異なる慣習があるときは、その慣習に従う。</blockquote>
+      <p><strong><mark class="kw">民法269条</mark></strong>は、地上権消滅後の土地復旧と工作物・竹木の帰属を定める。地上権者は土地を原状に戻し、自己の工作物等を収去できる。ただし、土地所有者が時価相当額で買い取る旨を通知したとき、地上権者は正当な理由なく拒めない。これは、土地所有者の土地利用利益と、工作物等の経済的価値を無駄にしない利益を調整する規定である。永小作権にも準用されるため、条文番号を横断して確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法270条 永小作権の内容</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">永小作人は、小作料を支払って他人の土地において耕作又は牧畜をする権利を有する。</blockquote>
+      <p><strong><mark class="kw">民法270条</mark></strong>は、永小作権を小作料、他人の土地、耕作又は牧畜という三要素で定義する。建物所有を目的とする地上権、土地の便益を目的とする地役権と異なり、農業的収益を目的とする点が特徴である。小作料の支払は条文上の内容であり、地上権の地代とは位置づけが異なる。試験では、目的を「耕作又は牧畜」に限定して読むことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法272条 永小作権の譲渡又は土地の賃貸</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">永小作人は、その権利を他人に譲り渡し、又はその権利の存続期間内において耕作若しくは牧畜のため土地を賃貸することができる。ただし、設定行為で禁じたときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法272条</mark></strong>は、永小作権の譲渡性と土地賃貸を認める。物権であるため、原則として永小作人は権利を譲渡でき、存続期間内で耕作又は牧畜のために土地を賃貸できる。しかし、ただし書により設定行為で禁じた場合はできない。この「原則可能、設定行為で禁止可能」という構造は、試験で反対にされやすい。賃貸借のように常に所有者承諾が必要と読むのではなく、条文のただし書の位置を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法274条から276条 小作料と放棄・消滅請求</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">永小作人は、不可抗力により収益について損失を受けたときであっても、小作料の免除又は減額を請求することができない。<br>永小作人は、不可抗力によって、引き続き三年以上全く収益を得ず、又は五年以上小作料より少ない収益を得たときは、その権利を放棄することができる。<br>永小作人が引き続き二年以上小作料の支払を怠ったときは、土地の所有者は、永小作権の消滅を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法274条</mark></strong>は、不可抗力による収益損失があっても小作料の免除・減額請求を否定する。これだけ読むと永小作人に厳しいが、<strong><mark class="kw">民法275条</mark></strong>は、三年以上全く収益がない場合又は五年以上小作料より少ない収益しかない場合に放棄を認める。さらに<strong><mark class="kw">民法276条</mark></strong>は、二年以上小作料を怠った場合に土地所有者の消滅請求を認める。試験では「減額請求不可」と「一定の場合の放棄可能」をセットで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法278条 永小作権の存続期間</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">永小作権の存続期間は、二十年以上五十年以下とする。設定行為で五十年より長い期間を定めたときであっても、その期間は、五十年とする。<br>２ 永小作権の設定は、更新することができる。ただし、その存続期間は、更新の時から五十年を超えることができない。<br>３ 設定行為で永小作権の存続期間を定めなかったときは、その期間は、別段の慣習がある場合を除き、三十年とする。</blockquote>
+      <p><strong><mark class="kw">民法278条</mark></strong>は、永小作権の数字を整理する中心条文である。存続期間は二十年以上五十年以下で、五十年を超える定めは五十年に短縮される。更新は可能だが、更新時から五十年を超えられない。期間を定めない場合は別段の慣習がなければ三十年である。行政書士試験では、数字を直接問うだけでなく、地上権の期間処理と混ぜて出題される。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法280条・281条 地役権の内容と付従性</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">地役権者は、設定行為で定めた目的に従い、他人の土地を自己の土地の便益に供する権利を有する。ただし、第三章第一節（所有権の限界）の規定（公の秩序に関するものに限る。）に違反しないものでなければならない。<br>地役権は、要役地の所有権に従たるものとして、その所有権とともに移転し、又は要役地について存する他の権利の目的となるものとする。ただし、設定行為に別段の定めがあるときは、この限りでない。<br>２ 地役権は、要役地から分離して譲り渡し、又は他の権利の目的とすることができない。</blockquote>
+      <p><strong><mark class="kw">民法280条</mark></strong>は、地役権を「自己の土地の便益」のための権利として定義する。ここから、要役地と承役地という二つの土地の関係を読む必要が生じる。<strong><mark class="kw">民法281条</mark></strong>は、地役権の付従性を定め、要役地の所有権とともに移転するとする一方、要役地から分離して譲渡又は他の権利の目的にすることを禁止する。試験では、地役権を人に付く権利と誤解せず、土地に従う権利として処理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法282条・283条 不可分性と時効取得</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">土地の共有者の一人は、その持分につき、その土地のために又はその土地について存する地役権を消滅させることができない。<br>２ 土地の分割又はその一部の譲渡の場合には、地役権は、その各部のために又はその各部について存する。ただし、地役権がその性質により土地の一部のみに関するときは、この限りでない。<br>地役権は、継続的に行使され、かつ、外形上認識することができるものに限り、時効によって取得することができる。</blockquote>
+      <p><strong><mark class="kw">民法282条</mark></strong>は、地役権の不可分性を定める。共有者の一人が持分だけについて地役権を消滅させることはできず、土地分割・一部譲渡の場合にも原則として各部のため又は各部について存続する。<strong><mark class="kw">民法283条</mark></strong>は、地役権の時効取得を継続的行使かつ外形上認識可能なものに限定する。通行地役権では、通路の開設や継続的使用状況が重要になる。試験では、地役権の取得時効が一般の取得時効と同じ要件だけで足りるとする選択肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法289条から293条 地役権の消滅</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">承役地の占有者が取得時効に必要な要件を具備する占有をしたときは、地役権は、これによって消滅する。<br>消滅時効の期間は、継続的でなく行使される地役権については最後の行使の時から起算し、継続的に行使される地役権についてはその行使を妨げる事実が生じた時から起算する。<br>地役権者がその権利の一部を行使しないときは、その部分のみが時効によって消滅する。</blockquote>
+      <p><strong><mark class="kw">民法289条</mark></strong>は、承役地の占有者が取得時効に必要な要件を満たす占有をしたときに地役権が消滅すると定める。<strong><mark class="kw">民法291条</mark></strong>は、非継続的地役権では最後の行使時、継続的地役権では行使を妨げる事実が生じた時を消滅時効の起算点とする。<strong><mark class="kw">民法293条</mark></strong>は一部不行使の場合にその部分のみが時効消滅するとする。地役権は取得だけでなく消滅も、継続的か非継続的か、一部行使か全体行使かを細かく見る必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和30年12月26日 民集9巻14号2097頁</div>
+      <div class="case-card__title">通行地役権の時効取得における継続・表現要件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★</span>
+        <span class="badge badge--law">民法283条</span>
+        <span class="badge badge--exam">時効取得</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <p>事案は、他人の土地を通路として長期間利用していた者が、通行地役権を時効取得したと主張したものである。問題となったのは、通行という行為が日々の通過にすぎない場合でも、民法283条のいう「継続的に行使され、かつ、外形上認識することができるもの」に当たるかであった。通路を利用する者の側から見ると長期間の通行実態があるが、承役地所有者の側から見ると、単に人が通っていたというだけでは、物権として土地に負担が固定されることを予測しにくい。</p>
+      <p>最高裁は、通行地役権の時効取得には、承役地上に道路が開設されるなど、通行地役権の行使が外形上認識できる状態で継続していることが必要であるという枠組みを示した。これは、地役権が承役地所有権に物権的負担を課す制度である以上、権利取得を承役地所有者にとって不意打ちにしてはならないという考慮に基づく。試験上は、取得時効一般の「一定期間の占有」だけで答えないことが重要である。民法283条は地役権固有の追加要件として、継続性と外形上の認識可能性を要求している。したがって、「他人土地を二十年以上通行していれば当然に通行地役権を時効取得する」という選択肢は誤りである。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成6年12月16日 平成6年(オ)第414号</div>
+      <div class="case-card__title">通行地役権の時効取得と通路開設への関与</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★</span>
+        <span class="badge badge--law">民法283条</span>
+        <span class="badge badge--exam">通行地役権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <p>事案では、通行地役権の時効取得を主張する者が、通路部分を長期間利用していたが、その通路がどのように開設され、誰が通路としての外形を作り出したかが争点になった。通行地役権は承役地に物権的負担を生じさせるため、単に近隣住民が事実上通っていたというだけで取得を認めると、承役地所有者の所有権に過大な負担を課すことになる。他方、通路を必要とする要役地側が自ら通路を開設し、継続的に利用していたなら、承役地所有者にとっても地役権行使の外形が明確になる。</p>
+      <p>最高裁は、通行地役権の時効取得について、承役地上に通路が開設され、その開設が要役地所有者によってなされた場合など、通行地役権行使の外形が客観的に認識できることを重視した。判例の意義は、民法283条の「継続的」「外形上認識可能」という抽象要件を、通路の開設・整備・使用状況という具体的事実に落とし込んだ点にある。行政書士試験では、通行地役権の時効取得を問う問題で、通路の存在、開設主体、継続利用、承役地所有者から見た認識可能性をセットで判断する。単なる通行回数や期間だけを見て取得を肯定する選択肢は危険である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成10年2月13日 平成9年(オ)第966号</div>
+      <div class="case-card__title">未登記通行地役権と承役地譲受人の第三者性</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★</span>
+        <span class="badge badge--law">民法177条・280条</span>
+        <span class="badge badge--exam">登記対抗</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <p>事案は、通行地役権の登記がないまま、承役地が第三者に譲渡された場面で、要役地所有者が新所有者に通行地役権を対抗できるかが争われたものである。通常、不動産物権変動は登記がなければ第三者に対抗できない。したがって、未登記の通行地役権は承役地の譲受人に対抗できないのが原則である。しかし、承役地の譲受人が、通路としての利用状態や通行地役権の存在を知りながら土地を取得し、通行を妨げることが信義則上許されないような事情がある場合まで、常に民法177条の第三者として保護する必要があるかが問題となった。</p>
+      <p>最高裁は、承役地譲受人が通行地役権の存在を知り、又は容易に知り得る状況にありながら、地役権者の通行を妨げることが信義則に反するような特段の事情がある場合には、未登記を理由に通行地役権の対抗を否定できないとする方向の判断枠組みを示した。試験上の意義は、民法177条の登記対抗関係を機械的に処理せず、背信的悪意者・信義則の論点と結び付ける点にある。ただし、これは「地役権は登記不要」という意味ではない。原則は登記が対抗要件であり、例外的に第三者性が否定される場合がある、という順序で理解する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">大審院 大正13年3月17日 民集3巻191頁</div>
+      <div class="case-card__title">地役権の付従性と要役地移転</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★</span>
+        <span class="badge badge--law">民法281条</span>
+        <span class="badge badge--exam">付従性</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <p>事案は、要役地の所有権が移転した場合に、地役権について別個の移転行為や移転登記が必要かが問題となったものである。地役権は、要役地の便益を高めるため承役地を利用する権利であり、権利者個人のみに帰属する独立財産ではない。そのため、要役地が売却・相続などで移転したとき、地役権だけが旧所有者に残ると、土地の便益という制度目的と合わなくなる。</p>
+      <p>大審院は、地役権が要役地の所有権に従たる権利であることを前提に、要役地の移転に伴って地役権も移転するという考え方を示した。この判例は、民法281条の付従性を具体的に理解する材料になる。試験では、「地役権は要役地から分離して譲渡できる」「要役地を譲渡しても地役権は当然には移転しない」といった選択肢が誤りである。もっとも、第三者対抗の場面では登記の有無が別途問題になるため、付従性と登記対抗要件を混同しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">用益物権</mark></strong>では、第一に三類型の目的区別、第二に永小作権の期間・小作料関連規定、第三に地役権の付従性・不可分性・時効取得が頻出である。問題文の事実を読むときは、「工作物又は竹木」「耕作又は牧畜」「自己の土地の便益」というキーワードを拾う。特に地役権は、要役地と承役地を図にして考えると、付従性や不可分性の問題で迷いにくい。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン1</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例として、「<strong><mark class="kw">地上権</mark></strong>は賃借権と同じく、地上権者が権利を譲渡するには常に土地所有者の承諾を要する」というものがある。地上権は物権であり、賃借権とは異なる。設定行為で特約が問題になる余地はあるが、賃借権の譲渡・転貸制限をそのまま地上権に持ち込むのは誤りである。正しくは、物権として譲渡・抵当権設定が可能であり、第三者対抗には登記を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン2</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">永小作権</mark></strong>では、不可抗力により収益が減少したとき、永小作人は当然に小作料の減額を請求できる」という選択肢は誤りである。民法274条は、不可抗力により収益について損失を受けたときでも、小作料の免除又は減額を請求できないとする。ただし、三年以上全く収益を得ない、又は五年以上小作料より少ない収益しか得ないときは、民法275条により権利放棄ができる。減額請求不可と放棄可能を対比して押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン3</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">地役権</mark></strong>は要役地から分離して譲渡できる」という選択肢は、民法281条2項に反する。地役権は要役地の便益のための権利であり、権利者個人に付着する権利ではない。要役地の所有権に従い、要役地とともに移転する。問題文で土地の売買や相続が出たら、地役権が誰に移るかを、要役地の帰属から判断する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン4</span>
+    </div>
+    <div class="box__bd">
+      <p>「他人の土地を長期間通行していれば、常に<strong><mark class="kw">通行地役権</mark></strong>を時効取得する」という選択肢も誤りである。民法283条は、地役権の時効取得を、継続的に行使され、かつ外形上認識できるものに限っている。通路の開設、舗装、橋の設置、通路としての客観的状態など、承役地所有者から見て地役権行使が認識できる事情が必要である。期間だけを見て答えない。</p>
+    </div>
+  </div>
+
+  <p>他分野との接点としては、物権変動単元の<strong><mark class="kw">民法177条</mark></strong>、時効制度単元の取得時効・消滅時効、所有権単元の相隣関係、契約単元の賃貸借が重要である。地上権と借地借家法上の借地権、地役権と囲繞地通行権、永小作権と賃貸借は、事実関係が似ていても根拠と効果が異なる。行政書士試験では、条文番号を細かく暗記するより、問題文の利用目的、権利の根拠、対抗要件を順番に読む訓練が有効である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">用益物権</mark></strong>は、近代民法の所有権中心構造の中で、土地を所有者以外の者に長期利用させるための制度として置かれている。地上権は、土地と建物・工作物の所有を分離して利用価値を活用する制度であり、都市の立体利用やインフラ設備にも応用される。永小作権は、農業社会に由来する長期耕作権として設計されたが、現代実務では利用頻度が高くないため、試験では条文上の数字と効果が中心になる。地役権は、隣接又は近接する土地の利用価値を調整する制度として現在でも重要であり、とくに通行・用水・排水の場面で理解しておく必要がある。</p>
+
+  <p>近年の学習上の注意点は、土地利用制度が民法だけで完結しないことである。建物所有のための土地利用は借地借家法、農地利用は農地法、道路・水路・インフラ利用は行政法規や公法上の規制と接続する。もっとも、行政書士試験の民法問題では、まず民法上の権利類型を正確に判定することが前提である。特別法や行政法規を考える前に、地上権なのか、永小作権なのか、地役権なのか、賃借権なのかを切り分ける。</p>
+
+  <p>学習整理では、地上権は「工作物・竹木」、永小作権は「小作料・耕作牧畜・二十年以上五十年以下」、地役権は「要役地・承役地・付従性・不可分性・継続表現」を軸にカード化するとよい。特に地役権は、図を描いて要役地と承役地を左右に置き、どちらが便益を受け、どちらが負担を受けるかを視覚化する。判例問題では、通行地役権の時効取得について、通路の外形、開設主体、継続利用、登記対抗関係を順に確認する。用益物権は出題頻度だけを見ると共有や抵当権ほど大きくないが、短い選択肢で正誤を分けやすい単元であるため、比較表と条文数字を固めて得点源にしたい。</p>
+</section>
+
+</body>
+</html>

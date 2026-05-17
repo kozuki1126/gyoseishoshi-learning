@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雇用契約・請負契約・委任契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">雇用契約・請負契約・委任契約</h1>
+  <p class="page-title-block__sub">労務・完成・事務処理という契約目的の違いから、報酬・解除・責任を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法623条</span>
+    <span class="badge badge--info">民法632条</span>
+    <span class="badge badge--info">民法643条</span>
+    <span class="badge badge--info">民法644条</span>
+    <span class="badge badge--info">民法648条</span>
+    <span class="badge badge--info">民法651条</span>
+    <span class="badge badge--info">準委任</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">雇用契約</mark></strong>、<strong><mark class="kw">請負契約</mark></strong>、<strong><mark class="kw">委任契約</mark></strong>は、いずれも「人の活動」を利用する契約である。しかし、試験で問われる核心は、同じ人の活動でも、何を契約の目的としているかが異なる点にある。雇用は労働に従事すること、請負は仕事を完成すること、委任は法律行為その他の事務を処理することを中心に据える。したがって、報酬をいつ請求できるか、途中終了時にどこまで報酬を請求できるか、相手方がいつ解除できるか、どの程度の注意義務を負うかが契約類型ごとに変わる。</p>
+
+  <p>行政書士試験では、条文番号そのものよりも、事例を読んで契約類型を分類する力が問われやすい。たとえば、会社が従業員に毎日勤務させるなら<strong><mark class="kw">雇用契約</mark></strong>であり、工務店に建物完成を依頼するなら<strong><mark class="kw">請負契約</mark></strong>であり、弁護士・税理士・行政書士に申請や契約交渉を依頼するなら<strong><mark class="kw">委任契約</mark></strong>又は<strong><mark class="kw">準委任</mark></strong>が問題になる。外形だけで「報酬を払う契約」とまとめると、報酬支払時期や解除権の肢で失点する。</p>
+
+  <p>この単元は、契約各論の中でも横断的な性格が強い。<strong><mark class="kw">請負契約</mark></strong>では売買の契約不適合責任、同時履行の抗弁、危険負担、解除が接続する。<strong><mark class="kw">委任契約</mark></strong>では代理、善管注意義務、費用償還、信義則が接続する。<strong><mark class="kw">雇用契約</mark></strong>では民法だけでなく労働契約法・労働基準法による強行的な保護が重要になる。民法上の一般ルールを押さえつつ、労働法・特別法が修正する場面を切り分けることが、実務上も試験上も重要である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る三分類</span>
+    </div>
+    <div class="box__bd">
+      <p>A社がBを月給30万円で採用し、BがA社の指揮命令のもとで毎日勤務するなら、Bの中心債務は労働に従事することであり、<strong><mark class="kw">雇用契約</mark></strong>である。A社がC工務店に店舗内装を500万円で完成させるよう依頼するなら、Cの中心債務は完成した内装という結果であり、<strong><mark class="kw">請負契約</mark></strong>である。A社がD行政書士に許認可申請書類の作成・提出を依頼するなら、Dの中心債務は申請事務の処理であり、法律行為の委託なら<strong><mark class="kw">委任契約</mark></strong>、法律行為でない事務を含むなら<strong><mark class="kw">準委任</mark></strong>として整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">雇用契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">雇用契約</mark></strong>は、当事者の一方が相手方に対して労働に従事することを約し、相手方が報酬を与えることを約する契約である。根拠は<strong><mark class="kw">民法623条</mark></strong>である。雇用の制度趣旨は、労働力の提供と報酬の支払を継続的に結び付け、使用者の指揮命令のもとで労務を提供する関係を法律上整理する点にある。請負のように完成結果を保証する契約ではなく、委任のように独立した事務処理を任される契約でもない。典型例は会社員、アルバイト、家事使用人などであり、労務提供の場所・時間・方法が使用者側で定められることが多い。試験では「雇用契約は成果完成を目的とする」とする肢が誤りになる。もっとも、現代の雇用関係は労働契約法や労働基準法によって民法の自由な解約ルールが大きく修正されるため、民法だけで解雇の有効性を判断しない点も重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">請負契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">請負契約</mark></strong>は、当事者の一方がある仕事を完成することを約し、相手方がその仕事の結果に対して報酬を支払うことを約する契約である。根拠は<strong><mark class="kw">民法632条</mark></strong>である。重要なのは、労務そのものではなく「完成した仕事の結果」に報酬が対応する点である。建物建築、内装工事、ウェブサイト制作、機械修理など、完成結果を予定できる場面が典型である。注文者は、仕事完成前であれば<strong><mark class="kw">民法641条</mark></strong>により、いつでも損害を賠償して解除できる。完成後の目的物が契約内容に適合しない場合は、売買の契約不適合責任と同様に、追完、報酬減額、損害賠償、解除が問題になる。試験では、単に「手間をかけた」だけでは報酬請求できず、仕事の完成又は可分部分の利益が必要である点が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">委任契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">委任契約</mark></strong>は、当事者の一方が法律行為をすることを相手方に委託し、相手方が承諾することで効力を生ずる契約である。根拠は<strong><mark class="kw">民法643条</mark></strong>である。制度趣旨は、本人が自ら処理しにくい法律行為を、信頼できる他人に委ねる点にある。売買契約の締結、訴訟代理、申請代理、登記申請の委託などが典型である。請負との違いは、成果完成を必ずしも債務内容としないことである。受任者は結果を保証するのではなく、委任の本旨に従い<strong><mark class="kw">善良な管理者の注意</mark></strong>をもって事務を処理する義務を負う。試験では「委任は特約がなくても当然に報酬を請求できる」とする肢が誤りになる。<strong><mark class="kw">民法648条</mark></strong>は、特約がなければ報酬請求できないと定めている。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">準委任</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">準委任</mark></strong>は、法律行為でない事務の委託について委任の規定を準用する契約である。根拠は<strong><mark class="kw">民法656条</mark></strong>である。診療、コンサルティング、調査、設計監理、システム保守、講師業務など、法律行為ではないが専門的な事務処理を任せる場面で問題になる。委任と同じく、中心は事務処理であり、完成結果の保証ではない。ただし、現行民法では<strong><mark class="kw">成果等に対する報酬</mark></strong>を定める<strong><mark class="kw">民法648条の2</mark></strong>が置かれ、準委任でも成果に対して報酬を支払う合意があり得る。試験では「準委任は請負と同じく常に完成義務を負う」とする肢が誤りになりやすい。契約書に「業務委託」と書かれていても、実質が完成結果か事務処理かを読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">善管注意義務</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">善管注意義務</mark></strong>とは、職業・地位・委託された事務の性質に応じて、通常期待される注意を尽くす義務である。委任では<strong><mark class="kw">民法644条</mark></strong>が直接定める。受任者は、委任者の利益のために忠実に事務を処理し、必要な報告をし、受け取った金銭や物を引き渡す必要がある。これは結果保証ではないが、漫然と処理してよいという意味ではない。たとえば専門家が許認可申請を受任した場合、必要書類、期限、行政庁との連絡、委任者への報告を適切に行う注意義務を負う。試験では、請負の「完成責任」と委任の「注意義務」を区別することが重要である。結果が実現しなかった場合でも、受任者が善管注意義務を尽くしていれば債務不履行責任を負わないことがある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">任意解除</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">任意解除</mark></strong>とは、債務不履行がなくても、一定の場合に一方当事者が契約関係を終了させることができる制度である。請負では、注文者が仕事完成前であれば<strong><mark class="kw">民法641条</mark></strong>により、損害を賠償していつでも解除できる。委任では、信頼関係を基礎とするため、<strong><mark class="kw">民法651条</mark></strong>により各当事者がいつでも解除できる。ただし、相手方に不利な時期の解除や、委任者が受任者の利益をも目的とする委任を解除した場合には、やむを得ない事由がない限り損害賠償責任が生じる。雇用では期間の有無に応じて<strong><mark class="kw">民法627条</mark></strong>、<strong><mark class="kw">民法628条</mark></strong>が問題になるが、実際の解雇は労働契約法上の制限を受ける。試験では、三契約すべてを「いつでも無償で解除できる」と一般化する肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行割合に応じた報酬</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行割合に応じた報酬</mark></strong>は、契約が途中で終了した場合でも、既にされた履行に相手方が利益を受けるときに、一定範囲で報酬を認める仕組みである。雇用では<strong><mark class="kw">民法624条の2</mark></strong>、請負では<strong><mark class="kw">民法634条</mark></strong>、委任では<strong><mark class="kw">民法648条3項</mark></strong>が対応する。請負では可分部分の給付によって注文者が利益を受けるとき、その部分を仕事の完成とみなす点が特徴である。委任では履行した事務の割合に応じた報酬請求が問題になる。試験では、「途中で終了したから一切報酬請求できない」とする肢や、逆に「途中までした以上、常に全額請求できる」とする肢が誤りになりやすい。どの部分が相手方の利益になっているかを見て、割合的に処理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="雇用・請負・委任の契約目的による分類">
+      <defs>
+        <marker id="arr31a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr31a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr31a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="112" x2="590" y2="152" stroke="#2563eb" stroke-width="2"/>
+      <line x1="205" y1="152" x2="975" y2="152" stroke="#2563eb" stroke-width="2"/>
+      <line x1="205" y1="152" x2="205" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31a-blue)"/>
+      <line x1="590" y1="152" x2="590" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31a-blue)"/>
+      <line x1="975" y1="152" x2="975" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31a-blue)"/>
+      <rect x="504" y="130" width="172" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="590" y="148" text-anchor="middle" font-size="13" fill="#1d4ed8">契約目的で三分類</text>
+
+      <line x1="205" y1="332" x2="205" y2="400" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31a-orange)"/>
+      <line x1="590" y1="332" x2="590" y2="400" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31a-orange)"/>
+      <line x1="975" y1="332" x2="975" y2="400" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31a-orange)"/>
+      <rect x="135" y="360" width="140" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="205" y="377" text-anchor="middle" font-size="13" fill="#7c2d12">労務への対価</text>
+      <rect x="510" y="360" width="160" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="590" y="377" text-anchor="middle" font-size="13" fill="#7c2d12">完成結果への対価</text>
+      <rect x="895" y="360" width="160" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="975" y="377" text-anchor="middle" font-size="13" fill="#7c2d12">事務処理への信頼</text>
+
+      <line x1="205" y1="512" x2="205" y2="580" stroke="#e11d48" stroke-width="2" marker-end="url(#arr31a-red)"/>
+      <line x1="590" y1="512" x2="590" y2="580" stroke="#e11d48" stroke-width="2" marker-end="url(#arr31a-red)"/>
+      <line x1="975" y1="512" x2="975" y2="580" stroke="#e11d48" stroke-width="2" marker-end="url(#arr31a-red)"/>
+      <rect x="135" y="540" width="140" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="205" y="557" text-anchor="middle" font-size="13" fill="#9f1239">労働法が修正</text>
+      <rect x="510" y="540" width="160" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="590" y="557" text-anchor="middle" font-size="13" fill="#9f1239">契約不適合責任</text>
+      <rect x="895" y="540" width="160" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="975" y="557" text-anchor="middle" font-size="13" fill="#9f1239">任意解除と賠償</text>
+
+      <rect x="410" y="40" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="70" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">人の活動を利用する契約</text>
+      <text x="590" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">労務・完成・事務処理で分類する</text>
+
+      <rect x="45" y="230" width="320" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="205" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">雇用契約</text>
+      <text x="205" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法623条</text>
+      <text x="205" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">労働に従事することが中心</text>
+
+      <rect x="430" y="230" width="320" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">請負契約</text>
+      <text x="590" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法632条</text>
+      <text x="590" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">仕事の完成結果が中心</text>
+
+      <rect x="815" y="230" width="320" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="975" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">委任・準委任</text>
+      <text x="975" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法643条・656条</text>
+      <text x="975" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">法律行為又は事務処理が中心</text>
+
+      <rect x="45" y="410" width="320" height="102" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="205" y="442" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">報酬と終了</text>
+      <text x="205" y="466" text-anchor="middle" font-size="12" fill="#7c2d12">労働後・期間経過後に請求</text>
+      <text x="205" y="486" text-anchor="middle" font-size="12" fill="#7c2d12">期間なしは二週間経過で終了</text>
+
+      <rect x="430" y="410" width="320" height="102" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="590" y="442" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">報酬と解除</text>
+      <text x="590" y="466" text-anchor="middle" font-size="12" fill="#7c2d12">目的物引渡しと同時支払</text>
+      <text x="590" y="486" text-anchor="middle" font-size="12" fill="#7c2d12">完成前は損害賠償して解除可</text>
+
+      <rect x="815" y="410" width="320" height="102" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="975" y="442" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">報酬と注意義務</text>
+      <text x="975" y="466" text-anchor="middle" font-size="12" fill="#7c2d12">特約なければ報酬なし</text>
+      <text x="975" y="486" text-anchor="middle" font-size="12" fill="#7c2d12">善管注意で事務処理</text>
+
+      <rect x="45" y="590" width="320" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="205" y="622" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">安全配慮・解雇制限</text>
+      <text x="205" y="646" text-anchor="middle" font-size="12" fill="#9f1239">労働者保護の特別法に注意</text>
+
+      <rect x="430" y="590" width="320" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="590" y="622" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">瑕疵・不適合の処理</text>
+      <text x="590" y="646" text-anchor="middle" font-size="12" fill="#9f1239">未完成と契約不適合を区別</text>
+
+      <rect x="815" y="590" width="320" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="975" y="622" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">信頼関係の終了</text>
+      <text x="975" y="646" text-anchor="middle" font-size="12" fill="#9f1239">いつでも解除可・損害賠償に注意</text>
+
+      <rect x="130" y="705" width="920" height="32" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="590" y="726" text-anchor="middle" font-size="13" fill="#9f1239">判断順序：契約名ではなく、労務そのもの・完成結果・事務処理のどれを対価の中心にしたかを読む</text>
+    </svg>
+  </div>
+
+  <p>この図は、三つの契約を「人が働く」という外形ではなく、契約が何を中心目的にしているかで分類している。<strong><mark class="kw">雇用契約</mark></strong>では、使用者のもとで労働に従事することが中心であり、報酬は労務提供と結び付く。<strong><mark class="kw">請負契約</mark></strong>では、労務の過程よりも完成した仕事の結果が中心であり、仕事の完成、引渡し、契約不適合が試験上の焦点になる。<strong><mark class="kw">委任契約</mark></strong>と<strong><mark class="kw">準委任</mark></strong>では、信頼に基づく事務処理が中心であり、結果保証ではなく善管注意義務と任意解除が重要になる。問題文の契約名が「業務委託」「委託契約」となっていても、実質が完成結果なら請負、事務処理なら準委任として処理する。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 720" role="img" aria-label="報酬請求と解除の判断構造">
+      <defs>
+        <marker id="arr31b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr31b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr31b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="110" x2="560" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="250" y1="150" x2="870" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="250" y1="150" x2="250" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31b-blue)"/>
+      <line x1="560" y1="150" x2="560" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31b-blue)"/>
+      <line x1="870" y1="150" x2="870" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr31b-blue)"/>
+      <rect x="492" y="128" width="136" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">まず類型確認</text>
+
+      <line x1="250" y1="322" x2="250" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31b-orange)"/>
+      <line x1="560" y1="322" x2="560" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31b-orange)"/>
+      <line x1="870" y1="322" x2="870" y2="392" stroke="#ea580c" stroke-width="2" marker-end="url(#arr31b-orange)"/>
+      <rect x="188" y="352" width="124" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="250" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">報酬時期</text>
+      <rect x="498" y="352" width="124" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">途中終了</text>
+      <rect x="808" y="352" width="124" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="870" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">解除効果</text>
+
+      <polyline points="250,494 250,540 560,540 560,582" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr31b-red)"/>
+      <polyline points="870,494 870,540 560,540 560,582" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr31b-red)"/>
+      <rect x="480" y="524" width="160" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="560" y="541" text-anchor="middle" font-size="13" fill="#9f1239">割合・損害を調整</text>
+
+      <rect x="380" y="38" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="68" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">報酬請求と解除の判断</text>
+      <text x="560" y="92" text-anchor="middle" font-size="12" fill="#1e3a8a">契約類型ごとに履行・利益・損害を確認</text>
+
+      <rect x="90" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="250" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">雇用</text>
+      <text x="250" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">労働後・期間経過後に報酬</text>
+      <text x="250" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法624条・624条の2</text>
+
+      <rect x="400" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">請負</text>
+      <text x="560" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">目的物引渡しと報酬が同時</text>
+      <text x="560" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法633条・634条</text>
+
+      <rect x="710" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="870" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">委任</text>
+      <text x="870" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">特約があれば履行後に報酬</text>
+      <text x="870" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法648条・648条の2</text>
+
+      <rect x="90" y="402" width="320" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="250" y="434" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">途中で働けなくなったか</text>
+      <text x="250" y="458" text-anchor="middle" font-size="12" fill="#7c2d12">既履行割合に応じた報酬</text>
+      <text x="250" y="478" text-anchor="middle" font-size="12" fill="#7c2d12">使用者帰責なら別途536条も意識</text>
+
+      <rect x="400" y="402" width="320" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="434" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">可分部分が利益になるか</text>
+      <text x="560" y="458" text-anchor="middle" font-size="12" fill="#7c2d12">利益部分を完成とみなす</text>
+      <text x="560" y="478" text-anchor="middle" font-size="12" fill="#7c2d12">注文者は完成前に解除可能</text>
+
+      <rect x="710" y="402" width="320" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="870" y="434" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">委任事務をどこまで処理したか</text>
+      <text x="870" y="458" text-anchor="middle" font-size="12" fill="#7c2d12">履行割合・成果引渡しで報酬</text>
+      <text x="870" y="478" text-anchor="middle" font-size="12" fill="#7c2d12">いつでも解除可だが賠償に注意</text>
+
+      <rect x="360" y="590" width="400" height="74" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="620" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">最終処理</text>
+      <text x="560" y="644" text-anchor="middle" font-size="12" fill="#9f1239">全額請求・全額拒絶ではなく、完成・利益・損害賠償を組み合わせる</text>
+
+      <rect x="120" y="682" width="880" height="28" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="560" y="701" text-anchor="middle" font-size="13" fill="#9f1239">解除の効力は将来効として整理し、既に提供された労務・完成部分・事務処理の清算を忘れない</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、報酬請求と解除の処理順序を示す。まず契約類型を確定し、次に報酬の発生時期を確認し、さらに途中終了時の利益や損害を調整する。<strong><mark class="kw">請負契約</mark></strong>では仕事完成前の注文者解除が認められるが、請負人に生じた損害の賠償が必要である。<strong><mark class="kw">委任契約</mark></strong>ではいつでも解除できるが、不利な時期の解除や受任者の利益をも目的とする委任では損害賠償が問題になる。<strong><mark class="kw">雇用契約</mark></strong>では民法上の二週間解約だけでなく、労働法上の解雇制限が背後にあるため、民法の条文をそのまま実務の結論にしない。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">雇用</th>
+        <th class="col--b">請負</th>
+        <th class="col--c">委任・準委任</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">労働に従事</span>し、使用者が報酬を与える契約。</td>
+        <td class="col--b"><span class="em-b">仕事を完成</span>し、注文者が結果に報酬を支払う契約。</td>
+        <td class="col--c"><span class="em-c">法律行為又は事務処理</span>を委託し、受任者が承諾する契約。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法623条</mark></strong>、<strong><mark class="kw">民法624条</mark></strong>、<strong><mark class="kw">民法627条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法632条</mark></strong>、<strong><mark class="kw">民法633条</mark></strong>、<strong><mark class="kw">民法641条</mark></strong>。</td>
+        <td class="col--c"><strong><mark class="kw">民法643条</mark></strong>、<strong><mark class="kw">民法644条</mark></strong>、<strong><mark class="kw">民法651条</mark></strong>、<strong><mark class="kw">民法656条</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">報酬</td>
+        <td class="col--a">労働終了後、期間報酬なら期間経過後に請求する。</td>
+        <td class="col--b">目的物の引渡しと同時に支払う。可分部分の利益があれば割合的報酬もある。</td>
+        <td class="col--c">特約がなければ報酬請求不可。報酬特約があれば履行後又は成果引渡し時に請求する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">責任の中心</td>
+        <td class="col--a">労務提供義務と使用者側の安全配慮・労働者保護。</td>
+        <td class="col--b">完成義務と契約不適合責任。未完成と不適合を区別する。</td>
+        <td class="col--c">善管注意義務、報告義務、引渡義務、費用償還関係。</td>
+      </tr>
+      <tr>
+        <td class="col--label">解除</td>
+        <td class="col--a">期間なしは解約申入れから二週間。ただし労働法上の制限に注意。</td>
+        <td class="col--b">注文者は仕事完成前なら損害を賠償していつでも解除できる。</td>
+        <td class="col--c">各当事者がいつでも解除できるが、不利な時期等では損害賠償が生じる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答例</td>
+        <td class="col--a">「雇用は成果完成がないと報酬請求できない」は誤り。</td>
+        <td class="col--b">「注文者は完成前でも無償で自由に解除できる」は誤り。</td>
+        <td class="col--c">「委任は特約なしでも当然に報酬請求できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的な判断基準は、対価の対象を読むことである。報酬が労働時間や勤務期間に対応するなら<strong><mark class="kw">雇用契約</mark></strong>に近い。完成物や完成工事に対応するなら<strong><mark class="kw">請負契約</mark></strong>である。事務処理、調査、相談、代理、管理などの活動に対応し、完成結果が保証されていないなら<strong><mark class="kw">委任契約</mark></strong>又は<strong><mark class="kw">準委任</mark></strong>である。契約書の表題より、債務内容と報酬の対応関係を優先して判断する。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">論点</th>
+        <th class="col--a">請負</th>
+        <th class="col--b">委任</th>
+        <th class="col--c">準委任</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">結果との関係</td>
+        <td class="col--a"><span class="em-a">完成結果</span>が契約目的。完成しなければ原則として報酬請求が問題になる。</td>
+        <td class="col--b"><span class="em-b">法律行為の事務処理</span>が目的。結果実現は当然には保証しない。</td>
+        <td class="col--c"><span class="em-c">法律行為でない事務処理</span>が目的。成果報酬特約があっても本質は事務処理。</td>
+      </tr>
+      <tr>
+        <td class="col--label">注意義務</td>
+        <td class="col--a">完成物が契約内容に適合するよう仕事を行う義務が中心。</td>
+        <td class="col--b">委任の本旨に従う善管注意義務が中心。</td>
+        <td class="col--c">委任規定が準用され、善管注意義務・報告義務を負う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">途中終了</td>
+        <td class="col--a">可分部分によって注文者が利益を受けるなら、利益割合に応じた報酬。</td>
+        <td class="col--b">履行割合に応じた報酬があり得る。費用償還・損害賠償も確認する。</td>
+        <td class="col--c">成果報酬型なら<strong><mark class="kw">民法648条の2</mark></strong>で請負に近い清算がされる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">代表例</td>
+        <td class="col--a">建築工事、修理、成果物制作、完成物のあるシステム開発。</td>
+        <td class="col--b">売買契約締結の代理、申請代理、訴訟代理、税務代理。</td>
+        <td class="col--c">診療、調査、相談、コンサルティング、保守運用、設計監理。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の見抜き方</td>
+        <td class="col--a">「完成」「引渡し」「契約不適合」「注文者解除」が出れば請負を疑う。</td>
+        <td class="col--b">「法律行為を委託」「代理」「報告」「任意解除」が出れば委任を疑う。</td>
+        <td class="col--c">「事務処理」「専門サービス」「成果保証なし」が出れば準委任を疑う。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong><mark class="kw">請負契約</mark></strong>と<strong><mark class="kw">準委任</mark></strong>は、実務上「業務委託契約」という同じ名称で呼ばれることが多いため混同しやすい。完成物が明確で、報酬が完成物に対応するなら請負である。これに対し、専門家が一定の注意を尽くして業務を処理すること自体が目的なら準委任である。成果報酬型準委任では報酬支払時期が請負に似るが、注意義務と完成義務の違いは残る。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法623条・624条・624条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百二十三条　雇用は、当事者の一方が相手方に対して労働に従事することを約し、相手方がこれに対してその報酬を与えることを約することによって、その効力を生ずる。<br>第六百二十四条　労働者は、その約した労働を終わった後でなければ、報酬を請求することができない。<br>２　期間によって定めた報酬は、その期間を経過した後に、請求することができる。<br>第六百二十四条の二　労働者は、次に掲げる場合には、既にした履行の割合に応じて報酬を請求することができる。<br>一　使用者の責めに帰することができない事由によって労働に従事することができなくなったとき。<br>二　雇用が履行の中途で終了したとき。</blockquote>
+      <p><strong><mark class="kw">民法623条</mark></strong>は、雇用を労働従事と報酬支払の合意として定義する。ここでの中心は、仕事の完成ではなく労働に従事することである。<strong><mark class="kw">民法624条</mark></strong>は報酬後払原則を定め、労働を終えた後又は報酬期間経過後に請求できるとする。<strong><mark class="kw">民法624条の2</mark></strong>は、途中で労務提供が不能になった場合や中途終了の場合でも、既履行部分に応じた報酬を認める。試験では、雇用を請負のように完成主義で処理しないこと、途中終了でも常に全額又はゼロとしないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法627条・628条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百二十七条　当事者が雇用の期間を定めなかったときは、各当事者は、いつでも解約の申入れをすることができる。この場合において、雇用は、解約の申入れの日から二週間を経過することによって終了する。<br>第六百二十八条　当事者が雇用の期間を定めた場合であっても、やむを得ない事由があるときは、各当事者は、直ちに契約の解除をすることができる。この場合において、その事由が当事者の一方の過失によって生じたものであるときは、相手方に対して損害賠償の責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法627条</mark></strong>は、期間の定めのない雇用について、各当事者に解約申入れを認める。ただし、使用者からの解雇については労働契約法や労働基準法の制限が及ぶため、民法上二週間で終了するという一般論だけでは実務の結論にならない。<strong><mark class="kw">民法628条</mark></strong>は、期間の定めがある雇用でも、やむを得ない事由があれば直ちに解除できるとする。試験では、期間なしと期間ありを分け、期間ありの場合には「やむを得ない事由」が必要である点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法632条・633条・634条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百三十二条　請負は、当事者の一方がある仕事を完成することを約し、相手方がその仕事の結果に対してその報酬を支払うことを約することによって、その効力を生ずる。<br>第六百三十三条　報酬は、仕事の目的物の引渡しと同時に、支払わなければならない。ただし、物の引渡しを要しないときは、第六百二十四条第一項の規定を準用する。<br>第六百三十四条　次に掲げる場合において、請負人が既にした仕事の結果のうち可分な部分の給付によって注文者が利益を受けるときは、その部分を仕事の完成とみなす。この場合において、請負人は、注文者が受ける利益の割合に応じて報酬を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法632条</mark></strong>は、請負の中心を仕事の完成に置く。<strong><mark class="kw">民法633条</mark></strong>は、報酬支払時期を目的物の引渡しと同時とするため、請負人の報酬請求は完成・引渡しと結び付く。<strong><mark class="kw">民法634条</mark></strong>は、完成前に不能又は解除が生じた場合でも、可分部分が注文者の利益になるときは、その部分を完成とみなして割合的報酬を認める。これは、途中までの仕事が社会的・経済的に意味を持つ場面を公平に清算する規定である。試験では「未完成なら常に報酬ゼロ」としない一方、可分部分による利益がないのに当然に報酬を認めない点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法636条・637条・641条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百三十六条　請負人が種類又は品質に関して契約の内容に適合しない仕事の目的物を注文者に引き渡したときは、注文者は、注文者の供した材料の性質又は注文者の与えた指図によって生じた不適合を理由として、履行の追完の請求、報酬の減額の請求、損害賠償の請求及び契約の解除をすることができない。ただし、請負人がその材料又は指図が不適当であることを知りながら告げなかったときは、この限りでない。<br>第六百三十七条　前条本文に規定する場合において、注文者がその不適合を知った時から一年以内にその旨を請負人に通知しないときは、注文者は、その不適合を理由として、履行の追完の請求、報酬の減額の請求、損害賠償の請求及び契約の解除をすることができない。<br>第六百四十一条　請負人が仕事を完成しない間は、注文者は、いつでも損害を賠償して契約の解除をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法636条</mark></strong>は、契約不適合が注文者の材料又は指図に由来する場合、原則として注文者が不適合を理由に責任追及できないとする。ただし、請負人が材料・指図の不適当を知りながら告げなかったときは例外である。<strong><mark class="kw">民法637条</mark></strong>は、種類・品質に関する不適合について、一年以内の通知を要求する。<strong><mark class="kw">民法641条</mark></strong>は、仕事完成前に限り、注文者が損害を賠償して自由に解除できると定める。注文者の利益を保護する規定だが、請負人の投下労務・利益を犠牲にしないため損害賠償が必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法643条・644条・648条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百四十三条　委任は、当事者の一方が法律行為をすることを相手方に委託し、相手方がこれを承諾することによって、その効力を生ずる。<br>第六百四十四条　受任者は、委任の本旨に従い、善良な管理者の注意をもって、委任事務を処理する義務を負う。<br>第六百四十八条　受任者は、特約がなければ、委任者に対して報酬を請求することができない。<br>２　受任者は、報酬を受けるべき場合には、委任事務を履行した後でなければ、これを請求することができない。<br>３　受任者は、委任者の責めに帰することができない事由によって委任事務の履行をすることができなくなったとき、又は委任が履行の中途で終了したときは、既にした履行の割合に応じて報酬を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法643条</mark></strong>は、委任を法律行為の委託として定義する。<strong><mark class="kw">民法644条</mark></strong>は、受任者の中心義務を善管注意義務として定める。これは、受任者が結果を必ず実現する義務ではなく、委任の本旨に従って相当な注意を尽くす義務である。<strong><mark class="kw">民法648条</mark></strong>は、委任を原則無償とする伝統的な考え方を残し、報酬には特約を要求する。ただし、現代実務では専門家との委任・準委任は有償が通常であるため、報酬特約の有無と支払時期を丁寧に読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法648条の2・650条・651条・656条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第六百四十八条の二　委任事務の履行により得られる成果に対して報酬を支払うことを約した場合において、その成果が引渡しを要するときは、報酬は、その成果の引渡しと同時に、支払わなければならない。<br>第六百五十条　受任者は、委任事務を処理するのに必要と認められる費用を支出したときは、委任者に対し、その費用及び支出の日以後におけるその利息の償還を請求することができる。<br>第六百五十一条　委任は、各当事者がいつでもその解除をすることができる。<br>第六百五十六条　この節の規定は、法律行為でない事務の委託について準用する。</blockquote>
+      <p><strong><mark class="kw">民法648条の2</mark></strong>は、成果報酬型の委任・準委任について、成果の引渡しが必要な場合の報酬支払時期を定める。これは請負と似た処理を導入するが、契約の本質が常に請負になるわけではない。<strong><mark class="kw">民法650条</mark></strong>は、費用償還、債務弁済請求、損害賠償請求を定め、受任者が委任者のために支出したコストを委任者側で負担させる。<strong><mark class="kw">民法651条</mark></strong>は委任の任意解除を認めるが、不利な時期の解除などでは損害賠償が生じる。<strong><mark class="kw">民法656条</mark></strong>により、法律行為でない事務処理にも委任規定が準用されるため、準委任でも善管注意義務、報告義務、費用償還、解除が問題になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和50年2月25日 昭和48年(オ)第383号 民集29巻2号143頁</div>
+      <div class="case-card__title">陸上自衛隊八戸車両整備工場事件（安全配慮義務違反損害賠償請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">雇用</span>
+        <span class="badge badge--law">安全配慮義務</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>陸上自衛隊員が、自衛隊の車両整備工場内で車両整備に従事していたところ、後退してきた大型自動車にひかれて死亡した。遺族は、国が隊員の生命・身体を保護するための安全措置を尽くしていなかったとして、国に対して損害賠償を請求した。争点は、国と自衛隊員の関係が公法上の勤務関係であるとしても、国が信義則上、隊員の生命・健康を危険から保護する義務を負うか、またその義務違反に基づく請求権の時効期間をどう見るかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、国が公務員をその管理する場所・設備・器具等を用いて職務に従事させる場合、信義則上、その公務員の生命・健康等を危険から保護するよう配慮すべき義務を負うとした。この義務は、単なる不法行為上の一般的注意義務ではなく、特別な社会的接触関係に入った当事者間の信義則に基づく債務として構成される。判決は国家公務員の事案であったが、後の労働契約上の安全配慮義務の基礎となり、雇用関係では報酬支払義務だけでなく、労務提供環境を安全に整える付随義務が問題になることを明らかにした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">雇用契約</mark></strong>を単なる「労働と賃金の交換」として理解しては足りないことを示す。行政書士試験では、民法上の雇用の定義と、信義則から導かれる付随義務を結び付ける問題で重要である。誤答パターンは、「使用者は賃金を支払えば足り、労働者の生命・身体の安全について契約上の義務を負わない」という肢である。正しくは、使用者の指定する場所・設備・指揮命令のもとで労務提供がされる以上、使用者は安全配慮義務を負う。労働契約法上の明文規定にもつながるため、民法と労働法の接点として押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法623条</mark></strong>、<strong><mark class="kw">民法1条2項</mark></strong>、労働契約法5条が関連する。雇用契約の中心は労務提供と報酬支払であるが、継続的・組織的な労務提供関係では、信義則上の付随義務が契約責任として問題になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">東京高等裁判所 昭和36年12月20日 昭和34年(ネ)第2336号 高民集14巻10号730頁</div>
+      <div class="case-card__title">請負工事の未完成と瑕疵の区別事件（請負代金請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法632条</span>
+        <span class="badge badge--law">民法633条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>請負工事をめぐり、請負人が報酬を請求したのに対し、注文者は工事に不完全な箇所が多数あるとして、仕事は未完成であり報酬を支払う必要はないと争った。工事の一部には注文者の意に満たない施工や補修を要する箇所があったため、それが「仕事未完成」なのか、「完成した仕事の目的物に瑕疵がある」だけなのかが問題になった。両者の区別は、報酬支払義務の発生時期と、注文者がどのような抗弁・担保責任を主張できるかに直結する。</p>
+      <h4>判旨</h4>
+      <p>東京高裁は、請負工事が途中で廃せられ予定された最後の工程を終えない場合は仕事の未完成に当たるが、予定された最後の工程まで一応終了し、ただそれが不完全で補修を要する場合は、仕事の目的物に瑕疵がある場合に当たるとした。そして、仕事の目的物に瑕疵がある場合には、仕事未完成の場合と異なり、注文者は担保責任を追及する方法によらず、単に瑕疵があるというだけで直ちに報酬支払を拒むことはできないと判断した。これは、請負における「完成」と「完全無欠」を区別する枠組みである。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">請負契約</mark></strong>の基本構造を理解するうえで重要である。試験では、「瑕疵がある以上、仕事は未完成であり報酬請求権は発生しない」とする肢が出やすい。正しくは、最後の工程まで一応終了していれば完成と評価され、瑕疵は契約不適合・担保責任の問題として処理される。もちろん、瑕疵が重大で仕事の目的を達しない場合や、現行民法上の契約不適合責任による追完・減額・解除・損害賠償は別途問題になる。まず未完成か不適合かを分け、その後に報酬・同時履行・損害賠償を処理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法632条</mark></strong>、<strong><mark class="kw">民法633条</mark></strong>、<strong><mark class="kw">民法636条</mark></strong>が関連する。平成29年改正後は契約不適合責任の文言に整理されたが、仕事の完成と不適合の区別という判断枠組みはなお重要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成9年2月14日 平成5年(オ)第1924号 民集51巻2号337頁</div>
+      <div class="case-card__title">瑕疵修補に代わる損害賠償と報酬全額拒絶事件（工事代金請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法533条</span>
+        <span class="badge badge--law">請負</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建築請負契約において、請負人が工事を完成させたとして工事代金の支払を求めた。注文者は、完成した目的物に瑕疵があるとして、瑕疵の修補に代わる損害賠償を受けるまでは報酬の支払を拒むと主張した。争点は、注文者が損害賠償債権の額に相当する部分だけでなく、報酬全額の支払について同時履行の抗弁を主張できるか、また支払拒絶中に履行遅滞責任を負うかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、請負契約の目的物に瑕疵がある場合、注文者は、瑕疵の程度や各契約当事者の交渉態度等に照らして信義則に反すると認められるときを除き、請負人から瑕疵の修補に代わる損害賠償を受けるまでは、報酬全額の支払を拒むことができると判断した。そして、その支払拒絶について履行遅滞責任も負わないとした。判決は、請負人の報酬債権と注文者の瑕疵対応請求との牽連関係を重視し、注文者に実効的な保護を与えた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、請負における同時履行の抗弁の射程を理解するための最重要判例である。誤答パターンは、「注文者が拒絶できるのは損害賠償額相当部分に限られ、報酬全額は拒絶できない」という肢である。正しくは、信義則に反する特段の事情がない限り、報酬全額の支払を拒むことができる。もっとも、これは注文者に無制限の拒絶権を与えるものではなく、瑕疵の程度、交渉態度、支払拒絶の態様から信義則違反が問題になる。現行民法では契約不適合責任に整理されているが、報酬と不適合対応の牽連関係はなお重要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法533条</mark></strong>、<strong><mark class="kw">民法632条</mark></strong>、<strong><mark class="kw">民法633条</mark></strong>、<strong><mark class="kw">民法636条</mark></strong>が関連する。昭和36年12月20日東京高裁判決で未完成と瑕疵を分けたうえで、本判例により瑕疵がある場合の報酬拒絶の範囲を理解すると整理しやすい。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和58年9月20日 昭和56年(オ)第47号 集民139号549頁</div>
+      <div class="case-card__title">税理士顧問契約解除事件（地位確認請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法651条</span>
+        <span class="badge badge--law">委任</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>税理士が依頼者との間で顧問契約を締結し、継続的・定期的に顧問料を受けていた。依頼者が契約を解除したため、税理士側は、税理士顧問契約は長期継続を予定し、顧問料が税理士事務所の経営安定にも資するから、受任者の利益をも目的とする委任であり、依頼者は自由に解除できないと主張した。争点は、専門家との継続的顧問契約が、単に報酬を得る利益を超えて、受任者の利益をも目的として締結された委任に当たるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、委任契約たる税理士顧問契約は、受任者の利益をも目的として締結された場合でない限り、委任者が<strong><mark class="kw">民法651条</mark></strong>に基づき、いつでも、かつ理由を告げずに解除できるとした。そして、税理士顧問契約が一般に長期継続を予定し、継続的な顧問料が税理士事務所の経営安定に資する事情があっても、それだけでは受任者の利益のためにも締結されたものとはいえないと判断した。報酬を得る利益は、委任解除を制限する「受任者の利益」とは区別される。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">委任契約</mark></strong>の任意解除を理解するうえで極めて重要である。典型的な誤答は、「有償委任で受任者が報酬を得ている以上、委任者は自由に解除できない」という肢である。正しくは、報酬を得る利益だけでは、受任者の利益をも目的とする委任とはいえない。現行<strong><mark class="kw">民法651条2項2号</mark></strong>も、受任者の利益から「専ら報酬を得ることによるもの」を除いている。専門家顧問契約では信頼関係が基礎であるため、理由を告げない解除も原則として可能であるが、不利な時期の解除などでは損害賠償が問題になる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法651条</mark></strong>、<strong><mark class="kw">民法648条</mark></strong>、<strong><mark class="kw">民法656条</mark></strong>が関連する。委任解除では、解除の可否と損害賠償責任の有無を分けることが大切である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">雇用契約</mark></strong>は労働への従事が中心であり、成果完成を目的とする契約ではない。</li>
+        <li><strong><mark class="kw">請負契約</mark></strong>は仕事の完成が中心であり、報酬は仕事の結果に対応する。</li>
+        <li><strong><mark class="kw">委任契約</mark></strong>は法律行為の委託、<strong><mark class="kw">準委任</mark></strong>は法律行為でない事務の委託である。</li>
+        <li><strong><mark class="kw">民法648条</mark></strong>により、委任は特約がなければ報酬請求できない。</li>
+        <li><strong><mark class="kw">民法641条</mark></strong>により、注文者は請負人が仕事を完成しない間、損害を賠償して解除できる。</li>
+        <li><strong><mark class="kw">民法651条</mark></strong>により、委任は各当事者がいつでも解除できるが、損害賠償が問題になる場合がある。</li>
+        <li><strong><mark class="kw">準委任</mark></strong>に成果報酬特約があっても、当然に請負へ変わるわけではない。</li>
+        <li><strong><mark class="kw">請負契約</mark></strong>では未完成と契約不適合を区別し、報酬・同時履行・損害賠償を処理する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「雇用契約では、労働者が一定の成果を完成しなければ報酬を請求できない。」これは誤りである。<strong><mark class="kw">雇用契約</mark></strong>は労働に従事する契約であり、請負の完成義務とは異なる。</p>
+      <p><strong>誤りの選択肢例2：</strong>「請負契約の注文者は、仕事完成前であれば、いつでも無償で契約を解除できる。」これは誤りである。<strong><mark class="kw">民法641条</mark></strong>は解除を認めるが、注文者は損害を賠償しなければならない。</p>
+      <p><strong>誤りの選択肢例3：</strong>「委任契約では、特約がなくても受任者は当然に報酬を請求できる。」これは誤りである。<strong><mark class="kw">民法648条</mark></strong>は、特約がなければ報酬を請求できないと定める。</p>
+      <p><strong>誤りの選択肢例4：</strong>「委任契約は信頼関係を基礎とするため、各当事者はどのような場合でも解除による損害賠償責任を負わない。」これは誤りである。<strong><mark class="kw">民法651条</mark></strong>は任意解除を認めるが、不利な時期の解除などでは損害賠償が生じる。</p>
+      <p><strong>誤りの選択肢例5：</strong>「請負の仕事に不完全な箇所があれば、予定された最後の工程まで終了していても常に未完成である。」これは誤りである。予定された最後の工程まで一応終了していれば、未完成ではなく契約不適合の問題として処理されることがある。</p>
+      <p><strong>誤りの選択肢例6：</strong>「準委任は法律行為の委託についてだけ成立する。」これは誤りである。法律行為は委任、法律行為でない事務処理は<strong><mark class="kw">準委任</mark></strong>として委任規定が準用される。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、第一に契約の目的を読むことである。労務提供なら<strong><mark class="kw">雇用契約</mark></strong>、完成結果なら<strong><mark class="kw">請負契約</mark></strong>、事務処理なら<strong><mark class="kw">委任契約</mark></strong>又は<strong><mark class="kw">準委任</mark></strong>である。第二に報酬請求の時期を確認する。雇用は労働終了後、請負は引渡しと同時、委任は特約がある場合に履行後又は成果引渡し時である。第三に解除を確認する。請負の注文者解除には損害賠償、委任の解除には不利な時期等の損害賠償、雇用には労働法上の制限が絡む。第四に途中終了時は、全額かゼロかではなく、既履行割合や可分部分の利益を検討する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">雇用契約</mark></strong>は労働契約法、労働基準法、安全配慮義務、不法行為と接続する。<strong><mark class="kw">請負契約</mark></strong>は売買の契約不適合責任、同時履行の抗弁、危険負担、建設業法、消費者契約法と接続する。<strong><mark class="kw">委任契約</mark></strong>は代理、信義則、事務管理、組合、後見、専門家責任と接続する。行政書士実務では、申請代理・書類作成・相談業務が委任又は準委任として問題になり、成果を保証したと評価される契約設計を避ける必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、<strong><mark class="kw">請負契約</mark></strong>と<strong><mark class="kw">委任契約</mark></strong>について、実務上重要な規定が整理された。請負では、仕事完成前に契約が解除された場合などの割合的報酬を定める<strong><mark class="kw">民法634条</mark></strong>、注文者の材料・指図による不適合を扱う<strong><mark class="kw">民法636条</mark></strong>、種類・品質に関する担保責任の通知期間を定める<strong><mark class="kw">民法637条</mark></strong>が現行法上の試験対象になる。委任では、履行割合に応じた報酬や成果等に対する報酬を定める<strong><mark class="kw">民法648条</mark></strong>、<strong><mark class="kw">民法648条の2</mark></strong>が、業務委託契約の出題で重要である。</p>
+    </div>
+  </div>
+
+  <p>実務では「業務委託契約」という名称が広く使われるが、民法上の典型契約名ではない。契約書の表題が業務委託であっても、完成物の納入と検収を報酬支払条件にするなら<strong><mark class="kw">請負契約</mark></strong>に近い。一定期間の専門的助言や調査を行い、結果の実現を保証しないなら<strong><mark class="kw">準委任</mark></strong>に近い。さらに、発注者の指揮命令下で勤務時間・場所・方法を拘束されるなら、名称が委託でも実質は<strong><mark class="kw">雇用契約</mark></strong>又は労働契約と評価される可能性がある。</p>
+
+  <p><strong><mark class="kw">雇用契約</mark></strong>の学習では、民法条文を暗記するだけでなく、労働者保護法制が民法を修正する場面を意識する。民法627条だけを見れば期間の定めのない雇用は二週間で終了するように見えるが、使用者からの解雇には客観的合理性・社会的相当性、解雇予告、就業規則などの別論点が入る。行政書士試験の民法問題では深い労働法知識まで求められないとしても、「民法の自由な解約」と「労働法の強行的保護」は切り分けておくべきである。</p>
+
+  <p><strong><mark class="kw">請負契約</mark></strong>では、完成、引渡し、検収、契約不適合、修補、報酬支払を一連の流れとして把握する。完成前の注文者解除は可能だが損害賠償が必要であり、完成後の不適合では追完・減額・損害賠償・解除が問題になる。仕事の結果が不完全な場合、すぐに未完成と決めつけず、予定された最後の工程を終えたか、補修で足りる瑕疵か、契約目的を達しない重大な不適合かを段階的に検討する。</p>
+
+  <p><strong><mark class="kw">委任契約</mark></strong>と<strong><mark class="kw">準委任</mark></strong>では、信頼関係を基礎とするため解除が広く認められる一方、解除後の清算が重要である。受任者は報酬特約がなければ報酬請求できないが、費用償還や損害賠償は別に問題になる。専門家業務では、結果保証ではなく善管注意義務を負うこと、報告義務・説明義務を尽くすこと、成果物がある場合の報酬支払時期を明確にすることが重要である。学習上は、三契約を「労務」「完成」「事務処理」という三語に圧縮し、条文・報酬・解除・責任の順に横並びで整理すると、事例問題で迷いにくい。</p>
+</section>
+
+</body>
+</html>

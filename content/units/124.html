@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>契約の成立（申込と承諾、契約の解釈） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">契約の成立（申込と承諾、契約の解釈）</h1>
+  <p class="page-title-block__sub">合意がいつ、どの内容で、どのような拘束力をもって成立するかを条文と判例で整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法521条</span>
+    <span class="badge badge--info">民法522条</span>
+    <span class="badge badge--info">民法523条</span>
+    <span class="badge badge--info">民法525条</span>
+    <span class="badge badge--info">申込みと承諾</span>
+    <span class="badge badge--info">契約解釈</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">契約の成立</mark></strong>とは、当事者の合意によって法律上の権利義務が発生する入口である。売買なら「このパソコンを10万円で売る」「10万円で買う」という意思が合致した時、賃貸借なら「この部屋を月額8万円で貸す」「借りる」という意思が合致した時に契約が成立する。契約書の作成、押印、代金支払、目的物の引渡しは重要な証拠や履行行為になるが、民法の原則では、それ自体が常に成立要件になるわけではない。</p>
+
+  <p>この単元の中心は、<strong><mark class="kw">申込み</mark></strong>、<strong><mark class="kw">承諾</mark></strong>、<strong><mark class="kw">意思の合致</mark></strong>、<strong><mark class="kw">到達主義</mark></strong>、<strong><mark class="kw">契約の解釈</mark></strong>を一続きの判断手順として理解することである。申込みがまだ有効に残っているか、承諾が申込みと一致しているか、承諾通知がいつ効力を生じるか、変更を加えた承諾をどう扱うかによって、契約の成否と内容が変わる。成立した後は、文言、交渉経過、取引慣行、契約目的から、どの内容で当事者が拘束されるかを確定する必要がある。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">契約自由の原則</mark></strong>、<strong><mark class="kw">諾成契約</mark></strong>、書面不要の原則、承諾期間の有無、対話者と隔地者の区別、遅延承諾、変更承諾、承諾通知不要の場合、契約解釈と契約不適合責任の接続が頻出である。特に令和2年施行の債権法改正により、旧法の隔地者間契約の発信主義が削除され、承諾についても原則として<strong><mark class="kw">民法97条</mark></strong>の到達主義で考える点は、古い知識との入れ替えが必要である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに「5月10日までに返事をくれれば、甲車を120万円で売る」とメールした。Bが5月9日に「120万円で買う」と返信し、そのメールが同日にAのメールサーバーへ到達したなら、原則としてその時点で売買契約が成立する。Bが「110万円なら買う」と返信した場合は、申込みに変更を加えた承諾であり、Aの申込みを拒絶し、Bから新たな申込みをしたものと扱われる。Bの返信が5月11日に届いた場合、Aはその遅延承諾を新たな申込みとみなすことができる。問題文では、返事の内容、到達時期、期間の定め、撤回権の留保を順に確認する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">契約自由の原則</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">契約自由の原則</mark></strong>は、当事者が法令の制限内で、契約をするかどうか、誰と契約するか、どのような内容にするか、どの方式で契約するかを自由に決められるという原則である。<strong><mark class="kw">民法521条</mark></strong>は締結自由と内容決定自由を明文化し、<strong><mark class="kw">民法522条2項</mark></strong>は方式自由を明文化している。制度趣旨は、私人の自律的な意思決定を尊重し、財産取引を柔軟に行わせる点にある。ただし、この自由は無制限ではなく、法令が契約締結義務を置く場合、強行法規が内容を制限する場合、公序良俗に反する場合には制限される。試験では、「契約自由があるから、どのような契約内容も常に有効」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">申込み</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">申込み</mark></strong>は、契約の内容を示して、その締結を申し入れる意思表示である。相手方がその内容どおり承諾すれば契約が成立する程度に、目的物、代金、数量、期間などの本質的内容が特定されている必要がある。単なる広告、価格表、カタログ、店頭陳列のように、相手方からの注文を促すだけで、最終的に契約するかを表示者が留保しているものは、通常は<strong><mark class="kw">申込みの誘引</mark></strong>である。申込みに当たるかどうかは、文言だけでなく、取引慣行、相手方の範囲、数量限定の有無、表示者が拒絶する余地を残したかで判断する。試験では、申込みの誘引に承諾しただけで当然に契約が成立するとする肢が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">承諾</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">承諾</mark></strong>は、申込みに応じて契約を成立させる意思表示である。承諾は申込みの内容と一致していなければならず、代金、数量、支払期限、解除条件などに変更を加えた場合には、<strong><mark class="kw">民法528条</mark></strong>により申込みの拒絶と新たな申込みとみなされる。制度趣旨は、申込者が示した内容と異なる契約に不意に拘束されることを防ぐ点にある。承諾が有効に到達する時点は、原則として<strong><mark class="kw">民法97条</mark></strong>の到達主義で判断する。試験では、「少しでも返事をすれば承諾になる」「条件付きの承諾でも元の申込みどおり契約が成立する」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">諾成契約と要式契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">諾成契約</mark></strong>は、当事者の意思表示の合致だけで成立する契約である。売買、賃貸借、請負、委任など、多くの民法上の契約は諾成契約である。<strong><mark class="kw">民法522条2項</mark></strong>は、法令に特別の定めがある場合を除き、書面の作成その他の方式を要しないとする。これに対し、保証契約のように書面または電磁的記録が効力要件となるもの、定款作成など特別な方式が要求されるものは、方式の自由が制限される。試験では、「契約書がなければ売買契約は成立しない」とする肢と、「どの契約でも口頭だけで常に効力が生じる」とする肢の両方が危険である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">承諾期間のある申込み</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">承諾期間のある申込み</mark></strong>は、「5月末までに回答してください」のように、承諾できる期間を定めてした申込みである。<strong><mark class="kw">民法523条1項</mark></strong>は、原則としてその申込みを撤回できないとする。申込者が承諾期間を示した以上、相手方はその期間内に検討すればよいと信頼するためである。ただし、申込者が撤回権を留保した場合は撤回できる。期間内に承諾の通知を受けなければ、<strong><mark class="kw">民法523条2項</mark></strong>により申込みは効力を失う。試験では、「承諾期間を定めても申込者はいつでも自由に撤回できる」とする肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">承諾期間のない申込みと対話者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">承諾期間のない申込み</mark></strong>は、回答期限を定めない申込みである。隔地者に対する場合、<strong><mark class="kw">民法525条1項</mark></strong>により、承諾通知を受けるのに相当な期間を経過するまでは撤回できない。相当期間は、通信手段、取引対象、検討に必要な時間で判断する。これに対し、電話、対面、オンライン会議のように直ちに意思疎通できる<strong><mark class="kw">対話者</mark></strong>への申込みは、その対話が継続している間ならいつでも撤回でき、対話中に承諾通知を受けなければ原則として効力を失う。試験では、空間的に離れているかではなく、意思表示の到達に時間を要するかで対話者・隔地者を分ける。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">到達主義と発信主義の改正</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">到達主義</mark></strong>は、意思表示が相手方に到達した時から効力を生じるという考え方であり、<strong><mark class="kw">民法97条1項</mark></strong>が定める。旧法では隔地者間の契約について、承諾通知を発信した時に契約が成立する発信主義の規定があった。しかし令和2年施行の債権法改正でその規定は削除され、迅速な通信手段が発達した現行法では、承諾についても原則として到達主義で判断する。メールであれば、通常は相手方の支配領域に入り確認可能な状態になった時が到達時点となる。試験では、旧法知識のまま「隔地者間では承諾を発送した時に契約成立」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">契約の解釈</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">契約の解釈</mark></strong>は、成立した契約がどのような権利義務を発生させるかを確定する作業である。まず契約書の文言が明確なら文理を基本にするが、文言が一義的でない場合、契約目的、交渉経過、取引慣行、当事者の共通理解、信義則を考慮して合理的意思を探る。制度趣旨は、形式的な文字だけでなく、当事者が実際に合意した内容と取引上の合理性を反映させる点にある。ただし、契約解釈は当事者が合意していない義務を自由に作り出す作業ではない。試験では、契約不適合責任、解除、債務不履行、危険負担で「契約の内容に適合するか」を判断する前提として問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 700" role="img" aria-label="契約成立の全体構造">
+      <defs>
+        <marker id="arr24a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr24a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr24a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="104" x2="540" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="150" x2="900" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="150" x2="180" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24a-blue)"/>
+      <line x1="540" y1="150" x2="540" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24a-blue)"/>
+      <line x1="900" y1="150" x2="900" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24a-blue)"/>
+      <rect x="480" y="130" width="120" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="540" y="147" text-anchor="middle" font-size="13" fill="#1d4ed8">成立要件</text>
+
+      <line x1="540" y1="318" x2="540" y2="370" stroke="#ea580c" stroke-width="2"/>
+      <line x1="190" y1="370" x2="890" y2="370" stroke="#ea580c" stroke-width="2"/>
+      <line x1="190" y1="370" x2="190" y2="432" stroke="#ea580c" stroke-width="2" marker-end="url(#arr24a-orange)"/>
+      <line x1="540" y1="370" x2="540" y2="432" stroke="#ea580c" stroke-width="2" marker-end="url(#arr24a-orange)"/>
+      <line x1="890" y1="370" x2="890" y2="432" stroke="#ea580c" stroke-width="2" marker-end="url(#arr24a-orange)"/>
+      <rect x="486" y="348" width="108" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="540" y="365" text-anchor="middle" font-size="13" fill="#7c2d12">効力調整</text>
+
+      <polyline points="900,318 900,350 1010,350 1010,502 990,502" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr24a-red)"/>
+      <rect x="928" y="337" width="96" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="976" y="354" text-anchor="middle" font-size="13" fill="#9f1239">変更なら</text>
+
+      <line x1="540" y1="536" x2="540" y2="590" stroke="#e11d48" stroke-width="2" marker-end="url(#arr24a-red)"/>
+      <rect x="486" y="558" width="108" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="540" y="575" text-anchor="middle" font-size="13" fill="#9f1239">成立後</text>
+
+      <rect x="380" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="540" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">契約の成立</text>
+      <text x="540" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">申込みと承諾による意思の合致</text>
+
+      <rect x="60" y="230" width="240" height="88" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">申込み</text>
+      <text x="180" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">契約内容を示して申し入れる</text>
+      <text x="180" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法522条1項</text>
+
+      <rect x="420" y="230" width="240" height="88" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="540" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">承諾</text>
+      <text x="540" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">申込みと一致する意思表示</text>
+      <text x="540" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">到達時に効力発生</text>
+
+      <rect x="780" y="230" width="240" height="88" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="900" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">意思の合致</text>
+      <text x="900" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">内容が一致すれば成立</text>
+      <text x="900" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">方式不要が原則</text>
+
+      <rect x="70" y="440" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="190" y="472" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">承諾期間あり</text>
+      <text x="190" y="496" text-anchor="middle" font-size="12" fill="#7c2d12">期間中は撤回不可</text>
+      <text x="190" y="516" text-anchor="middle" font-size="12" fill="#7c2d12">民法523条</text>
+
+      <rect x="420" y="440" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="540" y="472" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">承諾期間なし</text>
+      <text x="540" y="496" text-anchor="middle" font-size="12" fill="#7c2d12">相当期間・対話中で調整</text>
+      <text x="540" y="516" text-anchor="middle" font-size="12" fill="#7c2d12">民法525条</text>
+
+      <rect x="770" y="440" width="220" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="880" y="472" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">変更承諾</text>
+      <text x="880" y="496" text-anchor="middle" font-size="12" fill="#9f1239">拒絶と新申込み</text>
+      <text x="880" y="516" text-anchor="middle" font-size="12" fill="#9f1239">民法528条</text>
+
+      <rect x="360" y="598" width="360" height="74" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="540" y="628" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">契約の解釈</text>
+      <text x="540" y="652" text-anchor="middle" font-size="12" fill="#9f1239">文言・目的・交渉経過・慣行から内容を確定</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">契約の成立</mark></strong>を、申込み、承諾、意思の合致という三段階で示している。中心にあるのは、単に言葉を交わしたことではなく、申込みで示された内容に対して相手方が一致した承諾をしたかである。承諾期間の有無、対話者か隔地者か、変更を加えた承諾かは、申込みがまだ効力を持つか、承諾が契約成立に結びつくかを調整する要素である。契約が成立した後は、契約書の文言だけでなく、契約目的や交渉経過から契約内容を解釈し、債務不履行や解除、契約不適合責任の前提を確定する。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" role="img" aria-label="契約解釈の判断構造">
+      <defs>
+        <marker id="arr24b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr24b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr24b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="490" y1="100" x2="490" y2="152" stroke="#2563eb" stroke-width="2"/>
+      <line x1="160" y1="152" x2="820" y2="152" stroke="#2563eb" stroke-width="2"/>
+      <line x1="160" y1="152" x2="160" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24b-blue)"/>
+      <line x1="490" y1="152" x2="490" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24b-blue)"/>
+      <line x1="820" y1="152" x2="820" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr24b-blue)"/>
+      <rect x="438" y="130" width="104" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="490" y="147" text-anchor="middle" font-size="13" fill="#1d4ed8">手がかり</text>
+
+      <line x1="490" y1="320" x2="490" y2="378" stroke="#ea580c" stroke-width="2" marker-end="url(#arr24b-orange)"/>
+      <rect x="430" y="344" width="120" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="490" y="361" text-anchor="middle" font-size="13" fill="#7c2d12">総合評価</text>
+
+      <line x1="490" y1="468" x2="490" y2="528" stroke="#e11d48" stroke-width="2" marker-end="url(#arr24b-red)"/>
+      <rect x="430" y="492" width="120" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="490" y="509" text-anchor="middle" font-size="13" fill="#9f1239">次の論点へ</text>
+
+      <rect x="330" y="30" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="490" y="58" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">契約内容の確定</text>
+      <text x="490" y="82" text-anchor="middle" font-size="12" fill="#1e3a8a">成立した合意の意味を解釈する</text>
+
+      <rect x="40" y="230" width="240" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="160" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">文言・条項構造</text>
+      <text x="160" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">契約書の通常の意味</text>
+      <text x="160" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">明確なら文理を重視</text>
+
+      <rect x="370" y="230" width="240" height="90" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="490" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">目的・交渉経過</text>
+      <text x="490" y="286" text-anchor="middle" font-size="12" fill="#7c2d12">何を達成したかったか</text>
+      <text x="490" y="306" text-anchor="middle" font-size="12" fill="#7c2d12">説明・見積り・議事録</text>
+
+      <rect x="700" y="230" width="240" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="820" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">慣行・社会通念</text>
+      <text x="820" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">取引類型の標準的意味</text>
+      <text x="820" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">信義則で補正</text>
+
+      <rect x="320" y="386" width="340" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="490" y="418" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">当事者の合理的意思</text>
+      <text x="490" y="442" text-anchor="middle" font-size="12" fill="#7c2d12">合意内容を確定し、義務の範囲を決める</text>
+
+      <rect x="300" y="536" width="380" height="58" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="490" y="560" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">履行・解除・不適合責任へ</text>
+      <text x="490" y="582" text-anchor="middle" font-size="12" fill="#9f1239">契約内容に適合した履行かを判断する</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、<strong><mark class="kw">契約の解釈</mark></strong>を、契約内容を確定するための判断構造として示している。最初の手がかりは契約書の文言であり、明確な文言を無視して自由に結論を作ることはできない。しかし文言が不明確な場合、当事者が契約で何を達成しようとしたか、交渉中にどの説明や合意があったか、当該取引で通常どのように理解されるかを総合する。こうして確定された契約内容が、履行請求、解除、契約不適合責任、損害賠償の前提になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">申込み</th>
+        <th class="col--b">申込みの誘引</th>
+        <th class="col--c">承諾</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">相手が承諾すれば契約が成立する意思表示</span>。契約内容を示す必要がある。</td>
+        <td class="col--b"><span class="em-b">相手方から申込みをさせるための勧誘</span>。広告、価格表、商品陳列などが典型。</td>
+        <td class="col--c"><span class="em-c">申込みに応じて契約を成立させる意思表示</span>。申込みとの一致が必要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">「この条件で売る」「この条件で貸す」と具体的に提示された場面。</td>
+        <td class="col--b">不特定多数へ情報を示し、個別注文や審査を予定する場面。</td>
+        <td class="col--c">相手方が示した条件を受け入れる返答をする場面。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">有効な期間中に一致する承諾が到達すれば契約が成立する。</td>
+        <td class="col--b">相手方の返答は原則として申込みとなり、誘引者の承諾が必要になる。</td>
+        <td class="col--c">申込みと一致し、期間内に到達すれば契約を成立させる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">判断基準</td>
+        <td class="col--a">数量、価格、対象、相手方、拒絶余地の有無を確認する。</td>
+        <td class="col--b">在庫確認、審査、承認、数量限定、表示者の選択余地を確認する。</td>
+        <td class="col--c">条件追加、価格変更、支払条件変更がないかを確認する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「申込みはいつでも自由に撤回できる」とする肢。</td>
+        <td class="col--b">「広告に応じた注文で必ず契約成立」とする肢。</td>
+        <td class="col--c">「変更を加えた返答でも元の申込みどおり成立」とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、表示者が「この内容で直ちに拘束されてもよい」と考えているかを見る。対象物、代金、数量、相手方が具体化し、相手の「はい」だけで契約成立を予定していれば<strong><mark class="kw">申込み</mark></strong>に近い。逆に、在庫確認、審査、抽選、数量制限、契約書作成後の最終承認が予定されている場合は<strong><mark class="kw">申込みの誘引</mark></strong>に近い。承諾は申込みの鏡像でなければならず、条件を変えた返答は新しい申込みとして扱う。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">承諾期間あり</th>
+        <th class="col--b">承諾期間なし・隔地者</th>
+        <th class="col--c">承諾期間なし・対話者</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><span class="em-a">民法523条</span></td>
+        <td class="col--b"><span class="em-b">民法525条1項</span></td>
+        <td class="col--c"><span class="em-c">民法525条2項・3項</span></td>
+      </tr>
+      <tr>
+        <td class="col--label">撤回可否</td>
+        <td class="col--a">原則撤回不可。撤回権留保があれば撤回可能。</td>
+        <td class="col--b">承諾通知を受ける相当期間を経過するまでは撤回不可。</td>
+        <td class="col--c">対話が継続している間はいつでも撤回可能。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効力消滅</td>
+        <td class="col--a">期間内に承諾通知を受けなければ効力を失う。</td>
+        <td class="col--b">相当期間経過後は撤回可能となり、承諾が遅れると成立しない。</td>
+        <td class="col--c">対話中に承諾を受けなければ原則として効力を失う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">「5月末までに返事をくれれば売る」というメール。</td>
+        <td class="col--b">回答期限なしで郵送された見積書や提案書。</td>
+        <td class="col--c">電話、対面交渉、リアルタイムのオンライン会議。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での注意</td>
+        <td class="col--a">期間内の承諾通知の到達を確認する。</td>
+        <td class="col--b">空間距離ではなく到達に時間を要するかを見る。</td>
+        <td class="col--c">対話終了後も効力を残す表示があるかを見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>承諾期間の問題では、最初に「期間の定めがあるか」を見る。期間があれば<strong><mark class="kw">民法523条</mark></strong>、期間がなければ<strong><mark class="kw">民法525条</mark></strong>へ進む。期間がない場合には、相手が隔地者か対話者かを分ける。電話やオンライン会議は離れた場所でも対話者である。試験では、対話者への申込みが対話終了後も当然に残るとする肢、隔地者への期間なし申込みを直ちに撤回できるとする肢が誤りになる。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">到達主義</th>
+        <th class="col--b">遅延承諾</th>
+        <th class="col--c">変更承諾</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><span class="em-a">民法97条1項</span></td>
+        <td class="col--b"><span class="em-b">民法524条</span></td>
+        <td class="col--c"><span class="em-c">民法528条</span></td>
+      </tr>
+      <tr>
+        <td class="col--label">意味</td>
+        <td class="col--a">意思表示は相手方に到達した時に効力を生じる。</td>
+        <td class="col--b">承諾が遅れて到達した場合、申込者は新たな申込みとみなせる。</td>
+        <td class="col--c">条件や変更を加えた承諾は、拒絶と新たな申込みとみなされる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">成立時期</td>
+        <td class="col--a">承諾通知が申込者の支配領域に入り、了知可能になった時が基準。</td>
+        <td class="col--b">申込者が新申込みとして扱い、これを承諾すれば成立する。</td>
+        <td class="col--c">元の申込みでは成立せず、相手方が新申込みを承諾すれば成立する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">現行法でも隔地者間承諾は発信時成立とする肢。</td>
+        <td class="col--b">遅延した承諾でも当然に契約成立とする肢。</td>
+        <td class="col--c">価格変更付き返答でも元の価格で成立とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>到達、遅延、変更は、どれも契約成立時点と契約内容をずらす論点である。承諾通知が期間内に到達して初めて契約成立が問題になる。遅れて到達した承諾は、申込者が新たな申込みとみなす余地を与えるだけで、当然に元の契約を成立させるものではない。内容を変えた承諾は、申込者の予想しない契約を成立させないため、新たな申込みとして処理する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法521条 契約の締結及び内容の自由</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十一条　何人も、法令に特別の定めがある場合を除き、契約をするかどうかを自由に決定することができる。<br>
+        2　契約の当事者は、法令の制限内において、契約の内容を自由に決定することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法521条</mark></strong>は、契約締結の自由と内容決定の自由を明文化した規定である。1項は、契約をする自由と契約をしない自由を認める。2項は、契約内容を自由に決められるが、法令の制限内に限られるとする。したがって、契約自由は公序良俗、強行法規、消費者保護規定、締約強制規定によって制限される。試験では、「契約自由の原則は明文化されていない」とする旧法的な説明や、「契約内容は法令に反しても当事者の合意があれば有効」とする肢を排除する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法522条 契約の成立と方式</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十二条　契約は、契約の内容を示してその締結を申し入れる意思表示（以下「申込み」という。）に対して相手方が承諾をしたときに成立する。<br>
+        2　契約の成立には、法令に特別の定めがある場合を除き、書面の作成その他の方式を具備することを要しない。
+      </blockquote>
+      <p><strong><mark class="kw">民法522条</mark></strong>は、申込みと承諾による契約成立と、方式不要の原則を定める。1項の「契約の内容を示して」という文言から、申込みには、相手方の承諾だけで契約内容を確定できる程度の具体性が必要である。2項は、契約書作成を原則として成立要件にしない。もっとも、保証契約の書面性のように、別条文や特別法が方式を要求する場合は例外である。行政書士試験では、契約成立と証拠、効力要件と対抗要件を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法523条 承諾の期間の定めのある申込み</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十三条　承諾の期間を定めてした申込みは、撤回することができない。ただし、申込者が撤回をする権利を留保したときは、この限りでない。<br>
+        2　申込者が前項の申込みに対して同項の期間内に承諾の通知を受けなかったときは、その申込みは、その効力を失う。
+      </blockquote>
+      <p><strong><mark class="kw">民法523条</mark></strong>は、回答期限付き申込みの拘束力を定める。期間を示した申込者は、その期間内に相手方が検討することを予定させているため、原則として撤回できない。ただし、撤回権留保が明示されていれば撤回できる。2項は、期間内に承諾通知を受けなければ申込みが失効するとする。ここで必要なのは承諾の発信ではなく、通知を受けることである。現行法の到達主義と接続して読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法524条 遅延した承諾の効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十四条　申込者は、遅延した承諾を新たな申込みとみなすことができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法524条</mark></strong>は、承諾が遅れて到達した場合の処理を定める。遅延承諾は、元の申込みの効力が失われた後に到達するため、そのままでは契約を成立させない。しかし、申込者がなお契約したい場合、これを新たな申込みとみなし、自分が承諾することで契約を成立させることができる。試験では、「遅延した承諾は常に無効で何の意味もない」という肢も、「遅延しても当然に契約が成立する」という肢も誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法525条 承諾の期間の定めのない申込み</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十五条　承諾の期間を定めないでした申込みは、申込者が承諾の通知を受けるのに相当な期間を経過するまでは、撤回することができない。ただし、申込者が撤回をする権利を留保したときは、この限りでない。<br>
+        2　対話者に対してした前項の申込みは、同項の規定にかかわらず、その対話が継続している間は、いつでも撤回することができる。<br>
+        3　対話者に対してした第一項の申込みに対して対話が継続している間に申込者が承諾の通知を受けなかったときは、その申込みは、その効力を失う。ただし、申込者が対話の終了後もその申込みが効力を失わない旨を表示したときは、この限りでない。
+      </blockquote>
+      <p><strong><mark class="kw">民法525条</mark></strong>は、回答期限のない申込みを、隔地者と対話者に分けて整理する。1項は隔地者を念頭に置き、相当期間を経過するまでは撤回できないとする。2項と3項は対話者に対する申込みの特則であり、対話中は撤回でき、対話中に承諾がなければ原則失効する。令和2年施行改正で対話者に関する解釈が明文化された点が重要である。問題文で「電話で」「その場で」「オンライン会議中に」とあれば、対話者ルールを考える。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法526条 申込者の死亡等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十六条　申込者が申込みの通知を発した後に死亡し、意思能力を有しない常況にある者となり、又は行為能力の制限を受けた場合において、申込者がその事実が生じたとすればその申込みは効力を有しない旨の意思を表示していたとき、又はその相手方が承諾の通知を発するまでにその事実が生じたことを知ったときは、その申込みは、その効力を有しない。
+      </blockquote>
+      <p><strong><mark class="kw">民法526条</mark></strong>は、申込者が申込み通知後に死亡等をした場合でも、常に申込みが失効するわけではないことを示す。失効するのは、申込者があらかじめその意思を表示していた場合、または相手方が承諾通知を発するまでに死亡等を知った場合である。これは、申込みの拘束力と相手方の信頼保護を調整する規定である。試験では、「申込者が死亡すれば申込みは当然に無効」とする肢を排除する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法527条 承諾通知不要の場合</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十七条　申込者の意思表示又は取引上の慣習により承諾の通知を必要としない場合には、契約は、承諾の意思表示と認めるべき事実があった時に成立する。
+      </blockquote>
+      <p><strong><mark class="kw">民法527条</mark></strong>は、承諾通知を省略できる取引類型を扱う。たとえば、申込者が「発送してくれればよい」と表示した場合や、継続取引で注文を受けた売主が直ちに商品を発送する慣行がある場合、発送などの事実が承諾の意思表示と認められれば、その時に契約が成立する。沈黙だけで承諾になるわけではなく、承諾の意思表示と評価できる事実が必要である。試験では、「返事がなければ承諾とみなす」と一方的に書けば常に成立するという肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法528条 申込みに変更を加えた承諾</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第五百二十八条　承諾者が、申込みに条件を付し、その他変更を加えてこれを承諾したときは、その申込みの拒絶とともに新たな申込みをしたものとみなす。
+      </blockquote>
+      <p><strong><mark class="kw">民法528条</mark></strong>は、変更承諾を、元の申込みの拒絶と新申込みとして処理する。たとえば、100万円で買うという申込みに対し、「90万円なら買う」「支払は半年後なら買う」と返答した場合、元の条件では契約が成立しない。これは、契約が当事者の合意を拘束力の根拠とする以上、申込者が示していない内容で契約を成立させることを避けるためである。試験では、条件付き承諾を承諾と新申込みのどちらで扱うかが頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法97条 意思表示の効力発生時期等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        第九十七条　意思表示は、その通知が相手方に到達した時からその効力を生ずる。<br>
+        2　相手方が正当な理由なく意思表示の通知が到達することを妨げたときは、その通知は、通常到達すべきであった時に到達したものとみなす。<br>
+        3　意思表示は、表意者が通知を発した後に死亡し、意思能力を喪失し、又は行為能力の制限を受けたときであっても、そのためにその効力を妨げられない。
+      </blockquote>
+      <p><strong><mark class="kw">民法97条</mark></strong>は、意思表示一般の到達主義を定める。承諾通知も原則としてこの規定に従う。到達とは、相手方が現実に読むことまで必要とせず、相手方の支配領域に入り、通常了知できる状態になることをいう。2項は、相手方が正当な理由なく受領を妨げた場合の到達擬制を定める。3項は、通知発信後に表意者が死亡しても、そのことだけで効力が妨げられないとする。契約成立の時点を判断する際には、522条だけでなく97条を必ず併せて読む。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 平成29年12月6日 平成26年(オ)第1130号・平成26年(受)第1440号、第1441号 民集71巻10号1817頁</div>
+      <div class="case-card__title">NHK受信契約締結承諾等請求事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法521条</span>
+        <span class="badge badge--law">民法522条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>日本放送協会は、放送を受信できる設備を設置した者に対し、放送受信契約の締結と受信料支払を求めた。相手方は、契約を締結するかどうかは私人の自由であり、協会から一方的に申込みを受けただけで契約が成立するわけではない、また放送法の受信契約締結義務は憲法上の自由や財産権を侵害するなどと争った。争点は、放送法64条1項がどのような意味で契約締結を強制するのか、受信設備設置だけで受信契約が成立するのか、協会の申込みだけで成立するのか、それとも承諾を命ずる判決が必要なのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、放送法64条1項は、受信設備設置者に対して受信契約の締結を強制する規定であるとした。ただし、受信設備を設置しただけで当然に契約が成立するわけではなく、協会から受信契約の申込みをしただけで契約が成立するわけでもない。受信設備設置者が承諾しない場合、協会は承諾の意思表示を命ずる判決を求め、その判決が確定することによって受信契約が成立するとした。契約締結強制は放送制度の目的にかなう適正・公平な受信料徴収のための制度として、憲法13条、21条、29条に違反しないと判断された。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">契約自由の原則</mark></strong>には法令による例外があり得ること、しかし契約成立はなお申込みと承諾の構造で考えることを示す重要判例である。誤答パターンは、「契約締結義務がある場合、相手方の承諾がなくても申込みだけで当然に契約が成立する」という肢である。正しくは、少なくともこの事案では、承諾の意思表示を命ずる判決の確定によって契約が成立する。契約自由の制限を認める場面でも、どの時点で契約が成立するかを丁寧に分ける必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法521条</mark></strong>、<strong><mark class="kw">民法522条</mark></strong>、民事執行法上の意思表示擬制、放送法64条1項、憲法13条・21条・29条が関連する。契約自由、締約強制、意思表示を命ずる判決、契約成立時期を横断的に整理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和56年6月16日 昭和54年(オ)第332号 集民133号75頁</div>
+      <div class="case-card__title">土地売買予約完結権行使事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法556条</span>
+        <span class="badge badge--law">信義則</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>市が貸ビル業者の土地を道路用地として買収するに当たり、その代替地を業者へ売り渡した。あわせて、市と業者は、隣接土地について、旧ビルの入居者を一時収容する仮事務所用地として賃貸借契約を結び、期間の定めのない売買予約も締結した。その後、業者は代替地上のビル建築に着手しないまま数年が経過し、隣接土地が新幹線用地として国鉄に買収されることになった。土地価格は予約時の代金額の6倍弱に高騰し、業者は収用裁決前に予約完結権を行使して本契約を成立させ、損失補償金を取得する立場に立った。市は、このような予約完結権行使は信義則に反すると争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、原判示の事情のもとでは、業者による予約完結権の行使が信義則に反して許されないとはいえないとした。予約は、土地の所在位置から市にとって利用価値が低下することが予想され、業者に買い取ってもらうのが最良の策として、市側が買取りを要望した結果成立したものであった。また、市と業者は、新幹線用地となることが公表される直前に賃貸借契約を重ねて締結したが、その際に売買予約の内容を変更したり、予約を失効させたりする措置を講じなかった。このような事情を踏まえ、予想外の価格高騰だけを理由に、予約完結権行使を信義則違反とは評価しなかった。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">売買予約</mark></strong>と<strong><mark class="kw">予約完結権</mark></strong>を理解するために重要である。予約は将来本契約を成立させるための合意であり、予約完結権の行使によって本契約が成立する。試験では、通常の申込みと承諾による契約成立だけでなく、予約完結権という一方的意思表示によって本契約が成立する場面も問われる。もっとも、予約完結権の行使も無制限ではなく、信義則違反が問題になり得る。本判例は、予想外の価格高騰があっても、予約締結の経緯やその後の契約関係を総合し、直ちに信義則違反とはしなかった点に意味がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法556条</mark></strong>の売買予約、<strong><mark class="kw">民法1条2項</mark></strong>の信義則、契約成立の特殊類型が関連する。通常の申込み・承諾と、予約完結権行使による本契約成立を比較して押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成15年10月10日 平成15年(受)第377号 裁判集民事211号13頁・判例時報1840号18頁</div>
+      <div class="case-card__title">建築請負契約における契約内容解釈と瑕疵</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">契約解釈</span>
+        <span class="badge badge--law">契約不適合</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>居住用建物の建築請負契約で、当事者は、建物の耐久性を高め、耐震性の面でより安全性の高い建物とするため、通常より太い鉄骨を使用することを特に約定していた。ところが、実際の施工では、その約定より細い鉄骨が用いられた。施工業者側は、構造計算上は安全性に問題がないから、建物に瑕疵はないと主張した。注文者側は、契約上特に約束した仕様と異なる施工である以上、たとえ最低限の安全性があっても契約上の瑕疵があると争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、たとえ構造計算上の安全性に問題がない場合でも、請負契約の当事者が、耐久性や耐震性を高めるためにより太い鉄骨を使用することを特に約定していたなら、その約定は契約の重要な内容になるとした。したがって、これに反して細い鉄骨を使用した施工には瑕疵があると判断した。裁判所は、法令上の最低基準を満たすかだけでなく、当事者が契約でどの品質・仕様を合意したかを重視したのである。契約書や交渉で特に定めた内容は、契約の解釈によって履行内容を具体化する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">契約の解釈</mark></strong>が債務内容や契約不適合の判断に直結することを示す。誤答パターンは、「建築基準法令の最低基準を満たしていれば、契約で特別に合意した仕様に反しても契約上の問題は生じない」という肢である。正しくは、契約で特に約定された品質・性能・仕様は、契約内容として拘束力を持つ。契約解釈では、法令の最低基準と当事者の合意内容を混同せず、当事者がどの品質を取引目的として合意したかを確定する。</p>
+      <h4>関連判例・条文</h4>
+      <p>売買の<strong><mark class="kw">契約不適合責任</mark></strong>、請負の目的物の瑕疵、<strong><mark class="kw">民法415条</mark></strong>の債務不履行、<strong><mark class="kw">民法562条</mark></strong>以下の追完・代金減額・解除・損害賠償と関連する。契約成立単元で契約内容を確定できることが、後続の履行・不履行判断の前提になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">契約自由の原則</mark></strong>は民法521条で明文化されたが、法令の特別の定めや法令の制限を受ける。</li>
+        <li><strong><mark class="kw">契約の成立</mark></strong>は申込みと承諾の合致が原則であり、契約書作成は原則として成立要件ではない。</li>
+        <li><strong><mark class="kw">申込み</mark></strong>は、承諾だけで契約を成立させる具体性が必要で、広告やカタログは通常は申込みの誘引である。</li>
+        <li><strong><mark class="kw">承諾期間のある申込み</mark></strong>は原則撤回不可で、期間内に承諾通知を受けなければ失効する。</li>
+        <li><strong><mark class="kw">承諾期間のない申込み</mark></strong>は、隔地者なら相当期間、対話者なら対話継続中という軸で判断する。</li>
+        <li><strong><mark class="kw">到達主義</mark></strong>が原則であり、現行民法では隔地者間承諾の旧発信主義を使わない。</li>
+        <li><strong><mark class="kw">変更承諾</mark></strong>は承諾ではなく、申込みの拒絶と新たな申込みである。</li>
+        <li><strong><mark class="kw">契約の解釈</mark></strong>は、契約内容適合性、解除、損害賠償の前提になる。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「契約は、原則として契約書を作成しなければ成立しない。」これは誤りである。<strong><mark class="kw">民法522条2項</mark></strong>は、法令に特別の定めがある場合を除き、書面その他の方式を要しないと定める。</p>
+      <p><strong>誤りの選択肢例2：</strong>「承諾期間を定めてした申込みも、申込者は承諾前であればいつでも撤回できる。」これは誤りである。<strong><mark class="kw">民法523条1項</mark></strong>により、原則として撤回できない。</p>
+      <p><strong>誤りの選択肢例3：</strong>「電話で回答期限を定めずにした申込みは、対話終了後も当然に効力が残る。」これは誤りである。対話者への申込みは、対話中に承諾通知を受けなければ原則として効力を失う。</p>
+      <p><strong>誤りの選択肢例4：</strong>「現行民法でも、隔地者間の契約は承諾通知を発信した時に成立する。」これは誤りである。旧法の発信主義規定は削除され、現行法では原則として<strong><mark class="kw">民法97条</mark></strong>の到達主義による。</p>
+      <p><strong>誤りの選択肢例5：</strong>「100万円で買うという申込みに対し、90万円なら買うと返答した場合、100万円で契約が成立する。」これは誤りである。<strong><mark class="kw">民法528条</mark></strong>により、変更を加えた承諾は拒絶と新たな申込みとみなされる。</p>
+      <p><strong>誤りの選択肢例6：</strong>「契約書の文言だけが契約内容であり、契約目的や交渉経過は一切考慮できない。」これは誤りである。契約書の文言を基本としつつ、文言が不明確な場合には目的、交渉経過、取引慣行、合理的意思を考慮して解釈する。</p>
+    </div>
+  </div>
+
+  <p>記述式での解答手順は、第一に、相手方に示された表示が<strong><mark class="kw">申込み</mark></strong>か<strong><mark class="kw">申込みの誘引</mark></strong>かを分類する。第二に、承諾が申込みと一致しているかを確認する。第三に、承諾期間、到達時期、撤回の有無、対話者か隔地者かを時系列で整理する。第四に、契約書や交渉経過から契約内容を確定する。第五に、「契約はいつ、どの内容で成立したか」または「契約は成立していない理由」を一文で表現する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">契約の成立</mark></strong>は、意思表示の瑕疵、代理、無効・取消し、債務不履行、解除、売買契約、契約不適合責任とつながる。契約が成立していなければ、解除や債務不履行の前提がない。契約が成立していても、代理権がない、錯誤や詐欺がある、制限行為能力者がした行為である場合には、効力が別途問題になる。さらに、売買単元では「契約内容に適合するか」を判断するため、契約解釈が前提になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、契約に関する基本原則と申込み・承諾のルールが整理された。<strong><mark class="kw">民法521条</mark></strong>は契約締結自由と内容決定自由を明文化し、<strong><mark class="kw">民法522条</mark></strong>は申込みと承諾による契約成立、方式不要の原則を明文化した。さらに、対話者に対する承諾期間のない申込みの取扱いが<strong><mark class="kw">民法525条</mark></strong>に整理され、旧法の隔地者間承諾発信主義は削除された。古い教材では発信主義が説明されている場合があるため、現行法では到達主義を原則にする。</p>
+    </div>
+  </div>
+
+  <p>実務では、<strong><mark class="kw">契約の成立</mark></strong>をめぐる紛争は、「契約書を作っていないから契約していない」「見積りを送っただけで契約ではない」「注文書に返事をしていない」「メールのやり取りだけでどの内容に合意したか不明」という形で現れる。民法上は書面不要が原則であるため、契約書がないことだけで成立を否定できない。反対に、契約書らしい書面があっても、重要内容が未確定なら成立や内容解釈が争われる。</p>
+
+  <p><strong><mark class="kw">電子契約</mark></strong>やメール取引では、到達時期と本人確認が重要になる。電子メールの承諾は、相手方のメールサーバー等に記録され、通常確認可能な状態になれば到達したと評価される余地がある。もっとも、迷惑メール振分け、誤送信、システム障害、担当者権限の有無など、事実認定の問題が残る。行政書士試験では、細かな電子取引実務よりも、発信時ではなく到達時を基準にするという基本を優先する。</p>
+
+  <p><strong><mark class="kw">契約の解釈</mark></strong>は、契約実務と試験問題の双方で重要である。契約書の条項は、単独の一文だけでなく、契約全体の目的、定義条項、支払条項、解除条項、保証条項との整合性で読む。交渉過程の議事録や見積書は、契約書に明記されていない内容を補う証拠になることがある。学習上は、成立要件を確認した後に、契約内容を確定し、その次に履行・解除・損害賠償へ進むという順序を固定すると、債権各論全体が整理しやすい。</p>
+
+  <p>他単元との関係では、<strong><mark class="kw">意思表示</mark></strong>の到達、<strong><mark class="kw">代理</mark></strong>による契約締結、<strong><mark class="kw">無効と取消し</mark></strong>、<strong><mark class="kw">契約の効力</mark></strong>、<strong><mark class="kw">契約の解除</mark></strong>、<strong><mark class="kw">売買契約</mark></strong>へ連続する。契約成立の単元は、契約法の入口であり、以後の単元で「契約上の債務」「契約内容」「契約不適合」と出てきたときの前提になる。暗記だけでなく、申込み、承諾、到達、解釈という判断順序を事例に当てはめて練習することが重要である。</p>
+</section>
+
+</body>
+</html>

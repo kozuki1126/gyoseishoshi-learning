@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>売買契約（手付、契約不適合責任） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">売買契約（手付、契約不適合責任）</h1>
+  <p class="page-title-block__sub">売買の成立・手付解除・売主の担保責任を、現行民法の契約責任として整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法555条</span>
+    <span class="badge badge--info">民法557条</span>
+    <span class="badge badge--info">民法562条</span>
+    <span class="badge badge--info">民法563条</span>
+    <span class="badge badge--info">民法566条</span>
+    <span class="badge badge--info">手付解除</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">売買契約</mark></strong>は、当事者の一方が財産権を移転することを約し、相手方が代金を支払うことを約することで効力を生じる典型契約である。日用品の購入から不動産売買、車両売買、債権譲渡の有償取引まで、民法上の財産取引の基礎になる。行政書士試験では、売買の成立自体よりも、契約締結後に当事者が契約から離脱できるか、目的物が契約内容と違っていたときに買主がどの救済を選べるかが問われやすい。</p>
+
+  <p>この単元の柱は二つである。第一は、<strong><mark class="kw">手付</mark></strong>である。買主が売主に手付を交付した場合、原則として買主は手付を放棄し、売主はその倍額を現実に提供して契約を解除できる。ただし、相手方が<strong><mark class="kw">契約の履行に着手</mark></strong>した後は、民法557条1項ただし書により手付解除はできない。第二は、令和2年施行の債権法改正後に中心となった<strong><mark class="kw">契約不適合責任</mark></strong>である。旧法の「隠れた瑕疵」という入口ではなく、引き渡された目的物や移転された権利が、契約で予定された種類・品質・数量・権利内容に適合しているかを基準に判断する。</p>
+
+  <p>出題では、<strong><mark class="kw">追完請求権</mark></strong>、<strong><mark class="kw">代金減額請求権</mark></strong>、解除、損害賠償、通知期間制限を横並びにさせる肢が多い。追完請求と代金減額請求は売主の帰責事由を要しないが、損害賠償では民法415条の帰責事由が問題になる。種類・品質の不適合については、買主が不適合を知った時から一年以内に通知しなければ権利行使が制限されるが、数量や権利の不適合では566条の通知期間制限そのものは直接適用されない。手付では、自分が履行に着手したかではなく、相手方が履行に着手したかを基準に解除可否を判断する点が典型的なひっかけである。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBから中古住宅を3000万円で買い、AがBに手付金300万円を交付した。Bがまだ登記移転準備にも引渡準備にも入っていない段階なら、Aは手付300万円を放棄して<strong><mark class="kw">手付解除</mark></strong>ができ、Bも600万円を現実に提供して解除できる。ところが、BがAに所有権を移転するため、第三者から土地の所有権を取得して登記まで済ませたような場合には、Bは客観的に外部から認識できる履行の前提行為をしており、Aはもはや手付解除できない。さらに、引渡しを受けた住宅に契約で予定された耐震補強がない、配管が通常使用に耐えない、約束された面積に不足がある場合には、Aは<strong><mark class="kw">契約不適合責任</mark></strong>として追完、代金減額、解除、損害賠償を検討する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">売買契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">売買契約</mark></strong>は、売主が財産権を買主に移転することを約し、買主が代金を支払うことを約する諾成・双務・有償契約である。根拠は<strong><mark class="kw">民法555条</mark></strong>であり、契約書作成や代金支払、目的物の引渡しは原則として成立要件ではない。制度趣旨は、財産権と金銭を交換する典型的な取引型を定め、売主・買主の基本義務と不適合時の救済を体系化する点にある。売主は目的物を引き渡すだけでなく、登記など対抗要件を備えさせる義務も負う。試験では、「売買は目的物の引渡しがなければ成立しない」という要物契約化した肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">手付</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">手付</mark></strong>は、売買契約の締結に際して買主から売主へ交付される金銭その他の有価物である。民法557条の手付は、特段の合意がなければ<strong><mark class="kw">解約手付</mark></strong>として扱われ、買主は手付を放棄し、売主は手付の倍額を現実に提供することで契約を解除できる。手付は、契約が成立した証拠となる証約手付、違約時の損害賠償予定として機能する違約手付という性質を併せ持つこともあるが、民法557条の試験処理では解約手付の解除権が中心である。解除によって契約を白紙化する代わりに、民法545条4項の損害賠償請求は適用されない。試験では、「売主は受け取った手付を返せば解除できる」とする肢が誤りであり、倍額の現実提供まで必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行の着手</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行の着手</mark></strong>とは、債務の内容である給付の実行に着手すること、又は履行の提供に欠くことのできない前提行為を客観的に外部から認識できる形で行うことをいう。単なる内心の準備、資金繰り、社内稟議、契約書案の作成だけでは足りない。手付解除を制限する趣旨は、相手方が契約履行に向けて具体的な行動を開始した後に、手付だけで一方的に離脱される不利益を防ぐ点にある。重要なのは、解除しようとする者自身の履行着手ではなく、相手方の履行着手である。最高裁は、自ら履行に着手した当事者であっても、相手方が履行に着手するまでは手付解除できるとするため、この点が頻出の誤答パターンになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">契約不適合責任</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">契約不適合責任</mark></strong>は、売主が引き渡した目的物又は移転した権利が契約の内容に適合しない場合に、買主に救済を認める制度である。旧法の瑕疵担保責任では「隠れた瑕疵」という表現が使われたが、現行法では契約内容に合っているかを正面から問う。契約内容は、契約書の文言だけでなく、契約目的、取引経緯、当事者の説明、サンプル、広告表示、社会通念を踏まえて確定する。効果として、追完請求、代金減額請求、解除、損害賠償が問題になる。試験では、「買主が不適合を知らなかった場合に限り責任追及できる」という旧法的な肢や、「不適合があれば常に解除できる」という解除要件を飛ばした肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">追完請求権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">追完請求権</mark></strong>は、目的物が種類・品質・数量に関して契約内容に適合しない場合に、買主が売主に対し、修補、代替物の引渡し、不足分の引渡しを求める権利である。根拠は<strong><mark class="kw">民法562条</mark></strong>であり、売主の故意・過失を要しない。買主は追完方法を選べるが、買主に不相当な負担を課さないときは、売主が別の方法で追完できる。たとえば、新品交換を求めた買主に対し、部品交換だけで契約内容に完全に適合し、買主に不相当な負担を課さないなら、売主は修補で対応できる。試験では、「買主が指定した追完方法に売主は常に従わなければならない」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代金減額請求権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代金減額請求権</mark></strong>は、契約不適合がある場合に、買主が不適合の程度に応じて代金の減額を求める形成権である。原則として、買主は相当期間を定めて追完を催告し、その期間内に追完がないときに行使できる。もっとも、追完不能、売主の明確な追完拒絶、定期行為で時期を経過した場合、催告しても追完を受ける見込みが明らかにない場合には、催告なしで直ちに減額請求できる。売主に帰責事由がない場合でも行使できるが、不適合が買主の責めに帰すべき事由によるときは行使できない。試験では、解除と混同して「契約目的を達成できない場合でなければ代金減額できない」とする肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">通知期間制限</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">通知期間制限</mark></strong>は、目的物の種類又は品質に関する契約不適合について、買主が不適合を知った時から一年以内にその旨を売主に通知しなければ、追完、代金減額、損害賠償、解除をすることができなくなる制度である。根拠は<strong><mark class="kw">民法566条</mark></strong>である。趣旨は、時間の経過により原因究明や証拠保存が困難になる売主の不利益を防ぐ点にある。ただし、売主が引渡し時に不適合を知り、又は重大な過失で知らなかったときは、売主を保護する必要がないため期間制限は働かない。試験では、「知った時から一年以内に訴訟提起まで必要」とする肢が誤りであり、現行法では通知で足りる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 720" role="img" aria-label="売買契約の全体構造">
+      <defs>
+        <marker id="arr27a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr27a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr27a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="104" x2="560" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="940" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="180" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27a-blue)"/>
+      <line x1="560" y1="148" x2="560" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27a-blue)"/>
+      <line x1="940" y1="148" x2="940" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27a-blue)"/>
+      <rect x="496" y="126" width="128" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">基本義務を分解</text>
+
+      <line x1="560" y1="326" x2="560" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="220" y1="378" x2="900" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="220" y1="378" x2="220" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27a-orange)"/>
+      <line x1="560" y1="378" x2="560" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27a-orange)"/>
+      <line x1="900" y1="378" x2="900" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27a-orange)"/>
+      <rect x="500" y="356" width="120" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">締結後の争点</text>
+
+      <polyline points="900,532 900,585 560,585 560,622" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr27a-red)"/>
+      <rect x="690" y="568" width="164" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="772" y="585" text-anchor="middle" font-size="13" fill="#9f1239">通知期間を忘れない</text>
+
+      <rect x="400" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">売買契約</text>
+      <text x="560" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">財産権移転と代金支払の交換</text>
+
+      <rect x="60" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">売主の義務</text>
+      <text x="180" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">財産権移転・引渡し</text>
+      <text x="180" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法555条・560条</text>
+
+      <rect x="440" y="230" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">買主の義務</text>
+      <text x="560" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">代金支払・受領協力</text>
+      <text x="560" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">双務契約の反対給付</text>
+
+      <rect x="820" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="940" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">有償契約への準用</text>
+      <text x="940" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">売買規定が基準になる</text>
+      <text x="940" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法559条</text>
+
+      <rect x="90" y="450" width="260" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="220" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">手付解除</text>
+      <text x="220" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">相手方の履行着手前まで</text>
+
+      <rect x="430" y="450" width="260" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">契約不適合</text>
+      <text x="560" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">種類・品質・数量・権利</text>
+
+      <rect x="770" y="450" width="260" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="900" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">期間制限</text>
+      <text x="900" y="504" text-anchor="middle" font-size="12" fill="#9f1239">種類・品質は一年以内通知</text>
+
+      <rect x="380" y="630" width="360" height="58" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="655" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">救済選択</text>
+      <text x="560" y="677" text-anchor="middle" font-size="12" fill="#9f1239">追完・減額・解除・損害賠償を要件別に処理</text>
+    </svg>
+  </div>
+
+  <p>この図は、売買契約を「成立時の基本義務」と「締結後の紛争処理」に分けている。売主は財産権を移転し、買主は代金を支払うという交換関係を出発点にする。契約締結時に手付が交付されていれば、履行着手前の離脱手段として手付解除が問題になる。引渡し後に目的物や権利が契約内容と違うときは、契約不適合責任の四つの救済を、帰責事由や通知期間の有無で分ける。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 760" role="img" aria-label="契約不適合責任の判断構造">
+      <defs>
+        <marker id="arr27b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr27b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr27b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="104" x2="560" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="148" x2="950" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="148" x2="170" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27b-blue)"/>
+      <line x1="430" y1="148" x2="430" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27b-blue)"/>
+      <line x1="690" y1="148" x2="690" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27b-blue)"/>
+      <line x1="950" y1="148" x2="950" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr27b-blue)"/>
+      <rect x="500" y="126" width="120" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">不適合の分類</text>
+
+      <line x1="560" y1="326" x2="560" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="190" y1="378" x2="930" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="190" y1="378" x2="190" y2="452" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27b-orange)"/>
+      <line x1="440" y1="378" x2="440" y2="452" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27b-orange)"/>
+      <line x1="680" y1="378" x2="680" y2="452" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27b-orange)"/>
+      <line x1="930" y1="378" x2="930" y2="452" stroke="#ea580c" stroke-width="2" marker-end="url(#arr27b-orange)"/>
+      <rect x="502" y="356" width="116" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">買主の救済</text>
+
+      <polyline points="190,542 190,610 560,610 560,650" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr27b-red)"/>
+      <polyline points="440,542 440,596 560,596 560,650" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr27b-red)"/>
+      <rect x="330" y="584" width="170" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="415" y="601" text-anchor="middle" font-size="13" fill="#9f1239">種類・品質のみ</text>
+
+      <rect x="390" y="34" width="340" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">契約不適合責任</text>
+      <text x="560" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">契約内容に適合する給付をしたか</text>
+
+      <rect x="50" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="170" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">種類不適合</text>
+      <text x="170" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">注文品と別の種類</text>
+      <text x="170" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法562条</text>
+
+      <rect x="310" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="430" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">品質不適合</text>
+      <text x="430" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">性能・状態が契約と違う</text>
+      <text x="430" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">合意と社会通念</text>
+
+      <rect x="570" y="230" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="690" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">数量不適合</text>
+      <text x="690" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">個数・面積・容量の不足</text>
+      <text x="690" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">不足分引渡し</text>
+
+      <rect x="830" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="950" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">権利不適合</text>
+      <text x="950" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">他人権利・負担付き権利</text>
+      <text x="950" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法565条</text>
+
+      <rect x="70" y="460" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="190" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">追完請求</text>
+      <text x="190" y="514" text-anchor="middle" font-size="12" fill="#7c2d12">修補・代替物・不足分</text>
+
+      <rect x="320" y="460" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="440" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">代金減額</text>
+      <text x="440" y="514" text-anchor="middle" font-size="12" fill="#7c2d12">原則は追完催告後</text>
+
+      <rect x="560" y="460" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="680" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除</text>
+      <text x="680" y="514" text-anchor="middle" font-size="12" fill="#9f1239">541条・542条で判断</text>
+
+      <rect x="810" y="460" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="930" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">損害賠償</text>
+      <text x="930" y="514" text-anchor="middle" font-size="12" fill="#9f1239">415条の帰責事由を確認</text>
+
+      <rect x="380" y="660" width="360" height="58" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="685" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">一年以内通知</text>
+      <text x="560" y="707" text-anchor="middle" font-size="12" fill="#9f1239">売主が知り又は重過失で知らない場合は例外</text>
+    </svg>
+  </div>
+
+  <p>この図は、契約不適合をまず種類・品質・数量・権利のどれかに分類し、その後に買主の救済を選ぶ流れを示している。追完請求と代金減額請求は、売主の帰責事由とは切り離して考えるが、買主帰責があると制限される。解除は売買独自の要件ではなく、民法541条・542条の一般ルールに戻って、軽微性や無催告解除事由を検討する。損害賠償では、契約不適合があるだけでなく、民法415条ただし書の免責事由がないかを確認する。種類・品質の不適合では、救済選択の前後を問わず、知った時から一年以内の通知を忘れない。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">手付解除</th>
+        <th class="col--b">債務不履行解除</th>
+        <th class="col--c">合意解除</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><span class="em-a">民法557条</span>。買主の手付放棄、売主の倍額現実提供による。</td>
+        <td class="col--b"><span class="em-b">民法541条・542条</span>。不履行の重大性や契約目的不到達で判断する。</td>
+        <td class="col--c"><span class="em-c">当事者の合意</span>。解除条件や清算内容も合意で決める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">契約締結後、履行が本格化する前に契約から離脱したい場合。</td>
+        <td class="col--b">相手方の履行遅滞、履行不能、履行拒絶、契約不適合がある場合。</td>
+        <td class="col--c">当事者双方が契約を終了させることに納得している場合。</td>
+      </tr>
+      <tr>
+        <td class="col--label">制限</td>
+        <td class="col--a">相手方が<span class="em-a">履行に着手</span>した後はできない。</td>
+        <td class="col--b">軽微な不履行では催告解除できず、債権者帰責では解除できない。</td>
+        <td class="col--c">強行法規や信義則に反する合意は制限される。</td>
+      </tr>
+      <tr>
+        <td class="col--label">損害賠償</td>
+        <td class="col--a">民法557条2項により、545条4項の損害賠償併存は適用されない。</td>
+        <td class="col--b">解除しても<span class="em-b">損害賠償請求</span>は妨げられない。</td>
+        <td class="col--c">合意内容による。清算条項で放棄・留保を明確にする。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「自分が履行に着手したら手付解除できない」とする肢。</td>
+        <td class="col--b">「不履行があれば常に無催告解除できる」とする肢。</td>
+        <td class="col--c">「合意解除は法定解除と同じ効果に当然なる」とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>手付解除では、相手方が履行に着手したかを確認する。債務不履行解除では、不履行の種類、催告の要否、軽微性、債権者帰責を順に確認する。合意解除は当事者の合意で終了させるため、原状回復や違約金をどのように処理するかは合意内容の解釈問題になる。試験では「解除」という言葉だけで処理せず、根拠が民法557条か、541条・542条か、当事者の合意かを先に分類する。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">追完請求</th>
+        <th class="col--b">代金減額請求</th>
+        <th class="col--c">解除・損害賠償</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠</td>
+        <td class="col--a"><span class="em-a">民法562条</span>。修補、代替物、不足分引渡し。</td>
+        <td class="col--b"><span class="em-b">民法563条</span>。不適合の程度に応じて代金を減らす。</td>
+        <td class="col--c"><span class="em-c">民法564条</span>から415条、541条、542条へ接続する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">帰責事由</td>
+        <td class="col--a">売主の帰責事由は不要。ただし買主帰責なら請求不可。</td>
+        <td class="col--b">売主の帰責事由は不要。ただし買主帰責なら請求不可。</td>
+        <td class="col--c">解除は現行法上、原則として債務者帰責不要。損害賠償は帰責事由が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">催告</td>
+        <td class="col--a">追完そのものを求める権利なので、催告が入口になるとは限らない。</td>
+        <td class="col--b">原則として相当期間を定めた追完催告が必要。</td>
+        <td class="col--c">催告解除なら催告が必要。無催告解除は542条各号で判断する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">期間制限</td>
+        <td class="col--a">種類・品質不適合では、知った時から一年以内通知が必要。</td>
+        <td class="col--b">種類・品質不適合では、知った時から一年以内通知が必要。</td>
+        <td class="col--c">同じく種類・品質不適合では通知が必要。ただし売主悪意・重過失は例外。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「買主の指定した方法以外の追完は常に不可」とする肢。</td>
+        <td class="col--b">「追完不能でも必ず催告が必要」とする肢。</td>
+        <td class="col--c">「契約不適合があれば、帰責事由なしでも常に損害賠償できる」とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、買主がまず契約どおりの物を欲しいのか、値引きで足りるのか、契約を終わらせたいのか、損害填補を求めたいのかで救済を分ける。追完可能なら追完請求が自然であり、追完されない又は追完不能なら代金減額や解除へ進む。損害賠償は、売主の帰責事由と損害額の立証が別途必要になるため、追完・減額と同じ要件ではない。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法555条・557条・559条</span>
+    </div>
+    <div class="box__bd">
+      <h3>売買の成立・手付・有償契約への準用</h3>
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法555条</mark></strong>　売買は、当事者の一方がある財産権を相手方に移転することを約し、相手方がこれに対してその代金を支払うことを約することによって、その効力を生ずる。<br>
+        <strong><mark class="kw">民法557条</mark></strong>　買主が売主に手付を交付したときは、買主はその手付を放棄し、売主はその倍額を現実に提供して、契約の解除をすることができる。ただし、その相手方が契約の履行に着手した後は、この限りでない。<br>
+        2　第545条第4項の規定は、前項の場合には、適用しない。<br>
+        <strong><mark class="kw">民法559条</mark></strong>　この節の規定は、売買以外の有償契約について準用する。ただし、その有償契約の性質がこれを許さないときは、この限りでない。
+      </blockquote>
+      <p><strong><mark class="kw">民法555条</mark></strong>は、売買が諾成契約であることを示す。財産権移転の約束と代金支払の約束が合致すれば効力を生じるため、引渡しや登記は成立後の履行・対抗要件の問題である。<strong><mark class="kw">民法557条</mark></strong>は、手付を交付した場合の法定解除権を定めるが、相手方の履行着手後は解除できない。手付解除は、債務不履行を理由とする解除ではなく、手付を犠牲にして履行前の契約拘束から離脱する制度であるため、同条2項は損害賠償併存規定を排除する。<strong><mark class="kw">民法559条</mark></strong>により、売買規定は有償契約一般の基準にもなるが、契約の性質に反する場合は準用されない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法560条・561条・565条</span>
+    </div>
+    <div class="box__bd">
+      <h3>売主の権利移転義務と権利不適合</h3>
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法560条</mark></strong>　売主は、買主に対し、登記、登録その他の売買の目的である権利の移転についての対抗要件を備えさせる義務を負う。<br>
+        <strong><mark class="kw">民法561条</mark></strong>　他人の権利を売買の目的としたときは、売主は、その権利を取得して買主に移転する義務を負う。<br>
+        <strong><mark class="kw">民法565条</mark></strong>　前三条の規定は、売主が買主に移転した権利が契約の内容に適合しないものである場合について準用する。
+      </blockquote>
+      <p>売買の目的は物の引渡しだけではなく、権利を移転することである。<strong><mark class="kw">民法560条</mark></strong>は、不動産なら登記、車両なら登録など、権利移転を第三者に対抗できる状態にする義務を売主に課す。<strong><mark class="kw">民法561条</mark></strong>は他人物売買を有効としつつ、売主にその権利を取得して移転する義務を負わせる。<strong><mark class="kw">民法565条</mark></strong>は、地上権や抵当権など予定外の負担がある場合、権利の一部が移転されない場合などを、目的物の契約不適合と同じ救済体系へ接続する。試験では、他人物売買を当然無効とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法562条・563条・564条</span>
+    </div>
+    <div class="box__bd">
+      <h3>買主の救済手段</h3>
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法562条</mark></strong>　引き渡された目的物が種類、品質又は数量に関して契約の内容に適合しないものであるときは、買主は、売主に対し、目的物の修補、代替物の引渡し又は不足分の引渡しによる履行の追完を請求することができる。<br>
+        <strong><mark class="kw">民法563条</mark></strong>　買主が相当の期間を定めて履行の追完の催告をし、その期間内に履行の追完がないときは、買主は、その不適合の程度に応じて代金の減額を請求することができる。<br>
+        <strong><mark class="kw">民法564条</mark></strong>　前二条の規定は、第415条の規定による損害賠償の請求並びに第541条及び第542条の規定による解除権の行使を妨げない。
+      </blockquote>
+      <p><strong><mark class="kw">民法562条</mark></strong>は、現行法で新たに明文化された買主の追完請求権である。買主が請求した方法と異なる追完であっても、買主に不相当な負担を課さないなら売主はその方法を選べる。<strong><mark class="kw">民法563条</mark></strong>は、追完がされない場合の価格調整として代金減額請求を定める。原則は追完催告後であるが、追完不能、明確な拒絶、時期を失う定期行為、催告しても追完見込みがない場合は無催告でよい。<strong><mark class="kw">民法564条</mark></strong>により、解除と損害賠償は一般債務不履行の要件に接続するため、損害賠償だけは帰責事由の有無を別に確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法566条・567条・568条</span>
+    </div>
+    <div class="box__bd">
+      <h3>期間制限・危険移転・競売</h3>
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法566条</mark></strong>　売主が種類又は品質に関して契約の内容に適合しない目的物を買主に引き渡した場合において、買主がその不適合を知った時から一年以内にその旨を売主に通知しないときは、買主は、その不適合を理由として、履行の追完の請求、代金の減額の請求、損害賠償の請求及び契約の解除をすることができない。ただし、売主が引渡しの時にその不適合を知り、又は重大な過失によって知らなかったときは、この限りでない。<br>
+        <strong><mark class="kw">民法567条</mark></strong>　売主が買主に目的物を引き渡した場合において、その引渡しがあった時以後にその目的物が当事者双方の責めに帰することができない事由によって滅失し、又は損傷したときは、買主は、その滅失又は損傷を理由として、履行の追完、代金減額、損害賠償及び解除をすることができない。<br>
+        <strong><mark class="kw">民法568条</mark></strong>　競売における買受人は、一定の場合に債務者に対し契約の解除又は代金減額を請求できるが、目的物の種類又は品質に関する不適合については適用しない。
+      </blockquote>
+      <p><strong><mark class="kw">民法566条</mark></strong>は、種類・品質に関する不適合だけを対象とする通知期間制限である。数量不足や権利不適合については別に消滅時効や権利行使の一般ルールを検討する。通知は不適合の存在を売主に知らせるもので足り、旧法判例のように具体的な損害額や請求意思まで詳細に示す必要はないと理解される。<strong><mark class="kw">民法567条</mark></strong>は、引渡し後の不可抗力による滅失・損傷リスクを買主へ移す規定であり、危険負担単元と接続する。<strong><mark class="kw">民法568条</mark></strong>は競売の特殊性を踏まえ、権利不存在などでは救済を認めつつ、種類・品質不適合については通常売買と同じ担保責任を認めない点に注意する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和40年11月24日 昭和37年(オ)第760号 民集19巻8号2019頁</div>
+      <div class="case-card__title">解約手付と履行の着手事件（所有権移転登記等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法557条</span>
+        <span class="badge badge--law">履行の着手</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>買主Xは、売主Yから第三者所有の不動産を買い受ける契約を締結し、手付を交付した。売主Yは、買主へ目的不動産を移転するための前提として、第三者から当該不動産の所有権を取得し、自己名義への所有権取得登記を済ませた。その後、契約関係が紛争となり、手付解除の可否が争われた。中心問題は、第三者所有物を売る契約で、売主が第三者から所有権を取得して自己名義登記を得る行為が、民法557条1項ただし書の「契約の履行に着手」に当たるか、また履行に着手した当事者自身が手付解除できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、第三者所有の不動産の売買契約において、売主が買主に譲渡する前提として目的不動産の所有権を取得し、自己名義の所有権取得登記を得た場合は、契約の履行に着手したものに当たると判断した。履行の着手とは、債務の内容である給付の実行に着手すること、又は履行の提供に欠くことのできない前提行為を客観的に外部から認識できる形で行うことをいう。他方で、解約手付が授受された売買契約では、当事者の一方が自ら履行に着手していても、相手方が履行に着手するまでは、民法557条1項の解除権を行使できるとした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">手付解除</mark></strong>の最重要判例である。第一に、履行の着手は単なる準備では足りないが、履行の提供に不可欠な前提行為が外部から認識できる形で行われれば足りる。第二に、手付解除を妨げるのは相手方の履行着手であり、自分が履行に着手したことではない。誤答パターンは、「買主が残代金を準備しただけで売主の手付解除は常に不可」「売主が自ら登記準備をした以上、売主自身は手付解除できない」という形で出る。問題文では、誰が解除しようとしているか、相手方が履行に着手したか、行為が外部から客観的に認識できるかを順に見る。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法557条</mark></strong>、<strong><mark class="kw">民法561条</mark></strong>の他人物売買、<strong><mark class="kw">民法560条</mark></strong>の対抗要件具備義務が関連する。不動産売買、宅地建物取引、残代金支払期日前の解除、履行準備と履行着手の区別で応用される。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成22年6月1日 平成21年(受)第17号 民集64巻4号953頁</div>
+      <div class="case-card__title">土壌中ふっ素と瑕疵担保責任事件（損害賠償請求等事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法562条</span>
+        <span class="badge badge--law">契約内容</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地売買契約の目的土地から、契約締結後に法令上の規制対象となったふっ素が基準値を超えて検出された。買主側は、土壌中にふっ素が含まれていたことにより土地が通常備えるべき性質を欠くとして、旧民法570条の瑕疵担保責任に基づき損害賠償を求めた。売主側は、契約締結当時、ふっ素が土壌に含まれることによる健康被害のおそれは一般に認識されておらず、当事者間でもふっ素を含まない土地であることが契約内容として予定されていたわけではないと争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、売買契約締結当時の取引観念上、ふっ素が土壌に含まれることにより人の健康に係る被害を生ずるおそれがあるとは認識されていなかったこと、当事者間で土地が備えるべき属性として、ふっ素が含まれていないことや、有害性認識の有無を問わず健康被害のおそれのある一切の物質が含まれていないことが特に予定されていた事情もないことを重視した。そのため、本件土地の土壌に高濃度のふっ素が含まれていたことは、旧民法570条の瑕疵には当たらないと判断した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は旧法下の瑕疵担保責任に関する判例だが、現行法の<strong><mark class="kw">契約不適合責任</mark></strong>を理解する上でも重要である。目的物が契約内容に適合するかは、物理的状態だけで機械的に決まるのではなく、契約締結時の取引観念、当事者の合意、契約目的、予定された属性から判断する。誤答パターンは、「後に規制対象となった物質が含まれていれば、契約当時の合意や取引観念にかかわらず常に契約不適合となる」という肢である。現行法では「瑕疵」という語は使わないが、契約内容を確定してから適合性を判断するという構造は連続している。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法562条</mark></strong>、<strong><mark class="kw">民法563条</mark></strong>、<strong><mark class="kw">民法566条</mark></strong>、契約解釈、土壌汚染対策法が関連する。売買目的物の品質不適合を判断する問題で、契約書の文言、説明資料、当時の社会通念、用途を総合する視点が問われる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成4年10月20日 平成1年(オ)第1667号 民集46巻7号1129頁</div>
+      <div class="case-card__title">瑕疵担保責任の期間内権利保存通知事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法566条</span>
+        <span class="badge badge--law">期間制限</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>旧民法下で、売買目的物に隠れた瑕疵があるとして買主が売主の担保責任を追及した。争点は、旧法566条の期間制限内に、買主がどの程度の内容を売主へ伝えれば権利を保存したといえるかであった。買主側は瑕疵の存在を売主に知らせていたと主張し、売主側は、単に不具合を知らせるだけでは足りず、担保責任を追及する意思や損害賠償請求の内容が明確でなければ期間内行使とはいえないと争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、旧法の期間制限について、買主は単に瑕疵の存在を通知するだけでは足りず、瑕疵の内容とそれに基づく損害賠償請求をする旨を表明し、請求する損害額の算定根拠を示すなど、売主の担保責任を問う意思を明確に告げる必要があるとした。この判例は旧法の「権利行使」期間を前提とする厳格な理解であり、買主に重い負担を課すものとして、債権法改正で見直しの背景になった。</p>
+      <h4>試験上の意義</h4>
+      <p>現行法の<strong><mark class="kw">民法566条</mark></strong>は、旧法と異なり、買主が不適合を知った時から一年以内に「その旨を売主に通知」すれば足りる構造になっている。したがって、旧法判例の厳格な権利行使要件をそのまま現行法に持ち込む肢は誤りである。もっとも、通知制度の趣旨が、売主に原因調査や証拠保存の機会を与える点にあることは変わらない。試験では、「一年以内に訴訟提起しなければならない」「一年以内に損害額の算定根拠まで示さなければならない」という肢を、現行法の通知要件と比較して処理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法566条</mark></strong>、旧民法570条、債権法改正、消滅時効、契約不適合の種類・品質不適合が関連する。改正前後の違いを問う問題で、旧法の「権利行使」と現行法の「通知」を混同しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">売買契約</mark></strong>は民法555条により諾成契約であり、引渡しや登記が成立要件になるわけではない。</li>
+        <li><strong><mark class="kw">手付解除</mark></strong>では、買主は手付放棄、売主は倍額の現実提供が必要である。</li>
+        <li>手付解除ができなくなる基準は、解除する者自身ではなく、相手方が<strong><mark class="kw">履行に着手</mark></strong>したかである。</li>
+        <li><strong><mark class="kw">契約不適合責任</mark></strong>では、種類、品質、数量、権利のどの不適合かを先に分類する。</li>
+        <li><strong><mark class="kw">追完請求権</mark></strong>と<strong><mark class="kw">代金減額請求権</mark></strong>は、売主の帰責事由を要しないが、買主帰責なら制限される。</li>
+        <li>解除は民法541条・542条へ、損害賠償は民法415条へ接続するため、要件を混同しない。</li>
+        <li><strong><mark class="kw">民法566条</mark></strong>の一年以内通知は、種類・品質に関する不適合が対象であり、売主悪意・重過失では例外がある。</li>
+        <li>競売では、種類・品質不適合について通常売買と同じ救済を認めない点を押さえる。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「売買契約は、目的物を引き渡した時に初めて成立する。」これは誤りである。<strong><mark class="kw">民法555条</mark></strong>により、財産権移転と代金支払の合意で効力を生じる。</p>
+      <p><strong>誤りの選択肢例2：</strong>「売主は、受け取った手付を返還すれば手付解除できる。」これは誤りである。<strong><mark class="kw">民法557条</mark></strong>は、売主に手付の倍額を現実に提供することを要求する。</p>
+      <p><strong>誤りの選択肢例3：</strong>「買主が残代金を準備して履行に着手した場合、相手方が履行に着手していなくても買主は手付解除できない。」これは誤りである。手付解除を妨げるのは相手方の履行着手である。</p>
+      <p><strong>誤りの選択肢例4：</strong>「契約不適合責任は、買主が不適合を知らず、かつ知らないことに過失がない場合に限り追及できる。」これは旧法的な誤りである。現行法は契約内容への適合性を入口にする。</p>
+      <p><strong>誤りの選択肢例5：</strong>「代金減額請求は、売主に故意又は過失がある場合に限り認められる。」これは誤りである。<strong><mark class="kw">民法563条</mark></strong>の代金減額請求は、売主の帰責事由を要しない。</p>
+      <p><strong>誤りの選択肢例6：</strong>「種類又は品質の不適合を知った買主は、一年以内に訴訟を提起しなければすべての権利を失う。」これは誤りである。現行の<strong><mark class="kw">民法566条</mark></strong>では、不適合を知った時から一年以内にその旨を通知すればよい。</p>
+    </div>
+  </div>
+
+  <p>記述式での処理は、第一に売買契約が有効に成立しているかを確認する。第二に、手付が交付されていれば、解除しようとする者、相手方の履行着手、手付放棄又は倍額現実提供を確認する。第三に、目的物・権利の不適合が問題なら、契約内容を確定し、種類・品質・数量・権利のどれに当たるか分類する。第四に、買主が求める救済が追完、代金減額、解除、損害賠償のどれかを決め、その救済ごとの要件を当てはめる。第五に、種類・品質不適合では一年以内通知と売主悪意・重過失の例外を検討する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">売買契約</mark></strong>は、契約成立、契約の効力、危険負担、契約解除、債務不履行、物権変動、担保物権、消滅時効と連続する。手付解除は解除単元と重なるが、債務不履行解除とは根拠も損害賠償の扱いも異なる。契約不適合責任では、契約内容を確定するために契約解釈が必要であり、解除では541条・542条、損害賠償では415条、引渡し後の滅失では567条と危険負担をつなげて処理する。不動産売買では、対抗要件、登記、宅地建物取引の実務知識とも接続する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、売主の担保責任が旧法の<strong><mark class="kw">瑕疵担保責任</mark></strong>から、現行法の<strong><mark class="kw">契約不適合責任</mark></strong>へ再構成された。旧法の「隠れた瑕疵」という表現は削除され、売主が契約内容に適合する目的物や権利を給付したかが中心になった。買主の救済も、解除と損害賠償だけでなく、追完請求と代金減額請求が明文化された。これは、売買を法定責任の特別制度としてではなく、契約責任・債務不履行責任の体系の中で整理する方向を示す。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">契約不適合責任</mark></strong>は契約書の作り方に直結する。どの品質・性能・数量を契約内容にするか、現状有姿売買でどこまで責任を制限するか、契約不適合を知った場合の通知方法、修補か代替物引渡しか、解除できる程度の不適合をどう定めるかが重要である。特に中古不動産や中古車売買では、経年劣化、通常損耗、既知の欠陥、専門検査の有無を契約内容に落とし込まなければ、後に契約不適合かどうかが争われる。</p>
+
+  <p><strong><mark class="kw">手付</mark></strong>は、不動産取引で特に重要である。契約締結後、買主が住宅ローン審査を受ける、売主が転居先を探す、登記手続を準備するなど、履行に向けた行動が進むほど、手付解除の限界が問題になる。もっとも、履行の着手は事案ごとの評価であり、単なる準備か、履行に不可欠な前提行為か、外部から客観的に認識できるかを区別する必要がある。契約書で手付解除期限を定めることも多いが、民法上の原則を理解しておくと条項の意味を読みやすい。</p>
+
+  <p><strong><mark class="kw">通知期間制限</mark></strong>は、消滅時効とは別の制度である。民法566条の通知をしても、権利自体の消滅時効が止まるわけではないため、通知後にいつまでも請求できるわけではない。他方で、通知期間制限にかかるのは種類・品質に関する不適合であり、数量不足や権利不適合では566条をそのまま使わない。試験では、期間制限を広げすぎる肢と、通知を訴訟提起や具体的請求と同視する肢の両方が狙われる。</p>
+
+  <p>学習上は、売買契約を「成立」「手付」「売主の義務」「不適合時の救済」「期間制限」に分けて整理する。成立では民法555条、手付では557条、売主の義務では560条・561条、不適合では562条から565条、期間制限では566条を中心に据える。問題文で目的物が壊れている、数量が足りない、権利に負担がある、引渡後に滅失した、手付を返すと言っている、という事実が出たら、それぞれどの条文へ接続するかを先に決める。この接続ができれば、売買単元は債権各論だけでなく民法全体の事例処理の中核として使える。</p>
+</section>
+
+</body>
+</html>

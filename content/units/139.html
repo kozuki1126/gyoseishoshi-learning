@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I. 民法 - 39.扶養</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">扶養</h1>
+  <p class="page-title-block__sub">扶養義務者、扶養の順位・程度・方法、婚姻費用・養育費との接続を家庭裁判所の判断構造から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法730条</span>
+    <span class="badge badge--info">民法752条</span>
+    <span class="badge badge--info">民法760条</span>
+    <span class="badge badge--info">民法817条の12</span>
+    <span class="badge badge--info">民法877条</span>
+    <span class="badge badge--info">民法881条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">扶養</mark></strong>は、生活に困っている親族に対し、一定の親族が生活費・医療費・養育費などを負担する法律関係である。親族だから常に同じ重さで生活全体を引き受けるという制度ではなく、誰が、誰に対し、どの程度、どの方法で支えるのかを、条文と家庭裁判所の判断によって具体化する制度である。行政書士試験では、<strong><mark class="kw">扶養義務者</mark></strong>の範囲、<strong><mark class="kw">扶養の順位</mark></strong>、<strong><mark class="kw">扶養の程度又は方法</mark></strong>、<strong><mark class="kw">扶養請求権の処分禁止</mark></strong>が中心になる。</p>
+  <p>扶養を学ぶときは、民法第七章だけを切り出して覚えると誤りやすい。夫婦は<strong><mark class="kw">民法752条</mark></strong>により同居・協力・扶助義務を負い、<strong><mark class="kw">民法760条</mark></strong>により婚姻費用を分担する。父母は、親権や婚姻関係の有無にかかわらず、<strong><mark class="kw">民法817条の12</mark></strong>により、子が自己と同程度の生活を維持できるよう扶養する責務を負う。これらは、直系血族・兄弟姉妹間の扶養を定める<strong><mark class="kw">民法877条</mark></strong>以下と重なりながら、より強い生活保持的な性格をもつ場面がある。</p>
+  <p>典型例で考えると、未成年の子の養育費、別居中の配偶者の婚姻費用、高齢の親の生活費、兄弟姉妹の一時的援助は、すべて「親族間で生活をどう支えるか」という問題である。しかし、未成年の子に対する父母の義務と、成人した兄弟姉妹への援助義務は同じではない。前者は自分と同程度の生活を保たせる方向で強く働くのに対し、後者は義務者自身の生活を犠牲にしない範囲で問題になる。試験ではこの強弱の区別が、正誤判断の基準になる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る扶養の入口</span>
+    </div>
+    <div class="box__bd">
+      <p>母が一人で未成年の子を監護し、父が別居している場合、父母の間では子の監護に要する費用、つまり養育費の分担が問題になる。夫婦がまだ離婚していない別居状態であれば、配偶者自身の生活費と子の生活費を含む婚姻費用の分担が問題になる。高齢の親が年金だけでは生活できない場合は、直系血族である子らの扶養義務が問題になる。複数の子のうち一人だけが親を支えてきた場合には、他の子に過去の扶養料を求償できるか、どの手続で分担額を決めるかが問題になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">扶養</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">扶養</mark></strong>とは、自力で生活を維持できない親族に対し、一定の親族が生活費、医療費、教育費、住居費などを支える法律関係である。制度趣旨は、家族共同体内で生活保障を行い、個人の尊厳を保ちながら生活困窮を防ぐ点にある。もっとも、扶養は親族愛だけを期待する道徳規範ではなく、民法が一定範囲で法的義務として定めるものである。扶養を受ける側を扶養権利者、扶養する側を扶養義務者と呼ぶ。試験では、親族なら誰でも当然に扶養義務者になる、又は家庭裁判所は資力を考慮せず一律に扶養料を決める、という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">生活保持義務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">生活保持義務</mark></strong>は、義務者が自己と同程度の生活を相手にも保持させる方向で負担する強い扶養義務をいう。典型は夫婦間の扶助義務、婚姻費用分担義務、父母の未成熟子に対する扶養義務である。父母については、<strong><mark class="kw">民法817条の12</mark></strong>が、子が自己と同程度の生活を維持できるよう扶養しなければならないと明文化している。生活保持義務では、義務者に余裕がある場合だけ支払えばよいという発想では足りず、生活水準の分配という視点が入る。試験では、未成年の子に対する養育費を、兄弟姉妹間の任意援助と同じ軽い義務として扱う肢を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">生活扶助義務</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">生活扶助義務</mark></strong>は、義務者自身の社会的地位にふさわしい生活を維持したうえで、なお余力がある場合に、扶養権利者の最低限度の生活を支える性質の扶養義務をいう。典型は、成人した直系血族間や兄弟姉妹間の扶養である。根拠条文は主として<strong><mark class="kw">民法877条</mark></strong>以下であり、扶養の程度・方法は扶養権利者の需要、扶養義務者の資力、その他一切の事情によって決まる。生活保持義務と異なり、義務者が自分の生活を破綻させてまで同程度の生活を保障するものではない。試験では、直系血族・兄弟姉妹間の扶養義務をすべて夫婦間と同じ生活保持義務とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">扶養義務者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">扶養義務者</mark></strong>とは、法律上、扶養をする義務を負う者である。<strong><mark class="kw">民法877条1項</mark></strong>は、直系血族及び兄弟姉妹は互いに扶養義務を負うと定める。直系血族には親子、祖父母と孫などが含まれ、兄弟姉妹も当然の扶養義務者である。他方、三親等内の親族は当然に義務を負うのではなく、特別の事情があるときに家庭裁判所が扶養義務を負わせることができるにとどまる。試験では「三親等内の親族は当然に扶養義務者である」という肢、又は「家庭裁判所は三親等を超える親族にも審判で扶養義務を負わせられる」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">扶養の順位</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">扶養の順位</mark></strong>は、扶養義務者が複数いる場合に誰が先に扶養するか、又は扶養を受ける権利者が複数いる場合に誰を優先するかという問題である。<strong><mark class="kw">民法878条</mark></strong>は、当事者間の協議が調わないとき、又は協議できないときは、家庭裁判所が順位を定めるとする。条文は、親族関係の近さだけで機械的に順位を固定していない。家庭裁判所は、扶養権利者の必要性、扶養義務者の資力、これまでの生活関係、同居の有無、他の扶養義務者の負担状況などを考慮する。試験では、父母、子、兄弟姉妹の順位が条文で一律に決まっているとする肢を誤りと判断する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">扶養の程度又は方法</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">扶養の程度又は方法</mark></strong>は、いくら支払うか、金銭給付にするか、同居扶養にするか、医療費や教育費をどう分担するかという具体化の問題である。<strong><mark class="kw">民法879条</mark></strong>は、協議が調わないとき又は協議できないとき、扶養権利者の需要、扶養義務者の資力、その他一切の事情を考慮して家庭裁判所が定めるとする。家庭裁判所の判断は、単純な割り勘ではなく、収入、資産、健康状態、年齢、職業、監護実態、過去の負担などを含む総合判断である。試験では「扶養料は人数で等分する」「扶養権利者の需要だけで決まる」という肢を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">扶養請求権の処分禁止</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">扶養請求権の処分禁止</mark></strong>とは、扶養を受ける権利を譲渡、放棄、担保化などの処分の対象にできないというルールである。根拠は<strong><mark class="kw">民法881条</mark></strong>で、扶養請求権が扶養権利者の生活を支える一身専属的な権利であることに由来する。生活費を受ける権利を他人に売ったり、借金の担保に差し出したりできると、扶養権利者の生存保障が損なわれる。もっとも、既に具体的に発生し弁済期が来た金銭債権の扱いについては、抽象的な扶養請求権の処分禁止と区別して考える必要がある。試験では「扶養請求権は財産権だから自由に譲渡できる」という肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">婚姻費用・養育費</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">婚姻費用</mark></strong>は、夫婦と未成熟子が婚姻共同生活を維持するために必要な費用であり、生活費、住居費、医療費、子の教育費などを含む。根拠は<strong><mark class="kw">民法760条</mark></strong>で、夫婦の資産、収入その他一切の事情を考慮して分担する。<strong><mark class="kw">養育費</mark></strong>は、離婚後などに子を監護しない父又は母が、子の監護に要する費用を分担するものであり、<strong><mark class="kw">民法766条</mark></strong>の子の監護に関する事項と結び付く。令和八年四月一日施行の改正後は、子の監護費用の先取特権や法定養育費の制度が整備され、養育費の実効性確保が強化された。試験では、離婚すれば親の子に対する扶養義務が消滅する、又は養育費は親権者だけの問題である、という肢が誤りになる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="扶養義務の発生と具体化の全体構造">
+      <defs>
+        <marker id="arr39a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr39a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr39a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <path d="M590 105 V165 H210 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39a-blue)"/>
+      <path d="M590 165 H590 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39a-blue)"/>
+      <path d="M590 165 H970 V220" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39a-blue)"/>
+      <path d="M210 330 V405 H400" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr39a-orange)"/>
+      <path d="M590 330 V405 H590" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr39a-orange)"/>
+      <path d="M970 330 V405 H780" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr39a-orange)"/>
+      <path d="M590 505 V570" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39a-red)"/>
+      <path d="M400 505 V570 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39a-red)"/>
+      <path d="M780 505 V570 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39a-red)"/>
+
+      <rect x="410" y="35" width="360" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">親族間の扶養問題</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">誰が誰をどの程度支えるか</text>
+
+      <rect x="55" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">夫婦間</text>
+      <text x="210" y="282" text-anchor="middle" font-size="13" fill="#1e3a8a">民法752条・760条</text>
+      <text x="210" y="306" text-anchor="middle" font-size="13" fill="#1e3a8a">扶助と婚姻費用分担</text>
+
+      <rect x="435" y="220" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">親子間</text>
+      <text x="590" y="282" text-anchor="middle" font-size="13" fill="#7c2d12">民法817条の12・877条</text>
+      <text x="590" y="306" text-anchor="middle" font-size="13" fill="#7c2d12">子の生活保持と親族扶養</text>
+
+      <rect x="815" y="220" width="310" height="110" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="970" y="255" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">直系血族・兄弟姉妹</text>
+      <text x="970" y="282" text-anchor="middle" font-size="13" fill="#1e3a8a">民法877条1項</text>
+      <text x="970" y="306" text-anchor="middle" font-size="13" fill="#1e3a8a">当然の扶養義務者</text>
+
+      <rect x="250" y="405" width="300" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="400" y="438" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">生活保持義務</text>
+      <text x="400" y="464" text-anchor="middle" font-size="13" fill="#7c2d12">自己と同程度の生活を保持</text>
+      <text x="400" y="488" text-anchor="middle" font-size="13" fill="#7c2d12">夫婦・未成熟子で強く問題</text>
+
+      <rect x="630" y="405" width="300" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="780" y="438" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">生活扶助義務</text>
+      <text x="780" y="464" text-anchor="middle" font-size="13" fill="#1e3a8a">義務者の余力を前提</text>
+      <text x="780" y="488" text-anchor="middle" font-size="13" fill="#1e3a8a">成人親族間で典型的に問題</text>
+
+      <rect x="350" y="570" width="480" height="110" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="605" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">具体化の手順</text>
+      <text x="590" y="632" text-anchor="middle" font-size="13" fill="#9f1239">協議が調わなければ家庭裁判所</text>
+      <text x="590" y="656" text-anchor="middle" font-size="13" fill="#9f1239">順位・程度・方法を一切の事情で判断</text>
+    </svg>
+  </div>
+  <p>この図は、扶養問題を親族関係の種類と義務の強さに分けて整理している。夫婦間と未成熟子に対する父母の扶養は、生活保持義務として強く働きやすい。これに対し、成人した直系血族間や兄弟姉妹間の扶養は、義務者の資力や生活状況を見ながら具体化される生活扶助義務として理解する。最終的に争いがある場合、家庭裁判所が扶養権利者の需要、扶養義務者の資力、その他一切の事情を考慮して順位・程度・方法を決める。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 720" role="img" aria-label="扶養判断の要件分解図">
+      <defs>
+        <marker id="arr39b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr39b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <path d="M590 100 V155" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39b-blue)"/>
+      <path d="M590 250 V310 H210 V365" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39b-blue)"/>
+      <path d="M590 310 H590 V365" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39b-blue)"/>
+      <path d="M590 310 H970 V365" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr39b-blue)"/>
+      <path d="M210 475 V540 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39b-red)"/>
+      <path d="M590 475 V540" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39b-red)"/>
+      <path d="M970 475 V540 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr39b-red)"/>
+
+      <rect x="410" y="35" width="360" height="65" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="64" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">扶養請求の出発点</text>
+      <text x="590" y="88" text-anchor="middle" font-size="13" fill="#1e3a8a">必要性と義務者の範囲を確認</text>
+
+      <rect x="380" y="155" width="420" height="95" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="189" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">扶養義務者の特定</text>
+      <text x="590" y="215" text-anchor="middle" font-size="13" fill="#1e3a8a">直系血族・兄弟姉妹は当然</text>
+      <text x="590" y="237" text-anchor="middle" font-size="13" fill="#1e3a8a">三親等内親族は特別事情と審判</text>
+
+      <rect x="55" y="365" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="210" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">順位</text>
+      <text x="210" y="427" text-anchor="middle" font-size="13" fill="#7c2d12">扶養義務者が複数</text>
+      <text x="210" y="451" text-anchor="middle" font-size="13" fill="#7c2d12">協議不成立なら家裁</text>
+
+      <rect x="435" y="365" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">程度</text>
+      <text x="590" y="427" text-anchor="middle" font-size="13" fill="#7c2d12">需要・資力・一切の事情</text>
+      <text x="590" y="451" text-anchor="middle" font-size="13" fill="#7c2d12">金額や期間を形成</text>
+
+      <rect x="815" y="365" width="310" height="110" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="970" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">方法</text>
+      <text x="970" y="427" text-anchor="middle" font-size="13" fill="#7c2d12">金銭給付・現物扶養</text>
+      <text x="970" y="451" text-anchor="middle" font-size="13" fill="#7c2d12">監護費用や医療費負担</text>
+
+      <rect x="350" y="540" width="480" height="100" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="574" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">変更・取消しと処分禁止</text>
+      <text x="590" y="601" text-anchor="middle" font-size="13" fill="#9f1239">事情変更があれば民法880条で調整</text>
+      <text x="590" y="625" text-anchor="middle" font-size="13" fill="#9f1239">扶養請求権自体は民法881条で処分不可</text>
+    </svg>
+  </div>
+  <p>この図は、実際の問題を解く順番を示している。まず、扶養を求める側に需要があるか、相手方が民法上の扶養義務者に当たるかを確認する。次に、扶養義務者又は扶養権利者が複数いるときは順位を検討し、金額や方法は需要・資力・一切の事情から具体化する。いったん協議や審判が成立しても、収入減少、病気、子の進学、監護状況の変化などがあれば、変更又は取消しの余地がある。最後に、扶養請求権は生活保障のための権利であるため、抽象的な権利そのものを自由に譲渡・放棄できない点を押さえる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparative Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">生活保持義務</th>
+        <th class="col--b">生活扶助義務</th>
+        <th class="col--c">親族間の互助</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">中心場面</th>
+        <td class="col--a"><span class="em-a">夫婦間</span>、父母と未成熟子の関係。婚姻費用・養育費で典型的に問題になる。</td>
+        <td class="col--b">成人した直系血族間、兄弟姉妹間の扶養。高齢親の生活費援助などで問題になる。</td>
+        <td class="col--c">直系血族及び同居親族の助け合い。法的な扶養義務に至る前の一般的関係を示す。</td>
+      </tr>
+      <tr>
+        <th class="col--label">義務の強さ</th>
+        <td class="col--a">義務者が自己と同程度の生活を相手にも保持させる方向で強く働く。</td>
+        <td class="col--b">義務者自身の生活を維持したうえで、余力に応じて相手の生活を扶助する。</td>
+        <td class="col--c">親族共同生活上の協力を示すが、具体的扶養料の根拠としては民法877条以下を確認する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a"><strong><mark class="kw">民法752条</mark></strong>、<strong><mark class="kw">民法760条</mark></strong>、<strong><mark class="kw">民法817条の12</mark></strong>など。</td>
+        <td class="col--b"><strong><mark class="kw">民法877条</mark></strong>から<strong><mark class="kw">民法880条</mark></strong>までが中心。</td>
+        <td class="col--c"><strong><mark class="kw">民法730条</mark></strong>。親族間の協力関係の基礎を示す。</td>
+      </tr>
+      <tr>
+        <th class="col--label">判断基準</th>
+        <td class="col--a">収入・資産を基礎に、同程度の生活を維持できる分担を考える。</td>
+        <td class="col--b">扶養権利者の需要、扶養義務者の資力、一切の事情を総合する。</td>
+        <td class="col--c">具体的な扶養順位・金額を直ちに導く規定ではない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「別居すれば婚姻費用分担義務は当然に消滅する」は誤り。</td>
+        <td class="col--b">「兄弟姉妹は常に相手と同水準の生活を保障する」は誤り。</td>
+        <td class="col--c">「民法730条だけで具体的扶養料を当然請求できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">扶養義務者の範囲</th>
+        <th class="col--b">順位・程度・方法</th>
+        <th class="col--c">変更・処分制限</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a"><strong><mark class="kw">民法877条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法878条</mark></strong>・<strong><mark class="kw">民法879条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法880条</mark></strong>・<strong><mark class="kw">民法881条</mark></strong></td>
+      </tr>
+      <tr>
+        <th class="col--label">内容</th>
+        <td class="col--a">直系血族・兄弟姉妹は当然に扶養義務者。三親等内親族は特別事情と家庭裁判所の審判が必要。</td>
+        <td class="col--b">協議不成立又は協議不能のとき、家庭裁判所が順位、金額、方法を形成する。</td>
+        <td class="col--c">事情変更があれば協議又は審判を変更・取消しできる。扶養を受ける権利は処分できない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">家庭裁判所の役割</th>
+        <td class="col--a">三親等内親族に義務を負わせるかを判断する。</td>
+        <td class="col--b">需要、資力、一切の事情を考慮し、具体的な扶養関係を作る。</td>
+        <td class="col--c">事情変更に応じて、既存の定めを調整する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験で見る事実</th>
+        <td class="col--a">親族関係が直系血族・兄弟姉妹か、三親等内親族か、三親等を超えるか。</td>
+        <td class="col--b">扶養義務者が複数か、扶養権利者が複数か、協議があるか。</td>
+        <td class="col--c">収入・健康・監護状況などの変化、権利譲渡や放棄の有無。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「三親等内親族は当然に義務を負う」は誤り。</td>
+        <td class="col--b">「順位は常に親等の近い順に固定される」は誤り。</td>
+        <td class="col--c">「扶養請求権は自由に譲渡できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、まず「どの親族関係か」を確認し、次に「生活保持義務なのか生活扶助義務なのか」を考える。未成年の子や配偶者が相手なら強い扶養関係を意識し、成人親族間なら義務者の資力と扶養権利者の需要のバランスを見る。条文番号の引っかけでは、民法877条は扶養義務者の範囲、民法878条は順位、民法879条は程度又は方法、民法880条は変更・取消し、民法881条は処分禁止と対応させると迷いにくい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Relevant Statutes</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法730条 親族間の助け合い</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第七百三十条　直系血族及び同居の親族は、互いに助け合わなければならない。</blockquote>
+      <p><strong><mark class="kw">民法730条</mark></strong>は、直系血族及び同居の親族の一般的な助け合いを定める。ここでいう助け合いは、親族共同生活の基本理念を示す規定であり、直ちに具体的な扶養料の金額を発生させる条文ではない。具体的に誰がどの程度扶養するかは、<strong><mark class="kw">民法877条</mark></strong>以下や、夫婦・親子に関する個別規定を確認する。試験では、民法730条を根拠に、同居親族なら当然に一定額の扶養料債務を負うとする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法752条・760条 夫婦扶助と婚姻費用</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第七百五十二条　夫婦は同居し、互いに協力し扶助しなければならない。<br>第七百六十条　夫婦は、その資産、収入その他一切の事情を考慮して、婚姻から生ずる費用を分担する。</blockquote>
+      <p><strong><mark class="kw">民法752条</mark></strong>は夫婦の身分関係上の基本義務を定め、<strong><mark class="kw">民法760条</mark></strong>はそれを費用面で具体化する。婚姻費用には、夫婦自身の生活費だけでなく、同居又は監護する未成熟子の生活費・教育費も含まれ得る。条文は「資産、収入その他一切の事情」とするため、収入だけでなく、資産、健康状態、監護実態、職業、住居費なども考慮対象になる。別居していても婚姻が継続していれば、当然に婚姻費用分担義務が消滅するわけではない点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法766条・817条の12 子の監護費用と親の責務</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第七百六十六条　父母が協議上の離婚をするときは、子の監護をすべき者又は子の監護の分掌、父又は母と子との交流、子の監護に要する費用の分担その他の子の監護について必要な事項は、その協議で定める。この場合においては、子の利益を最も優先して考慮しなければならない。<br>第八百十七条の十二　父母は、子の心身の健全な発達を図るため、その子の人格を尊重するとともに、その子の年齢及び発達の程度に配慮してその子を養育しなければならず、かつ、その子が自己と同程度の生活を維持することができるよう扶養しなければならない。</blockquote>
+      <p><strong><mark class="kw">民法766条</mark></strong>は、離婚後の子の監護に関する事項を定める規定であり、養育費は「子の監護に要する費用の分担」として位置付けられる。<strong><mark class="kw">民法817条の12</mark></strong>は、父母の婚姻関係や親権の有無にかかわらず、子の人格尊重、発達への配慮、自己と同程度の生活を維持できるよう扶養する責務を定める。したがって、離婚して親権者でなくなった親も、子に対する扶養責務から当然に解放されるわけではない。試験では、親権、監護、養育費、親子交流を同一視せず、それぞれの機能を分けて読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法877条から881条 扶養章の中心条文</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百七十七条　直系血族及び兄弟姉妹は、互いに扶養をする義務がある。<br>２　家庭裁判所は、特別の事情があるときは、前項に規定する場合のほか、三親等内の親族間においても扶養の義務を負わせることができる。<br>３　前項の規定による審判があった後事情に変更を生じたときは、家庭裁判所は、その審判を取り消すことができる。<br>第八百七十八条　扶養をする義務のある者が数人ある場合において、扶養をすべき者の順序について、当事者間に協議が調わないとき、又は協議をすることができないときは、家庭裁判所が、これを定める。扶養を受ける権利のある者が数人ある場合において、扶養義務者の資力がその全員を扶養するのに足りないときの扶養を受けるべき者の順序についても、同様とする。<br>第八百七十九条　扶養の程度又は方法について、当事者間に協議が調わないとき、又は協議をすることができないときは、扶養権利者の需要、扶養義務者の資力その他一切の事情を考慮して、家庭裁判所が、これを定める。<br>第八百八十条　扶養をすべき者若しくは扶養を受けるべき者の順序又は扶養の程度若しくは方法について協議又は審判があった後事情に変更を生じたときは、家庭裁判所は、その協議又は審判の変更又は取消しをすることができる。<br>第八百八十一条　扶養を受ける権利は、処分することができない。</blockquote>
+      <p><strong><mark class="kw">民法877条</mark></strong>は扶養義務者の範囲を定める。直系血族及び兄弟姉妹は当然の扶養義務者であり、三親等内の親族は特別の事情があるときに家庭裁判所の審判で義務を負う。<strong><mark class="kw">民法878条</mark></strong>は順位、<strong><mark class="kw">民法879条</mark></strong>は程度又は方法、<strong><mark class="kw">民法880条</mark></strong>は事情変更後の変更・取消し、<strong><mark class="kw">民法881条</mark></strong>は処分禁止を定める。これらの規定は、扶養関係を抽象的に発生させるだけでなく、争いがある場合に家庭裁判所が個別事情に応じて形成する仕組みを用意している。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法308条の2 子の監護費用の先取特権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第三百八条の二　子の監護の費用の先取特権は、次に掲げる義務に係る確定期限の定めのある定期金債権の各期における定期金のうち子の監護に要する費用として相当な額について存在する。一　第七百五十二条の規定による夫婦間の協力及び扶助の義務　二　第七百六十条の規定による婚姻から生ずる費用の分担の義務　三　第七百六十六条及び第七百六十六条の三の規定による子の監護に関する義務　四　第八百七十七条から第八百八十条までの規定による扶養の義務</blockquote>
+      <p><strong><mark class="kw">民法308条の2</mark></strong>は、令和六年法律第三十三号による家族法改正で整備された、子の監護費用を保護する一般の先取特権である。子の監護費用に関する一定の定期金債権について、債務者の総財産から優先弁済を受ける地位を認める。条文は、夫婦間の扶助義務、婚姻費用分担義務、子の監護に関する義務、扶養義務を横断的に掲げている。試験では、養育費が単なる任意の道徳的給付ではなく、実効性確保のため物権法上の優先弁済制度とも接続している点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Leading Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所大法廷 昭和40年6月30日 昭和37年(ク)第243号 生活費請求事件の審判に対する抗告棄却決定に対する特別抗告</p>
+      <h3 class="case-card__title">婚姻費用分担審判の性質と過去分の形成決定</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">民法760条</span>
+        <span class="badge badge--case">家庭裁判所</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>夫婦が別居し、生活費の負担をめぐって争いになった。妻側は、婚姻から生ずる費用の分担として生活費の支払を求め、家庭裁判所の審判手続が利用された。これに対し、婚姻費用の分担を非公開・非訟的な家事審判手続で定めることは、憲法上の裁判を受ける権利や公開裁判の要請に反するのではないか、また家庭裁判所が審判時より前の期間にさかのぼって婚姻費用の分担額を定められるかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、婚姻費用分担の審判は、夫婦の一方が婚姻から生ずる費用を負担すべき義務を前提として、その具体的な分担額を家庭裁判所が形成決定する非訟事件の裁判であり、純然たる訴訟事件ではないとした。そのうえで、家事審判法上の婚姻費用分担審判は憲法三十二条及び八十二条に違反しないと判断した。また、家庭裁判所が婚姻費用の分担額を定めるにあたり、過去にさかのぼって形成決定することが許されない理由はないという考え方を示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">婚姻費用</mark></strong>が単なる損害賠償請求ではなく、家庭裁判所が一切の事情を考慮して形成する家事事件であることを示す。試験では「婚姻費用分担は通常裁判所の判決手続でしか決められない」「家庭裁判所は将来分しか定められず過去分を考慮できない」といった肢が誤りになる。もっとも、具体的な始期は常に別居開始時に固定されるわけではなく、請求時、調停申立時、当事者の交渉状況などが問題になる。制度の核心は、民法760条の義務を家庭裁判所が公的・合目的に具体化する点である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第二小法廷 昭和42年2月17日 昭和41年(オ)第783号 養育料償還等請求事件</p>
+      <h3 class="case-card__title">過去の扶養料求償と家庭裁判所の審判事項</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">民法878条</span>
+        <span class="badge badge--case">民法879条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>扶養義務者の一人が、扶養権利者を長期間実際に扶養してきた。その後、その者は、同じく扶養義務を負う他の親族に対し、自分だけが負担してきた過去の扶養料について償還を求めた。問題となったのは、過去の扶養料について、通常裁判所が不当利得や求償として判決手続で直ちに金額を決められるのか、それとも扶養義務者間の分担額はまず家庭裁判所の審判で具体的に定められるべきかという点である。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、扶養権利者を扶養してきた扶養義務者が他の扶養義務者に過去の扶養料を求償する場合でも、各自の扶養分担額は、協議が調わない限り、家庭裁判所が審判で定めるべきであり、通常裁判所が判決手続で定めることはできないとした。扶養の順位、程度、方法は、扶養権利者の需要、扶養義務者の資力、その他一切の事情を考慮して形成されるものであり、過去分であっても同じ性質をもつためである。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">民法878条</mark></strong>及び<strong><mark class="kw">民法879条</mark></strong>の判断が家庭裁判所の形成判断であることを理解するために重要である。誤りの選択肢例は「一人の扶養義務者が過去に立て替えた扶養料は、他の扶養義務者に対し、通常裁判所で当然に全額求償できる」である。正しくは、扶養義務の具体的分担額がまだ定まっていない場合、誰がどれだけ負担すべきかを家庭裁判所が一切の事情に基づき決める必要がある。過去分という形式に惑わされず、実質が扶養分担額の確定であることを見抜く。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第二小法廷 令和5年5月17日 令和4年(許)第17号 婚姻費用分担申立て却下審判に対する抗告審の変更決定に対する許可抗告事件</p>
+      <h3 class="case-card__title">婚姻費用分担審判における父子関係の存否判断</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★</span>
+        <span class="badge badge--case">婚姻費用</span>
+        <span class="badge badge--case">扶養義務の前提</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>別居中の夫婦間で婚姻費用分担が争われ、妻が夫に対して生活費等の分担を求めた。婚姻費用の中には、妻が監護している子の養育費相当額も含まれていたが、その子について夫との父子関係の存否が問題となった。子が嫡出推定を受けない事情のもとで、婚姻費用分担審判の手続において、家庭裁判所が父子関係の存否を審理判断できるのか、それとも別個の親子関係訴訟の確定を待たなければ扶養義務を扱えないのかが争点となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、婚姻費用分担審判において、嫡出の推定を受けない子について夫と子との父子関係の存否が扶養義務の前提として問題となる場合、家庭裁判所はその手続内で父子関係の存否を審理判断することができるとした。扶養義務の有無を判断しないまま子の養育費相当額を婚姻費用に含めると、分担義務の前提を欠く可能性があるためである。もっとも、この判断は婚姻費用分担審判に必要な限度の判断であり、親子関係を対世的に確定する訴訟判決と同一の効力をもつものではない。</p>
+      <h4>試験上の意義</h4>
+      <p>本決定は、<strong><mark class="kw">婚姻費用</mark></strong>や<strong><mark class="kw">養育費</mark></strong>を考えるとき、まず扶養義務の前提となる親子関係が問題になる場合があることを示す。試験では細かな家事手続法の知識よりも、「扶養義務の存否を判断するために必要な前提問題は、審判手続内で判断されることがある」という理解が重要である。父子関係が当然に争えないとする肢、又は婚姻費用分担審判が親子関係を対世的に確定するとする肢は誤りになり得る。民法上の扶養義務と手続上の形成判断の接点として押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">民法877条</mark></strong>は、直系血族及び兄弟姉妹を当然の扶養義務者とする。三親等内親族は当然ではなく、特別の事情と家庭裁判所の審判が必要である。</li>
+        <li><strong><mark class="kw">扶養の順位</mark></strong>は、条文上固定順位があるわけではない。協議が調わなければ家庭裁判所が定める。</li>
+        <li><strong><mark class="kw">扶養の程度又は方法</mark></strong>は、扶養権利者の需要、扶養義務者の資力、その他一切の事情で決まる。</li>
+        <li><strong><mark class="kw">扶養請求権</mark></strong>は処分できない。生活保障を目的とする一身専属的権利である。</li>
+        <li><strong><mark class="kw">婚姻費用</mark></strong>と<strong><mark class="kw">養育費</mark></strong>は、扶養章だけでなく夫婦・親子・監護規定と接続して出題される。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例一：</strong>「三親等内の親族は、直系血族及び兄弟姉妹と同じく、当然に扶養義務を負う。」これは誤りである。三親等内親族は、特別の事情があるときに家庭裁判所が扶養義務を負わせることができるにとどまる。</p>
+      <p><strong>誤りの選択肢例二：</strong>「扶養義務者が数人ある場合、扶養すべき者の順序は親等の近い順に民法上当然に決まる。」これは誤りである。協議が調わないとき又は協議できないときは、家庭裁判所が定める。</p>
+      <p><strong>誤りの選択肢例三：</strong>「扶養の程度又は方法は、扶養権利者の需要だけで決まり、扶養義務者の資力は考慮されない。」これは誤りである。<strong><mark class="kw">民法879条</mark></strong>は、扶養権利者の需要、扶養義務者の資力、その他一切の事情を考慮すると定める。</p>
+      <p><strong>誤りの選択肢例四：</strong>「扶養を受ける権利は財産権であるから、自由に譲渡又は放棄できる。」これは誤りである。<strong><mark class="kw">民法881条</mark></strong>は扶養を受ける権利の処分を禁止する。</p>
+      <p><strong>誤りの選択肢例五：</strong>「離婚すれば、親権者でない親は子の養育費を負担しない。」これは誤りである。親権の有無と子に対する扶養責務は同一ではなく、子の監護費用の分担は離婚後も問題になる。</p>
+    </div>
+  </div>
+
+  <p>解答手順は、第一に親族関係を確認することである。直系血族・兄弟姉妹か、三親等内親族か、それ以外かで結論が変わる。第二に、扶養義務の性質を見分ける。配偶者や未成熟子なら生活保持義務として強く働き、成人親族間なら生活扶助義務として需要と資力の調整が中心になる。第三に、協議があるか、家庭裁判所の審判が必要かを確認する。第四に、事情変更があれば民法880条、権利の譲渡・放棄が出てきたら民法881条を使う。</p>
+  <p>他分野との接点として、<strong><mark class="kw">扶養</mark></strong>は婚姻、離婚、親権、相続、物権の先取特権、家事事件手続とつながる。婚姻費用は夫婦財産制の中にあり、養育費は離婚後の子の監護に関する事項として出る。子の監護費用の先取特権は、物権法上の担保制度との接点である。相続では、扶養料の立替えや過去の扶養負担をどう清算するかが問題になりやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p>扶養法制は、親族内の私的な助け合いにとどまらず、子の利益と生活保障の実効性を重視する方向に展開している。令和六年法律第三十三号による家族法改正は、令和八年四月一日に施行され、父母の責務、親権・監護、養育費、親子交流、財産分与等の規律を見直した。扶養単元では、特に父母が婚姻関係の有無にかかわらず子を扶養する責務、子の監護費用の先取特権、法定養育費の考え方が、今後の出題で意識されやすい。</p>
+  <p>実務上、扶養の金額は抽象的な道徳論ではなく、収入資料、家計状況、子の年齢、医療・教育の必要性、扶養義務者の生活状況などを基に決まる。裁判所では、養育費・婚姻費用について標準算定方式・算定表が実務上活用されている。行政書士試験では算定表の細かな金額を覚える必要はないが、家庭裁判所が一切の事情を見て具体的金額を形成するという構造は押さえる必要がある。</p>
+  <p>学習上は、条文番号を機能ごとに整理するとよい。民法730条は親族間の一般的助け合い、民法752条・760条は夫婦の扶助と婚姻費用、民法766条・817条の12は子の監護費用と親の責務、民法877条から881条は扶養章の中心規定である。さらに民法308条の2は、子の監護費用を優先的に回収するための担保制度として接続する。単元横断の問題では、どの条文がどの局面を処理するかを見分ける力が得点差になる。</p>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">学習整理法</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元は、「義務者の範囲」「義務の強さ」「家庭裁判所の具体化」「処分禁止」の四段階で整理する。まず誰が扶養義務者かを民法877条で確認する。次に、夫婦・未成熟子なら生活保持義務、成人親族間なら生活扶助義務という強弱を見分ける。続いて、順位は民法878条、程度・方法は民法879条、事情変更は民法880条で処理する。最後に、扶養請求権の譲渡・放棄が出たら民法881条の処分禁止を思い出す。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

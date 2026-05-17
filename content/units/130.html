@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>賃貸借契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">賃貸借契約</h1>
+  <p class="page-title-block__sub">有償で物を使わせる継続的契約を、成立・効力・終了・借地借家法の保護から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法601条</span>
+    <span class="badge badge--info">民法605条</span>
+    <span class="badge badge--info">民法606条</span>
+    <span class="badge badge--info">民法611条</span>
+    <span class="badge badge--info">民法612条</span>
+    <span class="badge badge--info">民法617条</span>
+    <span class="badge badge--info">民法622条の2</span>
+    <span class="badge badge--info">借地借家法</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">賃貸借契約</mark></strong>は、貸主が物を使用収益させ、借主がその対価として賃料を支払い、終了時に借りた物を返還する契約である。売買のように所有権を移す契約ではなく、使用収益という継続的な利益を与える契約であるため、契約成立後も修繕、賃料、用法遵守、転貸、解除、原状回復、敷金などの問題が続いて発生する。行政書士試験では、条文知識だけでなく、継続的契約であることから判例が形成した<strong><mark class="kw">信頼関係破壊の法理</mark></strong>を理解することが重要である。</p>
+
+  <p><strong><mark class="kw">賃貸借契約</mark></strong>は、<strong><mark class="kw">消費貸借契約</mark></strong>や<strong><mark class="kw">使用貸借契約</mark></strong>と混同されやすい。消費貸借は金銭などを借りて同種同量を返す契約であり、使用貸借は無償で物を使って同じ物を返す契約である。これに対し、賃貸借は有償で物そのものを使用収益し、終了時にその物を返す契約である。マンションを月額賃料で借りる、店舗を借りて営業する、駐車場を借りる、機械を一定期間借りるといった場面が典型である。</p>
+
+  <p>不動産賃貸借では、民法だけでは足りない。建物所有目的の土地賃貸借は<strong><mark class="kw">借地借家法</mark></strong>上の<strong><mark class="kw">借地権</mark></strong>として強く保護され、建物賃貸借も更新拒絶や解約申入れに<strong><mark class="kw">正当事由</mark></strong>が必要になる。民法は賃貸借の一般ルールを定め、借地借家法は土地・建物という生活・営業の基盤について借主保護の特別ルールを置く。この二層構造を意識しないと、「民法617条なら建物賃貸借は三か月で終了する」といった誤った判断に流れやすい。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る基本構造</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに店舗建物を月額30万円で貸す場合、Bは店舗を使用収益でき、Aは賃料を請求できる。雨漏りで通常営業ができないならAの<strong><mark class="kw">修繕義務</mark></strong>や<strong><mark class="kw">賃料減額</mark></strong>が問題になる。BがAに無断でCへ店舗を転貸し、Cが営業を始めた場合は<strong><mark class="kw">民法612条</mark></strong>の解除が問題になる。ただし、形式的な違反があれば常に解除できるわけではなく、判例上、背信的行為と認めるに足りない特段の事情があれば解除は制限される。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">賃貸借契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">賃貸借契約</mark></strong>は、ある物の使用収益を相手方にさせ、相手方が賃料支払と終了時の返還を約することで効力を生ずる契約である。根拠は<strong><mark class="kw">民法601条</mark></strong>である。制度趣旨は、所有者が所有権を失わずに使用価値を他人に利用させ、利用者は賃料を支払うことで生活・営業・生産に必要な物を確保できる点にある。目的物は不動産に限られず、建物、土地、機械、自動車なども含まれる。使用貸借との違いは賃料という対価があることであり、消費貸借との違いは借りた物そのものを返すことである。試験では、「賃貸借は要物契約であり、引渡しがなければ成立しない」とする肢が誤りになる。成立は合意で足りるが、目的物の引渡しや対抗要件は別問題として処理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不動産賃貸借の対抗力</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不動産賃貸借の対抗力</mark></strong>とは、賃借人が、後から不動産について物権を取得した第三者に対して賃借権を主張できる効力である。民法上は<strong><mark class="kw">民法605条</mark></strong>により登記が対抗要件となるが、借地借家法は借地と借家について特別の対抗要件を置く。建物所有目的の土地賃借権は、土地上に借地権者名義の登記建物があれば対抗でき、建物賃貸借は建物の引渡しがあれば対抗できる。対抗力があると、目的不動産が売却されても、賃借人は新所有者に退去を拒むことができる。試験では、民法605条の「登記」と、借地借家法10条・31条の特別対抗要件を場面ごとに使い分けることが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">賃貸人たる地位の移転</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">賃貸人たる地位の移転</mark></strong>は、賃貸不動産が譲渡されたときに、新所有者が賃貸人としての権利義務を承継する問題である。<strong><mark class="kw">民法605条の2</mark></strong>は、賃貸借の対抗要件を備えた不動産が譲渡された場合、賃貸人たる地位が譲受人に移転すると定める。これにより、賃借人は旧所有者との契約を盾に新所有者へ使用継続を主張でき、新所有者は賃料請求や修繕義務を引き継ぐ。もっとも、賃貸人たる地位の移転を賃借人に対抗するには、譲受人が所有権移転登記を備える必要がある。敷金返還債務や必要費償還債務も承継されるため、所有者変更時の法律関係を一体で押さえる必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">修繕義務と賃料減額</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">修繕義務</mark></strong>とは、賃貸人が賃貸物の使用収益に必要な修繕をする義務である。根拠は<strong><mark class="kw">民法606条</mark></strong>で、賃借人の責めに帰すべき事由で修繕が必要になった場合は例外となる。賃貸物の一部が滅失その他の事由により使用収益できなくなり、それが賃借人の責めに帰することができないときは、<strong><mark class="kw">民法611条</mark></strong>により賃料は当然に減額される。平成29年改正前の「請求により減額」から、現行法では「当然減額」に整理された点が出題されやすい。さらに、残存部分だけでは契約目的を達成できないときは賃借人が解除できる。雨漏り、設備故障、建物の一部使用不能では、修繕義務、通知義務、賃料減額、解除を順に検討する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">賃借権の譲渡・転貸</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">賃借権の譲渡・転貸</mark></strong>は、賃借人が賃借人としての地位を第三者に移す、又は第三者に賃借物を利用させる場面である。<strong><mark class="kw">民法612条</mark></strong>は、賃貸人の承諾なく賃借権を譲渡し、又は賃借物を転貸することを禁じ、違反して第三者に使用収益させたときは賃貸人が解除できると定める。もっとも、判例は、無断譲渡・転貸が賃貸人に対する背信的行為と認めるに足りない特段の事情がある場合には解除を許さない。これは賃貸借が継続的契約であり、形式違反だけで生活・営業基盤を失わせるのは過酷な場合があるからである。試験では、「無断転貸契約自体は当然無効」とする肢、「転貸借契約を締結しただけで直ちに解除できる」とする肢、「背信性の例外はない」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">賃貸借の終了と信頼関係破壊</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">賃貸借の終了</mark></strong>は、期間満了、解約申入れ、解除、目的物の全部滅失等によって生じる。期間の定めがない民法上の賃貸借では、<strong><mark class="kw">民法617条</mark></strong>により、土地は一年、建物は三か月、動産等は一日の経過で終了する。期間の定めがある場合でも、解約権留保があれば<strong><mark class="kw">民法618条</mark></strong>により同じ枠組みが準用される。解除については、賃貸借が継続的契約であることから、賃料不払や用法違反があっても、常に一回の違反で解除できるとは限らない。判例は、信頼関係を破壊し賃貸借関係の継続を著しく困難にする不信行為がある場合には無催告解除を認める一方、軽微な違反では解除を制限する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">敷金</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">敷金</mark></strong>は、賃料債務その他の賃貸借に基づいて生ずる賃借人の金銭債務を担保する目的で、賃借人が賃貸人に交付する金銭である。根拠は<strong><mark class="kw">民法622条の2</mark></strong>であり、名称が保証金や預り金であっても、担保目的なら敷金に当たる。賃貸人は、賃貸借が終了し、かつ賃貸物の返還を受けたとき、又は賃借人が適法に賃借権を譲渡したときに、未払賃料や損害金等を控除した残額を返還する。賃借人側から「敷金を滞納賃料に充当してほしい」と請求することはできない。試験では、返還時期、被担保債権の範囲、賃貸人地位移転時の承継、賃借権譲渡時に当然承継されるかが問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">借地借家法の基本</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">借地借家法</mark></strong>は、建物所有目的の土地利用と建物賃貸借について、民法より強い借主保護を置く特別法である。建物所有目的の土地賃借権は<strong><mark class="kw">借地権</mark></strong>となり、存続期間は原則30年、初回更新後20年、以後10年を基準とする。建物賃貸借では、期間満了前の更新拒絶通知や解約申入れに<strong><mark class="kw">正当事由</mark></strong>が必要であり、建物の引渡しにより対抗力も認められる。定期建物賃貸借では、書面又は電磁的記録による契約と、更新がない旨の事前説明が要件となる。試験では、普通借家と定期借家、民法上の解約申入れと借地借家法上の正当事由、登記対抗と引渡対抗を混同しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 790" role="img" aria-label="賃貸借契約の全体構造">
+      <defs>
+        <marker id="arr30a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr30a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr30a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="110" x2="590" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="210" y1="150" x2="970" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="210" y1="150" x2="210" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30a-blue)"/>
+      <line x1="590" y1="150" x2="590" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30a-blue)"/>
+      <line x1="970" y1="150" x2="970" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30a-blue)"/>
+      <rect x="515" y="128" width="150" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="590" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">成立後の三領域</text>
+
+      <line x1="210" y1="322" x2="210" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30a-orange)"/>
+      <line x1="590" y1="322" x2="590" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30a-orange)"/>
+      <line x1="970" y1="322" x2="970" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30a-orange)"/>
+      <rect x="142" y="350" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="210" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">第三者関係</text>
+      <rect x="522" y="350" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="590" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">使用収益維持</text>
+      <rect x="902" y="350" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="970" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">人的信頼</text>
+
+      <line x1="210" y1="492" x2="210" y2="560" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30a-red)"/>
+      <line x1="590" y1="492" x2="590" y2="560" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30a-red)"/>
+      <line x1="970" y1="492" x2="970" y2="560" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30a-red)"/>
+      <rect x="142" y="520" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="210" y="537" text-anchor="middle" font-size="13" fill="#9f1239">売却時の承継</text>
+      <rect x="522" y="520" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="590" y="537" text-anchor="middle" font-size="13" fill="#9f1239">不能時の調整</text>
+      <rect x="902" y="520" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="970" y="537" text-anchor="middle" font-size="13" fill="#9f1239">解除制限</text>
+
+      <rect x="410" y="38" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="67" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">賃貸借契約</text>
+      <text x="590" y="92" text-anchor="middle" font-size="12" fill="#1e3a8a">使用収益・賃料・返還の継続的契約</text>
+
+      <rect x="50" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="210" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">対抗力</text>
+      <text x="210" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法605条・借地借家法10条</text>
+      <text x="210" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">借家は引渡しで第三者対抗</text>
+
+      <rect x="430" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">賃貸人・賃借人の義務</text>
+      <text x="590" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">修繕・賃料支払・用法遵守</text>
+      <text x="590" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">使用収益を維持する関係</text>
+
+      <rect x="810" y="230" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="970" y="262" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">譲渡・転貸の制限</text>
+      <text x="970" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法612条は承諾を要求</text>
+      <text x="970" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">背信性で解除可否を調整</text>
+
+      <rect x="50" y="398" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="210" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">賃貸人地位移転</text>
+      <text x="210" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">対抗要件ある不動産譲渡で移転</text>
+      <text x="210" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">登記で賃借人に対抗</text>
+
+      <rect x="430" y="398" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="590" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">修繕・費用・賃料減額</text>
+      <text x="590" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法606条・608条・611条</text>
+      <text x="590" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">使用不能部分は当然減額</text>
+
+      <rect x="810" y="398" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="970" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">適法転貸・無断転貸</text>
+      <text x="970" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">適法転貸は直接履行義務</text>
+      <text x="970" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">無断でも背信性なければ解除不可</text>
+
+      <rect x="50" y="568" width="320" height="98" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="210" y="600" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">敷金・必要費債務の承継</text>
+      <text x="210" y="624" text-anchor="middle" font-size="12" fill="#9f1239">民法605条の2第4項</text>
+      <text x="210" y="644" text-anchor="middle" font-size="12" fill="#9f1239">賃借人保護と法律関係の一体化</text>
+
+      <rect x="430" y="568" width="320" height="98" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="590" y="600" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除・終了・原状回復</text>
+      <text x="590" y="624" text-anchor="middle" font-size="12" fill="#9f1239">民法616条の2・617条・621条</text>
+      <text x="590" y="644" text-anchor="middle" font-size="12" fill="#9f1239">解除は将来効・敷金は返還後精算</text>
+
+      <rect x="810" y="568" width="320" height="98" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="970" y="600" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">信頼関係破壊の法理</text>
+      <text x="970" y="624" text-anchor="middle" font-size="12" fill="#9f1239">形式違反だけでなく実質を判断</text>
+      <text x="970" y="644" text-anchor="middle" font-size="12" fill="#9f1239">継続困難性が解除の決め手</text>
+
+      <rect x="80" y="705" width="1020" height="44" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="590" y="733" text-anchor="middle" font-size="13" fill="#9f1239">借地・借家では借地借家法が民法に上乗せされ、存続期間・更新・正当事由・対抗力が特別に処理される</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">賃貸借契約</mark></strong>を成立後の法律関係として分解している。まず、第三者との関係では対抗力と賃貸人地位移転が問題になり、目的物の売却があっても賃借人が使用を続けられるかを判断する。次に、当事者間では修繕義務、賃料減額、費用償還が使用収益を維持する機能を持つ。さらに、賃借権譲渡・転貸や契約違反は人的信頼を揺るがすため、民法612条と信頼関係破壊の法理で解除の可否を調整する。最後に、終了後は原状回復と敷金精算に移るため、契約成立だけでなく終了時の処理まで一連で押さえる必要がある。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1160 760" role="img" aria-label="賃貸借終了と借地借家法の保護構造">
+      <defs>
+        <marker id="arr30b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr30b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr30b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="580" y1="108" x2="580" y2="144" stroke="#2563eb" stroke-width="2"/>
+      <line x1="185" y1="144" x2="975" y2="144" stroke="#2563eb" stroke-width="2"/>
+      <line x1="185" y1="144" x2="185" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30b-blue)"/>
+      <line x1="580" y1="144" x2="580" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30b-blue)"/>
+      <line x1="975" y1="144" x2="975" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr30b-blue)"/>
+      <rect x="505" y="122" width="150" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="580" y="140" text-anchor="middle" font-size="13" fill="#1d4ed8">終了原因を分類</text>
+
+      <line x1="185" y1="320" x2="185" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30b-orange)"/>
+      <line x1="580" y1="320" x2="580" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30b-orange)"/>
+      <line x1="975" y1="320" x2="975" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr30b-orange)"/>
+      <rect x="117" y="348" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="185" y="365" text-anchor="middle" font-size="13" fill="#7c2d12">民法の効果</text>
+      <rect x="512" y="348" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="580" y="365" text-anchor="middle" font-size="13" fill="#7c2d12">借家の補正</text>
+      <rect x="907" y="348" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="975" y="365" text-anchor="middle" font-size="13" fill="#7c2d12">借地の補正</text>
+
+      <line x1="185" y1="488" x2="185" y2="548" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30b-red)"/>
+      <line x1="580" y1="488" x2="580" y2="548" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30b-red)"/>
+      <line x1="975" y1="488" x2="975" y2="548" stroke="#e11d48" stroke-width="2" marker-end="url(#arr30b-red)"/>
+      <rect x="117" y="514" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="185" y="531" text-anchor="middle" font-size="13" fill="#9f1239">清算へ移行</text>
+      <rect x="512" y="514" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="580" y="531" text-anchor="middle" font-size="13" fill="#9f1239">正当事由</text>
+      <rect x="907" y="514" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="975" y="531" text-anchor="middle" font-size="13" fill="#9f1239">更新・買取</text>
+
+      <rect x="400" y="36" width="360" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="580" y="65" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">終了場面の判断</text>
+      <text x="580" y="90" text-anchor="middle" font-size="12" fill="#1e3a8a">民法だけで終わるか、借地借家法が入るか</text>
+
+      <rect x="35" y="228" width="300" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="185" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">一般賃貸借</text>
+      <text x="185" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">期間満了・解約申入れ・解除</text>
+      <text x="185" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">民法617条・620条</text>
+
+      <rect x="430" y="228" width="300" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="580" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">建物賃貸借</text>
+      <text x="580" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">更新通知・解約申入れ</text>
+      <text x="580" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">借地借家法26条から28条</text>
+
+      <rect x="825" y="228" width="300" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="975" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">建物所有目的の土地</text>
+      <text x="975" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">借地権として保護</text>
+      <text x="975" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">借地借家法3条から10条</text>
+
+      <rect x="35" y="396" width="300" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="185" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">終了後の効力</text>
+      <text x="185" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">解除は将来効</text>
+      <text x="185" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">返還・原状回復・敷金精算</text>
+
+      <rect x="430" y="396" width="300" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="580" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">普通借家</text>
+      <text x="580" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">一年前から六月前の通知</text>
+      <text x="580" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">正当事由がなければ終了不可</text>
+
+      <rect x="825" y="396" width="300" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="975" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">普通借地</text>
+      <text x="975" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">存続30年・更新20年/10年</text>
+      <text x="975" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">建物ありなら更新請求保護</text>
+
+      <rect x="35" y="556" width="300" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="185" y="588" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">原状回復・敷金</text>
+      <text x="185" y="612" text-anchor="middle" font-size="12" fill="#9f1239">通常損耗と経年変化は除外</text>
+      <text x="185" y="632" text-anchor="middle" font-size="12" fill="#9f1239">返還後に残額が具体化</text>
+
+      <rect x="430" y="556" width="300" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="580" y="588" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">定期建物賃貸借</text>
+      <text x="580" y="612" text-anchor="middle" font-size="12" fill="#9f1239">書面・電磁的記録と事前説明</text>
+      <text x="580" y="632" text-anchor="middle" font-size="12" fill="#9f1239">一年以上は終了通知も必要</text>
+
+      <rect x="825" y="556" width="300" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="975" y="588" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">建物買取請求など</text>
+      <text x="975" y="612" text-anchor="middle" font-size="12" fill="#9f1239">更新なしなら時価買取請求</text>
+      <text x="975" y="632" text-anchor="middle" font-size="12" fill="#9f1239">借地人に不利な特約は無効</text>
+
+      <rect x="70" y="690" width="1020" height="44" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="580" y="718" text-anchor="middle" font-size="13" fill="#9f1239">建物・借地では、民法の終了原因に加えて、更新保護・正当事由・強行規定を必ず確認する</text>
+    </svg>
+  </div>
+
+  <p>二枚目の図は、終了場面での思考順序を示している。動産や一般的な民法上の賃貸借なら、期間満了、解約申入れ、解除、全部滅失を見て、返還・原状回復・敷金精算へ進む。建物賃貸借では、普通借家なら通知期間と正当事由が加わり、定期建物賃貸借なら書面又は電磁的記録、事前説明、終了通知を確認する。建物所有目的の土地賃貸借では、普通借地として存続期間、更新請求、正当事由、建物買取請求権が問題になる。問題文が「建物」「建物所有目的の土地」を示したら、民法だけで処理しないことが最重要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>貸借型契約の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">消費貸借</th>
+        <th class="col--b">使用貸借</th>
+        <th class="col--c">賃貸借</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">返還対象</td>
+        <td class="col--a"><span class="em-a">同種・同等・同量</span>の物を返す。金銭が典型。</td>
+        <td class="col--b">借りた<span class="em-b">物そのもの</span>を無償利用後に返す。</td>
+        <td class="col--c">借りた<span class="em-c">物そのもの</span>を有償利用後に返す。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対価</td>
+        <td class="col--a">利息は特約がなければ発生しない。</td>
+        <td class="col--b">無償であることが本質的要素。</td>
+        <td class="col--c">賃料支払が本質的要素。</td>
+      </tr>
+      <tr>
+        <td class="col--label">成立</td>
+        <td class="col--a">通常型は受領で効力発生。書面型は合意で効力発生。</td>
+        <td class="col--b">現行法では合意で効力発生。</td>
+        <td class="col--c">合意で効力発生。引渡しは対抗・履行の問題。</td>
+      </tr>
+      <tr>
+        <td class="col--label">終了時の中心</td>
+        <td class="col--a">返還時期、期限前返済、利息。</td>
+        <td class="col--b">目的終了、借主死亡、受領前解除。</td>
+        <td class="col--c">解約申入れ、解除、原状回復、敷金、借地借家法。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答例</td>
+        <td class="col--a">「借りた紙幣そのものを返す必要がある」は誤り。</td>
+        <td class="col--b">「無償でも借地借家法上の賃貸借になる」は誤り。</td>
+        <td class="col--c">「賃料があっても使用貸借である」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>分類では、まず返す対象を見る。同種同量を返すなら<strong><mark class="kw">消費貸借契約</mark></strong>、同じ物を無償で返すなら<strong><mark class="kw">使用貸借契約</mark></strong>、同じ物を賃料を払って返すなら<strong><mark class="kw">賃貸借契約</mark></strong>である。行政書士試験では、無償か有償か、代替物か特定物か、引渡しが成立要件か対抗要件かを順に確認すると混同を避けやすい。</p>
+
+  <h3>民法賃貸借と借地借家法の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">民法上の一般賃貸借</th>
+        <th class="col--b">普通借家</th>
+        <th class="col--c">普通借地</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">対象</td>
+        <td class="col--a">動産・一般不動産を含む賃貸借。</td>
+        <td class="col--b">建物の賃貸借。</td>
+        <td class="col--c">建物所有目的の土地賃借権又は地上権。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対抗要件</td>
+        <td class="col--a"><span class="em-a">登記</span>が原則。</td>
+        <td class="col--b">建物の<span class="em-b">引渡し</span>で足りる。</td>
+        <td class="col--c">土地上の<span class="em-c">登記建物所有</span>で足りる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">期間・更新</td>
+        <td class="col--a">民法604条で上限50年。期間満了後の使用継続で更新推定。</td>
+        <td class="col--b">一年未満は期間の定めなしとみなす。更新拒絶には通知と正当事由。</td>
+        <td class="col--c">存続期間30年が基準。初回更新20年、以後10年。</td>
+      </tr>
+      <tr>
+        <td class="col--label">貸主側終了</td>
+        <td class="col--a">期間なしなら解約申入れ後、土地一年、建物三か月など。</td>
+        <td class="col--b">解約申入れ後六か月に加え、正当事由が必要。</td>
+        <td class="col--c">更新拒絶の異議には正当事由が必要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">強行性</td>
+        <td class="col--a">当事者自治が比較的広い。</td>
+        <td class="col--b">借家人に不利な特約は無効となる規定が多い。</td>
+        <td class="col--c">借地権者に不利な特約は無効となる規定が多い。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答例</td>
+        <td class="col--a">「すべての賃貸借で引渡し対抗が可能」は誤り。</td>
+        <td class="col--b">「貸主は民法617条だけで三か月後に終了させられる」は誤り。</td>
+        <td class="col--c">「建物所有目的でも存続期間は自由に短縮できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>不動産が出たら、目的物と利用目的で分岐する。建物そのものを借りるなら普通借家又は定期借家、建物所有目的で土地を借りるなら借地、単なる駐車場や資材置場として土地を借りるだけなら通常は借地借家法の借地ではない。民法の終了期間を覚えるだけでは足りず、借地借家法の正当事由と強行規定が上乗せされるかを必ず確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法601条・605条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法601条</mark></strong>　賃貸借は、当事者の一方がある物の使用及び収益を相手方にさせることを約し、相手方がこれに対してその賃料を支払うこと及び引渡しを受けた物を契約が終了したときに返還することを約することによって、その効力を生ずる。<br>
+        <strong><mark class="kw">民法605条の2第1項</mark></strong>　前条、借地借家法第十条又は第三十一条その他の法令の規定による賃貸借の対抗要件を備えた場合において、その不動産が譲渡されたときは、その不動産の賃貸人たる地位は、その譲受人に移転する。
+      </blockquote>
+      <p><strong><mark class="kw">民法601条</mark></strong>は、賃貸借の定義規定である。使用収益、賃料、終了時返還の三要素がそろうことで契約が成立する。引渡しを受けた物の返還が書かれているが、引渡しは契約成立要件ではなく、履行・返還義務の前提である。<strong><mark class="kw">民法605条の2</mark></strong>は、対抗要件を備えた不動産賃貸借について、所有者が変わったときの賃貸人地位移転を定める。条文上、譲受人への地位移転、留保合意、賃借人への対抗には所有権移転登記が必要であること、敷金返還債務等の承継まで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法606条・607条の2・611条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法606条1項</mark></strong>　賃貸人は、賃貸物の使用及び収益に必要な修繕をする義務を負う。ただし、賃借人の責めに帰すべき事由によってその修繕が必要となったときは、この限りでない。<br>
+        <strong><mark class="kw">民法607条の2</mark></strong>　賃借物の修繕が必要である場合において、賃借人が通知等をしても賃貸人が相当期間内に必要な修繕をしないとき、又は急迫の事情があるときは、賃借人は、その修繕をすることができる。<br>
+        <strong><mark class="kw">民法611条1項</mark></strong>　賃借物の一部が滅失その他の事由により使用及び収益をすることができなくなった場合において、それが賃借人の責めに帰することができない事由によるものであるときは、賃料は、その使用及び収益をすることができなくなった部分の割合に応じて、減額される。
+      </blockquote>
+      <p><strong><mark class="kw">民法606条</mark></strong>は、賃貸人が使用収益可能な状態を維持する義務を負うことを示す。賃借人の故意過失で壊した場合は賃貸人負担から外れる。<strong><mark class="kw">民法607条の2</mark></strong>は、賃貸人が修繕しない場合や急迫事情がある場合に賃借人の修繕を認め、実務上の応急対応を可能にする。<strong><mark class="kw">民法611条</mark></strong>は、賃借人に帰責性のない一部使用不能について当然減額を認める。残存部分だけで契約目的を達成できないときは解除もできるため、修繕、減額、解除を段階的に処理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法612条・613条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法612条1項</mark></strong>　賃借人は、賃貸人の承諾を得なければ、その賃借権を譲り渡し、又は賃借物を転貸することができない。<br>
+        <strong><mark class="kw">民法612条2項</mark></strong>　賃借人が前項の規定に違反して第三者に賃借物の使用又は収益をさせたときは、賃貸人は、契約の解除をすることができる。<br>
+        <strong><mark class="kw">民法613条1項</mark></strong>　賃借人が適法に賃借物を転貸したときは、転借人は、賃貸人と賃借人との間の賃貸借に基づく賃借人の債務の範囲を限度として、賃貸人に対して転貸借に基づく債務を直接履行する義務を負う。
+      </blockquote>
+      <p><strong><mark class="kw">民法612条</mark></strong>は、賃貸借が人的信頼を基礎にすることから、賃借権譲渡・転貸を原則として賃貸人の承諾にかからせる。解除できるのは、単に譲渡契約・転貸契約を結んだだけではなく、第三者に使用又は収益をさせたときである。判例は、背信的行為と認めるに足りない特段の事情があれば解除を制限する。<strong><mark class="kw">民法613条</mark></strong>は適法転貸の効果であり、転借人が賃貸人へ直接履行義務を負うが、原賃貸借の債務範囲を超えない。合意解除は転借人に対抗できないのが原則で、債務不履行解除権があった場合は例外となる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法617条・620条・621条・622条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法617条1項</mark></strong>　当事者が賃貸借の期間を定めなかったときは、各当事者は、いつでも解約の申入れをすることができる。この場合、土地は一年、建物は三箇月、動産及び貸席は一日を経過することによって終了する。<br>
+        <strong><mark class="kw">民法620条</mark></strong>　賃貸借の解除をした場合には、その解除は、将来に向かってのみその効力を生ずる。<br>
+        <strong><mark class="kw">民法621条</mark></strong>　賃借人は、賃貸借が終了したときは、通常損耗及び経年変化を除き、賃借物の損傷を原状に復する義務を負う。<br>
+        <strong><mark class="kw">民法622条の2</mark></strong>　賃貸人は、敷金を受け取っている場合、賃貸借が終了し、かつ、賃貸物の返還を受けたとき等に、債務額を控除した残額を返還しなければならない。
+      </blockquote>
+      <p><strong><mark class="kw">民法617条</mark></strong>は期間の定めのない賃貸借の終了ルールである。ただし、建物賃貸借では借地借家法27条・28条が優先し、貸主側の解約申入れには六か月と正当事由が必要となる。<strong><mark class="kw">民法620条</mark></strong>は、賃貸借解除の効果が将来効であり、売買解除のように全面的な原状回復関係へ戻すものではないことを示す。<strong><mark class="kw">民法621条</mark></strong>は通常損耗・経年変化を原状回復義務から除外し、賃借人の帰責性を重視する。<strong><mark class="kw">民法622条の2</mark></strong>は、敷金返還が終了だけでなく返還を受けた時に具体化する点を明文化している。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">借地借家法3条・5条・6条・10条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">借地借家法3条</mark></strong>　借地権の存続期間は、三十年とする。ただし、契約でこれより長い期間を定めたときは、その期間とする。<br>
+        <strong><mark class="kw">借地借家法5条</mark></strong>　借地権者が契約の更新を請求したときは、建物がある場合に限り、従前の契約と同一の条件で契約を更新したものとみなす。<br>
+        <strong><mark class="kw">借地借家法6条</mark></strong>　借地権設定者の異議は、土地使用の必要性、従前の経過、土地利用状況、財産上給付の申出等を考慮して正当の事由がある場合でなければ述べることができない。<br>
+        <strong><mark class="kw">借地借家法10条</mark></strong>　借地権は、その登記がなくても、土地上に借地権者が登記されている建物を所有するときは、第三者に対抗できる。
+      </blockquote>
+      <p><strong><mark class="kw">借地借家法</mark></strong>の借地ルールは、建物所有目的の土地利用を長期・安定的に保護する。借地権の存続期間は民法604条の一般上限とは別に、最低30年を基準とする。更新請求は建物がある場合に限って保護され、貸主側の異議には正当事由が必要である。対抗力も土地賃借権登記だけでなく、土地上の登記建物所有で認められる。試験では、駐車場や資材置場の土地賃貸借を当然に借地権としないこと、建物の有無が更新請求の要件になること、正当事由判断は双方の必要性や従前経過の総合判断であることを押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">借地借家法26条・28条・31条・38条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">借地借家法26条1項</mark></strong>　建物賃貸借で期間の定めがある場合、期間満了の一年前から六月前までの間に更新拒絶等の通知をしなかったときは、従前と同一条件で更新したものとみなす。<br>
+        <strong><mark class="kw">借地借家法28条</mark></strong>　建物賃貸人による更新拒絶通知又は解約申入れは、建物使用の必要性、従前の経過、利用状況、現況、財産上給付の申出を考慮して正当事由がある場合でなければできない。<br>
+        <strong><mark class="kw">借地借家法31条</mark></strong>　建物賃貸借は、登記がなくても建物の引渡しがあったときは、その後その建物について物権を取得した者に効力を生ずる。<br>
+        <strong><mark class="kw">借地借家法38条</mark></strong>　定期建物賃貸借は、書面又は電磁的記録による契約と、更新がない旨の事前説明が要件となる。
+      </blockquote>
+      <p>普通借家では、期間満了だけで当然終了するわけではない。期間満了前の通知がなければ法定更新となり、通知をしても賃借人が使用継続し賃貸人が遅滞なく異議を述べない場合にも更新される。さらに、貸主側の更新拒絶・解約申入れには<strong><mark class="kw">正当事由</mark></strong>が必要である。<strong><mark class="kw">借地借家法31条</mark></strong>は、建物引渡しにより建物賃貸借の対抗力を認める。<strong><mark class="kw">借地借家法38条</mark></strong>は定期借家の例外であり、書面又は電磁的記録による契約、事前説明、期間一年以上の場合の終了通知を欠くと、普通借家化又は終了対抗不可という形で処理される。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和27年4月25日 昭和24年(オ)第143号 民集6巻4号451頁</div>
+      <div class="case-card__title">賃貸借の信頼関係破壊と無催告解除事件（家屋明渡請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法541条</span>
+        <span class="badge badge--law">賃貸借</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>賃貸人は、昭和10年9月25日、賃借人に対して畳・建具等の造作一式が付いた家屋を期間の定めなく賃貸した。賃借人は昭和13年頃に出征して不在がちとなり、その間、妻や子らが家屋に居住したが、室内で野球をする、建具類を破壊する、燃料に困って建具類を燃やす、便所を使用不能のまま放置する、室内の清掃をせず不潔な状態にするなど、家屋を著しく乱暴に使用した。賃貸人は破損箇所の修復を請求したが、賃借人は応じなかったため、賃貸借を解除して家屋明渡しを求めた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">賃貸借契約</mark></strong>は当事者相互の信頼関係を基礎とする継続的契約であるとした。その継続中に、一方当事者が信頼関係を裏切り、賃貸借関係の継続を著しく困難にする不信行為をした場合には、相手方は賃貸借を将来に向かって解除でき、この場合には民法541条所定の催告を要しないと判示した。本件では、家屋の乱暴な使用、建具等の消失、外壁破損、水洗便所の使用不能、修復請求への不応答などが総合され、賃借人としての義務違反が著しく、契約継続を困難にする不信行為に当たるとされた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">信頼関係破壊の法理</mark></strong>の出発点として重要である。行政書士試験では、「賃貸借では債務不履行があれば常に催告なしで解除できる」とする肢も、「どれほど重大な不信行為があっても催告が絶対に必要」とする肢も誤りになり得る。正しくは、継続的契約としての信頼関係を破壊し、契約継続を著しく困難にする事情があるかを具体的に見る。用法違反、賃料不払、無断改造、迷惑行為などの事案で、違反の程度、期間、是正可能性、賃貸人への影響を総合評価する枠組みとして使う。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法541条</mark></strong>、<strong><mark class="kw">民法616条</mark></strong>、<strong><mark class="kw">民法594条1項</mark></strong>、<strong><mark class="kw">民法620条</mark></strong>が関連する。後続判例では、無断譲渡・転貸、増改築、賃料不払について、信頼関係破壊の有無を個別事情から判断する法理が展開された。民法の条文上は解除できそうに見えても、賃貸借では信義則上の制限がかかることを示す基本判例である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和44年2月13日 昭和42年(オ)第1382号 民集23巻2号316頁</div>
+      <div class="case-card__title">賃借権譲渡承諾特約と背信的行為事件（建物収去土地明渡等請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法612条</span>
+        <span class="badge badge--law">背信行為</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物所有を目的とする土地賃貸借において、賃借権を譲渡するには賃貸人の書面による承諾を要する旨の特約があった。賃借人は、賃貸人の書面承諾を得ずに賃借権を第三者へ譲渡したため、賃貸人は特約違反を理由として賃貸借契約を解除し、建物収去土地明渡し等を求めた。争点は、承諾特約に形式的に違反した場合、常に解除が認められるのか、それとも譲渡の実質が賃貸人との信頼関係を破壊しない場合には解除が制限されるのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、書面承諾を要する特約があるにもかかわらず賃借人が書面承諾を得ないで賃借権を譲渡した場合でも、その特約の趣旨その他諸般の事情に照らし、当該譲渡が賃貸人に対する背信的行為であると認めるに足りない特段の事情が賃借人側から立証されたときは、特約に基づく解除は許されないと判断した。つまり、<strong><mark class="kw">民法612条</mark></strong>の承諾制限は賃貸人の人的信頼を守るための制度であり、形式違反だけを機械的に捉えるのではなく、賃貸人に実質的不利益や信頼破壊があるかを判断する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">無断譲渡・無断転貸</mark></strong>の出題で最重要である。典型的な誤答は、「賃貸人の承諾を得ない賃借権譲渡があれば、どのような事情でも必ず解除できる」という肢である。正しくは、原則として解除原因になるが、背信的行為と認めるに足りない特段の事情があれば解除できない。また、背信性がないことは賃借人側が主張立証すべきものとして理解する。親族間承継、個人営業の法人化、一部・短期の利用などでは背信性が否定され得る一方、営利的な無断転貸や賃貸人の管理利益を害する態様では解除が認められやすい。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法612条</mark></strong>、<strong><mark class="kw">民法613条</mark></strong>、借地借家法19条が関連する。土地借地権では、建物譲渡に伴う賃借権譲渡について、借地借家法上の承諾に代わる許可制度も接続する。試験では、民法612条の解除権、判例上の背信性例外、借地借家法の裁判所許可を分けて整理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和48年2月2日 昭和46年(オ)第357号 民集27巻1号80頁</div>
+      <div class="case-card__title">敷金返還請求権の発生時期事件（敷金返還請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法622条の2</span>
+        <span class="badge badge--law">敷金</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>賃借人Dは、昭和34年10月31日、家屋二棟を月額賃料8000円、期間3年で借り、敷金25万円を交付した。契約書には、敷金は家屋明渡しの際に借主の債務があれば充当し、債務がなければ明渡しと同時に無利息で返還する旨が記載されていた。賃貸借は昭和37年10月31日に期間満了で終了したが、Dは明渡しをしなかった。その後、家屋は第三者に売却され、Dの債権者がDの敷金返還請求権を差し押さえて転付命令を得たため、賃貸借終了後・明渡前の敷金返還請求権が具体的な債権として存在するかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、家屋賃貸借における<strong><mark class="kw">敷金</mark></strong>は、賃貸借存続中の賃料債権だけでなく、賃貸借終了後、家屋明渡義務の履行までに生ずる賃料相当損害金その他賃貸借契約から生じる一切の債権を担保するとした。そして、敷金返還請求権は、賃貸借終了後に家屋明渡しがされた時点で、それまでに生じた被担保債権を控除し、なお残額があることを条件として、その残額について具体的に発生すると判断した。したがって、明渡前の段階では、敷金返還請求権は発生・金額が未確定であり、転付命令の対象となる適格を欠くとされた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、現行<strong><mark class="kw">民法622条の2</mark></strong>の理解に直結する。誤答パターンは、「賃貸借契約が終了した時点で敷金返還請求権は当然に全額発生する」「賃借人は明渡し前に敷金返還と建物明渡しを同時履行として主張できる」というものである。正しくは、敷金は明渡しまでの損害金等も担保し、返還請求権は賃貸物返還後に残額が具体化する。敷金は賃借人保護だけでなく、賃貸人の未払賃料・原状回復費用・明渡遅延損害を担保する制度である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法622条の2</mark></strong>、<strong><mark class="kw">民法605条の2第4項</mark></strong>、<strong><mark class="kw">民法621条</mark></strong>が関連する。賃貸人地位移転時の敷金承継を扱う判例とあわせて、敷金は賃貸借に付随する担保関係として理解する。返還時期、充当範囲、賃借人からの充当請求不可、賃貸人地位移転時の承継はセットで問われる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和39年6月30日 昭和39年(オ)第25号 民集18巻5号991頁</div>
+      <div class="case-card__title">無断転貸と背信性の抗弁事件（建物収去土地明渡請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法612条</span>
+        <span class="badge badge--law">転貸</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地又は建物の賃貸借において、賃借人が賃貸人の承諾なく第三者に賃借物を使用収益させた。賃貸人は、<strong><mark class="kw">民法612条</mark></strong>に基づき無断転貸又は無断譲渡を理由として賃貸借契約を解除し、明渡しを求めた。これに対して賃借人側は、形式的には承諾を欠くとしても、利用実態や当事者関係から見て賃貸人への背信行為とはいえず、解除は許されないと主張した。争点は、民法612条2項の解除権が、信義則上どのように制限されるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、賃借人が賃貸人の承諾を得ずに賃借権を譲渡し、又は賃借物を転貸して第三者に使用収益させた場合でも、それが賃貸人に対する背信行為と認めるに足りない特段の事情があるときは、賃貸人は民法612条2項によって賃貸借契約を解除することができないとする枠組みを示した。この法理は、承諾制限の目的が賃貸人の信頼利益を保護する点にあることを前提に、形式違反と実質的信頼破壊を区別するものである。後の判例群でも、親族関係、法人化、短期・一部利用、営利性、賃貸人への不利益の程度などが背信性判断の要素とされた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例の意義は、<strong><mark class="kw">民法612条</mark></strong>を条文どおりに読むだけでは足りない点にある。短答式では、「賃貸人の承諾なく転貸したときは、背信行為と認めるに足りない特段の事情があっても、賃貸人は常に解除できる」という肢が誤りになる。逆に、「無断転貸は常に解除できない」という肢も誤りである。原則は解除可能、例外として背信性を欠く特段の事情がある場合に解除不可、という順序で整理する。無断転貸の契約自体は賃貸人との関係で当然無効になるわけではない点も合わせて押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法612条</mark></strong>、<strong><mark class="kw">民法613条</mark></strong>、昭和44年2月13日判決が関連する。借地では、借地権者が建物を譲渡する場面で借地借家法19条の承諾に代わる許可も接続する。試験では、民法上の承諾、判例上の背信性判断、借地借家法上の裁判所許可を段階的に使い分ける。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">賃貸借契約</mark></strong>は合意で成立し、引渡しは成立要件ではない。</li>
+        <li><strong><mark class="kw">民法605条</mark></strong>は不動産賃貸借の登記対抗を定めるが、借地・借家では借地借家法の特別対抗要件を確認する。</li>
+        <li><strong><mark class="kw">賃貸人たる地位の移転</mark></strong>は、対抗要件を備えた不動産賃貸借で不動産が譲渡された場合に問題になる。</li>
+        <li><strong><mark class="kw">民法611条</mark></strong>の一部使用不能による賃料減額は、賃借人に帰責性がない場合に当然に発生する。</li>
+        <li><strong><mark class="kw">民法612条</mark></strong>の無断譲渡・転貸は原則解除原因だが、背信的行為と認めるに足りない特段の事情があれば解除できない。</li>
+        <li><strong><mark class="kw">賃貸借の解除</mark></strong>は将来効であり、過去の使用収益関係をなかったことにしない。</li>
+        <li><strong><mark class="kw">敷金</mark></strong>は賃貸借終了かつ賃貸物返還後に、被担保債権を控除した残額として具体化する。</li>
+        <li><strong><mark class="kw">借地借家法</mark></strong>では、普通借家の更新拒絶・解約申入れに正当事由が必要である。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「賃貸借契約は、賃借人が目的物の引渡しを受けなければ成立しない。」これは誤りである。<strong><mark class="kw">民法601条</mark></strong>は合意によって効力を生ずる諾成契約として賃貸借を定めている。</p>
+      <p><strong>誤りの選択肢例2：</strong>「建物賃貸借は、登記がなければ新所有者に対抗できない。」これは誤りである。<strong><mark class="kw">借地借家法31条</mark></strong>により、建物の引渡しがあれば、その後の物権取得者に対抗できる。</p>
+      <p><strong>誤りの選択肢例3：</strong>「賃借物の一部が賃借人に帰責性なく使用不能になった場合、賃借人が請求しない限り賃料は減額されない。」これは誤りである。現行<strong><mark class="kw">民法611条</mark></strong>では当然減額である。</p>
+      <p><strong>誤りの選択肢例4：</strong>「賃借人が無断転貸した場合、背信的行為と認めるに足りない特段の事情があっても、賃貸人は常に解除できる。」これは誤りである。判例は、背信性を欠く特段の事情があれば解除を否定する。</p>
+      <p><strong>誤りの選択肢例5：</strong>「賃貸借が終了すれば、賃貸物の返還前でも敷金返還請求権は全額具体的に発生する。」これは誤りである。<strong><mark class="kw">敷金</mark></strong>は返還までの損害金等も担保し、賃貸物返還後に残額が具体化する。</p>
+      <p><strong>誤りの選択肢例6：</strong>「期間の定めのない建物賃貸借は、貸主が解約申入れをすれば民法617条により三か月で当然終了する。」これは誤りである。普通借家では<strong><mark class="kw">借地借家法27条</mark></strong>の六か月と<strong><mark class="kw">借地借家法28条</mark></strong>の正当事由が問題になる。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、第一に契約類型を確定することである。有償で物そのものを使い、終了時に返すなら<strong><mark class="kw">賃貸借契約</mark></strong>である。第二に、目的物が動産か、不動産か、建物か、建物所有目的の土地かを分ける。第三に、第三者対抗、修繕・賃料減額、譲渡・転貸、終了・敷金という論点順で処理する。第四に、建物又は借地なら借地借家法の強行規定が民法の一般ルールを修正するかを確認する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">賃貸借契約</mark></strong>は、物権変動、担保物権、債務不履行、不法行為、相続、会社法・商法上の営業譲渡とも接続する。賃貸不動産が売却されると物権変動と対抗要件が問題になり、賃料債権の譲渡や差押えでは債権譲渡・執行の知識が必要になる。店舗賃貸借では、営業譲渡に伴う賃借権譲渡、保証金、原状回復が問題になりやすい。相続では、賃借人死亡後の賃借権承継や同居者保護が問題になるため、民法総則・債権・物権・家族法を横断して整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、<strong><mark class="kw">賃貸借契約</mark></strong>の実務上重要な判例・解釈が多く明文化された。<strong><mark class="kw">民法605条の2</mark></strong>は賃貸人たる地位の移転を、<strong><mark class="kw">民法607条の2</mark></strong>は賃借人による修繕を、<strong><mark class="kw">民法611条</mark></strong>は一部使用不能による当然減額を、<strong><mark class="kw">民法621条</mark></strong>は通常損耗・経年変化を除く原状回復義務を、<strong><mark class="kw">民法622条の2</mark></strong>は敷金を明文化した。これにより、従来は判例・実務で処理していた論点が条文問題として問われやすくなった。</p>
+    </div>
+  </div>
+
+  <p>借地借家法では、令和4年5月18日施行の改正により、定期借地権や定期建物賃貸借で、書面に限られていた一定の手続について電磁的記録・電磁的方法が利用できるようになった。<strong><mark class="kw">借地借家法38条</mark></strong>では、定期建物賃貸借の契約が電磁的記録でされた場合に書面とみなされ、事前説明書面の交付も賃借人の承諾を得て電磁的方法で提供できる。行政書士試験では、定期建物賃貸借の要件として、単に「更新がない特約」と覚えるのではなく、契約形式、事前説明、説明欠缺の効果、期間一年以上の終了通知まで整理する。</p>
+
+  <p>実務上、<strong><mark class="kw">賃貸借契約</mark></strong>では、賃料、期間、更新、解約予告、修繕範囲、禁止事項、転貸可否、原状回復、敷金精算を契約書で明確にする必要がある。もっとも、建物賃貸借や借地では、契約書で借主に不利な内容を定めても、借地借家法の強行規定に反する限り無効となる。したがって、契約自由の原則と借主保護の強行規定の境界を意識することが、条文問題にも実務問題にも有用である。</p>
+
+  <p>学習上は、条文を機能別に束ねると理解しやすい。成立は<strong><mark class="kw">民法601条</mark></strong>、対抗・地位移転は<strong><mark class="kw">民法605条</mark></strong>から<strong><mark class="kw">民法605条の4</mark></strong>、修繕・費用・賃料減額は<strong><mark class="kw">民法606条</mark></strong>から<strong><mark class="kw">民法611条</mark></strong>、譲渡・転貸は<strong><mark class="kw">民法612条</mark></strong>と<strong><mark class="kw">民法613条</mark></strong>、終了・原状回復・敷金は<strong><mark class="kw">民法617条</mark></strong>から<strong><mark class="kw">民法622条の2</mark></strong>である。借地借家法は、借地なら3条・5条・6条・10条、借家なら26条・28条・31条・38条を中心に押さえる。問題文では、まず「借地借家法が入るか」を判定し、その後に民法の一般規定を補充的に使うと、誤答を避けやすい。</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>時効制度 | 行政書士試験 民法 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">時効制度</h1>
+  <p class="page-title-block__sub">長期間続いた事実状態を、取得・消滅・援用・完成猶予・更新の順に整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">取得時効</span>
+    <span class="badge badge--info">消滅時効</span>
+    <span class="badge badge--info">時効の援用</span>
+    <span class="badge badge--info">完成猶予</span>
+    <span class="badge badge--info">更新</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">時効制度</mark></strong>は、真実の権利関係がどうであったかだけでなく、一定の事実状態が長期間続いたこと自体に法律効果を与える制度である。隣地の一部を所有の意思で長年占有してきた者に所有権取得を認める場面、貸金債権を長年行使しなかった債権者に請求を認めない場面、裁判や催告によって時効完成を止める場面が、同じ「時効」という枠の中に入る。</p>
+  <p>民法総則の時効は、大きく<strong><mark class="kw">取得時効</mark></strong>と<strong><mark class="kw">消滅時効</mark></strong>に分かれる。取得時効は、所有の意思をもって平穏・公然に他人の物を占有するなど、一定の外形が続いたときに権利を取得させる制度である。消滅時効は、権利者が権利を行使できるのに一定期間行使しないときに、その権利を消滅させる制度である。どちらも「時間の経過」だけでは足りず、成立要件、起算点、援用、完成猶予・更新の有無を具体的に検討する。</p>
+  <p>行政書士試験では、<strong><mark class="kw">民法162条</mark></strong>の十年・二十年の取得時効、<strong><mark class="kw">民法166条</mark></strong>の主観的五年・客観的十年の消滅時効、<strong><mark class="kw">民法145条</mark></strong>の援用権者、<strong><mark class="kw">完成猶予</mark></strong>と<strong><mark class="kw">更新</mark></strong>の区別が頻出である。令和二年施行の民法改正で「中断・停止」という古い用語が「完成猶予・更新」に整理され、債権の消滅時効も職業別短期消滅時効を廃止して統一されたため、旧法知識と混同しないことが重要になる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る時効の入口</span>
+    </div>
+    <div class="box__bd">
+      <p>Aが、隣接地の一部を自分の土地だと信じて塀で囲み、家庭菜園として十年間使い続けたとする。占有開始時に善意・無過失で、所有の意思、平穏、公然という要件を満たすなら、Aは<strong><mark class="kw">短期取得時効</mark></strong>を主張できる余地がある。ここで問われるのは「Aが権利を行使しなかったか」ではなく、「Aの占有という外形を権利取得に結び付けるか」である。</p>
+      <p>一方、BがCに百万円を貸し、弁済期が到来したことをBが知りながら五年間請求しなかった場合は、Cが<strong><mark class="kw">消滅時効</mark></strong>を援用できる可能性がある。もっとも、Bが途中で訴訟を提起すれば時効完成が猶予され、確定判決で権利が確定すれば時効は更新される。時効は単なる期間計算ではなく、当事者の行動を時系列で追う制度である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">時効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">時効</mark></strong>とは、一定の事実状態が一定期間継続した場合に、その事実状態に対応する権利の取得または消滅という法律効果を認める制度である。制度趣旨は、長く続いた外形を尊重して法的安定を守ること、時間の経過によって証拠が散逸する危険を救済すること、権利の上に眠る者を保護しないことにある。取得時効では占有などの外形が権利取得につながり、消滅時効では権利不行使が権利消滅につながる。</p>
+      <p>ただし、<strong><mark class="kw">時効</mark></strong>は当然に裁判所が職権で適用する制度ではない。民法145条は、当事者が援用しなければ裁判所が時効によって裁判できないと定める。これは、時効完成後でも当事者が道義的・経済的理由から支払うことがあり、その利益を受けるかどうかを本人の選択に委ねるためである。</p>
+      <p>試験では「時効期間が満了すれば、裁判所は当然に権利消滅を認める」とする選択肢が誤りになる。時効の効果、援用、放棄、完成猶予、更新は、それぞれ働く時点と効果が異なる。まず取得か消滅か、次に時効が完成したか、さらに援用できる者が援用したか、という順序で判断する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">取得時効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">取得時効</mark></strong>とは、一定期間、権利行使に相当する外形を継続した者に、その権利を取得させる時効である。所有権については民法162条が中心で、二十年間の占有による長期取得時効と、占有開始時に善意・無過失である場合の十年間の短期取得時効がある。所有権以外の財産権については民法163条が、自己のためにする意思をもって平穏・公然に権利を行使する者に取得時効を認める。</p>
+      <p>取得時効の要件で特に重要なのは、<strong><mark class="kw">所有の意思</mark></strong>である。所有の意思は内心だけでなく、占有を取得した原因や占有中の態度から外形的・客観的に判断される。賃借人や使用借主は、通常は他人の所有権を認めて占有する他主占有者であるため、単に長く住んだだけでは所有権の取得時効に直結しない。</p>
+      <p>試験では、平穏・公然・善意は民法186条により推定されるが、無過失は推定されない点が問われる。短期取得時効を主張する者は、占有開始時に他人の物であることを知らず、かつ知らなかったことに過失がなかったことを主張立証する必要がある。期間の途中で悪意になっても、短期取得時効では占有開始時の善意・無過失を基準にする点も頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">消滅時効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">消滅時効</mark></strong>とは、権利者が権利を行使できるのに一定期間行使しない場合に、時効の援用によってその権利を消滅させる制度である。債権については民法166条1項が中心で、債権者が権利を行使できることを知った時から五年間行使しない場合、または権利を行使できる時から十年間行使しない場合に時効によって消滅する。</p>
+      <p>この「五年」と「十年」は二者択一ではなく、どちらか早く満了した時点で消滅時効が完成する構造である。弁済期のある貸金債権では、通常、債権者は弁済期到来を知っているため、主観的起算点から五年が問題になる。これに対し、債権者が権利行使可能性を知らない特殊な場面では、客観的起算点から十年が上限として働く。</p>
+      <p>消滅時効は所有権には適用されない。民法166条2項は、債権または所有権以外の財産権について二十年の消滅時効を定めるため、所有権は除外されている。もっとも、所有権そのものは消えなくても、他人が目的物を取得時効によって所有権取得する結果、原所有者の所有権が失われることはある。試験では「所有権は消滅時効にかからない」と「取得時効で所有権が移転し得る」を区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">時効の援用</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">時効の援用</mark></strong>とは、時効による利益を受ける意思を表示することである。民法145条は、時効は当事者が援用しなければ裁判所がこれによって裁判できないとする。消滅時効については、当事者だけでなく、保証人、物上保証人、第三取得者その他権利の消滅について正当な利益を有する者も援用できると明文化されている。</p>
+      <p>援用権者の判断基準は「権利の消滅によって直接に利益を受けるか」である。主債務が消滅すれば保証債務も消える保証人、抵当権の被担保債権が消滅すれば抵当権の負担から解放される第三取得者は、直接利益を受ける。これに対し、後順位抵当権者が先順位抵当権の被担保債権の消滅で配当増加を期待できるとしても、それは順位上昇に伴う反射的利益にとどまるため、判例は援用を否定している。</p>
+      <p>試験では「債務者の一般債権者」「後順位抵当権者」「第三取得者」「保証人」を並べて、援用可否を問う形式が多い。条文上列挙されている者でも、具体的な権利消滅との関係で正当な利益があるかを見る必要がある。時効完成後の債務承認のように、援用できる地位をいったん失う場面もあるため、時系列も確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">完成猶予</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">完成猶予</mark></strong>とは、時効期間の進行そのものをゼロに戻すのではなく、一定の事由がある間または一定期間、時効の完成を阻止する効果である。裁判上の請求、支払督促、和解・調停、破産手続参加などは、手続が続く間は時効完成を猶予する。催告は催告の時から六箇月間、仮差押え・仮処分は終了時から六箇月を経過するまで時効完成を猶予する。</p>
+      <p>完成猶予の制度趣旨は、権利者が権利行使に向けて現実に行動しているのに、手続中に時効が完成してしまう不合理を避ける点にある。たとえば時効完成直前に貸金返還請求訴訟を提起した場合、審理中に期間が満了しても、手続中は完成しない。もっとも、訴えが却下・取下げなどで権利確定なく終わる場合は、終了後六箇月などの保護にとどまり、当然に新しい期間が始まるわけではない。</p>
+      <p>試験では、<strong><mark class="kw">催告</mark></strong>と<strong><mark class="kw">承認</mark></strong>の区別が特に重要である。催告は完成猶予にすぎず、再度の催告によって猶予を延長できない。承認は更新であり、承認の時から新たに時効が進行する。内容証明郵便で請求しただけなら催告であり、債務者が債務を認めたなら承認である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">更新</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">更新</mark></strong>とは、それまで進行していた時効期間をリセットし、更新事由の終了時または発生時から新たに時効を進行させる効果である。裁判上の請求などで確定判決または確定判決と同一の効力を有するものによって権利が確定した場合、強制執行等が終了した場合、権利の承認があった場合に更新が生じる。</p>
+      <p>更新は旧法の「中断」に近いが、現行法では効果をより分かりやすく「新たに進行を始める」と表現している。貸金債権について債務者が一部弁済したり、支払猶予を求めたりする行為は、権利の存在を前提にするため承認に当たり得る。承認には、相手方の権利について処分する完全な行為能力や権限までは不要である。</p>
+      <p>試験では「裁判上の請求をしただけで直ちに更新する」とする選択肢が誤りになりやすい。裁判上の請求は、手続中は完成猶予にとどまり、確定判決等で権利が確定したときに更新となる。これに対し、承認は承認の時から更新する。手続類型と効果発生時点をセットで覚える。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">時効の効力・放棄・完成後の承認</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">時効の効力</mark></strong>は、民法144条により起算日にさかのぼる。取得時効なら占有開始時から権利を取得した扱いになり、消滅時効なら起算日にさかのぼって権利が消滅した扱いになる。ただし、この遡及効も援用があって初めて裁判上考慮される点を忘れてはならない。</p>
+      <p><strong><mark class="kw">時効の利益の放棄</mark></strong>について、民法146条はあらかじめ放棄できないと定める。時効完成前から「私は将来時効を援用しません」と約束できると、経済的に弱い債務者が一方的に不利な合意を強いられ、時効制度が空洞化するためである。時効完成後に援用しないことは可能だが、完成前の事前放棄は無効である。</p>
+      <p>最高裁昭和41年4月20日判決は、消滅時効完成後に債務者が債務を承認した場合、時効完成を知らなかったとしても、その後その時効を援用することは信義則上許されないとした。債務者が支払う意思を示した後で、債権者の信頼を裏切って時効を主張することを許さない趣旨である。ただし、最高裁昭和45年5月21日判決は、完成後の債務承認後に改めて時効期間が経過すれば、再度完成した時効は援用できるとする。試験では「一度承認したら永久に時効援用できない」と広げすぎない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>図1：時効制度の全体構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 620" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-solid-10a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-thin-10a" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="var(--orange-600)"/>
+        </marker>
+        <marker id="arr-dashed-10a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="540" y1="106" x2="540" y2="148" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="230" y1="148" x2="850" y2="148" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="230" y1="148" x2="230" y2="196" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-solid-10a)"/>
+      <line x1="850" y1="148" x2="850" y2="196" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-solid-10a)"/>
+      <rect x="474" y="134" width="132" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="540" y="151" text-anchor="middle" font-size="13" fill="var(--blue-700)">効果で二分</text>
+
+      <line x1="230" y1="284" x2="230" y2="382" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-thin-10a)"/>
+      <line x1="850" y1="284" x2="850" y2="382" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-thin-10a)"/>
+      <rect x="160" y="326" width="140" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="230" y="343" text-anchor="middle" font-size="13" fill="var(--orange-600)">占有期間で判定</text>
+      <rect x="772" y="326" width="156" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="850" y="343" text-anchor="middle" font-size="13" fill="var(--orange-600)">起算点と期間で判定</text>
+
+      <polyline points="730,240 640,240 640,428 726,428" fill="none" stroke="var(--red-600)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed-10a)"/>
+      <rect x="560" y="318" width="160" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="640" y="335" text-anchor="middle" font-size="13" fill="var(--red-800)">完成を止める・戻す</text>
+
+      <g>
+        <rect x="390" y="38" width="300" height="68" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="540" y="67" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">時効制度</text>
+        <text x="540" y="90" text-anchor="middle" font-size="12" fill="var(--blue-900)">長期間続いた事実状態に法的効果</text>
+      </g>
+      <g>
+        <rect x="90" y="196" width="280" height="88" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="230" y="226" text-anchor="middle" font-size="16" fill="var(--orange-900)" font-weight="700">取得時効</text>
+        <text x="230" y="250" text-anchor="middle" font-size="12" fill="var(--orange-900)">民法162条・163条</text>
+        <text x="230" y="270" text-anchor="middle" font-size="12" fill="var(--orange-900)">権利を取得する方向</text>
+      </g>
+      <g>
+        <rect x="710" y="196" width="280" height="88" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="850" y="226" text-anchor="middle" font-size="16" fill="var(--orange-900)" font-weight="700">消滅時効</text>
+        <text x="850" y="250" text-anchor="middle" font-size="12" fill="var(--orange-900)">民法166条・167条・724条</text>
+        <text x="850" y="270" text-anchor="middle" font-size="12" fill="var(--orange-900)">権利を消滅させる方向</text>
+      </g>
+      <g>
+        <rect x="80" y="382" width="300" height="92" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="230" y="412" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">所有の意思・平穏・公然</text>
+        <text x="230" y="436" text-anchor="middle" font-size="12" fill="var(--blue-900)">二十年／善意無過失なら十年</text>
+        <text x="230" y="456" text-anchor="middle" font-size="12" fill="var(--blue-900)">占有中止・奪取で中断</text>
+      </g>
+      <g>
+        <rect x="700" y="382" width="300" height="92" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="850" y="412" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">主観五年・客観十年</text>
+        <text x="850" y="436" text-anchor="middle" font-size="12" fill="var(--blue-900)">人身損害は客観二十年</text>
+        <text x="850" y="456" text-anchor="middle" font-size="12" fill="var(--blue-900)">所有権は消滅時効にかからない</text>
+      </g>
+      <g>
+        <rect x="420" y="382" width="240" height="92" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1.5"/>
+        <text x="540" y="412" text-anchor="middle" font-size="16" fill="var(--red-800)" font-weight="700">完成猶予・更新</text>
+        <text x="540" y="436" text-anchor="middle" font-size="12" fill="var(--red-800)">裁判上の請求・催告・承認</text>
+        <text x="540" y="456" text-anchor="middle" font-size="12" fill="var(--red-800)">時効完成を止める／リセットする</text>
+      </g>
+      <g>
+        <rect x="140" y="524" width="800" height="42" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="540" y="550" text-anchor="middle" font-size="13" fill="var(--red-800)">完成しても援用が必要。援用後の効力は起算日にさかのぼる（民法144条・145条）。</text>
+      </g>
+    </svg>
+  </div>
+  <p>図は、<strong><mark class="kw">時効制度</mark></strong>をまず権利取得の方向と権利消滅の方向に分けている。取得時効では占有という外形が中心で、所有の意思、平穏、公然、善意・無過失の有無から十年・二十年を判定する。消滅時効では、権利行使可能性を知った時から五年、権利行使可能時から十年という起算点の組合せが中心になる。どちらの時効でも、完成猶予・更新によって完成時期が変動し、最後に援用がなければ裁判上の効果は認められない。</p>
+
+  <h3>図2：完成猶予と更新の判断構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-solid-10b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-thin-10b" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="var(--orange-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="540" y1="98" x2="540" y2="148" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="240" y1="148" x2="840" y2="148" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="240" y1="148" x2="240" y2="198" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-solid-10b)"/>
+      <line x1="540" y1="148" x2="540" y2="198" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-solid-10b)"/>
+      <line x1="840" y1="148" x2="840" y2="198" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-solid-10b)"/>
+      <rect x="470" y="134" width="140" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="540" y="151" text-anchor="middle" font-size="13" fill="var(--blue-700)">事由の性質で分ける</text>
+
+      <line x1="240" y1="286" x2="240" y2="386" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-thin-10b)"/>
+      <line x1="540" y1="286" x2="540" y2="386" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-thin-10b)"/>
+      <line x1="840" y1="286" x2="840" y2="386" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-thin-10b)"/>
+      <rect x="174" y="330" width="132" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="240" y="347" text-anchor="middle" font-size="13" fill="var(--orange-600)">手続終了を待つ</text>
+      <rect x="474" y="330" width="132" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="540" y="347" text-anchor="middle" font-size="13" fill="var(--orange-600)">六箇月だけ守る</text>
+      <rect x="774" y="330" width="132" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="840" y="347" text-anchor="middle" font-size="13" fill="var(--orange-600)">その時から再進行</text>
+
+      <g>
+        <rect x="360" y="30" width="360" height="68" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="540" y="59" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">時効完成前に事由が発生</text>
+        <text x="540" y="82" text-anchor="middle" font-size="12" fill="var(--blue-900)">完成猶予か、更新まで進むかを判定</text>
+      </g>
+      <g>
+        <rect x="90" y="198" width="300" height="88" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="240" y="228" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">裁判上の請求等</text>
+        <text x="240" y="252" text-anchor="middle" font-size="12" fill="var(--blue-900)">民法147条</text>
+        <text x="240" y="272" text-anchor="middle" font-size="12" fill="var(--blue-900)">訴訟・支払督促・調停など</text>
+      </g>
+      <g>
+        <rect x="390" y="198" width="300" height="88" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="540" y="228" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">催告・仮差押え等</text>
+        <text x="540" y="252" text-anchor="middle" font-size="12" fill="var(--blue-900)">民法149条・150条</text>
+        <text x="540" y="272" text-anchor="middle" font-size="12" fill="var(--blue-900)">完成猶予のみが原則</text>
+      </g>
+      <g>
+        <rect x="690" y="198" width="300" height="88" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="840" y="228" text-anchor="middle" font-size="16" fill="var(--blue-900)" font-weight="700">承認</text>
+        <text x="840" y="252" text-anchor="middle" font-size="12" fill="var(--blue-900)">民法152条</text>
+        <text x="840" y="272" text-anchor="middle" font-size="12" fill="var(--blue-900)">債務の存在を認める行為</text>
+      </g>
+      <g>
+        <rect x="90" y="386" width="300" height="88" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="240" y="416" text-anchor="middle" font-size="16" fill="var(--orange-900)" font-weight="700">権利確定なし</text>
+        <text x="240" y="440" text-anchor="middle" font-size="12" fill="var(--orange-900)">終了後六箇月まで完成猶予</text>
+        <text x="240" y="460" text-anchor="middle" font-size="12" fill="var(--orange-900)">権利確定ありなら更新へ</text>
+      </g>
+      <g>
+        <rect x="390" y="386" width="300" height="88" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="540" y="416" text-anchor="middle" font-size="16" fill="var(--orange-900)" font-weight="700">猶予期間内に次の手段</text>
+        <text x="540" y="440" text-anchor="middle" font-size="12" fill="var(--orange-900)">催告の再催告は延長不可</text>
+        <text x="540" y="460" text-anchor="middle" font-size="12" fill="var(--orange-900)">訴訟提起などへ接続する</text>
+      </g>
+      <g>
+        <rect x="690" y="386" width="300" height="88" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="840" y="416" text-anchor="middle" font-size="16" fill="var(--orange-900)" font-weight="700">直ちに更新</text>
+        <text x="840" y="440" text-anchor="middle" font-size="12" fill="var(--orange-900)">承認時から新たに進行</text>
+        <text x="840" y="460" text-anchor="middle" font-size="12" fill="var(--orange-900)">一部弁済・支払猶予願い等</text>
+      </g>
+      <g>
+        <rect x="130" y="510" width="820" height="34" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="540" y="532" text-anchor="middle" font-size="13" fill="var(--red-800)">完成猶予は完成を止めるだけ。更新はそれまでの期間を消して新しい時効期間を走らせる。</text>
+      </g>
+    </svg>
+  </div>
+  <p>図2は、時効完成前に何らかの行動があったときの処理を示している。裁判上の請求等は、まず手続中の完成猶予として働き、確定判決等で権利が確定した段階で更新へ進む。催告は六箇月間の完成猶予にとどまり、その猶予中に再度催告しても猶予は延長されない。承認は、相手方の権利を認める行動であるため、承認の時から新たに時効が進行する。試験では、どの事由が「猶予だけ」か、どの事由が「更新まで進む」かを時系列で見ることが得点に直結する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>取得時効と消滅時効の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">取得時効</th>
+        <th class="col--b">消滅時効</th>
+        <th class="col--c">試験での注意</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">基本効果</td>
+        <td class="col--a"><span class="em-a">権利を取得する</span>方向。占有・権利行使の外形が続いた者を保護する。</td>
+        <td class="col--b"><span class="em-b">権利を消滅させる</span>方向。権利者の不行使が続いた場合に義務者を保護する。</td>
+        <td class="col--c"><span class="em-c">所有権は消滅時効にかからない</span>が、他人の取得時効で失われることはある。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心条文</td>
+        <td class="col--a"><strong><mark class="kw">民法162条</mark></strong>、<strong><mark class="kw">民法163条</mark></strong>、<strong><mark class="kw">民法164条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法166条</mark></strong>、<strong><mark class="kw">民法167条</mark></strong>、<strong><mark class="kw">民法168条</mark></strong>、<strong><mark class="kw">民法724条</mark></strong>。</td>
+        <td class="col--c">条文番号を入れ替える誤答に注意する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">期間</td>
+        <td class="col--a">所有権は原則<span class="em-a">二十年</span>、占有開始時に善意・無過失なら<span class="em-a">十年</span>。</td>
+        <td class="col--b">債権は主観的起算点から<span class="em-b">五年</span>、客観的起算点から<span class="em-b">十年</span>。</td>
+        <td class="col--c">「十年」は取得時効にも消滅時効にも出るため、要件とセットで読む。</td>
+      </tr>
+      <tr>
+        <td class="col--label">起算点</td>
+        <td class="col--a">占有開始時または権利行使開始時。短期取得時効の善意・無過失も開始時で判断する。</td>
+        <td class="col--b">権利を行使できることを知った時、または権利を行使できる時。</td>
+        <td class="col--c">期間途中の善意・悪意の変化、弁済期到来の認識を具体的事実で判断する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中断・変動</td>
+        <td class="col--a">占有者が任意に占有を中止し、または他人に占有を奪われると中断する。</td>
+        <td class="col--b">裁判上の請求、催告、承認などにより完成猶予・更新が生じる。</td>
+        <td class="col--c">取得時効の「占有中止」と消滅時効の「完成猶予・更新」を混同しない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>完成猶予・更新・援用・放棄の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">完成猶予</th>
+        <th class="col--b">更新</th>
+        <th class="col--c">援用・放棄</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">働く時点</td>
+        <td class="col--a">時効完成前に、完成を一時的に阻止する。</td>
+        <td class="col--b">時効完成前の一定事由により、新たに期間を進行させる。</td>
+        <td class="col--c">援用は完成後に利益を受ける意思表示。放棄は完成前には不可。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a"><span class="em-a">完成しない期間</span>を作るだけで、それまでの経過期間は原則残る。</td>
+        <td class="col--b"><span class="em-b">時効期間をリセット</span>し、更新事由から新たに進行する。</td>
+        <td class="col--c"><span class="em-c">裁判上の効果発生</span>を選択する。援用後は起算日に遡る。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">催告、仮差押え、権利確定なく終了した裁判上の請求。</td>
+        <td class="col--b">確定判決等による権利確定、強制執行の終了、承認。</td>
+        <td class="col--c">債務者・保証人・物上保証人・第三取得者による消滅時効の援用。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答例</td>
+        <td class="col--a">「催告を繰り返せば六箇月ずつ延長できる」は誤り。</td>
+        <td class="col--b">「訴訟提起だけで直ちに更新する」は誤り。</td>
+        <td class="col--c">「時効完成前に時効利益を放棄できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、問題文の事実を「占有の外形」「権利行使可能時」「債権者の行動」「債務者の承認」「援用者の立場」に分解する。取得時効なら、占有の始まりと占有の性質を先に見る。消滅時効なら、起算点から期間を数えたうえで、その途中に完成猶予・更新がないかを時系列で確認する。最後に、時効の利益を受ける者が援用したか、援用できる地位を信義則上失っていないかを判断する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法144条・145条・146条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百四十四条　時効の効力は、その起算日にさかのぼる。<br>第百四十五条　時効は、当事者（消滅時効にあっては、保証人、物上保証人、第三取得者その他権利の消滅について正当な利益を有する者を含む。）が援用しなければ、裁判所がこれによって裁判をすることができない。<br>第百四十六条　時効の利益は、あらかじめ放棄することができない。</blockquote>
+      <p><strong><mark class="kw">民法144条</mark></strong>は、時効の効果が起算日に遡及することを定める。取得時効では占有開始時から所有権を取得した扱いとなり、消滅時効では起算日にさかのぼって権利が消滅した扱いとなる。ただし、遡及効があるからといって、援用なしに裁判所が当然に時効を適用するわけではない。</p>
+      <p><strong><mark class="kw">民法145条</mark></strong>は援用主義を採る。消滅時効の援用権者について、保証人、物上保証人、第三取得者その他正当な利益を有する者を含むと明記された点が令和二年施行改正後の重要ポイントである。もっとも、後順位抵当権者のように反射的利益しかない者は、判例上援用できない。</p>
+      <p><strong><mark class="kw">民法146条</mark></strong>は事前放棄を禁止する。完成後に援用しないことは時効利益の処分として可能だが、完成前から放棄を認めると債権者が契約段階で一方的に時効制度を排除できてしまうため、条文は「あらかじめ」放棄できないとする。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法147条から153条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百四十七条一項　次に掲げる事由がある場合には、その事由が終了する（確定判決又は確定判決と同一の効力を有するものによって権利が確定することなくその事由が終了した場合にあっては、その終了の時から六箇月を経過する）までの間は、時効は、完成しない。<br>一　裁判上の請求<br>二　支払督促<br>三　民事訴訟法第二百七十五条第一項の和解又は民事調停法若しくは家事事件手続法による調停<br>四　破産手続参加、再生手続参加又は更生手続参加<br>同条二項　前項の場合において、確定判決又は確定判決と同一の効力を有するものによって権利が確定したときは、時効は、同項各号に掲げる事由が終了した時から新たにその進行を始める。</blockquote>
+      <p><strong><mark class="kw">民法147条</mark></strong>は、裁判上の請求等による完成猶予と更新を定める。訴訟提起などがあれば手続中は完成しないが、権利確定なく終わったときは終了後六箇月までの完成猶予にとどまる。確定判決等で権利が確定した場合に初めて、手続終了時から時効が新たに進行する。</p>
+      <blockquote class="legal-text">第百五十条一項　催告があったときは、その時から六箇月を経過するまでの間は、時効は、完成しない。<br>同条二項　催告によって時効の完成が猶予されている間にされた再度の催告は、前項の規定による時効の完成猶予の効力を有しない。<br>第百五十二条一項　時効は、権利の承認があったときは、その時から新たにその進行を始める。</blockquote>
+      <p><strong><mark class="kw">民法150条</mark></strong>は催告による完成猶予を定める。催告は簡易な請求手段であり、時効完成直前に権利者を保護する機能を持つが、六箇月間の猶予に限られる。再催告で延長できないため、実務上は猶予期間中に訴訟提起などのより強い手段へ進む必要がある。</p>
+      <p><strong><mark class="kw">民法151条</mark></strong>は協議を行う旨の合意による完成猶予、<strong><mark class="kw">民法152条</mark></strong>は承認による更新、<strong><mark class="kw">民法153条</mark></strong>は完成猶予・更新の効力が当事者および承継人間に限られることを定める。承認は更新、協議合意は完成猶予という効果の違いを押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法162条から164条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百六十二条一項　二十年間、所有の意思をもって、平穏に、かつ、公然と他人の物を占有した者は、その所有権を取得する。<br>同条二項　十年間、所有の意思をもって、平穏に、かつ、公然と他人の物を占有した者は、その占有の開始の時に、善意であり、かつ、過失がなかったときは、その所有権を取得する。<br>第百六十三条　所有権以外の財産権を、自己のためにする意思をもって、平穏に、かつ、公然と行使する者は、前条の区別に従い二十年又は十年を経過した後、その権利を取得する。<br>第百六十四条　第百六十二条の規定による時効は、占有者が任意にその占有を中止し、又は他人によってその占有を奪われたときは、中断する。</blockquote>
+      <p><strong><mark class="kw">民法162条</mark></strong>は所有権の取得時効の中心条文である。長期取得時効は二十年で、善意・無過失は不要である。短期取得時効は十年で、占有開始時に善意・無過失であることを要する。平穏・公然・善意は推定されるが、無過失は推定されないため、短期取得時効を主張する者の立証負担が問題になる。</p>
+      <p><strong><mark class="kw">民法163条</mark></strong>は所有権以外の財産権の取得時効で、地役権や賃借権などが問題になる。ただし、権利行使の外形が客観的に表れていることが必要であり、単なる内心の利用意思だけでは足りない。<strong><mark class="kw">民法164条</mark></strong>は占有中止・占有喪失による中断を定め、所有権取得時効が継続占有を前提とすることを示している。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法166条・167条・724条・724条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百六十六条一項　債権は、次に掲げる場合には、時効によって消滅する。<br>一　債権者が権利を行使することができることを知った時から五年間行使しないとき。<br>二　権利を行使することができる時から十年間行使しないとき。<br>同条二項　債権又は所有権以外の財産権は、権利を行使することができる時から二十年間行使しないときは、時効によって消滅する。<br>第百六十七条　人の生命又は身体の侵害による損害賠償請求権の消滅時効についての前条第一項第二号の規定の適用については、同号中「十年間」とあるのは、「二十年間」とする。</blockquote>
+      <p><strong><mark class="kw">民法166条</mark></strong>は債権の消滅時効を、主観的起算点五年と客観的起算点十年に整理する。令和二年施行改正により、旧法の職業別短期消滅時効は廃止された。医師の診療報酬、弁護士報酬、工事代金などを旧法の一年・二年・三年で処理する選択肢は現行法では誤りとなる。</p>
+      <p><strong><mark class="kw">民法167条</mark></strong>は、人の生命・身体侵害による損害賠償請求権について、客観的起算点からの期間を十年ではなく二十年とする。人身損害は重大で、被害回復の必要性が高いため、通常の債権より長い期間が確保されている。</p>
+      <blockquote class="legal-text">第七百二十四条　不法行為による損害賠償の請求権は、次に掲げる場合には、時効によって消滅する。<br>一　被害者又はその法定代理人が損害及び加害者を知った時から三年間行使しないとき。<br>二　不法行為の時から二十年間行使しないとき。<br>第七百二十四条の二　人の生命又は身体を害する不法行為による損害賠償請求権の消滅時効についての前条第一号の規定の適用については、同号中「三年間」とあるのは、「五年間」とする。</blockquote>
+      <p><strong><mark class="kw">民法724条</mark></strong>は不法行為の特則である。被害者等が損害および加害者を知った時から三年、不法行為の時から二十年である。<strong><mark class="kw">民法724条の2</mark></strong>は生命・身体侵害の不法行為について、主観的期間を三年から五年に伸長する。債務不履行に基づく人身損害の民法167条と、不法行為に基づく人身損害の民法724条の2を比較して押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和58年3月24日　昭和57(オ)548　民集37巻2号131頁</div>
+      <div class="case-card__title">所有の意思の推定事件（土地所有権移転登記手続）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法162条</span>
+        <span class="badge badge--law">民法186条</span>
+        <span class="badge badge--law">自主占有</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地の長期占有者が、占有に基づく取得時効を主張して所有権移転登記手続を求めた事件である。占有者側は、長年にわたり土地を利用してきたことを根拠に、民法186条1項によって所有の意思が推定されると主張した。これに対し相手方は、占有を始めた権原や占有中の行動からみて、占有者が真の所有者の権利を排斥する意思で占有していたとはいえないと争った。争点は、取得時効に必要な<strong><mark class="kw">所有の意思</mark></strong>の推定が、どのような事情で覆るかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法186条1項により占有者は所有の意思をもって占有するものと推定されるが、この推定は絶対ではないとした。占有者が、その性質上所有の意思のないものとされる権原に基づいて占有を取得した事実が証明された場合、または占有中に真の所有者であれば通常とらない態度を示し、所有者であれば当然とるべき行動に出なかったなど、外形的・客観的に見て他人の所有権を排斥して占有する意思がなかったと解される事情が証明された場合には、所有の意思の推定は覆ると判示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">取得時効</mark></strong>の「所有の意思」を、占有者の内心だけで判断しないことを示す。賃借人、使用借主、管理者のように、他人の所有権を前提とする占有から出発した者は、単に長く占有しただけでは自主占有にならない。試験では「占有者には所有の意思が推定されるから、反対事情があっても必ず自主占有になる」とする選択肢が誤りになる。推定の存在と、その推定を覆す外形的・客観的事情をセットで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　平成11年10月21日　平成9(オ)1771　民集53巻7号1190頁</div>
+      <div class="case-card__title">後順位抵当権者の時効援用事件（根抵当権抹消登記手続請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法145条</span>
+        <span class="badge badge--law">抵当権</span>
+        <span class="badge badge--law">援用権者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>同一不動産上に先順位の根抵当権と後順位の抵当権が設定されていた。後順位抵当権者は、先順位抵当権の被担保債権が消滅時効にかかっていると主張し、その時効を援用して先順位根抵当権の抹消を求めた。後順位抵当権者にとって、先順位抵当権が消滅すれば、自らの順位が上昇し、競売配当で受けられる金額が増える可能性がある。そこで、そのような配当増加の期待が民法145条の「当事者」または正当な利益に当たるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、後順位抵当権者は先順位抵当権の被担保債権の消滅時効を援用できないと判断した。先順位抵当権の被担保債権が消滅すれば、後順位抵当権者の順位が上昇し、配当額が増加する可能性はある。しかし、その利益は、先順位抵当権の消滅によって後順位抵当権者自身の権利義務が直接変動するものではなく、抵当権の順位上昇から生じる反射的利益にすぎない。したがって、時効援用権者を「権利の消滅により直接利益を受ける者」とする判例法理の枠内で、後順位抵当権者の援用は否定された。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">時効の援用</mark></strong>の範囲を問う最重要判例である。保証人や物上保証人、抵当不動産の第三取得者は、主債務や被担保債権が消滅すれば自己の負担が直接軽くなるため援用できる。これに対し、後順位抵当権者は配当増加という経済的期待を持つだけで、直接の法律上利益とはいえない。試験では「後順位抵当権者も配当額が増えるから当然に援用できる」とする選択肢が典型的な誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷　昭和41年4月20日　昭和37(オ)1316　民集20巻4号702頁</div>
+      <div class="case-card__title">時効完成後の債務承認事件（請求異議事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法146条</span>
+        <span class="badge badge--law">信義則</span>
+        <span class="badge badge--law">援用権喪失</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務者が、消滅時効期間の経過後に債権者に対して債務の存在を認める行動をした。その後、債務者は、実は債務承認の時点で消滅時効が完成していたことを知らなかったとして、改めて消滅時効を援用し、債権者の請求を排斥しようとした。争点は、時効完成後に債務を承認した者が、時効完成の事実を知らなかった場合でも、その後に時効を援用できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債務者が消滅時効完成後に債権者に対して当該債務を承認した場合には、時効完成の事実を知らなかったときでも、その後その時効を援用することは許されないと解すべきであると判示した。債務を承認する行動は、債権者に対し、債務者がもはや時効を援用しないであろうという信頼を生じさせる。にもかかわらず、その後に時効消滅を主張することは、承認行為と相容れず、信義則に反するという論理である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、時効完成後の承認と<strong><mark class="kw">時効の援用</mark></strong>の関係を問う定番である。条文上、時効利益は完成前に放棄できないが、完成後に債務を承認した者は、信義則上、完成した時効を援用できなくなる。試験では「時効完成を知らずに承認したなら、後から自由に援用できる」とする選択肢が誤りである。ただし、最高裁昭和45年5月21日判決は、その後さらに新たな時効期間が経過すれば再度完成した時効を援用できるとするため、援用権喪失を永久の制裁と捉えないことも必要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　平成24年3月16日　平成22(受)336　民集66巻5号2321頁</div>
+      <div class="case-card__title">再度の取得時効と抵当権消滅事件（第三者異議事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法162条</span>
+        <span class="badge badge--law">民法177条</span>
+        <span class="badge badge--law">抵当権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産の占有者が取得時効の完成後も所有権移転登記をしないまま占有を続けていたところ、原所有者から第三者が抵当権設定を受け、その抵当権設定登記を備えた。その後、占有者はさらに取得時効に必要な期間の占有を継続し、再度の取得時効を主張した。抵当権者は、抵当権設定登記を備えた自分の権利は対抗できると主張し、占有者は、再度の取得時効により抵当権の負担のない所有権を取得したと争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、取得時効の完成後、登記のないまま第三者が抵当権設定登記を受けた場合でも、時効取得者である占有者がその後引き続き時効取得に必要な期間占有を継続し、その期間経過後に取得時効を援用したときは、特段の事情がない限り、占有者が不動産を時効取得する結果、抵当権は消滅するとした。特段の事情としては、占有者が抵当権の存在を容認していたなど、抵当権消滅を妨げる事情が挙げられている。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">取得時効</mark></strong>と登記、抵当権の関係を整理するうえで重要である。取得時効完成後に登記をしない占有者と、原所有者から権利取得登記をした第三者の関係は対抗問題となる。しかし、その後さらに占有を継続して再度の取得時効が完成すれば、占有者はその第三者に対しても時効取得を主張できる余地がある。試験では「一度登記ある抵当権者が現れたら、その後どれだけ占有しても抵当権は消えない」とする選択肢が過度に単純化した誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和51年5月25日　昭和50(オ)1051　民集30巻4号554頁</div>
+      <div class="case-card__title">時効援用の権利濫用事件（土地所有権移転登記手続請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法1条3項</span>
+        <span class="badge badge--law">民法145条</span>
+        <span class="badge badge--law">権利濫用</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>家督相続をした長男が、家庭裁判所の調停により、母の老後の生活保障や妹らの扶養・婚姻費用等に充てる目的で農地を母に贈与し、引渡しも終えていた。母は二十数年にわたりその農地を耕作し、妹らの扶養や婚姻等の費用も負担してきた。ところが、農地法上の許可申請に協力を求められた長男は、許可申請協力請求権について消滅時効を援用し、移転手続への協力を拒んだ。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、右のような事実関係の下では、長男が母からの農地法三条の許可申請協力請求権について消滅時効を援用することは権利の濫用に当たるとした。長男は、母の生活保障等を目的として農地を贈与し、母は長年その趣旨に沿って農地を利用し、家族関係上の負担も引き受けていた。このような経緯の下で、形式的に時効期間の経過だけを根拠に協力を拒むことは、時効制度の趣旨を超えて相手方の信頼を害するものと評価された。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">時効の援用</mark></strong>も常に無制限ではなく、民法1条3項の<strong><mark class="kw">権利濫用</mark></strong>によって制限され得ることを示す。もっとも、時効制度は法的安定を目的とするため、単に援用される側が不利益を受けるというだけでは権利濫用にはならない。家族間の調停、老後保障目的、長期間の耕作と費用負担など、援用を許すことが著しく信義に反する具体的事情が必要である。試験では、権利濫用を安易に広げず、例外的制限として位置づける。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ1 取得時効の要件</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「二十年間他人の土地を占有すれば、占有の性質にかかわらず必ず所有権を取得する。」これは誤りである。<strong><mark class="kw">取得時効</mark></strong>には所有の意思、平穏、公然の占有が必要であり、賃借人のような他主占有では原則として所有権取得につながらない。</p>
+      <p>誤りの選択肢例：「短期取得時効では、十年間善意・無過失であり続ける必要がある。」正しくは、民法162条2項は占有開始時の善意・無過失を要求する。もっとも無過失は推定されないため、時効取得を主張する側が占有開始時の調査状況などを示す必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ2 消滅時効の期間と起算点</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「債権の消滅時効は、権利を行使できる時から常に十年である。」これは民法166条1項1号を落とした誤りである。債権者が権利を行使できることを知った時から五年行使しなければ、その時点で消滅時効が完成する。五年と十年は、早く満了する方が問題になる。</p>
+      <p>誤りの選択肢例：「人の生命・身体侵害による損害賠償請求権も、通常債権と同じく客観的起算点から十年で消滅する。」民法167条により、人身損害の債務不履行型損害賠償請求権では客観的期間が二十年に伸びる。不法行為型では民法724条の2により主観的期間が三年から五年に伸びる。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ3 援用権者の範囲</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「時効を援用できるのは債務者本人だけであり、保証人は援用できない。」現行民法145条は、消滅時効について保証人、物上保証人、第三取得者その他正当な利益を有する者を含むと明記している。保証人は主債務が消滅すれば自己の保証債務を免れるため、直接利益を受ける。</p>
+      <p>誤りの選択肢例：「後順位抵当権者は、先順位抵当権の被担保債権が時効消滅すれば配当額が増えるから、当然に援用できる。」最高裁平成11年10月21日判決はこれを否定した。後順位抵当権者の利益は順位上昇による反射的利益であり、権利消滅による直接利益ではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ4 完成猶予と更新</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「催告をすれば時効は更新され、催告時から新たに期間が進行する。」催告は民法150条の<strong><mark class="kw">完成猶予</mark></strong>であり、更新ではない。六箇月間完成しないにとどまり、再度の催告で延長することもできない。</p>
+      <p>誤りの選択肢例：「裁判上の請求をした時点で、常に時効は更新される。」裁判上の請求は、手続中は完成猶予であり、確定判決等で権利が確定したときに更新となる。訴えの取下げや却下などで権利確定なく終了した場合は、終了後六箇月の完成猶予にとどまる。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ5 時効完成後の承認</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「時効完成後に債務を承認しても、時効完成を知らなければ、その後いつでも完成済みの時効を援用できる。」最高裁昭和41年4月20日判決は、時効完成を知らなかった場合でも、承認後にその時効を援用することは信義則上許されないとした。</p>
+      <p>ただし、誤りの選択肢例：「時効完成後に一度債務を承認した者は、以後どれだけ期間が経過しても一切時効を援用できない。」これは広げすぎである。最高裁昭和45年5月21日判決は、承認後に再び時効期間が経過した場合には、再度完成した時効を援用できるとする。</p>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p><strong><mark class="kw">物権変動</mark></strong>との関係では、取得時効完成後の登記と第三者の問題が出る。時効取得者が登記をしない間に第三者が登記を備えた場合、民法177条の対抗問題として整理するが、その後の再度の取得時効が問題になることがある。<strong><mark class="kw">抵当権</mark></strong>との関係では、第三取得者や物上保証人の援用、後順位抵当権者の援用否定、抵当権設定後の再度取得時効が重要である。</p>
+  <p><strong><mark class="kw">債権総論</mark></strong>との関係では、弁済期、履行遅滞、債務承認、一部弁済、支払猶予願いが消滅時効の起算点や更新に関わる。<strong><mark class="kw">不法行為</mark></strong>との関係では、民法724条・724条の2の特則を、通常債権の民法166条・167条と比較して押さえる。<strong><mark class="kw">行政実務</mark></strong>では、国や地方公共団体の債権管理、許認可申請協力請求、農地法上の許可など、時効援用が信義則・権利濫用と交錯する場面がある。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年改正・令和2年施行の民法改正では、時効制度が大きく整理された。旧法の「時効の中断」は、時効期間をリセットする効果と完成を止める効果が混在していたため、現行法では<strong><mark class="kw">更新</mark></strong>と<strong><mark class="kw">完成猶予</mark></strong>に分けて説明される。これにより、催告のように一時的に完成を止めるだけの事由と、承認のように新たな期間を走らせる事由が明確になった。</p>
+      <p>債権の消滅時効も、旧法では原則十年、商事債権五年、職業別短期消滅時効などが並立していたが、現行法では民法166条により主観的五年・客観的十年へ統一された。行政書士試験では、旧法時代の過去問や古い解説を読むときに、用語と期間を現行法へ置き換える必要がある。特に「中断」「停止」という語を見たら、現行法では何が完成猶予で何が更新かに翻訳する。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">実務での時効管理</span>
+    </div>
+    <div class="box__bd">
+      <p>実務では、時効は「最後にいつ請求したか」だけでは管理できない。契約日、弁済期、債権者が権利行使可能性を知った日、催告日、協議合意日、訴訟提起日、判決確定日、債務者の一部弁済日を時系列で並べる必要がある。内容証明郵便を送っただけでは六箇月の完成猶予にとどまるため、その後に訴訟提起や支払督促へ移るか、債務者から承認を得るかを判断することになる。</p>
+      <p>不動産実務では、取得時効の主張が登記や境界、抵当権と結び付く。占有者が塀を設置していた、固定資産税を負担していた、所有者として近隣に説明していたといった事情は所有の意思を基礎づける方向に働き得るが、賃料を払い続けていた、所有者に使用許可を求めていた、明渡しを約束していたといった事情は他主占有を示す方向に働く。事実の評価が結論を左右する単元である。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">学習整理の注意</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="warn">時効は、期間だけで解かない。</strong>最初に期間を暗記するだけでは、行政書士試験の事例問題には対応できない。取得時効では「どの権原で占有を始めたか」、消滅時効では「いつ権利行使でき、途中で何が起きたか」、援用では「誰が直接利益を受けるか」を確認する。数字は最後に当てはめる。</p>
+      <p><strong class="warn">旧法用語との混同にも注意する。</strong>古い教材や判例解説には「中断」「停止」という表現が残る。現行法の答案では、裁判上の請求はまず完成猶予、確定判決等による権利確定で更新、催告は完成猶予のみ、承認は更新と表現する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">最終整理</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元の最短ルートは、三段階で整理することである。第一に、取得時効か消滅時効かを分ける。第二に、取得時効なら所有の意思・平穏・公然・善意無過失と期間、消滅時効なら主観的起算点・客観的起算点と期間を確認する。第三に、完成猶予・更新・援用・放棄・信義則上の制限を時系列で重ねる。</p>
+      <p>判例では、昭和58年判決で所有の意思の推定が覆る場合、平成11年判決で後順位抵当権者の援用否定、昭和41年大法廷判決で時効完成後の債務承認と援用禁止、平成24年判決で再度の取得時効と抵当権消滅、昭和51年判決で時効援用の権利濫用を押さえる。条文では、民法144条から153条、162条から168条、724条・724条の2を、効果ごとに結び付ける。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

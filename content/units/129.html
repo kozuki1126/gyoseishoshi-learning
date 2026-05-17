@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>消費貸借契約・使用貸借契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">消費貸借契約・使用貸借契約</h1>
+  <p class="page-title-block__sub">金銭や代替物を返す契約と、無償で物そのものを返す契約を、成立・解除・返還・責任から比較する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法587条</span>
+    <span class="badge badge--info">民法587条の2</span>
+    <span class="badge badge--info">民法589条</span>
+    <span class="badge badge--info">民法591条</span>
+    <span class="badge badge--info">民法593条</span>
+    <span class="badge badge--info">民法597条</span>
+    <span class="badge badge--info">民法598条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">消費貸借契約</mark></strong>と<strong><mark class="kw">使用貸借契約</mark></strong>は、いずれも「借りて返す」契約である。しかし、返す対象が根本的に異なる。<strong><mark class="kw">消費貸借契約</mark></strong>では、借主は金銭や米のような代替物を受け取り、それを消費した上で、同じ種類・品質・数量の物を返す。これに対し、<strong><mark class="kw">使用貸借契約</mark></strong>では、借主は自動車、建物、土地などの物を無償で使用収益し、契約終了時にその物自体を返す。この違いから、成立要件、所有権の移転、利息、費用負担、終了原因が大きく変わる。</p>
+
+  <p>行政書士試験で重要なのは、平成29年民法改正によって契約の成立構造が整理された点である。<strong><mark class="kw">民法587条</mark></strong>の通常の<strong><mark class="kw">消費貸借契約</mark></strong>は、金銭その他の物を受け取ることで効力を生ずる要物契約の形を維持している。一方、<strong><mark class="kw">民法587条の2</mark></strong>は、書面でする消費貸借について、物の引渡し前でも合意で効力を生ずるルールを置いた。さらに、<strong><mark class="kw">使用貸借契約</mark></strong>は<strong><mark class="kw">民法593条</mark></strong>で諾成契約化され、借用物の引渡しは成立要件ではなくなった。ただし、無償で貸す貸主を保護するため、借主が物を受け取る前は貸主が解除できるという調整がある。</p>
+
+  <p>実生活では、親が子に土地を無償で使わせる、友人に車を無償で貸す、金融機関が事業者に金銭を貸し付けるといった場面で問題になる。金銭消費貸借では利息、返還時期、期限前返済による損害賠償が出やすく、使用貸借では無償性、用法違反、第三者使用、借主死亡、目的に従った使用収益をするに足りる期間の経過が出やすい。単に「貸借」とまとめず、何を返すのか、対価があるのか、書面があるのか、借主が受け取った後かを順に見ることが合格答案の出発点である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で区別する</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに100万円を貸し、Bが後日100万円を返す約束をした場合、Bは受け取った紙幣そのものを返す必要はないため、<strong><mark class="kw">消費貸借契約</mark></strong>である。AがBに自転車を無償で貸し、Bが旅行後に同じ自転車を返す約束をした場合、Bは借りた物そのものを返すため、<strong><mark class="kw">使用貸借契約</mark></strong>である。AがBにマンションを月10万円で貸すなら、無償ではないため使用貸借ではなく賃貸借である。問題文では、金銭、同種同量返還、利息、無償、目的物そのものの返還という言葉が分類の決め手になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">消費貸借契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">消費貸借契約</mark></strong>は、借主が貸主から金銭その他の代替物を受け取り、種類・品質・数量の同じ物を返還する契約である。根拠は<strong><mark class="kw">民法587条</mark></strong>であり、通常型は物の受領によって効力を生ずる要物契約である。制度趣旨は、借主が目的物を消費して利用できる代わりに、同価値の物を返すことで貸主の財産価値を回復させる点にある。金銭消費貸借では、受け取った紙幣そのものではなく同額の金銭を返せばよい。使用貸借や賃貸借と違い、借主は目的物を消費できるため、目的物の個性ではなく価値的同一性が重視される。試験では、「消費貸借では借りた物そのものを返還する」とする肢や、「金銭を受け取る前でも常に民法587条の消費貸借が成立する」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">書面でする消費貸借</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">書面でする消費貸借</mark></strong>は、金銭その他の物の引渡し前でも、貸主が引き渡すことを約し、借主が同種同等同量の物を返還することを約することで効力を生ずる消費貸借である。根拠は<strong><mark class="kw">民法587条の2</mark></strong>である。金融実務では、融資契約書、金銭消費貸借契約証書、抵当権設定書類などが先に作成され、実際の入金は後になることがあるため、書面型に法的拘束力を認める必要がある。他方、まだ借主が金銭を受け取っていない段階で過度に拘束すると借主に重すぎるため、借主は受領前なら解除でき、貸主は解除による損害賠償を請求できる。電磁的記録によってされた場合も書面とみなされる。試験では、通常型の要物性と書面型の諾成性を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">準消費貸借</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">準消費貸借</mark></strong>は、既に金銭その他の物を給付する義務を負う者がいる場合に、その義務の目的物を消費貸借の目的とする合意である。根拠は<strong><mark class="kw">民法588条</mark></strong>である。たとえば、売買代金債務がある買主と売主が、その未払代金を改めて貸金債務として返済する合意をする場面が典型である。新たに金銭を交付しなくても、既存債務を消費貸借債務に組み替えることで、返還時期、利息、保証、担保などを設定しやすくなる。更改と似ているが、準消費貸借は既存債務を消費貸借の目的とする成立みなしであり、旧債務を消滅させるかどうかは当事者意思の解釈問題になる。試験では、「準消費貸借には必ず現実の金銭交付が必要である」とする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">利息付消費貸借</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">利息付消費貸借</mark></strong>は、貸主が元本返還に加えて利息を請求できる消費貸借である。<strong><mark class="kw">民法589条</mark></strong>は、特約がなければ貸主は利息を請求できないと定める。つまり、金銭を貸したというだけで当然に民法上の利息が発生するわけではない。利息特約がある場合、貸主は借主が金銭その他の物を受け取った日以後の利息を請求できる。これは、借主が実際に資金や物を利用できる段階から利息を発生させるという発想である。商事取引や貸金業では別法の規律も問題になるが、民法上の基本処理では「特約の有無」と「受領日以後」が中心である。試験では、「金銭消費貸借では特約がなくても当然に利息が発生する」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">使用貸借契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">使用貸借契約</mark></strong>は、貸主がある物を引き渡すことを約し、借主がその受け取った物を無償で使用収益し、契約終了時に返還することを約する契約である。根拠は<strong><mark class="kw">民法593条</mark></strong>である。平成29年民法改正により、旧法上の要物契約から諾成契約に改められ、引渡し前でも合意だけで契約は成立する。もっとも、無償で貸す貸主の負担を考慮し、<strong><mark class="kw">民法593条の2</mark></strong>は、借主が借用物を受け取るまで、貸主が解除できると定める。ただし、書面による使用貸借ではこの解除はできない。使用貸借は、賃貸借と違って対価がなく、借地借家法の強い保護も通常及ばない。試験では、「使用貸借は今も引渡しがなければ成立しない」という旧法型の肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">用法遵守義務と第三者使用禁止</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">用法遵守義務</mark></strong>とは、借主が契約又は目的物の性質によって定まった用法に従い、借用物を使用収益しなければならない義務である。根拠は<strong><mark class="kw">民法594条1項</mark></strong>である。たとえば、居住用に無償で借りた建物を無断で店舗営業に使う、保管のために借りた機械を別用途で稼働させるといった行為は問題になる。また、借主は貸主の承諾を得なければ、第三者に借用物を使用収益させることができない。違反があれば、貸主は契約を解除できる。使用貸借は貸主と借主の人的信頼を基礎にすることが多いため、貸主が予定していない使用や第三者利用を制限する必要がある。試験では、「無償だから借主は自由に転貸・転使用できる」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">使用貸借の終了</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">使用貸借の終了</mark></strong>は、期間満了、目的に従った使用収益の終了、借主死亡、解除によって生じる。<strong><mark class="kw">民法597条</mark></strong>は、期間を定めたときは期間満了で終了し、期間を定めず使用収益の目的を定めたときは目的に従い使用収益を終えたことで終了すると定める。さらに、使用貸借は借主の死亡によって終了する。<strong><mark class="kw">民法598条</mark></strong>は、目的に従い使用収益をするのに足りる期間を経過したとき、また期間も目的も定めないときの解除を定め、借主はいつでも解除できるとする。使用貸借は無償契約であるため、賃貸借のように長期の利用権保護を当然には予定しない。試験では、建物所有目的の土地使用貸借で、期間経過や信頼関係破壊がどのように評価されるかが判例とともに問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 760" role="img" aria-label="消費貸借と使用貸借の全体構造">
+      <defs>
+        <marker id="arr29a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr29a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr29a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="110" x2="560" y2="155" stroke="#2563eb" stroke-width="2"/>
+      <line x1="250" y1="155" x2="870" y2="155" stroke="#2563eb" stroke-width="2"/>
+      <line x1="250" y1="155" x2="250" y2="230" stroke="#2563eb" stroke-width="2" marker-end="url(#arr29a-blue)"/>
+      <line x1="870" y1="155" x2="870" y2="230" stroke="#2563eb" stroke-width="2" marker-end="url(#arr29a-blue)"/>
+      <rect x="488" y="132" width="144" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="150" text-anchor="middle" font-size="13" fill="#1d4ed8">返還対象で分岐</text>
+
+      <line x1="250" y1="330" x2="250" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr29a-orange)"/>
+      <line x1="870" y1="330" x2="870" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr29a-orange)"/>
+      <rect x="182" y="356" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="250" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">成立ルール</text>
+      <rect x="802" y="356" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="870" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">使用ルール</text>
+
+      <line x1="250" y1="492" x2="250" y2="552" stroke="#e11d48" stroke-width="2" marker-end="url(#arr29a-red)"/>
+      <line x1="870" y1="492" x2="870" y2="552" stroke="#e11d48" stroke-width="2" marker-end="url(#arr29a-red)"/>
+      <rect x="182" y="518" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="250" y="535" text-anchor="middle" font-size="13" fill="#9f1239">返還・責任</text>
+      <rect x="802" y="518" width="136" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="870" y="535" text-anchor="middle" font-size="13" fill="#9f1239">終了・返還</text>
+
+      <rect x="390" y="38" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="67" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">貸借型契約</text>
+      <text x="560" y="92" text-anchor="middle" font-size="12" fill="#1e3a8a">借りる利益と返還義務の組合せ</text>
+
+      <rect x="90" y="238" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="250" y="270" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">消費貸借契約</text>
+      <text x="250" y="294" text-anchor="middle" font-size="12" fill="#1e3a8a">同種・同質・同量を返還</text>
+      <text x="250" y="314" text-anchor="middle" font-size="12" fill="#1e3a8a">金銭その他の代替物</text>
+
+      <rect x="710" y="238" width="320" height="92" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="870" y="270" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">使用貸借契約</text>
+      <text x="870" y="294" text-anchor="middle" font-size="12" fill="#1e3a8a">目的物そのものを返還</text>
+      <text x="870" y="314" text-anchor="middle" font-size="12" fill="#1e3a8a">無償で使用収益</text>
+
+      <rect x="90" y="398" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="250" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">通常型は要物契約</text>
+      <text x="250" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法587条は受領で効力発生</text>
+      <text x="250" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">書面型は民法587条の2で諾成</text>
+
+      <rect x="710" y="398" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="870" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">諾成契約</text>
+      <text x="870" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法593条で合意により効力発生</text>
+      <text x="870" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">受領前は貸主解除が原則可能</text>
+
+      <rect x="90" y="560" width="320" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="250" y="592" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">価値を返す</text>
+      <text x="250" y="616" text-anchor="middle" font-size="12" fill="#9f1239">利息は特約が必要</text>
+      <text x="250" y="636" text-anchor="middle" font-size="12" fill="#9f1239">返還不能なら価額償還</text>
+
+      <rect x="710" y="560" width="320" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="870" y="592" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">物を返す</text>
+      <text x="870" y="616" text-anchor="middle" font-size="12" fill="#9f1239">用法違反・第三者使用で解除</text>
+      <text x="870" y="636" text-anchor="middle" font-size="12" fill="#9f1239">期間満了・目的終了・借主死亡</text>
+
+      <polyline points="410,445 535,445 535,608 710,608" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,4"/>
+      <rect x="450" y="486" width="220" height="46" rx="5" fill="#dbeafe" stroke="#2563eb" stroke-width="1"/>
+      <text x="560" y="505" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">試験での中心比較</text>
+      <text x="560" y="524" text-anchor="middle" font-size="12" fill="#1e3a8a">成立・返還対象・無償性</text>
+    </svg>
+  </div>
+
+  <p>この図は、貸借型契約を「何を返すか」で二分している。<strong><mark class="kw">消費貸借契約</mark></strong>では目的物の価値的同一性が重要で、借主は受け取った物を消費してもよいが、同種同等同量の物又は価額を返さなければならない。<strong><mark class="kw">使用貸借契約</mark></strong>では目的物そのものを返すため、用法、第三者使用、通常必要費、原状回復が中心になる。成立面では、消費貸借は通常型の要物性と書面型の諾成性、使用貸借は諾成契約化と受領前解除を対比して押さえる。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 700" role="img" aria-label="試験での判断手順">
+      <defs>
+        <marker id="arr29b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr29b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr29b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="108" x2="560" y2="158" stroke="#2563eb" stroke-width="2" marker-end="url(#arr29b-blue)"/>
+      <line x1="560" y1="250" x2="560" y2="300" stroke="#2563eb" stroke-width="2" marker-end="url(#arr29b-blue)"/>
+      <line x1="560" y1="392" x2="560" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr29b-orange)"/>
+      <line x1="560" y1="534" x2="560" y2="584" stroke="#e11d48" stroke-width="2" marker-end="url(#arr29b-red)"/>
+
+      <rect x="350" y="38" width="420" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="66" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">問題文の「貸した」を読む</text>
+      <text x="560" y="90" text-anchor="middle" font-size="12" fill="#1e3a8a">金銭・代替物か、物そのものか</text>
+
+      <rect x="300" y="160" width="520" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">返還対象を確定</text>
+      <text x="560" y="216" text-anchor="middle" font-size="12" fill="#1e3a8a">同種同量返還なら消費貸借</text>
+      <text x="560" y="236" text-anchor="middle" font-size="12" fill="#1e3a8a">同じ物の返還なら使用貸借又は賃貸借</text>
+
+      <rect x="300" y="302" width="520" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">対価と書面を確認</text>
+      <text x="560" y="358" text-anchor="middle" font-size="12" fill="#1e3a8a">有償なら賃貸借・利息特約を検討</text>
+      <text x="560" y="378" text-anchor="middle" font-size="12" fill="#1e3a8a">書面型消費貸借・書面使用貸借で解除制限が変わる</text>
+
+      <rect x="300" y="444" width="520" height="90" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="476" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">引渡し・受領前後を分ける</text>
+      <text x="560" y="500" text-anchor="middle" font-size="12" fill="#7c2d12">消費貸借は受領で要物性充足</text>
+      <text x="560" y="520" text-anchor="middle" font-size="12" fill="#7c2d12">使用貸借は受領前の貸主解除に注意</text>
+
+      <rect x="300" y="586" width="520" height="76" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="616" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">終了・返還・損害賠償へ</text>
+      <text x="560" y="640" text-anchor="middle" font-size="12" fill="#9f1239">返還時期、期限前返済、用法違反、借主死亡を処理</text>
+    </svg>
+  </div>
+
+  <p>判断手順では、最初に分類を誤らないことが最も重要である。金銭を借りる場面でも、利息の有無は消費貸借の成立要件ではなく、利息請求の可否を左右する事情である。物を無償で借りる場面では、合意だけで使用貸借は成立するが、借主が受け取る前か後かで貸主の解除可能性が変わる。最後に、契約終了後の返還義務、収去義務、原状回復義務、損害賠償や費用償還の期間制限まで流すと、短答式の細かな肢にも対応しやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">消費貸借</th>
+        <th class="col--b">使用貸借</th>
+        <th class="col--c">賃貸借</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">定義</th>
+        <td class="col--a"><span class="em-a">同種・同質・同量</span>の物を返還する貸借。金銭が典型。</td>
+        <td class="col--b"><span class="em-b">無償</span>で物を使用収益し、同じ物を返還する貸借。</td>
+        <td class="col--c"><span class="em-c">有償</span>で物を使用収益し、同じ物を返還する貸借。</td>
+      </tr>
+      <tr>
+        <th class="col--label">返還対象</th>
+        <td class="col--a">受け取った物そのものではなく、種類・品質・数量の同じ物。</td>
+        <td class="col--b">借用物そのもの。附属物収去や原状回復も問題になる。</td>
+        <td class="col--c">賃借物そのもの。賃料、修繕、原状回復が中心。</td>
+      </tr>
+      <tr>
+        <th class="col--label">成立</th>
+        <td class="col--a">通常型は<strong><mark class="kw">民法587条</mark></strong>により受領で効力発生。書面型は<strong><mark class="kw">民法587条の2</mark></strong>で合意により効力発生。</td>
+        <td class="col--b"><strong><mark class="kw">民法593条</mark></strong>により合意で効力発生。受領前の貸主解除は<strong><mark class="kw">民法593条の2</mark></strong>で処理。</td>
+        <td class="col--c">賃料を支払って使用収益する合意により成立する諾成契約。</td>
+      </tr>
+      <tr>
+        <th class="col--label">対価</th>
+        <td class="col--a">利息は特約がなければ請求できない。特約があれば有償的性格を持つ。</td>
+        <td class="col--b">無償が本質。対価があれば賃貸借との区別が問題になる。</td>
+        <td class="col--c">賃料が本質。無償なら賃貸借ではない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">典型論点</th>
+        <td class="col--a">要物性、書面型、利息、返還時期、期限前返済、価額償還。</td>
+        <td class="col--b">諾成化、受領前解除、用法遵守、第三者使用、費用負担、借主死亡。</td>
+        <td class="col--c">賃料、修繕義務、対抗要件、借地借家法、解除制限。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答例</th>
+        <td class="col--a">「金銭消費貸借は必ず利息が発生する」は誤り。</td>
+        <td class="col--b">「使用貸借は引渡しがなければ成立しない」は誤り。</td>
+        <td class="col--c">「無償で建物を使わせる契約は当然に賃貸借である」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">通常の消費貸借</th>
+        <th class="col--b">書面でする消費貸借</th>
+        <th class="col--c">書面による使用貸借</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a"><strong><mark class="kw">民法587条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法587条の2</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法593条</mark></strong>、<strong><mark class="kw">民法593条の2</mark></strong>ただし書</td>
+      </tr>
+      <tr>
+        <th class="col--label">成立時期</th>
+        <td class="col--a">借主が金銭その他の物を受け取った時。</td>
+        <td class="col--b">書面による合意時。引渡し前でも効力を生ずる。</td>
+        <td class="col--c">使用貸借の合意時。書面の有無は成立ではなく解除制限に影響する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">受領前解除</th>
+        <td class="col--a">まだ成立していないため、民法587条の契約解除問題ではない。</td>
+        <td class="col--b">借主は受領まで解除でき、貸主は損害があれば賠償請求できる。</td>
+        <td class="col--c">貸主は、書面による使用貸借では受領前解除ができない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">破産の効果</th>
+        <td class="col--a">受領後に成立しているため、破産は一般の契約・倒産法問題として扱う。</td>
+        <td class="col--b">受領前に当事者の一方が破産手続開始決定を受けると効力を失う。</td>
+        <td class="col--c">民法593条の2には、消費貸借型の破産失効規定はない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験上の注意</th>
+        <td class="col--a">判例上、占有改定や簡易の引渡しで要物性が充足される場合がある。</td>
+        <td class="col--b">書面型でも利息は当然には発生しない。利息特約を別に確認する。</td>
+        <td class="col--c">書面があると貸主の受領前解除が制限される点を、消費貸借の借主解除と対比する。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践基準は、第一に「借主が目的物を消費してよいか」である。消費して同価値物を返すなら<strong><mark class="kw">消費貸借契約</mark></strong>、目的物そのものを返すなら<strong><mark class="kw">使用貸借契約</mark></strong>又は賃貸借へ進む。第二に「対価があるか」を見る。無償なら使用貸借、有償なら賃貸借が原則である。第三に「書面と受領前後」を見る。ここで通常型消費貸借、書面型消費貸借、書面による使用貸借の解除可否が分かれる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Relevant Articles</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法587条 消費貸借</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">消費貸借は、当事者の一方が種類、品質及び数量の同じ物をもって返還をすることを約して相手方から金銭その他の物を受け取ることによって、その効力を生ずる。</blockquote>
+      <p><strong><mark class="kw">民法587条</mark></strong>は、通常型の<strong><mark class="kw">消費貸借契約</mark></strong>を要物契約として定める。文言上は、同種同等同量返還の約束だけでなく、金銭その他の物の受領が必要である。借主が受け取ることで目的物の利用可能性が現実化し、貸主の返還請求権が発生する。書面型の例外は民法587条の2で処理するため、試験では両条をセットで読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法587条の2 書面でする消費貸借等</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">前条の規定にかかわらず、書面でする消費貸借は、当事者の一方が金銭その他の物を引き渡すことを約し、相手方がその受け取った物と種類、品質及び数量の同じ物をもって返還をすることを約することによって、その効力を生ずる。<br>2 書面でする消費貸借の借主は、貸主から金銭その他の物を受け取るまで、契約の解除をすることができる。この場合において、貸主は、その契約の解除によって損害を受けたときは、借主に対し、その賠償を請求することができる。<br>3 書面でする消費貸借は、借主が貸主から金銭その他の物を受け取る前に当事者の一方が破産手続開始の決定を受けたときは、その効力を失う。<br>4 消費貸借がその内容を記録した電磁的記録によってされたときは、その消費貸借は、書面によってされたものとみなして、前三項の規定を適用する。</blockquote>
+      <p><strong><mark class="kw">民法587条の2</mark></strong>は、実務上の融資予約・契約証書作成に対応する規定である。1項は書面型の諾成的成立を認め、2項は借主の受領前解除と貸主の損害賠償を組み合わせる。3項は受領前破産による効力喪失を定め、4項は電磁的記録を書面とみなす。書面型は、引渡し前から契約効を認める代わりに、借主・貸主双方のリスクを細かく調整する条文である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法588条 準消費貸借</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">金銭その他の物を給付する義務を負う者がある場合において、当事者がその物を消費貸借の目的とすることを約したときは、消費貸借は、これによって成立したものとみなす。</blockquote>
+      <p><strong><mark class="kw">民法588条</mark></strong>は、既存の給付義務を消費貸借債務に転化する条文である。未払代金、立替金、損害賠償債務などを、返済計画付きの貸金債務として整理する場合に使われる。現実の金銭交付がなくても消費貸借成立をみなすため、民法587条の要物性の例外的処理と理解できる。ただし、旧債務がどうなるか、保証や担保がどう扱われるかは、当事者意思と関連契約の解釈が必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法589条 利息</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">貸主は、特約がなければ、借主に対して利息を請求することができない。<br>2 前項の特約があるときは、貸主は、借主が金銭その他の物を受け取った日以後の利息を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法589条</mark></strong>は、利息請求の発生要件を定める。金銭の貸付けは利息付きで行われることが多いが、民法上は特約が必要である。2項は利息の起算点を、借主が金銭その他の物を受け取った日以後とする。書面型消費貸借が引渡し前に成立していても、利息は受領日以後に限られる点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法590条 貸主の引渡義務等</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百五十一条の規定は、前条第一項の特約のない消費貸借について準用する。<br>2 前条第一項の特約の有無にかかわらず、貸主から引き渡された物が種類又は品質に関して契約の内容に適合しないものであるときは、借主は、その物の価額を返還することができる。</blockquote>
+      <p><strong><mark class="kw">民法590条</mark></strong>は、貸主の引渡しに問題がある場合の処理である。無利息の消費貸借では贈与者の責任に関する民法551条を準用し、無償性に配慮する。2項は、契約不適合の物を受け取った借主が、同種同等同量ではなく価額返還で足りるとする。借主が不適合物を受け取ったのに完全な同種同等同量返還を強いられると不公平だからである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法591条 返還の時期</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">当事者が返還の時期を定めなかったときは、貸主は、相当の期間を定めて返還の催告をすることができる。<br>2 借主は、返還の時期の定めの有無にかかわらず、いつでも返還をすることができる。<br>3 当事者が返還の時期を定めた場合において、貸主は、借主がその時期の前に返還をしたことによって損害を受けたときは、借主に対し、その賠償を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法591条</mark></strong>は、返還時期の有無と期限前返還を整理する。返還時期を定めないとき、貸主はいきなり即時返還を強制するのではなく、相当期間を定めて催告する。借主は期限の有無にかかわらずいつでも返還できるが、期限前返還で貸主に損害が生じた場合は賠償が問題になる。利息収入を予定していた貸主の利益と、早期返済したい借主の自由を調整する条文である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法592条 価額の償還</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">借主が貸主から受け取った物と種類、品質及び数量の同じ物をもって返還をすることができなくなったときは、その時における物の価額を償還しなければならない。ただし、第四百二条第二項に規定する場合は、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法592条</mark></strong>は、同種同等同量返還が不能になった場合の価額償還を定める。消費貸借は目的物そのものではなく価値を返す契約であるため、返還不能時にはその時の価額で調整する。ただし、金銭債務については民法402条2項の特則がある。試験では、使用貸借の「物そのものの返還」と比較して押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法593条 使用貸借</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">使用貸借は、当事者の一方がある物を引き渡すことを約し、相手方がその受け取った物について無償で使用及び収益をして契約が終了したときに返還をすることを約することによって、その効力を生ずる。</blockquote>
+      <p><strong><mark class="kw">民法593条</mark></strong>は、<strong><mark class="kw">使用貸借契約</mark></strong>を諾成契約として定める。借用物の引渡しを約することと、借主が無償で使用収益し終了時に返還することを約することで効力が生じる。旧法の要物契約という理解は改正後の条文には合わない。無償性が要件であるため、対価があれば賃貸借との区別が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法593条の2 借用物受取り前の貸主による解除</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">貸主は、借主が借用物を受け取るまで、契約の解除をすることができる。ただし、書面による使用貸借については、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法593条の2</mark></strong>は、使用貸借の諾成契約化に伴う貸主保護規定である。無償で貸す約束をした貸主を、借主が物を受け取る前から常に強く拘束するのは重い。そこで、受領前は貸主に解除権を認める。ただし、書面による使用貸借では、貸主の意思が慎重に表示され、借主の信頼も強いので、ただし書により解除できない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法594条 借主による使用及び収益</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">借主は、契約又はその目的物の性質によって定まった用法に従い、その物の使用及び収益をしなければならない。<br>2 借主は、貸主の承諾を得なければ、第三者に借用物の使用又は収益をさせることができない。<br>3 借主が前二項の規定に違反して使用又は収益をしたときは、貸主は、契約の解除をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法594条</mark></strong>は、使用貸借における借主の中核義務を定める。借主は用法に従って使い、貸主の承諾なしに第三者へ使用収益させることはできない。違反があれば貸主は解除できる。使用貸借は無償かつ人的信頼を基礎にするため、用法や利用者を貸主がコントロールできることに意味がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法595条・596条 費用負担と引渡義務</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百九十五条 借主は、借用物の通常の必要費を負担する。<br>2 第五百八十三条第二項の規定は、前項の通常の必要費以外の費用について準用する。<br>第五百九十六条 第五百五十一条の規定は、使用貸借について準用する。</blockquote>
+      <p><strong><mark class="kw">民法595条</mark></strong>は、借主が無償で使用収益する利益を受けることから、通常必要費を借主負担とする。通常必要費以外の費用は売買の買戻しに関する民法583条2項を準用し、必要費・有益費の償還が問題になる。<strong><mark class="kw">民法596条</mark></strong>は、贈与者の担保責任に関する民法551条を使用貸借に準用し、無償契約としての貸主責任を調整する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法597条・598条 使用貸借の終了と解除</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百九十七条 当事者が使用貸借の期間を定めたときは、使用貸借は、その期間が満了することによって終了する。<br>2 当事者が使用貸借の期間を定めなかった場合において、使用及び収益の目的を定めたときは、使用貸借は、借主がその目的に従い使用及び収益を終えることによって終了する。<br>3 使用貸借は、借主の死亡によって終了する。<br>第五百九十八条 貸主は、前条第二項に規定する場合において、同項の目的に従い借主が使用及び収益をするのに足りる期間を経過したときは、契約の解除をすることができる。<br>2 当事者が使用貸借の期間並びに使用及び収益の目的を定めなかったときは、貸主は、いつでも契約の解除をすることができる。<br>3 借主は、いつでも契約の解除をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法597条</mark></strong>と<strong><mark class="kw">民法598条</mark></strong>は、使用貸借の終了処理の中心である。期間を定めれば期間満了、目的を定めれば目的に従った使用収益の終了が基準になる。借主死亡による終了は、使用貸借の人的信頼関係を示す規定である。目的を定めたが期間を定めない場合は、目的に従い使用収益するに足りる期間の経過が貸主解除の基準となり、判例上も建物所有目的の土地使用貸借で重要になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法599条・600条 収去等と期間制限</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百九十九条 借主は、借用物を受け取った後にこれに附属させた物がある場合において、使用貸借が終了したときは、その附属させた物を収去する義務を負う。ただし、借用物から分離することができない物又は分離するのに過分の費用を要する物については、この限りでない。<br>2 借主は、借用物を受け取った後にこれに附属させた物を収去することができる。<br>3 借主は、借用物を受け取った後にこれに生じた損傷がある場合において、使用貸借が終了したときは、その損傷を原状に復する義務を負う。ただし、その損傷が借主の責めに帰することができない事由によるものであるときは、この限りでない。<br>第六百条 契約の本旨に反する使用又は収益によって生じた損害の賠償及び借主が支出した費用の償還は、貸主が返還を受けた時から一年以内に請求しなければならない。<br>2 前項の損害賠償の請求権については、貸主が返還を受けた時から一年を経過するまでの間は、時効は、完成しない。</blockquote>
+      <p><strong><mark class="kw">民法599条</mark></strong>は、使用貸借終了後の原状回復的処理を定める。借主が附属させた物は原則として収去義務を負い、借主に帰責性のある損傷は原状回復義務を負う。<strong><mark class="kw">民法600条</mark></strong>は、用法違反による損害賠償と費用償還について、返還を受けた時から1年以内という期間制限を置く。使用貸借終了後の紛争を早期に整理する趣旨である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Leading Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和48年2月27日 昭和47年(オ)第110号 集民108号233頁</div>
+      <div class="case-card__title">消費貸借契約の要物性充足事件（債務不存在確認等請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法587条</span>
+        <span class="badge badge--law">要物性</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>銀行と顧客の間で、銀行が顧客に金員を貸し付ける一方、顧客が同額の定期預金をする取引が同時に行われた。金銭が現実に顧客の手元で自由に使われたというより、貸付金と定期預金が同一日に組み合わされ、金銭の占有移転は占有改定や簡易の引渡しという形式で処理された。顧客側は、消費貸借は要物契約であるから、金銭の現実的な交付がなければ貸金債務は成立しないと争った。争点は、<strong><mark class="kw">民法587条</mark></strong>の「受け取る」という要物性が、現実の手渡しや口座資金の自由処分を伴わない場合にも充足されるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、銀行が顧客に金員を貸し付け、同時に顧客が同額の定期預金をし、各金員の占有移転が占有改定と簡易の引渡しによってされ、同じ日に定期預金証書も交付されたという事実関係の下では、<strong><mark class="kw">消費貸借契約</mark></strong>の要物性は充足されたと判断した。裁判所は、民法587条の受領を、必ずしも物理的な手渡しだけに限定せず、取引全体の中で借主が金銭の価値を取得したと評価できるかを見ている。形式的に現金を手にしていないことだけで要物性を否定しない点が重要である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、通常型の<strong><mark class="kw">消費貸借契約</mark></strong>が要物契約であることを前提にしつつ、要物性の充足を柔軟に認めた事例である。短答式では、「消費貸借は金銭の現実的な手渡しがなければ絶対に成立しない」という肢が誤りになる。もっとも、平成29年改正後も通常型の要物性自体は維持されているため、「合意だけで常に民法587条の消費貸借が成立する」という肢も誤りである。書面型は<strong><mark class="kw">民法587条の2</mark></strong>で別に処理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法587条</mark></strong>、<strong><mark class="kw">民法587条の2</mark></strong>、占有改定、簡易の引渡し、金融取引上の融資証書が関連する。改正後は、書面型の諾成的消費貸借が明文化されたため、判例の意義は通常型の「受領」概念を理解する資料として位置付けられる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和42年11月24日 昭和42年(オ)第821号 民集21巻9号2460頁</div>
+      <div class="case-card__title">信頼関係破壊による土地使用貸借解約事件（建物収去土地明渡請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法597条</span>
+        <span class="badge badge--law">使用貸借</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>父母が子に土地を無償で使用させ、子はその土地上に建物を所有して会社を経営していた。使用目的は、子が会社経営を行い、その収益で老父母を扶養することなどを含む人的・家族的な関係を基礎とするものであった。ところが、子はさしたる理由なく父母への扶養をやめ、兄弟との往来も断ち、貸主である父母との信頼関係が著しく破壊された。父母側は、使用貸借を解約し、建物収去土地明渡しを求めた。争点は、返還時期の定めがない土地使用貸借について、旧民法597条2項ただし書の類推適用により解約を認められるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、父母を貸主、子を借主とする返還時期の定めのない土地使用貸借で、建物所有と会社経営、その収益による老父母扶養などが使用目的とされていた場合に、借主が理由なく扶養をやめ、兄弟との往来も断ち、使用貸借当事者間の信頼関係が地を払うに至った事実関係の下では、旧民法597条2項ただし書を類推適用し、貸主は使用貸借を解約できると判断した。無償契約である使用貸借では、契約の基礎にある人的信頼が重要であり、その基礎が失われた場合にまで貸主を拘束し続ける必要はないという判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">使用貸借契約</mark></strong>が単なる物の利用契約ではなく、無償性と人的信頼を背景にすることを示す代表例である。試験では、「建物所有目的の土地使用貸借は、期間の定めがなければ貸主はどのような事情があっても解除できない」という肢が誤りになる。逆に、信頼関係破壊という具体的事情なしに、貸主が常に自由に解除できるとするのも危険である。現行法では<strong><mark class="kw">民法597条</mark></strong>と<strong><mark class="kw">民法598条</mark></strong>の終了・解除構造に結び付けて理解する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法597条</mark></strong>、<strong><mark class="kw">民法598条</mark></strong>、信義則、親族間の土地利用、借地借家法との区別が関連する。平成11年2月25日判決の「使用収益に足りる期間」判断とあわせ、使用貸借の終了は契約目的、経過期間、人的関係の変化を総合して判断する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成11年2月25日 平成10年(オ)第513号 集民191号391頁</div>
+      <div class="case-card__title">木造建物所有目的土地使用貸借と十分な期間経過事件（建物収去土地明渡）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法597条</span>
+        <span class="badge badge--law">目的終了</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>木造建物の所有を目的として土地の<strong><mark class="kw">使用貸借契約</mark></strong>が成立し、契約締結後、約38年8か月が経過した。その間に貸主と借主の人的つながりの状況は著しく変化していた。借主側には当該建物以外に居住する場所がなく、貸主側には土地を自ら使用しなければならない特別の事情が生じていないという事情もあった。貸主が建物収去土地明渡しを求めたため、目的に従い使用収益をするのに足りる期間が経過したといえるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、木造建物所有目的の土地使用貸借について、契約締結後約38年8か月が経過し、その間に貸主と借主の人的つながりが著しく変化している事実関係の下では、借主に他の居住場所がないこと、貸主に土地使用の必要など特別の事情が生じていないことだけでは、使用収益をするのに足りる期間の経過を否定できないとした。つまり、使用貸借は無償である以上、借主の居住利益だけを理由に半永久的な利用を認めることはできない。契約目的、建物の性質、経過年数、人的関係の変化を総合し、相当期間が経過したかを判断する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法597条2項</mark></strong>の「目的に従い使用及び収益を終える」又は現行<strong><mark class="kw">民法598条1項</mark></strong>の「使用及び収益をするのに足りる期間」の判断で重要である。誤答パターンは、「建物が残っている限り、建物所有目的の土地使用貸借は必ず終了しない」という肢である。建物の存在だけでなく、木造建物、38年8か月という長期経過、人的関係の変化を考慮する。賃貸借や借地権とは保護の強さが異なる点も問われる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法597条</mark></strong>、<strong><mark class="kw">民法598条</mark></strong>、借地借家法、使用貸借と賃貸借の区別が関連する。昭和42年11月24日判決が信頼関係破壊を重視したのに対し、本判例は長期経過と人的つながりの変化を重視した事案として整理できる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和48年4月13日 昭和47年(オ)第1191号 集民109号93頁</div>
+      <div class="case-card__title">土地使用借権の取得時効事件（家屋収去土地明渡請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法593条</span>
+        <span class="badge badge--law">民法163条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地上に家屋が存在し、土地所有者が建物所有者らに対して家屋収去土地明渡しを求めた。被告側は、土地を継続的に使用収益してきたことを理由に、土地の使用貸借上の借主の権利、すなわち使用借権を時効取得したと主張した。使用借権は所有権や賃借権と異なり無償の債権的利用関係であるため、どのような外形があれば時効取得の対象として認められるかが問題になった。争点は、単なる土地利用の継続だけで足りるか、それとも借主としての権利行使意思が外部に表れている必要があるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、土地に対する使用貸借上の借主の権利の時効取得が成立するためには、土地の継続的な使用収益という外形的事実が存在し、かつ、その使用収益が土地の借主としての権利行使の意思に基づくものであることが客観的に表現されている必要があると判断した。単に土地を長く使っていたという事実だけでは、所有の意思による占有なのか、賃借意思なのか、使用借権に基づく利用なのかが外部から区別できない。時効取得を認めるには、権利行使の性質が客観的に分かる事情が必要である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">使用貸借契約</mark></strong>が無償で弱い利用権であっても、一定の要件の下で時効取得が問題になり得ることを示す。ただし、要件は厳格であり、継続使用だけでは足りない。誤答パターンは、「土地を長期間無償で使っていれば当然に使用借権を時効取得する」という肢である。正しくは、外形的な継続使用に加え、借主としての権利行使意思が客観的に表現されていることが必要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法593条</mark></strong>、<strong><mark class="kw">民法163条</mark></strong>、取得時効、占有、土地利用権の対抗力が関連する。賃借権の時効取得や所有権の時効取得と比較し、どの権利をどの意思で行使していたかを問題文から読み取る訓練が必要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">消費貸借契約</mark></strong>は、通常型では金銭その他の物の受領によって効力を生ずる。</li>
+        <li><strong><mark class="kw">書面でする消費貸借</mark></strong>は、引渡し前でも書面による合意で効力を生ずる。</li>
+        <li>書面型消費貸借の借主は、受領前なら解除できるが、貸主に損害があれば賠償問題が残る。</li>
+        <li>利息は特約がなければ請求できず、特約があっても受領日以後の利息に限られる。</li>
+        <li><strong><mark class="kw">使用貸借契約</mark></strong>は、改正後は合意で成立する諾成契約である。</li>
+        <li>使用貸借では、借主が受け取る前なら貸主は解除できるが、書面による使用貸借ではできない。</li>
+        <li>使用貸借の借主は、用法遵守義務を負い、貸主の承諾なく第三者に使用収益させることはできない。</li>
+        <li>使用貸借は、期間満了、目的に従った使用収益の終了、借主死亡で終了する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「金銭消費貸借は、当事者の合意だけで常に民法587条の効力を生ずる。」これは誤りである。通常型の<strong><mark class="kw">消費貸借契約</mark></strong>は、借主が金銭その他の物を受け取ることで効力を生ずる。書面型は<strong><mark class="kw">民法587条の2</mark></strong>で別に処理する。</p>
+      <p><strong>誤りの選択肢例2：</strong>「書面でする消費貸借では、借主は金銭を受け取る前でも解除できない。」これは誤りである。<strong><mark class="kw">民法587条の2第2項</mark></strong>により、借主は受領前なら解除できる。ただし、貸主に損害があれば賠償請求の余地がある。</p>
+      <p><strong>誤りの選択肢例3：</strong>「金銭消費貸借では、特約がなくても当然に利息を請求できる。」これは誤りである。<strong><mark class="kw">民法589条</mark></strong>により、利息請求には特約が必要である。</p>
+      <p><strong>誤りの選択肢例4：</strong>「使用貸借は、借主が借用物を受け取らなければ契約として成立しない。」これは誤りである。現行<strong><mark class="kw">民法593条</mark></strong>は、使用貸借を合意で効力が生ずる契約としている。</p>
+      <p><strong>誤りの選択肢例5：</strong>「使用貸借の借主は、無償で借りている以上、貸主の承諾なく第三者に自由に使用させることができる。」これは誤りである。<strong><mark class="kw">民法594条2項</mark></strong>により、貸主の承諾が必要である。</p>
+      <p><strong>誤りの選択肢例6：</strong>「期間も目的も定めない使用貸借では、貸主は一切解除できない。」これは誤りである。<strong><mark class="kw">民法598条2項</mark></strong>により、貸主はいつでも解除できる。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、まず契約類型を確定することである。金銭や米などを受け取り、同種同等同量を返すなら<strong><mark class="kw">消費貸借契約</mark></strong>、建物や土地や車を無償で使って同じ物を返すなら<strong><mark class="kw">使用貸借契約</mark></strong>である。次に、消費貸借では書面の有無、受領の有無、利息特約、返還時期を確認する。使用貸借では、書面の有無、借用物受領前か、用法違反や第三者使用があるか、期間・目的・借主死亡のどれで終了するかを確認する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">消費貸借契約</mark></strong>は、保証、抵当権、債権譲渡、相殺、時効、破産と結び付く。金銭消費貸借の返済債務に保証人や抵当権が付くと、多数当事者の債権関係や担保物権の知識が必要になる。<strong><mark class="kw">使用貸借契約</mark></strong>は、物権的請求権、占有、取得時効、相続、借地借家法との区別に接続する。親族間の土地無償利用では、借主死亡、建物収去土地明渡し、相続人の占有関係が問題になりやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、貸借型契約の成立ルールが実務に合わせて整理された。<strong><mark class="kw">消費貸借契約</mark></strong>は、通常型の要物性を維持しつつ、<strong><mark class="kw">民法587条の2</mark></strong>で書面型の諾成的消費貸借を明文化した。これは、金融実務で契約書作成と資金交付が時間的にずれることを踏まえたものである。<strong><mark class="kw">使用貸借契約</mark></strong>は、旧法上の要物契約から諾成契約へ変更され、代わりに借用物受領前の貸主解除権が新設された。改正の方向は、「実務上成立を認める必要がある合意には効力を認めるが、無償で拘束される当事者には解除による調整を残す」という点にある。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">消費貸借契約</mark></strong>では契約書、返済期日、利息、遅延損害金、期限の利益喪失、保証、担保の記載が重要になる。民法589条の利息特約だけでなく、利息制限法、貸金業法、消費者契約法など別法の規制が重なる場面もある。行政書士試験の民法では、まず民法上の成立・利息・返還時期を正確に押さえ、その上で保証や抵当権の単元に接続する。</p>
+
+  <p><strong><mark class="kw">使用貸借契約</mark></strong>は、親族間や知人間で書面なしに行われやすい。無償だから紛争にならないわけではなく、貸主の死亡、借主の死亡、相続人の代替わり、建物老朽化、第三者使用、目的外使用によって明渡し紛争に発展する。書面を作る場合は、目的、期間、第三者使用の可否、費用負担、終了時の収去・原状回復を明確にしておくことが実務上有用である。</p>
+
+  <p>学習上は、条文番号を機能ごとに整理するとよい。<strong><mark class="kw">民法587条</mark></strong>は通常の消費貸借、<strong><mark class="kw">民法587条の2</mark></strong>は書面型、<strong><mark class="kw">民法588条</mark></strong>は準消費貸借、<strong><mark class="kw">民法589条</mark></strong>は利息、<strong><mark class="kw">民法591条</mark></strong>は返還時期である。使用貸借では、<strong><mark class="kw">民法593条</mark></strong>が成立、<strong><mark class="kw">民法593条の2</mark></strong>が受領前解除、<strong><mark class="kw">民法594条</mark></strong>が用法・第三者使用、<strong><mark class="kw">民法597条</mark></strong>と<strong><mark class="kw">民法598条</mark></strong>が終了・解除である。問題文を読んだら、該当条文に事実を落とし込む形で処理すると、似た契約類型の混同を避けやすい。</p>
+</section>
+
+</body>
+</html>

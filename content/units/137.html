@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I. 民法 - 37.親子（実親子関係の成立、養親子関係の成立）</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">親子</h1>
+  <p class="page-title-block__sub">実親子関係の成立、養親子関係の成立を、子の身分安定と血縁・意思・家庭裁判所の関与から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法772条</span>
+    <span class="badge badge--info">民法779条</span>
+    <span class="badge badge--info">民法787条</span>
+    <span class="badge badge--info">民法809条</span>
+    <span class="badge badge--info">民法817条の2</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">親子</mark></strong>の単元は、ある子について「誰が法律上の父母になるか」を決める分野である。血縁があれば必ず法律上の親子になるわけではなく、また血縁がなくても養子縁組により法律上の親子になることがある。行政書士試験では、自然的血縁、婚姻、届出、家庭裁判所の審判という複数の入口を区別できるかが問われる。</p>
+  <p>実親子関係では、母子関係は原則として<strong><mark class="kw">分娩の事実</mark></strong>で発生し、父子関係は婚姻中の懐胎について<strong><mark class="kw">嫡出推定</mark></strong>が働くか、嫡出でない子について<strong><mark class="kw">認知</mark></strong>がされるかで決まる。とくに令和六年四月一日施行の親子法制改正により、離婚後三百日以内の子でも母が再婚後に出産した場合は再婚後の夫の子と推定される仕組みが明文化され、嫡出否認権者と期間も改められた。</p>
+  <p>養親子関係では、普通養子縁組と<strong><mark class="kw">特別養子縁組</mark></strong>を分ける。普通養子は実方との親族関係を残したまま養親の嫡出子の身分を取得する。特別養子は家庭裁判所の審判により実方の血族との親族関係を原則として終了させるため、要件が厳格で、子の利益のための特別の必要性が中心になる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る入口の違い</span>
+    </div>
+    <div class="box__bd">
+      <p>婚姻中の妻が出産した子については、まず<strong><mark class="kw">民法772条</mark></strong>の嫡出推定を確認する。婚姻していない男女の間に生まれた子について、父との法律上の父子関係を作るには、任意認知又は認知の訴えを検討する。再婚相手の連れ子と法律上の親子関係を作るには、出生届ではなく普通養子縁組が必要である。実親子の成立は「血縁をどう法律関係に取り込むか」、養親子の成立は「意思又は審判で血縁のない親子関係を作るか」という発想で分ける。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">実子・嫡出である子・嫡出でない子</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">実子</mark></strong>とは、自然的血縁を基礎に法律上の親子関係が認められる子である。父母が婚姻関係にあるかどうかにより、<strong><mark class="kw">嫡出である子</mark></strong>と<strong><mark class="kw">嫡出でない子</mark></strong>に分かれる。嫡出である子は、父母の婚姻と出産の時期により父子関係が推定され、子の身分を早期に安定させる制度と結び付く。嫡出でない子は、母との関係は原則として分娩により当然発生するが、父との関係は認知が必要になる。相続分については現在、嫡出子と嫡出でない子の差別はないが、父子関係の成立方法、氏、戸籍上の記載、準正の場面では区別が残る。試験では「血縁があるから当然に父子関係がある」「嫡出でない子は認知されても相続分が少ない」という旧法・俗称型の誤答を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">分娩主義</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">分娩主義</mark></strong>とは、法律上の母子関係は、原則として子を懐胎し出産した女性と子との間に発生するという考え方である。母子関係は父子関係と異なり、出産という外部から確認しやすい事実で確定できるため、母の認知を待たずに当然発生するとされる。これは嫡出でない子についても同じであり、民法779条に「父又は母が認知することができる」とあっても、母子関係の通常場面では認知を要しない。代理出産や卵子提供の場面では、遺伝的母と分娩した母が分かれるため、分娩主義の射程が問題になる。試験では、母は常に認知をしなければ母子関係が発生しない、卵子提供者が当然に法律上の母になる、という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">嫡出推定</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">嫡出推定</mark></strong>とは、妻が婚姻中に懐胎した子等を、当該婚姻における夫の子と推定する制度である。根拠は<strong><mark class="kw">民法772条</mark></strong>で、父子関係の真実を後から無制限に争わせるより、子の法律上の父を早期に定め、扶養・相続・戸籍上の地位を安定させる趣旨をもつ。現行法は、婚姻成立後に生まれた婚姻前懐胎子も夫の子と推定し、二以上の婚姻が重なる場合には出生の直近の婚姻における夫の子と推定する。嫡出推定が働くと、父子関係は単なる証拠上の推定ではなく、原則として嫡出否認の訴えによらなければ争えない強い効果をもつ。DNA鑑定で血縁が否定されたというだけで、いつでも親子関係不存在確認の訴えに移れるわけではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">嫡出否認の訴え</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">嫡出否認の訴え</mark></strong>は、民法772条により父が定められる場合に、その子が嫡出であることを否認して法律上の父子関係を解消するための人事訴訟である。令和六年四月一日施行の改正後は、従来の夫中心の制度から、父、子、母、一定の場合の前夫にも否認権が広がった。出訴期間は原則として三年であり、父は子の出生を知った時、子と母は出生時、前夫は出生を知った時から起算する。否認権者が増えた一方で、身分関係の安定のため期間制限はなお重要である。試験では、嫡出否認は期間制限がなく誰でもできる、又は母や子は現行法でも一切否認できない、という両極端の肢を誤りとして処理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">認知・認知の訴え</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">認知</mark></strong>とは、嫡出でない子について、父又は母が法律上の親子関係を発生させる身分行為である。実務上重要なのは父の認知であり、任意認知は戸籍法上の届出又は遺言により行う。認知能力は単独で足り、未成年者又は成年被後見人である父母でも法定代理人の同意を要しない。認知の効力は出生時に遡るが、第三者がすでに取得した権利を害することはできない。父が認知しない場合には、子、その直系卑属又は法定代理人が<strong><mark class="kw">認知の訴え</mark></strong>を提起できるが、父又は母の死亡後は死亡の日から三年を経過すると提起できない。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">認知無効・準正</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">認知無効</mark></strong>は、認知に反対の事実がある、典型的には血縁上の父子関係がない場合に、認知の効力を否定する問題である。民法785条は認知をした者による取消しを禁止するが、取消し禁止と無効主張は同じではない。現行法の<strong><mark class="kw">民法786条</mark></strong>は、子、認知者、子の母について、認知を知った時又は認知時から七年以内などの期間制限を置いて認知無効の訴えを定めている。<strong><mark class="kw">準正</mark></strong>は、父が認知した子が父母の婚姻によって、又は婚姻中に認知されることによって、嫡出子の身分を取得する制度である。認知は父子関係を作る制度、準正は認知された子の身分を嫡出子へ移す制度と押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">普通養子縁組</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">普通養子縁組</mark></strong>は、養親と養子の間に法律上の親子関係を発生させ、養子が縁組の日から養親の嫡出子の身分を取得する制度である。養親は二十歳に達している必要があり、尊属又は年長者を養子にすることはできない。未成年者を養子にするには家庭裁判所の許可が原則として必要であり、配偶者のある者が未成年者を養子にする場合は、配偶者の嫡出子を養子にする場合などを除き、配偶者とともにしなければならない。普通養子では実方との親族関係は終了しないため、実親と養親の双方との関係が併存する。試験では、養子は養親の嫡出子の身分を取得するが、常に実方との親族関係が終了するわけではない点が頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">特別養子縁組</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">特別養子縁組</mark></strong>は、家庭裁判所が、子の利益のため特に必要があると認める場合に、実方の血族との親族関係を原則として終了させる縁組である。普通養子と異なり、当事者の届出だけでは成立せず、養親となる者の請求に基づく家庭裁判所の審判が必要である。養親は原則として配偶者のある者で夫婦共同縁組が求められ、養親の年齢は二十五歳以上を原則とする。養子となる者の年齢、父母の同意、父母による監護の困難又は不適当、子の利益のための特別の必要性が厳格に判断される。効果として実方との親族関係が終了するため、相続・扶養・親権に大きな影響を及ぼす。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 760" role="img" aria-label="実親子関係の成立判断構造">
+      <defs>
+        <marker id="arr37a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr37a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <path d="M560 105 V168 H250 V210" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M560 168 H560 V210" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M560 168 H870 V210" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M560 310 V370 H250 V420" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M560 370 H560 V420" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M560 370 H870 V420" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37a-blue)"/>
+      <path d="M250 520 V590 H560" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr37a-red)"/>
+      <path d="M870 520 V590 H560" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr37a-red)"/>
+      <rect x="410" y="35" width="300" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="560" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">実親子関係の成立</text>
+      <text x="560" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">血縁を法律関係として確定する</text>
+      <rect x="90" y="210" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="250" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">母子関係</text>
+      <text x="250" y="270" text-anchor="middle" font-size="13" fill="#7c2d12">分娩の事実で当然発生</text>
+      <text x="250" y="293" text-anchor="middle" font-size="13" fill="#7c2d12">認知を待たない</text>
+      <rect x="400" y="210" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="560" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">婚姻中の父子関係</text>
+      <text x="560" y="270" text-anchor="middle" font-size="13" fill="#7c2d12">民法772条の嫡出推定</text>
+      <text x="560" y="293" text-anchor="middle" font-size="13" fill="#7c2d12">原則は嫡出否認で争う</text>
+      <rect x="710" y="210" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="870" y="244" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">嫡出でない子の父子関係</text>
+      <text x="870" y="270" text-anchor="middle" font-size="13" fill="#7c2d12">任意認知又は認知の訴え</text>
+      <text x="870" y="293" text-anchor="middle" font-size="13" fill="#7c2d12">効力は出生時へ遡及</text>
+      <rect x="90" y="420" width="320" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="250" y="454" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">分娩主義の限界</text>
+      <text x="250" y="480" text-anchor="middle" font-size="13" fill="#1e3a8a">代理出産・卵子提供でも</text>
+      <text x="250" y="503" text-anchor="middle" font-size="13" fill="#1e3a8a">原則は出産した女性</text>
+      <rect x="400" y="420" width="320" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="560" y="454" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">嫡出否認の訴え</text>
+      <text x="560" y="480" text-anchor="middle" font-size="13" fill="#1e3a8a">父・子・母・前夫が対象</text>
+      <text x="560" y="503" text-anchor="middle" font-size="13" fill="#1e3a8a">原則三年の期間制限</text>
+      <rect x="710" y="420" width="320" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="870" y="454" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">認知無効・準正</text>
+      <text x="870" y="480" text-anchor="middle" font-size="13" fill="#1e3a8a">血縁不一致は無効問題</text>
+      <text x="870" y="503" text-anchor="middle" font-size="13" fill="#1e3a8a">父母婚姻で嫡出子身分へ</text>
+      <rect x="360" y="590" width="400" height="95" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="560" y="626" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">試験上の判断軸</text>
+      <text x="560" y="652" text-anchor="middle" font-size="13" fill="#9f1239">父母の婚姻、懐胎時期、届出、訴えの種類</text>
+      <text x="560" y="675" text-anchor="middle" font-size="13" fill="#9f1239">血縁だけでなく身分安定を考慮する</text>
+      <text x="315" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">母を決める</text>
+      <text x="560" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">父を推定する</text>
+      <text x="820" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">父を作る</text>
+    </svg>
+  </div>
+  <p>この図は、実親子関係を母子関係、婚姻中の父子関係、嫡出でない子の父子関係の三つに分けて示している。母子関係は分娩の事実で発生するため、認知や届出の問題ではなく事実認定の問題になる。父子関係は、婚姻があれば嫡出推定により早期確定を優先し、婚姻がなければ認知又は認知の訴えにより血縁を法律関係へ取り込む。図の下段は、血縁の真実だけでなく、身分関係の安定、訴えの種類、期間制限を同時に見る必要があることを示している。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 720" role="img" aria-label="養親子関係の成立と効果の比較構造">
+      <defs>
+        <marker id="arr37b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr37b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+      </defs>
+      <path d="M540 105 V165 H270 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37b-blue)"/>
+      <path d="M540 165 H810 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37b-blue)"/>
+      <path d="M270 315 V385 H270 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr37b-blue)"/>
+      <path d="M810 315 V385 H810 V430" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr37b-orange)"/>
+      <path d="M270 530 V610 H810 V530" fill="none" stroke="#e11d48" stroke-width="3"/>
+      <rect x="390" y="35" width="300" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">養親子関係</text>
+      <text x="540" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">血縁のない親子関係を法律で作る</text>
+      <rect x="110" y="215" width="320" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="270" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">普通養子縁組</text>
+      <text x="270" y="275" text-anchor="middle" font-size="13" fill="#1e3a8a">届出による身分行為</text>
+      <text x="270" y="298" text-anchor="middle" font-size="13" fill="#1e3a8a">未成年は家裁許可が原則</text>
+      <rect x="650" y="215" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="810" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">特別養子縁組</text>
+      <text x="810" y="275" text-anchor="middle" font-size="13" fill="#7c2d12">家庭裁判所の審判で成立</text>
+      <text x="810" y="298" text-anchor="middle" font-size="13" fill="#7c2d12">子の利益の特別必要性</text>
+      <rect x="110" y="430" width="320" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="270" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">効果</text>
+      <text x="270" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">養親の嫡出子の身分を取得</text>
+      <text x="270" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">実方との関係は残る</text>
+      <rect x="650" y="430" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="810" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">効果</text>
+      <text x="810" y="490" text-anchor="middle" font-size="13" fill="#7c2d12">実方血族との関係が終了</text>
+      <text x="810" y="513" text-anchor="middle" font-size="13" fill="#7c2d12">離縁は極めて限定的</text>
+      <rect x="280" y="610" width="520" height="70" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="540" y="640" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">区別の核心</text>
+      <text x="540" y="665" text-anchor="middle" font-size="13" fill="#9f1239">実方との関係を残すか、子の利益のために断ち切るか</text>
+      <text x="345" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">一般型</text>
+      <text x="735" y="158" text-anchor="middle" font-size="13" font-weight="700" fill="#ea580c">保護型</text>
+    </svg>
+  </div>
+  <p>この図は、普通養子縁組と特別養子縁組の違いを、成立方法と効果から整理している。普通養子は、当事者の縁組意思と届出を中心に、必要に応じて家庭裁判所の許可を加える制度であり、実方との親族関係は残る。特別養子は、子を安定した家庭に置く必要性が強い場面で、家庭裁判所が実方との関係終了まで含めて判断する制度である。両者はどちらも養親の嫡出子の身分を取得させるが、実方との親族関係の処理と離縁の可否が決定的に異なる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">母子関係</th>
+        <th class="col--b">婚姻中の父子関係</th>
+        <th class="col--c">嫡出でない子の父子関係</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">成立根拠</th>
+        <td class="col--a"><span class="em-a">分娩の事実</span>により当然発生する。</td>
+        <td class="col--b"><span class="em-b">民法772条</span>の嫡出推定により夫の子と定める。</td>
+        <td class="col--c"><span class="em-c">認知</span>又は認知の訴えにより法律上の父子関係を作る。</td>
+      </tr>
+      <tr>
+        <th class="col--label">中心趣旨</th>
+        <td class="col--a">出産という客観的事実により母を確定する。</td>
+        <td class="col--b">子の身分関係を早期に安定させる。</td>
+        <td class="col--c">血縁上の父を法律上の父として取り込む。</td>
+      </tr>
+      <tr>
+        <th class="col--label">争い方</th>
+        <td class="col--a">分娩事実の有無や代理出産の法的評価が問題になる。</td>
+        <td class="col--b">原則として嫡出否認の訴えによる。</td>
+        <td class="col--c">認知無効、認知の訴え、認知届の効力が問題になる。</td>
+      </tr>
+      <tr>
+        <th class="col--label">代表判例</th>
+        <td class="col--a">最高裁昭和37年4月27日、最高裁平成19年3月23日。</td>
+        <td class="col--b">最高裁平成26年7月17日。</td>
+        <td class="col--c">最高裁平成26年1月14日。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">母も常に認知が必要とする。</td>
+        <td class="col--b">DNA鑑定だけでいつでも不存在確認できるとする。</td>
+        <td class="col--c">認知は出生時に遡らない、又は取消しと無効を同一視する。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">嫡出否認</th>
+        <th class="col--b">親子関係不存在確認</th>
+        <th class="col--c">認知無効</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">対象</th>
+        <td class="col--a"><span class="em-a">嫡出推定</span>が働く父子関係。</td>
+        <td class="col--b"><span class="em-b">推定が及ばない</span>又は法律上当然発生しない親子関係。</td>
+        <td class="col--c"><span class="em-c">認知</span>に反対の事実がある場合。</td>
+      </tr>
+      <tr>
+        <th class="col--label">期間</th>
+        <td class="col--a">原則三年。改正後も期間制限が核心。</td>
+        <td class="col--b">嫡出否認を潜脱するためには使えない。</td>
+        <td class="col--c">現行法は七年以内等の期間制限を置く。</td>
+      </tr>
+      <tr>
+        <th class="col--label">判断基準</th>
+        <td class="col--a">民法772条の推定を法律上解消するか。</td>
+        <td class="col--b">そもそも推定の入口に乗るか。</td>
+        <td class="col--c">血縁上の父子関係など反対事実があるか。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験での注意</th>
+        <td class="col--a">母・子にも否認権がある現行法を押さえる。</td>
+        <td class="col--b">DNA鑑定の存在だけでは嫡出否認を不要にしない。</td>
+        <td class="col--c">民法785条の取消禁止と無効主張を混同しない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">普通養子縁組</th>
+        <th class="col--b">特別養子縁組</th>
+        <th class="col--c">実親子関係</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">成立方法</th>
+        <td class="col--a"><span class="em-a">縁組意思と届出</span>。未成年は家裁許可が原則。</td>
+        <td class="col--b"><span class="em-b">家庭裁判所の審判</span>により成立。</td>
+        <td class="col--c"><span class="em-c">血縁・婚姻・認知</span>により成立。</td>
+      </tr>
+      <tr>
+        <th class="col--label">親族関係</th>
+        <td class="col--a">養親との親子関係が加わり、実方との関係は残る。</td>
+        <td class="col--b">実方血族との親族関係が原則終了する。</td>
+        <td class="col--c">自然的血縁を基礎とする。</td>
+      </tr>
+      <tr>
+        <th class="col--label">子の利益</th>
+        <td class="col--a">未成年者養子などで家裁許可により確認する。</td>
+        <td class="col--b">制度の中心要件として厳格に確認する。</td>
+        <td class="col--c">嫡出推定や認知制度で身分安定を図る。</td>
+      </tr>
+      <tr>
+        <th class="col--label">離縁</th>
+        <td class="col--a">協議離縁・裁判離縁があり得る。</td>
+        <td class="col--b">養親の虐待等と実父母の監護可能性など限定要件が必要。</td>
+        <td class="col--c">親子関係は離縁で解消するものではない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>比較問題では、まず「血縁上の親子を法律上どう確定する問題」か、「血縁のない者の間に親子関係を作る問題」かを分ける。父子関係の争いでは、嫡出推定が働くなら嫡出否認、推定が及ばないなら親子関係不存在確認、認知による父子関係なら認知無効又は認知の訴えという順序で考える。養子では、養親の嫡出子の身分取得という共通点だけでなく、実方との親族関係が残るか終了するかを必ず確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">嫡出推定・嫡出否認</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法772条</mark></strong>　妻が婚姻中に懐胎した子は、当該婚姻における夫の子と推定する。女が婚姻前に懐胎した子であって、婚姻が成立した後に生まれたものも、同様とする。<br>2　前項の場合において、婚姻の成立の日から二百日以内に生まれた子は、婚姻前に懐胎したものと推定し、婚姻の成立の日から二百日を経過した後又は婚姻の解消若しくは取消しの日から三百日以内に生まれた子は、婚姻中に懐胎したものと推定する。<br>3　第一項の場合において、女が子を懐胎した時から子の出生の時までの間に二以上の婚姻をしていたときは、その子は、その出生の直近の婚姻における夫の子と推定する。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法774条</mark></strong>　第七百七十二条の規定により子の父が定められる場合において、父又は子は、子が嫡出であることを否認することができる。<br>3　第一項に規定する場合において、母は、子が嫡出であることを否認することができる。ただし、その否認権の行使が子の利益を害することが明らかなときは、この限りでない。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法777条</mark></strong>　次の各号に掲げる否認権の行使に係る嫡出否認の訴えは、それぞれ当該各号に定める時から三年以内に提起しなければならない。<br>一　父の否認権　父が子の出生を知った時<br>二　子の否認権　その出生の時<br>三　母の否認権　子の出生の時<br>四　前夫の否認権　前夫が子の出生を知った時</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法772条</mark></strong>は、父子関係を早期に確定する中心条文である。二百日・三百日の期間は懐胎時期の推定であり、三項は母の再婚後に生まれた子について出生の直近の婚姻の夫を父と推定することで、旧来の無戸籍問題を緩和する役割をもつ。<strong><mark class="kw">民法774条</mark></strong>は否認権者を定め、現行法では父だけでなく子・母・前夫も一定の場合に否認できる。<strong><mark class="kw">民法777条</mark></strong>の三年制限は、血縁の真実と身分関係の安定を調整する規定であり、期間を過ぎればDNA鑑定で当然に覆せるわけではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">認知・準正・子の氏</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法779条</mark></strong>　嫡出でない子は、その父又は母がこれを認知することができる。<br><strong><mark class="kw">民法781条</mark></strong>　認知は、戸籍法の定めるところにより届け出ることによってする。<br>2　認知は、遺言によっても、することができる。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法784条</mark></strong>　認知は、出生の時にさかのぼってその効力を生ずる。ただし、第三者が既に取得した権利を害することはできない。<br><strong><mark class="kw">民法787条</mark></strong>　子、その直系卑属又はこれらの者の法定代理人は、認知の訴えを提起することができる。ただし、父又は母の死亡の日から三年を経過したときは、この限りでない。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法789条</mark></strong>　父が認知した子は、その父母の婚姻によって嫡出子の身分を取得する。<br>2　婚姻中父母が認知した子は、その認知の時から、嫡出子の身分を取得する。<br><strong><mark class="kw">民法790条</mark></strong>　嫡出である子は、父母の氏を称する。<br>2　嫡出でない子は、母の氏を称する。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法779条</mark></strong>以下は、嫡出でない子の父子関係を成立させる規律である。届出又は遺言による任意認知、子側からの認知の訴え、認知の遡及効、第三者保護を一連の流れで読む。<strong><mark class="kw">民法789条</mark></strong>は、認知と父母の婚姻が結び付いた場合に嫡出子の身分を取得させる準正の規定であり、認知そのものと区別する。<strong><mark class="kw">民法790条</mark></strong>は子の氏を定める条文で、父の認知があっても嫡出でない子は当然に父の氏へ移るのではなく、氏の変更には別途の手続が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">普通養子縁組</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法792条</mark></strong>　二十歳に達した者は、養子をすることができる。<br><strong><mark class="kw">民法793条</mark></strong>　尊属又は年長者は、これを養子とすることができない。<br><strong><mark class="kw">民法798条</mark></strong>　未成年者を養子とするには、家庭裁判所の許可を得なければならない。ただし、自己又は配偶者の直系卑属を養子とする場合は、この限りでない。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法802条</mark></strong>　縁組は、次に掲げる場合に限り、無効とする。<br>一　人違いその他の事由によって当事者間に縁組をする意思がないとき。<br>二　当事者が縁組の届出をしないとき。<br><strong><mark class="kw">民法809条</mark></strong>　養子は、縁組の日から、養親の嫡出子の身分を取得する。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法792条</mark></strong>から<strong><mark class="kw">民法800条</mark></strong>までは、普通養子縁組の入口を定める。養親の年齢、年長者養子の禁止、後見人が被後見人を養子にする場合の家庭裁判所許可、未成年者養子の許可、届出受理審査を確認する。<strong><mark class="kw">民法802条</mark></strong>は縁組無効を婚姻無効と似た構造で定め、縁組意思と届出を中心にする。<strong><mark class="kw">民法809条</mark></strong>は効果規定で、養子が養親の嫡出子の身分を取得することを明確にするが、普通養子では実方との関係が当然に終了しない点を一緒に押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">特別養子縁組</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法817条の2</mark></strong>　家庭裁判所は、次条から第八百十七条の七までに定める要件があるときは、養親となる者の請求により、実方の血族との親族関係が終了する縁組を成立させることができる。<br><strong><mark class="kw">民法817条の3</mark></strong>　養親となる者は、配偶者のある者でなければならない。<br>2　夫婦の一方は、他の一方が養親とならないときは、養親となることができない。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法817条の5</mark></strong>　第八百十七条の二に規定する請求の時に十五歳に達している者は、養子となることができない。特別養子縁組が成立するまでに十八歳に達した者についても、同様とする。<br><strong><mark class="kw">民法817条の7</mark></strong>　特別養子縁組は、父母による養子となる者の監護が著しく困難又は不適当であることその他特別の事情がある場合において、子の利益のため特に必要があると認めるときに、これを成立させるものとする。</p>
+      </blockquote>
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法817条の9</mark></strong>　養子と実方の父母及びその血族との親族関係は、特別養子縁組によって終了する。<br><strong><mark class="kw">民法817条の10</mark></strong>　次の各号のいずれにも該当する場合において、養子の利益のため特に必要があると認めるときは、家庭裁判所は、養子、実父母又は検察官の請求により、特別養子縁組の当事者を離縁させることができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法817条の2</mark></strong>以下は、子の利益を中心に、家庭裁判所が実方との関係終了まで含めて判断する特別養子縁組の規律である。夫婦共同縁組、養親年齢、養子年齢、父母の同意、監護困難又は不適当、子の利益のための特別必要性を順に確認する。<strong><mark class="kw">民法817条の9</mark></strong>の効果は普通養子との決定的差異であり、実方との相続・扶養関係に及ぶ。離縁は<strong><mark class="kw">民法817条の10</mark></strong>の厳格な場合に限られ、普通養子の協議離縁と同じ感覚で扱わない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和37年4月27日 昭和35年(オ)第1189号 民集16巻7号1247頁</div>
+      <div class="case-card__title">母子関係分娩主義事件（親子関係存在確認請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法779条</span>
+        <span class="badge badge--law">分娩主義</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>非嫡出子とされる子について、ある女性との間に法律上の母子関係が存在するかが争われた。戸籍上の記載や認知の有無だけで母子関係を決めるのではなく、実際に誰がその子を分娩したかが問題となった。請求は親子関係の存在確認であり、争点は、嫡出でない子と母との関係が、母の認知という身分行為によって初めて生じるのか、それとも分娩という事実により当然に生じるのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、母と非嫡出子との間の親子関係は、原則として母の認知を待たず、<strong><mark class="kw">分娩の事実</mark></strong>により当然発生すると判示した。父子関係は懐胎・出産の外部的事実から直接確認しにくいため認知制度が重要になるが、母子関係は出産した事実により客観的に確定し得る。したがって、民法779条が父又は母の認知を掲げていても、通常の母子関係について認知を成立要件と読む必要はないという判断枠組みである。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">母子関係</mark></strong>の基本判例である。誤答パターンは、「嫡出でない子については、母も認知しなければ母子関係が発生しない」という肢である。正しくは、母子関係は分娩により当然発生する。認知が中心になるのは、主として嫡出でない子と父との父子関係である。父子関係の認知制度を母子関係へそのまま持ち込まないことが重要で、代理出産や生殖補助医療の判例を理解する土台にもなる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法779条</mark></strong>、<strong><mark class="kw">民法787条</mark></strong>と関連する。最高裁平成19年3月23日決定は、代理出産の場面でも、出生した子の母を懐胎し出産した女性とする方向でこの分娩主義を前提にしている。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成19年3月23日 平成18年(許)第47号 民集61巻2号619頁</div>
+      <div class="case-card__title">代理出産母子関係事件（市町村長の処分に対する不服申立て却下審判に対する許可抗告事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>注意</span>
+        <span class="badge badge--law">民法779条</span>
+        <span class="badge badge--law">民訴法118条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>日本人夫婦が、自己らの精子・卵子を用いた生殖補助医療により、外国で代理母に子を懐胎・出産してもらった。外国裁判所は依頼者夫婦を子の法律上の親とする内容の裁判をしており、夫婦はその裁判を前提に、日本で出生届の受理を求めた。争点は、遺伝的には依頼者夫婦とつながる子について、出産していない卵子提供者を日本法上の母と扱えるか、また外国裁判を日本で承認できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、日本の民法の解釈上、女性が自己以外の女性の卵子を用いた生殖補助医療により子を懐胎し出産した場合でも、出生した子の母はその子を懐胎し出産した女性であるとした。卵子を提供していても、懐胎・出産していない女性との間に母子関係の成立は認められない。また、日本民法が実親子関係を認めていない者の間にその成立を認める外国裁判は、民訴法118条三号の公の秩序に反し、日本では効力を有しないと判断した。</p>
+      <h4>試験上の意義</h4>
+      <p>本決定は、<strong><mark class="kw">分娩主義</mark></strong>が現代的な生殖補助医療の場面でも基本枠組みとして機能することを示す。試験では、「遺伝上の母が常に法律上の母である」「外国裁判で親子関係が認められれば日本でも当然に承認される」という肢が誤りになりやすい。もっとも、代理出産の政策的是非を問うのではなく、民法上の母子関係を誰との間に認めるか、外国裁判の承認が公序に反しないかという法的構造を押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p>最高裁昭和37年4月27日判決、<strong><mark class="kw">民法779条</mark></strong>、民訴法118条三号が関連する。特別養子縁組は、実親子関係を直接認められない場合に、子の利益に即して法律上の親子関係を形成する別ルートとして位置づけられる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成26年7月17日 平成25年(受)第233号 集民247号79頁</div>
+      <div class="case-card__title">DNA鑑定と嫡出推定事件（親子関係不存在確認請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法772条</span>
+        <span class="badge badge--law">民法775条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>妻が婚姻中に出産した子について、夫との生物学上の父子関係がDNA鑑定により否定された。子は現時点では母及び生物学上の父のもとで順調に成長しているという事情もあったため、法律上の父子関係を実態に合わせるべきかが問題となった。請求は嫡出否認の訴えではなく、夫との親子関係不存在確認の訴えであり、争点は、<strong><mark class="kw">民法772条</mark></strong>の嫡出推定を受ける子について、科学的証拠により血縁がないことが明らかな場合に、親子関係不存在確認の訴えで父子関係を争えるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法772条により嫡出の推定を受ける子について、夫との生物学上の父子関係が科学的証拠により明らかに否定され、かつ子が母及び生物学上の父のもとで順調に成長している事情があっても、親子関係不存在確認の訴えにより父子関係の存否を争うことはできないと判示した。嫡出推定制度は、単なる立証上の推定ではなく、嫡出否認の訴えという手続と期間制限を通じて子の身分関係を安定させる制度である。血縁上の真実だけで手続制限を突破させると、子の身分関係が長期間不安定になるという判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">嫡出推定</mark></strong>の強さを問う最重要判例である。典型的な誤答は、「DNA鑑定で父子関係がないことが明らかなら、嫡出推定を受ける子でも親子関係不存在確認の訴えでいつでも争える」という肢である。正しくは、嫡出推定が働く限り、原則として嫡出否認の訴えによる。令和六年改正後は否認権者と期間が変わっているが、嫡出推定が身分安定のための強い制度であるという基本構造は維持されている。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法772条</mark></strong>、<strong><mark class="kw">民法774条</mark></strong>、<strong><mark class="kw">民法775条</mark></strong>、<strong><mark class="kw">民法777条</mark></strong>が中心である。推定の及ばない子の場面では親子関係不存在確認が問題となり得るが、本判例はDNA鑑定だけで「推定が及ばない子」に移行することを認めたものではない。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成26年1月14日 平成23年(受)第1561号 認知無効，離婚等請求本訴，損害賠償請求反訴事件</div>
+      <div class="case-card__title">認知者による認知無効主張事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法785条</span>
+        <span class="badge badge--law">民法786条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>男性が子を認知したが、その後、血縁上の父子関係がないことを理由に認知の効力を争った。相手方は、民法785条が「認知をした父又は母は、その認知を取り消すことができない」と定めている以上、認知者自身が後から認知を否定することは許されないと主張した。争点は、認知者が血縁関係の不存在を理由として認知無効を主張できるか、また取消し禁止規定が無効主張まで封じるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、血縁上の父子関係がないにもかかわらずされた認知について、認知者自身が認知の無効を主張することは、民法785条によって一律に制限されるものではないとした。民法785条が禁止するのは認知の取消しであり、認知に反対の事実があることを理由とする無効主張とは性質が異なる。もっとも、具体的事情によっては権利濫用の法理などにより無効主張が制限される余地がある。現行法では、民法786条が認知無効の訴えと期間制限を明文化しており、取消しと無効の区別はなお重要である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">認知</mark></strong>をした者は絶対に認知の効力を争えない、という単純化を避けるために重要である。誤答パターンは、「民法785条により、認知者は血縁関係がないことを知っていても無効主張を一切できない」という肢である。正しくは、取消しは禁止されるが、反対事実を理由とする無効主張は別問題である。令和六年改正後は、認知無効の訴えについて七年以内等の期間制限が置かれたため、旧判例の結論を現行条文と接続して理解する必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法779条</mark></strong>、<strong><mark class="kw">民法784条</mark></strong>、<strong><mark class="kw">民法785条</mark></strong>、<strong><mark class="kw">民法786条</mark></strong>が関連する。嫡出推定を受ける父子関係の争いとは異なり、認知による父子関係では認知無効という別ルートが問題になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成7年7月14日 平成6年(オ)第425号 民集49巻7号2674頁</div>
+      <div class="case-card__title">特別養子審判準再審事件（親子関係不存在確認）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>注意</span>
+        <span class="badge badge--law">民法817条の6</span>
+        <span class="badge badge--law">特別養子</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>子の血縁上の父であると主張する男性が、戸籍上の父と子との間の親子関係不存在確認を求める訴えを提起するなどしていた。ところが、その訴えの帰すうが定まる前に、子を第三者の特別養子とする審判がされた。特別養子審判を担当した審判官も、血縁上の父と主張する男性の上申により、そのような争いがあることを知っていた。争点は、特別養子審判が確定した後でも、血縁上の父と主張する者に訴えの利益や準再審事由が認められるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、子の血縁上の父であると主張する者が親子関係不存在確認の訴えを提起するなどしており、審判官もその事情を知っていたにもかかわらず、訴えの帰すうが定まる前に第三者との特別養子審判がされた場合、当該者が血縁上の父であるときは、民法817条の6ただし書に該当する事由があるなどの特段の事情がない限り、準再審事由があるとした。特別養子縁組は実方との親族関係を終了させる重大な効果を持つため、血縁上の父の地位や同意問題を無視して審判を進めることはできないという趣旨である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">特別養子縁組</mark></strong>が単なる届出型の養子縁組ではなく、実方との関係終了を伴う厳格な審判制度であることを示す。誤答パターンは、「特別養子審判が確定すれば、血縁上の父の主張は常に訴えの利益を失い、手続上考慮されない」という肢である。正しくは、血縁上の父の地位、父母の同意、子の利益に関する手続保障が重要になる。普通養子と異なり、特別養子では父母の同意が原則要件であることも合わせて押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法817条の2</mark></strong>、<strong><mark class="kw">民法817条の6</mark></strong>、<strong><mark class="kw">民法817条の9</mark></strong>が関連する。実親子関係の確定と特別養子縁組は、子の利益を中心にしつつ、血縁上の親の手続的地位にも配慮する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">母子関係</mark></strong>は原則として分娩により当然発生し、母の認知を待たない。</li>
+        <li><strong><mark class="kw">嫡出推定</mark></strong>が働く父子関係は、原則として嫡出否認の訴えで争う。</li>
+        <li><strong><mark class="kw">民法772条</mark></strong>三項により、母が懐胎から出生までに二以上の婚姻をしていた場合は、出生の直近の婚姻における夫の子と推定される。</li>
+        <li><strong><mark class="kw">嫡出否認の訴え</mark></strong>は、現行法では父だけでなく子・母・一定の場合の前夫にも認められる。</li>
+        <li><strong><mark class="kw">認知</mark></strong>は出生時に遡及するが、第三者がすでに取得した権利を害することはできない。</li>
+        <li><strong><mark class="kw">民法785条</mark></strong>の認知取消禁止と、民法786条の認知無効の訴えを混同しない。</li>
+        <li><strong><mark class="kw">普通養子</mark></strong>は実方との親族関係を残し、特別養子は原則として実方血族との親族関係を終了させる。</li>
+        <li><strong><mark class="kw">特別養子縁組</mark></strong>は届出ではなく家庭裁判所の審判で成立し、子の利益のための特別必要性が中心である。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「嫡出でない子と母との親子関係は、母が認知して初めて発生する。」これは誤りである。母子関係は原則として<strong><mark class="kw">分娩の事実</mark></strong>により当然発生する。</p>
+      <p><strong>誤りの選択肢例2：</strong>「婚姻中に妻が出産した子についてDNA鑑定で夫との血縁が否定されれば、親子関係不存在確認の訴えでいつでも父子関係を争える。」これは誤りである。<strong><mark class="kw">嫡出推定</mark></strong>が働く場合は、原則として嫡出否認の訴えによる。</p>
+      <p><strong>誤りの選択肢例3：</strong>「令和六年改正後も、嫡出否認権は夫だけに認められ、母や子は否認できない。」これは誤りである。現行法は、父、子、母、一定の場合の前夫に否認権を認める。</p>
+      <p><strong>誤りの選択肢例4：</strong>「認知は将来に向かってのみ効力を生じ、出生時に遡ることはない。」これは誤りである。<strong><mark class="kw">民法784条</mark></strong>により、認知は出生時に遡って効力を生じる。ただし第三者の既得権は害されない。</p>
+      <p><strong>誤りの選択肢例5：</strong>「養子は縁組により養親の嫡出子の身分を取得しない。」これは誤りである。<strong><mark class="kw">民法809条</mark></strong>により、養子は縁組の日から養親の嫡出子の身分を取得する。</p>
+      <p><strong>誤りの選択肢例6：</strong>「普通養子縁組が成立すると、養子と実方の父母及び血族との親族関係は当然に終了する。」これは誤りである。実方との関係終了は、原則として<strong><mark class="kw">特別養子縁組</mark></strong>の効果である。</p>
+    </div>
+  </div>
+
+  <p>解答順序は、まず親子関係の入口を分類する。母子関係なら分娩、婚姻中の父子関係なら嫡出推定、嫡出でない子の父子関係なら認知、血縁のない親子関係なら養子縁組である。次に、争いの方法を確認する。嫡出推定が働くなら嫡出否認、認知があるなら認知無効、養子縁組の瑕疵なら縁組無効又は取消し、特別養子なら家庭裁判所審判の要件と効果を見る。最後に、期間制限と子の利益を確認すると、肢の正誤が安定する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親子</mark></strong>は、婚姻、親権、扶養、相続、戸籍実務、憲法と接続する。婚姻単元では夫婦関係の成立・解消が子の嫡出推定に影響し、親権単元では法律上の父母が誰かによって親権者が決まる。扶養では親子関係が扶養義務の基礎となり、相続では子が第一順位の相続人となる。憲法では、嫡出子・嫡出でない子の平等や家族生活における個人の尊厳が問題になり、戸籍実務では認知届、養子縁組届、特別養子縁組届が法律効果の公証と結び付く。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和六年施行の親子法制改正</span>
+    </div>
+    <div class="box__bd">
+      <p>令和六年四月一日、嫡出推定制度の見直し等に関する改正が施行された。主な内容は、母が前夫以外の男性と再婚した後に生まれた子を再婚後の夫の子と推定すること、女性の再婚禁止期間を廃止すること、嫡出否認権者を父だけでなく子・母・前夫へ拡大すること、嫡出否認の出訴期間を三年へ伸長することである。無戸籍問題を解消し、血縁の真実と子の身分安定を調整する趣旨がある。行政書士試験では旧法知識のまま「離婚後三百日以内なら常に前夫の子」「母や子は否認できない」「出訴期間は一年」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <p>親子単元の学習では、条文を「実子」「認知」「子の氏」「普通養子」「特別養子」に分けて読むとよい。実子は<strong><mark class="kw">民法772条</mark></strong>から<strong><mark class="kw">民法778条</mark></strong>、認知は<strong><mark class="kw">民法779条</mark></strong>から<strong><mark class="kw">民法789条</mark></strong>、子の氏は<strong><mark class="kw">民法790条</mark></strong>と<strong><mark class="kw">民法791条</mark></strong>、普通養子は<strong><mark class="kw">民法792条</mark></strong>から<strong><mark class="kw">民法817条</mark></strong>、特別養子は<strong><mark class="kw">民法817条の2</mark></strong>以下である。この順序で読むと、父母の確定、父子関係の形成、氏、養子関係の形成、実方との関係終了という流れが見える。</p>
+
+  <p>実務では、親子関係は戸籍、扶養、相続、在留資格、社会保障に連動するため、法律上の父母を正確に確定することが重要である。行政書士試験の民法では、戸籍実務の細部よりも、どの届出又は審判がどの法律効果を発生させるかを押さえる。出生届は実親子関係を当然に作る万能の手続ではなく、認知届は父子関係を発生させ、養子縁組届は養親子関係を発生させ、特別養子縁組は家庭裁判所の審判により成立する。</p>
+
+  <p>判例学習では、分娩主義、代理出産、嫡出推定とDNA鑑定、認知無効、特別養子の手続保障をセットにする。これらはいずれも、血縁の真実だけで結論を出さず、子の身分関係の安定、子の利益、家庭裁判所の関与、第三者の既得権を考慮する判例である。条文の数字だけを暗記するのではなく、なぜ一定期間を過ぎると争えないのか、なぜ普通養子と特別養子で効果が違うのかを説明できるようにする。</p>
+
+  <p>最後に、親子単元は次の親権単元への入口である。親権者は法律上の父母を前提に決まり、父母の離婚、認知、養子縁組、特別養子縁組により誰が子を監護し、財産を管理し、法定代理人となるかが変わる。相続では、法律上の子であるかどうかが第一順位相続人資格に直結する。親子関係の成立を正確に理解すると、親権、扶養、相続の問題で「誰を当事者として考えるか」を誤りにくくなる。</p>
+</section>
+
+</body>
+</html>

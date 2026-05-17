@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贈与契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">贈与契約</h1>
+  <p class="page-title-block__sub">無償契約の成立・解除・責任・特殊類型を、条文と判例で整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法549条</span>
+    <span class="badge badge--info">民法550条</span>
+    <span class="badge badge--info">民法551条</span>
+    <span class="badge badge--info">民法553条</span>
+    <span class="badge badge--info">民法554条</span>
+    <span class="badge badge--info">書面によらない贈与</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">贈与契約</mark></strong>は、当事者の一方がある財産を無償で相手方に与える意思を表示し、相手方が受諾することで効力を生じる典型契約である。売買のように代金との交換を予定しないため、民法は贈与者の拘束を一定程度弱める一方、受贈者の信頼が具体化した場面では保護を与える。行政書士試験では、単に「無償契約」と覚えるだけでは足りず、書面の有無、履行の終了、負担の有無、贈与者死亡時に効力が生じるかを分けて処理する必要がある。</p>
+
+  <p>この単元の中心は、<strong><mark class="kw">民法550条</mark></strong>の<strong><mark class="kw">書面によらない贈与</mark></strong>である。贈与は諾成契約なので口頭の合意だけでも成立するが、書面によらない場合は各当事者が解除できる。ただし、履行の終わった部分については解除できない。不動産贈与では、引渡しと登記のどちらで履行終了といえるかが判例上重要で、所有権移転登記がされたときは引渡しの有無を問わず履行が終わったものとされる。</p>
+
+  <p>もう一つの柱は、贈与の特殊類型である。<strong><mark class="kw">負担付贈与</mark></strong>は、受贈者にも一定の負担を課すため、無償契約でありながら双務契約規定や売主の担保責任が問題になる。<strong><mark class="kw">定期贈与</mark></strong>は贈与者又は受贈者の死亡によって効力を失い、<strong><mark class="kw">死因贈与</mark></strong>は贈与者の死亡によって効力を生ずる契約として、性質に反しない限り遺贈規定が準用される。試験では、「贈与はすべていつでも撤回できる」「死因贈与は遺言と同じ方式でなければならない」「負担付贈与でも贈与者は常に無責任」といった単純化した肢が誤りになりやすい。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに「この時計をあげる」と口頭で約束し、Bが受け取る前なら、AもBも<strong><mark class="kw">書面によらない贈与</mark></strong>として解除できる。しかしAがすでに時計をBへ引き渡していれば、履行の終わった部分については解除できない。AがBに不動産を贈与し、B名義への所有権移転登記まで済ませた場合も、引渡しがまだでも民法550条の履行は終了したものと扱われる。これに対し、AがBに土地を贈与する代わりにBがAの生活費を毎月支払う約束をしたなら、単純な贈与ではなく<strong><mark class="kw">負担付贈与</mark></strong>として、Bの負担履行やAの責任が問題になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">贈与契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">贈与契約</mark></strong>は、贈与者がある財産を無償で相手方に与える意思を表示し、受贈者が受諾することで成立する契約である。根拠は<strong><mark class="kw">民法549条</mark></strong>であり、目的物の引渡しや契約書作成は成立要件ではない。制度趣旨は、無償で財産を移転する合意にも法的拘束力を認めつつ、対価を得ない贈与者を有償契約と同じ重さで拘束しない点にある。売買と異なり反対給付がないため、通常は片務・無償契約であるが、受贈者に負担を課す場合には双務契約的な調整が必要になる。試験では、「贈与は目的物を引き渡さなければ成立しない」という要物契約化した肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">書面によらない贈与</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">書面によらない贈与</mark></strong>は、契約書その他の書面によって表示されていない贈与である。口頭の贈与も契約として成立するが、<strong><mark class="kw">民法550条</mark></strong>により各当事者が解除できる。これは、無償で財産を与える約束が軽率にされやすいこと、後から約束内容の立証が難しいこと、贈与者の意思を慎重に確認する必要があることを理由とする。もっとも、履行の終わった部分について解除を認めると、受贈者の具体化した信頼を不当に害するため、同条ただし書が解除を制限する。試験では、成立と解除可能性を混同せず、「成立しているが、履行前なら解除できる」と整理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行の終わった部分</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行の終わった部分</mark></strong>とは、贈与者の給付が現実に実行され、受贈者の利益取得が具体化した部分をいう。動産なら引渡し、債権なら債権譲渡の対抗要件具備、不動産なら所有権移転登記や占有移転が問題になる。判例は、不動産贈与に基づき所有権移転登記がされたときは、引渡しの有無を問わず民法550条の履行が終わったものとする。これは不動産の権利移転が登記によって外部的に明確化され、受贈者の信頼を保護すべき段階に達するからである。試験では、「不動産贈与では引渡しがなければ必ず解除できる」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">贈与者の担保責任</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">贈与者の担保責任</mark></strong>は、贈与目的物又は権利に問題がある場合に、贈与者がどの範囲で責任を負うかという問題である。現行の<strong><mark class="kw">民法551条</mark></strong>は、贈与者が贈与目的物又は権利を、贈与の目的として特定した時の状態で引き渡し、又は移転することを約したものと推定する。無償契約であるため、売買の契約不適合責任と同じ重い責任を当然に負わせるのではなく、特定時の状態を基準にする。もっとも、<strong><mark class="kw">負担付贈与</mark></strong>では受贈者も負担を負うため、その負担の限度で売主と同じ担保責任を負う。試験では、「贈与者は目的物に欠陥があっても一切責任を負わない」という肢と、「単純贈与でも売主と全く同じ責任を負う」という肢の両方に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">負担付贈与</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">負担付贈与</mark></strong>は、受贈者が一定の給付や行為を負担することを条件としてされる贈与である。たとえば、不動産を贈与する代わりに受贈者が贈与者の生活費を支払う、墓地を管理する、特定の債務を引き受けるといった場面が典型である。無償性は残るが、受贈者にも負担があるため、民法553条は性質に反しない限り双務契約規定を準用する。また民法551条2項により、贈与者は負担の限度で売主と同じ担保責任を負う。試験では、単純贈与と同じように常に自由に解除できるとする肢や、受贈者の負担履行をまったく考慮しない肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">定期贈与</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">定期贈与</mark></strong>は、一定期間ごとに給付をすることを目的とする贈与である。毎月一定額を生活費として贈与する約束や、毎年一定量の米を与える約束が典型である。<strong><mark class="kw">民法552条</mark></strong>は、定期の給付を目的とする贈与が、贈与者又は受贈者の死亡によって効力を失うと定める。これは、定期贈与が当事者間の人的信頼や生活関係を前提にすることが多く、死亡後まで当然に継続させるのは当事者意思に合わないからである。試験では、「贈与者が死亡しても相続人が当然に定期給付を永久に続ける」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">死因贈与</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">死因贈与</mark></strong>は、贈与者の死亡によって効力を生ずる贈与である。遺贈と似ているが、遺贈は遺言者の単独行為であるのに対し、死因贈与は贈与者と受贈者の合意による契約である。<strong><mark class="kw">民法554条</mark></strong>は、その性質に反しない限り遺贈規定を準用すると定めるため、方式、撤回、遺言執行、遺留分との関係などで問題が生じる。判例は、死因贈与の取消しについて遺言撤回規定を方式部分を除いて準用するとする一方、負担付死因贈与で受贈者が生前に負担をほぼ履行した場合には、特段の事情がない限り自由な取消しを制限する。試験では、遺贈との共通点と違いを直接比較することが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 760" role="img" aria-label="贈与契約の全体構造">
+      <defs>
+        <marker id="arr28a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr28a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr28a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="108" x2="560" y2="154" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="154" x2="950" y2="154" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="154" x2="170" y2="230" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28a-blue)"/>
+      <line x1="560" y1="154" x2="560" y2="230" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28a-blue)"/>
+      <line x1="950" y1="154" x2="950" y2="230" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28a-blue)"/>
+      <rect x="496" y="132" width="128" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="149" text-anchor="middle" font-size="13" fill="#1d4ed8">成立後の分岐</text>
+
+      <line x1="170" y1="328" x2="170" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr28a-orange)"/>
+      <line x1="560" y1="328" x2="560" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr28a-orange)"/>
+      <line x1="950" y1="328" x2="950" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr28a-orange)"/>
+      <rect x="104" y="356" width="132" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="170" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">解除可能性</text>
+      <rect x="498" y="356" width="124" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">責任の範囲</text>
+      <rect x="888" y="356" width="124" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="950" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">死亡時効果</text>
+
+      <polyline points="170,492 170,570 560,570 560,626" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr28a-red)"/>
+      <polyline points="950,492 950,570 560,570" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4"/>
+      <rect x="420" y="548" width="280" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="560" y="565" text-anchor="middle" font-size="13" fill="#9f1239">信頼が具体化すると解除・撤回が制限</text>
+
+      <rect x="390" y="38" width="340" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="66" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">贈与契約</text>
+      <text x="560" y="90" text-anchor="middle" font-size="12" fill="#1e3a8a">無償で財産を与える合意</text>
+
+      <rect x="50" y="238" width="240" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="170" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">書面によらない贈与</text>
+      <text x="170" y="294" text-anchor="middle" font-size="12" fill="#1e3a8a">成立はするが解除できる</text>
+      <text x="170" y="314" text-anchor="middle" font-size="12" fill="#1e3a8a">民法550条本文</text>
+
+      <rect x="430" y="238" width="260" height="90" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">贈与者の給付義務</text>
+      <text x="560" y="294" text-anchor="middle" font-size="12" fill="#7c2d12">特定時の状態で移転</text>
+      <text x="560" y="314" text-anchor="middle" font-size="12" fill="#7c2d12">民法551条1項</text>
+
+      <rect x="830" y="238" width="240" height="90" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="950" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">特殊な贈与</text>
+      <text x="950" y="294" text-anchor="middle" font-size="12" fill="#1e3a8a">負担・定期・死因</text>
+      <text x="950" y="314" text-anchor="middle" font-size="12" fill="#1e3a8a">民法552条から554条</text>
+
+      <rect x="50" y="398" width="240" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="170" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">履行の終了</text>
+      <text x="170" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">動産は引渡し</text>
+      <text x="170" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">不動産は登記が重要</text>
+
+      <rect x="430" y="398" width="260" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">負担付贈与</text>
+      <text x="560" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">負担の限度で売主責任</text>
+      <text x="560" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">双務契約規定を準用</text>
+
+      <rect x="830" y="398" width="240" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="950" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">死因贈与</text>
+      <text x="950" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">死亡で効力発生</text>
+      <text x="950" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">遺贈規定を準用</text>
+
+      <rect x="360" y="634" width="400" height="70" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="662" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">試験処理の結論</text>
+      <text x="560" y="686" text-anchor="middle" font-size="12" fill="#9f1239">書面・履行・負担・死亡時効力を順に確認する</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">贈与契約</mark></strong>を、成立後にどの論点へ進むかで分けている。まず、書面がない場合は民法550条で解除可能性を確認するが、履行の終わった部分では解除できない。次に、贈与者の責任は無償契約であることから特定時の状態を基準に軽く構成されるが、負担付贈与では負担の限度で有償契約に近づく。さらに、定期贈与や死因贈与では、当事者の死亡が効果に直結するため、相続・遺贈との接点が生じる。試験では、図の下段にあるように、受贈者の信頼が履行や負担履行によって具体化しているかを見ると、解除・撤回の可否を判断しやすい。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 560" role="img" aria-label="書面によらない贈与の解除判断">
+      <defs>
+        <marker id="arr28b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr28b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="190" y1="130" x2="190" y2="210" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28b-blue)"/>
+      <line x1="190" y1="300" x2="190" y2="390" stroke="#e11d48" stroke-width="2" marker-end="url(#arr28b-red)"/>
+      <line x1="520" y1="130" x2="520" y2="210" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28b-blue)"/>
+      <line x1="520" y1="300" x2="520" y2="390" stroke="#e11d48" stroke-width="2" marker-end="url(#arr28b-red)"/>
+      <line x1="850" y1="130" x2="850" y2="210" stroke="#2563eb" stroke-width="2" marker-end="url(#arr28b-blue)"/>
+      <line x1="850" y1="300" x2="850" y2="390" stroke="#e11d48" stroke-width="2" marker-end="url(#arr28b-red)"/>
+
+      <rect x="70" y="48" width="240" height="82" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="190" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">口頭で贈与を約束</text>
+      <text x="190" y="102" text-anchor="middle" font-size="12" fill="#1e3a8a">契約は成立する</text>
+
+      <rect x="400" y="48" width="240" height="82" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">書面あり</text>
+      <text x="520" y="102" text-anchor="middle" font-size="12" fill="#1e3a8a">民法550条の解除不可</text>
+
+      <rect x="730" y="48" width="240" height="82" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="850" y="78" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">書面なし</text>
+      <text x="850" y="102" text-anchor="middle" font-size="12" fill="#1e3a8a">解除できるのが原則</text>
+
+      <rect x="70" y="218" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="190" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">未履行</text>
+      <text x="190" y="272" text-anchor="middle" font-size="12" fill="#7c2d12">引渡し・登記がまだ</text>
+
+      <rect x="400" y="218" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="520" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">一部履行</text>
+      <text x="520" y="272" text-anchor="middle" font-size="12" fill="#7c2d12">履行済部分だけ保護</text>
+
+      <rect x="730" y="218" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="850" y="248" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">全部履行</text>
+      <text x="850" y="272" text-anchor="middle" font-size="12" fill="#7c2d12">受贈者の取得が具体化</text>
+
+      <rect x="70" y="398" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="190" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除できる</text>
+      <text x="190" y="452" text-anchor="middle" font-size="12" fill="#9f1239">各当事者が離脱可能</text>
+
+      <rect x="400" y="398" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="520" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">未履行部分だけ解除</text>
+      <text x="520" y="452" text-anchor="middle" font-size="12" fill="#9f1239">履行済部分は戻せない</text>
+
+      <rect x="730" y="398" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="850" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除できない</text>
+      <text x="850" y="452" text-anchor="middle" font-size="12" fill="#9f1239">民法550条ただし書</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">民法550条</mark></strong>の判断順序を示している。最初に贈与が書面によるものかを確認し、書面がなければ解除できるのが原則である。次に、履行がどこまで終わっているかを見て、未履行なら解除可能、一部履行なら未履行部分だけ解除可能、全部履行なら解除不可と整理する。不動産では、所有権移転登記があるかを特に確認する。問題文に「口頭で約束した」「すでに登記を移した」「まだ引き渡していない」という事実が並んだら、成立要件ではなく解除制限の問題として処理する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">単純贈与</th>
+        <th class="col--b">負担付贈与</th>
+        <th class="col--c">売買契約</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">無償</span>で財産を与える合意。通常は片務契約である。</td>
+        <td class="col--b">受贈者が<span class="em-b">負担</span>を負う贈与。無償性は残るが双務契約的要素を持つ。</td>
+        <td class="col--c">財産権移転と<span class="em-c">代金支払</span>を交換する有償・双務契約である。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">書面の有無、履行終了、贈与者の軽い責任が中心。</td>
+        <td class="col--b">負担の履行、解除、担保責任、双務契約規定の準用が中心。</td>
+        <td class="col--c">契約不適合、危険負担、解除、手付など取引責任が中心。</td>
+      </tr>
+      <tr>
+        <td class="col--label">責任</td>
+        <td class="col--a"><strong><mark class="kw">民法551条</mark></strong>により、特定時の状態で引渡し・移転することを約したと推定される。</td>
+        <td class="col--b">負担の限度で売主と同じ担保責任を負う。</td>
+        <td class="col--c">契約内容に適合しない場合、追完・減額・解除・損害賠償が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">解除</td>
+        <td class="col--a">書面によらなければ履行前は解除できる。</td>
+        <td class="col--b">負担履行や信頼保護により、単純贈与より解除・撤回が制限されやすい。</td>
+        <td class="col--c">債務不履行解除、手付解除、契約不適合による解除を区別する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法549条</mark></strong>、<strong><mark class="kw">民法550条</mark></strong>、<strong><mark class="kw">民法551条1項</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法551条2項</mark></strong>、<strong><mark class="kw">民法553条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法555条</mark></strong>以下、契約不適合規定</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「口頭なら契約自体が成立しない」とする肢。</td>
+        <td class="col--b">「負担があっても贈与者は常に一切責任を負わない」とする肢。</td>
+        <td class="col--c">「贈与と同じく無償なので責任が軽い」とする肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>単純贈与、<strong><mark class="kw">負担付贈与</mark></strong>、売買契約を区別するときは、相手方が対価又は負担を負っているかを見る。対価がないなら贈与だが、受贈者が生活費支払や債務引受などの負担を負うなら負担付贈与として、責任や解除の場面で売買・双務契約に近い調整が入る。売買は代金との交換であるため、無償契約である贈与とは責任の重さが異なる。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">生前贈与</th>
+        <th class="col--b">死因贈与</th>
+        <th class="col--c">遺贈</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">法的性質</td>
+        <td class="col--a">贈与者生前に効力が生じる<span class="em-a">契約</span>。</td>
+        <td class="col--b">贈与者死亡時に効力が生じる<span class="em-b">契約</span>。</td>
+        <td class="col--c">遺言による<span class="em-c">単独行為</span>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">受諾</td>
+        <td class="col--a">受贈者の受諾が必要。</td>
+        <td class="col--b">受贈者の受諾が必要。</td>
+        <td class="col--c">成立自体に受遺者の受諾は不要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">方式</td>
+        <td class="col--a">原則として方式自由。ただし書面がないと解除可能。</td>
+        <td class="col--b">契約であり、遺言方式そのものが当然に必要になるわけではない。</td>
+        <td class="col--c">遺言方式が必要で、方式違反は無効となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">撤回・取消し</td>
+        <td class="col--a">書面によらない場合は履行前に解除可能。</td>
+        <td class="col--b">遺言撤回規定が方式部分を除いて準用されるが、負担履行があると制限され得る。</td>
+        <td class="col--c">遺言者は遺言方式により撤回できる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での見分け方</td>
+        <td class="col--a">「今あげる」「すでに渡した」という事実を見る。</td>
+        <td class="col--b">「死亡したらあげる」と「合意した」という事実を見る。</td>
+        <td class="col--c">「遺言で与える」と一方的に表示した事実を見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong><mark class="kw">死因贈与</mark></strong>と<strong><mark class="kw">遺贈</mark></strong>は、どちらも死亡時に財産移転が問題になるため混同しやすい。決定的な違いは、死因贈与が受贈者の受諾を要する契約であるのに対し、遺贈は遺言による単独行為である点にある。ただし、死因贈与には性質に反しない限り遺贈規定が準用されるため、撤回や遺言執行に関する規定がどこまで使えるかが問題になる。試験では、「死因贈与は契約だから遺贈規定は一切準用されない」とする肢も、「死因贈与は遺贈と同じだから遺言方式が常に必要」とする肢も誤りである。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Related Statutes</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法549条 贈与</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">贈与は、当事者の一方がある財産を無償で相手方に与える意思を表示し、相手方が受諾をすることによって、その効力を生ずる。</blockquote>
+      <p><strong><mark class="kw">民法549条</mark></strong>は、<strong><mark class="kw">贈与契約</mark></strong>の成立要件を定める。条文上必要なのは、贈与者の無償で与える意思表示と、受贈者の受諾である。目的物の引渡し、登記、契約書作成は成立要件ではないため、贈与は諾成契約である。もっとも、書面がない場合には民法550条の解除可能性が残るため、成立要件と解除制限を分ける必要がある。目的物は「ある財産」とされ、物だけでなく権利も含み、他人の財産権を目的とする贈与も有効に成立し得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法550条 書面によらない贈与の解除</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">書面によらない贈与は、各当事者が解除をすることができる。ただし、履行の終わった部分については、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法550条</mark></strong>は、書面によらない贈与の解除を定める。本文は、書面によらない贈与について各当事者に解除権を認める。趣旨は、無償で財産を与える意思表示の軽率さを防ぎ、証拠が不明確なまま強い拘束を認めない点にある。ただし書は、<strong><mark class="kw">履行の終わった部分</mark></strong>について解除できないとする。これは、受贈者の利益取得が具体化した後に、贈与者が一方的に取り戻すことを防ぐためである。試験では、解除できる主体が贈与者だけでなく各当事者である点、解除できないのは契約全体ではなく履行の終わった部分である点が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法551条 贈与者の引渡義務等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">贈与者は、贈与の目的である物又は権利を、贈与の目的として特定した時の状態で引き渡し、又は移転することを約したものと推定する。<br>２　負担付贈与については、贈与者は、その負担の限度において、売主と同じく担保の責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法551条</mark></strong>は、贈与者の給付内容と担保責任を定める。1項は、贈与者が目的物又は権利を、贈与目的として特定した時の状態で引き渡し又は移転することを約したものと推定する。売買のように契約内容への適合を広く要求するのではなく、無償契約としての性質を踏まえた規定である。2項は、<strong><mark class="kw">負担付贈与</mark></strong>について、負担の限度で売主と同じ担保責任を負わせる。受贈者が負担を履行する以上、その限度では有償契約に近い均衡が必要だからである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法552条 定期贈与</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">定期の給付を目的とする贈与は、贈与者又は受贈者の死亡によって、その効力を失う。</blockquote>
+      <p><strong><mark class="kw">民法552条</mark></strong>は、<strong><mark class="kw">定期贈与</mark></strong>が贈与者又は受贈者の死亡によって効力を失うことを定める。定期贈与は、毎月・毎年など継続的な給付を予定するため、当事者の人的関係を基礎にしていることが多い。したがって、死亡後に相続人へ当然に継続義務を負わせたり、受贈者の相続人へ当然に請求権を承継させたりするのは、通常の当事者意思に反する。試験では、定期贈与と死因贈与を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法553条 負担付贈与</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">負担付贈与については、この節に定めるもののほか、その性質に反しない限り、双務契約に関する規定を準用する。</blockquote>
+      <p><strong><mark class="kw">民法553条</mark></strong>は、負担付贈与について双務契約規定を準用する。受贈者が負担を負う以上、贈与者の給付と受贈者の負担との間には一定の牽連関係が生じるため、同時履行、解除、危険負担などの考え方が性質に反しない限り問題になる。もっとも、負担付贈与は完全な有償契約ではないため、売買規定が当然にすべて適用されるわけではない。試験では、「準用」と「完全な同一視」を区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法554条 死因贈与</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">贈与者の死亡によって効力を生ずる贈与については、その性質に反しない限り、遺贈に関する規定を準用する。</blockquote>
+      <p><strong><mark class="kw">民法554条</mark></strong>は、<strong><mark class="kw">死因贈与</mark></strong>について遺贈規定を準用する。死因贈与は契約でありながら、効力発生時期が贈与者の死亡である点で遺贈に近い。そのため、贈与者の最終意思尊重、遺言執行、遺留分、撤回に関する規律が問題になる。ただし、死因贈与が契約であるという性質に反する部分まで準用されるわけではない。判例は、遺言撤回規定を方式部分を除いて準用するとする一方、負担付死因贈与で受贈者が負担をほぼ履行した場合には、信頼保護の観点から自由な取消しを制限している。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和40年3月26日 昭和39年(オ)第370号 民集19巻2号526頁</div>
+      <div class="case-card__title">不動産贈与の所有権移転登記と履行終了事件（所有権移転登記抹消請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法550条</span>
+        <span class="badge badge--law">履行の終了</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産について贈与契約がされた後、受贈者側に所有権移転登記がされた。しかし、目的不動産の現実の引渡しがまだ問題となる段階で、贈与者側は書面によらない贈与として民法550条に基づく解除を主張し、登記の抹消を求めた。争点は、不動産の贈与契約に基づいて所有権移転登記が経由された場合、現実の引渡しがなくても、同条ただし書の「履行の終わった部分」に当たり、解除できなくなるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の贈与契約に基づいて当該不動産の所有権移転登記がされたときは、その引渡しの有無を問わず、民法550条にいう履行が終わったものと解すべきであると判断した。不動産の権利移転は登記によって外部的に明確化され、受贈者の取得が具体的な法的状態として示される。したがって、登記まで済んだ後に、書面によらない贈与であることを理由に解除を認めると、受贈者の保護されるべき信頼と取引の安定を害する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">書面によらない贈与</mark></strong>の解除制限を判断する最重要判例である。動産では引渡しが履行終了の典型であるため、その感覚で不動産でも現実の引渡しだけを見てしまうと誤る。不動産では所有権移転登記がされた時点で、引渡しが未了でも履行は終わったものとされる。誤答パターンは、「不動産贈与では受贈者が現実に占有を取得しなければ、登記があっても常に解除できる」という肢である。問題文では、書面の有無、登記の有無、引渡しの有無を分け、登記がある場合は履行終了を肯定する方向で処理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法550条</mark></strong>、不動産物権変動、登記、民法177条が関連する。昭和31年1月27日判決は、書面によらない不動産贈与で所有権移転だけでは履行終了といえず占有移転が必要としたが、後の本判例は所有権移転登記がされた場合の履行終了を明確にした。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和38年9月3日 昭和36年(オ)第1028号 民集17巻8号984頁</div>
+      <div class="case-card__title">書面によらない負担付贈与と負担履行事件（所有権移転登記手続請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法550条</span>
+        <span class="badge badge--law">民法553条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>当事者間で書面によらない負担付贈与契約がされ、受贈者側がその負担として定められた債務を履行した。その後、贈与者側は、贈与が書面によらないことを理由に民法550条による解除を主張し、贈与契約の拘束から離れようとした。争点は、受贈者が負担を履行したことを、民法550条ただし書の履行終了と同じように評価し、書面によらない贈与であることを理由とする解除を制限できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、書面によらない負担付贈与契約に基づき当事者の一方が債務を履行したときは、書面によらない贈与であることを理由にこれを取り消すことはできないと判断した。負担付贈与では、受贈者の負担履行が贈与者の利益又は契約目的に向けて具体化する。受贈者が負担を履行したにもかかわらず、贈与者が書面不存在だけを理由に離脱できるとすれば、負担を履行した受贈者の信頼を不当に害し、負担付贈与の双務契約的性格にも反する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">負担付贈与</mark></strong>では受贈者側の負担履行が解除可否に影響することを示す。単純贈与では贈与者の給付が終わったかを中心に見るが、負担付贈与では受贈者の負担履行も信頼保護の根拠になる。誤答パターンは、「書面がない負担付贈与では、受贈者が負担を全部履行していても贈与者は常に解除できる」という肢である。民法553条が双務契約規定を準用する趣旨と結び付け、受贈者の履行を無視しないことが重要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法550条</mark></strong>、<strong><mark class="kw">民法553条</mark></strong>、同時履行、解除、信義則が関連する。負担付死因贈与で受贈者が負担を履行した場合に撤回が制限される判例とも、受贈者の具体的信頼保護という点でつながる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和44年1月31日 昭和41年(オ)第805号 民集23巻1号151頁</div>
+      <div class="case-card__title">他人の財産権を目的とする贈与事件（山林所有権移転登記抹消等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法549条</span>
+        <span class="badge badge--law">他人物贈与</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>国が買収して所有権を取得した土地について、被買収者が第三者との間で土地を移転する契約をしたことが問題となった。売買と贈与の両面で、他人の財産権を目的とする契約が有効に成立するかが争われた。贈与については、贈与者が現在その財産権を有していない場合でも、将来これを取得して受贈者へ移転する義務を負う契約として有効に扱えるかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、他人の財産権をもって贈与の目的としたときは、贈与義務者は自らその財産権を取得して受贈者に移転する義務を負うものであり、贈与契約として有効に成立すると判断した。旧法下では条文上「自己の財産」という文言が問題となったが、判例は、贈与契約の効力を否定せず、贈与者の給付義務として構成した。現行民法549条が「ある財産」と表現することとも整合する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">贈与契約</mark></strong>の目的物が贈与者の現有財産に限られないことを示す。売買に他人物売買があるように、贈与でも他人の財産権を目的とする契約は有効に成立し得る。誤答パターンは、「贈与は無償契約であるから、贈与者が現在所有する財産を目的とする場合に限り有効である」という肢である。現行法では民法549条の「ある財産」という文言と結び付けて、他人物贈与を否定しないと整理する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法549条</mark></strong>、他人物売買、<strong><mark class="kw">民法561条</mark></strong>、債務不履行が関連する。贈与者が財産権を取得して移転できなければ、契約の成立ではなく履行不能や債務不履行の問題として処理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和47年5月25日 昭和46年(オ)第1166号 民集26巻4号805頁</div>
+      <div class="case-card__title">死因贈与の取消しと遺言撤回規定事件（贈与契約不存在確認請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法554条</span>
+        <span class="badge badge--law">民法1022条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>贈与者の死亡によって効力を生ずる死因贈与契約について、贈与者が生前にその効力を取り消すことができるかが争われた。死因贈与は契約であるため、通常の契約なら相手方の同意なく一方的に撤回できないはずである。他方で、効力が贈与者の死亡時に生じる点では遺贈に近く、贈与者の最終意思を尊重すべきとも考えられる。そこで、遺言の撤回を定める民法1022条を、死因贈与にどこまで準用できるかが問題になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、死因贈与の取消しについて、遺言の取消しに関する民法1022条が、その方式に関する部分を除いて準用されると解すべきであると判断した。死因贈与は契約であるが、贈与者の死亡によって効力が生ずるため、贈与者の最終意思を尊重する必要がある。そのため、遺贈規定を準用する民法554条の趣旨から、遺言撤回規定を準用し、贈与者による取消しを認めた。ただし、遺言方式そのものまで要求するわけではなく、方式部分は準用されない。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">死因贈与</mark></strong>と<strong><mark class="kw">遺贈</mark></strong>の関係を処理する基本判例である。死因贈与は契約であるため遺贈と完全に同じではないが、死亡時に効力を生ずる点から遺贈規定が準用される。誤答パターンは、「死因贈与は契約なので遺言撤回規定は一切準用されない」という肢と、「民法1022条が準用される以上、死因贈与の取消しにも遺言方式が必要である」という肢である。正しくは、方式に関する部分を除いて準用される。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法554条</mark></strong>、<strong><mark class="kw">民法1022条</mark></strong>、遺贈、遺言の撤回が関連する。負担付死因贈与で受贈者が負担を履行した場合には、後述の昭和57年4月30日判決により、自由な取消しが制限され得る。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和57年4月30日 昭和54年(オ)第1336号 民集36巻4号763頁</div>
+      <div class="case-card__title">負担付死因贈与の負担履行と撤回制限事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法553条</span>
+        <span class="badge badge--law">民法554条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>贈与者と受贈者の間で、贈与者の死亡時に財産を与える旨の死因贈与契約がされ、その契約には受贈者が贈与者の生前に一定の負担を履行する内容が含まれていた。受贈者は、契約に従って生活費の送金などの負担を長期間履行した。その後、贈与者側が別の意思表示により死因贈与を取り消すことができるかが争われた。争点は、民法1022条・1023条の遺言撤回規定をそのまま準用し、負担をほぼ履行した受贈者の期待を犠牲にしても自由な取消しを認めるべきかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、負担の履行期が贈与者の生前と定められた負担付死因贈与で、受贈者が負担の全部又はこれに類する程度の履行をした場合には、契約締結の動機、負担の価値と贈与財産の価値との相関関係、契約上の利害関係者間の身分関係その他の生活関係等に照らし、契約の全部又は一部を取り消すことがやむを得ないと認められる特段の事情がない限り、民法1022条・1023条は準用されないと判断した。受贈者の負担履行によって形成された信頼を重視し、死因贈与の契約性を考慮した判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、昭和47年判決の「死因贈与は原則として撤回規定が準用される」という理解に重要な制限を加える。特に<strong><mark class="kw">負担付死因贈与</mark></strong>では、受贈者が生前に負担をほぼ履行している場合、贈与者の最終意思だけでなく、受贈者の信頼と契約的拘束も保護される。誤答パターンは、「死因贈与は常に遺贈と同じく自由に撤回でき、受贈者の負担履行は一切考慮されない」という肢である。問題文では、負担の履行期、履行の程度、負担と贈与財産の価値関係、当事者の生活関係を確認する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法553条</mark></strong>、<strong><mark class="kw">民法554条</mark></strong>、<strong><mark class="kw">民法1022条</mark></strong>、<strong><mark class="kw">民法1023条</mark></strong>が関連する。書面によらない負担付贈与で負担履行を重視した昭和38年9月3日判決と同じく、受贈者の具体的な履行・信頼を保護する方向の判例である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">贈与契約</mark></strong>は民法549条により諾成契約であり、目的物の引渡しや書面作成が成立要件になるわけではない。</li>
+        <li><strong><mark class="kw">書面によらない贈与</mark></strong>は成立するが、民法550条本文により各当事者が解除できる。</li>
+        <li>民法550条ただし書により、<strong><mark class="kw">履行の終わった部分</mark></strong>については解除できない。</li>
+        <li>不動産贈与では、所有権移転登記がされると、引渡しの有無を問わず履行終了とされる。</li>
+        <li><strong><mark class="kw">負担付贈与</mark></strong>では、負担の限度で売主と同じ担保責任を負い、双務契約規定が性質に反しない限り準用される。</li>
+        <li><strong><mark class="kw">定期贈与</mark></strong>は、贈与者又は受贈者の死亡によって効力を失う。</li>
+        <li><strong><mark class="kw">死因贈与</mark></strong>は契約であり、性質に反しない限り遺贈規定が準用される。</li>
+        <li>負担付死因贈与で受贈者が負担をほぼ履行した場合には、自由な取消しが制限され得る。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「贈与契約は、目的物を引き渡した時に初めて成立する。」これは誤りである。<strong><mark class="kw">民法549条</mark></strong>により、贈与者の意思表示と受贈者の受諾で効力を生じる。</p>
+      <p><strong>誤りの選択肢例2：</strong>「書面によらない贈与は、契約として成立しない。」これは誤りである。契約は成立するが、<strong><mark class="kw">民法550条</mark></strong>により解除できる。</p>
+      <p><strong>誤りの選択肢例3：</strong>「書面によらない贈与は、履行が終わった後でも各当事者が解除できる。」これは誤りである。履行の終わった部分は民法550条ただし書により解除できない。</p>
+      <p><strong>誤りの選択肢例4：</strong>「不動産の贈与では、所有権移転登記がされても引渡しがなければ履行は終わらない。」これは誤りである。最高裁昭和40年3月26日判決は、登記があれば引渡しの有無を問わず履行終了とする。</p>
+      <p><strong>誤りの選択肢例5：</strong>「負担付贈与でも、贈与者は受贈者の負担に関係なく一切担保責任を負わない。」これは誤りである。<strong><mark class="kw">民法551条2項</mark></strong>により、負担の限度で売主と同じ担保責任を負う。</p>
+      <p><strong>誤りの選択肢例6：</strong>「死因贈与は契約であるから、遺贈に関する規定は一切準用されない。」これは誤りである。<strong><mark class="kw">民法554条</mark></strong>により、性質に反しない限り遺贈規定が準用される。</p>
+    </div>
+  </div>
+
+  <p>記述式での処理は、第一に、贈与者の無償で与える意思表示と受贈者の受諾があるかを確認する。第二に、書面の有無を確認し、書面がなければ民法550条本文の解除可能性を検討する。第三に、履行がどこまで終わっているかを見て、解除できない部分を切り分ける。第四に、受贈者に負担があるなら負担付贈与として民法551条2項・553条を検討する。第五に、死亡時の効力が問題なら、定期贈与か死因贈与かを分け、死因贈与では遺贈規定の準用と負担履行による撤回制限を確認する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">贈与契約</mark></strong>は、契約成立、解除、債務不履行、物権変動、相続、遺言、遺留分と接続する。書面によらない不動産贈与では、民法550条の履行終了と民法177条の登記が重なる。負担付贈与では、同時履行、解除、売主担保責任、危険負担と連続する。死因贈与では、遺贈規定の準用、遺言撤回、遺言執行、遺留分侵害額請求が問題になるため、相続法の単元と横断して理解する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">贈与契約</mark></strong>の条文も整理された。民法549条は、旧法の「自己の財産」という表現を改め、「ある財産」として他人物贈与も有効に成立し得る判例・通説に沿う形になった。民法550条は、旧法の「撤回」という表現を「解除」に改め、解除制度との用語をそろえた。民法551条は、旧法の瑕疵・不存在を知りながら告げなかった場合の責任という構造から、特定時の状態で引渡し又は移転することを約したものと推定する構造へ整理された。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">贈与契約</mark></strong>では書面化が非常に重要である。親族間で不動産や高額財産を無償で移転する約束は、口頭でされることも多いが、書面がなければ履行前に解除される余地が残る。さらに、何を、いつ、どの状態で、どの条件で与えるのかが不明確だと、後に相続人との間で紛争になりやすい。したがって、不動産贈与では契約書、公正証書、登記手続、税務上の確認を一体として進めることが多い。</p>
+
+  <p><strong><mark class="kw">負担付贈与</mark></strong>は、贈与と売買の中間にあるように見えるが、法律上は贈与の一類型である。受贈者が生活費支払や介護、債務弁済などの負担を引き受ける場合、その負担がどの程度具体的で、いつ履行すべきかを明確にしなければならない。負担があいまいだと、受贈者が履行したといえるか、贈与者が解除できるか、担保責任がどの範囲で発生するかが争われる。試験では、負担の存在を見落とすと単純贈与として誤処理しやすい。</p>
+
+  <p><strong><mark class="kw">死因贈与</mark></strong>は、相続法との接点が強い。契約であるため受贈者の受諾が必要であり、遺言とは方式が異なるが、死亡によって効力を生ずるため遺贈規定が準用される。この二面性が、撤回、遺言執行、遺留分、相続債権者との関係で問題を生む。特に負担付死因贈与では、受贈者が生前に負担を履行しているほど、贈与者の自由な撤回よりも受贈者の信頼保護が重視される。</p>
+
+  <p>学習上は、贈与契約を「成立」「書面によらない贈与」「履行終了」「贈与者の責任」「負担付贈与」「定期贈与」「死因贈与」の順で整理する。条文番号は、549条が成立、550条が書面によらない贈与、551条が贈与者の責任、552条が定期贈与、553条が負担付贈与、554条が死因贈与である。問題文で「口頭」「書面なし」「登記済み」「生活費を支払う約束」「死亡したら与える」という事実が出たら、どの条文に接続するかを先に決めると、贈与単元のひっかけを避けやすい。</p>
+</section>
+
+</body>
+</html>

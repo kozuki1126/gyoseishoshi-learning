@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>契約の解除（解除の要件、解除の効果） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">契約の解除（解除の要件、解除の効果）</h1>
+  <p class="page-title-block__sub">契約関係を一方的意思表示で清算する要件と、原状回復・損害賠償・第三者保護を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法540条</span>
+    <span class="badge badge--info">民法541条</span>
+    <span class="badge badge--info">民法542条</span>
+    <span class="badge badge--info">民法545条</span>
+    <span class="badge badge--info">催告解除</span>
+    <span class="badge badge--info">原状回復</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">契約の解除</mark></strong>とは、いったん有効に成立した契約について、解除権者の一方的な意思表示により、未履行部分を消滅させ、既履行部分を原状に戻す制度である。売買で代金を支払ったのに目的物が引き渡されない、請負で完成時期が重要なのに完成しない、リゾートマンションと会員権のように複数契約が一体として取引されているのに一方だけでは目的を達しない、といった場面で問題になる。</p>
+
+  <p>この単元では、まず<strong><mark class="kw">民法540条</mark></strong>により解除が相手方に対する意思表示でされることを押さえる。次に、債務不履行解除の入口として、原則型である<strong><mark class="kw">催告解除</mark></strong>、例外型である<strong><mark class="kw">無催告解除</mark></strong>、解除を制限する<strong><mark class="kw">債権者の責めに帰すべき事由</mark></strong>を区別する。そのうえで、解除後の<strong><mark class="kw">原状回復義務</mark></strong>、金銭返還時の利息、果実返還、第三者保護、損害賠償請求との併存を、条文番号と効果で整理する。</p>
+
+  <p>行政書士試験では、令和2年施行の債権法改正後の現行民法を前提に、<strong><mark class="kw">民法541条ただし書</mark></strong>の軽微性、<strong><mark class="kw">民法542条</mark></strong>の無催告解除類型、解除に債務者の帰責事由が必要か、解除後の原状回復義務が同時履行関係に立つか、解除が第三者にどこまで対抗できるかが狙われる。古い知識では「解除には常に債務者の帰責事由が必要」と覚えがちだが、現行法の解除は契約目的を回復する制度として整理され、損害賠償とは要件が分かれている点が重要である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBから中古機械を500万円で買い、代金の半額を支払った。引渡期日を過ぎてもBが機械を引き渡さない場合、Aは原則として相当期間を定めて履行を催告し、その期間内に履行がなければ<strong><mark class="kw">民法541条</mark></strong>により解除できる。ただし、Bが「機械はもう第三者に売ったので絶対に渡さない」と明確に表示した場合や、機械が滅失して全部履行不能となった場合には、Aは催告を経ずに<strong><mark class="kw">民法542条</mark></strong>で解除できる。解除後は、Aは支払済み代金の返還を求め、Bは受け取った金銭に受領時からの利息を付けて返還する。Aが損害を受け、Bに帰責事由があるなら、解除とは別に損害賠償も請求できる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">解除権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">解除権</mark></strong>は、契約又は法律の規定に基づいて、契約関係を終了させ、既履行部分を清算することができる形成権である。形成権であるため、相手方の承諾を待たず、解除権者の意思表示が相手方に到達すれば解除の効果が発生する。根拠は<strong><mark class="kw">民法540条</mark></strong>であり、いったん解除の意思表示をした後は撤回できない。制度趣旨は、契約目的が実現できない状態になったとき、債権者をいつまでも契約に拘束せず、契約関係を清算する点にある。試験では、解除を合意解除と混同して「相手方の同意がなければ解除の効力が生じない」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">催告解除</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">催告解除</mark></strong>は、債務者が債務を履行しない場合に、債権者が相当期間を定めて履行を催告し、その期間内に履行がないときに契約を解除できる制度である。根拠は<strong><mark class="kw">民法541条</mark></strong>であり、履行遅滞型の解除の基本形である。催告の趣旨は、債務者に最後の履行機会を与え、契約維持の可能性を確認する点にある。もっとも、期間経過時の不履行が契約及び取引上の社会通念に照らして軽微であるときは解除できない。試験では、「催告して期間が過ぎれば、不履行がどれほど軽微でも必ず解除できる」という肢と、「催告解除にも常に債務者の帰責事由が必要」という肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">軽微な不履行</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">軽微な不履行</mark></strong>とは、催告期間を経過した時点でなお不履行が残っていても、契約及び取引上の社会通念に照らして契約を終了させるほど重大ではない不履行をいう。令和2年施行の債権法改正で<strong><mark class="kw">民法541条ただし書</mark></strong>に明文化された。判断では、不履行の量だけでなく、契約目的への影響、取引上重要な期限か、当事者がその義務を重視していたか、履行済み部分の価値、継続的契約なら信頼関係への影響を総合する。制度趣旨は、些細な不履行を口実に契約全体を失わせる過酷な結果を避ける点にある。試験では、軽微性を「金額が小さいかどうか」だけで判断する肢が危険であり、契約目的への影響を必ず見る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">無催告解除</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">無催告解除</mark></strong>は、催告しても契約維持の意味がないほど契約目的の達成が失われている場合に、債権者が催告なしで直ちに解除できる制度である。<strong><mark class="kw">民法542条1項</mark></strong>は全部解除、同条2項は一部解除を定める。全部履行不能、全部履行拒絶、一部不能又は一部拒絶により残部だけでは目的を達しない場合、定期行為で時期を経過した場合、催告しても目的を達する履行が見込めないことが明らかな場合が中心である。催告解除との違いは、債務者に最後の履行機会を与える必要が実質的にない点にある。試験では、単なる履行遅滞をすべて無催告解除にする肢が誤りであり、542条各号のどれに当たるかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">定期行為</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">定期行為</mark></strong>は、契約の性質又は当事者の意思表示により、特定の日時又は一定期間内に履行されなければ契約目的を達成できない行為である。結婚式当日の衣装納入、催事当日の会場設営、季節限定商品の納入のように、後から履行されても契約目的が失われる場面が典型である。<strong><mark class="kw">民法542条1項4号</mark></strong>は、債務者が履行しないままその時期を経過したとき、催告なしの解除を認める。制度趣旨は、時期そのものが契約内容の中核になっている場合、事後の催告を要求しても債権者保護にならない点にある。試験では、単に履行期が定められているだけで定期行為とする肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権者の責めに帰すべき事由</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権者の責めに帰すべき事由</mark></strong>とは、債務不履行の原因が債権者側の故意・過失や信義則上これと同視すべき事情にある場合をいう。<strong><mark class="kw">民法543条</mark></strong>は、この場合、債権者は541条・542条による解除をすることができないと定める。たとえば、買主が受領に必要な協力をせず、売主が引渡しできない状態を作っておきながら、買主が売主の不履行を理由に解除することは公平に反する。制度趣旨は、自ら契約目的達成を妨げた者に解除という清算手段を与えない点にある。試験では、解除に債務者の帰責事由は不要でも、債権者側に不履行原因があると解除できないという二段階を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">解除の効果と原状回復義務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">解除の効果</mark></strong>は、契約を将来に向かって終わらせるだけでなく、既にされた給付を清算する点に特徴がある。<strong><mark class="kw">民法545条1項</mark></strong>は各当事者に<strong><mark class="kw">原状回復義務</mark></strong>を課し、金銭返還では受領時から利息を付し、金銭以外の物では受領時以後に生じた果実も返還する。解除は第三者の権利を害することができず、また損害賠償請求を妨げない。さらに<strong><mark class="kw">民法546条</mark></strong>により、原状回復義務には同時履行の抗弁権が準用される。試験では、「解除すれば損害賠償請求はできなくなる」「原状回復義務は同時履行関係に立たない」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 720" role="img" aria-label="契約解除の要件判断構造">
+      <defs>
+        <marker id="arr26a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr26a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr26a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="104" x2="560" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="940" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="180" y1="148" x2="180" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26a-blue)"/>
+      <line x1="560" y1="148" x2="560" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26a-blue)"/>
+      <line x1="940" y1="148" x2="940" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26a-blue)"/>
+      <rect x="494" y="126" width="132" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">不履行を分類</text>
+
+      <line x1="560" y1="326" x2="560" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="210" y1="378" x2="910" y2="378" stroke="#ea580c" stroke-width="2"/>
+      <line x1="210" y1="378" x2="210" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr26a-orange)"/>
+      <line x1="560" y1="378" x2="560" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr26a-orange)"/>
+      <line x1="910" y1="378" x2="910" y2="442" stroke="#ea580c" stroke-width="2" marker-end="url(#arr26a-orange)"/>
+      <rect x="492" y="356" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="373" text-anchor="middle" font-size="13" fill="#7c2d12">解除の可否</text>
+
+      <polyline points="910,532 910,585 560,585 560,622" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr26a-red)"/>
+      <rect x="680" y="568" width="160" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="760" y="585" text-anchor="middle" font-size="13" fill="#9f1239">債権者帰責なら制限</text>
+
+      <rect x="400" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">契約解除の要件判断</text>
+      <text x="560" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">契約目的を回復できるかを確認する</text>
+
+      <rect x="60" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="180" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">履行遅滞型</text>
+      <text x="180" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">履行可能だが履行しない</text>
+      <text x="180" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">原則は民法541条</text>
+
+      <rect x="440" y="230" width="240" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">目的不達成型</text>
+      <text x="560" y="287" text-anchor="middle" font-size="12" fill="#7c2d12">不能・拒絶・定期行為</text>
+      <text x="560" y="307" text-anchor="middle" font-size="12" fill="#7c2d12">民法542条各号</text>
+
+      <rect x="820" y="230" width="240" height="96" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="940" y="263" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">債権者帰責型</text>
+      <text x="940" y="287" text-anchor="middle" font-size="12" fill="#1e3a8a">不履行原因が債権者側</text>
+      <text x="940" y="307" text-anchor="middle" font-size="12" fill="#1e3a8a">民法543条で解除不可</text>
+
+      <rect x="90" y="450" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="210" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">催告と相当期間</text>
+      <text x="210" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">期間内に履行なし</text>
+
+      <rect x="440" y="450" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">直ちに解除</text>
+      <text x="560" y="504" text-anchor="middle" font-size="12" fill="#7c2d12">催告が実益を持たない</text>
+
+      <rect x="790" y="450" width="240" height="82" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="910" y="480" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除制限</text>
+      <text x="910" y="504" text-anchor="middle" font-size="12" fill="#9f1239">自ら原因を作った者は不可</text>
+
+      <rect x="400" y="630" width="320" height="58" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="655" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">解除の意思表示</text>
+      <text x="560" y="677" text-anchor="middle" font-size="12" fill="#9f1239">相手方に到達後は撤回不可</text>
+    </svg>
+  </div>
+
+  <p>この図は、解除の要件を、まず不履行の性質で分けることを示している。履行可能なのに履行しない通常の履行遅滞では、催告と相当期間の経過を経るのが原則である。これに対し、全部不能、明確な履行拒絶、定期行為の時期経過のように、催告をしても契約目的が回復しない場合は無催告解除へ進む。さらに、どの類型でも不履行原因が債権者の責めに帰すべき事由にあるときは、民法543条により解除が制限される。最後に、解除は意思表示であり、相手方に到達すれば効力が生じ、撤回できない。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 680" role="img" aria-label="解除後の効果と清算構造">
+      <defs>
+        <marker id="arr26b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr26b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr26b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="520" y1="104" x2="520" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="148" x2="870" y2="148" stroke="#2563eb" stroke-width="2"/>
+      <line x1="170" y1="148" x2="170" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26b-blue)"/>
+      <line x1="520" y1="148" x2="520" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26b-blue)"/>
+      <line x1="870" y1="148" x2="870" y2="222" stroke="#2563eb" stroke-width="2" marker-end="url(#arr26b-blue)"/>
+      <rect x="458" y="126" width="124" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="520" y="143" text-anchor="middle" font-size="13" fill="#1d4ed8">清算効果</text>
+
+      <line x1="520" y1="318" x2="520" y2="368" stroke="#ea580c" stroke-width="2"/>
+      <line x1="340" y1="368" x2="700" y2="368" stroke="#ea580c" stroke-width="2"/>
+      <line x1="340" y1="368" x2="340" y2="432" stroke="#ea580c" stroke-width="2" marker-end="url(#arr26b-orange)"/>
+      <line x1="700" y1="368" x2="700" y2="432" stroke="#ea580c" stroke-width="2" marker-end="url(#arr26b-orange)"/>
+      <rect x="452" y="346" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="520" y="363" text-anchor="middle" font-size="13" fill="#7c2d12">付随効果</text>
+
+      <polyline points="170,318 170,560 330,560" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr26b-red)"/>
+      <rect x="84" y="428" width="170" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="169" y="445" text-anchor="middle" font-size="13" fill="#9f1239">第三者の権利は害せない</text>
+
+      <rect x="360" y="34" width="320" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="520" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">解除後の法律関係</text>
+      <text x="520" y="86" text-anchor="middle" font-size="12" fill="#1e3a8a">原状回復を中心に清算する</text>
+
+      <rect x="50" y="230" width="240" height="88" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="170" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">原状回復義務</text>
+      <text x="170" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">受け取った給付を返す</text>
+      <text x="170" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法545条1項</text>
+
+      <rect x="400" y="230" width="240" height="88" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="520" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">利息・果実返還</text>
+      <text x="520" y="286" text-anchor="middle" font-size="12" fill="#7c2d12">金銭は受領時から利息</text>
+      <text x="520" y="306" text-anchor="middle" font-size="12" fill="#7c2d12">物は果実も返還</text>
+
+      <rect x="750" y="230" width="240" height="88" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="870" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">損害賠償併存</text>
+      <text x="870" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">解除しても請求可能</text>
+      <text x="870" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">民法545条4項</text>
+
+      <rect x="220" y="440" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="340" y="470" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">同時履行関係</text>
+      <text x="340" y="494" text-anchor="middle" font-size="12" fill="#7c2d12">互いの返還は引換え</text>
+
+      <rect x="580" y="440" width="240" height="82" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="700" y="470" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">解除権消滅</text>
+      <text x="700" y="494" text-anchor="middle" font-size="12" fill="#7c2d12">目的物損傷・確答催告</text>
+
+      <rect x="330" y="550" width="380" height="56" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="520" y="574" text-anchor="middle" font-size="13" fill="#9f1239">民法546条：民法533条を準用</text>
+      <text x="520" y="595" text-anchor="middle" font-size="12" fill="#9f1239">原状回復義務は同時履行の抗弁権で支えられる</text>
+    </svg>
+  </div>
+
+  <p>この図は、解除後の中心が原状回復であることを示している。契約が解除されると、各当事者は受け取った給付を相手方へ戻すが、金銭返還では利息、物の返還では果実も問題になる。解除は第三者の権利を害することができないため、解除前後に目的物を取得した第三者がいる場合は対抗関係の整理が必要になる。解除と損害賠償は排斥関係ではなく、解除で契約関係を清算しつつ、帰責事由がある債務不履行について損害賠償を請求できる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">催告解除</th>
+        <th class="col--b">無催告解除</th>
+        <th class="col--c">解除不可・制限</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><span class="em-a">民法541条</span>。相当期間を定めた履行催告が出発点。</td>
+        <td class="col--b"><span class="em-b">民法542条</span>。全部不能、履行拒絶、定期行為など。</td>
+        <td class="col--c"><span class="em-c">民法543条</span>。債権者帰責なら解除できない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">履行はなお可能で、履行機会を与える意味がある。</td>
+        <td class="col--b">催告しても契約目的を達する履行が期待できない。</td>
+        <td class="col--c">不履行原因を債権者側が作ったため、解除を認めるのが公平に反する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">要件</td>
+        <td class="col--a">債務不履行、相当期間を定めた催告、期間内の不履行、軽微でないこと。</td>
+        <td class="col--b">全部不能、全部拒絶、一部不能等で目的不達成、定期行為の時期経過、履行見込みなし。</td>
+        <td class="col--c">不履行が債権者の責めに帰すべき事由によること。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">解除権が発生し、意思表示で契約を解除できる。</td>
+        <td class="col--b">催告なしに直ちに全部解除又は一部解除ができる。</td>
+        <td class="col--c">債権者は541条・542条による解除を主張できない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「催告後の不履行なら軽微でも解除可」は誤り。</td>
+        <td class="col--b">「履行期を過ぎれば常に無催告解除可」は誤り。</td>
+        <td class="col--c">「解除は帰責事由不要だから債権者帰責でも解除可」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>催告解除か無催告解除かは、「履行機会を与えることに意味があるか」で分ける。履行期を過ぎただけなら、まず催告解除を考える。履行不能、明確な履行拒絶、定期行為の時期経過のように、後から履行されても契約目的が戻らないなら無催告解除を考える。どちらの場合でも、不履行原因が債権者側にあれば、民法543条で止まる。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">解除</th>
+        <th class="col--b">取消し</th>
+        <th class="col--c">危険負担</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">前提</td>
+        <td class="col--a"><span class="em-a">有効に成立した契約</span>に解除原因が生じる。</td>
+        <td class="col--b"><span class="em-b">意思表示や能力</span>に取消原因がある。</td>
+        <td class="col--c"><span class="em-c">履行不能</span>後に反対給付を拒めるかが問題。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心条文</td>
+        <td class="col--a">民法540条から548条。</td>
+        <td class="col--b">民法120条から126条、121条の2。</td>
+        <td class="col--c">民法536条、売買では567条。</td>
+      </tr>
+      <tr>
+        <td class="col--label">清算効果</td>
+        <td class="col--a">民法545条の原状回復義務。金銭利息・果実返還も問題。</td>
+        <td class="col--b">民法121条で初めから無効、121条の2で原状回復義務。</td>
+        <td class="col--c">反対給付の履行拒絶が中心で、解除とは別制度。</td>
+      </tr>
+      <tr>
+        <td class="col--label">損害賠償</td>
+        <td class="col--a">解除は損害賠償請求を妨げない。</td>
+        <td class="col--b">取消原因の性質により不法行為等が別途問題。</td>
+        <td class="col--c">双方無帰責なら原則として損害賠償ではなく危険分配の問題。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での見分け</td>
+        <td class="col--a">「契約後の不履行」「解除の意思表示」「原状回復」が出る。</td>
+        <td class="col--b">「詐欺・強迫・錯誤・制限行為能力」「追認」が出る。</td>
+        <td class="col--c">「双方無帰責の不能」「反対給付を拒めるか」が出る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>解除、取消し、危険負担は、いずれも契約関係を清算するように見えるため混同しやすい。解除は有効な契約の後発的な不履行等に対応する制度であり、取消しは契約成立時の意思表示や能力の問題に対応する制度である。危険負担は履行不能後の反対給付の扱いであり、解除するかどうかとは別に考える。問題文に「解除した」とある場合でも、まず解除原因と解除の効果を分けて読むことが実践的である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法540条 解除権の行使</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">契約又は法律の規定により当事者の一方が解除権を有するときは、その解除は、相手方に対する意思表示によってする。<br>2　前項の意思表示は、撤回することができない。</blockquote>
+      <p><strong><mark class="kw">民法540条</mark></strong>は、解除の方法を定める基本規定である。解除は相手方への意思表示で行われるため、解除権者が一方的に契約関係を変動させる形成権である。到達後に撤回できないのは、相手方が解除により契約関係の終了を前提に行動するため、解除権者の気まぐれで法律関係を不安定にしない趣旨である。合意解除とは異なり、相手方の承諾は要件ではないが、解除権そのものは契約又は法律の規定から発生していなければならない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法541条 催告による解除</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">当事者の一方がその債務を履行しない場合において、相手方が相当の期間を定めてその履行の催告をし、その期間内に履行がないときは、相手方は、契約の解除をすることができる。ただし、その期間を経過した時における債務の不履行がその契約及び取引上の社会通念に照らして軽微であるときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法541条</mark></strong>は、解除の原則形である。条文は、債務不履行、相当期間を定めた催告、期間内の不履行という流れを要求する。相当期間は、債務者が催告後に初めて準備を始めるための期間ではなく、履行準備が整っていることを前提に、最後に履行する機会を与える期間である。令和2年施行の債権法改正で、ただし書として軽微な不履行では解除できないことが明文化された。試験では、催告解除に債務者の帰責事由は不要だが、債権者帰責の場合は543条で解除できない点を合わせて読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法542条 催告によらない解除</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">次に掲げる場合には、債権者は、前条の催告をすることなく、直ちに契約の解除をすることができる。<br>一　債務の全部の履行が不能であるとき。<br>二　債務者がその債務の全部の履行を拒絶する意思を明確に表示したとき。<br>三　債務の一部の履行が不能である場合又は債務者がその債務の一部の履行を拒絶する意思を明確に表示した場合において、残存する部分のみでは契約をした目的を達することができないとき。<br>四　契約の性質又は当事者の意思表示により、特定の日時又は一定の期間内に履行をしなければ契約をした目的を達することができない場合において、債務者が履行をしないでその時期を経過したとき。<br>五　前各号に掲げる場合のほか、債務者がその債務の履行をせず、債権者が前条の催告をしても契約をした目的を達するのに足りる履行がされる見込みがないことが明らかであるとき。<br>2　次に掲げる場合には、債権者は、前条の催告をすることなく、直ちに契約の一部の解除をすることができる。<br>一　債務の一部の履行が不能であるとき。<br>二　債務者がその債務の一部の履行を拒絶する意思を明確に表示したとき。</blockquote>
+      <p><strong><mark class="kw">民法542条</mark></strong>は、催告が無意味又は不合理な場合を類型化する。1項1号と2号は、全部履行不能と全部履行拒絶であり、契約目的達成の可能性が正面から失われている。1項3号は一部不能や一部拒絶でも、残存部分だけでは目的を達しない場合に全部解除を認める。1項4号は定期行為であり、時期が契約目的の中核になっている。1項5号は補充規定で、催告しても目的を達する履行が見込めないことが明らかな場合を拾う。2項は一部解除であり、全部解除との区別が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法543条 債権者の責めに帰すべき事由による解除制限</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務の不履行が債権者の責めに帰すべき事由によるものであるときは、債権者は、前二条の規定による契約の解除をすることができない。</blockquote>
+      <p><strong><mark class="kw">民法543条</mark></strong>は、541条・542条に共通するブレーキである。解除制度は債権者を契約拘束から解放する制度だが、債権者自身が不履行原因を作った場合にまで解除を認めると、相手方に不公平な清算を強いることになる。債務者の帰責事由を解除要件から外した現行法のもとでも、債権者帰責は解除制限として残っている。損害賠償の415条ただし書と異なり、543条は「誰が損害を賠償するか」ではなく「誰が解除できるか」を決める規定である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法545条・546条 解除の効果</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">当事者の一方がその解除権を行使したときは、各当事者は、その相手方を原状に復させる義務を負う。ただし、第三者の権利を害することはできない。<br>2　前項本文の場合において、金銭を返還するときは、その受領の時から利息を付さなければならない。<br>3　第一項本文の場合において、金銭以外の物を返還するときは、その受領の時以後に生じた果実をも返還しなければならない。<br>4　解除権の行使は、損害賠償の請求を妨げない。<br><br>第五百四十六条　第五百三十三条の規定は、前条の場合について準用する。</blockquote>
+      <p><strong><mark class="kw">民法545条</mark></strong>は、解除後の清算ルールである。1項本文は原状回復義務を定め、ただし書は第三者保護を置く。2項は金銭返還の利息を受領時から発生させ、3項は金銭以外の物について果実返還を要求する。4項は、解除と損害賠償が併存することを明文化する。<strong><mark class="kw">民法546条</mark></strong>は、原状回復義務に同時履行の抗弁権を準用するため、売主の代金返還と買主の目的物返還は原則として引換関係に立つ。試験では、解除により契約がなかったことになるという抽象論だけでなく、545条各項の具体的効果を問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法547条・548条 解除権の消滅</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第五百四十七条　解除権の行使について期間の定めがないときは、相手方は、解除権を有する者に対し、相当の期間を定めて、その期間内に解除をするかどうかを確答すべき旨の催告をすることができる。この場合において、その期間内に解除の通知を受けないときは、解除権は、消滅する。<br><br>第五百四十八条　解除権を有する者が故意若しくは過失によって契約の目的物を著しく損傷し、若しくは返還することができなくなったとき、又は加工若しくは改造によってこれを他の種類の物に変えたときは、解除権は、消滅する。ただし、解除権を有する者がその解除権を有することを知らなかったときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法547条</mark></strong>は、解除権者が解除するかどうかをいつまでも決めない場合、相手方が確答催告により法律関係を安定させる制度である。期間内に解除通知がなければ解除権は消滅する。<strong><mark class="kw">民法548条</mark></strong>は、解除権者が目的物を著しく損傷したり返還不能にしたりした場合の解除権消滅を定める。解除すれば原状回復が必要なのに、解除権者自身が原状回復を困難にした場合、解除を認めるのは相手方に酷だからである。ただし、解除権を有することを知らなかったときは例外が置かれている。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和39年7月28日 昭和37年(オ)第747号 民集18巻6号1220頁</div>
+      <div class="case-card__title">家屋賃貸借解除と信義則</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法541条</span>
+        <span class="badge badge--law">信義則</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>家屋の賃貸借で、賃貸人側は賃借人に対し、延滞賃料合計9600円の支払を催告し、期間内に支払がないとして賃貸借契約を解除し、家屋明渡しを求めた。ところが、催告金額のうち4800円はすでに適法に弁済供託されており、残額は統制額超過部分を除くと3000円程度であった。賃借人は過去18年間その家屋に居住し、問題となった延滞以外に賃料延滞はなかった。さらに、台風で家屋が破損した際、賃借人の修繕要求にもかかわらず賃貸人側が修繕しなかったため、賃借人が2万9000円を支出して屋根をふき替え、その償還請求を控えていたという事情もあった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、これらの事情のもとでは、賃料不払を理由とする賃貸借契約の解除は信義則に反し許されないと判断した。形式的には賃料の不払と催告期間内の不履行が存在しても、催告額の実質、既に供託された部分、残額の小ささ、長年の賃貸借関係、賃貸人側の修繕不履行、賃借人が自己負担で修繕した事情を総合すれば、契約関係を終了させるほどの背信性はないと評価したのである。判例は、継続的契約である賃貸借では、単なる条文形式だけでなく、当事者間の信頼関係が破壊されたかを重視する。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">催告解除</mark></strong>と<strong><mark class="kw">軽微な不履行</mark></strong>、さらに賃貸借における信頼関係破壊の法理をつなぐ重要判例である。誤答パターンは、「賃料不払があり、催告期間内に全額支払がなければ、事情にかかわらず解除は常に有効」という肢である。正しくは、賃貸借のような継続的契約では、信義則上、解除が制限される場合がある。現行民法541条ただし書の軽微性とも発想が近く、契約目的や取引上の社会通念から解除を許すほど重大かを見る。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法541条</mark></strong>、<strong><mark class="kw">民法1条2項</mark></strong>・3項、賃貸借の債務不履行解除、信頼関係破壊の法理が関連する。賃貸借単元では、無催告解除特約があっても信頼関係破壊が必要かという形で応用される。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成8年11月12日 平成8年(オ)第1056号 民集50巻10号2673頁</div>
+      <div class="case-card__title">リゾートマンション会員権付き売買契約解除事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法541条</span>
+        <span class="badge badge--law">複数契約</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産業者は、リゾートマンションを建設して分譲するとともに、同じリゾート施設内のスポーツクラブを所有・管理していた。買主らは、マンション一室を代金総額4400万円で購入し、同時にスポーツクラブ会員権一口について登録料50万円と入会預り金200万円を支払った。マンションは会員権付きとして販売され、契約書上も本件クラブ会員権付きであることが示されていた。ところが、売主側の債務不履行により会員権契約の履行が問題となり、買主側は会員権契約だけでなくマンション売買契約も併せて解除し、売買代金や登録料等の返還を求めた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、同一当事者間の債権債務関係が形式上は二個以上の契約から成る場合でも、それらの目的が相互に密接に関連付けられており、社会通念上、一方だけが履行されても契約を締結した目的が全体として達成されないと認められるときは、一方の契約上の債務不履行を理由に、法定解除権の行使として他方の契約も併せて解除できるとした。裁判所は、契約の個数という形式だけでなく、取引全体の目的、販売態様、会員権付きであることの表示、買主が何を期待して契約したかを重視した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">契約の解除</mark></strong>が個々の契約単位だけで機械的に決まるわけではなく、取引全体の目的達成を基準に判断されることを示す。誤答パターンは、「契約書が二つに分かれていれば、一方の不履行を理由に他方を解除することは一切できない」という肢である。正しくは、契約目的が相互に密接に関連し、一方だけでは全体の契約目的を達成できない場合には、複数契約を併せて解除できる余地がある。問題文では、同一当事者か、契約目的が密接に結合しているか、片方だけの履行で目的が達成されるかを確認する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法541条</mark></strong>、契約の合理的解釈、契約目的の不到達、複合取引が関連する。売買、会員権、リゾート施設利用契約、システム開発契約など、複数の契約が実質的に一体の取引を構成する場面で応用される。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和40年6月30日 昭和38年(オ)第1294号 民集19巻4号1143頁</div>
+      <div class="case-card__title">売買契約解除による原状回復義務と保証人の責任</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法545条</span>
+        <span class="badge badge--law">保証</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>特定物の売買契約で、売主の債務不履行により契約が解除され、買主側は解除に伴う原状回復として給付の返還を求めた。売主側には保証人が付いていたため、問題は、保証人が本来の売買債務だけでなく、契約解除後に生じる原状回復義務についても責任を負うかであった。保証人側は、原状回復義務は解除後に生じる別個の義務であり、保証の範囲には当然には含まれないと争った。買主側は、売主の債務不履行により契約が解除された以上、その清算義務も保証の対象に含まれると主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、特定物の売買契約における売主のための保証人は、特に反対の意思表示がない限り、売主の債務不履行により契約が解除された場合における原状回復義務についても保証責任を負うと判断した。保証は、主債務の履行を担保するだけでなく、主債務の不履行により契約関係が清算される場合の経済的リスクも含むものと解された。裁判所は、解除後の原状回復義務を、売買契約と無関係な偶然の新債務としてではなく、保証された契約上の債務不履行から当然に派生する清算義務として位置づけた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">原状回復義務</mark></strong>が解除後に初めて問題になる義務であっても、契約上の債務不履行と密接に結び付くことを示す。誤答パターンは、「保証人は主債務そのものについてだけ責任を負い、解除後の原状回復義務については常に責任を負わない」という肢である。正しくは、特に反対の意思表示がなければ、売主のための保証人は、売主の債務不履行による解除後の原状回復義務にも責任を負う。解除効果と保証債務の範囲が交差するため、民法545条と保証の単元を横断して理解する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法545条</mark></strong>、<strong><mark class="kw">民法446条</mark></strong>、保証債務の範囲、売買契約の解除が関連する。損害賠償債務と原状回復義務の違い、保証契約の文言で反対の意思表示があるかも確認点になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和35年10月27日 昭和31年(オ)第686号 民集14巻12号2733頁</div>
+      <div class="case-card__title">解除の前提としての催告と付遅滞</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法541条</span>
+        <span class="badge badge--law">履行遅滞</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産所有権移転登記手続をめぐる紛争で、一方当事者は相手方の不履行を理由に契約解除を主張した。争点は、解除の前提としてされた催告が有効といえるためには、相手方がすでに履行遅滞に陥っている必要があるのか、また双務契約で自らが受領遅滞にある者が、相手方に解除の前提となる催告をするにはどのような状態が必要かであった。売買のような双務契約では、相手方が履行しないことだけでなく、自分側の履行提供や受領態度も解除の前提に影響する。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、契約解除の前提としての催告が有効であるためには、少なくとも催告と同時に相手方が遅滞に付されることを要するとした。また、双務契約上の債務の受領遅滞にある者が解除の前提として催告をするためには、受領遅滞を解消させた上で催告しなければならないと判示した。これは、解除が債務者の不履行を理由に契約関係を清算する強い効果を持つため、債権者側が相手方の履行を妨げている状態で一方的に解除を主張することを許さないという発想である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">催告解除</mark></strong>をするには、形式的な催告文書だけでなく、相手方が遅滞責任を負う状態にあることが必要であることを示す。誤答パターンは、「債権者が受領を拒んでいても、履行を催告すれば直ちに解除権が発生する」という肢である。正しくは、受領遅滞にある者は、その状態を解消して相手方が履行できる状態を作る必要がある。民法543条の債権者帰責や、民法533条の同時履行の抗弁権ともつながる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法541条</mark></strong>、<strong><mark class="kw">民法412条</mark></strong>、<strong><mark class="kw">民法533条</mark></strong>、受領遅滞、履行提供が関連する。解除の要件を時系列で処理する問題で、履行期、履行提供、催告、相当期間経過、解除意思表示の順序を確認する基礎になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">解除権</mark></strong>は形成権であり、相手方に対する意思表示で行使し、撤回できない。</li>
+        <li><strong><mark class="kw">催告解除</mark></strong>は、相当期間を定めた催告、期間内の不履行、軽微でないことを確認する。</li>
+        <li><strong><mark class="kw">無催告解除</mark></strong>は、民法542条各号に当たるかを個別に検討する。</li>
+        <li><strong><mark class="kw">解除</mark></strong>には債務者の帰責事由は原則として不要だが、債権者帰責なら民法543条で解除できない。</li>
+        <li><strong><mark class="kw">定期行為</mark></strong>は、単に期限があるだけでなく、その時期に履行されなければ契約目的を達しない場合である。</li>
+        <li><strong><mark class="kw">原状回復義務</mark></strong>は、金銭なら受領時から利息、金銭以外なら果実返還が問題になる。</li>
+        <li><strong><mark class="kw">民法546条</mark></strong>により、解除後の原状回復義務には同時履行の抗弁権が準用される。</li>
+        <li>解除しても<strong><mark class="kw">損害賠償請求</mark></strong>は妨げられない。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「契約解除は、相手方が承諾した時に効力を生じる。」これは誤りである。<strong><mark class="kw">民法540条</mark></strong>により、解除は相手方に対する意思表示で行われ、承諾は不要である。</p>
+      <p><strong>誤りの選択肢例2：</strong>「催告解除では、期間経過時の不履行が軽微であっても解除できる。」これは誤りである。<strong><mark class="kw">民法541条ただし書</mark></strong>は、契約及び取引上の社会通念に照らして軽微な不履行では解除できないと定める。</p>
+      <p><strong>誤りの選択肢例3：</strong>「債務者が債務の全部の履行を明確に拒絶しても、債権者は必ず催告しなければ解除できない。」これは誤りである。<strong><mark class="kw">民法542条1項2号</mark></strong>は、全部履行拒絶の場合に無催告解除を認める。</p>
+      <p><strong>誤りの選択肢例4：</strong>「債務不履行が債権者の責めに帰すべき事由による場合でも、債権者は解除できる。」これは誤りである。<strong><mark class="kw">民法543条</mark></strong>により、債権者帰責の場合は解除できない。</p>
+      <p><strong>誤りの選択肢例5：</strong>「解除すれば、債権者は損害賠償を請求できなくなる。」これは誤りである。<strong><mark class="kw">民法545条4項</mark></strong>は、解除権の行使が損害賠償請求を妨げないと定める。</p>
+      <p><strong>誤りの選択肢例6：</strong>「解除後の原状回復義務には、同時履行の抗弁権は準用されない。」これは誤りである。<strong><mark class="kw">民法546条</mark></strong>が民法533条を準用する。</p>
+    </div>
+  </div>
+
+  <p>記述式での解答手順は、第一に、契約又は法律に基づく<strong><mark class="kw">解除権</mark></strong>があるかを確認する。第二に、不履行が履行遅滞型か、履行不能・履行拒絶・定期行為のような無催告解除型かを分類する。第三に、催告解除なら相当期間と軽微性を検討し、無催告解除なら542条各号のどれに当たるかを明示する。第四に、債権者帰責がないかを543条で確認する。第五に、解除の効果として、原状回復、利息・果実、第三者保護、損害賠償の併存、同時履行関係を書き分ける。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">契約の解除</mark></strong>は、債務不履行、同時履行の抗弁権、危険負担、売買契約、賃貸借契約、請負契約、保証債務と連続して出題される。債務不履行単元では損害賠償の帰責事由、同時履行単元では解除後の原状回復義務、危険負担では履行不能後の反対給付拒絶、売買では契約不適合責任に基づく解除、賃貸借では信頼関係破壊の法理が接続する。契約を解除できるかだけでなく、解除後に誰が何を返すかまで追うと、民法の各単元が一つの流れで整理できる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、解除制度が大きく整理された。旧法では、解除と損害賠償の両方で債務者の帰責事由が強く意識されていたが、現行法では、解除は契約目的を達成できない状態から債権者を解放する制度として、損害賠償とは要件が分けられた。<strong><mark class="kw">民法541条ただし書</mark></strong>に軽微な不履行の解除制限が明文化され、<strong><mark class="kw">民法542条</mark></strong>では無催告解除の類型が整理された。これにより、試験では「解除に帰責事由が必要か」ではなく、「契約目的の達成可能性」「軽微性」「債権者帰責」を順に判断することが重要になった。</p>
+    </div>
+  </div>
+
+  <p>実務では、<strong><mark class="kw">解除条項</mark></strong>は契約書の重要条項である。民法の法定解除だけでは、どの程度の違反で解除できるか、何日間の催告期間を置くか、秘密保持義務違反や反社会的勢力排除条項違反を無催告解除事由にするかが明確でないことがある。そのため契約書では、催告解除事由、無催告解除事由、期限の利益喪失、解除後の清算、損害賠償、原状回復、資料返還、秘密保持の存続を具体的に定めることが多い。ただし、契約条項があっても、信義則や強行法規による制限を受ける場合がある。</p>
+
+  <p><strong><mark class="kw">解除と損害賠償</mark></strong>の関係は、現行法で特に整理が必要である。解除は、債権者を契約拘束から解放し、既履行部分を原状回復で清算する制度である。損害賠償は、債務不履行によって生じた損害を填補する制度であり、<strong><mark class="kw">民法415条</mark></strong>ただし書により債務者の責めに帰することができない事由があると請求できない。つまり、解除はできても損害賠償はできない場合があり得る。この区別は、択一だけでなく記述式でも差がつく。</p>
+
+  <p><strong><mark class="kw">第三者保護</mark></strong>は、解除効果の中で見落とされやすい。民法545条1項ただし書は、解除によって第三者の権利を害することができないと定める。たとえば、買主が目的物の引渡しや登記を受けた後、第三者へ処分し、その後に売主が買主の代金不払を理由に解除する場合、第三者の権利をどう扱うかが問題になる。物権変動の対抗要件、登記、善意悪意の扱いと接続するため、解除単元だけで完結せず、不動産物権変動の知識も必要になる。</p>
+
+  <p>学習上は、<strong><mark class="kw">契約の解除</mark></strong>を「要件」と「効果」に分けて整理する。要件では、540条の意思表示、541条の催告解除、542条の無催告解除、543条の債権者帰責を順に見る。効果では、545条の原状回復、利息、果実、第三者保護、損害賠償併存、546条の同時履行を順に見る。この二段構造を固定すれば、売買、賃貸借、請負などの個別契約で解除が出ても、同じ型で処理できる。</p>
+</section>
+
+</body>
+</html>

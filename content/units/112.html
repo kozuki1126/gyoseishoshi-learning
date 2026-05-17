@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>占有権 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">占有権</h1>
+  <p class="page-title-block__sub">事実上の支配を保護する仕組みと、占有の態様・効力・占有訴権を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法180条</span>
+    <span class="badge badge--info">民法186条</span>
+    <span class="badge badge--info">民法187条</span>
+    <span class="badge badge--info">民法189条</span>
+    <span class="badge badge--info">民法197条以下</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">占有権</mark></strong>とは、所有権のような本来の権利があるかどうかをいったん脇に置き、物を事実上支配している状態そのものを法律上保護する権利である。民法180条は、<strong><mark class="kw">自己のためにする意思</mark></strong>をもって物を所持することによって占有権を取得すると定める。たとえば、借りている部屋に住んでいる賃借人、買った時計を手元に置いている買主、倉庫業者に保管させている荷主は、それぞれ占有を問題にし得る。ここで重要なのは、占有は所有権と同じではないという点である。所有者でなくても占有者になり得るし、所有者であっても現実の支配や代理占有を失えば占有権は問題にならない。</p>
+
+  <p>占有権の制度趣旨は、第一に<strong><mark class="kw">社会秩序の維持</mark></strong>である。物を奪われた者が「自分が所有者だ」と主張して実力で取り返すことを広く許すと、権利関係の判断より先に力による奪い合いが起きる。そこで民法は、たとえ本権の帰属が未確定でも、現に成立している占有状態を保護し、争いは訴訟手続で解決させる。第二に、占有は取引安全や権利推定の基礎にもなる。民法186条は占有者を自主占有・善意・平穏・公然の占有者と推定し、188条は占有物について行使する権利を適法に有するものと推定する。第三に、善意占有者の果実取得、費用償還、占有訴権など、占有には独自の効力が認められる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">実生活でのイメージ</span>
+    </div>
+    <div class="box__bd">
+      <p>友人から一時的に預かった自転車を第三者に奪われた場合を考える。預かった人は所有者ではないが、自転車を手元で管理している占有者である。その第三者が「自転車の本当の所有者は自分だ」と言っても、民法はまず占有を奪われたという事実に着目し、占有回収の訴えによる返還請求を認める余地を置く。占有制度は「誰が真の権利者か」を最終的に決める制度ではなく、「力ずくで現状を破壊してよいか」を否定する制度である。この視点を持つと、<strong><mark class="kw">占有の訴え</mark></strong>で本権の抗弁が制限される理由が理解しやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">占有権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">占有権</mark></strong>は、自己のためにする意思をもって物を所持することにより取得される権利である。ここでいう所持は、物を物理的に手で持つことに限られず、土地を利用している、建物に居住している、倉庫内の物を管理しているなど、社会通念上その物を支配している状態を含む。制度趣旨は、事実上の支配状態を保護して自力救済を抑え、権利関係の紛争を法的手続に乗せる点にある。占有者は所有者である必要はなく、賃借人、受寄者、質権者、運送人なども占有者になり得る。効果として、占有の態様に関する推定、果実取得、損害賠償責任の軽減、費用償還請求、占有訴権が問題になる。似た概念である所有権は本権そのものであり、占有権は本権の有無とは別に事実状態を保護する点が異なる。試験では「占有者は所有者でなければならない」「所有者であれば常に占有者である」という選択肢が誤りにされやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">自主占有と他主占有</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">自主占有</mark></strong>とは、所有の意思をもってする占有をいい、<strong><mark class="kw">他主占有</mark></strong>とは、所有の意思を欠く占有をいう。所有の意思は、占有者の内心だけで自由に決まるのではなく、占有取得の原因となった権原の性質から客観的に判断される。売買により物を受け取った買主は通常は自主占有者であるが、賃貸借により部屋を借りている賃借人、寄託により物を預かる受寄者、質権設定により物を預かる質権者は、権原の性質上、他人の所有権を前提とするため他主占有者である。民法185条は、他主占有者が所有の意思を表示するか、新たな権原により所有の意思をもって占有を始めなければ、占有の性質は変わらないと定める。これは、賃借人が心の中で「今日から自分の物だ」と思っただけで取得時効に向かう自主占有へ転化することを防ぐためである。試験では、占有の性質変更に「所有者への表示」または「新権原」が必要である点が頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">善意占有と悪意占有</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">善意占有</mark></strong>とは、占有者が自分に権利があると信じている占有をいい、<strong><mark class="kw">悪意占有</mark></strong>とは、自分に権利がないことを知り、または少なくとも権利の不存在を認識して占有する状態をいう。民法186条1項は、占有者を善意と推定するため、善意であることは占有者側が常に積極的に証明しなければならないわけではない。善意占有か悪意占有かは、果実の帰属、損害賠償責任、費用償還、取得時効の要件判断に影響する。民法189条は善意の占有者に果実取得を認めるが、本権の訴えで敗訴したときは、訴え提起時から悪意占有者とみなす。民法190条は悪意占有者に果実返還義務を課し、暴行・強迫・隠匿による占有者にも準用する。試験では「善意占有者は敗訴判決確定時から悪意とみなされる」とする選択肢が誤りで、正しくは本権の訴えの提起時からである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代理占有と占有補助者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代理占有</mark></strong>とは、本人が代理人を通じて占有権を取得・保持する場合をいう。民法181条は、占有権は代理人によって取得することができると定める。本人は物を直接所持していないが、代理人が本人のために物を所持するため、本人にも占有が認められる。たとえば、倉庫業者が寄託者のために物を保管する場合、倉庫業者は直接占有者であり、寄託者は間接占有者として占有を有する。これに対し、<strong><mark class="kw">占有補助者</mark></strong>は、占有主体の手足として物を扱う者であり、独立の占有者ではない。店舗の従業員が会社のレジや商品を扱う場合、通常は会社の占有を補助するにとどまる。代理占有では本人・代理人双方の占有を論じ得るが、占有補助者は原則として占有訴権の主体にならない。この区別は、誰が占有を奪われたといえるか、占有回収の訴えを提起できるかの判断で問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">占有の承継</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">占有の承継</mark></strong>とは、前占有者から承継人へ占有が移る場合に、承継人が自己の占有だけを主張するか、前占有者の占有を併せて主張するかを選べる制度である。民法187条1項はこの選択を認め、2項は前占有者の占有を併せて主張する場合には瑕疵も承継すると定める。たとえば、Aが土地を占有し、その後BがAから土地を譲り受けて占有を始めた場合、Bは自分だけの占有期間を主張することも、Aの占有期間を足して主張することもできる。取得時効との関係では、期間を足せる点が大きいが、前占有者が悪意・強暴・隠秘などの瑕疵ある占有をしていた場合、その瑕疵も引き受ける。試験では「前占有者の期間だけを都合よく利用し、瑕疵は承継しない」という選択肢が誤りである。前占有者の占有を利用するなら、その占有の性質も含めて利用する、という一体的な理解が必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">占有訴権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">占有訴権</mark></strong>とは、占有状態が妨害され、妨害されるおそれがあり、または奪われた場合に、占有者が占有の保護を求める訴えをいう。民法197条以下は、占有保持の訴え、占有保全の訴え、占有回収の訴えを定める。占有保持の訴えは現に妨害された場合、占有保全の訴えは妨害のおそれがある場合、占有回収の訴えは占有を奪われた場合に用いる。制度趣旨は、占有状態を迅速に保護し、自力救済を防ぐ点にある。占有訴権は本権そのものを確定する訴えではないため、民法202条2項は、占有の訴えについて本権に関する理由に基づいて裁判できないとする。ただし、占有の訴えと本権の訴えは互いに妨げない。試験では、三つの訴えの要件、請求内容、提起期間、本権抗弁の扱いがまとめて問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 610" role="img" aria-label="占有権の成立と効力の全体構造図">
+      <defs>
+        <marker id="arr-solid-senyu1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed-senyu1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-thin-senyu1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="810" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="170" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu1)"/>
+      <line x1="490" y1="134" x2="490" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu1)"/>
+      <line x1="810" y1="134" x2="810" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu1)"/>
+      <line x1="170" y1="250" x2="170" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin-senyu1)"/>
+      <line x1="490" y1="250" x2="490" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin-senyu1)"/>
+      <line x1="810" y1="250" x2="810" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-thin-senyu1)"/>
+      <polyline points="330,212 380,212 380,386 650,386" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed-senyu1)"/>
+      <rect x="386" y="374" width="154" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="463" y="391" text-anchor="middle" font-size="13" fill="#9f1239">占有態様が効果を左右</text>
+      <g>
+        <rect x="340" y="30" width="300" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+        <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">占有権</text>
+        <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">180条：意思をもって物を所持</text>
+      </g>
+      <g>
+        <rect x="40" y="180" width="260" height="70" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">成立・移転</text>
+        <text x="170" y="230" text-anchor="middle" font-size="12" fill="#dbeafe">直接占有・代理占有・引渡し</text>
+      </g>
+      <g>
+        <rect x="360" y="180" width="260" height="70" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">態様の推定</text>
+        <text x="490" y="230" text-anchor="middle" font-size="12" fill="#fff7ed">186条・188条の推定</text>
+      </g>
+      <g>
+        <rect x="680" y="180" width="260" height="70" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="810" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">承継と性質変更</text>
+        <text x="810" y="230" text-anchor="middle" font-size="12" fill="#fff7ed">185条・187条：瑕疵承継</text>
+      </g>
+      <g>
+        <rect x="40" y="358" width="260" height="70" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有移転方法</text>
+        <text x="170" y="408" text-anchor="middle" font-size="12" fill="#dbeafe">現実・簡易・占有改定・指図</text>
+      </g>
+      <g>
+        <rect x="360" y="358" width="260" height="70" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="490" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有の効力</text>
+        <text x="490" y="408" text-anchor="middle" font-size="12" fill="#ffe4e6">果実・損害賠償・費用償還</text>
+      </g>
+      <g>
+        <rect x="680" y="358" width="260" height="70" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有訴権</text>
+        <text x="810" y="408" text-anchor="middle" font-size="12" fill="#ffe4e6">保持・保全・回収の訴え</text>
+      </g>
+      <rect x="70" y="502" width="840" height="50" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="490" y="524" text-anchor="middle" font-size="13" fill="#9f1239">占有は本権を確定しないが、事実上の支配を保護し、推定・果実・費用・訴権の効果を生む。</text>
+      <text x="490" y="544" text-anchor="middle" font-size="12" fill="#9f1239">所有権の単元ではなく、現状保護と自力救済禁止の単元として読む。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">占有権</mark></strong>を成立、態様、効力、訴権の四段階で整理している。まず180条の占有取得が出発点であり、181条から184条で代理占有や占有移転方法が具体化される。次に186条・188条の推定が働き、占有者は自主・善意・平穏・公然の占有者であり、行使する権利を適法に有するものと扱われる。さらに、占有の態様は189条以下の果実取得・損害賠償・費用償還に影響し、197条以下の占有訴権で現状保護につながる。行政書士試験では、所有権の有無を先に判断するのではなく、占有の事実、占有の態様、占有侵害の種類を順に分けて読むことが必要である。</p>
+
+  <h3>図2：占有の訴えの選択フロー</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 600" role="img" aria-label="占有の訴えの選択フロー">
+      <defs>
+        <marker id="arr-solid-senyu2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed-senyu2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="810" y2="134" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="134" x2="170" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <line x1="490" y1="134" x2="490" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <line x1="810" y1="134" x2="810" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <line x1="170" y1="250" x2="170" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <line x1="490" y1="250" x2="490" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <line x1="810" y1="250" x2="810" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-solid-senyu2)"/>
+      <polyline points="810,428 810,470 490,470 490,500" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed-senyu2)"/>
+      <rect x="660" y="456" width="178" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="749" y="473" text-anchor="middle" font-size="13" fill="#9f1239">本権抗弁とは別管理</text>
+      <g>
+        <rect x="340" y="30" width="300" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+        <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">占有侵害が発生</text>
+        <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">197条：占有者は占有の訴えを提起</text>
+      </g>
+      <g>
+        <rect x="40" y="180" width="260" height="70" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">妨害された</text>
+        <text x="170" y="230" text-anchor="middle" font-size="12" fill="#dbeafe">198条：現に妨害がある</text>
+      </g>
+      <g>
+        <rect x="360" y="180" width="260" height="70" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">妨害のおそれ</text>
+        <text x="490" y="230" text-anchor="middle" font-size="12" fill="#fff7ed">199条：将来の危険がある</text>
+      </g>
+      <g>
+        <rect x="680" y="180" width="260" height="70" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有を奪われた</text>
+        <text x="810" y="230" text-anchor="middle" font-size="12" fill="#ffe4e6">200条：侵奪による占有喪失</text>
+      </g>
+      <g>
+        <rect x="40" y="358" width="260" height="70" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有保持の訴え</text>
+        <text x="170" y="408" text-anchor="middle" font-size="12" fill="#dbeafe">妨害停止・損害賠償</text>
+      </g>
+      <g>
+        <rect x="360" y="358" width="260" height="70" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有保全の訴え</text>
+        <text x="490" y="408" text-anchor="middle" font-size="12" fill="#fff7ed">予防・損害賠償担保</text>
+      </g>
+      <g>
+        <rect x="680" y="358" width="260" height="70" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="386" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">占有回収の訴え</text>
+        <text x="810" y="408" text-anchor="middle" font-size="12" fill="#ffe4e6">物の返還・損害賠償</text>
+      </g>
+      <g>
+        <rect x="330" y="508" width="320" height="54" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+        <text x="490" y="532" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">本権の訴えとの関係</text>
+        <text x="490" y="552" text-anchor="middle" font-size="12" fill="#dbeafe">202条：相互に妨げないが本権理由で裁判不可</text>
+      </g>
+    </svg>
+  </div>
+
+  <p>この図は、占有侵害の態様から選ぶべき訴えを示している。現に妨害があるなら<strong><mark class="kw">占有保持の訴え</mark></strong>、将来の妨害危険なら<strong><mark class="kw">占有保全の訴え</mark></strong>、占有そのものを奪われたなら<strong><mark class="kw">占有回収の訴え</mark></strong>である。三つの訴えは請求内容と提起期間が異なるため、問題文の「妨害された」「妨害されるおそれ」「奪われた」という表現を拾うことが出発点になる。民法202条は占有訴権と本権の訴えを併存させるが、占有の訴えを本権理由で裁判することはできない。したがって、所有者かどうかを争う前に、占有状態がどう侵害されたかを判断する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>占有の態様の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">自主占有</th>
+        <th class="col--b">他主占有</th>
+        <th class="col--c">善意・悪意占有</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">所有の意思</span>をもってする占有。売買による買主の占有が典型。</td>
+        <td class="col--b"><span class="em-b">所有の意思を欠く</span>占有。賃借人・受寄者・質権者の占有が典型。</td>
+        <td class="col--c"><span class="em-c">権利があると信じるか</span>で区別する。果実取得や損害賠償に影響。</td>
+      </tr>
+      <tr>
+        <td class="col--label">判断基準</td>
+        <td class="col--a">占有取得の権原の性質から客観的に判断し、内心だけでは決まらない。</td>
+        <td class="col--b">賃貸借・寄託など、他人の所有権を前提にする権原なら他主占有となる。</td>
+        <td class="col--c">占有開始時や本権訴訟提起時など、条文ごとに判断時点が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法186条</mark></strong>により所有の意思が推定される。</td>
+        <td class="col--b"><strong><mark class="kw">民法185条</mark></strong>により、所有意思表示または新権原がなければ性質は変わらない。</td>
+        <td class="col--c"><strong><mark class="kw">民法186条</mark></strong>・<strong><mark class="kw">民法189条</mark></strong>・<strong><mark class="kw">民法190条</mark></strong>が中心。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">取得時効との関係で重要。自主占有でなければ所有権時効取得は原則として進まない。</td>
+        <td class="col--b">他主占有のままでは所有の意思が否定され、単なる長期占有だけでは足りない。</td>
+        <td class="col--c">善意なら果実取得、悪意なら果実返還・代価償還義務が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「所有者でなければ自主占有者になれない」は誤り。</td>
+        <td class="col--b">「賃借人が内心で所有者と思えば直ちに自主占有になる」は誤り。</td>
+        <td class="col--c">「本権訴訟で敗訴した善意占有者は判決確定時から悪意とみなす」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>占有の訴えの比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">占有保持の訴え</th>
+        <th class="col--b">占有保全の訴え</th>
+        <th class="col--c">占有回収の訴え</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">場面</td>
+        <td class="col--a"><span class="em-a">占有が妨害された</span>場合。通路を塞がれた、使用を妨げられた場面。</td>
+        <td class="col--b"><span class="em-b">妨害されるおそれ</span>がある場合。工事により占有物に損害が生じる危険が典型。</td>
+        <td class="col--c"><span class="em-c">占有を奪われた</span>場合。物の所持や土地建物の支配を侵奪された場面。</td>
+      </tr>
+      <tr>
+        <td class="col--label">請求内容</td>
+        <td class="col--a">妨害の停止と損害賠償。</td>
+        <td class="col--b">妨害の予防または損害賠償の担保。</td>
+        <td class="col--c">物の返還と損害賠償。</td>
+      </tr>
+      <tr>
+        <td class="col--label">提起期間</td>
+        <td class="col--a">妨害の存する間または消滅後1年以内。工事の場合は着手から1年経過または完成で制限。</td>
+        <td class="col--b">妨害の危険の存する間。工事による危険には保持の訴えのただし書を準用。</td>
+        <td class="col--c">占有を奪われた時から1年以内。</td>
+      </tr>
+      <tr>
+        <td class="col--label">相手方</td>
+        <td class="col--a">現に妨害している者。妨害停止の必要性が中心。</td>
+        <td class="col--b">妨害のおそれを発生させている者。予防的保護が中心。</td>
+        <td class="col--c">侵奪者が中心。特定承継人には原則不可、侵奪の事実を知っていたときは可能。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「妨害が消滅すれば直ちに提起不可」は誤り。</td>
+        <td class="col--b">「損害賠償そのものを当然請求できる」は誤り。担保請求が条文上の内容。</td>
+        <td class="col--c">「善意の特定承継人にも常に回収の訴えを提起できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>占有の態様は、まず「所有の意思があるか」と「権利があると信じているか」を分けて読む。自主・他主は取得時効や占有の性質変更に関係し、善意・悪意は果実取得や損害賠償に関係する。占有の訴えでは、問題文が現在の妨害を述べるのか、将来の危険を述べるのか、すでに奪われた事実を述べるのかを見る。特に占有回収の訴えは「奪われた時から1年以内」と「善意の特定承継人には原則として提起できない」という二つが引っかけになりやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法180条・181条 占有権の取得と代理占有</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百八十条　占有権は、自己のためにする意思をもって物を所持することによって取得する。<br>第百八十一条　占有権は、代理人によって取得することができる。</blockquote>
+      <p><strong><mark class="kw">民法180条</mark></strong>は、占有権の基本要件を定める。要件は、物の所持と自己のためにする意思である。所持は事実上の支配であり、必ずしも手で持つことだけを意味しない。自己のためにする意思は、所有意思より広い概念であり、賃借人や受寄者も自己の利益のために物を支配していれば占有者になり得る。<strong><mark class="kw">民法181条</mark></strong>は代理占有を認め、本人が直接物を持たなくても、代理人が本人のために所持すれば本人に占有権が成立することを示す。行政書士試験では、直接占有・間接占有・占有補助者の区別が、占有回収の訴えの主体や占有喪失の判断に結びつく。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法182条から184条 占有権の譲渡方法</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百八十二条　占有権の譲渡は、占有物の引渡しによってする。<br>２　譲受人又はその代理人が現に占有物を所持する場合には、占有権の譲渡は、当事者の意思表示のみによってすることができる。<br>第百八十三条　代理人が自己の占有物を以後本人のために占有する意思を表示したときは、本人は、これによって占有権を取得する。<br>第百八十四条　代理人によって占有をする場合において、本人がその代理人に対して以後第三者のためにその物を占有することを命じ、その第三者がこれを承諾したときは、その第三者は、占有権を取得する。</blockquote>
+      <p><strong><mark class="kw">民法182条</mark></strong>は現実の引渡しと簡易の引渡しを定める。譲受人がすでに物を所持している場合、改めて物を動かさなくても意思表示だけで占有権の譲渡ができる。<strong><mark class="kw">民法183条</mark></strong>の占有改定は、譲渡人が物を持ち続けながら、以後は譲受人のために占有する意思を表示する方法である。<strong><mark class="kw">民法184条</mark></strong>の指図による占有移転は、第三者が物を所持している場合に、本人がその第三者へ以後譲受人のために所持するよう命じ、譲受人が承諾する方法である。これらは動産物権変動の対抗要件や即時取得と接続するが、特に占有改定は、対抗要件としての引渡しにはなり得る一方、即時取得の占有開始としては判例上否定される点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法185条から188条 占有の性質・推定・承継</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百八十五条　権原の性質上占有者に所有の意思がないものとされる場合には、その占有者が、自己に占有をさせた者に対して所有の意思があることを表示し、又は新たな権原により更に所有の意思をもって占有を始めるのでなければ、占有の性質は、変わらない。<br>第百八十六条　占有者は、所有の意思をもって、善意で、平穏に、かつ、公然と占有をするものと推定する。<br>２　前後の両時点において占有をした証拠があるときは、占有は、その間継続したものと推定する。<br>第百八十七条　占有者の承継人は、その選択に従い、自己の占有のみを主張し、又は自己の占有に前の占有者の占有を併せて主張することができる。<br>２　前の占有者の占有を併せて主張する場合には、その瑕疵をも承継する。<br>第百八十八条　占有者が占有物について行使する権利は、適法に有するものと推定する。</blockquote>
+      <p><strong><mark class="kw">民法185条</mark></strong>は、他主占有から自主占有への転換を制限する規定である。賃借人や受寄者は、権原の性質上所有の意思がないため、単なる内心の変化では占有の性質は変わらない。<strong><mark class="kw">民法186条</mark></strong>は、所有の意思、善意、平穏、公然、継続を推定し、占有者の立証負担を軽くする。<strong><mark class="kw">民法187条</mark></strong>は占有の承継を定め、前占有者の期間を合わせて主張できる反面、前占有者の瑕疵も承継させる。<strong><mark class="kw">民法188条</mark></strong>は権利適法推定であり、占有者が物について行使する権利を適法と推定する。ただし、これらは推定規定であり、反証によって覆り得る。試験では「推定される」ことと「確定的に権利を取得する」ことを混同しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法189条から196条 占有者の効力</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百八十九条　善意の占有者は、占有物から生ずる果実を取得する。<br>２　善意の占有者が本権の訴えにおいて敗訴したときは、その訴えの提起の時から悪意の占有者とみなす。<br>第百九十条　悪意の占有者は、果実を返還し、かつ、既に消費し、過失によって損傷し、又は収取を怠った果実の代価を償還する義務を負う。<br>第百九十一条　占有物が占有者の責めに帰すべき事由によって滅失し、又は損傷したときは、その回復者に対し、悪意の占有者はその損害の全部の賠償をする義務を負い、善意の占有者はその滅失又は損傷によって現に利益を受けている限度において賠償をする義務を負う。ただし、所有の意思のない占有者は、善意であるときであっても、全部の賠償をしなければならない。<br>第百九十六条　占有者が占有物を返還する場合には、その物の保存のために支出した金額その他の必要費を回復者から償還させることができる。ただし、占有者が果実を取得したときは、通常の必要費は、占有者の負担に帰する。</blockquote>
+      <p><strong><mark class="kw">民法189条</mark></strong>から<strong><mark class="kw">民法196条</mark></strong>は、占有者が占有物を返還する前後の利益調整を定める。善意占有者は果実を取得できるが、本権の訴えで敗訴すると訴え提起時から悪意占有者とみなされる。悪意占有者は果実返還だけでなく、消費・損傷・収取懈怠による代価償還義務も負う。占有物の滅失・損傷については、悪意占有者は全損害、善意占有者は現存利益限度が原則であるが、所有の意思のない占有者は善意でも全部賠償となる。費用償還では、必要費は原則償還されるが、果実を取得した占有者の通常必要費は占有者負担となる。有益費は価格増加が現存する場合に限り、回復者の選択に従って支出額または増価額を償還させることができる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法197条から202条 占有の訴え</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百九十七条　占有者は、次条から第二百二条までの規定に従い、占有の訴えを提起することができる。他人のために占有をする者も、同様とする。<br>第百九十八条　占有者がその占有を妨害されたときは、占有保持の訴えにより、その妨害の停止及び損害の賠償を請求することができる。<br>第百九十九条　占有者がその占有を妨害されるおそれがあるときは、占有保全の訴えにより、その妨害の予防又は損害賠償の担保を請求することができる。<br>第二百条　占有者がその占有を奪われたときは、占有回収の訴えにより、その物の返還及び損害の賠償を請求することができる。<br>２　占有回収の訴えは、占有を侵奪した者の特定承継人に対して提起することができない。ただし、その承継人が侵奪の事実を知っていたときは、この限りでない。<br>第二百二条　占有の訴えは本権の訴えを妨げず、また、本権の訴えは占有の訴えを妨げない。<br>２　占有の訴えについては、本権に関する理由に基づいて裁判をすることができない。</blockquote>
+      <p><strong><mark class="kw">民法197条</mark></strong>は、直接占有者だけでなく他人のために占有する者にも占有の訴えを認める。<strong><mark class="kw">民法198条</mark></strong>は妨害停止、<strong><mark class="kw">民法199条</mark></strong>は妨害予防、<strong><mark class="kw">民法200条</mark></strong>は返還を中心に置く。200条2項は、占有回収の訴えを侵奪者の特定承継人に対して原則提起できないとし、ただし承継人が侵奪の事実を知っていたときは例外を認める。これは、侵奪後に別の者が取引で物を取得した場合、善意の特定承継人まで占有訴権で巻き戻すと取引安全を害するためである。<strong><mark class="kw">民法202条</mark></strong>は、占有訴権と本権の訴えの併存、占有訴訟で本権理由に基づく裁判をしてはならないことを定める。試験では、本権抗弁は不可だが本権に基づく反訴は判例上可能、という細部が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法201条・203条から205条 期間・消滅・準占有</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百一条　占有保持の訴えは、妨害の存する間又はその消滅した後一年以内に提起しなければならない。ただし、工事により占有物に損害を生じた場合において、その工事に着手した時から一年を経過し、又はその工事が完成したときは、これを提起することができない。<br>２　占有保全の訴えは、妨害の危険の存する間は、提起することができる。この場合において、工事により占有物に損害を生ずるおそれがあるときは、前項ただし書の規定を準用する。<br>３　占有回収の訴えは、占有を奪われた時から一年以内に提起しなければならない。<br>第二百三条　占有権は、占有者が占有の意思を放棄し、又は占有物の所持を失うことによって消滅する。ただし、占有者が占有回収の訴えを提起したときは、この限りでない。<br>第二百五条　この章の規定は、自己のためにする意思をもって財産権の行使をする場合について準用する。</blockquote>
+      <p><strong><mark class="kw">民法201条</mark></strong>は、占有の訴えの提起期間を定める。保持の訴えは妨害中または消滅後1年以内、保全の訴えは妨害危険の存する間、回収の訴えは占有を奪われた時から1年以内である。工事に関するただし書は、工事着手後1年経過または完成後は保持・保全の訴えを制限するため、問題文に工事が出たら時点確認が必要になる。<strong><mark class="kw">民法203条</mark></strong>は、占有意思の放棄または所持喪失により占有権が消滅するとしつつ、占有回収の訴えを提起した場合の例外を置く。<strong><mark class="kw">民法205条</mark></strong>は準占有を定め、物の占有だけでなく、財産権を自己のために行使する場合にも占有章の規定を準用する。債権譲渡などの他単元との接点になるが、行政書士試験では物の占有を中心に理解したうえで補助的に押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和34年1月8日　昭和33年（オ）第449号　民集13巻1号17頁</div>
+      <div class="case-card__title">間接占有者の占有回収の訴え（賃借権確認占有回収請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法181条</span>
+        <span class="badge badge--law">民法200条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地建物の利用関係で、賃借人が転借人に目的物を使用させ、転借人が現実に所持していた。賃借人は、転借人を占有代理人として間接占有を有していると主張し、第三者の行為によって自己の占有が奪われたとして占有回収の訴えを問題にした。争点は、本人が物を直接所持していない間接占有の場面で、どのような事実があれば「占有を奪われた」といえるかであった。単に本人の法律上の地位が侵害された、または直接所持者との利用関係が変化したというだけで、占有回収の訴えに必要な侵奪が認められるのかが問われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、転借人を占有代理人として間接占有を有する賃借人が占有を奪われたというためには、占有代理人の所持が本人の意思に反して第三者によって失われた場合でなければならないとした。代理占有では、本人の占有は代理人の所持を通じて成り立つ。そのため、代理人の所持がなお本人のために維持されている限り、本人の間接占有は直ちに失われない。他方、第三者が代理人の所持を排除し、本人の意思に反して占有支配を破壊した場合には、本人も占有を奪われたといえる。判例は、代理占有の構造を前提に、占有回収の訴えにおける「奪われた」の意味を具体化した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">代理占有</mark></strong>と<strong><mark class="kw">占有回収の訴え</mark></strong>を結びつける重要判例である。行政書士試験では、直接占有者だけが常に占有訴権を行使できるわけではなく、間接占有者も保護され得る点が問われる。ただし、間接占有者の占有侵奪を認めるには、代理人の所持が本人の意思に反して第三者により失われたことが必要であり、単に契約関係が不安定になっただけでは足りない。関連条文は181条、197条、200条であり、占有補助者との区別も併せて整理する。</p>
+      <h4>関連判例・条文</h4>
+      <p>代理占有では、本人と代理人の占有が重層的に成立する。占有補助者は独立の占有者ではないため、代理占有者と同じ扱いをしない。占有回収の訴えでは、物の支配状態がどこで切断されたのか、直接所持者が誰のために所持していたのかを確認する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和40年3月4日　昭和38年（オ）第654号　民集19巻2号197頁</div>
+      <div class="case-card__title">占有の訴えと本権に基づく反訴（占有保持請求本訴ならびに建物収去土地明渡請求反訴事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法202条</span>
+        <span class="badge badge--law">占有訴権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地の占有をめぐり、一方当事者が占有保持の訴えを提起したのに対し、相手方は自分こそ土地の本権者であるとして、建物収去土地明渡請求の反訴を提起した。民法202条2項は、占有の訴えについて本権に関する理由に基づいて裁判することができないと定める。そこで、占有訴訟の被告が単に防御方法として本権を主張することは許されないとしても、別個の請求として本権に基づく反訴を同じ訴訟手続内で提起できるかが争われた。事案の核心は、占有訴権の迅速な現状保護と、本権紛争を一体的に解決する訴訟経済との調整であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法202条2項は、占有の訴えにおいて本権に関する理由に基づいて裁判することを禁じるものであり、占有の訴えに対して防御方法として本権の主張をすることは許されないとした。その一方で、本権に基づく反訴を提起することまで同条が禁じるものではないと判断した。つまり、占有本訴の判断は占有侵害の有無を基準に行い、本権を理由として占有請求を排斥することはできない。しかし、独立の反訴請求として所有権などの本権に基づく請求を立てることは可能であり、両者は訴訟手続上併存し得る。判例は、占有訴権の現状保護機能を維持しつつ、本権紛争の解決経路も閉ざさない構造を示した。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、<strong><mark class="kw">民法202条</mark></strong>の理解が頻出である。誤答パターンは「占有の訴えでは本権に関する主張が一切できない」「本権の訴えが提起されると占有の訴えは当然に排斥される」というものである。正しくは、占有の訴えを本権理由で裁判することはできないが、占有の訴えと本権の訴えは互いに妨げず、本権に基づく反訴は判例上認められる。占有訴権は本権の有無を最終確定する制度ではなく、現にあった支配状態を手続的に保護する制度であると押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p>197条から201条が占有訴権の要件・内容・期間を定め、202条が本権の訴えとの関係を調整する。所有権に基づく返還請求、妨害排除請求、不法行為に基づく損害賠償請求と交錯するため、物権的請求権の単元と横断して理解する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和53年3月6日　昭和52年（オ）第323号　民集32巻2号135頁</div>
+      <div class="case-card__title">占有承継と善意・無過失の判定時点（取得時効と民法187条）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法187条</span>
+        <span class="badge badge--law">民法162条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産の占有主体が途中で変更し、承継人が自己の占有に前占有者の占有を合わせて取得時効を主張した。民法187条は前占有者の占有を併せて主張できると定めるが、取得時効の短期時効には占有開始時の善意・無過失が必要である。そこで、前占有者と承継人という複数の占有が連続する場合、善意・無過失を誰のどの時点で判断するのかが争われた。承継人が途中で悪意になった場合や、承継時点で権利関係に疑いを持っていた場合に、前占有者の善意無過失を使って10年取得時効を主張できるのかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の占有主体に変更があり、承継された二個以上の占有が併せて主張された場合には、民法162条2項の善意・無過失は、その主張にかかる最初の占有者につき、その占有開始時点で判定すれば足りるとした。民法187条が前占有者の占有を併せて主張することを認める以上、時効取得の基礎となる占有は、承継により一体として扱われる。そのため、承継人の占有開始時に改めて善意・無過失を要求するのではなく、合わせて主張される最初の占有を基準にする。ただし、187条2項により前占有者の瑕疵も承継されるため、前占有者の占有が悪意・有過失など瑕疵ある占有であれば、その瑕疵から逃れることはできない。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、取得時効の単元と占有権の単元をつなぐ判例である。誤答パターンは「承継人が前占有者の占有を併せて主張する場合、善意・無過失は承継人の承継時を基準に判断する」というものである。正しくは、併せて主張する最初の占有者の占有開始時で足りる。もっとも、前占有者の瑕疵も承継するため、期間だけを足して瑕疵を切り離すことはできない。条文上は187条1項と2項をセットで読むことが重要であり、186条の推定とも連動する。</p>
+      <h4>関連判例・条文</h4>
+      <p>民法162条2項の10年取得時効、民法186条の占有態様推定、民法187条の占有承継が関連する。占有の承継は、相続、売買、贈与などにより占有主体が変わる事案で出題されやすい。前占有者の期間を使うか、自己の占有だけで主張するかを承継人が選べる点も併せて押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和44年12月2日　昭和42年（オ）第301号　民集23巻12号2343頁</div>
+      <div class="case-card__title">占有回収の訴え提起と占有継続擬制（民法203条ただし書）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法203条</span>
+        <span class="badge badge--law">民法200条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>占有者が目的物の占有を奪われた後、占有回収の訴えを提起した。民法203条本文は、占有者が占有意思を放棄し、または占有物の所持を失うことにより占有権が消滅すると定める一方、ただし書で占有回収の訴えを提起したときはこの限りでないとする。そこで、占有回収の訴えを提起しただけで、現実に物を取り戻していなくても占有の継続が擬制されるのか、それとも勝訴して実際に占有を回復した場合に限られるのかが争われた。取得時効の継続や占有保護の範囲に影響する論点であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法203条ただし書は、占有を奪われた者が占有回収の訴えを提起して勝訴し、現実にその物の占有を回復した場合に、占有の継続を擬制する趣旨であると解した。つまり、訴えを提起しただけで当然に占有継続が確定するわけではない。占有回収の訴えが成功し、実際に物の支配を回復した場合に、奪われていた期間も占有が途切れなかったものとして扱う。判例は、203条ただし書を占有回復に成功した者を保護する制度として限定的に理解し、単なる提訴だけで占有継続を広く認めることを避けた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、占有権の消滅と占有回収の訴えの効果を結びつける。誤答パターンは「占有回収の訴えを提起すれば、勝敗や現実の回復に関係なく常に占有が継続したものとみなされる」というものである。正しくは、提起して勝訴し、現実に占有を回復した場合に占有継続が擬制される。民法200条の回収請求、201条3項の1年期間、203条本文・ただし書を一体として読むと、占有制度が現実の支配回復を重視していることが分かる。</p>
+      <h4>関連判例・条文</h4>
+      <p>民法200条は占有回収の訴えの請求内容を、201条3項は提起期間を、203条は占有権の消滅と例外を定める。取得時効では占有の継続が問題になるため、時効制度の単元とも関連する。単なる訴訟係属ではなく、勝訴と現実の回復まで必要とする点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ1 占有権と所有権を分ける</span></div>
+    <div class="box__bd">
+      <p>占有権は本権の有無と別に成立する。誤りの選択肢例は「占有者が所有者でない場合、占有訴権を行使できない」である。正しくは、賃借人や受寄者のように所有者でない者も占有者になり、占有保持・保全・回収の訴えを提起し得る。逆に、所有者であっても現実の所持や代理占有を失っている場合は、占有権ではなく所有権に基づく請求を考える。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ2 推定規定の射程</span></div>
+    <div class="box__bd">
+      <p>民法186条は、自主・善意・平穏・公然・継続を推定する。誤りの選択肢例は「占有者は常に所有者であると確定される」である。正しくは、推定は反証で覆り得る。188条も、占有者が行使する権利を適法に有すると推定するだけで、真の権利取得を無条件に認めるものではない。推定規定は取得時効や果実取得の立証負担を軽くするが、即時取得や所有権取得とは別物である。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ3 他主占有から自主占有への転換</span></div>
+    <div class="box__bd">
+      <p>賃借人や受寄者は、権原の性質上、他主占有者である。誤りの選択肢例は「賃借人が所有の意思を内心で持てば、その時から自主占有になる」である。正しくは、民法185条により、自己に占有させた者に所有の意思があることを表示するか、新たな権原により所有の意思をもって占有を始めることが必要である。内心の変化だけで自主占有化を認めると、所有者が予測できないまま時効取得の危険にさらされるためである。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ4 占有の訴えの選択</span></div>
+    <div class="box__bd">
+      <p>問題文が「妨害された」と述べるなら保持、「妨害されるおそれ」と述べるなら保全、「奪われた」と述べるなら回収である。誤りの選択肢例は「占有保全の訴えでは、妨害予防と損害賠償を請求できる」である。正しくは、妨害予防または損害賠償の担保である。占有回収の訴えは、侵奪者の特定承継人には原則提起できず、承継人が侵奪の事実を知っていた場合だけ例外となる点も頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">横断論点</span></div>
+    <div class="box__bd">
+      <p>占有権は、取得時効、物権変動、即時取得、賃貸借、寄託、不法行為、民事訴訟法と横断する。取得時効では自主占有・善意無過失・占有承継が問題になり、物権変動では引渡し方法が対抗要件や即時取得と接続する。賃貸借では賃借人が占有者である一方、所有の意思は原則として否定される。不法行為では自力救済や妨害行為への損害賠償が問題になり、民事訴訟法では占有の訴えと本権反訴の処理が問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">history</span><span class="box__label">制度趣旨と実務への影響</span></div>
+    <div class="box__bd">
+      <p>占有制度は、ローマ法以来の「事実状態の保護」という発想を受け継ぎ、近代民法では自力救済の抑止と取引安全の基礎として位置づけられている。日本民法でも、占有は所有権そのものではないが、権利の外形として大きな意味を持つ。動産取引では占有が権利者らしさの外観となり、即時取得の制度につながる。不動産では登記が公示制度の中心だが、実際の利用状態や占有の継続は取得時効、明渡請求、妨害排除請求の判断で重要になる。実務では、賃貸物件の明渡し、土地境界付近の利用妨害、保管物の返還、工事差止めなどで占有訴権や占有状態の主張が問題となる。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span><span class="box__label">学習の整理ポイント</span></div>
+    <div class="box__bd">
+      <p>占有権は、条文番号の連続性を使って整理すると理解しやすい。180条から184条は占有の成立・移転、185条から188条は占有の性質・推定・承継、189条から196条は占有者と回復者の利益調整、197条から202条は占有の訴え、203条以下は消滅と準占有である。問題文を読むときは、まず誰が物を直接所持しているか、誰のために所持しているかを確認する。次に、自主占有か他主占有か、善意か悪意か、平穏・公然かを検討する。最後に、妨害・危険・侵奪のどれかを見て、保持・保全・回収のどの訴えかを選ぶ。この順序を固定すると、占有権の問題を所有権や契約責任の問題と混同しにくくなる。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

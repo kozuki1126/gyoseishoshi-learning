@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債権の目的 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">債権の目的</h1>
+  <p class="page-title-block__sub">特定物債権・種類債権・金銭債権・選択債権を、特定と危険の移転から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法399条</span>
+    <span class="badge badge--info">民法400条</span>
+    <span class="badge badge--info">民法401条</span>
+    <span class="badge badge--info">民法404条</span>
+    <span class="badge badge--info">民法406条</span>
+    <span class="badge badge--info">種類債権の特定</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権の目的</mark></strong>とは、債権者が債務者に請求できる給付の内容である。売買なら物を引き渡すこと、賃貸借なら目的物を使用収益させること、金銭消費貸借なら金銭を返すことが、債権の目的になる。民法399条は、債権の目的が金銭に見積もることのできないものであってもよいと定め、債権が単なる金銭価値の移転だけでなく、作為、不作為、物の引渡しなど多様な給付を対象にできることを示している。</p>
+
+  <p>この単元の中心は、物の引渡しを目的とする債権を、<strong><mark class="kw">特定物債権</mark></strong>、<strong><mark class="kw">種類債権</mark></strong>、<strong><mark class="kw">選択債権</mark></strong>に分けて理解することである。たとえば「この展示番号の絵画を引き渡す」という約束では、最初から目的物が一個に定まっているため特定物債権になる。これに対し「令和六年産の標準米を一トン引き渡す」という約束では、契約時点ではどの袋の米を渡すかが決まっておらず、種類債権として扱われる。「A土地かB土地のどちらかを引き渡す」という約束では、複数の給付候補から後に一つを選ぶため選択債権になる。</p>
+
+  <p>行政書士試験では、条文知識だけでなく、目的物がいつ<strong><mark class="kw">特定</mark></strong>するか、特定後に滅失した場合に債務者がなお同種物を調達しなければならないか、特定物の保存義務がどの程度か、選択権が誰に帰属し、いつ移転するかが問われる。債務不履行、危険負担、売買、弁済、所有権移転時期にもつながるため、債権総論の入口でありながら、後続単元の判断枠組みを支える基礎単元である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る分類</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに「この番号の中古自動車」を売った場合、Bが請求できるのはその自動車そのものなので<strong><mark class="kw">特定物債権</mark></strong>である。引渡しまでにAは民法400条の保存義務を負うが、Aに帰責事由なくその車が水害で滅失すれば、同じ車を調達することは不可能である。これに対し、AがBに「新品の同型パソコンを十台」売った場合、どの十台かは契約時点で決まっていないため<strong><mark class="kw">種類債権</mark></strong>である。特定前にAの倉庫の在庫が滅失しても、市場で同種品を調達できる限り、原則として履行不能にはならない。さらに「A所有の甲絵画か乙絵画のいずれか一つを渡す」という約束なら、選択によって初めて給付内容が一つに絞られる<strong><mark class="kw">選択債権</mark></strong>である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債権の目的</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権の目的</mark></strong>は、債務者がすべき給付の内容であり、物の引渡し、金銭の支払、役務の提供、不作為などを含む。民法399条は、金銭に見積もることができないものでも債権の目的になり得ると定める。もっとも、どのような給付でもよいわけではなく、給付内容は確定でき、実現でき、適法で、社会的妥当性を備えていなければならない。制度趣旨は、契約自由を広く認めながら、権利として強制・評価できる程度の内容を求める点にある。試験では「金銭的価値がなければ債権の目的にできない」という選択肢が典型的な誤りである。金銭評価不能でも債権の目的にはできるが、強制履行や損害賠償の場面では給付内容の特定性と実現可能性が改めて問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">特定物債権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">特定物債権</mark></strong>は、世界に多数ある同種物の中からではなく、最初から特定の個体を引き渡すことを目的とする債権である。中古車、土地、展示番号付きの絵画、相続財産中の特定の時計など、個性に着目して取引される物が典型である。債務者は引渡しまで民法400条に基づき、契約その他の発生原因と取引上の社会通念に照らして定まる善良な管理者の注意で保存しなければならない。特定物は代替調達ができないため、目的物が債務者の帰責事由なく滅失した場合、同一物の給付は物理的に不能になる。もっとも、善管注意義務違反があれば債務不履行による損害賠償責任が問題になる。試験では「特定物債権でも同種物を市場から買って渡せばよい」「保存義務は自己の財産に対する注意で足りる」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">種類債権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">種類債権</mark></strong>は、目的物を種類と数量で指定し、契約時点では具体的な個体が決まっていない債権である。米一トン、同型パソコン十台、普通品質の砂利百立方メートルのように、同種物の中から一定量を給付すればよい場面で問題になる。民法401条1項は、法律行為の性質や当事者の意思で品質を定められないときは中等の品質の物を給付すべきものとする。種類債権の制度趣旨は、取引を柔軟にし、契約時点で個体を確定しなくても有効な債権を成立させる点にある。特定前は市場に同種物がある限り、原則として調達義務が残る。試験では、種類債権は「上等品」を給付すべきだとする肢、特定前の在庫滅失だけで当然に履行不能になるとする肢、特定のために通知だけで常に足りるとする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">種類債権の特定</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">種類債権の特定</mark></strong>とは、種類と数量だけで指定されていた目的物が、具体的な個体に集中することである。民法401条2項は、債務者が物の給付をするのに必要な行為を完了したとき、または債権者の同意を得て給付すべき物を指定したとき、以後その物を債権の目的物とすると定める。持参債務では、債務者が目的物を選定して債権者の住所等に現実に提供することが中心になる。取立債務では、債務者が目的物を分離し、引渡しの準備を整え、その旨を債権者に通知することが重要である。特定が生じると、その個体について特定物債権に近い処理になり、以後の滅失・損傷はその個体を基準に考える。試験では、特定と弁済の提供、特定と所有権移転、特定後の危険負担を混同させる問題が出やすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">制限種類債権</span>
+      <div class="box__hd-badges"><span class="badge badge--info">応用論点</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">制限種類債権</mark></strong>は、種類債権の一種でありながら、調達範囲が一定の場所・集団・在庫などに限定されている債権である。「A倉庫内の新米百俵のうち十俵」「この船積み貨物の中から五十箱」のように、種類だけでなく供給源が限定されている場合である。通常の種類債権は同種物が市場にある限り履行不能になりにくいが、制限種類債権では限定された範囲全体が滅失すれば、特定前でも履行不能が問題になり得る。制度上は、通常の種類債権と特定物債権の中間に位置する。試験で深く問われる頻度は高くないが、種類債権だから絶対に履行不能にならない、という単純化を避けるために重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">金銭債権・法定利率</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">金銭債権</mark></strong>は、金銭の支払を目的とする債権である。金銭は価値の一般的交換手段であるため、物の引渡債権とは異なり、原則として履行不能にならないと整理される。民法402条は、金銭債権では債務者が各種の通貨で弁済できること、ただし特定種類の通貨を目的とした場合は別であることを定める。民法403条は外国通貨で債権額を指定した場合の日本通貨弁済を認める。民法404条の<strong><mark class="kw">法定利率</mark></strong>は、別段の意思表示がない利息債権の基準であり、令和2年施行の債権法改正により年3パーセントを起点とする変動制になった。令和8年4月1日から令和11年3月31日までの第3期も、法定利率は年3パーセントのままである。試験では、商事法定利率との旧法知識、5パーセント固定という旧制度、遅延損害金と利息の区別が混同されやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">選択債権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">選択債権</mark></strong>は、数個の給付の中から選択によって債権の目的が定まる債権である。民法406条は、選択権は原則として債務者に属すると定める。これは、債務者が実際に履行する側であり、どの給付を選ぶかを決めるのが合理的な場合が多いからである。もっとも、当事者が債権者または第三者を選択権者にすることは妨げられない。民法407条は選択権の行使を相手方への意思表示とし、いったんした選択は相手方の承諾なく撤回できないとする。民法408条は、弁済期後に催告しても選択権者が選択しない場合、選択権が相手方へ移転すると定める。試験では、選択権の帰属、意思表示の相手方、撤回の可否、不能になった給付がある場合の処理が狙われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 640" role="img" aria-label="債権の目的の全体分類図">
+      <defs>
+        <marker id="arr17-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr17-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr17-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+
+      <line x1="540" y1="92" x2="540" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="160" y1="132" x2="920" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="160" y1="132" x2="160" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17-blue)"/>
+      <line x1="410" y1="132" x2="410" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17-blue)"/>
+      <line x1="670" y1="132" x2="670" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17-blue)"/>
+      <line x1="920" y1="132" x2="920" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17-blue)"/>
+      <rect x="502" y="110" width="76" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="540" y="124" text-anchor="middle" font-size="13" fill="#1d4ed8">給付の類型</text>
+
+      <line x1="410" y1="254" x2="410" y2="332" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="295" y1="332" x2="525" y2="332" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="295" y1="332" x2="295" y2="374" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr17-orange)"/>
+      <line x1="525" y1="332" x2="525" y2="374" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr17-orange)"/>
+      <rect x="365" y="294" width="90" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="410" y="308" text-anchor="middle" font-size="13" fill="#7c2d12">個体へ集中</text>
+
+      <line x1="670" y1="254" x2="670" y2="374" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr17-red)"/>
+      <rect x="624" y="294" width="92" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="670" y="308" text-anchor="middle" font-size="13" fill="#9f1239">選択で確定</text>
+
+      <rect x="385" y="28" width="310" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="540" y="55" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">債権の目的</text>
+      <text x="540" y="76" text-anchor="middle" font-size="12" fill="#dbeafe">債務者がすべき給付の内容</text>
+
+      <rect x="40" y="180" width="240" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="160" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">非金銭的給付</text>
+      <text x="160" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">作為・不作為・引渡し</text>
+
+      <rect x="300" y="180" width="220" height="74" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="410" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">種類債権</text>
+      <text x="410" y="232" text-anchor="middle" font-size="12" fill="#7c2d12">種類と数量で指定</text>
+
+      <rect x="560" y="180" width="220" height="74" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="670" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">選択債権</text>
+      <text x="670" y="232" text-anchor="middle" font-size="12" fill="#9f1239">複数給付から一つ選ぶ</text>
+
+      <rect x="820" y="180" width="200" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="920" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">金銭債権</text>
+      <text x="920" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">金銭支払が目的</text>
+
+      <rect x="190" y="382" width="210" height="72" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="295" y="411" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">必要行為の完了</text>
+      <text x="295" y="433" text-anchor="middle" font-size="12" fill="#7c2d12">持参・取立・送付で判断</text>
+
+      <rect x="420" y="382" width="210" height="72" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="525" y="411" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">同意による指定</text>
+      <text x="525" y="433" text-anchor="middle" font-size="12" fill="#7c2d12">以後その物が目的物</text>
+
+      <rect x="650" y="382" width="200" height="72" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="750" y="411" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">選択の意思表示</text>
+      <text x="750" y="433" text-anchor="middle" font-size="12" fill="#9f1239">撤回は承諾が必要</text>
+
+      <rect x="55" y="500" width="970" height="54" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="523" text-anchor="middle" font-size="13" fill="#9f1239">試験の判断順序：目的物が最初から個体で定まるか、種類のみか、複数給付から選ぶかを見る</text>
+      <text x="540" y="543" text-anchor="middle" font-size="12" fill="#9f1239">特定後は滅失・所有権移転・危険負担・債務不履行の処理に接続する</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">債権の目的</mark></strong>を給付の内容から分類したものである。民法399条は金銭評価不能な給付も債権の目的にできるとするため、まず金銭給付だけに限定しないことが出発点になる。そのうえで、物の引渡しでは、目的物が最初から一個に定まっている<strong><mark class="kw">特定物債権</mark></strong>なのか、種類と数量だけで指定される<strong><mark class="kw">種類債権</mark></strong>なのか、複数給付から選ぶ<strong><mark class="kw">選択債権</mark></strong>なのかを区別する。種類債権は、必要行為の完了または債権者同意の指定により具体的な個体へ集中する。選択債権は、選択権者の意思表示によって債権発生時にさかのぼって一つの給付に定まるが、第三者の権利を害することはできない。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 610" role="img" aria-label="種類債権の特定判断構造図">
+      <defs>
+        <marker id="arr17b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr17b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr17b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+
+      <line x1="520" y1="92" x2="520" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="132" x2="870" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="132" x2="170" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17b-blue)"/>
+      <line x1="520" y1="132" x2="520" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17b-blue)"/>
+      <line x1="870" y1="132" x2="870" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr17b-blue)"/>
+      <rect x="482" y="110" width="76" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="520" y="124" text-anchor="middle" font-size="13" fill="#1d4ed8">履行態様</text>
+
+      <line x1="170" y1="254" x2="170" y2="360" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr17b-orange)"/>
+      <line x1="520" y1="254" x2="520" y2="360" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr17b-orange)"/>
+      <line x1="870" y1="254" x2="870" y2="360" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr17b-orange)"/>
+      <rect x="126" y="302" width="88" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="170" y="316" text-anchor="middle" font-size="13" fill="#7c2d12">必要行為</text>
+      <rect x="476" y="302" width="88" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="520" y="316" text-anchor="middle" font-size="13" fill="#7c2d12">準備通知</text>
+      <rect x="826" y="302" width="88" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="870" y="316" text-anchor="middle" font-size="13" fill="#7c2d12">発送又は提供</text>
+
+      <line x1="170" y1="432" x2="520" y2="512" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr17b-red)"/>
+      <line x1="520" y1="432" x2="520" y2="512" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr17b-red)"/>
+      <line x1="870" y1="432" x2="520" y2="512" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr17b-red)"/>
+
+      <rect x="365" y="28" width="310" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="520" y="55" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">種類債権の特定</text>
+      <text x="520" y="76" text-anchor="middle" font-size="12" fill="#dbeafe">民法401条2項の具体化</text>
+
+      <rect x="45" y="180" width="250" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="170" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">持参債務</text>
+      <text x="170" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">債権者のもとへ持参</text>
+
+      <rect x="395" y="180" width="250" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="520" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">取立債務</text>
+      <text x="520" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">債権者が取りに来る</text>
+
+      <rect x="745" y="180" width="250" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="870" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">送付債務</text>
+      <text x="870" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">第三地・運送を伴う</text>
+
+      <rect x="45" y="368" width="250" height="64" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="170" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">現実の提供</text>
+      <text x="170" y="416" text-anchor="middle" font-size="12" fill="#7c2d12">受領だけが残る状態</text>
+
+      <rect x="395" y="368" width="250" height="64" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="520" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">分離・準備・通知</text>
+      <text x="520" y="416" text-anchor="middle" font-size="12" fill="#7c2d12">通知だけでは足りない</text>
+
+      <rect x="745" y="368" width="250" height="64" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="870" y="394" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">発送又は現実提供</text>
+      <text x="870" y="416" text-anchor="middle" font-size="12" fill="#7c2d12">契約解釈で判断</text>
+
+      <rect x="370" y="520" width="300" height="58" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="520" y="543" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">特定後の効果</text>
+      <text x="520" y="565" text-anchor="middle" font-size="12" fill="#9f1239">その個体を基準に滅失・損傷を処理</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">種類債権の特定</mark></strong>を履行態様ごとに分けて示す。持参債務では、債務者が債権者のもとへ目的物を持参し、債権者が受け取ればよい状態に置くことが中心になる。取立債務では、債務者の手元で目的物を分離し、引渡し準備を整えたうえで通知する必要があり、単に「用意した」と言うだけでは足りない。送付債務では、契約上どこで履行すべきかにより、第三地での現実提供を要する場合と発送時に必要行為が完了する場合がある。いずれも、目的物が特定されると、以後はその個体を基準に保存義務、滅失・損傷、所有権移転の問題が考えられる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>特定物債権・種類債権・選択債権の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">特定物債権</th>
+        <th class="col--b">種類債権</th>
+        <th class="col--c">選択債権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">定義</th>
+        <td class="col--a"><span class="em-a">契約時から特定個体</span>を引き渡す債権。中古車や特定土地など。</td>
+        <td class="col--b"><span class="em-b">種類と数量</span>で指定され、個体は後に定まる債権。</td>
+        <td class="col--c"><span class="em-c">複数の給付候補</span>から選択により一つに定まる債権。</td>
+      </tr>
+      <tr>
+        <th class="col--label">問題局面</th>
+        <td class="col--a">引渡しまでの保存義務、目的物滅失、現状引渡しが中心。</td>
+        <td class="col--b">品質、特定時期、特定前後の履行不能が中心。</td>
+        <td class="col--c">選択権者、選択の意思表示、催告後の選択権移転が中心。</td>
+      </tr>
+      <tr>
+        <th class="col--label">要件・基準</th>
+        <td class="col--a">目的物が最初から具体的に定まっているかを見る。</td>
+        <td class="col--b">民法401条2項の<span class="em-b">必要行為完了</span>または債権者同意の指定を見る。</td>
+        <td class="col--c">民法406条以下により、原則として債務者が選択する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">効果</th>
+        <td class="col--a">債務者は引渡しまで善管注意義務を負い、同一物の給付が問題になる。</td>
+        <td class="col--b">特定前は調達義務が残りやすく、特定後はその個体を目的物とする。</td>
+        <td class="col--c">選択は債権発生時にさかのぼるが、第三者の権利を害しない。</td>
+      </tr>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a">民法400条、民法483条との接続。</td>
+        <td class="col--b">民法401条。</td>
+        <td class="col--c">民法406条から411条。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「滅失しても常に同種物を調達すべき」とする誤り。</td>
+        <td class="col--b">「通知だけで常に特定する」「上等品が必要」とする誤り。</td>
+        <td class="col--c">「選択権は常に債権者にある」「選択後も自由に撤回できる」とする誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、問題文の目的物の書き方を見る。目的物が「この物」「この土地」「この機械」と個体で示されるなら<strong><mark class="kw">特定物債権</mark></strong>を疑う。「米一トン」「同型商品十台」のように種類と数量だけなら<strong><mark class="kw">種類債権</mark></strong>である。「甲または乙」「AかBのいずれか」と書かれていれば<strong><mark class="kw">選択債権</mark></strong>である。分類できたら、次に、特定・選択が済んでいるか、済んでいないかを見る。ここで結論が大きく変わる。</p>
+
+  <h3>特定前・特定後の効果比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">種類債権の特定前</th>
+        <th class="col--b">種類債権の特定後</th>
+        <th class="col--c">特定物債権との接続</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">目的物</th>
+        <td class="col--a"><span class="em-a">抽象的な種類・数量</span>にとどまる。</td>
+        <td class="col--b"><span class="em-b">具体的な個体</span>が債権の目的物になる。</td>
+        <td class="col--c"><span class="em-c">同一物</span>を基準に履行・保存を考える。</td>
+      </tr>
+      <tr>
+        <th class="col--label">調達義務</th>
+        <td class="col--a">同種物が市場にある限り、原則として調達義務が残る。</td>
+        <td class="col--b">特定した個体を引き渡す義務に集中する。</td>
+        <td class="col--c">個体の滅失・損傷は債務不履行や危険負担へ接続する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">所有権移転</th>
+        <td class="col--a">特段の事情がない限り、まだ個体所有権は移らない。</td>
+        <td class="col--b">不特定物売買では、判例上、特定時に所有権が移転するのが原則。</td>
+        <td class="col--c">民法176条・177条の物権変動問題に接続する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験処理</th>
+        <td class="col--a">「倉庫の在庫が滅失した」だけで履行不能としない。</td>
+        <td class="col--b">特定の成否を先に確定してから滅失リスクを処理する。</td>
+        <td class="col--c">善管注意義務違反の有無と損害賠償を検討する。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>この比較では、<strong><mark class="kw">特定</mark></strong>が境界線になる。特定前はまだ「どの物か」が定まっていないため、在庫の一部が失われても、同種物を調達できる限り履行不能とはいえない。特定後は、その個体が債権の目的物となるため、その個体の滅失・損傷を中心に処理する。行政書士試験では、事案の途中で「分離した」「通知した」「発送した」「債権者が同意した」という事情が出たとき、それが民法401条2項の特定に足りるかを検討する必要がある。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法399条 債権の目的</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権は、金銭に見積もることができないものであっても、その目的とすることができる。</blockquote>
+      <p><strong><mark class="kw">民法399条</mark></strong>は、債権の目的を金銭的価値のある給付に限定しない。たとえば、一定の競業をしないこと、特定の情報を提供すること、財産的評価が難しい物を引き渡すことも、内容が確定し実現可能であれば債権の目的になり得る。もっとも、条文は債権の目的を無制限に認める趣旨ではない。給付が違法であったり、公序良俗に反したり、内容が不確定で強制・評価できない場合には、法律行為の有効性や債務不履行責任の段階で問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法400条 特定物の引渡しの場合の注意義務</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権の目的が特定物の引渡しであるときは、債務者は、その引渡しをするまで、契約その他の債権の発生原因及び取引上の社会通念に照らして定まる善良な管理者の注意をもって、その物を保存しなければならない。</blockquote>
+      <p><strong><mark class="kw">民法400条</mark></strong>は、<strong><mark class="kw">特定物債権</mark></strong>における債務者の保存義務を定める。令和2年施行の債権法改正後は、善管注意義務の内容が一律ではなく、契約その他の発生原因と取引上の社会通念に照らして定まることが明文化された。無償寄託のような場面と、高額美術品を業として保管する場面では、要求される注意の程度が異なり得る。条文上は「引渡しをするまで」とされるため、履行期までで当然に終了するわけではない。違反すれば民法415条の債務不履行責任が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法401条 種類債権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権の目的物を種類のみで指定した場合において、法律行為の性質又は当事者の意思によってその品質を定めることができないときは、債務者は、中等の品質を有する物を給付しなければならない。<br>２　前項の場合において、債務者が物の給付をするのに必要な行為を完了し、又は債権者の同意を得てその給付すべき物を指定したときは、以後その物を債権の目的物とする。</blockquote>
+      <p><strong><mark class="kw">民法401条</mark></strong>は、<strong><mark class="kw">種類債権</mark></strong>の品質と特定を定める中心条文である。1項は、当事者の意思や取引の性質で品質を決められない場合の補充ルールとして中等品質を定める。したがって、常に上等品を給付すべきわけではない。2項は、種類債権が具体的な個体へ集中する時点を定める。必要行為の完了は履行態様ごとに異なり、持参債務なら現実の提供、取立債務なら分離・準備・通知が重要になる。債権者の同意を得た指定も特定原因になるが、債務者の一方的指定だけで常に足りるわけではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法402条・403条 金銭債権と外国通貨</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第四百二条　債権の目的物が金銭であるときは、債務者は、その選択に従い、各種の通貨で弁済をすることができる。ただし、特定の種類の通貨の給付を債権の目的としたときは、この限りでない。<br>２　債権の目的物である特定の種類の通貨が弁済期に強制通用の効力を失っているときは、債務者は、他の通貨で弁済をしなければならない。<br>３　前二項の規定は、外国の通貨の給付を債権の目的とした場合について準用する。<br>第四百三条　外国の通貨で債権額を指定したときは、債務者は、履行地における為替相場により、日本の通貨で弁済をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法402条</mark></strong>と<strong><mark class="kw">民法403条</mark></strong>は、金銭債権の弁済方法を定める。金銭債権は特定物のように一個の物を渡す債権ではなく、一定額の価値を移転する債権である。そのため、特定の種類の通貨を目的とする場合を除き、債務者は各種通貨で弁済できる。外国通貨で債権額を指定した場合でも、日本通貨での弁済が認められる場面がある。行政書士試験では細かな為替計算よりも、金銭債権は原則として履行不能にならず、遅延損害金・法定利率の問題へ接続するという構造が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法404条・405条 法定利率と利息組入れ</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第四百四条　利息を生ずべき債権について別段の意思表示がないときは、その利率は、その利息が生じた最初の時点における法定利率による。<br>２　法定利率は、年三パーセントとする。<br>３　前項の規定にかかわらず、法定利率は、法務省令で定めるところにより、三年を一期とし、一期ごとに、次項の規定により変動するものとする。<br>第四百五条　利息の支払が一年分以上延滞した場合において、債権者が催告をしても、債務者がその利息を支払わないときは、債権者は、これを元本に組み入れることができる。</blockquote>
+      <p><strong><mark class="kw">民法404条</mark></strong>は、利息を生ずべき債権について別段の合意がない場合の利率を定める。改正後は年3パーセントを起点に、3年を一期として変動する仕組みである。法務省の告示によれば、令和8年4月1日以降の第3期も変動要件を満たさないため、法定利率は年3パーセントのままである。<strong><mark class="kw">民法405条</mark></strong>は、1年分以上の利息が延滞し、催告しても支払われない場合の元本組入れを定める。試験では、旧民法の年5パーセントという知識が残っていないか、利息の元本組入れに催告が必要であることを見落としていないかが問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法406条から411条 選択債権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第四百六条　債権の目的が数個の給付の中から選択によって定まるときは、その選択権は、債務者に属する。<br>第四百七条　前条の選択権は、相手方に対する意思表示によって行使する。<br>２　前項の意思表示は、相手方の承諾を得なければ、撤回することができない。<br>第四百八条　債権が弁済期にある場合において、相手方から相当の期間を定めて催告をしても、選択権を有する当事者がその期間内に選択をしないときは、その選択権は、相手方に移転する。<br>第四百九条　第三者が選択をすべき場合には、その選択は、債権者又は債務者に対する意思表示によってする。<br>２　前項に規定する場合において、第三者が選択をすることができず、又は選択をする意思を有しないときは、選択権は、債務者に移転する。<br>第四百十条　債権の目的である給付の中に不能のものがある場合において、その不能が選択権を有する者の過失によるものであるときは、債権は、その残存するものについて存在する。<br>第四百十一条　選択は、債権の発生の時にさかのぼってその効力を生ずる。ただし、第三者の権利を害することはできない。</blockquote>
+      <p><strong><mark class="kw">民法406条</mark></strong>から<strong><mark class="kw">民法411条</mark></strong>は、<strong><mark class="kw">選択債権</mark></strong>の一連の処理を定める。原則として選択権は債務者にあるが、当事者の合意で別に定めることができる。選択は相手方への意思表示で行い、いったん選択すると相手方の承諾なく撤回できない。弁済期後に相当期間を定めて催告しても選択しない場合、選択権は相手方へ移る。第三者が選択する場合には、第三者が選択できない、または選択する意思がないときに債務者へ移る。不能の給付がある場合は、誰の過失で不能になったかが民法410条の処理に影響する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和30年10月18日 昭和28年(オ)第1267号 民集9巻11号1642頁</div>
+      <div class="case-card__title">漁業用タール事件（種類債権の特定）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法401条</span>
+        <span class="badge badge--law">種類債権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>売買目的物として漁業用タールが問題となった事件である。契約上は一定数量のタールを引き渡すことが予定されていたが、契約時点でどの容器・どの在庫を引き渡すかが当然に確定していたとはいえなかった。債務者側は、目的物を準備した、または引き渡す意思を示したとして、種類債権がすでに特定したかのように主張した。これに対し、買主側は、具体的な目的物の分離や給付に必要な行為が十分に行われていなければ、民法401条2項の「物の給付をするのに必要な行為を完了」したとはいえないと争った。取立債務において、債務者が何をすれば種類債権が特定するのかが中心争点になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、まず売買目的物の性質・数量等から、特段の事情がない限り不特定物売買と見るべきであり、通常の種類債権か制限種類債権かを確定する必要があるとした。そのうえで、民法401条2項の「物の給付をするのに必要な行為」の内容は履行態様によって決まると考える。取立債務では、債務者が目的物を他の同種物から分離し、債権者が取りに来れば引き渡せる状態にして、その旨を債権者に通知することが必要である。単なる口頭の提供や通知だけでは、目的物が具体的個体に集中したとはいえない。これにより、種類債権の特定は、単なる意思表示ではなく、目的物の客観的な分離・準備を伴うものと整理された。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">種類債権の特定</mark></strong>の最重要判例である。試験では「取立債務では債務者が債権者に目的物を用意したと通知すれば、それだけで特定する」という選択肢が出やすいが、これは誤りである。通知は重要だが、目的物の分離と引渡し準備を伴う必要がある。また、通常の種類債権と制限種類債権の区別もここから派生する。通常の種類債権では市場から同種物を調達できる限り履行不能になりにくいが、制限種類債権では限定範囲全体の滅失により履行不能が問題になり得る。民法401条2項の文言を、持参債務・取立債務・送付債務に分けて具体化する発想が重要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法401条</mark></strong>2項、不特定物売買における所有権移転時期を扱う昭和35年6月24日判決、限定種類債務の特定後の債務不履行を扱う昭和41年9月6日判決と連続して理解する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和35年6月24日 昭和31年(オ)第252号 民集14巻8号1528頁</div>
+      <div class="case-card__title">不特定物売買の所有権移転時期</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法176条</span>
+        <span class="badge badge--law">民法401条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不特定物の売買において、目的物の所有権がいつ買主へ移転するかが争われた。売買契約が成立しても、契約時点では目的物が種類と数量で指定されるだけで、具体的にどの個体が買主の物になるかは決まっていなかった。売主側と買主側の間では、契約成立時に所有権が直ちに移るのか、引渡し時まで移らないのか、それとも民法401条2項による特定時に移るのかが問題となった。所有権移転時期は、目的物の滅失、二重譲渡、債権者差押え、危険負担の判断にも影響するため、単なる物権法の抽象論ではなく、取引リスクの分配に直結する争点であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不特定物の売買では、特段の事情のない限り、目的物が特定した時に買主へ所有権が移転すると解すべきであるとした。契約成立時には、まだどの個体を移転するかが定まっていないため、所有権移転の対象が具体的に存在しない。他方、引渡しまで所有権が移らないと固定すると、民法401条2項により目的物が具体化した後の法律関係を十分に説明できない。したがって、種類債権が特定して具体的個体に集中した時点を、所有権移転の原則的基準とした。この判断は、民法176条の意思主義と民法401条2項の特定制度を接続するものである。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">種類債権の特定</mark></strong>が単に債務履行の準備段階にとどまらず、所有権移転時期にも影響することを示す。試験では「不特定物売買では契約成立と同時に当然に所有権が移転する」「不特定物売買では引渡しがあるまで所有権は絶対に移転しない」という両極端の選択肢が誤りになる。正しくは、特段の事情がなければ特定時に所有権が移転する。もっとも、当事者が所有権留保特約など別段の合意をしていれば、その合意が優先する余地がある。物権変動の民法176条・177条と、債権総論の民法401条を横断して問う肢に注意する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法401条</mark></strong>2項、<strong><mark class="kw">民法176条</mark></strong>、特定物売買の所有権移転時期を扱う判例と比較する。特定物売買では目的物が最初から定まっているため、不特定物売買とは判断の起点が異なる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和41年9月6日 昭和39年(オ)第718号</div>
+      <div class="case-card__title">限定種類債務の目的物特定後の債務不履行</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">民法401条</span>
+        <span class="badge badge--law">民法415条</span>
+        <span class="badge badge--law">限定種類債権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>限定された範囲内の物を売買目的物とする契約で、当事者の合意により目的物が特定され、一時的に買主の保管下に置かれた。しかし、売主はその物に修理を加え、完成品として後日引き渡すことを留保していた。買主としては、目的物が一度特定され、手元に置かれた以上、売買目的物の引渡しが完了したと見る余地がある。他方、売主側の修理・完成品引渡し義務が残っていた以上、単に物が買主の保管下に置かれただけで、債務の本旨に従った履行が完了したとはいえないのではないかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、限定種類債務の目的物が当事者の合意により特定し、一時買主の保管下に置かれた場合であっても、売主が修理を加えて完成品として引き渡すことを後日に留保していたときは、いまだ売買目的物の引渡しを了したものとはいえず、債務不履行責任を生じ得るとした。ここで重要なのは、目的物の特定と履行完了は同じではないという点である。特定は、種類債権が具体的な個体に集中する効果を持つが、契約上要求された品質・加工・修理・完成状態まで満たしているかは別に判断される。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">特定</mark></strong>と<strong><mark class="kw">弁済</mark></strong>を混同してはいけないことを示す。行政書士試験では、「種類債権が特定すれば、常に債務者は履行義務を完全に免れる」という選択肢が誤りになり得る。特定後も、その物を契約どおりの品質・状態で引き渡す義務は残る。特定は目的物を決める制度であり、履行完了は債務の本旨に従った給付がされたかという問題である。売買契約の契約不適合責任や債務不履行責任にもつながるため、特定を過大評価しないことが重要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法401条</mark></strong>2項、<strong><mark class="kw">民法415条</mark></strong>、売買契約における契約不適合責任の単元と接続する。特定後の目的物が契約内容に適合しない場合、単なる所有権移転時期の問題ではなく、債務不履行・契約不適合の問題になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和41年11月25日 昭和37年(オ)第393号 集民85号389頁</div>
+      <div class="case-card__title">土地の一部売買と選択債権の類推適用</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法406条</span>
+        <span class="badge badge--law">民法408条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>売主所有の土地について、指定された換地予定地の一部を目的物として売買契約が成立した。契約の成立に至る経緯や目的物に関する事情から、買主が取得する土地所有権移転請求権について、どの部分を引き渡すべきかが後に具体化される構造を持っていた。売主側が具体的な範囲を定めない場合、買主はどのように目的物を確定して所有権移転登記を求められるのかが問題になった。典型的な「AまたはB」という選択債権ではないが、複数の可能な給付の中から一つの給付へ絞る必要があるため、民法406条以下の選択債権規定を類推できるかが争点となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、売主所有の土地について指定された換地予定地の一部を目的物として売買契約が成立した場合、契約成立までの経緯および目的物に関する原審認定事情のもとでは、買主の取得する当該土地所有権移転請求権について、いわゆる選択債権に関する民法の規定を類推適用すべきであるとした。民法406条以下は、数個の給付から一つを選ぶ典型的な選択債権を直接規律するが、土地の一部売買のように、給付範囲の具体化が後に必要となる場合にも、選択権の帰属・行使・移転に関する規律を利用できる。これにより、売主が選択を怠る場合には、催告後の選択権移転という処理が可能になる。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">選択債権</mark></strong>の規定が、典型的な二者択一の場面だけでなく、土地の一部売買の具体化にも類推適用され得ることを示す。試験では、民法406条以下の条文知識として、原則として選択権は債務者に属すること、選択は相手方への意思表示で行うこと、弁済期後に催告しても選択しないと選択権が相手方に移転することが問われる。この判例は、その条文を具体的な不動産取引に当てはめる例として重要である。「選択債権は物が二個列挙されている場合にしか問題にならない」とする理解は狭すぎる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法406条</mark></strong>、<strong><mark class="kw">民法407条</mark></strong>、<strong><mark class="kw">民法408条</mark></strong>が直接関連する。土地売買では民法176条、177条、登記手続請求の問題にもつながる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権の目的</mark></strong>では、第一に債権の目的は金銭評価不能でもよいこと、第二に<strong><mark class="kw">特定物債権</mark></strong>の保存義務、第三に<strong><mark class="kw">種類債権</mark></strong>の品質と特定、第四に<strong><mark class="kw">金銭債権</mark></strong>と法定利率、第五に<strong><mark class="kw">選択債権</mark></strong>の選択権が頻出である。問題文を読んだら、まず目的物が「個体」「種類」「複数候補」のどれかを分類し、次に特定・選択が済んでいるかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン1 債権の目的</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例として、「債権は財産的価値を有する給付を目的とする必要があり、金銭に見積もることができない給付は債権の目的にできない」というものがある。これは<strong><mark class="kw">民法399条</mark></strong>に反する。金銭評価不能でも債権の目的にはできる。ただし、確定性、実現可能性、適法性、社会的妥当性を欠く給付まで有効になるわけではない。条文の広い入口と、法律行為の有効性の限界を分ける。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン2 特定物債権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">特定物債権</mark></strong>では、債務者は自己の財産に対するのと同一の注意で目的物を保存すれば足りる」という選択肢は誤りである。<strong><mark class="kw">民法400条</mark></strong>は、契約その他の発生原因と取引上の社会通念に照らして定まる善良な管理者の注意を要求する。また、「履行期が過ぎれば保存義務は当然に消える」という肢も危険である。条文は「引渡しをするまで」と定めているため、引渡し未了なら保存義務が問題になり得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン3 種類債権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">種類債権</mark></strong>では、品質を定められないとき債務者は上等の品質の物を給付しなければならない」という選択肢は誤りである。<strong><mark class="kw">民法401条</mark></strong>1項は中等品質を定める。また、「債務者が準備したと通知すれば、取立債務では常に特定する」という肢も誤りになりやすい。判例上、取立債務では目的物の分離、引渡し準備、通知が必要であり、通知だけでは足りない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン4 金銭債権・法定利率</span>
+    </div>
+    <div class="box__bd">
+      <p>「法定利率は改正後も年5パーセントで固定されている」という選択肢は誤りである。<strong><mark class="kw">民法404条</mark></strong>は年3パーセントを起点とする変動制を採用している。令和8年4月1日以降の第3期も、法定利率は年3パーセントのままである。また、法定利率は、利息を生ずべき債権について別段の意思表示がない場合の基準であり、すべての金銭債権に当然に利息を発生させる規定ではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン5 選択債権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">選択債権</mark></strong>の選択権は常に債権者に属する」という選択肢は誤りである。<strong><mark class="kw">民法406条</mark></strong>は、原則として債務者に属すると定める。また、「選択の意思表示はいつでも一方的に撤回できる」という肢も誤りである。民法407条2項は、相手方の承諾がなければ撤回できないとする。さらに、弁済期後に催告しても選択しなければ、民法408条により選択権が相手方へ移転する点も重要である。</p>
+    </div>
+  </div>
+
+  <p>他分野との接点としては、<strong><mark class="kw">債務不履行</mark></strong>、<strong><mark class="kw">弁済</mark></strong>、<strong><mark class="kw">危険負担</mark></strong>、<strong><mark class="kw">売買契約</mark></strong>、<strong><mark class="kw">所有権移転</mark></strong>が重要である。種類債権が特定したかどうかは、弁済の提供や受領遅滞、履行不能、契約不適合責任、所有権移転時期に影響する。選択債権は、債務者が選択しない場合の催告・選択権移転を通じて、履行遅滞や契約解除にも接続する。債権の目的を分類する力は、債権総論の後半を解く前提になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権の目的</mark></strong>に関する民法399条から411条は、債権総論の最初に置かれている。これは、債務不履行や履行の強制を考える前に、そもそも債務者が何をすべきなのかを確定する必要があるからである。給付内容が決まらなければ、履行期、履行場所、履行不能、損害賠償、解除の判断もできない。したがって、この単元は条文数こそ多くないが、後続単元の前提となる基礎的な分類枠組みである。</p>
+
+  <p>令和2年施行の債権法改正では、<strong><mark class="kw">民法400条</mark></strong>の善管注意義務に「契約その他の債権の発生原因及び取引上の社会通念に照らして定まる」という文言が加わり、注意義務の内容が取引関係ごとに具体的に決まることが明文化された。また、<strong><mark class="kw">民法404条</mark></strong>の法定利率は年5パーセント固定から、年3パーセントを起点とする変動制に改められた。令和8年4月1日からの第3期も年3パーセントのままであるため、現行法学習では「年3パーセント、3年ごとの変動制」と整理する。</p>
+
+  <p>実務上、<strong><mark class="kw">種類債権</mark></strong>の特定は、在庫商品、建築資材、農産物、製造品、物流取引で重要になる。どの時点で特定したかによって、滅失・損傷リスク、所有権移転、保険、第三者差押えの優劣が変わることがある。契約書では、目的物の品質、保管場所、引渡場所、検収方法、所有権移転時期を明確にすることが、紛争予防につながる。行政書士試験では実務的な契約書作成までは深く問われないが、条文が取引リスクの分配ルールであることを意識すると理解しやすい。</p>
+
+  <p>学習整理の順番は、第一に目的物が金銭か非金銭かを見る。第二に、物の引渡しなら、特定物か種類物か選択債権かを分類する。第三に、種類債権なら特定の有無を確認する。第四に、選択債権なら選択権者と選択の有無を確認する。第五に、特定または選択後に滅失・損傷・履行遅滞があれば、債務不履行や危険負担へ進む。この順番で処理すれば、問題文の事情を読み落としにくい。</p>
+
+  <p>暗記ではなく、条文の機能を対応させることが重要である。<strong><mark class="kw">民法399条</mark></strong>は入口を広げる規定、<strong><mark class="kw">民法400条</mark></strong>は特定物を引渡しまで守らせる規定、<strong><mark class="kw">民法401条</mark></strong>は種類債権を具体的個体へ集中させる規定、<strong><mark class="kw">民法402条</mark></strong>から405条は金銭債権・利息を処理する規定、<strong><mark class="kw">民法406条</mark></strong>から411条は選択債権を一つの給付に絞る規定である。条文番号だけを覚えるのではなく、「何を決める条文か」を短い言葉で言えるようにすることが得点につながる。</p>
+</section>
+
+</body>
+</html>

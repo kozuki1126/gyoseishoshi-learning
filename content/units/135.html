@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不法行為 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">不法行為</h1>
+  <p class="page-title-block__sub">一般不法行為の成立要件、特殊不法行為、共同不法行為を損害の公平な分担から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法709条</span>
+    <span class="badge badge--info">故意・過失</span>
+    <span class="badge badge--info">責任能力</span>
+    <span class="badge badge--info">使用者責任</span>
+    <span class="badge badge--info">工作物責任</span>
+    <span class="badge badge--info">共同不法行為</span>
+    <span class="badge badge--info">過失相殺</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">不法行為</mark></strong>は、契約関係がなくても、他人に違法な損害を与えた者に損害賠償責任を負わせる制度である。交通事故、名誉毀損、医療事故、他人の物の破損、従業員の業務中の事故、建物や塀の欠陥による事故、複数人の共同加害など、日常生活と実務の両方で頻繁に問題になる。契約責任が「約束を守らなかったこと」を出発点にするのに対し、<strong><mark class="kw">不法行為責任</mark></strong>は「社会生活上、他人に損害を与えたことを誰に負担させるべきか」を出発点にする。</p>
+
+  <p>行政書士試験で中心になるのは、まず<strong><mark class="kw">民法709条</mark></strong>の一般不法行為である。成立要件は、故意又は過失、権利又は法律上保護される利益の侵害、損害、加害行為と損害との因果関係、責任能力、違法性阻却事由がないこと、という順序で整理する。条文上は「故意又は過失」「権利又は法律上保護される利益」「これによって生じた損害」という短い文言で書かれているが、事例問題では、注意義務違反の具体化、保護される利益の範囲、相当因果関係、損害額の調整が問われる。</p>
+
+  <p>さらに、この単元では<strong><mark class="kw">特殊不法行為</mark></strong>を一般不法行為と比較して押さえる必要がある。責任無能力者の監督義務者責任、使用者責任、注文者責任、工作物責任、動物占有者責任は、被害者保護や危険支配、報償責任の観点から、一般不法行為よりも責任主体や免責事由が特別に定められている。とくに<strong><mark class="kw">民法715条</mark></strong>の使用者責任と<strong><mark class="kw">民法717条</mark></strong>の工作物責任は、条文のただし書と求償関係まで問われる。</p>
+
+  <p>最後に、<strong><mark class="kw">共同不法行為</mark></strong>は、複数人が関与した損害を被害者がどのように回復できるかを扱う。<strong><mark class="kw">民法719条</mark></strong>は、共同不法行為者に連帯して賠償責任を負わせ、誰が具体的な損害を加えたか不明な場合にも同様の処理をする。試験では、「各加害者は自己の過失割合分だけ被害者に賠償すれば足りる」とする肢が誤りになりやすい。被害者に対する外部関係と、加害者間の内部的な求償関係を分けることが重要である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る全体像</span>
+    </div>
+    <div class="box__bd">
+      <p>飲食店の従業員Aが配達中に前方不注意で歩行者Bを負傷させた場合、A自身には<strong><mark class="kw">民法709条</mark></strong>の一般不法行為が問題になる。同時に、Aが店の事業の執行について事故を起こしたなら、店舗経営者Cには<strong><mark class="kw">民法715条</mark></strong>の使用者責任が問題になる。事故現場が店舗前の壊れた階段で、階段の欠陥が転倒を招いたなら、建物の占有者又は所有者に<strong><mark class="kw">民法717条</mark></strong>の工作物責任が問題になる。さらに、Aと別の従業員Dの共同の不注意が一つの傷害を発生させたなら、<strong><mark class="kw">民法719条</mark></strong>の共同不法行為により、被害者Bは各共同不法行為者に損害全体の賠償を求め得る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不法行為</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不法行為</mark></strong>とは、故意又は過失により他人の権利又は法律上保護される利益を侵害し、これによって損害を生じさせた場合に、加害者へ損害賠償責任を負わせる制度である。根拠は<strong><mark class="kw">民法709条</mark></strong>である。制度趣旨は、社会生活上発生した損害を、被害者にそのまま負担させるのが公平でない場合に、加害者へ移転させる点にある。ただし、損害が生じれば常に賠償責任が発生するわけではなく、故意又は過失、権利・利益侵害、因果関係、責任能力、違法性阻却事由の不存在を順に確認する必要がある。契約責任と異なり、事前の契約関係は不要であるが、契約関係がある場面でも不法行為責任が競合することがある。試験では、「契約関係がない場合は常に不法行為で救済される」も、「契約関係がある場合は不法行為が成立しない」も誤りになり得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">故意・過失</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">故意</mark></strong>は、自分の行為により他人の権利又は利益を侵害することを認識しながら行為する心理状態である。<strong><mark class="kw">過失</mark></strong>は、結果発生を予見でき、かつ回避できたのに、社会生活上必要な注意を尽くさなかったことをいう。民法上の過失は単なる不注意という日常語よりも規範的であり、加害者の職業、立場、危険の性質、専門性、当時の技術水準、被害発生の予見可能性を総合して判断される。たとえば医師、運送業者、建物管理者など専門的危険を扱う者には、その地位に応じた注意義務が求められる。試験では、過失を「主観的に気づかなかったから常に否定される」とする肢に注意する。過失は、通常人又は当該職業人ならどう行動すべきだったかという客観的な注意義務違反として問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">権利又は法律上保護される利益</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">権利又は法律上保護される利益</mark></strong>は、生命、身体、自由、名誉、財産権のような明確な権利だけでなく、人格的利益、営業上の利益、生活環境上の利益など、法秩序が保護に値すると評価する利益を含む。現行の<strong><mark class="kw">民法709条</mark></strong>は「権利」だけでなく「法律上保護される利益」を明記しているため、所有権侵害や身体侵害に限らず、プライバシー、信用、営業活動、契約締結上の信頼なども不法行為の対象になり得る。ただし、事実上の期待や単なる不快感がすべて保護されるわけではない。侵害された利益の性質、社会的相当性、加害行為の態様、競争や表現の自由との調整を考える必要がある。試験では、「財産権侵害でなければ損害賠償できない」という肢が誤りであり、<strong><mark class="kw">民法710条</mark></strong>の慰謝料とも接続する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">因果関係・相当因果関係</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">因果関係</mark></strong>は、加害行為と損害との間に法的に賠償責任を認めるだけのつながりがあることをいう。事実的な条件関係、つまりその行為がなければ損害が生じなかったという関係だけでなく、どこまでの損害を加害者に負担させるのが相当かという法的評価が必要である。この法的評価が<strong><mark class="kw">相当因果関係</mark></strong>である。たとえば交通事故で負傷した場合、治療費や休業損害は通常損害として認められやすいが、特殊な営業機会の喪失や第三者の独立した介入による損害は、相当性が別途問題になる。医療過誤や公害のように科学的証明が難しい事案では、経験則に照らした高度の蓋然性が問題となる。試験では、「少しでも事実的つながりがあれば全損害を賠償する」とする肢と、「自然科学的な完全証明がなければ因果関係は常に否定される」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">責任能力</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">責任能力</mark></strong>とは、自分の行為の責任を弁識するに足りる知能をいう。<strong><mark class="kw">民法712条</mark></strong>は、未成年者がこの知能を備えていなかったときは賠償責任を負わないと定める。<strong><mark class="kw">民法713条</mark></strong>は、精神上の障害により自己の行為の責任を弁識する能力を欠く状態にある者について、原則として賠償責任を否定する。ただし、故意又は過失で一時的にその状態を招いたときは責任を免れない。責任能力が否定される場合には、本人を責めるのではなく、<strong><mark class="kw">民法714条</mark></strong>により監督義務者等の責任を検討する。試験では、責任能力と行為能力を混同しないことが重要である。制限行為能力者であることと、不法行為上の責任能力がないことは同じではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">使用者責任</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">使用者責任</mark></strong>は、ある事業のために他人を使用する者が、被用者がその事業の執行について第三者に加えた損害を賠償する責任である。根拠は<strong><mark class="kw">民法715条</mark></strong>である。制度趣旨は、使用者が被用者の活動によって事業上の利益を得ており、同時に事業活動から生じる危険を社会に拡張しているため、損害の公平な分担として使用者に責任を負わせる点にある。要件は、使用関係、被用者自身の不法行為、事業の執行についてなされたこと、第三者への損害である。ただし、使用者が選任・監督について相当の注意をしたとき、又は注意しても損害が生ずべきであったときは免責される。もっとも実務上この免責は容易に認められない。試験では、「業務時間外なら常に事業執行性が否定される」「使用者が賠償したら被用者へ常に全額求償できる」という肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">工作物責任</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">工作物責任</mark></strong>は、土地の工作物の設置又は保存に瑕疵があることによって他人に損害を生じた場合に、工作物の占有者又は所有者に賠償責任を負わせる制度である。根拠は<strong><mark class="kw">民法717条</mark></strong>である。工作物とは、建物、塀、道路設備、階段、踏切設備のように土地に接着して人工的に設置された物をいう。設置又は保存の瑕疵とは、工作物が通常備えるべき安全性を欠いていることをいう。まず占有者が責任を負うが、占有者が損害発生防止に必要な注意をしたときは所有者が責任を負う。所有者責任は無過失責任とされるため、所有者が注意していたことだけでは免責されない。試験では、「所有者は過失がある場合に限り責任を負う」という肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">共同不法行為</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">共同不法行為</mark></strong>とは、数人が共同の不法行為によって他人に損害を加えた場合に、各自が連帯して損害を賠償する責任を負う制度である。根拠は<strong><mark class="kw">民法719条</mark></strong>である。共同といっても、必ず事前の共謀や意思連絡が必要というわけではなく、客観的に関連共同して一つの損害を発生させた場合も問題になる。条文は、共同行為者のうち誰が損害を加えたか不明な場合にも同様の責任を認め、教唆者・幇助者を共同行為者とみなす。制度趣旨は、複数人の行為が絡み合うため被害者が各人の寄与度を厳密に証明できない場合に、被害者救済を確保する点にある。試験では、被害者への関係では各自が損害全体につき責任を負い得ること、内部関係では負担部分に応じた求償が問題になることを分けて押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 760" role="img" aria-label="不法行為責任の判断構造">
+      <defs>
+        <marker id="arr35a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr35a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr35a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="112" x2="540" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="945" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="135" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35a-blue)"/>
+      <line x1="405" y1="150" x2="405" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35a-blue)"/>
+      <line x1="675" y1="150" x2="675" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35a-blue)"/>
+      <line x1="945" y1="150" x2="945" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35a-blue)"/>
+      <rect x="474" y="126" width="132" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="540" y="144" text-anchor="middle" font-size="13" fill="#1d4ed8">成立要件</text>
+
+      <line x1="540" y1="326" x2="540" y2="378" stroke="#ea580c" stroke-width="2" marker-end="url(#arr35a-orange)"/>
+      <rect x="464" y="344" width="152" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="540" y="362" text-anchor="middle" font-size="13" fill="#7c2d12">責任能力を確認</text>
+
+      <line x1="540" y1="488" x2="540" y2="532" stroke="#e11d48" stroke-width="2"/>
+      <line x1="270" y1="532" x2="810" y2="532" stroke="#e11d48" stroke-width="2"/>
+      <line x1="270" y1="532" x2="270" y2="590" stroke="#e11d48" stroke-width="2" marker-end="url(#arr35a-red)"/>
+      <line x1="810" y1="532" x2="810" y2="590" stroke="#e11d48" stroke-width="2" marker-end="url(#arr35a-red)"/>
+      <rect x="452" y="510" width="176" height="26" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="540" y="528" text-anchor="middle" font-size="13" fill="#9f1239">効果と調整</text>
+
+      <rect x="370" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="540" y="69" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">民法709条の一般不法行為</text>
+      <text x="540" y="93" text-anchor="middle" font-size="12" fill="#1e3a8a">損害の公平な分担を実現する基本規定</text>
+
+      <rect x="35" y="226" width="200" height="100" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="135" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">故意・過失</text>
+      <text x="135" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">注意義務違反</text>
+      <text x="135" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">予見可能性・回避可能性</text>
+
+      <rect x="290" y="226" width="230" height="100" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="405" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">権利・利益侵害</text>
+      <text x="405" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">生命・身体・名誉</text>
+      <text x="405" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">法律上保護される利益</text>
+
+      <rect x="560" y="226" width="230" height="100" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="675" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">損害</text>
+      <text x="675" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">財産的損害</text>
+      <text x="675" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">精神的損害</text>
+
+      <rect x="845" y="226" width="200" height="100" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="945" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">因果関係</text>
+      <text x="945" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">条件関係</text>
+      <text x="945" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">相当因果関係</text>
+
+      <rect x="370" y="386" width="340" height="102" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="540" y="421" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">責任能力・違法性阻却</text>
+      <text x="540" y="447" text-anchor="middle" font-size="12" fill="#7c2d12">未成年者・精神上の障害</text>
+      <text x="540" y="467" text-anchor="middle" font-size="12" fill="#7c2d12">正当防衛・緊急避難を確認</text>
+
+      <rect x="130" y="598" width="280" height="88" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+      <text x="270" y="632" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">損害賠償責任</text>
+      <text x="270" y="658" text-anchor="middle" font-size="12" fill="#9f1239">金銭賠償・慰謝料・名誉回復</text>
+
+      <rect x="670" y="598" width="280" height="88" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+      <text x="810" y="632" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">損害額の調整</text>
+      <text x="810" y="658" text-anchor="middle" font-size="12" fill="#9f1239">過失相殺・時効・求償</text>
+
+      <rect x="80" y="712" width="920" height="34" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="734" text-anchor="middle" font-size="13" fill="#9f1239">成立要件と効果を分け、最後に過失相殺・時効・特殊不法行為の適用を確認する。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">民法709条</mark></strong>の判断を、成立要件、責任能力、効果の三段階に分けて示している。まず、故意又は過失、権利・利益侵害、損害、因果関係がそろうかを確認する。次に、未成年者や精神上の障害による<strong><mark class="kw">責任能力</mark></strong>の有無、<strong><mark class="kw">民法720条</mark></strong>の正当防衛・緊急避難のような違法性阻却事由を確認する。最後に、賠償範囲、慰謝料、名誉回復、過失相殺、消滅時効を調整する。試験では、成立段階の問題と効果段階の問題を混ぜて出題されるため、この順序で読むと誤答を避けやすい。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 720" role="img" aria-label="特殊不法行為と共同不法行為の責任主体">
+      <defs>
+        <marker id="arr35b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr35b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr35b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="112" x2="560" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="155" y1="150" x2="965" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="155" y1="150" x2="155" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35b-blue)"/>
+      <line x1="425" y1="150" x2="425" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35b-blue)"/>
+      <line x1="695" y1="150" x2="695" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35b-blue)"/>
+      <line x1="965" y1="150" x2="965" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr35b-blue)"/>
+      <rect x="496" y="126" width="128" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="144" text-anchor="middle" font-size="13" fill="#1d4ed8">責任主体</text>
+
+      <line x1="425" y1="328" x2="425" y2="396" stroke="#ea580c" stroke-width="2" marker-end="url(#arr35b-orange)"/>
+      <line x1="695" y1="328" x2="695" y2="396" stroke="#ea580c" stroke-width="2" marker-end="url(#arr35b-orange)"/>
+      <rect x="348" y="354" width="154" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="425" y="372" text-anchor="middle" font-size="13" fill="#7c2d12">免責事由あり</text>
+      <rect x="618" y="354" width="154" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="695" y="372" text-anchor="middle" font-size="13" fill="#7c2d12">占有者から所有者へ</text>
+
+      <polyline points="155,328 155,364 300,364 300,530" fill="none" stroke="#e11d48" stroke-width="1.7" stroke-dasharray="5,4" marker-end="url(#arr35b-red)"/>
+      <polyline points="965,328 965,364 820,364 820,530" fill="none" stroke="#e11d48" stroke-width="1.7" stroke-dasharray="5,4" marker-end="url(#arr35b-red)"/>
+      <rect x="206" y="348" width="132" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="272" y="365" text-anchor="middle" font-size="13" fill="#9f1239">求償関係へ</text>
+      <rect x="782" y="348" width="132" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="848" y="365" text-anchor="middle" font-size="13" fill="#9f1239">連帯責任へ</text>
+
+      <rect x="390" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="69" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">特殊不法行為・共同不法行為</text>
+      <text x="560" y="93" text-anchor="middle" font-size="12" fill="#1e3a8a">危険支配・報償責任・被害者保護</text>
+
+      <rect x="35" y="226" width="240" height="102" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="155" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">監督義務者責任</text>
+      <text x="155" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法714条</text>
+      <text x="155" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">責任無能力者の損害</text>
+
+      <rect x="305" y="226" width="240" height="102" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="425" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">使用者責任</text>
+      <text x="425" y="286" text-anchor="middle" font-size="12" fill="#7c2d12">民法715条</text>
+      <text x="425" y="306" text-anchor="middle" font-size="12" fill="#7c2d12">事業の執行について</text>
+
+      <rect x="575" y="226" width="240" height="102" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="695" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">工作物責任</text>
+      <text x="695" y="286" text-anchor="middle" font-size="12" fill="#7c2d12">民法717条</text>
+      <text x="695" y="306" text-anchor="middle" font-size="12" fill="#7c2d12">設置又は保存の瑕疵</text>
+
+      <rect x="845" y="226" width="240" height="102" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+      <text x="965" y="260" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">共同不法行為</text>
+      <text x="965" y="286" text-anchor="middle" font-size="12" fill="#1e3a8a">民法719条</text>
+      <text x="965" y="306" text-anchor="middle" font-size="12" fill="#1e3a8a">各自が連帯して賠償</text>
+
+      <rect x="290" y="404" width="270" height="92" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="425" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">選任・監督の注意</text>
+      <text x="425" y="464" text-anchor="middle" font-size="12" fill="#7c2d12">免責は条文上あるが狭い</text>
+
+      <rect x="560" y="404" width="270" height="92" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+      <text x="695" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">占有者・所有者</text>
+      <text x="695" y="464" text-anchor="middle" font-size="12" fill="#7c2d12">所有者は無過失責任</text>
+
+      <rect x="160" y="538" width="280" height="90" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+      <text x="300" y="572" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">内部的求償</text>
+      <text x="300" y="598" text-anchor="middle" font-size="12" fill="#9f1239">負担部分・公平な分担</text>
+
+      <rect x="680" y="538" width="280" height="90" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+      <text x="820" y="572" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">被害者への外部責任</text>
+      <text x="820" y="598" text-anchor="middle" font-size="12" fill="#9f1239">損害全体につき連帯責任</text>
+
+      <rect x="90" y="666" width="940" height="34" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="560" y="688" text-anchor="middle" font-size="13" fill="#9f1239">特殊不法行為は「誰に危険を負担させるか」、共同不法行為は「被害者を証明困難から救うか」が中心。</text>
+    </svg>
+  </div>
+
+  <p>特殊不法行為では、加害行為者本人だけでなく、危険を支配し、利益を得ていた者に責任を負わせる場面がある。<strong><mark class="kw">使用者責任</mark></strong>は事業活動から生じる危険、<strong><mark class="kw">工作物責任</mark></strong>は物的設備の危険、<strong><mark class="kw">監督義務者責任</mark></strong>は責任無能力者の行動管理を問題にする。<strong><mark class="kw">共同不法行為</mark></strong>では、被害者に対する外部責任は連帯的に扱われる一方、加害者間では求償や負担部分が問題になる。試験では、条文の要件だけでなく、「誰が危険を支配していたか」「誰が被害者に対して損害全体を負うか」を読むと整理しやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>一般不法行為と主要な特殊不法行為</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">一般不法行為</th>
+        <th class="col--b">使用者責任</th>
+        <th class="col--c">工作物責任</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><span class="em-a">民法709条</span>。加害者本人の故意・過失を基礎にする。</td>
+        <td class="col--b"><span class="em-b">民法715条</span>。被用者の不法行為を前提に使用者へ責任を拡張する。</td>
+        <td class="col--c"><span class="em-c">民法717条</span>。土地工作物の瑕疵による損害を扱う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">責任主体</td>
+        <td class="col--a">加害行為をした本人。</td>
+        <td class="col--b">事業のために他人を使用する者、又は事業監督者。</td>
+        <td class="col--c">第一次的には占有者。占有者が必要な注意をしたときは所有者。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心要件</td>
+        <td class="col--a">故意・過失、権利・利益侵害、損害、因果関係、責任能力。</td>
+        <td class="col--b">使用関係、被用者の不法行為、事業の執行についての加害。</td>
+        <td class="col--c">土地工作物、設置又は保存の瑕疵、瑕疵と損害の因果関係。</td>
+      </tr>
+      <tr>
+        <td class="col--label">免責</td>
+        <td class="col--a">故意・過失や因果関係がなければ成立しない。正当防衛・緊急避難も問題になる。</td>
+        <td class="col--b">選任・監督に相当の注意をしたこと等がただし書の免責事由。</td>
+        <td class="col--c">占有者は必要な注意で免責され得るが、所有者は無過失責任。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">損害があれば故意・過失なしでも当然に賠償責任が生じる。</td>
+        <td class="col--b">業務時間外なら外形が事業に関連していても常に責任なし。</td>
+        <td class="col--c">所有者も注意義務を尽くせば常に免責される。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>責任能力・監督義務者・共同不法行為の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">責任能力</th>
+        <th class="col--b">監督義務者責任</th>
+        <th class="col--c">共同不法行為</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><span class="em-a">民法712条・713条</span>。</td>
+        <td class="col--b"><span class="em-b">民法714条</span>。</td>
+        <td class="col--c"><span class="em-c">民法719条</span>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">加害者本人に賠償責任を負わせられるか。</td>
+        <td class="col--b">本人が責任無能力である場合に、監督者へ責任を移せるか。</td>
+        <td class="col--c">複数人の行為が一つの損害に関与した場合に、被害者をどう救済するか。</td>
+      </tr>
+      <tr>
+        <td class="col--label">判断基準</td>
+        <td class="col--a">自己の行為の責任を弁識するに足りる知能の有無。</td>
+        <td class="col--b">法定監督義務者又はこれに準ずべき者か、監督義務を怠ったか。</td>
+        <td class="col--c">関連共同性、加害者不明、教唆・幇助の有無。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">責任能力がなければ本人は賠償責任を負わない。</td>
+        <td class="col--b">監督義務者が損害賠償責任を負う。ただし免責事由がある。</td>
+        <td class="col--c">各共同不法行為者が連帯して損害を賠償する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">未成年者は年齢だけで常に免責される。</td>
+        <td class="col--b">同居の家族は常に法定監督義務者となる。</td>
+        <td class="col--c">各加害者は被害者に対して過失割合分だけ賠償すれば足りる。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、まず「本人の<strong><mark class="kw">民法709条</mark></strong>責任が成立するか」を確認する。次に、本人に責任能力がない、使用関係がある、工作物の瑕疵がある、複数人が関与しているなど、特殊規定を動かす事実があるかを探す。比較表のうち、試験で最も入れ替えられやすいのは、使用者責任の「事業の執行について」と工作物責任の「占有者・所有者の責任順序」である。共同不法行為では、被害者への外部責任と内部的な求償を区別することが、正誤判断の決め手になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法709条 不法行為による損害賠償</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">故意又は過失によって他人の権利又は法律上保護される利益を侵害した者は、これによって生じた損害を賠償する責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法709条</mark></strong>は、一般不法行為の基本規定である。条文は短いが、故意又は過失、権利又は法律上保護される利益の侵害、損害、因果関係という複数の要件を含んでいる。「法律上保護される利益」は、平成の民法現代語化で明確化された重要文言であり、明確な権利侵害だけでなく、人格的利益や営業上の利益なども保護対象になり得る。違反時の効果は損害賠償であり、原則として金銭賠償である。契約責任とは要件も時効も異なるため、同じ事案で両方の構成があり得る場合は、どの要件で請求しているかを分けて読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法710条・711条 慰謝料と近親者固有の損害</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">他人の身体、自由若しくは名誉を侵害した場合又は他人の財産権を侵害した場合のいずれであるかを問わず、前条の規定により損害賠償の責任を負う者は、財産以外の損害に対しても、その賠償をしなければならない。</blockquote>
+      <blockquote class="legal-text">他人の生命を侵害した者は、被害者の父母、配偶者及び子に対しては、その財産権が侵害されなかった場合においても、損害の賠償をしなければならない。</blockquote>
+      <p><strong><mark class="kw">民法710条</mark></strong>は、精神的損害、つまり慰謝料の根拠になる。身体・自由・名誉の侵害だけでなく、財産権侵害でも財産以外の損害が発生すれば賠償対象になり得る。<strong><mark class="kw">民法711条</mark></strong>は、生命侵害の場合に、父母、配偶者、子という近親者に固有の損害賠償請求を認める。試験では、死亡した本人の損害賠償請求権の相続と、近親者固有の慰謝料請求を区別する必要がある。条文上列挙されていない者についても、判例上、これに準ずる関係で固有慰謝料が問題になる余地があるが、試験ではまず条文上の父母・配偶者・子を正確に押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法712条から714条 責任能力と監督義務者責任</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">未成年者は、他人に損害を加えた場合において、自己の行為の責任を弁識するに足りる知能を備えていなかったときは、その行為について賠償の責任を負わない。</blockquote>
+      <blockquote class="legal-text">前二条の規定により責任無能力者がその責任を負わない場合において、その責任無能力者を監督する法定の義務を負う者は、その責任無能力者が第三者に加えた損害を賠償する責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法712条</mark></strong>と<strong><mark class="kw">民法713条</mark></strong>は、本人の責任能力がない場合に本人責任を否定する。<strong><mark class="kw">民法714条</mark></strong>は、その場合に監督義務者へ責任を負わせる補充的な規定である。監督義務者責任は、責任無能力者本人の行為が外形上不法行為に当たることを前提に、監督義務違反を理由として監督者へ賠償責任を負わせる。もっとも、監督義務者が義務を怠らなかったとき、又は義務を怠らなくても損害が生ずべきであったときは免責される。近年の判例では、単に家族であることだけで直ちに法定監督義務者又はこれに準ずる者とはされない点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法715条・716条 使用者責任と注文者責任</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">ある事業のために他人を使用する者は、被用者がその事業の執行について第三者に加えた損害を賠償する責任を負う。</blockquote>
+      <blockquote class="legal-text">注文者は、請負人がその仕事について第三者に加えた損害を賠償する責任を負わない。ただし、注文又は指図についてその注文者に過失があったときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法715条</mark></strong>は、使用者が事業活動から利益を受け、危険を作り出していることに着目する規定である。被用者の行為が「その事業の執行について」なされたかは、職務そのものだけでなく、外形上職務と密接に関連するかで問題になる。三項は使用者又は監督者から被用者への求償を妨げないとするが、判例上、求償は信義則上相当な限度に制限されることがある。<strong><mark class="kw">民法716条</mark></strong>は、請負人の独立性を前提に注文者の責任を原則否定する。ただし、注文又は指図について注文者に過失があれば責任を負う。使用者責任と注文者責任は、指揮監督関係の有無で区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法717条・718条 工作物責任と動物占有者責任</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">土地の工作物の設置又は保存に瑕疵があることによって他人に損害を生じたときは、その工作物の占有者は、被害者に対してその損害を賠償する責任を負う。</blockquote>
+      <blockquote class="legal-text">動物の占有者は、その動物が他人に加えた損害を賠償する責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法717条</mark></strong>は、土地工作物の安全性欠如から生じる損害について、物の管理支配者へ責任を負わせる。占有者は必要な注意をしたとき免責されるが、その場合は所有者が賠償しなければならない。所有者の無過失責任と、占有者の免責可能性の差が頻出である。<strong><mark class="kw">民法718条</mark></strong>は、動物の占有者又は管理者に責任を負わせる。動物の種類及び性質に従い相当の注意をもって管理したときは免責されるため、動物の危険性、管理方法、事故時の状況を具体的に見る。両条は、物や動物を支配管理する者が危険を防止すべき地位にあるという点で共通する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法719条・720条 共同不法行為と違法性阻却</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">数人が共同の不法行為によって他人に損害を加えたときは、各自が連帯してその損害を賠償する責任を負う。</blockquote>
+      <blockquote class="legal-text">他人の不法行為に対し、自己又は第三者の権利又は法律上保護される利益を防衛するため、やむを得ず加害行為をした者は、損害賠償の責任を負わない。</blockquote>
+      <p><strong><mark class="kw">民法719条</mark></strong>は、共同加害、加害者不明、教唆・幇助を扱う。被害者保護のため、各共同不法行為者は損害全体について連帯責任を負う。条文上「連帯して」とされるため、内部負担割合は被害者への抗弁にはならない。<strong><mark class="kw">民法720条</mark></strong>は、正当防衛と緊急避難により、やむを得ず加害行為をした者の損害賠償責任を否定する。正当防衛では、被害者から不法行為者本人への損害賠償請求は妨げられない。刑法上の正当防衛と似ているが、民法では損害の公平な分担の観点から、被害者と真の不法行為者の関係を意識する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法721条から724条の2 損害額調整と時効</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">胎児は、損害賠償の請求権については、既に生まれたものとみなす。</blockquote>
+      <blockquote class="legal-text">被害者に過失があったときは、裁判所は、これを考慮して、損害賠償の額を定めることができる。</blockquote>
+      <blockquote class="legal-text">人の生命又は身体を害する不法行為による損害賠償請求権の消滅時効についての前条第一号の規定の適用については、同号中「三年間」とあるのは、「五年間」とする。</blockquote>
+      <p><strong><mark class="kw">民法721条</mark></strong>は、損害賠償請求権に関する胎児の権利能力を認める特則である。<strong><mark class="kw">民法722条</mark></strong>は、金銭賠償や中間利息控除の準用、過失相殺を定める。過失相殺では、被害者に責任能力までは不要で、事理弁識能力があれば足りるとされる点が判例上重要である。<strong><mark class="kw">民法723条</mark></strong>は名誉毀損における名誉回復処分を認める。<strong><mark class="kw">民法724条</mark></strong>は、損害及び加害者を知った時から三年、不法行為時から二十年という時効を定めるが、生命・身体侵害では<strong><mark class="kw">民法724条の2</mark></strong>により短期期間が五年に伸長される。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成11年2月25日 平成8年(オ)第2043号 民集53巻2号235頁</div>
+      <div class="case-card__title">医師の不作為と因果関係事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法709条</span>
+        <span class="badge badge--law">因果関係</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>肝硬変で継続的に診療を受けていた患者について、医師が肝細胞がんを早期発見するための適切な検査を十分に実施しなかったため、がんの発見が遅れ、患者が肝細胞がん及び肝不全により死亡したとして、遺族が損害賠償を求めた。原審は、検査をしていればどの時点でがんを発見でき、どの程度の治療可能性があったかについて慎重に見て、医師の不作為と死亡との因果関係を否定した。争点は、医師が適切な診療行為をしていれば患者が死亡時点でなお生存していたといえる高度の蓋然性があるか、また原審がその判断に必要な事情を尽くして審理したかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、訴訟上の因果関係の立証は、一点の疑義も許されない自然科学的証明ではなく、経験則に照らして全証拠を総合検討し、特定の事実が特定の結果発生を招いた関係を是認し得る高度の蓋然性の証明で足りるという枠組みを前提にした。そして、医師が適切な検査を実施していれば肝細胞がんを早期に発見し得たか、発見されていれば外科的切除その他の治療により死亡時点で生存していた可能性がどの程度あったかを具体的に検討すべきであるとした。原審がこれらの事情を十分に審理しないまま因果関係を否定した点には違法があるとして、破棄差戻しとした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">不法行為</mark></strong>における<strong><mark class="kw">因果関係</mark></strong>の証明度を理解するための最重要判例である。行政書士試験では、「因果関係は自然科学的に完全に証明されなければならない」という選択肢が誤りになりやすい。正しくは、経験則に照らし、通常人が疑いを差し挟まない程度の真実性の確信を持ち得る高度の蓋然性で足りる。医療過誤の事案に限らず、損害発生の過程に不確実性がある不法行為全般で重要な判断枠組みである。ただし、因果関係の証明が軽くなるという意味ではなく、証拠と経験則に基づく具体的な認定が必要である。</p>
+      <h4>関連判例・条文</h4>
+      <p>中心条文は<strong><mark class="kw">民法709条</mark></strong>であり、加害行為と損害との間の因果関係が問題となる。債務不履行の損害範囲である<strong><mark class="kw">民法416条</mark></strong>の相当因果関係論とも接続するが、不法行為では被侵害利益、加害態様、結果発生の蓋然性を含めて具体的に判断する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和32年4月30日 昭和30年(オ)第199号 民集11巻4号646頁</div>
+      <div class="case-card__title">使用者責任の趣旨事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法715条</span>
+        <span class="badge badge--law">事業の執行</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被用者が使用者の事業活動に関連して第三者に損害を加え、被害者が使用者に対して<strong><mark class="kw">民法715条</mark></strong>に基づく損害賠償を求めた。使用者側は、直接に加害行為をしたのは被用者であり、使用者自身の故意・過失ではないなどとして責任を争った。問題は、使用者責任の根拠を、使用者自身の選任監督上の過失だけに限定して理解するのか、それとも事業活動から利益を得る者が、その活動から生じる危険を負担するという観点から広く理解するのかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">民法715条</mark></strong>の使用者責任について、使用者が被用者の活動によって利益を受け、自己の事業範囲を拡張することにより第三者に損害を生じさせる危険を増大させていることに着目し、損害の公平な分担の見地から、被用者がその事業の執行について第三者に加えた損害を使用者に負担させる制度であるとした。この理解により、使用者責任は単なる選任監督上の過失責任にとどまらず、報償責任・危険責任の要素を含むものとして位置付けられる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">使用者責任</mark></strong>の制度趣旨を説明する基本判例である。試験では、使用者に現実の過失がない限り絶対に責任を負わないという肢が出されることがあるが、条文ただし書の免責があるとしても、制度の出発点は事業活動から生じる危険の公平な負担である。また、「事業の執行について」は、形式的な職務命令の有無だけでなく、外形上職務と関連するかが問題になる。使用者が賠償した後の被用者への求償は、常に全額ではなく、損害の公平な分担から制限され得ることも関連して押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法715条</mark></strong>一項の本文とただし書、三項の求償権が中心である。使用者の被用者に対する求償を信義則上相当な限度に制限した最高裁昭和51年7月8日判決、被用者側から使用者への逆求償を認めた最高裁令和2年2月28日判決とも接続する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和46年4月23日 昭和40年(オ)第536号 民集25巻3号351頁</div>
+      <div class="case-card__title">踏切道工作物責任事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法717条</span>
+        <span class="badge badge--law">設置保存の瑕疵</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>鉄道の踏切道で事故が発生し、被害者側が、踏切道の軌道施設に警報機や遮断機など本来備えるべき保安設備がなかったことを理由に、<strong><mark class="kw">民法717条</mark></strong>の工作物責任を主張した。鉄道事業者側からは、踏切道の軌道施設そのものと保安設備を分けて考えれば、軌道施設自体に物理的欠陥があるわけではない、又は事故は利用者側の注意不足によるものだという反論があり得た。争点は、踏切道という工作物をどの範囲で一体的に評価し、どのような場合に「設置又は保存の瑕疵」があるといえるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、土地の工作物である踏切道の軌道施設は、保安設備とあわせて一体として考察すべきであるとした。そして、当該踏切道が本来備えるべき保安設備を欠く場合には、土地の工作物である軌道施設の設置に瑕疵があるものとして、<strong><mark class="kw">民法717条</mark></strong>所定の帰責原因になると判示した。つまり、瑕疵は工作物の物理的破損だけでなく、当該工作物の場所的環境、利用状況、危険性、通常期待される安全設備を含めて判断される。踏切道を単なるレールや路面だけで切り出すのではなく、事故防止のため通常必要な設備を備えた安全な施設として機能していたかを問う判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">工作物責任</mark></strong>の「瑕疵」を、単純な物理的欠陥に限定しないことを示す。誤答パターンは、「工作物の設置保存の瑕疵とは、物が壊れている場合に限られる」という肢である。正しくは、工作物が通常備えるべき安全性を欠くかを、構造、用法、周辺環境、事故発生の危険、保安設備の有無から具体的に判断する。また、占有者が必要な注意を尽くした場合にも所有者が無過失責任を負う点と結び付けて出題されやすい。国家賠償法2条の営造物責任との比較でも、通常有すべき安全性という発想が重要になる。</p>
+      <h4>関連判例・条文</h4>
+      <p>中心条文は<strong><mark class="kw">民法717条</mark></strong>である。公の営造物の設置管理の瑕疵を扱う国家賠償法2条とも構造が近く、道路、河川、学校施設、公園施設の安全性判断と比較して学ぶと理解しやすい。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和39年6月24日 昭和37年(オ)第412号 民集18巻5号854頁</div>
+      <div class="case-card__title">過失相殺能力事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法722条</span>
+        <span class="badge badge--law">過失相殺</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>未成年の被害者が事故に遭い、損害賠償請求をしたところ、加害者側は被害者にも事故発生について不注意があったとして、<strong><mark class="kw">民法722条</mark></strong>二項の過失相殺を主張した。被害者が未成年である場合、本人に不法行為責任を負わせるための責任能力まではないことがある。そこで、損害額を減額する過失相殺をするためにも、加害者として責任を負う場合と同じ程度の責任能力が必要か、それともより低い事理弁識能力で足りるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、<strong><mark class="kw">民法722条</mark></strong>二項により被害者の過失を斟酌するには、被害者たる未成年者が事理を弁識するに足りる知能を備えていれば足り、行為の責任を弁識するに足りる知能を備えていることまでは要しないと判示した。過失相殺は、被害者に積極的な損害賠償責任を負わせる制度ではなく、加害者が負担すべき損害額を公平の見地から調整する制度である。そのため、加害者として責任を負わせる場合の責任能力と同じ水準を要求する必要はないという構造である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">責任能力</mark></strong>と<strong><mark class="kw">過失相殺</mark></strong>に必要な能力を区別する典型論点である。誤答パターンは、「被害者が不法行為責任を負うだけの責任能力を有しない限り、被害者の過失を斟酌できない」という肢である。正しくは、過失相殺は責任を負わせる制度ではなく損害額調整の制度なので、事理弁識能力で足りる。未成年者、責任無能力者、監督義務者責任と組み合わせて問われやすいため、本人が加害者として責任を負う場面と、被害者として損害額を調整される場面を分ける必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法722条</mark></strong>二項、<strong><mark class="kw">民法712条</mark></strong>、<strong><mark class="kw">民法714条</mark></strong>が関連する。損害賠償責任の成立要件と、損害額の公平な調整を段階的に区別する判例である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成28年3月1日 平成26年(受)第1434号 民集70巻3号681頁</div>
+      <div class="case-card__title">JR東海認知症高齢者監督責任事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法714条</span>
+        <span class="badge badge--law">監督義務者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>認知症により責任を弁識する能力を欠く高齢男性Aが、外出して駅構内の線路に立ち入り、列車と衝突して死亡した。鉄道会社は、列車遅延や振替輸送などにより損害を被ったとして、Aの妻Y1と長男Y2らに対し、<strong><mark class="kw">民法709条</mark></strong>又は<strong><mark class="kw">民法714条</mark></strong>に基づく損害賠償を請求した。Aは妻と同居していたが妻も高齢で要介護認定を受けており、長男は介護方針の話合いに関与していたものの、二十年以上同居しておらず、事故直前も月に数回程度訪問するにとどまっていた。争点は、妻や長男が法定監督義務者又はこれに準ずべき者として責任を負うかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、精神障害者と同居する配偶者であることだけで、直ちに<strong><mark class="kw">民法714条</mark></strong>一項の法定監督義務者に当たるわけではないとした。また、法定監督義務者に準ずべき者に当たるかは、身上監護の事実、日常生活への関与、財産管理、介護体制への関与、本人の問題行動の内容、監督が現実に可能であったかなど諸般の事情を総合して判断すべきであるとした。そのうえで、本件の妻は高齢で要介護状態にあり、長男も遠方で生活し月数回訪問する程度であったなどの事情から、いずれも法定監督義務者に準ずべき者には当たらないと判断し、責任を否定した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">監督義務者責任</mark></strong>を家族関係だけで機械的に認めないことを示す重要判例である。誤答パターンは、「同居の配偶者は常に民法714条の法定監督義務者である」「介護方針の相談に加わった長男は当然に監督義務者に準ずる者となる」という肢である。正しくは、監督義務を負う法的地位と、現実に監督可能な状況があったかを具体的に見る。高齢社会における家族の責任範囲を画した判例であり、責任無能力者本人の免責、監督義務者の免責、被害者保護との調整をセットで理解する必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法713条</mark></strong>、<strong><mark class="kw">民法714条</mark></strong>が中心である。成年後見制度、親族法上の扶養義務、介護保険制度の実務とは接点があるが、民法714条の賠償責任は、それらの関与があるだけで自動的に生じるものではない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマと解答アプローチ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">民法709条</mark></strong>では、故意・過失、権利又は法律上保護される利益の侵害、損害、因果関係を順に確認する。</li>
+        <li><strong><mark class="kw">責任能力</mark></strong>は行為能力と別概念であり、未成年者や精神上の障害がある者でも常に免責されるわけではない。</li>
+        <li><strong><mark class="kw">民法714条</mark></strong>では、責任無能力者本人の免責を前提に、監督義務者又は準ずる者の責任を検討する。</li>
+        <li><strong><mark class="kw">民法715条</mark></strong>では、「事業の執行について」とただし書の免責、三項の求償をセットで押さえる。</li>
+        <li><strong><mark class="kw">民法717条</mark></strong>では、瑕疵を通常備えるべき安全性の欠如として理解し、占有者と所有者の責任順序を覚える。</li>
+        <li><strong><mark class="kw">民法719条</mark></strong>では、被害者への外部関係では各自が損害全体につき連帯責任を負う。</li>
+        <li><strong><mark class="kw">民法722条</mark></strong>の過失相殺では、被害者に責任能力までは不要で、事理弁識能力で足りる。</li>
+        <li><strong><mark class="kw">民法724条の2</mark></strong>により、生命・身体侵害では短期消滅時効が三年ではなく五年になる。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「他人に損害を与えた者は、故意又は過失がなくても当然に民法709条の責任を負う。」これは誤りである。<strong><mark class="kw">民法709条</mark></strong>は故意又は過失を要求する。ただし、<strong><mark class="kw">民法717条</mark></strong>の所有者責任のように特殊規定では無過失責任となる場面がある。</p>
+      <p><strong>誤りの選択肢例2：</strong>「未成年者は、年齢にかかわらず不法行為責任を負わない。」これは誤りである。<strong><mark class="kw">民法712条</mark></strong>は、自己の行為の責任を弁識するに足りる知能を備えていなかったときに限り免責する。</p>
+      <p><strong>誤りの選択肢例3：</strong>「被用者が勤務時間外に事故を起こした場合、使用者責任は常に成立しない。」これは誤りである。<strong><mark class="kw">民法715条</mark></strong>の「事業の執行について」は、形式的な勤務時間だけでなく外形上の職務関連性を含めて判断される。</p>
+      <p><strong>誤りの選択肢例4：</strong>「工作物の所有者は、損害発生防止に必要な注意をしたことを証明すれば免責される。」これは誤りである。<strong><mark class="kw">民法717条</mark></strong>で注意義務による免責が問題になるのは占有者であり、所有者は無過失責任を負う。</p>
+      <p><strong>誤りの選択肢例5：</strong>「共同不法行為では、各加害者は被害者に対して自己の過失割合分だけ賠償すれば足りる。」これは誤りである。<strong><mark class="kw">民法719条</mark></strong>は各自が連帯して損害を賠償する責任を負うと定める。</p>
+      <p><strong>誤りの選択肢例6：</strong>「生命・身体侵害の不法行為でも、被害者が損害及び加害者を知った時から三年で常に時効消滅する。」これは誤りである。<strong><mark class="kw">民法724条の2</mark></strong>により、生命又は身体を害する不法行為では五年に読み替えられる。</p>
+    </div>
+  </div>
+
+  <p>解答順序は、第一に本人の<strong><mark class="kw">民法709条</mark></strong>責任を検討する。第二に、責任能力がない場合は<strong><mark class="kw">民法714条</mark></strong>へ進み、監督義務者の有無と免責を確認する。第三に、使用関係、請負関係、工作物、動物、共同加害といった特殊規定を動かす事実を探す。第四に、効果段階で、慰謝料、近親者固有損害、過失相殺、名誉回復、消滅時効を確認する。とくに、条文番号の引っかけでは、使用者責任を714条、監督義務者責任を715条、工作物責任を718条などと入れ替える肢に注意する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不法行為</mark></strong>は、債務不履行、国家賠償法、行政法、憲法の人権論と接続する。債務不履行との関係では、契約関係がある場合に、契約上の安全配慮義務違反として構成するのか、<strong><mark class="kw">民法709条</mark></strong>の不法行為として構成するのかが問題になる。国家賠償法との関係では、公務員の職務行為による損害は国家賠償法1条、公の営造物の設置管理の瑕疵は国家賠償法2条が特別法として問題になる。憲法では、名誉、プライバシー、表現の自由との調整が不法行為の違法性判断に影響する。行政書士試験では、民法の不法行為を単独で覚えるより、国家賠償法の要件と比較しておくと得点しやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">近年の改正と学習上の注意</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の民法改正では、不法行為の消滅時効に関する整理が重要である。<strong><mark class="kw">民法724条</mark></strong>は、損害及び加害者を知った時から三年、不法行為の時から二十年という形で時効構成を明確にした。さらに、生命又は身体を害する不法行為については、<strong><mark class="kw">民法724条の2</mark></strong>が短期期間を五年に伸長している。人身損害は治療、後遺障害、症状固定などにより損害把握に時間がかかるため、被害者保護を厚くしたものである。試験では、一般の財産侵害と生命・身体侵害の時効期間を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <p><strong><mark class="kw">不法行為</mark></strong>の学習では、条文の並びを「基本責任、責任能力、他人の行為・物の危険、共同加害、効果・時効」として整理するとよい。<strong><mark class="kw">民法709条</mark></strong>から<strong><mark class="kw">民法711条</mark></strong>までは、本人の責任と損害の種類である。<strong><mark class="kw">民法712条</mark></strong>から<strong><mark class="kw">民法714条</mark></strong>までは、責任能力と監督義務者の責任である。<strong><mark class="kw">民法715条</mark></strong>から<strong><mark class="kw">民法718条</mark></strong>までは、使用者、注文者、工作物、動物という特殊な責任主体を扱う。<strong><mark class="kw">民法719条</mark></strong>以下は、共同加害、正当防衛・緊急避難、胎児、過失相殺、名誉回復、時効という効果面の整理である。</p>
+
+  <p>実務では、不法行為責任の成否だけでなく、どの損害項目をどこまで請求できるかが重要になる。治療費、休業損害、逸失利益、慰謝料、物損、弁護士費用相当損害、遅延損害金など、損害項目ごとに因果関係と相当性を確認する必要がある。行政書士試験では詳細な損害算定までは中心ではないが、<strong><mark class="kw">民法710条</mark></strong>の慰謝料、<strong><mark class="kw">民法711条</mark></strong>の近親者固有損害、<strong><mark class="kw">民法722条</mark></strong>の過失相殺は、条文問題として出題されやすい。</p>
+
+  <p>また、<strong><mark class="kw">使用者責任</mark></strong>や<strong><mark class="kw">工作物責任</mark></strong>は、被害者から見て資力のある責任主体に請求できるという実務上の意味が大きい。従業員個人、責任無能力者本人、建物の一時的占有者だけでは十分な賠償を受けられない場合に、使用者、監督義務者、所有者へ責任を広げることで被害者救済を図る。ただし、責任を広げるには条文上の要件が必要であり、家族、雇用主、所有者であれば常に責任を負うわけではない。この「被害者保護」と「責任主体の限定」の調整が、不法行為法の基本発想である。</p>
+
+  <p>学習上は、判例を単なる結論で覚えないことが重要である。平成11年2月25日判決は、因果関係を自然科学的完全証明ではなく高度の蓋然性で判断する枠組みを示す。昭和46年4月23日判決は、工作物の瑕疵を通常備えるべき安全性から評価する。平成28年3月1日判決は、監督義務者に準ずる者を家族関係だけで機械的に認めない。昭和39年6月24日判決は、過失相殺に必要な能力と不法行為責任能力を区別する。これらは、要件の意味を具体化する判例として、条文と一緒に読む必要がある。</p>
+
+  <p>最後に、問題文を読むときは、加害者が一人か複数か、本人に責任能力があるか、使用関係や請負関係があるか、物や動物の危険が介在しているか、被害者側にも過失があるか、生命・身体侵害か財産侵害かを順に確認する。この順序で事実を拾うと、<strong><mark class="kw">民法709条</mark></strong>だけで処理すべき問題なのか、<strong><mark class="kw">民法714条</mark></strong>から<strong><mark class="kw">民法719条</mark></strong>の特殊規定へ進むべき問題なのかを判別しやすい。不法行為は条文数が多いが、すべては「誰に、どの損害を、公平に負担させるか」という一つの視点でつながっている。</p>
+</section>
+
+</body>
+</html>

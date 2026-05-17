@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>所有権 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">所有権</h1>
+  <p class="page-title-block__sub">所有権の内容・法令上の制限・相隣関係・共有関係の意思決定を整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法206条</span>
+    <span class="badge badge--info">民法207条</span>
+    <span class="badge badge--info">民法209条</span>
+    <span class="badge badge--info">民法249条</span>
+    <span class="badge badge--info">民法251条</span>
+    <span class="badge badge--info">民法252条</span>
+    <span class="badge badge--info">民法256条</span>
+    <span class="badge badge--info">民法258条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">所有権</mark></strong>は、物を全面的に支配する物権であり、民法206条は、所有者が法令の制限内でその所有物を自由に使用、収益、処分する権利を有すると定める。使用とは自宅に住む、土地を駐車場として使うなど物をそのまま利用すること、収益とは賃料や果実を得ること、処分とは売却、贈与、担保設定、廃棄など物の法律上・事実上の帰属や状態を変えることをいう。所有権は物権の中核であり、所有権を理解すると、物権変動、取得時効、担保物権、賃貸借、相続財産の管理まで一続きで見える。</p>
+
+  <p>もっとも、<strong><mark class="kw">所有権</mark></strong>は「絶対に何をしてもよい権利」ではない。条文自体が「法令の制限内」と書いているため、建築基準法、都市計画法、農地法、区分所有法、借地借家法などの公法・特別法による制限を受ける。また、民法の内部にも、隣地使用権、囲繞地通行権、流水・境界・竹木の枝根に関する<strong><mark class="kw">相隣関係</mark></strong>、権利濫用禁止、信義則、公序良俗がある。所有権の単元では、所有者の強い支配権と、他人・近隣・共同所有者との調整原理を同時に読む必要がある。</p>
+
+  <p>行政書士試験で特に重要なのは、<strong><mark class="kw">共有</mark></strong>である。共有とは、一つの物を複数人が持分に応じて所有する状態であり、各共有者は共有物全体を持分に応じて使用できる。しかし、一人の共有者が共有物全部を勝手に売却したり、大規模に改造したり、長期賃貸したりすると、他の共有者の所有権を侵害する。そのため民法は、行為の重さに応じて、保存行為は各共有者が単独でできる、管理行為は持分価格の過半数で決する、変更行為は原則として他の共有者の同意を要する、という段階的なルールを置く。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">実生活でのイメージ</span>
+    </div>
+    <div class="box__bd">
+      <p>兄弟二人が親から土地建物を相続し、各二分の一の持分で共有している場面を考える。一方が建物に住み続けること自体は、共有者として共有物全体を使用する権限があるため、他方が当然に明渡しを求められるわけではない。しかし、住んでいる共有者が持分を超えて単独使用し、他方の使用を妨げている場合には、使用対価の償還、不当利得、損害賠償、管理方法の決定、共有物分割などが問題になる。試験では「共有者だから全部を自由に使える」と「共有者だから他の共有者を当然に追い出せる」の両方が誤りになり得る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">所有権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">所有権</mark></strong>とは、法令の制限内で所有物を自由に使用、収益、処分できる権利である。所有権は物に対する全面的・包括的な支配権であり、地上権、抵当権、質権のように特定の利用や担保価値だけを支配する制限物権とは異なる。もっとも、全面的支配とは無制限を意味しない。民法206条は「法令の制限内」と明記しており、民法上の相隣関係、権利濫用禁止、共有者間の調整、特別法上の土地利用規制が所有権の外枠を作る。効果として、所有者は目的物を利用し、賃料などの利益を取得し、売却・担保設定・廃棄をすることができる。所有権侵害に対しては、明文の包括規定はないが、判例・通説上、返還請求、妨害排除請求、妨害予防請求という物権的請求権が認められる。試験では「所有権は消滅時効にかかる」「所有者は法令に反しても自由に利用できる」とする選択肢が誤りにされやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">所有権の制限</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">所有権の制限</mark></strong>とは、所有者の使用・収益・処分の自由が、他人の権利、近隣関係、公共の利益、法令上の規制によって制約されることをいう。民法206条は所有権の自由を定める一方で、その自由を「法令の制限内」に置いている。民法内部では、隣地使用、囲繞地通行、境界標、竹木の枝根、共有物の使用・管理・変更、信義則・権利濫用禁止が代表的である。公法上は、都市計画、建築確認、農地転用、道路・河川・文化財・環境規制などが所有権の行使方法を制限する。制度趣旨は、所有権が社会の中で行使される権利であり、所有者一人の利益だけでなく周囲の生活利益・取引安全・土地利用秩序との調和を要する点にある。試験では、所有権の強さを認めつつ、制限規定を例外として正確に適用できるかが問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">物権的請求権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">物権的請求権</mark></strong>とは、物権の円満な支配が妨げられた場合に、物権者が妨害状態の回復・排除・予防を求める権利である。所有権に基づく場合、目的物を占有している無権原者に返還を求める返還請求、無効な登記や越境物の撤去を求める妨害排除請求、将来の倒壊・侵入などを防ぐ妨害予防請求が典型である。条文上は包括的な明文がないが、所有権の排他的支配を実効化するために認められる。損害賠償請求とは異なり、相手方の故意・過失や損害発生を当然の要件としない点が重要である。占有訴権とも異なり、物権的請求権は本権に基づくため、所有権などの権利帰属が問題になる。試験では、所有権に基づく返還請求と占有回収の訴え、不法行為に基づく損害賠償を混同しないことが問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相隣関係</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相隣関係</mark></strong>とは、隣接する不動産の所有者相互の利用調整に関する民法上の制度である。土地所有権は土地の上下に及ぶが、土地は隣地と連続して存在し、一方の利用が他方の土地利用に影響する。そのため民法は、隣地使用、囲繞地通行、流水、境界標、囲障、目隠し、竹木の枝根などについて、所有者の自由を一定範囲で制限し、必要な利用を認める。相隣関係の特徴は、土地の有効利用と隣人の損害最小化を同時に要求する点である。たとえば民法209条の隣地使用では、必要な範囲内で隣地を使用できるが、日時・場所・方法は隣地所有者や現使用者の損害が最も少ないものを選び、原則として通知も必要になる。試験では、単なる好意や契約ではなく、所有権の限界として法律上当然に生じる調整ルールである点が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">共有・持分</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">共有</mark></strong>とは、一個の物について複数人が持分を有して所有する状態である。各共有者の権利は、物の特定部分ではなく、共有物全体に対する割合的な支配として理解する。たとえば土地を二分の一ずつ共有する場合、北側半分がA、南側半分がBという意味ではなく、土地全体についてAとBがそれぞれ二分の一の持分を有する。民法249条は、各共有者が共有物全部について持分に応じた使用をできると定める。したがって、少数持分者でも共有物全部に及ぶ使用権限を持つが、他の共有者の持分を排除して独占できるわけではない。持分は譲渡・放棄・相続の対象となり、持分割合が不明な場合は相等しいものと推定される。試験では、共有と合有・総有、共有持分と物理的区画、持分処分と共有物全部の処分を区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">変更・管理・保存</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">共有物の変更</mark></strong>、<strong><mark class="kw">共有物の管理</mark></strong>、<strong><mark class="kw">保存行為</mark></strong>は、共有物に対する行為を影響の大きさで三段階に分ける考え方である。保存行為は、共有物の現状を維持し、権利の滅失・毀損を防ぐ行為であり、各共有者が単独でできる。雨漏り修繕、不法占拠者への妨害排除、時効完成を防ぐ措置などが典型である。管理行為は、共有物の利用・改良など、性質を大きく変えない利用方法の決定であり、持分価格の過半数で決する。通常の賃貸、使用方法の決定、管理者の選任・解任などが含まれる。変更行為は、共有物の形状または効用を著しく変更する行為であり、原則として他の共有者の同意を要する。試験では「売却は管理行為」「軽微な変更も常に全員同意」といった選択肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">共有物分割</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">共有物分割</mark></strong>とは、共有状態を解消し、共有物またはその価値を各共有者に帰属させる制度である。民法256条は、各共有者がいつでも共有物の分割を請求できるとし、ただし五年を超えない不分割契約を認める。協議が調わないとき、または協議できないときは、民法258条により裁判所に分割を請求できる。裁判上の分割方法は、現物分割、共有者に債務を負担させて他の共有者の持分を取得させる価格賠償型の分割、競売分割が中心である。制度趣旨は、共有が共同利用の便宜を与える一方、意思決定の停滞や利用対立を生みやすいため、各共有者に共有関係から離脱する自由を保障する点にある。試験では、分割請求は原則いつでも可能だが、不分割契約は五年以内に限られる点、裁判所の分割方法に価格賠償が明文化された点が重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" role="img" aria-label="所有権の内容と制限の全体構造図">
+      <defs>
+        <marker id="arr-own1-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-own1-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr-own1-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="136" x2="810" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="170" y1="136" x2="170" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own1-blue)"/>
+      <line x1="490" y1="136" x2="490" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own1-blue)"/>
+      <line x1="810" y1="136" x2="810" y2="176" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own1-blue)"/>
+      <line x1="170" y1="252" x2="170" y2="352" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own1-orange)"/>
+      <line x1="490" y1="252" x2="490" y2="352" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own1-orange)"/>
+      <line x1="810" y1="252" x2="810" y2="352" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own1-orange)"/>
+      <polyline points="300,212 342,212 342,386 360,386" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-own1-red)"/>
+      <polyline points="680,212 638,212 638,386 620,386" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-own1-red)"/>
+      <rect x="340" y="30" width="300" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">所有権</text>
+      <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">206条：使用・収益・処分</text>
+      <g>
+        <rect x="40" y="184" width="260" height="68" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="170" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">使用</text>
+        <text x="170" y="232" text-anchor="middle" font-size="12" fill="#dbeafe">居住・利用・管理</text>
+      </g>
+      <g>
+        <rect x="360" y="184" width="260" height="68" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="490" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">収益</text>
+        <text x="490" y="232" text-anchor="middle" font-size="12" fill="#dbeafe">賃料・果実・利益取得</text>
+      </g>
+      <g>
+        <rect x="680" y="184" width="260" height="68" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="810" y="211" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">処分</text>
+        <text x="810" y="232" text-anchor="middle" font-size="12" fill="#dbeafe">売却・担保・廃棄</text>
+      </g>
+      <g>
+        <rect x="40" y="360" width="260" height="76" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="170" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">法令上の制限</text>
+        <text x="170" y="410" text-anchor="middle" font-size="12" fill="#fff7ed">建築・農地・都市計画など</text>
+      </g>
+      <g>
+        <rect x="360" y="360" width="260" height="76" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">民法上の限界</text>
+        <text x="490" y="410" text-anchor="middle" font-size="12" fill="#fff7ed">相隣関係・共有・権利濫用</text>
+      </g>
+      <g>
+        <rect x="680" y="360" width="260" height="76" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="810" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">侵害への救済</text>
+        <text x="810" y="410" text-anchor="middle" font-size="12" fill="#ffe4e6">返還・排除・予防</text>
+      </g>
+      <rect x="88" y="506" width="804" height="54" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="490" y="529" text-anchor="middle" font-size="13" fill="#9f1239">所有権は強いが、常に「法令の制限内」で、近隣・共有者・第三者との調整を受ける。</text>
+      <text x="490" y="549" text-anchor="middle" font-size="12" fill="#9f1239">救済は本権に基づくため、占有訴権や不法行為とは要件を分けて判断する。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">所有権</mark></strong>を、使用・収益・処分という権能と、その外側にある制限・救済の構造で整理している。所有権は物権の中で最も包括的な権利だが、206条自体が「法令の制限内」と定めるため、権利の強さと制約を同時に読む必要がある。相隣関係は隣地との調整、共有は共同所有者相互の調整、権利濫用禁止は形式的所有権行使の限界として働く。所有権侵害があれば返還・妨害排除・妨害予防を考えるが、これは本権に基づく救済であり、占有の事実を保護する占有訴権とは別の制度である。</p>
+
+  <h3>図2：共有物に対する行為の判断構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 640" role="img" aria-label="共有物の変更管理保存の判断構造図">
+      <defs>
+        <marker id="arr-own2-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-own2-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="490" y1="94" x2="490" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="180" y1="132" x2="800" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="180" y1="132" x2="180" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <line x1="490" y1="132" x2="490" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <line x1="800" y1="132" x2="800" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <line x1="180" y1="258" x2="180" y2="362" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <line x1="490" y1="258" x2="490" y2="362" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <line x1="800" y1="258" x2="800" y2="362" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr-own2-blue)"/>
+      <polyline points="800,448 800,510 490,510 490,548" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-own2-red)"/>
+      <rect x="346" y="30" width="288" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="490" y="58" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">共有物への行為</text>
+      <text x="490" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">影響の大きさで必要な同意が変わる</text>
+      <g>
+        <rect x="50" y="180" width="260" height="78" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="180" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">保存行為</text>
+        <text x="180" y="232" text-anchor="middle" font-size="12" fill="#dbeafe">現状維持・権利保全</text>
+      </g>
+      <g>
+        <rect x="360" y="180" width="260" height="78" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">管理行為</text>
+        <text x="490" y="232" text-anchor="middle" font-size="12" fill="#fff7ed">利用・改良・管理者選任</text>
+      </g>
+      <g>
+        <rect x="670" y="180" width="260" height="78" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="800" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">変更行為</text>
+        <text x="800" y="232" text-anchor="middle" font-size="12" fill="#ffe4e6">形状・効用の著しい変更</text>
+      </g>
+      <g>
+        <rect x="50" y="370" width="260" height="78" rx="6" fill="#2563eb" stroke="#2563eb" stroke-width="1"/>
+        <text x="180" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">各共有者が単独可</text>
+        <text x="180" y="422" text-anchor="middle" font-size="12" fill="#dbeafe">252条5項：修繕・妨害排除</text>
+      </g>
+      <g>
+        <rect x="360" y="370" width="260" height="78" rx="6" fill="#ea580c" stroke="#ea580c" stroke-width="1"/>
+        <text x="490" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">持分価格の過半数</text>
+        <text x="490" y="422" text-anchor="middle" font-size="12" fill="#fff7ed">252条：使用方法・短期賃貸</text>
+      </g>
+      <g>
+        <rect x="670" y="370" width="260" height="78" rx="6" fill="#e11d48" stroke="#e11d48" stroke-width="1"/>
+        <text x="800" y="400" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">他共有者の同意</text>
+        <text x="800" y="422" text-anchor="middle" font-size="12" fill="#ffe4e6">251条：著しい変更は重い</text>
+      </g>
+      <g>
+        <rect x="338" y="548" width="304" height="56" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+        <text x="490" y="572" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">共有物分割</text>
+        <text x="490" y="592" text-anchor="middle" font-size="12" fill="#dbeafe">利用対立が続く場合の出口</text>
+      </g>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">共有物</mark></strong>に対する行為を、保存・管理・変更の三段階で判断する流れを示している。まず、行為が現状維持にとどまるなら保存行為として各共有者が単独でできる。次に、共有物の性質を大きく変えない利用・改良であれば管理行為となり、持分価格の過半数で決する。さらに、形状または効用を著しく変える行為は変更行為となり、原則として他の共有者の同意を要する。どの分類にも無理があるほど対立が深い場合には、管理方法の決定だけでなく、共有物分割によって共有関係そのものを解消する発想が必要になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparative Table</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">所有権</th>
+        <th class="col--b">占有権</th>
+        <th class="col--c">共有持分権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">物を全面的に支配</span>し、使用・収益・処分できる本権。</td>
+        <td class="col--b"><span class="em-b">事実上の支配</span>を保護する権利。本権の有無と別に成立する。</td>
+        <td class="col--c"><span class="em-c">共有物全体に対する割合的支配</span>。物の一部ではなく全体に及ぶ。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法206条</mark></strong>、207条、所有権に基づく物権的請求権。</td>
+        <td class="col--b">民法180条以下、197条以下の占有訴権。</td>
+        <td class="col--c"><strong><mark class="kw">民法249条</mark></strong>以下、251条、252条、256条、258条。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">無権原占有、越境、登記妨害、所有権移転、処分権限。</td>
+        <td class="col--b">物を奪われた、妨害された、妨害のおそれがある。</td>
+        <td class="col--c">一部共有者の単独使用、賃貸、改築、分割請求、所在不明共有者。</td>
+      </tr>
+      <tr>
+        <td class="col--label">救済・効果</td>
+        <td class="col--a">返還、妨害排除、妨害予防、損害賠償、登記請求。</td>
+        <td class="col--b">占有保持、占有保全、占有回収。本権判断とは別に現状を保護する。</td>
+        <td class="col--c">使用対価償還、管理決定、保存行為、共有物分割、持分取得・譲渡制度。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">所有者は法令にかかわらず自由に処分できる、所有権は消滅時効にかかる。</td>
+        <td class="col--b">所有者でなければ占有訴権を使えない、占有訴訟では本権で当然に勝てる。</td>
+        <td class="col--c">持分過半数者は少数持分者を当然に追い出せる、共有物全部を単独処分できる。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong><mark class="kw">所有権</mark></strong>、占有権、共有持分権は、いずれも物の利用場面で登場するが、見ている対象が違う。所有権は本権の帰属、占有権は事実上の支配、共有持分権は一つの所有権を複数人で割合的に持つ関係である。問題文で「誰が所有者か」を問うなら所有権、「誰が現に支配していたか」を問うなら占有、「複数人の合意や持分割合」を問うなら共有を考える。特に共有では、共有者が所有者であることを理由に単独使用の相手方を直ちに排除できるとは限らない点が、行政書士試験で狙われやすい。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">保存行為</th>
+        <th class="col--b">管理行為</th>
+        <th class="col--c">変更行為</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">意味</td>
+        <td class="col--a"><span class="em-a">現状維持</span>、権利保全、滅失・損傷の防止。</td>
+        <td class="col--b"><span class="em-b">利用・改良</span>、共有物の性質を大きく変えない管理。</td>
+        <td class="col--c"><span class="em-c">形状または効用の著しい変更</span>、重い影響を伴う行為。</td>
+      </tr>
+      <tr>
+        <td class="col--label">決定方法</td>
+        <td class="col--a">各共有者が単独でできる。</td>
+        <td class="col--b">各共有者の持分価格に従い、その過半数で決する。</td>
+        <td class="col--c">原則として他の共有者の同意が必要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">条文</td>
+        <td class="col--a"><strong><mark class="kw">民法252条5項</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法252条1項</mark></strong>、同4項。</td>
+        <td class="col--c"><strong><mark class="kw">民法251条</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">雨漏り修繕、不法占拠者への妨害排除、無効登記の是正。</td>
+        <td class="col--b">短期賃貸、使用方法の決定、管理者の選任・解任。</td>
+        <td class="col--c">建物の大規模改築、共有物全部の売却、効用を著しく変える工事。</td>
+      </tr>
+      <tr>
+        <td class="col--label">注意点</td>
+        <td class="col--a">保存を超えて利用方法を実質的に変えると単独ではできない。</td>
+        <td class="col--b">使用共有者に特別の影響を及ぼす場合は承諾が必要になる。</td>
+        <td class="col--c">著しい変更を伴わない軽微変更は管理行為側に寄る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>保存・管理・変更の区別は、行為名ではなく、共有物への実質的影響で判断する。たとえば「修繕」と書かれていても、現状回復を超えて建物の用途や効用を大きく変えるなら保存行為とはいえない。逆に「変更」という言葉が問題文に出ても、形状または効用の著しい変更を伴わない軽微な変更なら、民法251条1項括弧書により全員同意の対象から外れ得る。試験では、必要同意の数を機械的に暗記するだけでなく、共有物への影響の重さを読むことが必要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Related Articles</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法206条 所有権の内容</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百六条　所有者は、法令の制限内において、自由にその所有物の使用、収益及び処分をする権利を有する。</blockquote>
+      <p><strong><mark class="kw">民法206条</mark></strong>は、所有権の三つの権能である使用・収益・処分を定める中心条文である。条文のポイントは、自由な支配を認める部分と、「法令の制限内」とする部分が一体になっている点にある。所有者は、自分の物を使い、利益を得て、処分できるが、その利用が隣地の権利、共有者の権利、公法上の土地利用規制に反する場合には制約を受ける。違反時の効果は制限法令によって異なり、私法上の無効、差止め、損害賠償、行政上の許可取消し・是正命令などがあり得る。行政書士試験では、206条を「所有者の自由」だけでなく「所有権制限の入口」として読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法207条・209条 土地所有権と隣地使用</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百七条　土地の所有権は、法令の制限内において、その土地の上下に及ぶ。<br>第二百九条　土地の所有者は、次に掲げる目的のため必要な範囲内で、隣地を使用することができる。 ただし、住家については、その居住者の承諾がなければ、立ち入ることはできない。</blockquote>
+      <p><strong><mark class="kw">民法207条</mark></strong>は、土地所有権が土地の上下に及ぶことを定める。ただし、ここでも「法令の制限内」とされるため、地下・空中の利用は無制限ではない。<strong><mark class="kw">民法209条</mark></strong>は、境界付近の工作物の築造・修繕、境界標の調査・測量、竹木の枝の切取りのために必要な範囲で隣地を使用できるとする相隣関係規定である。令和3年改正により、隣地使用の目的・通知・償金の規律が整理され、所有者不明土地問題にも対応しやすくなった。重要なのは、隣地使用は所有権の侵害を自由に許す制度ではなく、必要性、損害最小化、通知、住家への立入りの承諾という制約を伴う点である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法249条 共有物の使用</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百四十九条　各共有者は、共有物の全部について、その持分に応じた使用をすることができる。<br>２　共有物を使用する共有者は、別段の合意がある場合を除き、他の共有者に対し、自己の持分を超える使用の対価を償還する義務を負う。<br>３　共有者は、善良な管理者の注意をもって、共有物の使用をしなければならない。</blockquote>
+      <p><strong><mark class="kw">民法249条</mark></strong>は、共有者の使用権限と使用対価償還義務を定める。1項は、各共有者が共有物の全部を持分に応じて使用できるという基本を示す。これは、共有者の権利が物の特定部分ではなく共有物全体に及ぶことを意味する。2項は令和3年改正で明文化された規律で、共有物を使用する共有者が自己の持分を超えて使用する場合、別段の合意がなければ他の共有者に対価を償還する義務を負う。3項は善管注意義務を定め、共有者であっても共有物を粗雑に扱ってよいわけではないことを示す。判例上認められてきた使用対価請求を条文化した点が試験上重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法251条 共有物の変更</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百五十一条　各共有者は、他の共有者の同意を得なければ、共有物に変更（その形状又は効用の著しい変更を伴わないものを除く。次項において同じ。）を加えることができない。</blockquote>
+      <p><strong><mark class="kw">民法251条</mark></strong>は、共有物の変更について他の共有者の同意を要求する。共有物の形状または効用を著しく変える行為は、他の共有者の所有権に重大な影響を与えるため、持分の多数決だけでは足りない。もっとも、令和3年改正後は、形状または効用の著しい変更を伴わないものは括弧書で除外され、常に全員同意が必要という硬直的な理解は修正されている。2項は、他の共有者を知ることができない、または所在を知ることができない場合に、裁判所の裁判により変更を可能にする仕組みを置く。試験では、変更行為と管理行為の線引き、不明共有者がいる場合の裁判所関与が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法252条 共有物の管理</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百五十二条　共有物の管理に関する事項（次条第一項に規定する共有物の管理者の選任及び解任を含み、共有物に前条第一項に規定する変更を加えるものを除く。次項において同じ。）は、各共有者の持分の価格に従い、その過半数で決する。 共有物を使用する共有者があるときも、同様とする。<br>５　各共有者は、前各項の規定にかかわらず、保存行為をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法252条</mark></strong>は、共有物の管理を持分価格の過半数で決める規定である。管理には、共有物の利用方法、管理者の選任・解任、一定期間内の賃借権等の設定などが含まれる。1項後段は、共有物を使用する共有者があるときも同様とし、使用者がいるだけで管理決定ができなくなるわけではないことを明確にした。ただし、3項により、管理決定が使用共有者に特別の影響を及ぼす場合にはその承諾が必要になる。5項は保存行為を各共有者が単独でできると定める。試験では、管理行為を全員同意にしてしまう誤り、保存行為まで過半数決定を要するとする誤り、使用者保護の3項を見落とす誤りが頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法256条・258条 共有物分割</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百五十六条　各共有者は、いつでも共有物の分割を請求することができる。 ただし、五年を超えない期間内は分割をしない旨の契約をすることを妨げない。<br>第二百五十八条　共有物の分割について共有者間に協議が調わないとき、又は協議をすることができないときは、その分割を裁判所に請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法256条</mark></strong>は、共有者に共有関係から離脱する自由を認める規定である。共有は共同利用の制度であるが、意思決定の停滞や利用対立が起きやすいため、各共有者は原則としていつでも分割請求できる。ただし、不分割契約は五年を超えない範囲で有効であり、更新も更新時から五年を超えられない。<strong><mark class="kw">民法258条</mark></strong>は裁判分割を定め、現物分割、価格賠償型の分割、競売分割を明文化している。裁判所は金銭支払、物の引渡し、登記義務の履行なども命じることができる。試験では、協議不能の場合の裁判分割、全面的価格賠償の可否、不分割契約の期間制限が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法262条の2・262条の3 所在等不明共有者</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二百六十二条の二　不動産が数人の共有に属する場合において、共有者が他の共有者を知ることができず、又はその所在を知ることができないときは、裁判所は、共有者の請求により、その共有者に、当該他の共有者の持分を取得させる旨の裁判をすることができる。<br>第二百六十二条の三　不動産が数人の共有に属する場合において、共有者が他の共有者を知ることができず、又はその所在を知ることができないときは、裁判所は、共有者の請求により、所在等不明共有者の持分を特定の者に譲渡する権限を付与する旨の裁判をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法262条の2</mark></strong>と<strong><mark class="kw">民法262条の3</mark></strong>は、令和3年改正で整備された所在等不明共有者に関する制度である。不動産の共有者の一部が不明であると、管理・変更・処分が停滞し、所有者不明土地問題を深刻化させる。そこで、裁判所の関与のもと、不明共有者の持分を他の共有者に取得させたり、第三者への譲渡権限を付与したりする仕組みが置かれた。もっとも、不明共有者の財産権を失わせる制度であるため、時価相当額の支払請求、相続財産に属する持分についての期間制限、異議届出などの保護も組み込まれている。試験では、共有制度の新しい出口として第8節の改正論点と連動して押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和41年5月19日　昭和38年（オ）第1021号　民集20巻5号947頁</div>
+      <div class="case-card__title">共有物を単独占有する他の共有者への明渡請求</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法249条</span>
+        <span class="badge badge--law">共有物使用</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共有不動産について、持分価格の過半数を有する共有者が、共有物を単独で占有している他の共有者に対し、自分たちが多数持分者であることを根拠に明渡しを求めた。単独占有者は少数持分者であったが、共有者である以上、共有物全体を持分に応じて使用する権限を有していた。争点は、多数持分者が共有物の管理について過半数で決められることを理由に、少数持分者の占有を当然に排除できるかであった。共有物の利用方法を多数決で定められることと、現に共有者として占有する者の使用権限を奪うこととの関係が問題になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、共有物の持分価格が過半数を超える者であっても、共有物を単独で占有する他の共有者に対して、当然には、その共有物の明渡しを請求できないと判断した。少数持分者であっても共有者である以上、自己の持分に基づいて共有物を使用収益する権限を有し、その占有は全くの無権原占有ではない。管理に関する事項を過半数で決することができるとしても、それだけで共有者の持分に基づく使用権限を当然に消滅させるわけではない。判例は、共有物の利用対立では、明渡しという全面排除を直ちに認めるのではなく、使用方法の協議、使用対価、分割請求などの調整手段を考えるべきことを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法249条</mark></strong>の「共有物全部について持分に応じた使用」を具体化する最重要判例である。行政書士試験では「持分の過半数を有する共有者は、単独占有する少数持分者に当然に明渡しを請求できる」という選択肢が誤りとして出やすい。正しくは、少数持分者も共有者として使用権限を有するため、当然の明渡請求はできない。ただし、他の共有者の使用を妨げる範囲では使用対価償還、不当利得、損害賠償、管理方法の決定、共有物分割が問題になる。関連条文は249条、252条、256条である。</p>
+      <h4>関連判例・条文</h4>
+      <p>昭和63年5月20日判決は、この理を共有者の一部から使用承認を受けた第三者にも及ぼした。平成12年4月7日判決は、単独占有する共有者に対し、持分割合に応じた賃料相当額の不当利得金または損害賠償金請求を認めた。令和3年改正後の249条2項は、自己の持分を超える使用対価の償還義務を明文化しており、判例法理と条文が接続している。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和63年5月20日　昭和62年（オ）第53号　集民154号71頁</div>
+      <div class="case-card__title">一部共有者から使用承認を受けた第三者への明渡請求</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法249条</span>
+        <span class="badge badge--law">民法252条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共有不動産について、一部の共有者が他の共有者との協議に基づかず、第三者に共有物の占有使用を承認した。承認していない共有者は、第三者には共有物を使用する権限がないとして明渡しを求めた。第三者は共有者本人ではないため、昭和41年判決のように共有持分を直接有するわけではない。他方で、その第三者の占有は、使用を承認した共有者の持分に基づく利用関係として評価できる余地があった。争点は、承認していない共有者が第三者に対して当然に共有物全部の明渡しを請求できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、共有者の一部から共有物を占有使用することを承認された第三者に対し、その余の共有者は当然には共有物の明渡しを請求できないとした。第三者は、承認していない共有者に対して共有物を排他的に占有する権原を主張できるわけではない。しかし、現にする占有が承認した共有者の持分に基づくものと認められる限度では、共有物を占有使用する権限を有する。したがって、承認していない共有者は、第三者が完全な無権原者であるかのように当然の明渡しを求めることはできない。判例は、共有者間の利用調整を、第三者使用の場面にも拡張している。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">共有</mark></strong>の問題で「第三者が出てきたら常に不法占拠者」と単純化してはいけないことを示す。行政書士試験では、「共有者の一部から共有物の使用を承認された第三者に対し、承認しなかった他の共有者は当然に明渡しを請求できる」という選択肢が誤りとなる。正しくは、第三者は承認共有者の持分に基づく限度で占有使用し得るが、承認していない共有者に対して排他的権原を主張できるわけではない。この中間的な構造を押さえる必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p>昭和41年5月19日判決が共有者本人の単独占有を扱ったのに対し、本判例は一部共有者の承認を受けた第三者の占有を扱う。関連条文は249条と252条であり、共有物の具体的使用方法をどう決めるか、使用者に特別の影響がある場合にどう扱うかという令和3年改正後の条文理解にもつながる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　平成12年4月7日　平成10年（オ）第1441号　集民198号1頁</div>
+      <div class="case-card__title">共有不動産の単独占有と賃料相当額の請求</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法249条</span>
+        <span class="badge badge--law">使用対価</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共有土地の一部を、他の共有者が単独で占有していたため、占有していない共有者が自己の持分に応じた使用を妨げられていると主張し、賃料相当額の不当利得金または損害賠償金の支払を求めた。明渡しの可否だけでなく、共有者の一人が共有物を独占的に利用して利益を受け、他の共有者が利用できない場合に、金銭的調整を認めるかが問題になった。占有共有者に共有物を単独占有できる特別の権原があるか、他の共有者の持分に応じた使用が現実に妨げられているかが争点であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の共有者は、当該不動産を単独で占有できる権原がないのに単独占有している他の共有者に対し、自己の持分割合に応じて占有部分に係る賃料相当額の不当利得金ないし損害賠償金の支払を請求できるとした。共有者は共有物全部を使用できるが、それは他の共有者の同様の権限を排除するものではない。ある共有者が持分を超えて独占的に利益を受ける場合、他の共有者の使用機会が奪われているため、金銭的な調整が必要となる。判例は、明渡しを当然には認めない昭和41年判決の構造を前提に、使用対価請求という実質的な公平調整を認めた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、令和3年改正後の<strong><mark class="kw">民法249条2項</mark></strong>を理解する基礎になる。誤答パターンは、「共有者は共有物全部を使用できるから、どれだけ単独使用しても他の共有者に対価を支払う必要はない」というものである。正しくは、別段の合意や単独使用権原がない限り、自己の持分を超える使用によって他の共有者の使用を妨げた場合、持分割合に応じた賃料相当額の請求が問題になる。行政書士試験では、明渡請求の否定と使用対価請求の肯定をセットで押さえる。</p>
+      <h4>関連判例・条文</h4>
+      <p>昭和41年5月19日判決は明渡請求を当然には認めない方向の判例であり、本判例はその後の金銭調整を認める判例である。改正民法249条2項は、共有物を使用する共有者の対価償還義務を明文化したため、判例法理が条文として確認されたと理解できる。共有物の管理決定や共有物分割請求とも組み合わせて検討する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　平成8年10月31日　平成3年（オ）第1380号　民集50巻9号2563頁</div>
+      <div class="case-card__title">共有物分割における全面的価格賠償</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法258条</span>
+        <span class="badge badge--law">共有物分割</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共有不動産の分割をめぐり、現物分割をすると利用価値が大きく損なわれる一方、一部の共有者が共有物全部を取得し、他の共有者に持分価格を金銭で支払う方法を希望した。従来、共有物分割では現物分割と競売分割が中心に論じられていたため、裁判所が一部共有者に共有物全部を取得させ、他の共有者には価格賠償を受けさせる全面的価格賠償を命じることができるかが争われた。対象不動産の性質、共有者間の公平、取得者の支払能力、適正評価の有無が重要な事実となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、共有物の性質・形状、共有関係の発生原因、共有者の数・持分割合、共有物の利用状況、分割後の経済的価値、当事者の希望などを総合考慮し、共有物を特定の共有者に取得させるのが相当で、価格が適正に評価され、取得者に賠償金の支払能力があり、共有者間の実質的公平を害しない特段の事情があるときは、全面的価格賠償の方法による分割も許されるとした。判例は、現物分割が不適切な場合に直ちに競売へ進むのではなく、共有物の利用価値を維持しながら共有関係を解消する柔軟な方法を認めた。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">共有物分割</mark></strong>の最重要判例であり、平成22年度行政書士試験でも全面的価格賠償の考え方が問われた。誤答パターンは、「裁判所は現物分割か競売分割しか命じられない」「一部共有者が希望すれば常に全面的価格賠償が認められる」という両極である。正しくは、全面的価格賠償は許されるが、適正評価、支払能力、実質的公平を害しない特段の事情が必要である。令和3年改正後の民法258条2項2号は、共有者に債務を負担させて他の共有者の持分を取得させる方法を明文化し、この判例法理を条文上理解しやすくした。</p>
+      <h4>関連判例・条文</h4>
+      <p>関連条文は256条、258条、259条、260条である。平成25年11月29日最高裁判決は、通常共有持分と遺産共有持分が併存する場合にも共有物分割訴訟と遺産分割の関係を整理し、価格賠償金が遺産分割の対象となることを示した。相続単元と接続するため、共有物分割は物権だけでなく相続法の視点でも理解する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ1 所有権は強いが無制限ではない</span></div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「所有者は、その所有物について法令上の制限を受けず、自由に使用・収益・処分できる」である。正しくは、<strong><mark class="kw">民法206条</mark></strong>が明示するように、所有権は法令の制限内で認められる。建築、農地、都市計画、相隣関係、共有、信義則、権利濫用禁止が所有権の外枠になる。問題文で「所有者だから当然」と書かれているときほど、制限規定がないかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ2 共有物全部を使えるが独占できるわけではない</span></div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「二分の一の共有者は共有物の物理的な半分だけを使用できる」「多数持分者は少数持分者を当然に明け渡させることができる」である。正しくは、各共有者は共有物全部について持分に応じた使用ができる。少数持分者にも使用権限があるため当然の明渡請求はできないが、持分を超える使用によって他の共有者の使用が妨げられる場合には、使用対価償還、不当利得、損害賠償、管理方法の決定、共有物分割が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ3 保存・管理・変更を行為名で決めない</span></div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「共有物の賃貸は常に変更行為で全員同意が必要」「共有物の修繕は常に管理行為で過半数決定が必要」である。正しくは、現状維持は保存行為、利用・改良は管理行為、形状または効用の著しい変更は変更行為である。令和3年改正後は、著しい変更を伴わない軽微変更は251条の重い変更から除外される。賃借権等の設定についても252条4項の期間制限を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ4 共有物分割の出口を押さえる</span></div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「共有者は共有物分割を請求できない旨を永久に合意できる」「裁判所は現物分割か競売しか命じられない」である。正しくは、各共有者はいつでも分割請求でき、不分割契約は五年以内に限られる。協議が調わないときは裁判分割となり、現物分割、価格賠償型の分割、競売分割がある。全面的価格賠償は、適正評価、支払能力、実質的公平を害しない事情が必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">横断論点</span></div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">所有権</mark></strong>は、物権変動、占有、時効、担保物権、賃貸借、相続、行政法と横断する。物権変動では所有権移転と対抗要件、占有では所有権に基づく請求と占有訴権の区別、時効では所有者が取得時効によって所有権を失う場面、担保物権では所有権の処分権能への制限、賃貸借では所有者と賃借人の利用権限、相続では遺産共有と通常共有の関係が問題になる。行政法では、土地利用規制や行政上の許可制限が「法令の制限内」の具体例になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">history</span><span class="box__label">令和3年改正と所有者不明土地対策</span></div>
+    <div class="box__bd">
+      <p>令和3年の民法・不動産登記法改正は、所有者不明土地問題を背景に、相隣関係、共有、財産管理、相続登記などを大きく見直した。共有制度では、共有物を使用する共有者の対価償還義務、善管注意義務、軽微変更の扱い、管理決定に関する裁判所の関与、共有物管理者、所在等不明共有者の持分取得・譲渡制度が整備された。これにより、共有者の一部が不明であるため土地を管理・処分できないという停滞を解消しやすくなった。行政書士試験では、古い「変更は全員、管理は過半数、保存は単独」という枠組みに加え、改正後の例外や裁判所関与を押さえる必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span><span class="box__label">学習の整理ポイント</span></div>
+    <div class="box__bd">
+      <p>この単元は、まず206条で所有権の権能を確認し、次に「法令の制限内」という言葉から相隣関係と共有へ進むと整理しやすい。共有の問題では、最初に当事者が共有者か第三者かを確認する。次に、問題となる行為が使用、保存、管理、変更、分割のどれかを分類する。最後に、必要な同意の数、使用対価の有無、明渡しの可否、分割請求の可否を判断する。判例は、明渡しを当然には認めない方向と、金銭調整・分割によって公平を図る方向をセットで覚えると、選択肢のひっかけに強くなる。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

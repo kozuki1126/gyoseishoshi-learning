@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債権の消滅 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">債権の消滅</h1>
+  <p class="page-title-block__sub">弁済・相殺・更改・免除・混同を、消滅原因、保護される利益、試験上の例外から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法473条</span>
+    <span class="badge badge--info">民法478条</span>
+    <span class="badge badge--info">民法505条</span>
+    <span class="badge badge--info">民法511条</span>
+    <span class="badge badge--info">民法513条</span>
+    <span class="badge badge--info">相殺の担保的機能</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権の消滅</mark></strong>とは、いったん発生した債権が、目的を達したり、当事者の処分によって不要になったり、法律上存続させる意味を失ったりすることで効力を失う場面をいう。債権は発生原因だけでなく、どのように消えるかを知らなければ、契約の終了、債権回収、保証、担保、差押えの問題を正しく処理できない。行政書士試験では、単に「消滅する」と覚えるのではなく、誰の行為で、いつ、どの範囲で、第三者に対しても主張できるかを問われる。</p>
+
+  <p>中心になるのは、債務の内容どおりに給付が実現する<strong><mark class="kw">弁済</mark></strong>、互いの同種債権を対当額で消す<strong><mark class="kw">相殺</mark></strong>、旧債務を新債務に置き換える<strong><mark class="kw">更改</mark></strong>、債権者の一方的意思表示で債務を消す<strong><mark class="kw">免除</mark></strong>、債権と債務が同一人に帰属して消える<strong><mark class="kw">混同</mark></strong>である。弁済は債権の本来の満足であり、相殺は簡易決済と担保的機能を兼ねる。更改は契約による作り替え、免除は債権者の処分、混同は権利構造上の当然消滅という位置づけになる。</p>
+
+  <p>この単元で難しいのは、例外規定が多い点である。たとえば、弁済は債権者に対してするのが原則だが、受領権者らしい外観を持つ者に対して善意無過失で弁済すれば有効となる場合がある。相殺は双方の債務が弁済期にあることが原則だが、不法行為債権、差押禁止債権、差押えを受けた債権では制限がかかる。試験では、原則だけを問う肢より、例外の要件を一つずらした肢が出やすい。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る消滅原因</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに100万円を貸した場合、BがAへ100万円を支払えば<strong><mark class="kw">弁済</mark></strong>により貸金債権は消滅する。AもBから売買代金100万円を支払う義務を負っていれば、AまたはBの意思表示により<strong><mark class="kw">相殺</mark></strong>で対当額が消滅する。AとBが「旧貸金債務を消滅させ、代わりにBが新たに別内容の債務を負う」と合意すれば<strong><mark class="kw">更改</mark></strong>である。AがBに対して「返さなくてよい」と債務免除を表示すれば<strong><mark class="kw">免除</mark></strong>であり、Aが相続によってBの債務者としての地位も承継し債権者と債務者が同一人になれば、原則として<strong><mark class="kw">混同</mark></strong>が生じる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">弁済</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">弁済</mark></strong>は、債務者が債権者に対して債務の内容に従った給付をし、債権を消滅させる制度である。民法473条は、債務者が債権者に対して債務の弁済をしたときは、その債権が消滅すると明記する。制度趣旨は、債権の目的である給付が実現した以上、債権者にさらに請求権を残す必要がない点にある。弁済は現金支払だけでなく、物の引渡し、登記手続、作為・不作為など債務内容に応じて成立する。試験では、弁済の相手方、第三者弁済、代物弁済、充当、供託、代位が周辺論点として問われるため、単なる「支払」として狭く理解しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">第三者弁済</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">第三者弁済</mark></strong>は、債務者以外の者が債務の弁済をすることである。民法474条1項は、債務の弁済は第三者もすることができると定める。ただし、弁済について正当な利益を有しない第三者は、債務者の意思に反して弁済できず、債権者の意思に反しても弁済できないのが原則である。正当な利益を有する者とは、保証人、物上保証人、担保物の第三取得者、借地上建物の賃借人など、弁済しなければ自己の法律上の地位が害される者をいう。制度趣旨は、債権者の満足を妨げず、同時に債務者の意思や債権者の取引上の信頼を不当に侵害しない点にある。試験では「第三者はいつでも債務者の意思に反して弁済できる」とする肢と、「第三者は一切弁済できない」とする肢の両方が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">受領権者としての外観を有する者への弁済</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">受領権者としての外観を有する者への弁済</mark></strong>は、本当は弁済を受ける権限がない者に対する弁済でも、取引上の社会通念に照らして受領権者らしい外観があり、弁済者が善意無過失であれば有効とする制度である。民法478条は、旧法の「債権の準占有者」という表現を改め、受領権者の定義と外観要件を明確にした。制度趣旨は、弁済者が合理的に信頼した外観を保護し、取引の安全と弁済の円滑化を図る点にある。要件は、受領権限のない者であること、受領権者としての外観があること、弁済者が善意かつ無過失であることの三つである。試験では、善意だけで足りるか、過失があってもよいか、代理人と称する者にも適用されるかが典型的な引っかけになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代物弁済・弁済充当・供託</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代物弁済</mark></strong>は、本来の給付に代えて別の給付をすることで債務を消滅させる契約である。民法482条は、弁済者と債権者が、債務者の負担した給付に代えて他の給付で債務を消滅させる契約をし、実際にその給付がされたとき、弁済と同一の効力を認める。<strong><mark class="kw">弁済充当</mark></strong>は、同一当事者間に複数の同種債務があり、給付が全部を消すのに足りない場合に、どの債務に充てるかを決める制度である。<strong><mark class="kw">供託</mark></strong>は、債権者が受領を拒む、受領できない、または債権者を確知できない場合に、弁済者が供託所へ目的物を供託して債権を消滅させる制度である。いずれも弁済の周辺制度だが、代物弁済は合意と別給付、充当は不足給付の配分、供託は債権者側の受領障害を処理する点で区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">弁済による代位</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">弁済による代位</mark></strong>は、債務者のために弁済をした者が、弁済によって債権者に代位し、債権者が持っていた債権や担保権を行使できる制度である。民法499条は、債務者のために弁済をした者は債権者に代位すると定める。制度趣旨は、弁済者が債務者に求償するときに、債権者の担保や優先的地位を利用できるようにして、弁済者の負担を公平に回収させる点にある。保証人が債務者の代わりに弁済した場合、単に「払って終わり」ではなく、債務者に対する求償のために債権者の地位を引き継ぐ。試験では、第三者弁済と代位の関係、全部弁済と一部弁済の違い、債権者の残債権との優劣を意識する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相殺</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相殺</mark></strong>は、二人が互いに同種の目的を有する債務を負担する場合に、双方の債務が弁済期にあるとき、当事者の一方の意思表示により対当額で債務を消滅させる制度である。自分が相殺に使う債権を<strong><mark class="kw">自働債権</mark></strong>、相手に対して負う債務を<strong><mark class="kw">受働債権</mark></strong>という。制度趣旨は、同種債権を現実に交互に弁済する手間を省く簡易決済機能と、相手方が無資力になった場合にも自己の債権を回収したのと同じ利益を得る担保的機能にある。相殺は一方的意思表示でできるが、条件や期限を付けることはできず、相殺適状になった時にさかのぼって効力を生ずる。試験では、不法行為債権、差押禁止債権、差押え後取得債権、相殺禁止特約の対抗要件が頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">更改・免除・混同</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">更改</mark></strong>は、当事者が従前の債務に代えて、新たな債務を発生させる契約をし、旧債務を消滅させる制度である。給付内容の重要な変更、債務者の交替、債権者の交替が民法513条に列挙される。単なる支払猶予や弁済期の変更では足りず、旧債務を消滅させ新債務に置き換える意思が必要である。<strong><mark class="kw">免除</mark></strong>は、債権者が債務者に対して債務を免除する意思表示をしたときに債権が消滅する制度であり、債務者の承諾は条文上要求されない。<strong><mark class="kw">混同</mark></strong>は、債権と債務が同一人に帰属したときに債権が消滅する制度であるが、その債権が第三者の権利の目的であるときは消滅しない。試験では、更改と債務引受・債権譲渡、免除と贈与、混同と担保権保護の例外を比較する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 640" role="img" aria-label="債権消滅原因の全体構造図">
+      <defs>
+        <marker id="arr19-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr19-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="540" y1="120" x2="540" y2="215" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <line x1="540" y1="215" x2="160" y2="215" stroke="#2563eb" stroke-width="3"/>
+      <line x1="540" y1="215" x2="920" y2="215" stroke="#2563eb" stroke-width="3"/>
+      <line x1="160" y1="215" x2="160" y2="290" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <line x1="350" y1="215" x2="350" y2="290" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <line x1="540" y1="215" x2="540" y2="290" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <line x1="730" y1="215" x2="730" y2="290" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <line x1="920" y1="215" x2="920" y2="290" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19-blue)"/>
+      <polyline points="350,430 350,505 730,505 730,430" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr19-red)"/>
+      <rect x="360" y="40" width="360" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">債権の消滅</text>
+      <text x="540" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">債権の目的達成・当事者処分・権利構造の変化</text>
+      <rect x="40" y="290" width="240" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="160" y="324" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">弁済</text>
+      <text x="160" y="350" text-anchor="middle" font-size="13" fill="#7c2d12">民法473条</text>
+      <text x="160" y="374" text-anchor="middle" font-size="13" fill="#7c2d12">本来の給付が実現</text>
+      <text x="160" y="398" text-anchor="middle" font-size="13" fill="#7c2d12">代物弁済・供託・代位へ展開</text>
+      <rect x="230" y="290" width="240" height="140" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="350" y="324" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">相殺</text>
+      <text x="350" y="350" text-anchor="middle" font-size="13" fill="#9f1239">民法505条・506条</text>
+      <text x="350" y="374" text-anchor="middle" font-size="13" fill="#9f1239">同種債権を対当額で消滅</text>
+      <text x="350" y="398" text-anchor="middle" font-size="13" fill="#9f1239">簡易決済と担保的機能</text>
+      <rect x="420" y="290" width="240" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="324" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">更改</text>
+      <text x="540" y="350" text-anchor="middle" font-size="13" fill="#1e3a8a">民法513条</text>
+      <text x="540" y="374" text-anchor="middle" font-size="13" fill="#1e3a8a">旧債務を新債務へ置換</text>
+      <text x="540" y="398" text-anchor="middle" font-size="13" fill="#1e3a8a">更改意思と重要変更</text>
+      <rect x="610" y="290" width="240" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="730" y="324" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">免除</text>
+      <text x="730" y="350" text-anchor="middle" font-size="13" fill="#7c2d12">民法519条</text>
+      <text x="730" y="374" text-anchor="middle" font-size="13" fill="#7c2d12">債権者の意思表示</text>
+      <text x="730" y="398" text-anchor="middle" font-size="13" fill="#7c2d12">債務者の承諾不要</text>
+      <rect x="800" y="290" width="240" height="140" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="920" y="324" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">混同</text>
+      <text x="920" y="350" text-anchor="middle" font-size="13" fill="#1e3a8a">民法520条</text>
+      <text x="920" y="374" text-anchor="middle" font-size="13" fill="#1e3a8a">債権者と債務者が同一人</text>
+      <text x="920" y="398" text-anchor="middle" font-size="13" fill="#1e3a8a">第三者権利の例外あり</text>
+      <rect x="270" y="505" width="540" height="75" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="540" y="535" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">試験上の焦点</text>
+      <text x="540" y="560" text-anchor="middle" font-size="13" fill="#9f1239">相手方・第三者・差押え・担保権など、消滅を誰に対抗できるか</text>
+      <text x="475" y="500" text-anchor="middle" font-size="13" font-weight="700" fill="#9f1239">例外規定で制限</text>
+    </svg>
+  </div>
+
+  <p>この図は、債権の消滅原因を「本来の満足」「簡易決済」「債務の作り替え」「債権者の処分」「権利構造上の当然消滅」に分けて示している。<strong><mark class="kw">弁済</mark></strong>は債権の目的そのものが実現するため最も基本的な消滅原因であり、<strong><mark class="kw">相殺</mark></strong>は現実の給付を省く点で弁済と異なる。<strong><mark class="kw">更改</mark></strong>は旧債務を消滅させる代わりに新債務を発生させるため、単なる変更契約より効果が重い。<strong><mark class="kw">免除</mark></strong>と<strong><mark class="kw">混同</mark></strong>は、債権の満足がなくても消滅する点で弁済・相殺と異なる。試験では、消滅原因の名前より、どの要件が欠けると消滅しないか、第三者保護のために例外があるかを確認する。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1020 610" role="img" aria-label="相殺可否の判断構造図">
+      <defs>
+        <marker id="arr19b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr19b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="510" y1="95" x2="510" y2="160" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19b-blue)"/>
+      <line x1="510" y1="235" x2="510" y2="300" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19b-blue)"/>
+      <line x1="510" y1="375" x2="510" y2="440" stroke="#2563eb" stroke-width="3" marker-end="url(#arr19b-blue)"/>
+      <polyline points="350,337 185,337 185,470" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr19b-red)"/>
+      <polyline points="670,337 835,337 835,470" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr19b-red)"/>
+      <rect x="310" y="35" width="400" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="510" y="62" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">相殺の入口</text>
+      <text x="510" y="84" text-anchor="middle" font-size="13" fill="#1e3a8a">互いに同種の目的を有する債務か</text>
+      <rect x="310" y="160" width="400" height="75" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="510" y="190" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">相殺適状</text>
+      <text x="510" y="215" text-anchor="middle" font-size="13" fill="#1e3a8a">双方の債務が弁済期にあり、性質上相殺可能</text>
+      <rect x="350" y="300" width="320" height="75" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="510" y="330" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">禁止・制限の確認</text>
+      <text x="510" y="355" text-anchor="middle" font-size="13" fill="#7c2d12">不法行為・差押禁止・差押え後取得債権</text>
+      <rect x="50" y="470" width="270" height="85" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="185" y="502" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">相殺不可・対抗不可</text>
+      <text x="185" y="528" text-anchor="middle" font-size="13" fill="#9f1239">509条・510条・511条で制限</text>
+      <rect x="375" y="440" width="270" height="85" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="510" y="472" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">意思表示</text>
+      <text x="510" y="498" text-anchor="middle" font-size="13" fill="#1e3a8a">条件・期限を付けず一方的に表示</text>
+      <rect x="700" y="470" width="270" height="85" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="835" y="502" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">第三者対抗の問題</text>
+      <text x="835" y="528" text-anchor="middle" font-size="13" fill="#9f1239">差押債権者・譲受人との優劣</text>
+    </svg>
+  </div>
+
+  <p><strong><mark class="kw">相殺</mark></strong>の判断は、まず相殺適状があるかを確認し、次に禁止規定や第三者対抗の制限を確認する順序で進める。金銭債権同士であれば同種性は満たしやすいが、債務の性質が相殺を許さない場合や、相殺禁止特約が第三者に対抗できる場合は別に検討する。不法行為による生命身体侵害債務や差押禁止債権は、債権者に現実の給付を受けさせる必要が強いため、受働債権とする相殺が制限される。差押えを受けた債権については、第三債務者の相殺への合理的期待と差押債権者の保護を調整するため、民法511条の時点判断が重要になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">弁済</th>
+        <th class="col--b">相殺</th>
+        <th class="col--c">更改・免除・混同</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">定義</th>
+        <td class="col--a"><span class="em-a">債務の内容どおりの給付</span>により債権を消滅させる。</td>
+        <td class="col--b"><span class="em-b">互いの同種債権</span>を対当額で消滅させる。</td>
+        <td class="col--c"><span class="em-c">給付実現以外の原因</span>で債権を消滅させる。</td>
+      </tr>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a"><strong><mark class="kw">民法473条</mark></strong>、474条、478条、482条、494条、499条など。</td>
+        <td class="col--b"><strong><mark class="kw">民法505条</mark></strong>、506条、509条から511条など。</td>
+        <td class="col--c"><strong><mark class="kw">民法513条</mark></strong>、519条、520条。</td>
+      </tr>
+      <tr>
+        <th class="col--label">必要な行為</th>
+        <td class="col--a">原則として債務者または第三者による給付。供託では供託行為。</td>
+        <td class="col--b">相殺適状を前提に、当事者一方からの意思表示。</td>
+        <td class="col--c">更改は契約、免除は債権者の意思表示、混同は法律上当然。</td>
+      </tr>
+      <tr>
+        <th class="col--label">制度趣旨</th>
+        <td class="col--a">債権の目的達成、取引の円滑、弁済者保護。</td>
+        <td class="col--b">簡易決済と担保的機能、相殺への合理的期待の保護。</td>
+        <td class="col--c">債務関係の整理、債権者の処分自由、権利帰属の矛盾解消。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「第三者は常に弁済できる」「外観弁済は善意だけで足りる」。</td>
+        <td class="col--b">「相殺は契約である」「差押え後に取得した債権でも常に対抗できる」。</td>
+        <td class="col--c">「弁済期変更だけで更改」「免除には常に債務者の承諾が必要」「混同に例外なし」。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">相殺の原則</th>
+        <th class="col--b">不法行為等・差押禁止債権</th>
+        <th class="col--c">差押えを受けた債権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">条文</th>
+        <td class="col--a"><strong><mark class="kw">民法505条</mark></strong>、506条。</td>
+        <td class="col--b"><strong><mark class="kw">民法509条</mark></strong>、510条。</td>
+        <td class="col--c"><strong><mark class="kw">民法511条</mark></strong>。</td>
+      </tr>
+      <tr>
+        <th class="col--label">保護される利益</th>
+        <td class="col--a"><span class="em-a">相殺者の簡易決済・担保的利益</span>。</td>
+        <td class="col--b"><span class="em-b">被害者・差押禁止債権者の現実給付利益</span>。</td>
+        <td class="col--c"><span class="em-c">差押債権者と第三債務者の相殺期待の調整</span>。</td>
+      </tr>
+      <tr>
+        <th class="col--label">判断基準</th>
+        <td class="col--a">同種目的、双方弁済期、性質上許容、一方的意思表示。</td>
+        <td class="col--b">悪意不法行為、生命身体侵害、差押禁止債権を受働債権にしていないか。</td>
+        <td class="col--c">自働債権を差押え前に取得したか、差押え前の原因に基づくか。</td>
+      </tr>
+      <tr>
+        <th class="col--label">効果</th>
+        <td class="col--a">対当額で消滅し、相殺適状時に遡及する。</td>
+        <td class="col--b">相殺をもって債権者に対抗できない。</td>
+        <td class="col--c">差押え後取得債権は原則対抗不可、差押え前取得債権は対抗可。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験での見方</th>
+        <td class="col--a">まず505条の入口要件を満たすかを見る。</td>
+        <td class="col--b">受働債権の性質を確認し、現実給付保護が必要かを見る。</td>
+        <td class="col--c">差押えの前後、取得時期、発生原因の前後を分ける。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、債権が「何によって消えた」と主張されているかをまず分類する。給付が実現していれば<strong><mark class="kw">弁済</mark></strong>、給付はないが互いの債権をぶつけているなら<strong><mark class="kw">相殺</mark></strong>、旧債務の消滅と新債務の成立が合意されていれば<strong><mark class="kw">更改</mark></strong>である。相殺では、相殺適状だけで終わらせず、受働債権の性質と差押えの有無を必ず確認する。免除と混同は条文が短いため軽視されやすいが、債務者の承諾の要否、第三者権利の目的となっている債権の例外が問われやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法473条・474条・478条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法473条</mark></strong>　債務者が債権者に対して債務の弁済をしたときは、その債権は、消滅する。<br>
+        <strong><mark class="kw">民法474条1項</mark></strong>　債務の弁済は、第三者もすることができる。<br>
+        <strong><mark class="kw">民法478条</mark></strong>　受領権者以外の者であって取引上の社会通念に照らして受領権者としての外観を有するものに対してした弁済は、その弁済をした者が善意であり、かつ、過失がなかったときに限り、その効力を有する。
+      </blockquote>
+      <p><strong><mark class="kw">民法473条</mark></strong>は、弁済が債権消滅原因であることを端的に定める。平成29年債権法改正で、実務・学説上当然とされていた基本ルールを条文上明確にした規定である。<strong><mark class="kw">民法474条</mark></strong>は、第三者弁済を原則として認めつつ、正当な利益のない第三者について債務者意思・債権者意思との調整を置く。<strong><mark class="kw">民法478条</mark></strong>は、弁済者の外観信頼を保護する例外規定であり、善意無過失が必要である。条文の順序として、まず本来の弁済、次に誰が弁済できるか、さらに誰に対する弁済が有効かを整理すると理解しやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法482条・488条・494条・499条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法482条</mark></strong>　弁済者が、債権者との間で、債務者の負担した給付に代えて他の給付をすることにより債務を消滅させる旨の契約をした場合において、その弁済者が当該他の給付をしたときは、その給付は、弁済と同一の効力を有する。<br>
+        <strong><mark class="kw">民法494条1項</mark></strong>　弁済者は、債権者が受領を拒んだとき、又は債権者が受領できないときには、債権者のために弁済の目的物を供託することができる。<br>
+        <strong><mark class="kw">民法499条</mark></strong>　債務者のために弁済をした者は、債権者に代位する。
+      </blockquote>
+      <p><strong><mark class="kw">民法482条</mark></strong>の代物弁済は、合意だけでは足りず、代わりの給付が実際にされたときに弁済と同一の効力を生じる。<strong><mark class="kw">民法488条</mark></strong>は、複数債務に不足給付がされた場合の充当順序を定め、まず弁済者指定、次に受領者指定、最後に法定充当という流れを採る。<strong><mark class="kw">民法494条</mark></strong>の供託は、債権者の受領拒絶・受領不能・債権者不確知を処理し、供託時に債権を消滅させる。<strong><mark class="kw">民法499条</mark></strong>は、弁済者の求償を実効化するため、債権者の地位を移転させる。これらは弁済の効果を拡張・補完する条文群である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法505条・506条・509条から511条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法505条1項</mark></strong>　二人が互いに同種の目的を有する債務を負担する場合において、双方の債務が弁済期にあるときは、各債務者は、その対当額について相殺によってその債務を免れることができる。<br>
+        <strong><mark class="kw">民法506条1項</mark></strong>　相殺は、当事者の一方から相手方に対する意思表示によってする。この場合において、その意思表示には、条件又は期限を付することができない。<br>
+        <strong><mark class="kw">民法511条1項</mark></strong>　差押えを受けた債権の第三債務者は、差押え後に取得した債権による相殺をもって差押債権者に対抗することはできないが、差押え前に取得した債権による相殺をもって対抗することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法505条</mark></strong>は相殺の入口要件を定める。相殺禁止特約は当事者間では有効だが、第三者に対しては、その第三者が知り、または重大な過失によって知らなかったときに限り対抗できる。<strong><mark class="kw">民法506条</mark></strong>は相殺を一方的意思表示とし、条件・期限付き相殺を禁止することで法律関係を不安定にしないようにする。<strong><mark class="kw">民法509条</mark></strong>と<strong><mark class="kw">民法510条</mark></strong>は、受働債権の性質から相殺を制限する。<strong><mark class="kw">民法511条</mark></strong>は差押え後取得債権による相殺を原則として差押債権者に対抗できないとしつつ、差押え前取得債権や差押え前原因に基づく債権について第三債務者の相殺期待を保護する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法513条・519条・520条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法513条</mark></strong>　当事者が従前の債務に代えて、新たな債務であって次に掲げるものを発生させる契約をしたときは、従前の債務は、更改によって消滅する。<br>
+        一　従前の給付の内容について重要な変更をするもの<br>
+        二　従前の債務者が第三者と交替するもの<br>
+        三　従前の債権者が第三者と交替するもの<br>
+        <strong><mark class="kw">民法519条</mark></strong>　債権者が債務者に対して債務を免除する意思を表示したときは、その債権は、消滅する。<br>
+        <strong><mark class="kw">民法520条</mark></strong>　債権及び債務が同一人に帰属したときは、その債権は、消滅する。ただし、その債権が第三者の権利の目的であるときは、この限りでない。
+      </blockquote>
+      <p><strong><mark class="kw">民法513条</mark></strong>は、更改の要件を、給付内容の重要な変更、債務者交替、債権者交替に整理する。更改は旧債務を消滅させる重大な効果を持つため、単なる条件変更・支払猶予・債務承認と区別し、更改意思の有無を慎重に判断する。<strong><mark class="kw">民法519条</mark></strong>は免除を債権者の意思表示で足りるものとし、債務者の承諾を明文上要求しない。<strong><mark class="kw">民法520条</mark></strong>は混同の原則と例外を定め、債権が質権など第三者の権利の目的になっている場合には、その第三者の利益を害しないよう債権を存続させる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和37年8月21日 昭和33年(オ)第388号 民集16巻9号1809頁</div>
+      <div class="case-card__title">受領権者としての外観を有する者への弁済</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法478条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>納品代金をめぐる取引で、債権者本人ではない者が債権者の代理人であるかのように振る舞い、債務者に対して代金支払を求めた。弁済者は、その者が真実に受領権限を有するかを十分確認しないまま支払をしたため、真の債権者との間で、支払により債務が消滅したといえるかが争われた。問題となったのは、旧民法478条の「債権の準占有者」に、債権者本人を装う者だけでなく、債権者の代理人と称して権利行使する者も含まれるか、また弁済者の主観的要件として善意だけで足りるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、債権者の代理人と称して債権を行使する者についても、旧民法478条が適用されるとした。取引通念上、弁済者から見て受領権限があるような外観を備える者に弁済した場合、弁済者を保護する必要は、本人と称する者への弁済でも代理人と称する者への弁済でも異ならないからである。ただし、弁済が有効となるには、弁済者が善意であるだけでなく、過失がないことも必要であると判示した。現在の<strong><mark class="kw">民法478条</mark></strong>は「受領権者としての外観を有する者」と表現を改めているが、外観への信頼を保護しつつ善意無過失を要求する基本構造はこの判例法理と連続する。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、「代理人と称する者は受領権者としての外観を有する者に含まれない」「弁済者が善意であれば過失があってもよい」という形で誤らせる肢が出やすい。正しくは、代理人詐称者にも適用され得るが、弁済者の善意無過失が必要である。あわせて、外観が取引上の社会通念に照らして認められること、弁済者に確認義務違反がないことを確認する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法478条</mark></strong>は弁済相手方の例外規定であり、第三者弁済を定める<strong><mark class="kw">民法474条</mark></strong>とは場面が異なる。474条は「誰が弁済するか」の問題、478条は「誰に弁済したか」の問題である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所 昭和63年7月1日 判時1287号63頁</div>
+      <div class="case-card__title">借地上建物の賃借人による地代の第三者弁済</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法474条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地の賃借人が借地上に建物を所有し、その建物をさらに第三者へ賃貸していた。ところが土地賃借人が土地賃貸人に地代を支払わなかったため、土地賃貸借が解除されれば、借地上建物の賃借人は建物利用の基礎を失い、自己の生活・営業上の利益を大きく害される状況にあった。建物賃借人は、土地賃借人に代わって地代を支払うことで借地関係の終了を防ごうとしたが、土地賃貸人側がその弁済を受ける必要があるか、建物賃借人が旧民法474条の利害関係を有する第三者に当たるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>判例は、借地上建物の賃借人について、土地賃借人の地代債務を弁済する法律上の利益を有する第三者に当たることを肯定した。建物賃借人は、土地賃貸借が地代不払で解除されると、建物の使用収益を継続する基礎を失う危険に直面する。したがって、地代弁済は単なる好意や事実上の関心ではなく、自己の法律上の地位を保全するための弁済である。現行<strong><mark class="kw">民法474条</mark></strong>は「正当な利益」という表現を用いるが、保証人や物上保証人だけでなく、借地上建物の賃借人のように弁済しなければ自己の権利・法律関係が害される者を含めて考える点が重要である。</p>
+      <h4>試験上の意義</h4>
+      <p>試験では、「第三者弁済の正当な利益」を、保証人など典型例だけに限定する肢が出る。借地上建物の賃借人は、借地契約が消滅すると建物利用の基礎が危うくなるため、地代弁済について正当な利益を有する。逆に、単なる友人や親族として支払いたいだけの者は、正当な利益のない第三者として債務者意思・債権者意思による制限を受ける。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法474条</mark></strong>の第三者弁済は、借地借家法上の借地関係、賃貸借解除、担保権者の利益保全と接続する。債権総論の問題でありながら、物権・賃貸借・担保の知識を横断して判断する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和45年6月24日 昭和39年(オ)第155号 民集24巻6号587頁</div>
+      <div class="case-card__title">差押えを受けた債権と相殺の可否</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法511条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>国税滞納処分として、滞納者が銀行に対して有する定期預金等の債権が差し押さえられた。銀行は、差押え前から滞納者に対して貸付債権を有しており、取引約定上、滞納者の信用を悪化させる一定の客観的事情が生じた場合には貸付債務の期限の利益を喪失させ、銀行側も預金債務の期限の利益を放棄して、直ちに相殺適状を生じさせる旨の合意があった。差押債権者は、差押え後に銀行が相殺を主張することは差押えの効力を害すると争い、銀行は差押え前から有していた反対債権による相殺であるとして対抗した。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、債権が差し押さえられた場合でも、第三債務者が差押え前から債務者に対して反対債権を有していたときは、その債権が差押え後に取得されたものでない限り、自働債権と受働債権の弁済期の前後を問わず、両者が相殺適状に達しさえすれば、差押え後でも相殺できるとした。相殺には簡易決済機能だけでなく、相手方の資力不足に対して自己の債権を回収したのと同じ利益を得る担保的機能があるため、この相殺への期待はできる限り尊重されるべきだとしたのである。また、銀行取引上の期限の利益喪失・放棄により相殺適状を生じさせる合意についても、預金債権を差し押さえた債権者に対して効力を有すると判断した。現行<strong><mark class="kw">民法511条</mark></strong>は、この判例の無制限説を基本的に明文化し、差押え前取得債権による相殺を差押債権者に対抗できるとする。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">相殺の担保的機能</mark></strong>を理解するための最重要判例である。誤答パターンは、「差押えがあれば第三債務者は一切相殺できない」「差押え前に反対債権を取得していても、差押え時に相殺適状でなければ対抗できない」という形で現れる。正しくは、差押え後に取得した債権による相殺は原則対抗できないが、差押え前に取得した債権であれば、弁済期の前後を問わず相殺適状に達した時点で対抗できる。条文上も民法511条1項の前後関係を正確に読む必要がある。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法505条</mark></strong>の相殺要件、<strong><mark class="kw">民法506条</mark></strong>の意思表示・遡及効、<strong><mark class="kw">民法511条</mark></strong>の差押えと相殺が一体で問われる。債権譲渡における譲受人への相殺対抗、銀行取引約定、担保的機能の理解にも接続する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">弁済</mark></strong>では、誰が弁済できるか、誰に弁済すれば有効か、債権者が受領しないときどうするかを分ける。</li>
+        <li><strong><mark class="kw">第三者弁済</mark></strong>では、正当な利益を有する者か、債務者意思・債権者意思による制限が働く者かを判断する。</li>
+        <li><strong><mark class="kw">民法478条</mark></strong>では、受領権者としての外観と弁済者の善意無過失を必ず確認する。</li>
+        <li><strong><mark class="kw">相殺</mark></strong>では、相殺適状、意思表示、遡及効、相殺禁止・制限を順に確認する。</li>
+        <li><strong><mark class="kw">更改</mark></strong>は、旧債務を消滅させる意思と新債務の発生が必要であり、単なる条件変更ではない。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「正当な利益を有しない第三者であっても、債務者が反対していることを債権者が知っている場合に、自由に弁済できる。」これは誤りである。<strong><mark class="kw">民法474条</mark></strong>は、正当な利益のない第三者について、債務者の意思に反する弁済を制限し、債権者が債務者の反対を知らなかった場合に限って例外を置く。</p>
+      <p><strong>誤りの選択肢例2：</strong>「受領権者としての外観を有する者への弁済は、弁済者が善意であれば、過失があっても有効である。」これは誤りである。<strong><mark class="kw">民法478条</mark></strong>は、弁済者が善意であり、かつ、過失がなかったときに限って効力を認める。</p>
+      <p><strong>誤りの選択肢例3：</strong>「相殺は当事者双方の合意によってのみ成立する。」これは誤りである。<strong><mark class="kw">民法506条</mark></strong>は、相殺を当事者の一方から相手方に対する意思表示によってすると定める。相殺契約とは別に、法定相殺は一方的意思表示で足りる。</p>
+      <p><strong>誤りの選択肢例4：</strong>「差押えを受けた債権の第三債務者は、差押え前に取得した債権による相殺であっても、差押債権者に対抗できない。」これは誤りである。<strong><mark class="kw">民法511条</mark></strong>は、差押え前に取得した債権による相殺を差押債権者に対抗できると明記する。</p>
+      <p><strong>誤りの選択肢例5：</strong>「混同が生じた場合、その債権が第三者の権利の目的であっても常に消滅する。」これは誤りである。<strong><mark class="kw">民法520条</mark></strong>ただし書は、債権が第三者の権利の目的である場合に混同消滅を否定する。</p>
+    </div>
+  </div>
+
+  <p>解答手順としては、まず消滅原因を分類し、次に条文の要件を一つずつ当てはめる。弁済なら「弁済者」「受領者」「給付内容」「充当・供託・代位の有無」を見る。相殺なら「同種目的」「双方弁済期」「一方的意思表示」「禁止規定」「差押え・第三者対抗」を見る。更改なら「旧債務を消滅させる意思」と「新債務の内容」があるかを確認する。免除と混同は短文条文だが、承諾の要否とただし書の有無を正確に押さえる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">弁済</mark></strong>・<strong><mark class="kw">相殺</mark></strong>・<strong><mark class="kw">更改</mark></strong>について、従来の判例・実務で確立していた考え方を条文上明確化した部分が多い。民法473条は弁済の基本効果を明文化し、民法478条は旧法の「債権の準占有者」という表現を、受領権者としての外観を有する者という現代的な表現に改めた。民法511条は、差押えと相殺について判例が採用した相殺期待保護の考え方を反映している。民法513条は、更改の対象を給付内容の重要変更、債務者交替、債権者交替として整理し、旧債務が消滅する重大な効果を分かりやすくした。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">相殺</mark></strong>は銀行取引、売掛金管理、倒産局面で特に重要である。相手方に支払うべき金銭債務と、相手方から受け取るべき金銭債権が併存する場合、相殺により現実の資金移動を省略できるだけでなく、相手方が無資力になっても自己の債権を実質的に回収できる。そのため、相殺は単なる計算処理ではなく、担保と似た実質を持つ制度として扱われる。</p>
+
+  <p><strong><mark class="kw">弁済</mark></strong>の学習では、条文番号を順に追うだけでなく、場面ごとに整理すると記憶が安定する。第一に、誰が弁済できるかが<strong><mark class="kw">民法474条</mark></strong>である。第二に、誰に弁済すればよいかが<strong><mark class="kw">民法478条</mark></strong>などである。第三に、本来の給付ができない、または債権者が受け取らない場合の処理が代物弁済・供託である。第四に、第三者が弁済した後の回収が弁済による代位である。</p>
+
+  <p>他分野との接点として、<strong><mark class="kw">第三者弁済</mark></strong>は保証・物上保証・抵当権、賃貸借、借地借家法と結びつく。<strong><mark class="kw">相殺</mark></strong>は債権譲渡、差押え、破産・民事再生などの倒産法領域と結びつく。<strong><mark class="kw">混同</mark></strong>は相続や担保権と接続する。行政書士試験では、単元単独の知識としてではなく、債権回収の一連の流れの中で、どの時点で債権が消滅したかを判断させる問題に注意する。</p>
+</section>
+
+</body>
+</html>

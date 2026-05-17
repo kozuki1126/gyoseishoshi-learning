@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>代理 | 行政書士試験 民法 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">代理</h1>
+  <p class="page-title-block__sub">本人・代理人・相手方の三面関係から、無権代理と表見代理の処理まで整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法99条から118条</span>
+    <span class="badge badge--info">顕名</span>
+    <span class="badge badge--info">無権代理</span>
+    <span class="badge badge--info">表見代理</span>
+    <span class="badge badge--info">令和2年改正対応</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">代理</mark></strong>とは、ある者が他人のために法律行為をし、その法律効果を直接その他人に帰属させる制度である。契約を結ぶ現場では、本人が常に相手方と向き合えるとは限らない。不動産売買を専門家に任せる、会社の担当者が代表者に代わって契約を締結する、親権者が未成年者のために法律行為をする、という場面では、代理制度がなければ取引や生活関係が著しく硬直する。</p>
+  <p>代理制度の役割は二つある。第一に、本人が自分だけでは処理しきれない法律行為を他人に任せるという<strong><mark class="kw">私的自治の拡張</mark></strong>である。第二に、未成年者など単独で完全な法律行為をすることが難しい者を法定代理人が補うという<strong><mark class="kw">私的自治の補充</mark></strong>である。もっとも、代理人が本人の名を使って相手方と取引する以上、本人の保護、相手方の信頼保護、代理人の責任をどこで調整するかが問題になる。</p>
+  <p>行政書士試験では、単に「代理行為の効果は本人に帰属する」と覚えるだけでは足りない。<strong><mark class="kw">顕名</mark></strong>がない場合、代理人の判断能力や詐欺・錯誤の判断基準、<strong><mark class="kw">代理権の濫用</mark></strong>、<strong><mark class="kw">自己契約</mark></strong>・<strong><mark class="kw">双方代理</mark></strong>、<strong><mark class="kw">無権代理</mark></strong>の追認・催告・取消し・責任、そして<strong><mark class="kw">表見代理</mark></strong>三類型を、条文番号と要件効果で横断的に整理する必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る代理の問題</span>
+    </div>
+    <div class="box__bd">
+      <p>Aが遠方に住んでいるため、Bに「A所有の甲土地を売却してよい」と委任し、Bが「A代理人B」としてCと売買契約をした場合、要件を満たせば契約上の売主はAであり、代金債権や引渡義務はAに帰属する。これが有権代理の基本である。ところが、BがAから売却権限を受けていないのにA代理人と称した場合は、原則としてAに効果は帰属しない。さらに、AがBに代理権があるような外観を作った場合は、Cの信頼を保護するためにAへ責任を負わせることがある。この三段階の切替えが代理単元の中心である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代理</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代理</mark></strong>は、代理人が本人のために相手方へ意思表示をし、または相手方から意思表示を受け、その効果を本人へ直接帰属させる制度である。代理人は法律行為の現場で意思表示をするが、契約当事者として権利義務を取得するのは原則として本人である。制度趣旨は、本人の活動領域を広げることと、本人が自ら法律行為をしにくい場合にその意思決定を補うことにある。</p>
+      <p>成立には、代理権、顕名、代理権の範囲内の法律行為という三要素が必要である。代理権がない場合は無権代理になり、顕名がない場合は代理人自身の行為とみなされるのが原則である。試験では「代理人が契約当事者になる」とする選択肢や、「代理権さえあれば顕名は不要」とする選択肢が誤りにされやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">任意代理と法定代理</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">任意代理</mark></strong>は、本人の意思による代理権授与を基礎とする代理である。典型例は委任契約に基づく不動産売買の代理、行政手続における書類提出の代理である。本人の意思で代理権を与えるため、代理権の範囲は授権行為の内容によって決まる。</p>
+      <p><strong><mark class="kw">法定代理</mark></strong>は、法律の規定によって代理権が発生する代理である。親権者や成年後見人が典型であり、本人の保護を制度目的とする。任意代理人は原則として自由に復代理人を選任できないのに対し、法定代理人は自己の責任で復代理人を選任できるなど、発生原因の違いは復代理や消滅事由の理解にも影響する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">顕名</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">顕名</mark></strong>とは、代理人が「本人のためにすること」を相手方に示すことである。民法百条は、顕名をしないでした意思表示を代理人自身のためにしたものとみなす。相手方にとって、契約の相手が本人なのか代理人なのかは、信用判断や履行請求先を決める重大事項だからである。</p>
+      <p>ただし、相手方が代理人として行為していることを知り、または知ることができたときは、顕名が明示されていなくても代理行為として扱われる。試験では、「A代理人B」と署名する明示の顕名だけでなく、店舗担当者や会社従業員の行為のように、取引状況から本人のための行為と分かる場合も問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代理行為の瑕疵</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代理行為の瑕疵</mark></strong>とは、代理人がした意思表示について、意思の不存在、錯誤、詐欺、強迫、ある事情についての善意悪意・過失が問題になる場合をいう。民法百一条は、原則として代理人を基準に判断すると定める。実際に意思表示を形成し、相手方と向き合うのは代理人だからである。</p>
+      <p>もっとも、特定の法律行為を委託された代理人がその行為をしたとき、本人は自ら知っていた事情や過失により知らなかった事情について、代理人が知らなかったと主張できない。本人が不都合な知識を代理人の背後に隠すことを防ぐためである。試験では「常に本人を基準にする」「常に代理人だけを基準にする」という両極端の選択肢が誤りとなる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">代理権の濫用・自己契約・双方代理</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">代理権の濫用</mark></strong>は、代理人が代理権の範囲内で形式的には有効な行為をしながら、自己または第三者の利益を図る目的で行為する場合である。民法百七条は、相手方がその目的を知り、または知ることができたときは、その行為を無権代理行為とみなす。令和二年施行の改正で、従来の判例法理が明文化された重要規定である。</p>
+      <p><strong><mark class="kw">自己契約</mark></strong>は同一法律行為で代理人が相手方本人にもなる場合であり、<strong><mark class="kw">双方代理</mark></strong>は同一人が当事者双方の代理人となる場合である。いずれも本人の利益が害されやすいため、民法百八条は原則として無権代理とみなす。ただし、債務の履行、本人があらかじめ許諾した行為、利益相反の危険がない処理は例外として扱われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">無権代理</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">無権代理</mark></strong>とは、代理権を有しない者が他人の代理人として契約をすることである。民法百十三条は、本人が追認しなければ本人に効力を生じないと定める。つまり、無権代理行為は当然無効ではなく、本人の追認によって初めて本人に効果が帰属する不確定な状態に置かれる。</p>
+      <p>本人は追認するか、追認を拒絶するかを選べる。相手方は不安定な状態を解消するため、催告権、善意の場合の取消権、無権代理人への責任追及を利用できる。試験では、本人側の権利と相手方側の権利を混同させ、「悪意の相手方も取消せる」「催告できるのは善意の相手方だけ」とする誤答が作られやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">表見代理</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">表見代理</mark></strong>は、実際には代理権がないため無権代理であるにもかかわらず、本人側に代理権があるように見える外観について帰責性があり、相手方がその外観を信頼した場合に、本人へ責任を負わせる制度である。権利外観法理に基づき、本人の帰責性と相手方の信頼保護を調整する。</p>
+      <p>三類型は、民法百九条の<strong><mark class="kw">代理権授与表示による表見代理</mark></strong>、民法百十条の<strong><mark class="kw">権限外の行為の表見代理</mark></strong>、民法百十二条の<strong><mark class="kw">代理権消滅後の表見代理</mark></strong>である。令和二年施行の改正後は、百九条二項と百十二条二項により、授与表示や消滅後の外観に加えて権限外行為が絡む場面も明文化された。試験では、表見代理は無権代理の例外的救済であって、有権代理そのものではない点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>図1：有権代理の三面関係</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-c" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      <line x1="480" y1="104" x2="480" y2="148" stroke="#2563eb" stroke-width="1.7"/>
+      <line x1="180" y1="148" x2="780" y2="148" stroke="#2563eb" stroke-width="1.7"/>
+      <line x1="180" y1="148" x2="180" y2="196" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr-a)"/>
+      <line x1="480" y1="148" x2="480" y2="196" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr-a)"/>
+      <line x1="780" y1="148" x2="780" y2="196" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr-a)"/>
+      <rect x="432" y="136" width="96" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="480" y="153" text-anchor="middle" font-size="13" fill="#1d4ed8">三要素へ分解</text>
+
+      <line x1="330" y1="286" x2="630" y2="286" stroke="#ea580c" stroke-width="1.7" marker-end="url(#arr-c)"/>
+      <rect x="408" y="272" width="144" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="480" y="289" text-anchor="middle" font-size="13" fill="#ea580c">代理行為を実施</text>
+
+      <polyline points="680,276 680,360 480,360 480,414" fill="none" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr-a)"/>
+      <rect x="570" y="346" width="150" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="645" y="363" text-anchor="middle" font-size="13" fill="#1d4ed8">効果が本人へ帰属</text>
+
+      <polyline points="260,276 260,336 398,336" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-b)"/>
+      <rect x="270" y="322" width="118" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="329" y="339" text-anchor="middle" font-size="13" fill="#9f1239">範囲を制約</text>
+
+      <g>
+        <rect x="330" y="36" width="300" height="68" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="480" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">有権代理</text>
+        <text x="480" y="88" text-anchor="middle" font-size="12" fill="#1d4ed8">民法99条・本人へ直接効力帰属</text>
+      </g>
+      <g>
+        <rect x="70" y="204" width="220" height="72" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="180" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">代理権</text>
+        <text x="180" y="258" text-anchor="middle" font-size="12" fill="#7c2d12">授権・法定規定・範囲内行為</text>
+      </g>
+      <g>
+        <rect x="370" y="204" width="220" height="72" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="480" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">顕名</text>
+        <text x="480" y="258" text-anchor="middle" font-size="12" fill="#7c2d12">本人のためにすることを示す</text>
+      </g>
+      <g>
+        <rect x="670" y="204" width="220" height="72" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="780" y="234" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">相手方との意思表示</text>
+        <text x="780" y="258" text-anchor="middle" font-size="12" fill="#7c2d12">代理人が現場で表示・受領</text>
+      </g>
+      <g>
+        <rect x="90" y="414" width="220" height="72" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="200" y="444" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">代理人</text>
+        <text x="200" y="468" text-anchor="middle" font-size="12" fill="#1d4ed8">意思表示をする主体</text>
+      </g>
+      <g>
+        <rect x="370" y="414" width="220" height="72" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="480" y="444" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">本人</text>
+        <text x="480" y="468" text-anchor="middle" font-size="12" fill="#1d4ed8">権利義務が直接帰属</text>
+      </g>
+      <g>
+        <rect x="650" y="414" width="220" height="72" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="760" y="444" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">相手方</text>
+        <text x="760" y="468" text-anchor="middle" font-size="12" fill="#1d4ed8">顕名と権限を信頼して取引</text>
+      </g>
+      <rect x="70" y="512" width="820" height="34" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="480" y="534" text-anchor="middle" font-size="12" fill="#9f1239">代理権・顕名・範囲内行為が欠けると、無権代理・顕名なし・代理権濫用などの例外処理へ進む</text>
+    </svg>
+  </div>
+  <p>図1は、有権代理を「代理権」「顕名」「相手方との意思表示」という三要素に分けて示している。代理人が意思表示をするが、その効果は本人へ直接帰属するため、代理人は契約当事者ではない。相手方は、誰を契約相手として信用すべきかを顕名によって判断する。代理権の範囲を超えたり、本人のためという表示が欠けたりすると、通常の有権代理ではなく、無権代理や民法百条の処理へ移る。</p>
+
+  <h3>図2：無権代理から表見代理までの判断構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr2-a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr2-b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr2-c" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      <line x1="490" y1="102" x2="490" y2="142" stroke="#2563eb" stroke-width="1.7"/>
+      <line x1="185" y1="142" x2="795" y2="142" stroke="#2563eb" stroke-width="1.7"/>
+      <line x1="185" y1="142" x2="185" y2="188" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr2-a)"/>
+      <line x1="490" y1="142" x2="490" y2="188" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr2-a)"/>
+      <line x1="795" y1="142" x2="795" y2="188" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr2-a)"/>
+      <rect x="430" y="130" width="120" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="490" y="147" text-anchor="middle" font-size="13" fill="#1d4ed8">本人帰属の検討</text>
+
+      <line x1="185" y1="262" x2="185" y2="322" stroke="#ea580c" stroke-width="1.7" marker-end="url(#arr2-c)"/>
+      <rect x="126" y="282" width="118" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="185" y="299" text-anchor="middle" font-size="13" fill="#ea580c">本人の選択</text>
+
+      <line x1="490" y1="262" x2="490" y2="322" stroke="#e11d48" stroke-width="1.7" marker-end="url(#arr2-b)"/>
+      <rect x="426" y="282" width="128" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="490" y="299" text-anchor="middle" font-size="13" fill="#9f1239">相手方保護</text>
+
+      <line x1="795" y1="262" x2="795" y2="322" stroke="#2563eb" stroke-width="1.7" marker-end="url(#arr2-a)"/>
+      <rect x="724" y="282" width="142" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="795" y="299" text-anchor="middle" font-size="13" fill="#1d4ed8">外観信頼を保護</text>
+
+      <line x1="490" y1="396" x2="490" y2="456" stroke="#e11d48" stroke-width="1.7" marker-end="url(#arr2-b)"/>
+      <rect x="426" y="416" width="128" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="490" y="433" text-anchor="middle" font-size="13" fill="#9f1239">補充的責任</text>
+
+      <polyline points="675,358 620,358 620,492 610,492" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr2-b)"/>
+      <rect x="624" y="378" width="134" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="691" y="395" text-anchor="middle" font-size="13" fill="#9f1239">成立しなければ責任へ</text>
+
+      <g>
+        <rect x="340" y="34" width="300" height="68" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="490" y="63" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">無権代理行為</text>
+        <text x="490" y="86" text-anchor="middle" font-size="12" fill="#1d4ed8">民法113条・本人追認まで効果不帰属</text>
+      </g>
+      <g>
+        <rect x="65" y="196" width="240" height="66" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="185" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">本人の追認・拒絶</text>
+        <text x="185" y="247" text-anchor="middle" font-size="12" fill="#7c2d12">追認で契約時へ遡及・拒絶で不帰属</text>
+      </g>
+      <g>
+        <rect x="370" y="196" width="240" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+        <text x="490" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">相手方の催告・取消し</text>
+        <text x="490" y="247" text-anchor="middle" font-size="12" fill="#9f1239">催告は善悪不問・取消しは善意</text>
+      </g>
+      <g>
+        <rect x="675" y="196" width="240" height="66" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="795" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">表見代理三類型</text>
+        <text x="795" y="247" text-anchor="middle" font-size="12" fill="#1d4ed8">109条・110条・112条</text>
+      </g>
+      <g>
+        <rect x="65" y="330" width="240" height="66" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+        <text x="185" y="358" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">本人に効果帰属</text>
+        <text x="185" y="381" text-anchor="middle" font-size="12" fill="#7c2d12">追認は別段の意思なければ遡及</text>
+      </g>
+      <g>
+        <rect x="370" y="330" width="240" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+        <text x="490" y="358" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">不安定状態の解消</text>
+        <text x="490" y="381" text-anchor="middle" font-size="12" fill="#9f1239">確答なしは追認拒絶・取消しで離脱</text>
+      </g>
+      <g>
+        <rect x="675" y="330" width="240" height="66" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+        <text x="795" y="358" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">本人が責任を負う</text>
+        <text x="795" y="381" text-anchor="middle" font-size="12" fill="#1d4ed8">外観作出と相手方善意無過失</text>
+      </g>
+      <g>
+        <rect x="370" y="464" width="240" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5"/>
+        <text x="490" y="492" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">無権代理人の責任</text>
+        <text x="490" y="515" text-anchor="middle" font-size="12" fill="#9f1239">履行または損害賠償・117条</text>
+      </g>
+      <rect x="80" y="570" width="820" height="40" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="490" y="595" text-anchor="middle" font-size="12" fill="#9f1239">表見代理は無権代理を前提とする相手方保護制度であり、成立すれば本人責任、成立しなければ117条責任の検討へ進む</text>
+    </svg>
+  </div>
+  <p>図2は、無権代理が発生した後の処理を三方向に分けている。本人側では追認するか追認を拒絶するかを選ぶ。相手方側では催告と取消しによって不安定な地位から離脱できる。さらに、本人が代理権の外観を作ったと評価できる場合には表見代理が成立し、本人に契約責任が帰属する。表見代理が成立しない場合でも、相手方は民法百十七条により無権代理人へ履行または損害賠償を請求できることがある。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>有権代理・無権代理・表見代理の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">有権代理</th>
+        <th class="col--b">無権代理</th>
+        <th class="col--c">表見代理</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><strong class="em-a">代理権があり、顕名して範囲内で行う代理</strong>。効果は本人へ直接帰属する。</td>
+        <td class="col--b"><strong class="em-b">代理権がないのに他人の代理人として契約する行為</strong>。本人追認まで本人に効力を生じない。</td>
+        <td class="col--c"><strong class="em-c">無権代理だが、代理権があるような外観を信頼した相手方を保護する制度</strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法99条</mark></strong>、<strong><mark class="kw">民法100条</mark></strong>、<strong><mark class="kw">民法101条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法113条</mark></strong>から<strong><mark class="kw">民法118条</mark></strong>。</td>
+        <td class="col--c"><strong><mark class="kw">民法109条</mark></strong>、<strong><mark class="kw">民法110条</mark></strong>、<strong><mark class="kw">民法112条</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">本人への効果</td>
+        <td class="col--a"><span class="em-a">当然に帰属</span>する。代理人は契約当事者ではない。</td>
+        <td class="col--b">本人が<span class="em-b">追認しなければ帰属しない</span>。追認すれば原則として契約時に遡る。</td>
+        <td class="col--c">本人が追認しなくても<span class="em-c">相手方との関係で責任を負う</span>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">相手方保護</td>
+        <td class="col--a">顕名と代理権があるため、通常は本人へ履行請求する。</td>
+        <td class="col--b">催告、善意の場合の取消し、無権代理人責任追及を利用する。</td>
+        <td class="col--c">本人側の外観作出と相手方の善意無過失または正当理由が保護の鍵となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「代理人が契約当事者になる」とする選択肢は誤り。</td>
+        <td class="col--b">「無権代理は当然無効で追認できない」とする選択肢は誤り。</td>
+        <td class="col--c">「相手方が悪意でも外観があれば常に成立する」とする選択肢は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>分類の実践的基準は、まず代理権の有無を見ることである。代理権があれば有権代理、なければ無権代理が出発点となる。次に、本人側が代理権の外観を作ったか、相手方がその外観を信頼するにつき保護に値するかを検討し、要件を満たす場合だけ表見代理として本人責任を肯定する。</p>
+
+  <h3>表見代理三類型の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">109条</th>
+        <th class="col--b">110条</th>
+        <th class="col--c">112条</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">名称</td>
+        <td class="col--a"><strong class="em-a">代理権授与の表示による表見代理</strong>。</td>
+        <td class="col--b"><strong class="em-b">権限外の行為の表見代理</strong>。</td>
+        <td class="col--c"><strong class="em-c">代理権消滅後の表見代理</strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">外観の内容</td>
+        <td class="col--a">本人が第三者に「代理権を与えた」と表示したが、実際には代理権がない。</td>
+        <td class="col--b">基本代理権はあるが、代理人がその範囲を超えて行為した。</td>
+        <td class="col--c">以前は代理権があったが、行為時には消滅していた。</td>
+      </tr>
+      <tr>
+        <td class="col--label">相手方の要件</td>
+        <td class="col--a">代理権がないことにつき善意無過失。</td>
+        <td class="col--b">権限があると信ずべき正当な理由。通常、善意無過失と同程度に理解する。</td>
+        <td class="col--c">代理権消滅の事実につき善意無過失。</td>
+      </tr>
+      <tr>
+        <td class="col--label">改正後の注意</td>
+        <td class="col--a">百九条二項により、授与表示された範囲外行為の処理が明文化された。</td>
+        <td class="col--b">基本代理権の存在が出発点。事実行為だけでは足りないとされることがある。</td>
+        <td class="col--c">百十二条二項により、消滅後の権限外行為も正当理由があれば本人責任となる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">代表例</td>
+        <td class="col--a">本人が紹介状や委任状を相手方に示して代理権の外観を作る。</td>
+        <td class="col--b">預かった登記申請書類や実印を用いて、範囲を超えた契約をする。</td>
+        <td class="col--c">退職・解任後の元代理人が、以前の代理権を装って契約する。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>表見代理で迷ったら、外観の源泉を確認する。本人の「与えたように見せる表示」なら百九条、現に存在する基本代理権からの逸脱なら百十条、過去に存在した代理権の残像なら百十二条である。複数類型が絡む場合もあるが、最終的には本人側の帰責性と相手方の信頼の正当性を条文ごとに当てはめる。</p>
+
+  <h3>無権代理後の権利関係</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">主体</th>
+        <th class="col--a">本人</th>
+        <th class="col--b">相手方</th>
+        <th class="col--c">無権代理人</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">主な手段</td>
+        <td class="col--a"><span class="em-a">追認・追認拒絶</span>を選ぶ。</td>
+        <td class="col--b"><span class="em-b">催告・取消し・責任追及</span>を選ぶ。</td>
+        <td class="col--c"><span class="em-c">代理権証明または本人追認</span>がない限り責任を負う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">主観要件</td>
+        <td class="col--a">本人の善意悪意は追認権の発生要件ではない。</td>
+        <td class="col--b">催告は善悪不問。取消しは契約時に無権代理を知らないことが必要。</td>
+        <td class="col--c">相手方が悪意または有過失なら原則として百十七条責任は否定される。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">追認すれば契約時に遡って有効。拒絶すれば本人不帰属が確定する。</td>
+        <td class="col--b">催告への返答なしは追認拒絶みなし。取消しで契約関係から離脱する。</td>
+        <td class="col--c">相手方の選択に従い履行または損害賠償の責任を負う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験注意</td>
+        <td class="col--a">追認は相手方にしなければ相手方へ対抗できないのが原則。</td>
+        <td class="col--b">取消しは本人追認前に限られる。悪意の相手方は取消せない。</td>
+        <td class="col--c">表見代理成立を理由に無権代理人が責任を免れることはできない。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>本人の追認権は本人保護、相手方の催告・取消しは相手方保護、百十七条責任は相手方の損害填補という機能を持つ。誰にどの権利があるか、善意が必要か、効果が遡るかを主体ごとに整理すると、択一式の細かな引っかけを処理しやすい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法99条・100条 代理行為と顕名</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">民法99条1項：代理人がその権限内において本人のためにすることを示してした意思表示は、本人に対して直接にその効力を生ずる。<br>民法100条本文：代理人が本人のためにすることを示さないでした意思表示は、自己のためにしたものとみなす。</blockquote>
+      <p><strong><mark class="kw">民法99条</mark></strong>は、代理制度の基本条文である。「権限内」「本人のためにすることを示して」「意思表示」という三要素を満たせば、効果は本人に直接帰属する。代理人が権利義務をいったん取得して本人へ移転するのではなく、法律効果が最初から本人に発生する点が重要である。</p>
+      <p><strong><mark class="kw">民法100条</mark></strong>は顕名を欠く場合の処理である。顕名がなければ相手方は代理関係を前提に信用判断できないため、代理人自身の行為とみなされる。ただし、相手方が代理人としての行為であることを知り、または知ることができたときは、百九十九条ではなく百条ただし書により九十九条が準用される。試験では「顕名がなければ常に無効」ではなく「代理人自身の行為とみなす」が正しい。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法101条・102条 代理人基準と行為能力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">民法101条1項：代理人が相手方に対してした意思表示の効力が意思の不存在、錯誤、詐欺、強迫等によって影響を受けるべき場合には、その事実の有無は、代理人について決する。<br>民法102条本文：制限行為能力者が代理人としてした行為は、行為能力の制限によっては取り消すことができない。</blockquote>
+      <p><strong><mark class="kw">民法101条</mark></strong>は、代理人が現実に意思表示を形成することから、瑕疵や知不知の判断を代理人基準とする。ただし、特定の法律行為を委託した本人が事情を知っていた場合や過失により知らなかった場合は、代理人が知らなかったと主張できない。本人の知識を意図的に遮断して相手方へ不利益を与えることを防ぐ趣旨である。</p>
+      <p><strong><mark class="kw">民法102条</mark></strong>は、制限行為能力者も代理人になれることを示す。代理による効果は本人に帰属し、代理人自身が法律行為の利益不利益を受けるわけではないためである。ただし、制限行為能力者が他の制限行為能力者の法定代理人としてした行為にはただし書がある。本人保護の必要が高い法定代理の場面では、単純に取引安全だけで処理しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法107条・108条 濫用と利益相反</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">民法107条：代理人が自己又は第三者の利益を図る目的で代理権の範囲内の行為をした場合において、相手方がその目的を知り、又は知ることができたときは、その行為は、代理権を有しない者がした行為とみなす。<br>民法108条1項本文：同一の法律行為について、相手方の代理人として、又は当事者双方の代理人としてした行為は、代理権を有しない者がした行為とみなす。</blockquote>
+      <p><strong><mark class="kw">民法107条</mark></strong>は、代理権の濫用を無権代理とみなす。形式上は代理権の範囲内であっても、代理人が本人を犠牲にして自己または第三者の利益を図る目的で行為し、相手方がその目的を知りまたは知ることができたなら、相手方を保護する必要はない。改正前の判例は民法九十三条ただし書の類推適用で処理していたが、改正により無権代理構成が明文化された。</p>
+      <p><strong><mark class="kw">民法108条</mark></strong>は、自己契約・双方代理・利益相反行為を無権代理とみなす。代理人が本人と利益を対立させる立場に立つと、本人の利益を公正に判断できないためである。ただし、債務の履行や本人があらかじめ許諾した行為は例外である。利益相反の危険があるか、本人がリスクを承認しているかを見極める。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法109条・110条・112条 表見代理</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">民法109条1項：第三者に対して他人に代理権を与えた旨を表示した者は、その代理権の範囲内でその他人が第三者との間でした行為について、その責任を負う。<br>民法110条：前条第一項本文の規定は、代理人がその権限外の行為をした場合において、第三者が代理人の権限があると信ずべき正当な理由があるときについて準用する。<br>民法112条1項：他人に代理権を与えた者は、代理権の消滅後にその代理権の範囲内でその他人が第三者との間でした行為について、代理権の消滅の事実を知らなかった第三者に対してその責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法109条</mark></strong>は、本人が代理権授与の表示をした外観責任を定める。本人自身が「この者には代理権がある」と相手方に示した以上、実際には代理権がなくても、相手方が善意無過失であれば本人が責任を負う。</p>
+      <p><strong><mark class="kw">民法110条</mark></strong>は、基本代理権の存在を前提に、代理人が権限外の行為をした場合を処理する。中心要件は「代理人の権限があると信ずべき正当な理由」であり、取引の性質、本人の関与、相手方の確認行動などを総合して判断される。実印や印鑑証明書があるだけで常に正当理由があるわけではない。</p>
+      <p><strong><mark class="kw">民法112条</mark></strong>は、過去の代理権が消滅した後の外観を処理する。かつて代理権があったため相手方が信頼しやすいが、代理権消滅を過失によって知らなかった相手方までは保護されない。百九条二項・百十二条二項は、授与表示や消滅後代理権の範囲外行為について、百十条的な正当理由判断を組み込む改正規定である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法113条から118条 無権代理</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">民法113条1項：代理権を有しない者が他人の代理人としてした契約は、本人がその追認をしなければ、本人に対してその効力を生じない。<br>民法114条：相手方は、本人に対し、相当の期間を定めて、追認をするかどうかを確答すべき旨の催告をすることができる。<br>民法117条1項：他人の代理人として契約をした者は、代理権を証明したとき又は本人の追認を得たときを除き、相手方の選択に従い、履行又は損害賠償の責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法113条</mark></strong>は、無権代理行為の基本効果を定める。本人が追認しない限り本人に効果は帰属しないが、追認により有効化できるため、単純な無効とは異なる。追認または拒絶は相手方に対してしなければ、相手方に対抗できないのが原則である。</p>
+      <p><strong><mark class="kw">民法114条</mark></strong>は、相手方の催告権を定める。相手方が善意か悪意かを問わず、本人に追認の有無を確答させることができ、本人が期間内に答えなければ追認拒絶とみなされる。これに対し、<strong><mark class="kw">民法115条</mark></strong>の取消権は、契約時に無権代理であることを知らなかった相手方だけが、本人追認前に行使できる。</p>
+      <p><strong><mark class="kw">民法116条</mark></strong>は、追認の遡及効を定める。別段の意思表示がない限り、追認は契約時に遡って効力を生じるが、第三者の権利を害することはできない。<strong><mark class="kw">民法117条</mark></strong>は、無権代理人の責任を定め、相手方は履行または損害賠償を選択できる。ただし、相手方が悪意または有過失であった場合、無権代理人が制限行為能力者であった場合などは適用が制限される。<strong><mark class="kw">民法118条</mark></strong>は単独行為について、相手方が同意しまたは代理権を争わなかった場合に限り、無権代理規定を準用する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和35年2月19日　昭和32(オ)303　民集14巻2号250頁</div>
+      <div class="case-card__title">民法110条の基本代理権が認められないとされた事例（貸金請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">民法110条</span>
+        <span class="badge badge--law">基本代理権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>ある会社は勧誘外交員を使用して一般人から金員を借り入れる事業活動をしていた。勧誘外交員甲は、実際には自分の長男乙に一切の勧誘行為を事実上任せていた。乙は会社との取引に関与したが、乙が甲の代理人として法的な代理権を与えられていたかが問題となった。相手方は、甲が乙を使わせていた実態を根拠に、乙の行為について民法百十条の表見代理が成立し、会社側に責任が及ぶと主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、甲が事実上長男乙をして一切の勧誘行為にあたらせてきたというだけでは、乙を甲の代理人として民法百十条を適用することはできないと判断した。民法百十条の表見代理は、代理人に何らかの基本代理権があることを前提に、その範囲を超えた行為について相手方の信頼を保護する制度である。単に事実上活動を任せていた、補助者のように使っていたという事情だけでは、法的な代理権の基礎があるとはいえない。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、民法百十条の出発点である<strong><mark class="kw">基本代理権</mark></strong>の存在を厳密に確認する必要を示す。試験では「事実行為を任せていた」「日常的に補助をさせていた」だけで当然に表見代理が成立するかが問われる。正しい処理は、法的代理権と単なる事実上の補助を区別することである。表見代理は相手方保護の制度だが、本人に契約責任を負わせる以上、外観の基礎となる本人側の帰責性が必要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和51年6月25日　昭和50(オ)978　民集30巻6号665頁</div>
+      <div class="case-card__title">民法110条の正当理由が否定された連帯根保証事件（約束手形金等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法110条</span>
+        <span class="badge badge--law">正当理由</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>電気器具の販売会社が、取引先に対する継続的商取引上の債権を担保するため、保証人本人の代理人と称する者との間で連帯根保証契約を締結した。代理人は本人の実印が押された本人名義の契約書と印鑑証明書を持参していた。しかし、保証の内容は、継続的商取引から生じる一切の債務を対象とし、保証期間や保証限度額の定めがない重い連帯根保証であった。代理人は主債務者である取引先の代表取締役であり、相手方の要求にもかかわらず実父を保証人にできなかったなど、不自然な事情もあった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、本人の実印の押された契約書と印鑑証明書を代理人が持参したとしても、それだけでは相手方に民法百十条の正当理由があるとはいえないと判断した。印鑑証明書等は本人意思確認の重要資料になり得るが、取引内容が本人に過大な責任を負わせる連帯根保証であり、代理人と主債務者との関係や保証人を得られなかった経緯に照らすと、相手方にはさらに本人の意思を確認すべき事情があった。裁判所は、書類の形式だけでなく、契約の危険性、取引の異常性、相手方の確認義務を総合評価した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">正当な理由</mark></strong>の判断が機械的な書類確認ではなく、取引全体の事情を総合して行われることを示す最重要判例である。「実印と印鑑証明書があれば常に正当理由あり」とする選択肢は誤りである。とくに連帯保証や不動産処分のように本人へ重大な不利益を及ぼす取引では、相手方に本人確認を尽くすべき事情があるかを検討する。行政書士試験では、表見代理の成立を安易に肯定せず、相手方の善意無過失・正当理由を具体的事情から判断する姿勢が問われる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和40年6月18日　昭和39(オ)1267　民集19巻4号986頁</div>
+      <div class="case-card__title">無権代理人が本人を相続した場合（土地所有権移転登記抹消登記手続請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法113条</span>
+        <span class="badge badge--law">民法117条</span>
+        <span class="badge badge--law">相続</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>無権代理人が、本人の代理人であるかのように不動産取引を行った。その後、本人が死亡し、無権代理人自身が本人を相続した。相手方は、無権代理人が本人の地位を承継した以上、もはや追認拒絶は許されず、本人が自ら法律行為をしたのと同じように扱うべきだと主張した。これに対し、相続した無権代理人側は、本人の資格として追認拒絶できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、無権代理人が本人を相続し、本人と代理人の資格が同一人に帰した場合には、本人が自ら法律行為をしたのと同様な法律上の地位を生じたものと解するのが相当であると判示した。無権代理人は、無権代理行為をした本人側の責任原因を自ら作り出した者であり、その者が後に本人の地位を承継したときに、本人保護のための追認拒絶権を利用して自らの行為を否定することは、信義則上許されないという発想である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、無権代理と相続の最頻出論点である。結論は、<strong><mark class="kw">無権代理人が本人を単独相続した場合、追認拒絶はできず、本人が自ら行為したのと同様の地位になる</mark></strong>という整理で押さえる。ただし、逆方向、つまり本人が無権代理人を相続した場合は当然有効にはならないという別判例があるため、誰が誰を相続したかが試験上の最大の分岐である。人物関係を図にしてから判断することが重要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和37年4月20日　昭和35(オ)3　民集16巻4号955頁</div>
+      <div class="case-card__title">本人が無権代理人を相続した場合（建物引渡所有権移転登記手続等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法113条</span>
+        <span class="badge badge--law">追認拒絶</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>無権代理人が本人の代理人であるかのように建物や不動産に関する取引をした。その後、本人が無権代理人を相続し、無権代理人の地位を承継した。相手方は、本人が無権代理人の地位を相続したのだから、無権代理行為は当然に有効になる、少なくとも本人は追認拒絶できないと主張した。これに対し、本人側は、自分は無権代理行為をしていない本人であり、追認するか拒絶するかを選べると争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、本人が無権代理人を相続した場合、被相続人の無権代理行為は相続により当然には有効となるものではないと判断した。本人はもともと無権代理行為によって不利益を受ける立場にあり、本人保護のための追認拒絶権を有する。本人が相続により無権代理人の地位を承継したからといって、その本人保護の地位を当然に失わせる理由はない。もっとも、無権代理人がすでに民法百十七条責任を負っていた場合には、その責任債務を相続する問題は別に生じ得る。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、前掲の「無権代理人が本人を相続した場合」と対にして覚える必要がある。本人が無権代理人を相続した場合、無権代理行為は当然有効にならず、本人は追認拒絶できる。試験では「相続により本人と無権代理人の地位が一人に帰した場合は常に有効」とする選択肢が誤りになる。誰が先に死亡し、誰がどの地位を相続したのかを確認しないと結論を誤る。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　平成5年1月21日　昭和63(オ)1733　民集47巻1号265頁</div>
+      <div class="case-card__title">無権代理人が本人を共同相続した場合（貸金事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法113条</span>
+        <span class="badge badge--law">共同相続</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>無権代理人が本人の代理人として金銭消費貸借や保証に関する行為をした後、本人が死亡し、無権代理人を含む複数の共同相続人が本人を相続した。相手方は、無権代理人が本人の相続人の一人になった以上、その相続分に相当する限度では無権代理行為が当然に有効になると主張した。これに対し、他の共同相続人の追認がない場合でも一部有効化を認めてよいかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、無権代理人が本人を共同相続した場合には、共同相続人全員が共同して無権代理行為を追認しない限り、無権代理人の相続分に相当する部分においても当然に有効となるものではないと判断した。無権代理行為の追認は、本人の地位にある者が契約全体について効果帰属を承認する性質を持つ。共同相続の場合、本人の地位は共同相続人全員に帰属するため、一人の相続分だけを切り出して当然有効化することは、法律関係を不自然に分断する。</p>
+      <h4>試験上の意義</h4>
+      <p>共同相続の事案では、単独相続の結論をそのまま当てはめない。<strong><mark class="kw">共同相続人全員の追認がなければ、無権代理人の相続分についても当然有効とはならない</mark></strong>という点が重要である。試験では「無権代理人が本人を相続したら常に有効」と単純化した選択肢が出されるため、単独相続か共同相続かを区別する。相続法の共同相続関係と民法総則の無権代理が交差する代表的な横断論点である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和62年7月7日　昭和60(オ)289　民集41巻5号1133頁</div>
+      <div class="case-card__title">表見代理と無権代理人の117条責任（保証債務履行事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法117条</span>
+        <span class="badge badge--law">表見代理</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>無権代理人が他人の代理人として保証契約に関与し、相手方は無権代理人に対して民法百十七条の責任を追及した。無権代理人は、相手方との関係では表見代理が成立し得るから、本人が責任を負う余地がある以上、自分は百十七条責任を免れるべきだと主張した。また、旧法下の百十七条二項にいう相手方の過失が、重大な過失に限られるのかも問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、無権代理人は、民法百十七条一項所定の責任を免れる事由として表見代理の成立を主張することはできないと判断した。表見代理は、相手方が本人に責任を追及できる制度であって、無権代理人が自らの責任を逃れるための制度ではない。さらに、同条二項の相手方の「過失」は重大な過失に限定されるものではないとした。相手方が通常の注意を怠って無権代理を知らなかった場合には、無権代理人責任の追及が制限され得る。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、表見代理と無権代理人責任が相手方保護のために併存し得ることを理解するうえで重要である。相手方は、本人に表見代理を主張するか、無権代理人に百十七条責任を追及するかを選択し得る。無権代理人は「表見代理が成立するはずだから自分は責任を負わない」とは主張できない。試験では、表見代理を本人責任の制度、百十七条を無権代理人責任の制度として、機能の違いを正確に区別する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ1 代理行為の成立要件</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「代理人が本人のためにすることを示さずに契約した場合、その契約は当然に無効となる。」これは誤りである。正しくは、<strong><mark class="kw">民法100条</mark></strong>により代理人自身のためにしたものとみなされるのが原則であり、相手方が代理行為であることを知りまたは知ることができたときは代理行為として扱われる。</p>
+      <p>誤りの選択肢例：「代理人が制限行為能力者であれば、その代理行為は本人が取り消せる。」これも原則として誤りである。<strong><mark class="kw">民法102条</mark></strong>は、制限行為能力者が代理人としてした行為を行為能力の制限によって取り消せないとする。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ2 代理権濫用と自己契約・双方代理</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「代理権の濫用は、代理権の範囲内の行為であるから、相手方が悪意でも常に本人に効果が帰属する。」正しくは、相手方が代理人の目的を知り、または知ることができたときは、<strong><mark class="kw">民法107条</mark></strong>により無権代理行為とみなされる。</p>
+      <p>誤りの選択肢例：「自己契約と双方代理は常に絶対無効であり、本人の許諾があっても有効にならない。」正しくは、<strong><mark class="kw">民法108条</mark></strong>により原則として無権代理とみなされるが、債務の履行や本人があらかじめ許諾した行為は例外となる。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ3 無権代理の相手方保護</span>
+    </div>
+    <div class="box__bd">
+      <p>無権代理で最初に分けるべきは、本人の追認前か後かである。本人追認前なら、相手方は催告でき、善意であれば取消しもできる。本人が追認すると、別段の意思表示がない限り契約時に遡って効果が生じるため、相手方の取消しはできなくなる。</p>
+      <p>誤りの選択肢例：「無権代理の相手方の催告権は、相手方が善意無過失の場合に限られる。」これは誤りで、催告権は善意悪意を問わない。誤りの選択肢例：「無権代理の相手方は、契約時に無権代理であることを知っていても取消せる。」これは誤りで、取消権には善意が必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ4 表見代理三類型</span>
+    </div>
+    <div class="box__bd">
+      <p>表見代理は、条文番号と外観の種類を対応させる。<strong><mark class="kw">民法109条</mark></strong>は本人が代理権を与えたと表示した場合、<strong><mark class="kw">民法110条</mark></strong>は基本代理権を超えた場合、<strong><mark class="kw">民法112条</mark></strong>は代理権消滅後の場合である。令和二年施行の改正後は百九条二項・百十二条二項により、外観と権限外行為の複合場面も条文化されている。</p>
+      <p>誤りの選択肢例：「百十条の表見代理は、代理人に基本代理権がなくても、相手方が信じていれば成立する。」正しくは、百十条は基本代理権の存在を前提にする。誤りの選択肢例：「百十二条の表見代理は、相手方が代理権消滅を過失により知らなかった場合にも成立する。」正しくは、過失があれば保護されない。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ5 無権代理と相続</span>
+    </div>
+    <div class="box__bd">
+      <p>無権代理と相続は、人物関係を一つずつ確認する。第一に、無権代理人が本人を単独相続した場合は、本人が自ら法律行為をしたのと同様の地位になり、追認拒絶はできない。第二に、本人が無権代理人を相続した場合は、無権代理行為が当然有効になるわけではなく、本人は追認拒絶できる。第三に、無権代理人が本人を共同相続した場合は、共同相続人全員が追認しない限り、無権代理人の相続分についても当然有効とはならない。</p>
+      <p>誤りの選択肢例：「本人と無権代理人の地位が相続により同一人に帰した場合、常に無権代理行為は当然有効となる。」これは方向と相続形態を無視した誤りである。</p>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p><strong><mark class="kw">意思表示の瑕疵</mark></strong>との関係では、代理人が詐欺・強迫を受けたか、代理人が事情を知っていたかを民法百一条で処理する。<strong><mark class="kw">無効と取消し</mark></strong>との関係では、無権代理が当然無効ではなく、本人の追認によって遡及的に有効化される点を比較する。<strong><mark class="kw">相続</mark></strong>との関係では、無権代理人・本人・共同相続人の地位承継が判例で細かく分かれる。<strong><mark class="kw">会社法</mark></strong>では、代表権の制限や表見代表取締役の規律が、表見代理の外観信頼保護と似た構造を持つ。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行 民法改正での代理規定の整理</span>
+    </div>
+    <div class="box__bd">
+      <p>平成二十九年改正・令和二年施行の民法改正では、代理規定にも重要な整理が加えられた。<strong><mark class="kw">代理権の濫用</mark></strong>について民法百七条が新設され、改正前に民法九十三条ただし書の類推適用で処理されていた判例法理が、無権代理みなしとして条文化された。これにより、代理権濫用の効果は「無効」ではなく、本人の追認可能性や無権代理人責任を含む無権代理ルールで処理されることが明確になった。</p>
+      <p>また、<strong><mark class="kw">表見代理</mark></strong>についても、百九条二項と百十二条二項により、代理権授与表示や代理権消滅後の外観に加え、権限外行為が組み合わさる場面が明文化された。従来の重畳適用・類推適用に関する判例法理を、条文上も読み取りやすくした改正である。行政書士試験では、改正前の短い三類型だけでなく、改正後の二項構造まで意識する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">実務で代理権を確認する理由</span>
+    </div>
+    <div class="box__bd">
+      <p>代理は取引を便利にする制度である一方、本人の知らないところで重大な契約が締結されたと主張される危険を伴う。そのため、不動産売買、保証、会社取引、行政手続の委任では、委任状、印鑑証明書、本人確認書類、代理権の範囲、代理権の存続を丁寧に確認する。表見代理の判例が示すように、形式書類があるだけで相手方が常に保護されるわけではない。取引内容が高額・長期・包括的であるほど、本人意思の確認義務は重く評価されやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">学習整理の注意</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="warn">代理単元は、条文を一列に暗記するだけでは得点しにくい。</strong>まず有権代理の三要素を確認し、次に例外処理として代理権濫用・自己契約・双方代理を置き、その後に無権代理と表見代理を分ける。特に表見代理は、無権代理を前提に本人責任を認める制度であり、有権代理の一種ではない。最後に無権代理と相続の判例を人物関係ごとに整理すれば、択一式だけでなく記述式にも対応しやすくなる。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

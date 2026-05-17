@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I. 民法 - 38.親権（親権の内容、親権の制限）</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">親権</h1>
+  <p class="page-title-block__sub">親権の内容、共同・単独の行使方法、財産管理、利益相反、親権制限を子の利益から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法817条の12</span>
+    <span class="badge badge--info">民法818条</span>
+    <span class="badge badge--info">民法819条</span>
+    <span class="badge badge--info">民法824条の2</span>
+    <span class="badge badge--info">民法826条</span>
+    <span class="badge badge--info">民法834条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">親権</mark></strong>は、未成年の子を保護し、その生活・教育・財産を法的に支えるために父母等へ与えられる権限であり、同時に義務である。親のための支配権ではなく、<strong><mark class="kw">子の利益</mark></strong>のために行使される制度である点が出発点になる。行政書士試験では、親権者が誰になるか、親権者が何を単独でできるか、親と子の利益が衝突したときに誰が代理するか、親権を制限できる場合はいつかが問われやすい。</p>
+  <p>令和八年四月一日施行の家族法改正により、離婚後の親権者は、父母の一方だけでなく<strong><mark class="kw">父母双方</mark></strong>と定めることもできるようになった。もっとも、共同親権が常に原則で単独親権が例外という意味ではない。裁判所は、父母と子との関係、父母相互の関係、暴力・虐待のおそれ、協議が困難な事情などを見て、子の利益にかなう形を定める。</p>
+  <p>親権の内容は大きく、<strong><mark class="kw">身上監護</mark></strong>と<strong><mark class="kw">財産管理</mark></strong>に分かれる。身上監護は子の監護・教育、居所指定、職業許可など、日々の生活に関する権限である。財産管理は、子の財産を管理し、その財産に関する法律行為について子を代表する権限である。どちらも子の利益を目的にするため、親権者自身の債務の担保に子の不動産を使うような場面では、<strong><mark class="kw">利益相反行為</mark></strong>として特別代理人が必要になる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る親権の入口</span>
+    </div>
+    <div class="box__bd">
+      <p>父母が婚姻中であれば、通常は父母双方が親権者となり、進学、医療、転居、財産管理などを子の利益のために決める。離婚時には、協議又は裁判で父母双方又は一方を親権者と定める。日々の食事、衣服、通常の旅行のような日常の監護行為は一方が単独でできるが、子の生活に重大な影響を与える転居や財産処分は、原則として共同の意思決定が必要になる。親権者が子を代理できるからといって、親の借金のために子の不動産へ抵当権を設定するような行為まで自由にできるわけではない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">親権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親権</mark></strong>とは、成年に達しない子について、その子の利益のために行使される父母等の権利義務である。旧来の説明では親が子を保護・教育する権限とされることが多かったが、現行法は<strong><mark class="kw">子の利益</mark></strong>を正面に置き、親権者が子を支配する制度ではないことを明確にしている。親権は、子の日常生活を整える身上監護と、子の財産を管理して法律行為を代理する財産管理から成る。父母が婚姻中であれば原則として双方が親権者となり、離婚・認知・養子縁組の場合は民法の規定に従って親権者を定める。試験では「親権は親の利益のための権利である」「成年に達した子にも親権が及ぶ」という肢を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">親の責務・子の人格尊重</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親の責務</mark></strong>は、父母が婚姻関係の有無にかかわらず、子の心身の健全な発達を図るため、子の人格を尊重し、年齢・発達の程度に配慮して養育し、自己と同程度の生活を維持できるよう扶養する義務である。根拠は<strong><mark class="kw">民法817条の12</mark></strong>で、親権者だけでなく父母一般の責務として置かれている。これに対し、親権者の行為規範としての<strong><mark class="kw">民法821条</mark></strong>は、監護・教育に当たり、体罰その他子の心身の健全な発達に有害な影響を及ぼす言動を禁止する。懲戒権規定の削除後は、しつけの名目でも体罰を正当化できない。試験では「親権者には懲戒権があるから体罰も相当なら許される」という旧法型の誤答に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">親権者の指定・変更</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親権者の指定</mark></strong>は、どの者が未成年の子について親権を行うかを定める問題である。父母の婚姻中は父母双方が親権者となるが、離婚時には協議又は裁判で父母双方又は一方を親権者と定める。父が認知した子については母が親権を行うのが出発点であるが、父母の協議で父母双方又は父を親権者と定めることができる。養子については、直近の縁組による養親と、一定の場合の養親の配偶者である実父母が親権者となる。<strong><mark class="kw">親権者変更</mark></strong>は、子又はその親族の請求により、子の利益のため必要があるときに家庭裁判所が行う。試験では、離婚後は必ず単独親権、又は共同親権が常に優先、という単純化が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">親権の共同行使と単独行使</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親権の共同行使</mark></strong>とは、父母双方が親権者である場合、親権を父母が共同して行うという原則である。根拠は<strong><mark class="kw">民法824条の2</mark></strong>で、婚姻中の共同親権にも離婚後の共同親権にも適用される。共同といっても、すべての契約書に父母双方の署名押印が必須という意味ではなく、父母の共同の意思決定があれば足りる。例外として、一方のみが親権者であるとき、他方が親権を行うことができないとき、子の利益のため急迫の事情があるときは一方が単独で行う。また、監護・教育に関する日常の行為は、父母双方が親権者でも単独でできる。試験では「共同親権なら日常の食事や服装まで常に双方の同意が必要」という肢を誤りとする。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">身上監護権</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">身上監護権</mark></strong>は、子の生活・教育・居所・職業に関する親権の内容である。民法820条は監護及び教育の権利義務を、民法822条は居所指定を、民法823条は職業許可を定める。身上監護は子の人格・発達段階に直接関わるため、親権者の都合ではなく、子の生活の安定と意思・発達への配慮が中心になる。離婚時には、親権者とは別に<strong><mark class="kw">監護者</mark></strong>を定めることがあり、監護者は民法820条から823条までの事項について親権者と同一の権利義務を有し、単独で監護・教育、居所指定、営業許可等を行うことができる。試験では、親権者でなければ監護に関する権限を一切持てない、という肢が誤りになり得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">財産管理権・法定代理権</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">財産管理権</mark></strong>は、親権者が子の財産を管理する権限であり、<strong><mark class="kw">法定代理権</mark></strong>は、その財産に関する法律行為について子を代表する権限である。根拠は<strong><mark class="kw">民法824条</mark></strong>で、子の財産を保存・利用・処分する場面や、未成年者の契約を親権者が代理する場面で問題になる。ただし、子の行為を目的とする債務を生ずべき場合には本人の同意が必要である。管理の注意義務は自己のためにするのと同一の注意であり、成年到達時には管理の計算をしなければならない。試験では、親権者は善管注意義務を負う、又は子の債務を発生させる場合にも本人の同意を要しない、という肢が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">利益相反行為・特別代理人</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">利益相反行為</mark></strong>とは、親権を行う父又は母と子との利益が相反する行為、又は同じ親権者に服する数人の子の間で利益が相反する行為である。根拠は<strong><mark class="kw">民法826条</mark></strong>で、親権者は子のために<strong><mark class="kw">特別代理人</mark></strong>を選任することを家庭裁判所に請求しなければならない。典型例は、親権者と子が共同相続人となる遺産分割、親権者の債務の担保として子の不動産に抵当権を設定する行為、複数の未成年者の一部だけが相続放棄する行為である。利益相反に当たるかは、親権者の動機ではなく、行為の外形・客観的性質から判断する。試験では「親が子のためと思っていれば利益相反でない」という主観型の誤答を切る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">親権喪失・親権停止・管理権喪失</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">親権喪失</mark></strong>は、虐待・悪意の遺棄その他親権行使が著しく困難又は不適当で子の利益を著しく害する場合に、家庭裁判所が親権を失わせる制度である。二年以内に原因消滅の見込みがあるときは親権喪失ではなく、より短期の<strong><mark class="kw">親権停止</mark></strong>が問題になる。親権停止は、親権行使が困難又は不適当で子の利益を害するときに、二年を超えない範囲で期間を定めて行われる。<strong><mark class="kw">管理権喪失</mark></strong>は財産管理だけを失わせる制度であり、身上監護全体を奪うものではない。試験では、親権停止に期間制限がない、管理権喪失で親権全体が失われる、という肢が誤りになる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 760" role="img" aria-label="親権者決定と親権行使方法の全体構造">
+      <defs>
+        <marker id="arr38a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr38a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <path d="M590 105 V165 H210 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M590 165 H590 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M590 165 H970 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M590 315 V375 H210 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M590 375 H590 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M590 375 H970 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38a-blue)"/>
+      <path d="M210 530 V610 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr38a-red)"/>
+      <path d="M970 530 V610 H590" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr38a-red)"/>
+      <rect x="410" y="35" width="360" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">未成年の子と親権</text>
+      <text x="590" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">子の利益のために誰がどう行使するか</text>
+      <rect x="55" y="215" width="310" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">婚姻中の父母</text>
+      <text x="210" y="275" text-anchor="middle" font-size="13" fill="#1e3a8a">父母双方が親権者</text>
+      <text x="210" y="298" text-anchor="middle" font-size="13" fill="#1e3a8a">一方不能なら他方が行使</text>
+      <rect x="435" y="215" width="310" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="590" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">離婚・認知</text>
+      <text x="590" y="275" text-anchor="middle" font-size="13" fill="#7c2d12">双方又は一方を指定</text>
+      <text x="590" y="298" text-anchor="middle" font-size="13" fill="#7c2d12">子の利益で裁判所が判断</text>
+      <rect x="815" y="215" width="310" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="970" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">養子</text>
+      <text x="970" y="275" text-anchor="middle" font-size="13" fill="#1e3a8a">養親が親権者</text>
+      <text x="970" y="298" text-anchor="middle" font-size="13" fill="#1e3a8a">直近縁組を基準に整理</text>
+      <rect x="55" y="430" width="310" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="210" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">共同行使の原則</text>
+      <text x="210" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">共同の意思決定が必要</text>
+      <text x="210" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">父母双方の名義も保護</text>
+      <rect x="435" y="430" width="310" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="590" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">単独行使の例外</text>
+      <text x="590" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">単独親権・一方不能・急迫</text>
+      <text x="590" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">日常の監護教育行為</text>
+      <rect x="815" y="430" width="310" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="970" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">監護者の権限</text>
+      <text x="970" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">監護教育等を単独で行う</text>
+      <text x="970" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">親権者は妨げられない</text>
+      <rect x="350" y="610" width="480" height="85" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="590" y="642" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">最終判断基準</text>
+      <text x="590" y="668" text-anchor="middle" font-size="13" fill="#9f1239">父母の都合ではなく子の利益</text>
+      <text x="590" y="690" text-anchor="middle" font-size="13" fill="#9f1239">暴力・虐待・協議不能は単独親権方向の重要事情</text>
+      <text x="315" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">原則類型</text>
+      <text x="590" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#ea580c">指定類型</text>
+      <text x="850" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#2563eb">縁組類型</text>
+    </svg>
+  </div>
+  <p>この図は、親権を「誰が親権者になるか」と「どのように行使するか」の二段階で整理している。婚姻中は父母双方が親権者となるのが出発点で、離婚・認知では協議又は裁判により父母双方又は一方を指定する。父母双方が親権者である場合は共同の意思決定が原則であるが、日常行為や急迫の事情では単独行使が認められる。図の最下段が示すように、すべての判断は父母の公平感ではなく、子の生活・安全・発達にとって何が利益になるかで決まる。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 900" role="img" aria-label="親権の内容と制限の関係">
+      <defs>
+        <marker id="arr38b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr38b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr38b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <path d="M560 105 V165 H280 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38b-blue)"/>
+      <path d="M560 165 H840 V215" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38b-blue)"/>
+      <path d="M280 315 V385 H190 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38b-blue)"/>
+      <path d="M280 385 H370 V430" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arr38b-blue)"/>
+      <path d="M840 315 V500 H650 V560" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr38b-orange)"/>
+      <path d="M840 500 H970 V560" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arr38b-orange)"/>
+      <path d="M510 530 V760" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr38b-red)"/>
+      <path d="M650 660 V760" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr38b-red)"/>
+      <path d="M970 660 V720 H720 V760" fill="none" stroke="#e11d48" stroke-width="3" marker-end="url(#arr38b-red)"/>
+      <rect x="390" y="35" width="340" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="560" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">親権の内容</text>
+      <text x="560" y="91" text-anchor="middle" font-size="13" fill="#1e3a8a">身上監護と財産管理を子の利益で統制する</text>
+      <rect x="120" y="215" width="320" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="280" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">身上監護</text>
+      <text x="280" y="275" text-anchor="middle" font-size="13" fill="#1e3a8a">監護教育・居所指定・職業許可</text>
+      <text x="280" y="298" text-anchor="middle" font-size="13" fill="#1e3a8a">人格尊重と体罰禁止で制約</text>
+      <rect x="680" y="215" width="320" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="840" y="249" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">財産管理</text>
+      <text x="840" y="275" text-anchor="middle" font-size="13" fill="#7c2d12">財産管理と法律行為の代表</text>
+      <text x="840" y="298" text-anchor="middle" font-size="13" fill="#7c2d12">本人同意・注意義務・計算</text>
+      <rect x="40" y="430" width="300" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="190" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">監護者</text>
+      <text x="190" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">親権者と別に定め得る</text>
+      <text x="190" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">身上監護を単独実施</text>
+      <rect x="360" y="430" width="300" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="510" y="464" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">日常行為</text>
+      <text x="510" y="490" text-anchor="middle" font-size="13" fill="#1e3a8a">重大影響のない生活上の行為</text>
+      <text x="510" y="513" text-anchor="middle" font-size="13" fill="#1e3a8a">単独行使で実務を維持</text>
+      <rect x="500" y="560" width="300" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="650" y="594" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">利益相反</text>
+      <text x="650" y="620" text-anchor="middle" font-size="13" fill="#7c2d12">親子又は子相互の利害対立</text>
+      <text x="650" y="643" text-anchor="middle" font-size="13" fill="#7c2d12">特別代理人を選任</text>
+      <rect x="820" y="560" width="300" height="100" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="970" y="594" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">管理権喪失</text>
+      <text x="970" y="620" text-anchor="middle" font-size="13" fill="#7c2d12">財産管理だけを制限</text>
+      <text x="970" y="643" text-anchor="middle" font-size="13" fill="#7c2d12">身上監護とは分ける</text>
+      <rect x="340" y="760" width="440" height="85" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="560" y="792" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">親権制限</text>
+      <text x="560" y="818" text-anchor="middle" font-size="13" fill="#9f1239">喪失は重大・長期、停止は二年以内</text>
+      <text x="560" y="840" text-anchor="middle" font-size="13" fill="#9f1239">子の利益侵害の程度で選択する</text>
+    </svg>
+  </div>
+  <p>この図は、親権の内容を身上監護と財産管理に分け、それぞれに対応する制約を示している。身上監護では、子の人格尊重、年齢・発達への配慮、体罰禁止が中心となり、監護者が定められた場合には監護者の単独行使も重要になる。財産管理では、親権者の代理権が広く認められる一方、利益相反行為では特別代理人が必要になる。制限制度は、親権全体を奪う喪失・停止と、財産管理だけを制限する管理権喪失を区別して理解する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">共同親権</th>
+        <th class="col--b">単独親権</th>
+        <th class="col--c">監護者</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">父母双方</span>が親権者となり、共同の意思決定により親権を行う。</td>
+        <td class="col--b"><span class="em-b">父母の一方</span>のみが親権者となり、その者が親権を行う。</td>
+        <td class="col--c">親権者とは別に、子の<span class="em-c">監護をすべき者</span>として定められる者。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠場面</td>
+        <td class="col--a">婚姻中、離婚時の協議・裁判、認知後の協議等。</td>
+        <td class="col--b">離婚時、認知後、共同困難・暴力・虐待のおそれがある場合など。</td>
+        <td class="col--c">民法766条等により、離婚等の子の監護に関する事項として定める。</td>
+      </tr>
+      <tr>
+        <td class="col--label">行使方法</td>
+        <td class="col--a">原則は共同。日常行為、急迫の事情、一方不能などは単独行使が可能。</td>
+        <td class="col--b">親権者が単独で身上監護・財産管理を行う。</td>
+        <td class="col--c">監護・教育、居所指定、職業許可等を単独で行うことができる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での誤答</td>
+        <td class="col--a">共同親権なら全行為に父母双方の署名押印が必要、という肢は誤り。</td>
+        <td class="col--b">離婚後は常に単独親権でなければならない、という肢は現行法では誤り。</td>
+        <td class="col--c">監護者は親権者でないから居所指定等をできない、という肢は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">身上監護</th>
+        <th class="col--b">財産管理</th>
+        <th class="col--c">利益相反処理</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">対象</td>
+        <td class="col--a">子の生活、教育、居所、職業などの身分・生活面。</td>
+        <td class="col--b">子の財産、契約、財産に関する代理行為。</td>
+        <td class="col--c">親子間又は子相互間で利害が衝突する法律行為。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><span class="em-a">民法820条から823条</span>、824条の3。</td>
+        <td class="col--b"><span class="em-b">民法824条、827条、828条</span>など。</td>
+        <td class="col--c"><span class="em-c">民法826条</span>。家庭裁判所による特別代理人選任。</td>
+      </tr>
+      <tr>
+        <td class="col--label">限界</td>
+        <td class="col--a">子の人格尊重、発達への配慮、体罰禁止に反する行使は許されない。</td>
+        <td class="col--b">本人同意、注意義務、管理計算、第三者の管理排除意思などで制限される。</td>
+        <td class="col--c">親権者は代理できず、無権代理として処理されることがある。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">学校選択、居所指定、日常生活の世話、営業許可。</td>
+        <td class="col--b">子名義預金の管理、相続財産の管理、財産売買の代理。</td>
+        <td class="col--c">親子共同相続の遺産分割、親の債務担保への子不動産提供。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">親権喪失</th>
+        <th class="col--b">親権停止</th>
+        <th class="col--c">管理権喪失</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">要件の重さ</td>
+        <td class="col--a">親権行使が著しく困難又は不適当で、子の利益を著しく害する。</td>
+        <td class="col--b">親権行使が困難又は不適当で、子の利益を害する。</td>
+        <td class="col--c">管理権行使が困難又は不適当で、子の利益を害する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">期間</td>
+        <td class="col--a">期限を定めない重い制限。ただし二年以内に原因消滅見込みがあれば不可。</td>
+        <td class="col--b">二年を超えない範囲で期間を定める。</td>
+        <td class="col--c">財産管理に関する制限で、親権全体の期間停止ではない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対象権限</td>
+        <td class="col--a">親権全体。</td>
+        <td class="col--b">親権全体を一時的に停止。</td>
+        <td class="col--c">財産管理権のみ。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での使い分け</td>
+        <td class="col--a">虐待・悪意の遺棄など重大かつ長期の危険。</td>
+        <td class="col--b">短期間の治療・入所・高葛藤など、一時的制限で足りる場合。</td>
+        <td class="col--c">浪費や不適切な財産管理が中心で、身上監護までは奪わない場合。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践基準は、まず「誰を親権者にするか」と「親権者とは別に監護者を置くか」を分けることである。次に、行為の内容が日常的な監護行為か、子の生活に重大な影響を与える行為か、財産に関する法律行為かを確認する。最後に、親権者自身又は他の子に利益が移る構造があるなら、親権者の善意・悪意ではなく外形から利益相反を検討する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Relevant Articles</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法817条の12</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">父母は、子の心身の健全な発達を図るため、その子の人格を尊重するとともに、その子の年齢及び発達の程度に配慮してその子を養育しなければならず、かつ、その子が自己と同程度の生活を維持することができるよう扶養しなければならない。<br>２　父母は、婚姻関係の有無にかかわらず、子に関する権利の行使又は義務の履行に関し、その子の利益のため、互いに人格を尊重し協力しなければならない。</blockquote>
+      <p><strong><mark class="kw">民法817条の12</mark></strong>は、親権者に限らない父母の基本的責務を定める。第一項は、子の人格尊重、発達段階への配慮、生活保持義務を示す。第二項は、離婚後・別居後であっても、父母が子に関する権利義務の履行について互いに人格を尊重し協力すべきことを定める。親権者指定や変更では、この責務を果たしてきたかが重要な考慮要素になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法818条・819条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百十八条　親権は、成年に達しない子について、その子の利益のために行使しなければならない。<br>２　父母の婚姻中はその双方を親権者とする。<br>第八百十九条　父母が協議上の離婚をするときは、その協議で、その双方又は一方を親権者と定める。<br>２　裁判上の離婚の場合には、裁判所は、父母の双方又は一方を親権者と定める。</blockquote>
+      <p><strong><mark class="kw">民法818条</mark></strong>は、親権の対象を成年に達しない子に限り、行使基準を子の利益とする。婚姻中の父母双方親権と養子の親権者もこの条文から整理する。<strong><mark class="kw">民法819条</mark></strong>は、離婚又は認知の場合の親権者を定める中心条文である。現行法では、離婚時に父母双方又は一方を親権者と定めることができるため、旧法知識で「必ず一方」と判断しない。裁判所が判断するときは、父母と子との関係、父母相互の関係、暴力・虐待のおそれ、共同して親権を行うことの困難性を考慮する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法820条から824条の3</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百二十条　親権を行う者は、子の利益のために子の監護及び教育をする権利を有し、義務を負う。<br>第八百二十一条　親権を行う者は、前条の規定による監護及び教育をするに当たっては、子の人格を尊重するとともに、その年齢及び発達の程度に配慮しなければならず、かつ、体罰その他の子の心身の健全な発達に有害な影響を及ぼす言動をしてはならない。<br>第八百二十四条の二　親権は、父母が共同して行う。ただし、次に掲げるときは、その一方が行う。<br>一　その一方のみが親権者であるとき。二　他の一方が親権を行うことができないとき。三　子の利益のため急迫の事情があるとき。</blockquote>
+      <p><strong><mark class="kw">民法820条</mark></strong>から<strong><mark class="kw">民法823条</mark></strong>までは、身上監護の内容を定める。監護・教育、人格尊重、居所指定、職業許可をセットで押さえる。<strong><mark class="kw">民法824条の2</mark></strong>は、父母双方が親権者である場合の共同行使と単独行使の例外を定める。急迫の事情には、DV・虐待からの避難、緊急医療、期限が迫る入学手続などが含まれ得る。<strong><mark class="kw">民法824条の3</mark></strong>は監護者の権利義務を定め、監護者が親権者と同一の権利義務を持つ範囲を示す。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法824条・825条・826条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百二十四条　親権を行う者は、子の財産を管理し、かつ、その財産に関する法律行為についてその子を代表する。ただし、その子の行為を目的とする債務を生ずべき場合には、本人の同意を得なければならない。<br>第八百二十五条　父母が共同して親権を行う場合において、父母の一方が、共同の名義で、子に代わって法律行為をし又は子がこれをすることに同意したときは、その行為は、他の一方の意思に反したときであっても、そのためにその効力を妨げられない。ただし、相手方が悪意であったときは、この限りでない。<br>第八百二十六条　親権を行う父又は母とその子との利益が相反する行為については、親権を行う者は、その子のために特別代理人を選任することを家庭裁判所に請求しなければならない。</blockquote>
+      <p><strong><mark class="kw">民法824条</mark></strong>は財産管理権と法定代理権の基本条文である。ただし書は、子自身の行為を目的とする債務を生じさせる場面で本人同意を要求する。<strong><mark class="kw">民法825条</mark></strong>は、共同親権の取引安全を保護する規定で、父母の一方が共同名義でした行為は、相手方が悪意でない限り効力が妨げられない。<strong><mark class="kw">民法826条</mark></strong>は、親権者の代理権を子の利益保護のために排除し、特別代理人へ切り替える条文である。親権者の動機ではなく行為外形を見る点が判例・試験の核心である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法827条から833条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百二十七条　親権を行う者は、自己のためにするのと同一の注意をもって、その管理権を行わなければならない。<br>第八百二十八条　子が成年に達したときは、親権を行った者は、遅滞なくその管理の計算をしなければならない。<br>第八百三十条　無償で子に財産を与える第三者が、親権を行う父又は母にこれを管理させない意思を表示したときは、その財産は、父又は母の管理に属しないものとする。</blockquote>
+      <p><strong><mark class="kw">民法827条</mark></strong>は、親権者の管理上の注意義務を自己のためにするのと同一の注意とする。善管注意義務ではない点が引っかけになりやすい。<strong><mark class="kw">民法828条</mark></strong>は、成年到達時の管理計算義務を定める。養育及び財産管理の費用は財産収益と相殺したものとみなされるが、第三者が反対の意思を表示した場合には民法829条により処理が変わる。<strong><mark class="kw">民法830条</mark></strong>は、第三者が無償で与えた財産について親権者の管理から外す仕組みを置く。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法834条から837条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第八百三十四条　父又は母による虐待又は悪意の遺棄があるときその他父又は母による親権の行使が著しく困難又は不適当であることにより子の利益を著しく害するときは、家庭裁判所は、子、その親族、未成年後見人、未成年後見監督人又は検察官の請求により、その父又は母について、親権喪失の審判をすることができる。ただし、二年以内にその原因が消滅する見込みがあるときは、この限りでない。<br>第八百三十四条の二　父又は母による親権の行使が困難又は不適当であることにより子の利益を害するときは、家庭裁判所は、子、その親族、未成年後見人、未成年後見監督人又は検察官の請求により、その父又は母について、親権停止の審判をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法834条</mark></strong>は親権喪失、<strong><mark class="kw">民法834条の2</mark></strong>は親権停止、<strong><mark class="kw">民法835条</mark></strong>は管理権喪失を定める。親権喪失は重大かつ長期の危険に対応する重い制度であり、二年以内に原因が消滅する見込みがあるときは使えない。親権停止は二年以内の期間を定める一時的制度で、子の心身の状態や生活状況など一切の事情を考慮する。管理権喪失は財産管理だけに焦点を当てるため、身上監護まで当然に失わせるものではない。原因が消滅した場合は、民法836条により取消しが問題になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Leading Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第一小法廷 昭和35年2月25日 民集14巻2号279頁</p>
+      <h3 class="case-card__title">親権者の一方だけに利益相反がある場合の代理方法</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">民法826条</span>
+        <span class="badge badge--case">共同親権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>父母が共同で親権を行う未成年の子について、父母の一方にだけ子との利益相反関係が生じる法律行為が問題となった。親権者が二人いる場合、利益相反関係にある親を排除すれば、利益相反のない他方の親だけで子を代理できるのか、それとも特別代理人を加えた代理方法が必要かが争点となった。紛争の背景には、親権を共同で行う制度と、子の利益を守るために利益相反親権者を排除する制度との接続問題があった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、親権者たる父母の一方に<strong><mark class="kw">民法826条</mark></strong>一項の利益相反関係があるときは、利益相反関係のない親権者と、同項により選任された特別代理人とが共同して子のための代理行為をすべきであるとした。利益相反のある親は代理から外れるが、利益相反のない親も単独で代理するのではなく、共同親権の構造を踏まえて特別代理人と共同する。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、共同親権と特別代理人の接続を問う形で出題される。誤りの選択肢例は「父母の一方だけが利益相反関係にあるときは、他方の親権者が単独で子を代理すれば足りる」である。正しくは、利益相反のない親権者と特別代理人との共同代理である。共同親権の原則を維持しながら、利益相反のある親だけを排除する点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第三小法廷 昭和37年10月2日 持分移転登記抹消登記手続履行請求事件</p>
+      <h3 class="case-card__title">利益相反行為の外形判断と借入・抵当権設定</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">民法826条</span>
+        <span class="badge badge--case">外形判断</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>親権者が子を代理して金員を借り受け、その債務について子所有の不動産に抵当権を設定した場合と、親権者自身が金員を借り受け、その親自身の債務の担保として子所有の不動産に抵当権を設定した場合とで、利益相反該当性が問題となった。借入金が実際に誰のために使われる予定だったのか、親が子のためを思っていたのかといった主観的事情をどこまで見るかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、利益相反行為に当たるかどうかを行為の外形から判断する立場を示した。子自身が借主となり、その債務のために子の不動産に抵当権を設定する行為は、借入金を親が自分の用途に充てる意図があったとしても、その意図だけでは利益相反行為にならない。他方、親権者自身が借主となり、親の債務の担保として子の不動産に抵当権を設定する行為は、借入金を子の養育費に充てる意図があっても、外形上、親の利益と子の不利益が衝突するため利益相反行為に当たる。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">利益相反行為</mark></strong>を主観的動機でなく客観的外形から見るという基本判例である。試験では「親が子のために使うつもりだったので民法826条の利益相反には当たらない」という肢が誤りになる。借主が誰か、担保提供が誰の債務のためか、行為の外形から親が利益を受け子が不利益を受ける構造かを確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第三小法廷 昭和43年10月8日 土地建物所有権移転登記抹消登記手続等請求事件</p>
+      <h3 class="case-card__title">親が連帯保証人となる第三者債務と子の担保提供</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">利益相反</span>
+        <span class="badge badge--case">物上保証</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>第三者の金銭債務について、親権者自身が連帯保証人となるとともに、子を代理して子にも連帯保証債務を負わせ、さらに親と子が共有する不動産に抵当権を設定した事案である。債権者が抵当権を実行すれば、子の持分の競売代金が債務の弁済に充てられ、その限度で親権者の保証責任も軽減され得る。債権者が親権者に保証責任を追及した場合にも、親子間の求償や代位の問題が生じる構造であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、このような事実関係のもとで、子のためにされた連帯保証債務負担行為及び抵当権設定行為は<strong><mark class="kw">民法826条</mark></strong>の利益相反行為に当たると判断した。行為の外形から、子の財産が第三者債務の弁済に充てられることにより親権者の保証責任が軽減され、親が子の不利益において利益を受けることが当然に予想されるためである。</p>
+      <h4>試験上の意義</h4>
+      <p>物上保証や連帯保証が絡むと、単に「第三者の債務だから親子間ではない」と誤解しやすい。しかし親権者自身が連帯保証人となるなど、親の責任軽減と子の財産負担が結び付く外形があれば利益相反となる。試験では、債務者、保証人、担保提供者、財産の所有者を図式化し、親に責任軽減の利益が生じるかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第一小法廷 昭和48年4月24日 民法826条2項・遺産分割協議</p>
+      <h3 class="case-card__title">複数の未成年者相互の利益相反と各別の特別代理人</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★★</span>
+        <span class="badge badge--case">民法826条2項</span>
+        <span class="badge badge--case">遺産分割</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共同相続人の中に複数の未成年者が含まれ、それらの未成年者が一人の親権者に服している状況で、遺産分割協議が行われた。親権者自身は相続権を有しない場合でも、複数の子の取り分をどう分けるかによって、一方の子の取得が増えれば他方の子の取得が減る関係が生じる。そこで、同じ親権者が複数の子をまとめて代理できるか、子ごとに特別代理人が必要かが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">民法826条2項</mark></strong>の利益相反行為とは、行為の客観的性質上、数人の子ら相互間に利害対立を生ずるおそれのあるものをいい、現実に対立が生じたかどうかは問わないとした。遺産分割協議は、相続財産の配分を決めるものであるから、未成年者相互の利益相反行為に該当する。共同相続人中の数人の未成年者が一人の親権者に服するときは、その親権者が代理する一人を除き、その余の未成年者について各別に選任された特別代理人が遺産分割協議に加わる必要がある。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、親と子の利益相反だけでなく、子と子の利益相反にも特別代理人が必要であることを示す。誤りの選択肢例は「親権者自身が相続人でなければ、複数の未成年者を一括して代理できる」である。正しくは、遺産分割の外形上、子相互の取得分が競合するため、各別の特別代理人を検討する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <p class="case-card__meta">最高裁判所第一小法廷 平成4年12月10日 民集46巻9号2727頁</p>
+      <h3 class="case-card__title">物上保証行為と親権者の法定代理権濫用</h3>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">重要度：★★</span>
+        <span class="badge badge--case">法定代理権</span>
+        <span class="badge badge--case">代理権濫用</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>未成年者の母が親権者として、信用保証協会が第三者会社に対して取得する債権を担保するため、子が所有する土地に極度額三千万円の根抵当権を設定した。子は、親権者が子の利益に反して法定代理権を濫用したとして、根抵当権設定登記の抹消を求めた。事案では、第三者会社の債務のために子の不動産を担保へ差し出すことが、ただちに民法826条の利益相反行為になるのか、それとは別に代理権濫用として効力を否定できるかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、親権者が子を代理して子所有不動産を第三者の債務の担保に供する行為について、親権者に子を代理する権限を与えた法の趣旨に著しく反すると認められる特段の事情がない限り、当然には法定代理権の濫用に当たらないとした。民法826条の利益相反に当たらないから常に有効という単純な処理ではなく、代理権が子の利益保護という趣旨に反して使われたかを別途検討する余地を残した。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">利益相反行為</mark></strong>と<strong><mark class="kw">代理権濫用</mark></strong>を区別する素材である。親権者が第三者の債務のために子の財産を担保提供した場合、親権者自身の債務や保証責任と結び付けば利益相反になりやすい。他方、利益相反に直ちに当たらない場合でも、子の利益保護という法定代理権の趣旨に著しく反する特段事情があれば、代理権濫用が問題になる。試験では、民法826条だけで機械的に処理しない姿勢が必要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">親権</mark></strong>は成年に達しない子について、子の利益のために行使される。親のための権限ではない。</li>
+        <li><strong><mark class="kw">離婚後の親権者</mark></strong>は父母双方又は一方を定め得る。旧法の単独親権固定で判断しない。</li>
+        <li><strong><mark class="kw">民法824条の2</mark></strong>では、共同行使が原則だが、日常行為、急迫の事情、一方不能では単独行使ができる。</li>
+        <li><strong><mark class="kw">利益相反行為</mark></strong>は動機ではなく外形で判断する。親子だけでなく、子相互の利益相反もある。</li>
+        <li><strong><mark class="kw">親権喪失</mark></strong>、親権停止、管理権喪失は、対象権限、要件の重さ、期間で区別する。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例一：</strong>「父母が離婚するときは、必ず父母の一方を親権者と定めなければならない。」これは現行法では誤りである。<strong><mark class="kw">民法819条</mark></strong>は、協議離婚でも裁判離婚でも、父母双方又は一方を親権者と定める構造を採る。</p>
+      <p><strong>誤りの選択肢例二：</strong>「父母双方が親権者である場合、子の食事、服装、通常の世話など日常の監護行為も常に父母双方で決定しなければならない。」これは誤りである。監護及び教育に関する日常の行為は、単独で親権を行使できる。</p>
+      <p><strong>誤りの選択肢例三：</strong>「親権者が子のためにするつもりであれば、親の債務を担保するために子の不動産へ抵当権を設定しても利益相反行為にならない。」これは誤りである。利益相反は、親権者の意図ではなく、行為の外形から判断する。</p>
+      <p><strong>誤りの選択肢例四：</strong>「親権停止の審判には期間制限がない。」これは誤りである。親権停止は二年を超えない範囲で期間を定める。</p>
+    </div>
+  </div>
+
+  <p>解答手順は、第一に子が未成年かを確認し、第二に親権者が誰かを民法818条・819条で確定し、第三に問題の行為が身上監護か財産管理かを分類する。第四に、父母双方が親権者なら共同行使が必要な行為か、日常行為・急迫の事情などで単独行使できるかを検討する。第五に、財産行為なら利益相反の外形があるか、特別代理人が必要かを判断する。</p>
+  <p>他分野との接点として、<strong><mark class="kw">親権</mark></strong>は制限行為能力者制度、代理、無権代理、相続の遺産分割、扶養、戸籍実務とつながる。たとえば未成年者の契約は制限行為能力者制度で取消しが問題になるが、親権者が法定代理人として行う行為では代理法の知識が必要になる。遺産分割では相続法と民法826条が交差するため、親族法だけで完結させず、代理・相続の知識を組み合わせて読む。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p>親権法制は、親の権限から子の利益中心へと重点を移している。令和四年改正では懲戒権規定が削除され、子の人格尊重、年齢・発達への配慮、体罰等の禁止が明文化された。令和六年法律第三十三号による家族法改正は、令和八年四月一日に施行され、離婚後の親権者を父母双方又は一方と定める仕組み、親の責務、親子交流、養育費、監護に関する規律が整備された。</p>
+  <p>共同親権の導入を学ぶときは、「共同親権になれば父母が同居する」「共同親権なら監護者は不要」「共同親権ならすべて共同署名が必要」といった誤解を避ける。親権者の指定は、子の生活場所、監護者、養育費、親子交流とは関連するが、同じものではない。共同親権でも監護者を定めることがあり、日常行為は単独でできる。単独親権でも、別居親が親の責務や親子交流に関わる場面は残る。</p>
+  <p>実務上は、親権者の指定・変更、監護者指定、特別代理人選任、親権喪失・停止は家庭裁判所の手続と密接に結び付く。行政書士試験では手続の細部より、どの制度がどの危険に対応するかを区別することが重要である。子の居所や医療のような身上監護の緊急問題、相続や担保設定のような財産管理の利益相反問題、虐待・放置のような親権制限問題を分けて整理する。</p>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">学習整理法</span>
+    </div>
+    <div class="box__bd">
+      <p>本単元は、条文番号順に丸暗記するよりも、問題場面で整理する方が定着しやすい。まず「親権者の決定」は民法818条・819条、「身上監護」は民法820条から823条、「共同行使」は民法824条の2、「財産管理」は民法824条・827条・828条、「利益相反」は民法826条、「親権制限」は民法834条から837条と対応させる。判例はほぼ利益相反に集中するため、誰の債務か、誰の財産か、誰が利益を受ける外形かを必ず書き出す。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

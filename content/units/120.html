@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>多数当事者の債権関係 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">多数当事者の債権関係</h1>
+  <p class="page-title-block__sub">分割債権・不可分債権・連帯債務・保証債務を、請求範囲、効力の波及、求償関係から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法427条</span>
+    <span class="badge badge--info">民法428条</span>
+    <span class="badge badge--info">民法436条</span>
+    <span class="badge badge--info">民法441条</span>
+    <span class="badge badge--info">民法446条</span>
+    <span class="badge badge--info">保証人保護</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">多数当事者の債権関係</mark></strong>とは、一つの債権債務関係に債権者または債務者が複数存在する場面をいう。売買代金を複数人で負担する、共有物を共同で売却する、複数人が借入金を連帯して返済する、主債務者とは別に保証人が付く、といった場面で問題になる。単独の債権関係では「誰が誰にいくら請求できるか」を見れば足りるが、多数当事者になると、債権者が誰にどの範囲で請求できるか、一人に生じた弁済・相殺・免除・時効完成などが他の者に及ぶか、内部的に誰が最終負担をするかを分けて考える必要がある。</p>
+
+  <p>民法は、まず<strong><mark class="kw">民法427条</mark></strong>で<strong><mark class="kw">分割債権</mark></strong>・<strong><mark class="kw">分割債務</mark></strong>を原則とする。数人の債権者または債務者がいて、別段の意思表示がなければ、各人は等しい割合で権利を有し、義務を負う。これに対して、給付の性質上分けられないときは<strong><mark class="kw">不可分債権</mark></strong>・<strong><mark class="kw">不可分債務</mark></strong>となり、法令や当事者の意思表示で全部請求を認めると<strong><mark class="kw">連帯債務</mark></strong>となる。さらに、主たる債務者が履行しない場合に備えて別人が責任を負うものが<strong><mark class="kw">保証債務</mark></strong>である。</p>
+
+  <p>行政書士試験で特に問われるのは、<strong><mark class="kw">分割主義</mark></strong>、<strong><mark class="kw">不可分</mark></strong>、<strong><mark class="kw">連帯</mark></strong>、<strong><mark class="kw">保証</mark></strong>を抽象語で覚えることではない。債権者が全額を請求できるのか、請求を受けた者が催告・検索の抗弁を出せるのか、一人に生じた事由が他の者へ絶対効として及ぶのか相対効にとどまるのか、弁済した者が誰にどの範囲で求償できるのかが問われる。特に令和2年施行の債権法改正後は、連帯債務者の一人に対する<strong><mark class="kw">履行の請求</mark></strong>や<strong><mark class="kw">免除</mark></strong>、<strong><mark class="kw">時効の完成</mark></strong>の扱いを旧法知識のまま答えると誤る。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBとCに対して90万円を貸しただけで、連帯の合意も不可分の給付もない場合、BとCは原則として各45万円ずつの<strong><mark class="kw">分割債務</mark></strong>を負う。これに対し、BとCが「連帯して返済する」と約束したときは、AはBだけに90万円全額を請求でき、Bが全額弁済すればBはCの負担部分について<strong><mark class="kw">求償</mark></strong>する。BとCが共同で一台の特注機械を引き渡す債務を負う場合、その機械を物理的・法律的に分けて履行できないため<strong><mark class="kw">不可分債務</mark></strong>の問題になる。さらにDがBの借入れを保証した場合、Dの責任はBの債務を前提とする<strong><mark class="kw">保証債務</mark></strong>であり、通常保証なら催告・検索の抗弁、連帯保証ならその抗弁がないという違いが出る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">分割債権・分割債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">分割債権</mark></strong>・<strong><mark class="kw">分割債務</mark></strong>は、複数の債権者または債務者がいても、各人が自己の割合についてだけ権利を有し、または義務を負う関係である。<strong><mark class="kw">民法427条</mark></strong>は、別段の意思表示がないときは各債権者または各債務者が等しい割合で権利を有し、義務を負うと定める。制度趣旨は、多数人が関与するだけで当然に全額責任を負わせると過大な負担となるため、全額責任は不可分性・連帯の合意・法令上の根拠がある場合に限る点にある。分割債務では、債権者は各債務者にその負担部分しか請求できず、一人が無資力になっても他の債務者へ当然に肩代わりを求めることはできない。試験では「複数債務者がいると当然に各自全額を負う」とする肢が誤りであり、まず分割が原則であることを起点にする。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不可分債権・不可分債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不可分債権</mark></strong>・<strong><mark class="kw">不可分債務</mark></strong>は、給付の目的が性質上分割できないため、分割債権・分割債務として処理できない関係である。典型例は、一個の建物の引渡し、一頭の動物の引渡し、特定の登記手続などで、債務者が複数いても履行の目的を人数で割ることができない。不可分債権については連帯債権の規定が一部準用され、不可分債務については連帯債務の規定が一部準用されるため、外部関係では全部請求に近い処理がされる。ただし不可分性は給付目的の性質から生じる点で、当事者の合意や法令によって全額責任を発生させる連帯債務とは異なる。試験では「不可分債務は連帯債務と完全に同じ」とする肢が誤りになりやすく、民法428条・430条が準用から除外する規定を持つことを意識する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">連帯債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">連帯債務</mark></strong>は、債務の目的が性質上可分であっても、法令または当事者の意思表示により、各債務者が全部または一部の履行について責任を負う関係である。<strong><mark class="kw">民法436条</mark></strong>は、債権者が連帯債務者の一人に対し、または同時・順次に全ての連帯債務者に対し、全部または一部の履行を請求できると定める。制度趣旨は、債権者にとって回収可能性を高める一方で、内部的には各債務者の負担部分に応じた求償で公平を回復する点にある。連帯債務は、外部関係では各自全額責任、内部関係では負担部分と求償、効力関係では相対効原則と例外的絶対効という三層で理解する必要がある。試験では、債権者が誰に請求できるかよりも、一人に生じた事由が他の者へ及ぶかが難所になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相対的効力の原則と絶対効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相対的効力の原則</mark></strong>は、連帯債務者の一人について生じた事由は、原則として他の連帯債務者に効力を生じないという考え方である。現行<strong><mark class="kw">民法441条</mark></strong>は、更改、相殺、混同を除き、連帯債務者の一人について生じた事由は他の連帯債務者に効力を生じないとする。旧法では履行の請求、免除、時効完成などに絶対効を認める規定が多かったが、改正後は債権者の意思と内部求償関係を尊重し、絶対効を限定する方向へ整理された。<strong><mark class="kw">更改</mark></strong>は全員の利益のために債権を消滅させ、<strong><mark class="kw">相殺</mark></strong>は援用があれば全員の利益のために消滅し、<strong><mark class="kw">混同</mark></strong>は弁済したものとみなされる。試験では「連帯債務者の一人への請求は常に他の連帯債務者にも時効更新の効力を生ずる」という旧法型の肢を警戒する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">求償権と負担部分</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">求償権</mark></strong>は、連帯債務者の一人が弁済その他自己の財産で共同の免責を得た場合に、他の連帯債務者へ内部的な負担部分に応じて償還を求める権利である。<strong><mark class="kw">民法442条</mark></strong>は、免責を得た額が自己の負担部分を超えるかどうかにかかわらず、支出した財産の額のうち各自の負担部分に応じた額について求償権を認める。これは、外部的には全額請求を認めつつ、内部的には公平な最終負担に戻すための制度である。連帯債務者の中に無資力者がいる場合には、民法444条により、求償者と資力ある者の間で分担する。試験では「全額弁済した連帯債務者は他の者へ全額を求償できる」とする肢が誤りであり、自己の負担部分を控除し、他の者の負担部分に応じる点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">保証債務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">保証債務</mark></strong>は、主たる債務者が履行しないときに、保証人がその履行をする責任を負う債務である。<strong><mark class="kw">民法446条</mark></strong>は保証人の責任を定め、保証契約は書面または電磁的記録によらなければ効力を生じないとする。保証債務は主たる債務に従属するため、主たる債務が存在しなければ原則として保証債務も存在せず、保証人の負担が主たる債務より重い場合は主たる債務の限度に減縮される。通常保証人には<strong><mark class="kw">催告の抗弁</mark></strong>と<strong><mark class="kw">検索の抗弁</mark></strong>があるが、連帯保証人にはこれらがない。試験では、保証債務を連帯債務と同一視せず、主債務との従属性、補充性、保証人保護の規定を順に確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">連帯保証・共同保証・個人根保証</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">連帯保証</mark></strong>は、保証人が主たる債務者と連帯して債務を負担する保証であり、民法454条により催告の抗弁・検索の抗弁を持たない。実務では保証といえば連帯保証であることが多く、債権者は主債務者に先に請求せず、直ちに連帯保証人へ全額請求できる。<strong><mark class="kw">共同保証</mark></strong>は保証人が複数いる場合で、原則として民法427条の分割主義が適用されるが、主債務が不可分である場合や各保証人が全額を弁済すべき特約がある場合には共同保証人間の求償が問題になる。<strong><mark class="kw">個人根保証</mark></strong>は、不特定の債務を保証する根保証のうち保証人が法人でないものをいい、極度額を定めなければ効力を生じない。保証人保護のため、事業用貸金等債務の個人保証では公正証書による意思確認や情報提供義務が設けられている。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 720" role="img" aria-label="多数当事者の債権関係の分類図">
+      <defs>
+        <marker id="arr20-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr20-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="540" y1="120" x2="540" y2="175" stroke="#2563eb" stroke-width="3"/>
+      <line x1="170" y1="175" x2="910" y2="175" stroke="#2563eb" stroke-width="3"/>
+      <line x1="170" y1="175" x2="170" y2="255" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20-blue)"/>
+      <line x1="410" y1="175" x2="410" y2="255" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20-blue)"/>
+      <line x1="650" y1="175" x2="650" y2="255" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20-blue)"/>
+      <line x1="910" y1="175" x2="910" y2="255" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20-blue)"/>
+      <line x1="650" y1="405" x2="650" y2="495" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr20-red)"/>
+      <line x1="910" y1="405" x2="910" y2="495" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr20-red)"/>
+      <rect x="360" y="40" width="360" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="540" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">多数当事者の債権関係</text>
+      <text x="540" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">請求範囲・効力波及・内部負担で整理</text>
+      <rect x="50" y="255" width="240" height="150" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="170" y="292" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">分割債権・分割債務</text>
+      <text x="170" y="320" text-anchor="middle" font-size="13" fill="#1e3a8a">民法427条</text>
+      <text x="170" y="346" text-anchor="middle" font-size="13" fill="#1e3a8a">各人は自己の割合のみ</text>
+      <text x="170" y="372" text-anchor="middle" font-size="13" fill="#1e3a8a">別段の意思表示なしの原則</text>
+      <rect x="290" y="255" width="240" height="150" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="410" y="292" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">不可分債権・債務</text>
+      <text x="410" y="320" text-anchor="middle" font-size="13" fill="#7c2d12">民法428条・430条</text>
+      <text x="410" y="346" text-anchor="middle" font-size="13" fill="#7c2d12">給付の性質上分けられない</text>
+      <text x="410" y="372" text-anchor="middle" font-size="13" fill="#7c2d12">連帯規定を一部準用</text>
+      <rect x="530" y="255" width="240" height="150" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="650" y="292" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">連帯債務</text>
+      <text x="650" y="320" text-anchor="middle" font-size="13" fill="#9f1239">民法436条以下</text>
+      <text x="650" y="346" text-anchor="middle" font-size="13" fill="#9f1239">各自が全部履行責任</text>
+      <text x="650" y="372" text-anchor="middle" font-size="13" fill="#9f1239">求償と相対効原則が焦点</text>
+      <rect x="790" y="255" width="240" height="150" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="910" y="292" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">保証債務</text>
+      <text x="910" y="320" text-anchor="middle" font-size="13" fill="#1e3a8a">民法446条以下</text>
+      <text x="910" y="346" text-anchor="middle" font-size="13" fill="#1e3a8a">主債務不履行時の責任</text>
+      <text x="910" y="372" text-anchor="middle" font-size="13" fill="#1e3a8a">補充性・従属性・書面性</text>
+      <rect x="530" y="495" width="240" height="95" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="650" y="532" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">効力の波及</text>
+      <text x="650" y="558" text-anchor="middle" font-size="13" fill="#9f1239">相対効が原則</text>
+      <text x="650" y="580" text-anchor="middle" font-size="13" fill="#9f1239">更改・相殺・混同は例外</text>
+      <rect x="790" y="495" width="240" height="95" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="910" y="532" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">保証人保護</text>
+      <text x="910" y="558" text-anchor="middle" font-size="13" fill="#1e3a8a">催告・検索の抗弁</text>
+      <text x="910" y="580" text-anchor="middle" font-size="13" fill="#1e3a8a">根保証の極度額・公正証書</text>
+      <rect x="110" y="640" width="860" height="45" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="540" y="668" text-anchor="middle" font-size="13" fill="#9f1239">判断順序：分割が原則、不可分性・連帯合意・保証契約があれば全部責任や補充責任を検討する</text>
+    </svg>
+  </div>
+
+  <p>この図は、多数当事者の債権関係を四つの型に分けている。最初の基準は、別段の意思表示がない場合に各人が自己の割合だけを負う<strong><mark class="kw">分割債務</mark></strong>であり、ここから外れるには、給付の性質上分けられない<strong><mark class="kw">不可分債務</mark></strong>、法令・合意による<strong><mark class="kw">連帯債務</mark></strong>、主債務者とは別人が責任を負う<strong><mark class="kw">保証債務</mark></strong>という根拠が必要になる。連帯債務では、債権者に対する外部関係だけでなく、連帯債務者相互の内部関係と、効力が他の債務者へ及ぶかが核心になる。保証債務では、通常保証と連帯保証、個人根保証や事業用貸金等債務の個人保証の保護規定を分ける。図の下部の注記は、問題文を読むときにまず分割を原則として置き、そこから例外根拠を探すべきことを示している。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 760" role="img" aria-label="連帯債務と保証債務の判断構造図">
+      <defs>
+        <marker id="arr20b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr20b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="520" y1="105" x2="520" y2="155" stroke="#2563eb" stroke-width="3"/>
+      <line x1="260" y1="155" x2="780" y2="155" stroke="#2563eb" stroke-width="3"/>
+      <line x1="260" y1="155" x2="260" y2="235" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20b-blue)"/>
+      <line x1="780" y1="155" x2="780" y2="235" stroke="#2563eb" stroke-width="3" marker-end="url(#arr20b-blue)"/>
+      <line x1="260" y1="385" x2="260" y2="475" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr20b-red)"/>
+      <line x1="780" y1="385" x2="780" y2="475" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr20b-red)"/>
+      <polyline points="380,535 520,535 520,630 660,630" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr20b-red)"/>
+      <rect x="330" y="35" width="380" height="70" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="520" y="64" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">全部責任に見える関係の分解</text>
+      <text x="520" y="88" text-anchor="middle" font-size="13" fill="#1e3a8a">連帯債務と保証債務は根拠と抗弁が違う</text>
+      <rect x="100" y="235" width="320" height="150" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="260" y="272" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">連帯債務</text>
+      <text x="260" y="300" text-anchor="middle" font-size="13" fill="#9f1239">各債務者が主たる債務者</text>
+      <text x="260" y="326" text-anchor="middle" font-size="13" fill="#9f1239">債権者は全員・一人へ全額請求可能</text>
+      <text x="260" y="352" text-anchor="middle" font-size="13" fill="#9f1239">内部では負担部分に応じて求償</text>
+      <rect x="620" y="235" width="320" height="150" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="780" y="272" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">保証債務</text>
+      <text x="780" y="300" text-anchor="middle" font-size="13" fill="#1e3a8a">主債務を前提とする別債務</text>
+      <text x="780" y="326" text-anchor="middle" font-size="13" fill="#1e3a8a">通常保証は催告・検索の抗弁あり</text>
+      <text x="780" y="352" text-anchor="middle" font-size="13" fill="#1e3a8a">連帯保証は抗弁なし</text>
+      <rect x="100" y="475" width="320" height="120" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="260" y="512" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">効力関係</text>
+      <text x="260" y="540" text-anchor="middle" font-size="13" fill="#9f1239">相対効が原則</text>
+      <text x="260" y="564" text-anchor="middle" font-size="13" fill="#9f1239">更改・相殺・混同だけ確認</text>
+      <rect x="620" y="475" width="320" height="120" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="780" y="512" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">主債務との関係</text>
+      <text x="780" y="540" text-anchor="middle" font-size="13" fill="#1e3a8a">主債務の抗弁を援用可能</text>
+      <text x="780" y="564" text-anchor="middle" font-size="13" fill="#1e3a8a">保証人が弁済すれば求償</text>
+      <rect x="620" y="650" width="320" height="70" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="780" y="680" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">保証人保護の上乗せ</text>
+      <text x="780" y="704" text-anchor="middle" font-size="13" fill="#7c2d12">書面性・極度額・公正証書・情報提供</text>
+      <rect x="90" y="635" width="400" height="45" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="290" y="663" text-anchor="middle" font-size="13" fill="#9f1239">連帯保証は保証だが、催告・検索の抗弁を失う点で通常保証より重い</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、連帯債務と保証債務を「どちらも債権者が全額回収を狙える関係」として混同しないための判断構造である。<strong><mark class="kw">連帯債務</mark></strong>では、各連帯債務者自身が主たる債務者であり、債権者は同時にも順次にも全部請求できる。これに対して<strong><mark class="kw">保証債務</mark></strong>では、主たる債務者の債務を前提に別人である保証人が責任を負うため、通常保証には補充性がある。もっとも<strong><mark class="kw">連帯保証</mark></strong>では催告・検索の抗弁がないため、債権者に対する外部関係では連帯債務に近く見える。図の下段は、そこで主債務との従属性、保証人保護規定、弁済後の求償を見て区別することを示している。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">分割債務</th>
+        <th class="col--b">不可分債務</th>
+        <th class="col--c">連帯債務</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">発生根拠</td>
+        <td class="col--a"><span class="em-a">別段の意思表示がない場合の原則</span>。複数債務者がいても当然に全額責任とはならない。</td>
+        <td class="col--b"><span class="em-b">給付目的が性質上不可分</span>であること。特定物引渡しや登記手続などが典型。</td>
+        <td class="col--c"><span class="em-c">法令の規定または当事者の意思表示</span>。金銭債務のように可分でも連帯にできる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">債権者の請求</td>
+        <td class="col--a">各債務者の負担部分に限って請求できる。等しい割合が原則。</td>
+        <td class="col--b">不可分給付の性質上、全部履行に向かう処理となる。</td>
+        <td class="col--c">一人に対しても、同時・順次に全員に対しても、全部または一部を請求できる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">一人の無資力</td>
+        <td class="col--a">他の債務者が当然に肩代わりするわけではない。</td>
+        <td class="col--b">履行不能や損害賠償化により可分化する場合は分割処理へ移ることがある。</td>
+        <td class="col--c">債権者は資力ある連帯債務者へ全額請求でき、内部では求償・無資力者の分担が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効力の波及</td>
+        <td class="col--a">各人の債務が独立しているため、他人へ当然には及ばない。</td>
+        <td class="col--b">連帯債務規定を準用するが、民法430条は民法440条を除くなど完全同一ではない。</td>
+        <td class="col--c">相対効が原則。更改、相殺の援用、混同が例外的に全員へ影響する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験での誤答</td>
+        <td class="col--a">「複数債務者なら当然に各自全額」とする肢。</td>
+        <td class="col--b">「不可分債務は連帯債務とすべて同じ」とする肢。</td>
+        <td class="col--c">「一人への請求・免除・時効完成は常に他の者にも効力を生じる」とする旧法型の肢。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>この表で最初に見るべき事実は、給付が分けられるかどうかである。金銭債務は性質上可分なので、連帯の合意や法令上の根拠がない限り<strong><mark class="kw">分割債務</mark></strong>となる。特定物の引渡しや登記手続のように給付目的を割れない場合は<strong><mark class="kw">不可分債務</mark></strong>を検討する。可分であるのに全額請求が認められるなら、問題文中に「連帯して」「各自が全部について」などの意思表示や法令根拠があるはずである。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">通常保証</th>
+        <th class="col--b">連帯保証</th>
+        <th class="col--c">連帯債務</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">法的性質</td>
+        <td class="col--a"><span class="em-a">主債務を担保する従たる債務</span>。主債務者が履行しないときに責任を負う。</td>
+        <td class="col--b"><span class="em-b">保証債務の一種</span>だが、主債務者と連帯して責任を負う。</td>
+        <td class="col--c"><span class="em-c">各債務者自身が主たる債務者</span>。保証の補充性は問題にならない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">催告の抗弁</td>
+        <td class="col--a">原則として認められる。まず主たる債務者に催告すべきと主張できる。</td>
+        <td class="col--b">認められない。債権者は直ちに連帯保証人へ請求できる。</td>
+        <td class="col--c">問題にならない。債務者本人として請求を受ける。</td>
+      </tr>
+      <tr>
+        <td class="col--label">検索の抗弁</td>
+        <td class="col--a">主債務者に資力があり執行が容易であることを証明すれば主債務者財産への執行を求められる。</td>
+        <td class="col--b">認められない。主債務者の資力の有無にかかわらず責任を負う。</td>
+        <td class="col--c">問題にならない。各自が直接の履行責任を負う。</td>
+      </tr>
+      <tr>
+        <td class="col--label">主債務との関係</td>
+        <td class="col--a">主債務に従属し、保証人は主債務者の抗弁を援用できる。</td>
+        <td class="col--b">保証である以上、主債務への従属性は残る。</td>
+        <td class="col--c">他の連帯債務者の債務と同一目的を持つが、保証の従属性では説明しない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">出題上の焦点</td>
+        <td class="col--a">書面性、補充性、保証人の抗弁、主債務者の抗弁援用。</td>
+        <td class="col--b">催告・検索の抗弁がないこと、ただし保証としての従属性はあること。</td>
+        <td class="col--c">全部請求、相対効原則、絶対効の例外、求償関係。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>通常保証、連帯保証、連帯債務の区別は、債権者が全額請求できるかだけで見ると誤る。<strong><mark class="kw">連帯保証</mark></strong>は債権者に対して強い責任を負うが、あくまで保証であり、主債務との従属性や主債務者の抗弁援用は残る。<strong><mark class="kw">連帯債務</mark></strong>は各人が主たる債務者であるため、催告・検索の抗弁という発想を入れない。問題文が「保証人」と書いている場合は、まず通常保証か連帯保証かを読み、次に抗弁権と主債務との関係を確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法427条・428条・430条・431条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法427条</mark></strong>　数人の債権者又は債務者がある場合において、別段の意思表示がないときは、各債権者又は各債務者は、それぞれ等しい割合で権利を有し、又は義務を負う。<br>
+        <strong><mark class="kw">民法428条</mark></strong>　次款（連帯債権）の規定（第四百三十三条及び第四百三十五条の規定を除く。）は、債権の目的がその性質上不可分である場合において、数人の債権者があるときについて準用する。<br>
+        <strong><mark class="kw">民法430条</mark></strong>　第四款（連帯債務）の規定（第四百四十条の規定を除く。）は、債務の目的がその性質上不可分である場合において、数人の債務者があるときについて準用する。<br>
+        <strong><mark class="kw">民法431条</mark></strong>　不可分債権が可分債権となったときは、各債権者は自己が権利を有する部分についてのみ履行を請求することができ、不可分債務が可分債務となったときは、各債務者はその負担部分についてのみ履行の責任を負う。
+      </blockquote>
+      <p><strong><mark class="kw">民法427条</mark></strong>は、多数当事者関係の出発点となる分割主義を定める。条文の「別段の意思表示がないとき」は、当事者が連帯や別割合を合意すればその合意が優先することを意味する。<strong><mark class="kw">民法428条</mark></strong>と<strong><mark class="kw">民法430条</mark></strong>は、不可分債権・不可分債務について連帯関係の規定を準用するが、準用除外があるため完全な同一視はできない。<strong><mark class="kw">民法431条</mark></strong>は、不可分給付が損害賠償などの可分債権・可分債務へ変わったとき、各人は自己の部分についてのみ請求・責任を負うことを明らかにする。試験では、不可分性が消えた後も当然に全部請求できるとする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法436条・438条・439条・440条・441条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法436条</mark></strong>　債務の目的がその性質上可分である場合において、法令の規定又は当事者の意思表示によって数人が連帯して債務を負担するときは、債権者は、その連帯債務者の一人に対し、又は同時に若しくは順次に全ての連帯債務者に対し、全部又は一部の履行を請求することができる。<br>
+        <strong><mark class="kw">民法438条</mark></strong>　連帯債務者の一人と債権者との間に更改があったときは、債権は、全ての連帯債務者の利益のために消滅する。<br>
+        <strong><mark class="kw">民法439条</mark></strong>　連帯債務者の一人が債権者に対して債権を有する場合において、その連帯債務者が相殺を援用したときは、債権は、全ての連帯債務者の利益のために消滅する。<br>
+        <strong><mark class="kw">民法440条</mark></strong>　連帯債務者の一人と債権者との間に混同があったときは、その連帯債務者は、弁済をしたものとみなす。<br>
+        <strong><mark class="kw">民法441条</mark></strong>　第四百三十八条、第四百三十九条第一項及び前条に規定する場合を除き、連帯債務者の一人について生じた事由は、他の連帯債務者に対してその効力を生じない。
+      </blockquote>
+      <p><strong><mark class="kw">民法436条</mark></strong>は、連帯債務の外部関係を定める中心条文である。「一人」「同時」「順次」「全部又は一部」という語から、債権者の請求選択権が広いことが分かる。<strong><mark class="kw">民法438条</mark></strong>、<strong><mark class="kw">民法439条</mark></strong>、<strong><mark class="kw">民法440条</mark></strong>は、他の連帯債務者にも影響する例外的な絶対効を定める。もっとも、<strong><mark class="kw">民法441条</mark></strong>が相対効を原則としているため、履行の請求、免除、時効完成などを当然に他の連帯債務者へ及ぼすことはできない。条文解釈の実践では、まず441条の原則を置き、次に438条から440条の例外に当たるかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法442条・443条・444条・445条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法442条1項</mark></strong>　連帯債務者の一人が弁済をし、その他自己の財産をもって共同の免責を得たときは、その連帯債務者は、その免責を得た額が自己の負担部分を超えるかどうかにかかわらず、他の連帯債務者に対し、その免責を得るために支出した財産の額のうち各自の負担部分に応じた額の求償権を有する。<br>
+        <strong><mark class="kw">民法443条1項</mark></strong>　他の連帯債務者があることを知りながら、連帯債務者の一人が共同の免責を得ることを他の連帯債務者に通知しないで弁済をし、その他自己の財産をもって共同の免責を得た場合において、他の連帯債務者は、債権者に対抗することができる事由を有していたときは、その負担部分について、その事由をもってその免責を得た連帯債務者に対抗することができる。<br>
+        <strong><mark class="kw">民法444条1項</mark></strong>　連帯債務者の中に償還をする資力のない者があるときは、その償還をすることができない部分は、求償者及び他の資力のある者の間で、各自の負担部分に応じて分割して負担する。<br>
+        <strong><mark class="kw">民法445条</mark></strong>　連帯債務者の一人に対して債務の免除がされ、又は連帯債務者の一人のために時効が完成した場合においても、他の連帯債務者は、その一人の連帯債務者に対し、第四百四十二条第一項の求償権を行使することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法442条</mark></strong>は、連帯債務の内部関係を処理する基本条文である。免責を得た者は、自己の負担部分を超えるかどうかにかかわらず、他の者の負担部分に応じた求償をする。<strong><mark class="kw">民法443条</mark></strong>は通知を怠った場合の求償制限を置き、二重弁済や抗弁喪失の不公平を防ぐ。<strong><mark class="kw">民法444条</mark></strong>は無資力者の負担部分を資力ある者で分担させるが、求償者に過失がある場合には分担請求を制限する。<strong><mark class="kw">民法445条</mark></strong>は、免除・時効完成があっても内部的な求償関係を残す点を示し、相対効原則と内部公平を結びつける条文である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法446条・452条・453条・454条・457条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法446条</mark></strong>　保証人は、主たる債務者がその債務を履行しないときに、その履行をする責任を負う。保証契約は、書面でしなければ、その効力を生じない。<br>
+        <strong><mark class="kw">民法452条</mark></strong>　債権者が保証人に債務の履行を請求したときは、保証人は、まず主たる債務者に催告をすべき旨を請求することができる。ただし、主たる債務者が破産手続開始の決定を受けたとき、又はその行方が知れないときは、この限りでない。<br>
+        <strong><mark class="kw">民法453条</mark></strong>　債権者が前条の規定に従い主たる債務者に催告をした後であっても、保証人が主たる債務者に弁済をする資力があり、かつ、執行が容易であることを証明したときは、債権者は、まず主たる債務者の財産について執行をしなければならない。<br>
+        <strong><mark class="kw">民法454条</mark></strong>　保証人は、主たる債務者と連帯して債務を負担したときは、前二条の権利を有しない。<br>
+        <strong><mark class="kw">民法457条2項</mark></strong>　保証人は、主たる債務者が主張することができる抗弁をもって債権者に対抗することができる。
+      </blockquote>
+      <p><strong><mark class="kw">民法446条</mark></strong>は、保証債務の発生と書面性を定める。保証は他人の債務を担保する重大な責任であるため、口約束だけでは効力を生じない。<strong><mark class="kw">民法452条</mark></strong>の催告の抗弁と<strong><mark class="kw">民法453条</mark></strong>の検索の抗弁は、通常保証人の補充性を具体化する。もっとも<strong><mark class="kw">民法454条</mark></strong>により、連帯保証人はこれらの権利を持たない。<strong><mark class="kw">民法457条</mark></strong>は、保証人が主債務者の抗弁を援用できることを定め、連帯保証でも保証としての従属性が残ることを示す。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法465条の2・465条の6・465条の10</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <strong><mark class="kw">民法465条の2第2項</mark></strong>　個人根保証契約は、前項に規定する極度額を定めなければ、その効力を生じない。<br>
+        <strong><mark class="kw">民法465条の6第1項</mark></strong>　事業のために負担した貸金等債務を主たる債務とする保証契約又は主たる債務の範囲に事業のために負担する貸金等債務が含まれる根保証契約は、その契約の締結に先立ち、その締結の日前一箇月以内に作成された公正証書で保証人になろうとする者が保証債務を履行する意思を表示していなければ、その効力を生じない。<br>
+        <strong><mark class="kw">民法465条の10第1項</mark></strong>　主たる債務者は、事業のために負担する債務を主たる債務とする保証又は主たる債務の範囲に事業のために負担する債務が含まれる根保証の委託をするときは、委託を受ける者に対し、財産及び収支の状況、主たる債務以外に負担している債務の有無並びにその額及び履行状況、主たる債務の担保として他に提供し又は提供しようとするものがあるときはその旨及びその内容に関する情報を提供しなければならない。
+      </blockquote>
+      <p><strong><mark class="kw">民法465条の2</mark></strong>は、個人根保証契約について極度額を効力要件とする。根保証では将来発生する不特定債務まで含まれるため、極度額がなければ保証人が想定外の無限定責任を負う危険がある。<strong><mark class="kw">民法465条の6</mark></strong>は、事業用貸金等債務の個人保証について公正証書による保証意思の確認を要求する。<strong><mark class="kw">民法465条の10</mark></strong>は、主債務者の財産・収支、他債務、担保状況に関する情報提供義務を定め、債権者が情報不提供や虚偽情報を知り又は知ることができた場合には保証人の取消しにつながる。試験では、法人保証人には適用されない場面があること、極度額・公正証書・情報提供を混同しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和40年9月21日 昭和39年(オ)第372号 民集19巻6号1542頁</div>
+      <div class="case-card__title">保証人による主債務者の引換給付抗弁の援用</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法457条</span>
+        <span class="badge badge--law">保証債務</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>主たる債務者が債権者に対して金銭債務を負い、その債務を保証する者がいた。債権者が保証人に対して保証債務の履行を求めたところ、主たる債務者側には、債権者から一定の給付を受けるまでは自己の給付を拒めるという引換給付型の抗弁が存在していた。保証人が、その抗弁を自ら債権者に対して主張できるかが争われた。紛争の実質は、保証人が単に主債務者とは別個の支払義務者として扱われるのか、それとも主債務に付着する抗弁を利用して保証責任の履行を拒めるのかという点にあった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、保証人は主たる債務者が有する抗弁をもって債権者に対抗できるとした。保証債務は主たる債務を担保する従たる債務であり、主たる債務者が債権者に対して一定の抗弁を有しているにもかかわらず、保証人だけがそれを無視して履行しなければならないとすると、保証債務の従属性に反するからである。この判断は、現行<strong><mark class="kw">民法457条2項</mark></strong>が保証人による主債務者の抗弁援用を明文化する前提となる考え方と整合する。保証人は独立して過重な責任を負う者ではなく、主たる債務の内容・抗弁・消滅事由と結びついた責任を負う。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例の重要点は、保証人の責任が強くても、保証債務の従属性が失われるわけではないことである。誤答パターンは、「保証人は主債務者とは別個に責任を負うため、主債務者の抗弁を主張できない」という形で現れる。正しくは、通常保証人だけでなく、連帯保証人についても、保証としての従属性から主債務者が有する抗弁を援用できる。催告・検索の抗弁の有無と、主債務者の抗弁援用の可否を混同しない。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法446条</mark></strong>、<strong><mark class="kw">民法457条</mark></strong>、<strong><mark class="kw">民法458条</mark></strong>が関連する。連帯保証では催告・検索の抗弁はないが、主債務の抗弁を援用できる点を、通常保証との共通点として押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和45年4月21日 昭和44年(オ)第479号 集民99号89頁</div>
+      <div class="case-card__title">不真正連帯債務と和解の相対効</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">連帯債務</span>
+        <span class="badge badge--law">求償</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>被用者の不法行為によって損害が発生し、被害者側は不法行為をした被用者本人と、民法715条に基づく使用者責任を負う使用者に対して損害賠償を求め得る関係にあった。被用者本人の責任と使用者の責任は、同一損害を填補するために併存するが、通常の連帯債務のように当事者間の合意から発生したものではない。紛争では、一方の債務について和解などがされた場合、現実の弁済がなくても他方の債務へ当然に影響するのか、つまり不真正連帯債務における効力波及をどこまで認めるかが問題になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、被用者の不法行為責任と使用者の民法715条責任は、いわゆる不真正連帯債務の関係にあるとした。そのうえで、その一方の債務について和解等がされても、現実の弁済がされない限り、他方の債務には影響しないと判示した。これは、不真正連帯債務では同一損害を複数の責任原因で填補する必要がある一方、通常の連帯債務と同じ絶対効を広く認めると被害者保護を害するおそれがあるためである。したがって、債権者が現実に満足を受けていない段階では、一方の債務に生じた和解などを理由として、他方の債務を当然に消滅・減縮させることはできない。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、不真正連帯債務を通常の連帯債務と混同して、絶対効を広く認める肢に注意する。誤答パターンは、「被用者との間で和解が成立すれば、現実の弁済がなくても使用者の責任も当然に消滅する」という形で現れる。正しくは、被害者が現実に満足を受けない限り、他方の債務には影響しない。現行民法の連帯債務でも相対効原則が強調されているため、通常の連帯債務と不真正連帯債務のいずれでも、効力波及を当然視しない姿勢が重要である。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法441条</mark></strong>の相対効原則、<strong><mark class="kw">民法715条</mark></strong>の使用者責任、共同不法行為や不真正連帯債務の相対効的処理が関連する。債権総論と不法行為を横断する論点として位置づける。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成24年12月14日 平成23年(受)第1833号</div>
+      <div class="case-card__title">根保証契約と元本確定前の債権譲渡</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">根保証</span>
+        <span class="badge badge--law">保証人保護</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>継続的取引から生じる貸金等を担保するため根保証契約が締結され、保証人は将来一定範囲で発生する債務を保証する立場に置かれていた。その後、元本確定期日前に、根保証の対象となる取引上の債権が譲渡され、譲受人が保証人に対して保証債務の履行を求めた。保証人側から見ると、根保証は継続的取引の相手方や与信関係を前提に保証意思を形成する面があるため、債権譲渡によって譲受人からも保証債務の履行請求を受けるのかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、根保証契約の主たる債務の範囲に含まれる債務に係る債権を譲り受けた者は、その譲渡が根保証契約に定める元本確定期日前にされた場合であっても、当該根保証契約の当事者間に譲受人の請求を妨げる別段の合意がない限り、保証人に対して保証債務の履行を求めることができるとした。根保証は将来不特定の債務を担保するが、対象債権が譲渡可能である以上、保証契約上、譲受人の請求を排除する合意がない限り、保証責任も債権譲渡に伴うと考える。保証人保護は重要であるが、それだけで譲受人の請求を当然に否定することはできないという判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">根保証</mark></strong>では保証人保護だけでなく、債権譲渡の原則や別段の合意の有無を読ませることを示す。誤答パターンは、「元本確定期日前に債権譲渡がされた場合、譲受人は常に保証人へ履行を求めることができない」という形で現れる。正しくは、譲受人の請求を妨げる別段の合意がない限り、譲受人は保証債務の履行を求めることができる。もっとも、令和2年施行の債権法改正で<strong><mark class="kw">個人根保証</mark></strong>の極度額、公正証書、情報提供義務が整備されたため、条文上の保証人保護規定もあわせて確認する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法465条の2</mark></strong>、<strong><mark class="kw">民法465条の3</mark></strong>、<strong><mark class="kw">民法465条の4</mark></strong>、<strong><mark class="kw">民法465条の6</mark></strong>、<strong><mark class="kw">民法465条の10</mark></strong>が関連する。債権譲渡、保証意思、個人保証人保護の接点として押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">民法427条</mark></strong>を起点に、複数当事者でも原則は分割であることを確認する。</li>
+        <li><strong><mark class="kw">不可分債務</mark></strong>は給付の性質、<strong><mark class="kw">連帯債務</mark></strong>は法令・意思表示、<strong><mark class="kw">保証債務</mark></strong>は保証契約という発生根拠で区別する。</li>
+        <li><strong><mark class="kw">連帯債務</mark></strong>では、外部関係、内部求償、効力波及を別々に検討する。</li>
+        <li><strong><mark class="kw">民法441条</mark></strong>の相対効原則を押さえ、更改・相殺・混同だけを例外として確認する。</li>
+        <li><strong><mark class="kw">保証債務</mark></strong>では、書面性、催告の抗弁、検索の抗弁、連帯保証の特則、主債務者の抗弁援用を順に見る。</li>
+        <li><strong><mark class="kw">個人根保証</mark></strong>では、極度額、元本確定、公正証書、情報提供義務を混同しない。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「数人の債務者があるときは、別段の意思表示がなくても、各債務者は債務の全部について履行責任を負う。」これは誤りである。<strong><mark class="kw">民法427条</mark></strong>は、別段の意思表示がないとき各債務者が等しい割合で義務を負うとする。</p>
+      <p><strong>誤りの選択肢例2：</strong>「不可分債務には連帯債務の規定がすべてそのまま適用される。」これは誤りである。<strong><mark class="kw">民法430条</mark></strong>は連帯債務規定を準用するが、民法440条を除外しており、完全同一ではない。</p>
+      <p><strong>誤りの選択肢例3：</strong>「連帯債務者の一人に対して履行の請求をすれば、当然に他の連帯債務者についても時効の完成猶予・更新の効力を生ずる。」これは改正後の民法では誤りである。<strong><mark class="kw">民法441条</mark></strong>により相対効が原則であり、請求は例外的絶対効に含まれていない。</p>
+      <p><strong>誤りの選択肢例4：</strong>「連帯保証人は催告の抗弁を有しないので、主たる債務者が有する抗弁も債権者に対抗できない。」これは誤りである。<strong><mark class="kw">民法454条</mark></strong>により催告・検索の抗弁はないが、<strong><mark class="kw">民法457条</mark></strong>により主債務者の抗弁を援用できる。</p>
+      <p><strong>誤りの選択肢例5：</strong>「個人根保証契約は、保証人が保証意思を有していれば、極度額を定めなくても有効である。」これは誤りである。<strong><mark class="kw">民法465条の2</mark></strong>は、個人根保証契約が極度額を定めなければ効力を生じないとする。</p>
+    </div>
+  </div>
+
+  <p>解答手順は、第一に、複数当事者が債権者側か債務者側かを確認する。第二に、給付が可分か不可分かを見る。第三に、連帯の合意・法令根拠・保証契約の有無を読む。第四に、債権者が全額請求できるとしても、その理由が不可分なのか、連帯なのか、連帯保証なのかを分ける。第五に、一人に生じた事由が他の者へ及ぶかを<strong><mark class="kw">民法441条</mark></strong>から検討する。第六に、弁済後の内部負担について、連帯債務者間の求償か、保証人の主債務者への求償か、共同保証人間の求償かを分類する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">連帯債務</mark></strong>と<strong><mark class="kw">保証債務</mark></strong>の領域で、試験上重要な整理が行われた。連帯債務では、旧法で絶対効が認められていた事由を見直し、<strong><mark class="kw">民法441条</mark></strong>により相対効原則を明確にした。これにより、連帯債務者の一人への請求や一人に対する免除・時効完成を、当然に他の連帯債務者へ及ぼす考え方は採れなくなった。保証では、個人保証人が予測不能な過大責任を負う危険を抑えるため、個人根保証の極度額、事業用貸金等債務の公正証書、契約締結時の情報提供義務などが整備された。</p>
+    </div>
+  </div>
+
+  <p>実務上、<strong><mark class="kw">連帯債務</mark></strong>は住宅ローン、事業資金の共同借入れ、売買代金債務などで債権者の回収確実性を高めるために使われる。債権者は資力のある連帯債務者へ全額請求できるため、内部負担の不公平は求償で調整される。したがって、問題文で「連帯」とあれば、債権者保護と内部公平の二段階構造を意識する。</p>
+
+  <p><strong><mark class="kw">保証債務</mark></strong>は、主債務者の信用を補完する制度であるが、保証人にとっては自分が直接借りていない債務を負担する重大な法律行為である。そのため、書面性、通常保証人の抗弁、個人根保証の極度額、公正証書、情報提供義務など、保証人保護の規定が多い。特に行政書士試験では、条文の趣旨を問う形で「保証人保護」と「債権者の回収保護」のバランスが出題されやすい。</p>
+
+  <p>他分野との接点として、<strong><mark class="kw">不可分債務</mark></strong>は特定物債権や所有権移転登記、<strong><mark class="kw">連帯債務</mark></strong>は相殺、時効、債権譲渡、共同不法行為、<strong><mark class="kw">保証債務</mark></strong>は担保物権、債権回収、破産、事業承継と結びつく。学習では、条文番号だけを暗記するのではなく、「誰が請求されるか」「誰の抗弁を使えるか」「誰に求償するか」という三つの問いで整理すると、似た制度を安定して区別できる。</p>
+</section>
+
+</body>
+</html>

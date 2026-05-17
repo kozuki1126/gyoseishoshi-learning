@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寄託契約・組合契約 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">寄託契約・組合契約</h1>
+  <p class="page-title-block__sub">物の保管を任せる契約と、出資して共同事業を営む契約を、成立・責任・財産関係から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法657条</span>
+    <span class="badge badge--info">民法658条</span>
+    <span class="badge badge--info">民法666条</span>
+    <span class="badge badge--info">民法667条</span>
+    <span class="badge badge--info">民法668条</span>
+    <span class="badge badge--info">民法670条</span>
+    <span class="badge badge--info">民法675条</span>
+    <span class="badge badge--info">民法676条</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">寄託契約</mark></strong>は、ある物を他人に預け、相手方がこれを保管する契約である。典型例は、ホテルのフロントに荷物を預ける、倉庫業者に商品を保管させる、金融機関に金銭を預けるといった場面である。試験では、単に「預ける」という生活感覚ではなく、受寄者がどの程度の注意義務を負うか、寄託物を使えるか、第三者が権利を主張したとき誰に返すか、預金のように同種同量を返す<strong><mark class="kw">消費寄託</mark></strong>は通常の寄託とどう違うかが問われる。</p>
+
+  <p><strong><mark class="kw">組合契約</mark></strong>は、複数人が出資をして共同の事業を営む契約である。共同店舗の経営、共同研究、建設共同企業体、投資や開発の共同事業などが典型である。会社と似て見えるが、民法上の組合は法人格を持たないため、組合財産は総組合員の共有に属し、組合の債権者は組合財産だけでなく各組合員にも権利を行使できる。この「共同事業のための結合」と「法人ではない」という二面性が、組合契約の中心である。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">寄託契約</mark></strong>と<strong><mark class="kw">組合契約</mark></strong>は契約各論の終盤に置かれるが、内容は独立している。寄託は委任、消費貸借、動産物権変動、預金取引と接続する。組合は共有、代理、多数当事者の債務、会社法、民事訴訟上の当事者適格と接続する。問題文を読んだら、まず「保管を任せたのか」「共同事業を営むために出資したのか」を切り分け、その後、返還・責任・財産帰属・第三者関係を処理する。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る二つの契約</span>
+    </div>
+    <div class="box__bd">
+      <p>Aが旅行中、B倉庫会社に骨董品を預け、Bがこれを保管して後日返す約束をした場合、中心は物の保管であり、<strong><mark class="kw">寄託契約</mark></strong>である。Bは原則として寄託者の承諾なく骨董品を使用できず、第三者に保管させることも制限される。これに対し、A・B・Cが各自三百万円を出資し、共同で飲食店を経営して利益を分配する約束をした場合、中心は出資と共同事業であり、<strong><mark class="kw">組合契約</mark></strong>である。この場合、店の備品や売上金は個々の組合員の単独財産ではなく、共同事業のための組合財産として扱われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">寄託契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">寄託契約</mark></strong>は、当事者の一方がある物を保管することを相手方に委託し、相手方が承諾することによって効力を生ずる契約である。根拠は<strong><mark class="kw">民法657条</mark></strong>である。旧法では原則として寄託物の受取りを要する要物契約と理解されていたが、平成29年民法改正により、合意で成立する諾成契約として整理された。制度趣旨は、所有者・占有者が自ら保管できない物を他人に預け、その物の安全を法律上保護する点にある。売買や賃貸借のように物を利用させる契約ではなく、委任のように事務処理一般を任せる契約でもない。中心債務は「保管して返すこと」であり、受寄者が寄託物を勝手に使うことは原則として許されない。試験では、「寄託は現在も引渡しがなければ成立しない」とする旧法型の肢や、「受寄者は保管のためなら自由に使用できる」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">受寄者の保管義務</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">受寄者の保管義務</mark></strong>とは、寄託物を契約内容に従って保存し、返還時まで滅失・損傷を防ぐ義務である。無報酬の受寄者については<strong><mark class="kw">民法659条</mark></strong>が「自己の財産に対するのと同一の注意」を定める。有償寄託については、寄託の性質、委任規定の準用、債務不履行の一般原則から、専門業者であれば職業上期待される注意を尽くす必要がある。無報酬の場合に注意義務が軽くなるのは、利益を得ない受寄者を過度に拘束しないためである。ただし、軽いといっても漫然と放置してよいわけではなく、自分の物なら通常する程度の管理は必要である。試験では、無報酬寄託の注意義務を「善管注意義務」と断定する肢、有償寄託でも常に自己物同一注意で足りるとする肢のいずれにも注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">寄託物の使用・再寄託</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">寄託物の使用</mark></strong>と<strong><mark class="kw">再寄託</mark></strong>は、受寄者が寄託物を保管目的を超えて扱う場面で問題になる。<strong><mark class="kw">民法658条</mark></strong>は、受寄者が寄託者の承諾を得なければ寄託物を使用できず、承諾又はやむを得ない事由がなければ第三者に保管させることもできないと定める。寄託は「使わせる契約」ではなく「保管させる契約」なので、受寄者の使用は寄託者の財産支配を侵害しやすい。再寄託についても、寄託者は受寄者を信頼して物を預けているため、勝手に別人へ預け替えることは原則として許されない。もっとも、災害、保管場所の急な閉鎖、専門設備が必要な保存など、やむを得ない事由があるときは例外が認められる。試験では「保管に便利であれば承諾なしに第三者へ保管させられる」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">返還請求と第三者の権利主張</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">寄託物の返還請求</mark></strong>は、寄託者が寄託物を取り戻す権利であり、<strong><mark class="kw">民法662条</mark></strong>は、返還時期を定めた場合でも寄託者がいつでも返還を請求できるとする。寄託者の所有物や占有物を預かっているだけなので、寄託者が返還を求めれば保管関係を終了させるのが基本である。ただし、期限前返還請求により受寄者が損害を受けたときは、寄託者に賠償請求できる。第三者が寄託物について権利を主張した場合は、<strong><mark class="kw">民法660条</mark></strong>が通知義務と返還先を整理する。受寄者は第三者の主張があるだけで勝手に第三者へ引き渡すのではなく、原則として寄託者に返還する。確定判決等により第三者へ引き渡すべき場合は例外となる。試験では、「第三者が所有権を主張したら受寄者は常に第三者へ返す」とする肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">消費寄託</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">消費寄託</mark></strong>は、受寄者が契約により寄託物を消費できる場合に、寄託された物と種類・品質・数量の同じ物を返還する契約である。根拠は<strong><mark class="kw">民法666条</mark></strong>であり、預金又は貯金に係る金銭の寄託が代表例である。通常の寄託では「預かったその物」を返すが、消費寄託では受寄者が物を消費できるため、返還対象は同種同量の物になる。この点で消費貸借と似ているが、寄託者側の目的は保管・預け入れにあり、銀行預金のように大量取引で管理される場面が想定される。預金では返還時期、利息、取引経過の開示など、金融実務上の問題が生じる。試験では、「預金は通常の寄託だから預けた紙幣そのものを返す」とする肢や、「消費寄託では受寄者が返還義務を負わない」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">組合契約</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">組合契約</mark></strong>は、各当事者が出資をして共同の事業を営むことを約することによって効力を生ずる契約である。根拠は<strong><mark class="kw">民法667条</mark></strong>である。成立要素は、複数人の合意、出資、共同事業の三つであり、出資は金銭・物だけでなく労務でもよい。制度趣旨は、法人を設立しなくても、当事者間の契約によって共同事業を運営できる柔軟な枠組みを与える点にある。共同事業であるため、単なる共同購入、単なる金銭貸付、利益分配だけを受ける受動的な関係とは区別する必要がある。組合は法人ではないので、権利義務は最終的に組合員に帰属し、第三者関係では代理、債務負担、組合財産の責任範囲が問題になる。試験では、「組合契約は出資を金銭に限る」とする肢や、「組合は当然に法人格を有する」とする肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">組合財産</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">組合財産</mark></strong>は、各組合員の出資その他共同事業に属する財産であり、<strong><mark class="kw">民法668条</mark></strong>は総組合員の共有に属すると定める。ただし、この共有は通常の共有よりも共同目的に拘束された性質が強い。組合員は、組合財産について自分の持分を処分しても、その処分を組合及び組合と取引をした第三者に対抗できず、組合財産である債権について持分権を単独で行使することもできない。根拠は<strong><mark class="kw">民法676条</mark></strong>である。これは、共同事業のための財産が個々の組合員の勝手な処分で分解されると、事業運営と取引安全が損なわれるからである。試験では、「組合財産は普通共有だから各組合員がいつでも分割請求できる」とする肢が誤りになる。清算前の分割請求は禁止される。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">業務執行者と組合代理</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">業務執行者</mark></strong>は、組合の業務を決定し、執行する権限を与えられた組合員又は第三者である。<strong><mark class="kw">民法670条</mark></strong>は、原則として組合の業務を組合員の過半数で決定し、各組合員が執行すると定めるが、契約により一人又は数人の組合員・第三者に委任できる。<strong><mark class="kw">民法670条の2</mark></strong>は、組合の代理を定め、業務執行者があるときは業務執行者のみが組合員を代理できるとする。組合には法人格がないため、取引相手との関係では、誰がどの範囲で組合員を代理して契約できるかが決定的に重要である。常務については単独執行・単独代理が認められるが、完了前に異議があれば別である。試験では、「各組合員は常に単独で全組合員を代理できる」とする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">組合員の脱退・解散・清算</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">組合員の脱退</mark></strong>は、組合員が組合関係から離脱する制度であり、<strong><mark class="kw">民法678条</mark></strong>は存続期間を定めない組合では各組合員がいつでも脱退できるとする。ただし、やむを得ない事由がある場合を除き、組合に不利な時期に脱退することはできない。死亡、破産手続開始決定、後見開始審判、除名も脱退事由である。<strong><mark class="kw">組合の解散</mark></strong>は、事業の成功又は成功不能、存続期間満了、契約で定めた解散事由、総組合員の同意などで生じる。解散後は<strong><mark class="kw">清算</mark></strong>に入り、現務の結了、債権取立て、債務弁済、残余財産の引渡しが行われる。試験では、脱退は個別組合員の離脱、解散は組合全体の終了である点を区別する。脱退した組合員の持分払戻しは、脱退時の組合財産の状況に従って計算され、出資の種類を問わず金銭で払い戻すことができる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1120 780" role="img" aria-label="寄託契約の成立から返還までの構造">
+      <defs>
+        <marker id="arr32a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr32a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr32a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="560" y1="112" x2="560" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="185" y1="150" x2="935" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="185" y1="150" x2="185" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32a-blue)"/>
+      <line x1="560" y1="150" x2="560" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32a-blue)"/>
+      <line x1="935" y1="150" x2="935" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32a-blue)"/>
+      <rect x="474" y="128" width="172" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="560" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">保管関係へ展開</text>
+
+      <line x1="185" y1="320" x2="185" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32a-orange)"/>
+      <line x1="560" y1="320" x2="560" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32a-orange)"/>
+      <line x1="935" y1="320" x2="935" y2="388" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32a-orange)"/>
+      <rect x="120" y="350" width="130" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="185" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">解除調整</text>
+      <rect x="486" y="350" width="148" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="560" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">使用・再寄託制限</text>
+      <rect x="870" y="350" width="130" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="935" y="367" text-anchor="middle" font-size="13" fill="#7c2d12">返還関係</text>
+
+      <line x1="560" y1="490" x2="560" y2="558" stroke="#e11d48" stroke-width="2" marker-end="url(#arr32a-red)"/>
+      <rect x="474" y="520" width="172" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="560" y="537" text-anchor="middle" font-size="13" fill="#9f1239">同種同量返還へ変形</text>
+
+      <rect x="390" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="69" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">寄託契約</text>
+      <text x="560" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">物の保管を委託し承諾する契約</text>
+
+      <rect x="35" y="226" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="185" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">成立</text>
+      <text x="185" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法657条</text>
+      <text x="185" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">改正後は諾成契約</text>
+
+      <rect x="410" y="226" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="560" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">保管義務</text>
+      <text x="560" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法658条・659条</text>
+      <text x="560" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">使用と再寄託は原則制限</text>
+
+      <rect x="785" y="226" width="300" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="935" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">返還・通知</text>
+      <text x="935" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法660条・662条</text>
+      <text x="935" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">第三者主張でも原則寄託者へ</text>
+
+      <rect x="35" y="396" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="185" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">受取り前の解除</text>
+      <text x="185" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">寄託者は解除可能</text>
+      <text x="185" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">無報酬受寄者も原則解除可能</text>
+
+      <rect x="410" y="396" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="560" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">注意義務の強度</text>
+      <text x="560" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">無報酬は自己物同一注意</text>
+      <text x="560" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">有償は契約内容と職業性を考慮</text>
+
+      <rect x="785" y="396" width="300" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="935" y="428" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">返還時期・場所</text>
+      <text x="935" y="452" text-anchor="middle" font-size="12" fill="#7c2d12">寄託者はいつでも返還請求</text>
+      <text x="935" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">保管場所で返還が原則</text>
+
+      <rect x="410" y="566" width="300" height="94" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="560" y="598" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">消費寄託</text>
+      <text x="560" y="622" text-anchor="middle" font-size="12" fill="#9f1239">民法666条</text>
+      <text x="560" y="642" text-anchor="middle" font-size="12" fill="#9f1239">預金などは同種同量を返還</text>
+
+      <rect x="60" y="702" width="1000" height="42" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="560" y="728" text-anchor="middle" font-size="13" fill="#9f1239">試験では「預かったその物を返す通常寄託」と「消費でき同種同量を返す消費寄託」を先に分ける</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">寄託契約</mark></strong>を、成立、保管義務、返還関係、<strong><mark class="kw">消費寄託</mark></strong>の四段階で整理している。成立は合意で足りるが、受取り前には解除による調整が置かれている。保管義務では、受寄者が寄託物を使えるか、第三者へ保管させられるか、無報酬の場合の注意義務が中心になる。返還関係では、寄託者の返還請求が強く保護される一方、第三者の権利主張があるときは通知義務と確定判決の有無を確認する。最後に、預金のように物を消費できる場合は、通常の「同一物返還」から「同種同量返還」へ構造が変わる。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1180 820" role="img" aria-label="組合契約の財産関係と業務執行の構造">
+      <defs>
+        <marker id="arr32b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr32b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr32b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="590" y1="112" x2="590" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="205" y1="150" x2="975" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="205" y1="150" x2="205" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32b-blue)"/>
+      <line x1="590" y1="150" x2="590" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32b-blue)"/>
+      <line x1="975" y1="150" x2="975" y2="220" stroke="#2563eb" stroke-width="2" marker-end="url(#arr32b-blue)"/>
+      <rect x="512" y="128" width="156" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="590" y="146" text-anchor="middle" font-size="13" fill="#1d4ed8">三要素で成立</text>
+
+      <line x1="205" y1="322" x2="205" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32b-orange)"/>
+      <line x1="590" y1="322" x2="590" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32b-orange)"/>
+      <line x1="975" y1="322" x2="975" y2="390" stroke="#ea580c" stroke-width="2" marker-end="url(#arr32b-orange)"/>
+      <rect x="137" y="352" width="136" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="205" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">共同目的に拘束</text>
+      <rect x="514" y="352" width="152" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="590" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">過半数・業務執行者</text>
+      <rect x="899" y="352" width="152" height="24" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="975" y="369" text-anchor="middle" font-size="13" fill="#7c2d12">債権者との関係</text>
+
+      <line x1="590" y1="494" x2="590" y2="562" stroke="#e11d48" stroke-width="2" marker-end="url(#arr32b-red)"/>
+      <rect x="505" y="524" width="170" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="590" y="541" text-anchor="middle" font-size="13" fill="#9f1239">終了処理へ移行</text>
+
+      <rect x="420" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="69" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">組合契約</text>
+      <text x="590" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">出資して共同の事業を営む契約</text>
+
+      <rect x="45" y="228" width="320" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="205" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">出資</text>
+      <text x="205" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">民法667条2項</text>
+      <text x="205" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">金銭・物・労務も可能</text>
+
+      <rect x="430" y="228" width="320" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="590" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">共同事業</text>
+      <text x="590" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">共同目的と利益分配</text>
+      <text x="590" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">単なる共有・貸付と区別</text>
+
+      <rect x="815" y="228" width="320" height="94" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="975" y="260" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">法人格なし</text>
+      <text x="975" y="284" text-anchor="middle" font-size="12" fill="#1e3a8a">権利義務は組合員へ帰属</text>
+      <text x="975" y="304" text-anchor="middle" font-size="12" fill="#1e3a8a">代理と債務負担が重要</text>
+
+      <rect x="45" y="398" width="320" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="205" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">組合財産</text>
+      <text x="205" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法668条・676条</text>
+      <text x="205" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">持分処分・分割請求は制限</text>
+
+      <rect x="430" y="398" width="320" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="590" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">業務決定と代理</text>
+      <text x="590" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法670条・670条の2</text>
+      <text x="590" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">業務執行者の有無で代理権が変わる</text>
+
+      <rect x="815" y="398" width="320" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="975" y="430" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">組合債権者</text>
+      <text x="975" y="454" text-anchor="middle" font-size="12" fill="#7c2d12">民法675条・677条</text>
+      <text x="975" y="474" text-anchor="middle" font-size="12" fill="#7c2d12">組合財産と各組合員に権利行使</text>
+
+      <rect x="430" y="570" width="320" height="96" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="590" y="602" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">脱退・解散・清算</text>
+      <text x="590" y="626" text-anchor="middle" font-size="12" fill="#9f1239">民法678条・682条・688条</text>
+      <text x="590" y="646" text-anchor="middle" font-size="12" fill="#9f1239">個別離脱と全体終了を区別</text>
+
+      <rect x="80" y="742" width="1020" height="42" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="590" y="768" text-anchor="middle" font-size="13" fill="#9f1239">組合は法人ではないが、共同目的のため財産・業務・対外責任が個人財産より強く拘束される</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">組合契約</mark></strong>を出資、共同事業、法人格なしという三要素から出発して整理している。出資は労務でもよく、共同事業の目的に結び付いて初めて組合契約となる。組合財産は総組合員の共有とされるが、普通共有のように各組合員が自由に処分・分割できるわけではない。業務の決定と代理は、業務執行者の有無によって結論が変わるため、問題文の「誰が業務執行者か」を必ず読む必要がある。組合関係が終わる場面では、ある組合員だけが抜ける脱退と、組合全体が終わって清算へ進む解散を区別する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>寄託・消費寄託・委任の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">寄託</th>
+        <th class="col--b">消費寄託</th>
+        <th class="col--c">委任</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">中心目的</th>
+        <td class="col--a"><strong class="em-a">物の保管</strong>。預かった物を安全に保存して返還する。</td>
+        <td class="col--b"><strong class="em-b">消費可能な寄託</strong>。預金のように同種同量を返還する。</td>
+        <td class="col--c"><strong class="em-c">事務処理</strong>。法律行為その他の事務を処理する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">返還対象</th>
+        <td class="col--a">原則として預かった<strong><mark class="kw">寄託物</mark></strong>そのもの。</td>
+        <td class="col--b">種類・品質・数量の同じ物。金銭預金では同額金銭。</td>
+        <td class="col--c">事務処理で受け取った金銭・物、取得した権利など。</td>
+      </tr>
+      <tr>
+        <th class="col--label">使用可否</th>
+        <td class="col--a">寄託者の承諾がなければ使用できない。</td>
+        <td class="col--b">契約上、受寄者による消費が予定される。</td>
+        <td class="col--c">委任の本旨に従って事務処理に必要な範囲で行動する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">注意義務</th>
+        <td class="col--a">無報酬受寄者は自己物同一注意。有償なら契約内容に応じて重くなる。</td>
+        <td class="col--b">返還義務は同種同量。預金取引では銀行と預金者の信頼関係が問題になる。</td>
+        <td class="col--c">受任者は<strong><mark class="kw">善管注意義務</mark></strong>を負う。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「保管のためなら自由に使用・再寄託できる」は誤り。</td>
+        <td class="col--b">「預金では預けた紙幣そのものを返す」は誤り。</td>
+        <td class="col--c">「委任は物の保管契約である」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的な判断基準は、契約の中心が「物をそのまま守ること」か、「物を消費して同種同量を返すこと」か、「事務を処理すること」かを見ることである。倉庫保管や手荷物預かりなら<strong><mark class="kw">寄託</mark></strong>、銀行預金なら<strong><mark class="kw">消費寄託</mark></strong>、申請・交渉・管理事務なら<strong><mark class="kw">委任</mark></strong>又は準委任に近い。名称が「預かり」「管理」「委託」となっていても、返還対象と中心債務を読めば分類できる。</p>
+
+  <h3>組合・共有・会社の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">組合</th>
+        <th class="col--b">共有</th>
+        <th class="col--c">会社</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">成立基礎</th>
+        <td class="col--a"><strong class="em-a">出資して共同事業</strong>を営む契約。</td>
+        <td class="col--b"><strong class="em-b">一つの権利を複数人で有する状態</strong>。共同事業は不要。</td>
+        <td class="col--c"><strong class="em-c">会社法上の設立手続</strong>により成立する法人。</td>
+      </tr>
+      <tr>
+        <th class="col--label">法人格</th>
+        <td class="col--a">法人格はない。権利義務は組合員に帰属する。</td>
+        <td class="col--b">共有自体に法人格はない。</td>
+        <td class="col--c">法人格があり、会社自身が権利義務主体となる。</td>
+      </tr>
+      <tr>
+        <th class="col--label">財産の拘束</th>
+        <td class="col--a">組合財産は共同目的に拘束され、清算前分割請求はできない。</td>
+        <td class="col--b">各共有者は原則として持分処分ができ、分割請求も可能。</td>
+        <td class="col--c">会社財産は会社に帰属し、社員・株主の個人財産と分離される。</td>
+      </tr>
+      <tr>
+        <th class="col--label">対外責任</th>
+        <td class="col--a">組合債権者は組合財産と各組合員に権利行使できる。</td>
+        <td class="col--b">共有物に関する債務は原因関係により個別に判断する。</td>
+        <td class="col--c">会社債務は原則として会社が負い、株主有限責任が問題になる。</td>
+      </tr>
+      <tr>
+        <th class="col--label">代表・代理</th>
+        <td class="col--a">業務執行者、過半数同意、常務の単独代理などで処理する。</td>
+        <td class="col--b">共有者が当然に他共有者を代理するわけではない。</td>
+        <td class="col--c">代表取締役など法定の代表機関が会社を代表する。</td>
+      </tr>
+      <tr>
+        <th class="col--label">試験の見分け方</th>
+        <td class="col--a">出資、共同事業、損益分配、組合財産が出る。</td>
+        <td class="col--b">共同事業ではなく、持分処分・管理・変更・分割が中心。</td>
+        <td class="col--c">定款、登記、株主、取締役、持分会社など会社法用語が出る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong><mark class="kw">組合</mark></strong>と共有は「複数人で財産を持つ」という外形が似ている。しかし、組合は共同事業のために財産が拘束される点で、単純な共有よりも結合が強い。一方、会社は法人格を持つため、会社財産と構成員の個人財産が制度上分離される。行政書士試験では、「組合財産は普通共有だからいつでも分割請求できる」「組合は会社と同じく法人格を有する」という両方向の混同を避けることが重要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法657条・657条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法657条</mark></strong>　寄託は、当事者の一方がある物を保管することを相手方に委託し、相手方がこれを承諾することによって、その効力を生ずる。</p>
+        <p><strong><mark class="kw">民法657条の2第1項</mark></strong>　寄託者は、受寄者が寄託物を受け取るまで、契約の解除をすることができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法657条</mark></strong>は、寄託を諾成契約として定義する中心条文である。平成29年改正前の実務では、物の引渡しを要する要物契約として理解されていたが、現行法は「保管を委託し、承諾する」ことで効力を認める。もっとも、寄託物をまだ受け取っていない段階では、実際の保管負担や寄託者の必要性が確定していないため、<strong><mark class="kw">民法657条の2</mark></strong>が受取り前解除を置く。寄託者は受寄者が受け取るまで解除でき、受寄者に損害があれば賠償問題が残る。無報酬受寄者も原則として受取り前解除ができるが、書面による寄託では例外となる。試験では、成立要件と解除可能性を分けて理解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法658条・659条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法658条第1項</mark></strong>　受寄者は、寄託者の承諾を得なければ、寄託物を使用することができない。</p>
+        <p><strong><mark class="kw">民法658条第2項</mark></strong>　受寄者は、寄託者の承諾を得たとき、又はやむを得ない事由があるときでなければ、寄託物を第三者に保管させることができない。</p>
+        <p><strong><mark class="kw">民法659条</mark></strong>　無報酬の受寄者は、自己の財産に対するのと同一の注意をもって、寄託物を保管する義務を負う。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法658条</mark></strong>は、寄託が利用契約ではなく保管契約であることを示す。第一項は受寄者の使用を制限し、第二項は再寄託を制限する。第三者保管が許されるのは、寄託者の承諾がある場合又はやむを得ない事由がある場合である。第三項は再受寄者が寄託者に対して受寄者と同一の権利義務を負うとし、寄託者保護を補強する。<strong><mark class="kw">民法659条</mark></strong>は無報酬受寄者の注意義務を軽減するが、これは無償で物を預かる者に善管注意義務を一律に課すと負担が過大になるためである。有償寄託や専門業者の保管では、この条文だけでなく契約内容・取引通念・債務不履行の一般規定も視野に入れる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法660条・662条・666条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法660条第2項</mark></strong>　第三者が寄託物について権利を主張する場合であっても、受寄者は、寄託者の指図がない限り、寄託者に対しその寄託物を返還しなければならない。</p>
+        <p><strong><mark class="kw">民法662条第1項</mark></strong>　当事者が寄託物の返還の時期を定めたときであっても、寄託者は、いつでもその返還を請求することができる。</p>
+        <p><strong><mark class="kw">民法666条第1項</mark></strong>　受寄者が契約により寄託物を消費することができる場合には、受寄者は、寄託された物と種類、品質及び数量の同じ物をもって返還しなければならない。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法660条</mark></strong>は、第三者の権利主張がある場合の受寄者の立場を整理する。第三者が所有権を主張しただけで受寄者が判断者になると、寄託者の返還利益が不安定になる。そのため、受寄者は原則として寄託者へ返還し、確定判決等により第三者へ引き渡すべき場合だけ例外的に第三者へ引き渡せる。<strong><mark class="kw">民法662条</mark></strong>は、返還時期を定めても寄託者がいつでも返還請求できるとする。寄託者の物を預かっているにすぎないため、寄託者の回収利益が強い。<strong><mark class="kw">民法666条</mark></strong>は<strong><mark class="kw">消費寄託</mark></strong>を定め、預金のように同一物ではなく同種同量の返還を認める。通常寄託との決定的な違いは返還対象である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法667条・668条・676条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法667条第1項</mark></strong>　組合契約は、各当事者が出資をして共同の事業を営むことを約することによって、その効力を生ずる。</p>
+        <p><strong><mark class="kw">民法667条第2項</mark></strong>　出資は、労務をその目的とすることができる。</p>
+        <p><strong><mark class="kw">民法668条</mark></strong>　各組合員の出資その他の組合財産は、総組合員の共有に属する。</p>
+        <p><strong><mark class="kw">民法676条第3項</mark></strong>　組合員は、清算前に組合財産の分割を求めることができない。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法667条</mark></strong>は、組合契約の成立要件を示す。共同の事業を営むことが必要であり、単なる共有や共同購入とは異なる。出資は労務でもよいので、現金を出していない者でも、技術・営業・管理労務を出資として組合員になり得る。<strong><mark class="kw">民法668条</mark></strong>は組合財産の共有を定めるが、<strong><mark class="kw">民法676条</mark></strong>が持分処分、債権の単独行使、清算前分割請求を制限するため、普通共有より共同目的に拘束される。試験では、条文上「共有」と書かれていることだけを見て、共有物分割請求を当然に認めないよう注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法670条・670条の2・675条・678条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p><strong><mark class="kw">民法670条第1項</mark></strong>　組合の業務は、組合員の過半数をもって決定し、各組合員がこれを執行する。</p>
+        <p><strong><mark class="kw">民法670条の2第2項</mark></strong>　業務執行者があるときは、業務執行者のみが組合員を代理することができる。</p>
+        <p><strong><mark class="kw">民法675条第2項</mark></strong>　組合の債権者は、その選択に従い、各組合員に対して損失分担の割合又は等しい割合でその権利を行使することができる。</p>
+        <p><strong><mark class="kw">民法678条第1項</mark></strong>　組合契約で組合の存続期間を定めなかったとき、又はある組合員の終身の間組合が存続すべきことを定めたときは、各組合員は、いつでも脱退することができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法670条</mark></strong>は、組合業務の決定と執行の基本を定める。原則は過半数決定・各組合員執行だが、業務執行者を置けばその者が決定・執行を担う。<strong><mark class="kw">民法670条の2</mark></strong>は、組合に法人格がないため、対外的な契約を誰が代理できるかを明文化する。業務執行者がある場合、原則として業務執行者のみが代理できる。<strong><mark class="kw">民法675条</mark></strong>は組合債権者の保護規定であり、組合財産だけでなく各組合員にも権利行使を認める。<strong><mark class="kw">民法678条</mark></strong>は脱退を定め、存続期間の定めがない組合では各組合員がいつでも脱退できるが、不利な時期の脱退は制限される。組合では継続的共同関係を保つ必要と、組合員の離脱自由との調整が条文全体に現れている。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 平成21年1月22日 平成20年(受)第1188号 民集63巻1号228頁</div>
+      <div class="case-card__title">預金取引経過開示請求事件（預金契約に基づく取引経過開示）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">消費寄託</span>
+        <span class="badge badge--law">民法666条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>預金者の共同相続人の一人が、金融機関に対し、被相続人名義の預金口座について取引経過の開示を求めた。共同相続人間では、過去の入出金、払戻し、残高推移を確認しなければ、相続財産の範囲や遺産分割の前提を正確に把握できない。これに対し金融機関側は、預金契約に基づき当然に広範な取引経過開示義務を負うのか、また共同相続人の一人だけからの請求で足りるのかが争点となった。預金は、金銭を金融機関に寄託し、金融機関がこれを消費して同額を返す構造を持つため、単なる保管物返還とは異なる信頼関係が問題になった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、預金契約が消費寄託の性質を持つことを前提に、金融機関は預金者から求められた場合、預金契約に基づき、預金口座の取引経過を開示すべき義務を負うと判断した。預金者は自分の口座に関する入出金の経過を把握する正当な利益を有し、金融機関は専門的に記録を管理している。預金者の共同相続人は、相続により預金者の地位に関わる利益を承継するため、共同相続人の一人からの請求であっても、取引経過の開示を求め得るとされた。判決は、預金契約を単なる金銭返還債務に還元せず、契約上の付随義務として情報提供・開示義務を認めた点に意義がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">消費寄託</mark></strong>の代表例である預金契約を理解するうえで重要である。誤答パターンは、「預金契約では金融機関は同額金銭を返せば足り、取引経過を開示する契約上の義務は一切ない」という肢である。正しくは、預金契約の信頼関係と金融機関の記録管理を根拠に、預金者側の正当な開示利益が保護される。行政書士試験では、<strong><mark class="kw">民法666条</mark></strong>の消費寄託と、契約上の付随義務、相続における共同相続人の地位を結び付けて理解しておくとよい。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法666条</mark></strong>、預金契約、相続財産調査、信義則上の付随義務が関連する。預金債権の共同相続を扱う最高裁大法廷平成28年12月19日決定とあわせると、預金が単なる金銭債権でありながら、相続・取引実務では特別の管理と情報開示を要することが分かる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和57年9月7日 昭和55年(オ)第385号 民集36巻8号1527頁</div>
+      <div class="case-card__title">寄託者名義変更と即時取得事件（寄託物の引渡請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">寄託</span>
+        <span class="badge badge--law">動産物権変動</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>動産が倉庫業者等に寄託され、寄託物そのものは倉庫内に保管されたまま、寄託者名義や倉庫証券・荷渡指図書等を通じて取引が行われた。買主側は、寄託物を現実に手に取っていなくても、寄託者名義の変更又は指図によって引渡しを受けたのと同じ効果が生じ、動産を取得したと主張した。これに対し、真の権利者側は、現実の占有移転がない以上、即時取得や対抗要件としての引渡しを認めるべきではないと争った。争点は、寄託物が第三者に保管されている場合に、どのような方法で占有移転・引渡しを認めるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、寄託物が受寄者のもとに保管されている場合でも、取引当事者間の合意と受寄者への指図・名義変更等により、動産の占有移転が認められ得るとした。寄託の場面では、目的物が倉庫内に置かれたまま取引されることが通常あり、現実の搬出だけを引渡しとすると商取引の円滑性が損なわれる。もっとも、単なる帳簿操作や内部処理だけで常に第三者に対抗できるわけではなく、受寄者が誰のために占有しているかが外部的・客観的に切り替わったと評価できる事情が必要である。判決は、寄託関係と動産物権変動の接点で、現実の占有と観念的な引渡しの関係を示したものと理解できる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">寄託契約</mark></strong>を動産物権変動と結び付けて問う問題で重要である。誤答パターンは、「倉庫に保管された動産は、現実に搬出しなければ絶対に引渡しが認められない」という肢である。正しくは、受寄者を介した指図や名義変更によって、占有代理関係が切り替わる場合がある。他方で、「紙面上の名義だけで必ず即時取得できる」と一般化するのも危険である。取引相手の善意無過失、占有改定・指図による占有移転、受寄者の認識といった要素を総合して判断する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法657条</mark></strong>、<strong><mark class="kw">民法658条</mark></strong>、動産物権変動、即時取得、占有代理、指図による占有移転が関連する。寄託単元だけでなく、物権変動・占有・即時取得の単元と横断して整理する必要がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和38年5月31日 昭和35年(オ)第1029号 民集17巻4号600頁</div>
+      <div class="case-card__title">組合の業務執行者の代理権制限事件（売掛代金請求）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法670条</span>
+        <span class="badge badge--law">組合代理</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>共同事業を営む組合において、業務執行者が第三者と取引を行った。組合内部には、一定額を超える取引には他の組合員の同意を要する、又は特定の範囲を超える契約をしてはならないといった代理権限の制限があった。取引後、組合側はその内部制限を理由に、業務執行者の行為は組合員全員に効力を及ぼさないと主張した。一方、取引相手は、そのような内部制限を知らず、業務執行者として外形上取引権限があると信頼していた。争点は、業務執行者の代理権限制限を善意の第三者に対抗できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、組合の業務執行者の代理権について内部的な制限がある場合でも、その制限は善意の第三者に対抗できないと判断した。組合は法人ではないため、業務執行者が組合員を代理して対外的な取引を行う構造をとる。取引相手から見ると、業務執行者として表示されている者が通常の業務範囲内で契約する以上、その者の権限を信頼するのが自然である。内部制限を常に第三者へ対抗できるとすると、組合との取引は著しく不安定になる。判決は、組合内部の自治と第三者の取引安全を調整し、内部制限は善意の相手方に対して主張できないという枠組みを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">組合契約</mark></strong>の対外関係を理解するうえで最重要である。誤答パターンは、「業務執行者の代理権が内部で制限されていれば、その制限は常に第三者にも対抗できる」という肢である。正しくは、第三者が善意であれば、内部制限を対抗できない。現行法では<strong><mark class="kw">民法670条の2</mark></strong>が組合の代理を明文化しており、業務執行者がある場合は業務執行者のみが代理できるという整理が加わっている。問題では、業務執行者の有無、代理行為の範囲、第三者の善意悪意を順に確認する。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法670条</mark></strong>、<strong><mark class="kw">民法670条の2</mark></strong>、代理権の制限、表見代理、取引安全が関連する。組合が法人格を持たないことから、会社の代表機関とは異なり、代理構成で対外関係を説明する点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和45年11月11日 昭和40年(オ)第1464号 民集24巻12号1854頁</div>
+      <div class="case-card__title">業務執行組合員による訴訟追行事件（任意的訴訟信託の許容性）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">組合</span>
+        <span class="badge badge--law">民事訴訟</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>民法上の組合に属する財産・債権をめぐり、組合員全員ではなく、業務執行組合員が自己の名で訴訟を追行できるかが争われた。組合は法人格を持たないため、組合そのものが当然に権利義務主体となるわけではない。そうすると、本来は組合員全員が共同して訴訟をすべきとも考えられる。しかし、共同事業の取引が多数存在する場合、すべての組合員を常に訴訟当事者にしなければならないとすると、権利実現が著しく不便になる。争点は、業務執行組合員に訴訟追行権を委ねる任意的訴訟信託が許されるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、弁護士代理の原則や訴訟信託禁止の趣旨を潜脱するような場合は許されないとしつつ、民法上の組合において、業務執行組合員が組合員全員のために組合財産に関する訴訟を追行することは、一定の場合に許されると判断した。組合の業務執行者は、共同事業の遂行のために権限を与えられ、組合財産の管理・処分に関わる立場にある。組合員全員の実質的利益を代表して訴訟を行う必要性があり、かつ訴訟信託禁止の弊害がない場合には、手続上の便宜と実体上の共同利益保護を調和させることができる。判決は、法人格のない団体・組合の権利実現に関する重要な枠組みを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">組合契約</mark></strong>の学習を民事訴訟上の当事者適格へ接続する代表判例である。行政書士試験では民事訴訟法が中心科目ではないが、組合が法人格を持たないことの帰結として、権利義務の帰属と訴訟追行の問題が問われ得る。誤答パターンは、「組合には法人格がないから、業務執行組合員が組合財産に関する訴訟を追行することは一切できない」という肢である。正しくは、組合員全員の共同利益のため、訴訟信託禁止の趣旨に反しない範囲で、業務執行組合員による訴訟追行が認められる場合がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法670条</mark></strong>、<strong><mark class="kw">民法671条</mark></strong>、組合財産、業務執行者、任意的訴訟信託、法人格なき団体の訴訟追行が関連する。組合の内部管理と対外的権利実現を一体で理解するために重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">寄託契約</mark></strong>は、現行法では保管委託と承諾により効力を生ずる諾成契約である。</li>
+        <li>受寄者は、寄託者の承諾がなければ寄託物を使用できない。</li>
+        <li>受寄者は、承諾又はやむを得ない事由がなければ第三者に保管させることができない。</li>
+        <li>無報酬の受寄者は、自己の財産に対するのと同一の注意を負う。</li>
+        <li>返還時期を定めても、寄託者はいつでも返還を請求できる。</li>
+        <li><strong><mark class="kw">消費寄託</mark></strong>では、同一物ではなく種類・品質・数量の同じ物を返還する。</li>
+        <li><strong><mark class="kw">組合契約</mark></strong>は、出資と共同事業が中心であり、出資は労務でもよい。</li>
+        <li><strong><mark class="kw">組合財産</mark></strong>は総組合員の共有だが、清算前の分割請求や持分の単独行使は制限される。</li>
+        <li>業務執行者があるときは、組合代理は原則として業務執行者が担う。</li>
+        <li>脱退は組合員個人の離脱、解散は組合全体の終了である。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「寄託契約は、受寄者が寄託物を受け取らなければ成立しない。」これは誤りである。現行<strong><mark class="kw">民法657条</mark></strong>は、保管委託と承諾により効力が生ずると定める。</p>
+      <p><strong>誤りの選択肢例2：</strong>「受寄者は、寄託物を安全に保管するためであれば、寄託者の承諾なく自由に使用できる。」これは誤りである。<strong><mark class="kw">民法658条1項</mark></strong>により、使用には寄託者の承諾が必要である。</p>
+      <p><strong>誤りの選択肢例3：</strong>「無報酬の受寄者も常に善良な管理者の注意義務を負う。」これは誤りである。<strong><mark class="kw">民法659条</mark></strong>は、自己の財産に対するのと同一の注意を定める。</p>
+      <p><strong>誤りの選択肢例4：</strong>「返還時期を定めた寄託では、寄託者はその時期まで一切返還を請求できない。」これは誤りである。<strong><mark class="kw">民法662条</mark></strong>により、寄託者はいつでも返還請求できる。ただし、期限前返還で受寄者に損害があれば賠償問題が残る。</p>
+      <p><strong>誤りの選択肢例5：</strong>「組合契約の出資は金銭又は物に限られ、労務を出資の目的とすることはできない。」これは誤りである。<strong><mark class="kw">民法667条2項</mark></strong>は、出資が労務を目的とすることを認める。</p>
+      <p><strong>誤りの選択肢例6：</strong>「組合財産は共有だから、各組合員は清算前でも自由に分割を請求できる。」これは誤りである。<strong><mark class="kw">民法676条3項</mark></strong>は、清算前の組合財産分割請求を禁止する。</p>
+      <p><strong>誤りの選択肢例7：</strong>「組合の債権者は、組合財産にしか権利を行使できない。」これは誤りである。<strong><mark class="kw">民法675条2項</mark></strong>は、各組合員に対する権利行使も認める。</p>
+      <p><strong>誤りの選択肢例8：</strong>「存続期間を定めない組合でも、組合員は全員の同意がなければ脱退できない。」これは誤りである。<strong><mark class="kw">民法678条</mark></strong>により、各組合員は原則としていつでも脱退できる。ただし、不利な時期の脱退には制限がある。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、寄託では第一に通常寄託か<strong><mark class="kw">消費寄託</mark></strong>かを分けることである。通常寄託なら同一物返還、消費寄託なら同種同量返還である。第二に、受寄者の使用・再寄託・注意義務を確認する。第三に、返還時期、返還場所、第三者の権利主張があるかを読む。組合では、第一に出資と共同事業の有無を確認する。第二に、組合財産の拘束を確認し、普通共有と同じ処理をしない。第三に、誰が業務執行者か、誰が代理できるかを読む。第四に、脱退、解散、清算のどの段階かを区別する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">寄託契約</mark></strong>は、委任、消費貸借、動産物権変動、占有、即時取得と接続する。特に倉庫保管中の動産取引では、現実の引渡しがなくても占有代理関係の変更が問題になる。<strong><mark class="kw">消費寄託</mark></strong>は預金取引として相続、債権譲渡、差押え、金融機関の説明義務と接続する。<strong><mark class="kw">組合契約</mark></strong>は、共有、代理、債務負担、会社法、民事訴訟上の当事者適格と接続する。行政書士実務では、共同事業契約、業務提携、任意団体の財産管理、共同申請の内部関係を設計するときに、組合か単なる協力関係かの区別が重要になる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、<strong><mark class="kw">寄託契約</mark></strong>と<strong><mark class="kw">組合契約</mark></strong>について、実務に合わせた明文化・整理が行われた。寄託では、旧法上の要物契約的な構成が見直され、<strong><mark class="kw">民法657条</mark></strong>により諾成契約化された。その代わり、受取り前の解除を定める<strong><mark class="kw">民法657条の2</mark></strong>が新設され、まだ保管が始まっていない段階の拘束を調整している。組合では、業務の決定・執行、組合代理、組合員の加入、組合債権者の権利行使などが整理され、法人格のない共同事業体としての対外関係が読み取りやすくなった。</p>
+    </div>
+  </div>
+
+  <p><strong><mark class="kw">寄託契約</mark></strong>の実務では、保管対象、保管場所、保管方法、報酬、保険、返還時期、第三者への再寄託の可否を明確にすることが重要である。倉庫保管や美術品保管では、温度・湿度・警備・搬出手続が契約内容になる。無償で友人に物を預ける場合でも、どの程度の保管を期待したのかが後で争いになることがある。預金では、通常の寄託と異なり金融機関が金銭を消費できるため、返還対象は同額金銭であり、取引経過の管理と開示が重要になる。</p>
+
+  <p><strong><mark class="kw">組合契約</mark></strong>の実務では、出資内容、損益分配、業務執行者、代理権限、重要事項の決定方法、脱退時の払戻し、解散・清算方法を契約書に具体的に定める必要がある。これらを曖昧にすると、誰が契約できるのか、誰が債務を負うのか、途中で抜けた組合員にいくら返すのかが紛争になる。会社を設立しない共同事業は柔軟である反面、法人格がないため、組合員個人の責任が表に出やすい。</p>
+
+  <p>学習上は、寄託を「成立、保管、返還、消費寄託」の順で整理する。条文番号では、<strong><mark class="kw">民法657条</mark></strong>が成立、<strong><mark class="kw">民法658条</mark></strong>が使用・再寄託、<strong><mark class="kw">民法659条</mark></strong>が無報酬受寄者の注意義務、<strong><mark class="kw">民法660条</mark></strong>が第三者の権利主張、<strong><mark class="kw">民法662条</mark></strong>が返還請求、<strong><mark class="kw">民法666条</mark></strong>が消費寄託である。組合は、「成立、財産、業務執行、対外責任、終了」の順で整理する。<strong><mark class="kw">民法667条</mark></strong>が成立、<strong><mark class="kw">民法668条</mark></strong>と<strong><mark class="kw">民法676条</mark></strong>が財産、<strong><mark class="kw">民法670条</mark></strong>と<strong><mark class="kw">民法670条の2</mark></strong>が業務執行と代理、<strong><mark class="kw">民法675条</mark></strong>が対外責任、<strong><mark class="kw">民法678条</mark></strong>以下が脱退・解散・清算である。</p>
+
+  <p>この単元で最も大切なのは、似た制度に引きずられないことである。寄託は委任ではなく、保管を中心とする。消費寄託は消費貸借に似るが、預け入れという寄託の形式から出発する。組合財産は条文上共有とされるが、普通共有のように自由な持分処分や分割請求ができるわけではない。組合は会社に似た共同事業体だが、法人格がない。問題文の言葉だけでなく、契約の目的、返還対象、財産の帰属、誰が第三者と取引したかを順に読むことで、正誤判断の精度が上がる。</p>
+</section>
+
+</body>
+</html>

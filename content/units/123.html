@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>詐害行為取消権（民法424条） | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">詐害行為取消権（民法424条）</h1>
+  <p class="page-title-block__sub">債務者が責任財産を流出させたとき、債権者が裁判で取り戻す制度を条文と判例で整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法424条</span>
+    <span class="badge badge--info">民法424条の2</span>
+    <span class="badge badge--info">民法424条の5</span>
+    <span class="badge badge--info">民法424条の9</span>
+    <span class="badge badge--info">責任財産保全</span>
+    <span class="badge badge--info">詐害意思</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">詐害行為取消権</mark></strong>とは、債務者が債権者を害することを知りながら財産を譲渡したり担保に入れたりして、債権者の回収原資である責任財産を減少させた場合に、債権者が裁判所にその行為の取消しと財産の返還または価額償還を求める制度である。たとえば、AがBに1000万円の貸金債務を負っているのに、唯一の不動産を親族Cへ贈与して無資力になった場合、BはCを相手に<strong><mark class="kw">詐害行為取消請求</mark></strong>を行い、不動産の返還または価額償還を求めることがある。</p>
+
+  <p>この制度の目的は、特定の債権者に担保権を与えることではなく、債務者の<strong><mark class="kw">責任財産</mark></strong>を総債権者のために保全する点にある。債権者は、債務者の財産を直接管理する立場にはないため、通常は強制執行によって満足を受ける。しかし、強制執行の前に債務者が財産を外へ移してしまえば、執行対象が失われる。そこで民法は、債務者の財産処分自由と、債権者の共同担保保全を調整するため、<strong><mark class="kw">民法424条</mark></strong>から<strong><mark class="kw">民法426条</mark></strong>までに、一般要件、特則、返還方法、被告、判決効、期間制限を細かく置いている。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">債権者代位権</mark></strong>との比較、被保全債権の発生時期、財産権を目的としない行為の除外、受益者・転得者の悪意、相当対価処分の特則、偏頗弁済・担保供与の特則、金銭や動産の直接支払、認容判決の効力、2年・10年の期間制限が頻出である。特に記述式では、「誰を相手に」「何を取り消し」「何を求めるか」を事例から組み立てる力が問われる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で全体像をつかむ</span>
+    </div>
+    <div class="box__bd">
+      <p>AがXに対して800万円の借入債務を負っている。Aは支払不能に近い状態で、唯一の財産である甲土地を友人Bに代物弁済として譲渡し、BもAがXへの支払を困難にするため甲土地を移すことを知っていた。その後、Bが甲土地を善意のCに売却して登記を移した場合、XはCから土地を取り戻せないことがあるが、Bに対して代物弁済の取消しと<strong><mark class="kw">価額償還</mark></strong>を求める余地がある。問題文に「受益者」「転得者」「善意・悪意」「現物返還不能」が出たら、<strong><mark class="kw">民法424条の5</mark></strong>、<strong><mark class="kw">民法424条の6</mark></strong>、<strong><mark class="kw">民法424条の9</mark></strong>まで視野に入れる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">詐害行為取消権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">詐害行為取消権</mark></strong>は、債務者が債権者を害することを知ってした行為について、債権者が裁判所に取消しを請求できる権利である。制度趣旨は、債務者の一般財産を債権者の共同担保として維持し、強制執行の実効性を確保する点にある。任意の意思表示だけで行使できる取消権ではなく、訴えによって行使する点が重要である。取消しの相手方は債務者ではなく、原則として<strong><mark class="kw">受益者</mark></strong>または<strong><mark class="kw">転得者</mark></strong>である。効果は債務者と全債権者にも及ぶが、取消債権者に担保権のような当然の優先権を与える制度ではない。試験では、債務者の放置を補う<strong><mark class="kw">債権者代位権</mark></strong>と、債務者の処分行為を取り消す<strong><mark class="kw">詐害行為取消権</mark></strong>を事例で切り分けることが出発点になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">詐害行為と詐害意思</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">詐害行為</mark></strong>は、債務者の責任財産を減少させ、債権者の債権回収を困難にする行為である。典型は贈与、低廉譲渡、代物弁済、担保供与、不動産を金銭に換えて隠匿しやすくする処分である。<strong><mark class="kw">詐害意思</mark></strong>は、債務者が債権者を害することを知っていることをいい、債権者を害することを積極的に目的とする害意までは不要である。客観的に財産が流出しても、債務者が十分な資力を残していれば、通常は債権者を害する行為とはいえない。逆に、唯一の財産を無償で移転して無資力になる場合は、詐害性と詐害意思が認定されやすい。試験では、「害する意図または欲求が必要」とする肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">被保全債権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">被保全債権</mark></strong>は、詐害行為取消請求によって保全される債権者の債権である。<strong><mark class="kw">民法424条3項</mark></strong>は、その債権が詐害行為前の原因に基づいて生じた場合に限ると定める。これは、後から債権者になった者が、過去の財産処分にまで介入することを防ぐためである。発生原因が行為前にあれば、具体的な金額の確定や履行期到来が後であっても問題になり得るが、試験では「行為後に発生した債権で常に取消請求できる」とする肢を排除する。さらに、<strong><mark class="kw">民法424条4項</mark></strong>により、強制執行で実現できない債権は被保全債権にならない。責任財産を保全する制度だから、執行による満足を予定しない債権を保護対象にしないのである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">受益者と転得者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">受益者</mark></strong>は、詐害行為によって直接利益を受けた者であり、債務者から贈与を受けた者、担保を取得した者、代物弁済を受けた者などが典型である。<strong><mark class="kw">民法424条1項ただし書</mark></strong>は、受益者が行為時に債権者を害することを知らなかったときは取消請求を否定する。<strong><mark class="kw">転得者</mark></strong>は、受益者または前の転得者からさらに目的財産を取得した者である。<strong><mark class="kw">民法424条の5</mark></strong>は、受益者からの直接転得者なら転得時の悪意、さらに後の転得者ならその者と前に転得した全ての転得者の悪意を要求する。試験では、善意者が途中に入った場合の遮断、受益者善意の場合の扱い、誰を被告にするかが絡めて問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">相当対価処分・偏頗行為・過大な代物弁済</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">相当対価処分</mark></strong>は、債務者が相当な対価を得て財産を処分する行為である。単に財産を売っただけなら総財産の価値は減らないため、<strong><mark class="kw">民法424条の2</mark></strong>は、不動産を金銭に換えて隠匿しやすくするなどの危険、債務者の隠匿等の意思、受益者の悪意を追加要件にしている。<strong><mark class="kw">偏頗行為</mark></strong>は、特定の債権者だけを優遇する担保供与や弁済であり、<strong><mark class="kw">民法424条の3</mark></strong>は支払不能時、通謀害意などを要求する。<strong><mark class="kw">過大な代物弁済</mark></strong>では、消滅した債務額を超える部分だけが取消しの対象になり得る。試験では、相当対価や既存債務への弁済を、単純な無償譲渡と同じ要件で処理しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">返還・価額償還・直接支払</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法424条の6</mark></strong>は、取消しとともに受益者または転得者から財産の返還を請求でき、返還が困難なときは<strong><mark class="kw">価額償還</mark></strong>を請求できるとする。現物が第三者へ移転し、善意転得者から取り戻せない場合や、目的物が不可分で一部取消しに適さない場合には、価額償還が重要になる。<strong><mark class="kw">民法424条の9</mark></strong>は、返還請求が金銭の支払または動産の引渡しである場合、取消債権者が自己への支払または引渡しを求められると定める。これは手続の実効性を確保する規定であり、取消債権者が当然に担保権を取得するという意味ではない。試験では「債務者へ返還させることしかできない」「常に現物返還しか請求できない」という肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">認容判決の効力と期間制限</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">民法425条</mark></strong>は、詐害行為取消請求を認容する確定判決が、債務者および全ての債権者にも効力を有すると定める。これは取消しにより回復される責任財産が、取消債権者だけでなく総債権者の共同担保になるためである。<strong><mark class="kw">民法424条の7</mark></strong>は、受益者に対する訴えでは受益者、転得者に対する訴えではその転得者を被告とし、債務者へ訴訟告知しなければならないとする。<strong><mark class="kw">民法426条</mark></strong>は、債権者が詐害行為を知った時から2年、行為時から10年で訴えを提起できなくなると定める。試験では、期間を「取消権の時効」一般として曖昧に覚えるのではなく、訴えを提起できないという条文表現と、2年・10年の起算点を押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1100 780" role="img" aria-label="詐害行為取消権の要件と効果の全体構造">
+      <defs>
+        <marker id="arr23a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr23a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr23a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="550" y1="120" x2="550" y2="168" stroke="#2563eb" stroke-width="3"/>
+      <line x1="155" y1="168" x2="945" y2="168" stroke="#2563eb" stroke-width="3"/>
+      <line x1="155" y1="168" x2="155" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23a-blue)"/>
+      <line x1="418" y1="168" x2="418" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23a-blue)"/>
+      <line x1="682" y1="168" x2="682" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23a-blue)"/>
+      <line x1="945" y1="168" x2="945" y2="248" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23a-blue)"/>
+      <line x1="682" y1="390" x2="682" y2="478" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr23a-red)"/>
+      <line x1="945" y1="390" x2="945" y2="478" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr23a-orange)"/>
+      <polyline points="418,390 418,435 155,435 155,478" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr23a-red)"/>
+      <rect x="380" y="40" width="340" height="80" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="550" y="72" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">詐害行為取消権</text>
+      <text x="550" y="98" text-anchor="middle" font-size="13" fill="#1e3a8a">責任財産を回復する裁判上の請求</text>
+      <rect x="35" y="248" width="240" height="142" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="155" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">被保全債権</text>
+      <text x="155" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法424条3項・4項</text>
+      <text x="155" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">行為前の原因に基づく</text>
+      <text x="155" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">強制執行可能な債権</text>
+      <rect x="298" y="248" width="240" height="142" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="418" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#7c2d12">詐害行為</text>
+      <text x="418" y="310" text-anchor="middle" font-size="13" fill="#7c2d12">民法424条1項・2項</text>
+      <text x="418" y="338" text-anchor="middle" font-size="13" fill="#7c2d12">財産権目的の処分行為</text>
+      <text x="418" y="364" text-anchor="middle" font-size="13" fill="#7c2d12">債権者を害する客観性</text>
+      <rect x="562" y="248" width="240" height="142" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="682" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#9f1239">主観的要件</text>
+      <text x="682" y="310" text-anchor="middle" font-size="13" fill="#9f1239">債務者の詐害意思</text>
+      <text x="682" y="338" text-anchor="middle" font-size="13" fill="#9f1239">受益者の悪意</text>
+      <text x="682" y="364" text-anchor="middle" font-size="13" fill="#9f1239">転得者は424条の5</text>
+      <rect x="825" y="248" width="240" height="142" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="945" y="282" text-anchor="middle" font-size="17" font-weight="700" fill="#1e3a8a">裁判上の行使</text>
+      <text x="945" y="310" text-anchor="middle" font-size="13" fill="#1e3a8a">民法424条の7</text>
+      <text x="945" y="338" text-anchor="middle" font-size="13" fill="#1e3a8a">受益者・転得者を被告</text>
+      <text x="945" y="364" text-anchor="middle" font-size="13" fill="#1e3a8a">債務者へ訴訟告知</text>
+      <rect x="35" y="478" width="240" height="112" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="155" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">対象外行為</text>
+      <text x="155" y="544" text-anchor="middle" font-size="13" fill="#9f1239">財産権目的でない行為</text>
+      <text x="155" y="568" text-anchor="middle" font-size="13" fill="#9f1239">相続放棄などに注意</text>
+      <rect x="562" y="478" width="240" height="112" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="682" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">返還請求</text>
+      <text x="682" y="544" text-anchor="middle" font-size="13" fill="#9f1239">民法424条の6</text>
+      <text x="682" y="568" text-anchor="middle" font-size="13" fill="#9f1239">現物返還または価額償還</text>
+      <rect x="825" y="478" width="240" height="112" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="945" y="516" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">判決効・期間</text>
+      <text x="945" y="544" text-anchor="middle" font-size="13" fill="#7c2d12">民法425条・426条</text>
+      <text x="945" y="568" text-anchor="middle" font-size="13" fill="#7c2d12">全債権者に効力・2年10年</text>
+      <rect x="70" y="656" width="960" height="56" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="550" y="690" text-anchor="middle" font-size="13" fill="#9f1239">判断順序：被保全債権の適格性 → 詐害行為性 → 主観的要件 → 相手方選択 → 返還方法 → 判決効と期間制限</text>
+      <rect x="500" y="150" width="100" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="550" y="167" text-anchor="middle" font-size="13" fill="#1d4ed8">要件分解</text>
+      <rect x="632" y="424" width="100" height="24" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="682" y="441" text-anchor="middle" font-size="13" fill="#9f1239">取消後</text>
+    </svg>
+  </div>
+
+  <p>上の図は、<strong><mark class="kw">詐害行為取消権</mark></strong>を、要件、相手方、効果の順に分けたものである。最初に見るのは債権者側の<strong><mark class="kw">被保全債権</mark></strong>であり、行為前の原因に基づくことと強制執行可能性が必要になる。次に、債務者の行為が財産権を目的とし、責任財産を減らすかを確認する。受益者・転得者の善意悪意は、取消請求の相手方を選ぶ場面で結論を左右する。最後に、取消しだけで終わらず、現物返還、価額償還、直接支払、判決効、期間制限まで処理する必要がある。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1060 690" role="img" aria-label="詐害行為取消権の特則判断フロー">
+      <defs>
+        <marker id="arr23b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr23b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr23b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+      <line x1="530" y1="110" x2="530" y2="158" stroke="#2563eb" stroke-width="3"/>
+      <line x1="190" y1="158" x2="870" y2="158" stroke="#2563eb" stroke-width="3"/>
+      <line x1="190" y1="158" x2="190" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23b-blue)"/>
+      <line x1="530" y1="158" x2="530" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23b-blue)"/>
+      <line x1="870" y1="158" x2="870" y2="238" stroke="#2563eb" stroke-width="3" marker-end="url(#arr23b-blue)"/>
+      <line x1="190" y1="378" x2="190" y2="468" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arr23b-orange)"/>
+      <line x1="530" y1="378" x2="530" y2="468" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arr23b-red)"/>
+      <line x1="870" y1="378" x2="870" y2="468" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr23b-blue)"/>
+      <rect x="360" y="36" width="340" height="74" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="530" y="67" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">財産処分行為の類型</text>
+      <text x="530" y="92" text-anchor="middle" font-size="13" fill="#1e3a8a">一般要件で足りるか、特則が加わるか</text>
+      <rect x="60" y="238" width="260" height="140" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+      <text x="190" y="272" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">無償・低廉譲渡</text>
+      <text x="190" y="300" text-anchor="middle" font-size="13" fill="#1e3a8a">贈与・著しい廉価売買</text>
+      <text x="190" y="326" text-anchor="middle" font-size="13" fill="#1e3a8a">424条の一般要件が中心</text>
+      <text x="190" y="352" text-anchor="middle" font-size="13" fill="#1e3a8a">無資力化を確認</text>
+      <rect x="400" y="238" width="260" height="140" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="530" y="272" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">相当対価処分</text>
+      <text x="530" y="300" text-anchor="middle" font-size="13" fill="#7c2d12">不動産を金銭へ換価</text>
+      <text x="530" y="326" text-anchor="middle" font-size="13" fill="#7c2d12">隠匿等のおそれ</text>
+      <text x="530" y="352" text-anchor="middle" font-size="13" fill="#7c2d12">424条の2の追加要件</text>
+      <rect x="740" y="238" width="260" height="140" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="3"/>
+      <text x="870" y="272" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">既存債務への弁済等</text>
+      <text x="870" y="300" text-anchor="middle" font-size="13" fill="#9f1239">担保供与・代物弁済</text>
+      <text x="870" y="326" text-anchor="middle" font-size="13" fill="#9f1239">偏頗行為の調整</text>
+      <text x="870" y="352" text-anchor="middle" font-size="13" fill="#9f1239">424条の3・4を確認</text>
+      <rect x="60" y="468" width="260" height="96" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="3"/>
+      <text x="190" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">取消しやすい典型</text>
+      <text x="190" y="532" text-anchor="middle" font-size="13" fill="#7c2d12">善意受益者なら遮断</text>
+      <rect x="400" y="468" width="260" height="96" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="3"/>
+      <text x="530" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">追加要件で絞る</text>
+      <text x="530" y="532" text-anchor="middle" font-size="13" fill="#9f1239">隠匿意思と受益者の認識</text>
+      <rect x="740" y="468" width="260" height="96" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+      <text x="870" y="504" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">破産法的発想に近い</text>
+      <text x="870" y="532" text-anchor="middle" font-size="13" fill="#1e3a8a">支払不能・通謀害意</text>
+      <rect x="90" y="612" width="880" height="44" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4"/>
+      <text x="530" y="640" text-anchor="middle" font-size="13" fill="#9f1239">同じ財産流出でも、無償譲渡、相当対価処分、偏頗行為では保護される取引安全の強さが異なる。</text>
+      <rect x="480" y="145" width="100" height="24" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="530" y="162" text-anchor="middle" font-size="13" fill="#1d4ed8">類型選択</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、財産処分行為を類型ごとに分けるための判断図である。無償譲渡や著しい低廉譲渡は、責任財産を直接減らすため<strong><mark class="kw">民法424条</mark></strong>の一般要件が中心になる。これに対し、相当対価処分では、対価が入ってくる以上、直ちに共同担保が減るとはいえないため、<strong><mark class="kw">民法424条の2</mark></strong>が隠匿等のおそれを追加する。既存債務への弁済や担保供与は、ある債権者だけを優遇する点が問題であり、支払不能や通謀害意を見て慎重に取り消す。事例問題では、まず財産処分の類型を選び、その類型に対応する条文要件を当てはめると誤りにくい。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">債権者代位権</th>
+        <th class="col--b">詐害行為取消権</th>
+        <th class="col--c">試験での見分け方</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">問題場面</td>
+        <td class="col--a">債務者が第三者への権利を<span class="em-a">行使しない</span>。</td>
+        <td class="col--b">債務者が財産を<span class="em-b">流出させる行為</span>をした。</td>
+        <td class="col--c">問題文の動詞が<span class="em-c">放置</span>か<span class="em-c">処分</span>かを見る。</td>
+      </tr>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法423条</mark></strong>以下。</td>
+        <td class="col--b"><strong><mark class="kw">民法424条</mark></strong>から<strong><mark class="kw">民法426条</mark></strong>。</td>
+        <td class="col--c">423条台前半か424条台後半かで条文番号の引っかけが出る。</td>
+      </tr>
+      <tr>
+        <td class="col--label">行使方法</td>
+        <td class="col--a">裁判外でも行使し得るが、訴え提起時は訴訟告知が必要。</td>
+        <td class="col--b"><span class="em-b">裁判上の請求</span>として行使する。</td>
+        <td class="col--c">「意思表示で取り消せる」とあれば詐害行為取消権では誤り。</td>
+      </tr>
+      <tr>
+        <td class="col--label">相手方</td>
+        <td class="col--a">債務者の権利の相手方である第三債務者。</td>
+        <td class="col--b"><span class="em-b">受益者</span>または<span class="em-b">転得者</span>。</td>
+        <td class="col--c">債務者本人を被告にする、という肢は原則として誤り。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">債務者の権利を行使し、責任財産を保全する。</td>
+        <td class="col--b">詐害行為を取り消し、返還・価額償還を求める。</td>
+        <td class="col--c">どちらも当然の優先弁済権ではない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">無償・低廉譲渡</th>
+        <th class="col--b">相当対価処分</th>
+        <th class="col--c">偏頗弁済・担保供与</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">典型例</td>
+        <td class="col--a">唯一の不動産を親族へ贈与する。</td>
+        <td class="col--b">不動産を時価で売り、金銭を隠す準備をする。</td>
+        <td class="col--c">支払不能時に特定債権者へ担保を付ける。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心条文</td>
+        <td class="col--a"><strong><mark class="kw">民法424条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法424条の2</mark></strong>。</td>
+        <td class="col--c"><strong><mark class="kw">民法424条の3</mark></strong>、<strong><mark class="kw">民法424条の4</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">追加要件</td>
+        <td class="col--a">一般要件と受益者の悪意が中心。</td>
+        <td class="col--b"><span class="em-b">隠匿等のおそれ</span>、債務者の隠匿等意思、受益者の認識。</td>
+        <td class="col--c"><span class="em-c">支払不能</span>、通謀害意、非義務行為なら30日要件。</td>
+      </tr>
+      <tr>
+        <td class="col--label">取消範囲</td>
+        <td class="col--a">可分なら自己の債権額の限度。</td>
+        <td class="col--b">処分全体ではなく詐害性のある範囲が問題になる。</td>
+        <td class="col--c">過大な代物弁済は過大部分が中心。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答例</td>
+        <td class="col--a">受益者が善意でも常に取り消せる。</td>
+        <td class="col--b">相当価格で売れば常に取り消せない。</td>
+        <td class="col--c">弁済は債務消滅行為なので絶対に取り消せない。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的な判断基準は、債務者の行為によって「何が財産から出ていったか」と「何が代わりに入ってきたか」を読むことである。対価が入っていないなら一般要件で足りやすいが、相当な対価が入っているなら、その対価が隠匿・無償供与される危険まで見る。既存債務への弁済や担保供与は、債務者が借金を返しただけにも見えるため、支払不能時の特定債権者優遇か、通謀して他の債権者を害したかを確認する。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条 詐害行為取消請求</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権者は、債務者が債権者を害することを知ってした行為の取消しを裁判所に請求することができる。ただし、その行為によって利益を受けた者がその行為の時において債権者を害することを知らなかったときは、この限りでない。<br>2 前項の規定は、財産権を目的としない行為については、適用しない。<br>3 債権者は、その債権が第一項に規定する行為の前の原因に基づいて生じたものである場合に限り、詐害行為取消請求をすることができる。<br>4 債権者は、その債権が強制執行により実現することのできないものであるときは、詐害行為取消請求をすることができない。</blockquote>
+      <p><strong><mark class="kw">民法424条</mark></strong>は一般要件を定める中心条文である。1項本文は債務者の詐害行為と裁判上の取消請求を、ただし書は受益者善意の場合の保護を定める。2項は身分行為や人格的行為のような財産権を目的としない行為を除外し、相続放棄や婚姻・離婚そのものを他人の債権回収のために強制しない趣旨を示す。3項は被保全債権の発生時期を、4項は強制執行可能性を要件化している。条文全体として、責任財産保全と取引安全・身分自治の調整を行う規定である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条の2 相当対価処分の特則</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務者が、その有する財産を処分する行為をした場合において、受益者から相当の対価を取得しているときは、債権者は、次に掲げる要件のいずれにも該当する場合に限り、その行為について、詐害行為取消請求をすることができる。一 その行為が、不動産の金銭への換価その他の当該処分による財産の種類の変更により、債務者において隠匿、無償の供与その他の債権者を害することとなる処分をするおそれを現に生じさせるものであること。二 債務者が、その行為の当時、対価として取得した金銭その他の財産について、隠匿等の処分をする意思を有していたこと。三 受益者が、その行為の当時、債務者が隠匿等の処分をする意思を有していたことを知っていたこと。</blockquote>
+      <p><strong><mark class="kw">民法424条の2</mark></strong>は、相当な対価を得た処分を直ちに詐害行為としないための特則である。不動産を時価で売れば、価値だけ見れば不動産が金銭に変わるだけで共同担保は同額維持される。しかし、金銭は隠匿や無償供与が容易であるため、債務者がその意思を持ち、受益者もそれを知っている場合には取消しが認められる。試験では、「相当価格で売却したら絶対に取消しの対象外」とする肢も、「相当価格でも常に取消せる」とする肢も誤りになり得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条の3・424条の4 偏頗行為と過大な代物弁済</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務者がした既存の債務についての担保の供与又は債務の消滅に関する行為について、債権者は、支払不能の時に行われたこと、債務者と受益者とが通謀して他の債権者を害する意図をもって行われたことなどの要件に該当する場合に限り、詐害行為取消請求をすることができる。<br>債務者がした債務の消滅に関する行為であって、受益者の受けた給付の価額がその行為によって消滅した債務の額より過大であるものについて、民法424条の要件に該当するときは、消滅した債務の額に相当する部分以外の部分について詐害行為取消請求をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法424条の3</mark></strong>は、既存債務への担保供与や弁済を、通常の詐害行為より慎重に取り消す規定である。債務者が本当に債務を返しただけなら、その債権者は正当な満足を得たともいえるため、支払不能時、通謀害意という強い要件が必要になる。<strong><mark class="kw">民法424条の4</mark></strong>は、代物弁済などで消滅債務額を超える過大な給付がされた場合、過大部分を取り消す発想を明文化する。ここでは破産法の否認権に近い発想が入っており、一般の贈与事案より要件が複雑になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条の5 転得者に対する請求</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権者は、受益者に対して詐害行為取消請求をすることができる場合において、受益者に移転した財産を転得した者があるときは、受益者から転得した者については、その転得者が転得の当時、債務者がした行為が債権者を害することを知っていたときに限り、他の転得者から転得した者については、その転得者及びその前に転得した全ての転得者が、それぞれの転得の当時、債務者がした行為が債権者を害することを知っていたときに限り、その転得者に対しても詐害行為取消請求をすることができる。</blockquote>
+      <p><strong><mark class="kw">民法424条の5</mark></strong>は、転得者への追及を制限する。受益者から直接取得した転得者は、自分が取得した時に詐害性を知っていれば対象になる。さらに後の転得者では、その者だけでなく前に転得した全員の悪意も必要になる。これは、取引の流通が進むほど善意取得者の信頼保護が強くなるためである。受益者が善意でそもそも受益者に対して取消請求できない場合、転得者追及の前提も問題になるため、受益者と転得者の主観を時点ごとに分けて読む。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条の6・424条の8・424条の9 返還方法と範囲</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債権者は、受益者又は転得者に対する詐害行為取消請求において、債務者がした行為の取消しとともに、移転した財産の返還を請求することができる。返還が困難であるときは、その価額の償還を請求することができる。債務者がした行為の目的が可分であるときは、自己の債権の額の限度においてのみ、その行為の取消しを請求することができる。金銭の支払又は動産の引渡しを求める場合には、自己に対してすることを求めることができる。</blockquote>
+      <p><strong><mark class="kw">民法424条の6</mark></strong>は取消しと返還・価額償還の結合を、<strong><mark class="kw">民法424条の8</mark></strong>は可分な目的物について自己の債権額限度の取消しを、<strong><mark class="kw">民法424条の9</mark></strong>は金銭・動産について取消債権者への直接支払・引渡しを定める。これらは詐害行為取消権の実効性を支える効果規定である。現物返還が原則だが、不動産が善意転得者に移っている、目的物が不可分で一部取消しに適さないなどの場合には価額償還が重要になる。直接支払を認めても、認容判決の効力が全債権者に及ぶ点と併せ、優先弁済権そのものではないことに注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法424条の7・425条・426条 手続、判決効、期間</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">詐害行為取消請求に係る訴えについては、受益者に対する請求では受益者、転得者に対する請求ではその転得者を被告とする。債権者は、訴えを提起したときは、遅滞なく、債務者に対し、訴訟告知をしなければならない。詐害行為取消請求を認容する確定判決は、債務者及びその全ての債権者に対してもその効力を有する。詐害行為取消請求に係る訴えは、債権者が知った時から二年、行為の時から十年を経過したときは提起することができない。</blockquote>
+      <p><strong><mark class="kw">民法424条の7</mark></strong>は、債務者ではなく受益者・転得者を被告としつつ、債務者へ訴訟告知を要求する。これは、判決効が債務者に及ぶこととの関係で、債務者に手続参加の機会を与える趣旨である。<strong><mark class="kw">民法425条</mark></strong>は、認容判決の効力が債務者と全債権者にも及ぶと定め、責任財産保全制度であることを明確にする。<strong><mark class="kw">民法426条</mark></strong>の2年・10年は、権利関係の早期安定のための期間制限であり、取消しの利益と取引安全との調整である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和35年4月26日 昭和32年(オ)第362号 民集14巻6号1046頁</div>
+      <div class="case-card__title">詐害意思と抵当権設定の取消し</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法424条</span>
+        <span class="badge badge--law">詐害意思</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務者が複数の債権者に対して債務を負い、十分な資力を失っている状況で、特定の債権者に不動産抵当権を設定した。その後、抵当不動産は競売され、抵当権者である受益者が優先弁済を受けた。一般債権者は、抵当権設定によって共同担保が害されたとして<strong><mark class="kw">詐害行為取消権</mark></strong>を行使し、債務者に回復すべきものが何か、受益者が受けた利益を他に無償譲渡して残存利益がない場合にも返還義務を負うかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">詐害行為</mark></strong>の成立には、債務者が債権者を害することを知って法律行為をしたことを要するが、債権者を害することを意図し、または欲していたことまでは必要ないとした。さらに、抵当権設定が詐害行為として取り消される場合に、目的不動産が既に競売されていれば、受益者である抵当権者は優先弁済金を債務者へ返還すべきであるとした。受益者がその優先弁済金債権を他人に無償譲渡した結果、利得が残っていないとしても、返還に代わる損害賠償義務を免れない。つまり、詐害行為取消しの実効性は、目的物が形を変えた後でも価値回復によって確保される。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">詐害意思</mark></strong>の意味を「害することを知っていること」と把握するための基本判例である。誤答パターンは、「債務者が債権者を害することを積極的に目的としていなければ詐害行為取消権は成立しない」という肢である。正しくは、害する結果を知っていれば足り、害意や目的までは不要である。また、抵当権設定後に競売が終わっていても、優先弁済金という価値の返還が問題になる点は、<strong><mark class="kw">民法424条の6</mark></strong>の価額償還理解につながる。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法424条</mark></strong>、<strong><mark class="kw">民法424条の6</mark></strong>、担保供与、価額償還、受益者の返還義務が関連する。改正後は偏頗的担保供与について<strong><mark class="kw">民法424条の3</mark></strong>の特則も確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和36年7月19日 昭和30年(オ)第260号 民集15巻7号1875頁</div>
+      <div class="case-card__title">特定物引渡請求権と詐害行為取消権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法424条</span>
+        <span class="badge badge--law">被保全債権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債権者は債務者に対して特定の家屋の引渡請求権を有していた。ところが債務者は、その家屋を他の債権者への代物弁済として提供し、他に十分な資産を残さない状態になった。家屋には抵当権も設定されており、目的物全体をそのまま取り戻せるのか、抵当債権額を控除した価値部分だけが問題になるのかも争われた。特定物引渡請求権は金銭債権ではないため、そもそも<strong><mark class="kw">詐害行為取消権</mark></strong>の被保全債権になり得るかが中心問題であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、特定物引渡請求権を有する者も、債務者がその目的物を処分して無資力になった場合には、その処分行為を詐害行為として取り消すことができるとした。理由は、特定物債権も履行不能になれば損害賠償債権に転化し、最終的には債務者の一般財産によって満足を受ける必要があるからである。もっとも、抵当権の付いた家屋が代物弁済された場合には、取消しは家屋価格から抵当債権額を控除した残額部分に限られる。目的物が一棟の家屋のように不可分で一部取消しが適しないときは、その限度で価格賠償を請求するほかないとした。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">被保全債権</mark></strong>を金銭債権だけに限定しない理解を示す重要判例である。誤答パターンは、「詐害行為取消権は金銭債権者だけが行使でき、特定物引渡請求権者は一切行使できない」という肢である。正しくは、特定物債権も履行不能時に金銭賠償へ転化し得るため、目的物処分により無資力となる場合には取消権を行使し得る。ただし、抵当権など既存の担保価値を控除し、可分性や不可分性によって取消範囲・価額償還の方法が変わる点まで押さえる必要がある。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法424条4項</mark></strong>、強制執行可能性、<strong><mark class="kw">民法424条の8</mark></strong>の取消範囲、<strong><mark class="kw">民法424条の6</mark></strong>の価額償還が関連する。物権変動、抵当権、債務不履行による損害賠償とも接続する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 昭和49年9月20日 昭和49年(オ)第1194号 民集28巻6号1202頁</div>
+      <div class="case-card__title">相続放棄と詐害行為取消権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法424条2項</span>
+        <span class="badge badge--law">相続放棄</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務を負っている相続人が、被相続人の死亡により相続人となったが、家庭裁判所に相続放棄の申述をした。相続放棄が認められると、その者は初めから相続人でなかったものとみなされ、相続財産を取得しない。債権者から見ると、債務者が相続財産を取得しないため、将来の回収原資が増えない結果になる。そこで債権者は、相続放棄を債権者を害する行為として取り消せるかを争った。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、相続放棄のような身分行為については、<strong><mark class="kw">民法424条</mark></strong>の詐害行為取消権の対象にならないとした。取消権行使の対象となる行為は、積極的に債務者の既得財産を減少させる行為であることを要する。相続放棄は、相続による財産増加を妨げるにすぎず、既に取得した財産を外へ流出させる行為とは異なる。また、相続放棄は相続人の身分上・人格上の意思決定を含む行為であり、他人の意思によって相続の承認を強制する結果を認めるのは不当である。したがって、債権者は相続放棄を詐害行為として取り消せない。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">財産権を目的としない行為</mark></strong>の除外を理解するための最重要判例である。誤答パターンは、「相続放棄により債務者の財産が増えなかった以上、債権者は相続放棄を当然に取り消せる」という肢である。正しくは、相続放棄は身分行為であり、積極的な財産減少行為でもないため対象外である。後述の遺産分割協議は対象になるため、相続放棄と遺産分割協議の比較は行政書士試験で非常に出やすい。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法424条2項</mark></strong>、<strong><mark class="kw">民法939条</mark></strong>の相続放棄の効果、身分行為、相続財産の取得時期が関連する。相続単元では、相続放棄の遡及効と債権者保護の限界を併せて確認する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成11年6月11日 平成10年(オ)第1077号 民集53巻5号898頁</div>
+      <div class="case-card__title">遺産分割協議と詐害行為取消権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法424条</span>
+        <span class="badge badge--law">民法907条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務を負っている共同相続人が、他の共同相続人との間で遺産分割協議を行い、本来の法定相続分に比べて著しく少ない財産しか取得しない内容に合意した。債権者から見ると、債務者が相続によって取得し得た不動産や預貯金の価値を他の相続人に移したのと同様の結果になり、強制執行できる財産が減少した。そこで、遺産分割協議が財産権を目的とする法律行為として<strong><mark class="kw">詐害行為取消権</mark></strong>の対象になるか、相続放棄と同じく身分行為として対象外になるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、共同相続人間で成立した遺産分割協議は、詐害行為取消権行使の対象となると判断した。遺産分割協議は、相続開始によって共同相続人に帰属した相続財産について、各相続人が具体的にどの財産を取得するかを確定する財産法上の法律行為である。相続放棄のように初めから相続人でなかったものとする身分行為とは異なり、既に共同相続関係に入った財産的地位を処分する性質が強い。そのため、債務者である相続人が債権者を害することを知りながら自己の取得分を不当に少なくする協議をした場合には、詐害行為取消権の対象になり得る。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、相続放棄との対比で出題される最重要判例である。誤答パターンは、「遺産分割協議も相続に関する行為だから、相続放棄と同じく詐害行為取消権の対象にならない」という肢である。正しくは、遺産分割協議は財産権を目的とする法律行為であり、対象になり得る。もっとも、対象になるからといって常に取り消せるわけではなく、債務者の無資力、詐害性、債務者・受益者の主観的要件を満たす必要がある。相続法、物権変動、登記対抗要件とも横断的に理解する。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法424条</mark></strong>、<strong><mark class="kw">民法907条</mark></strong>、<strong><mark class="kw">民法899条の2</mark></strong>、遺産分割の遡及効、相続債権者と共同相続人の利益調整が関連する。相続放棄判例との比較表で整理するのが有効である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和49年12月12日 昭和49年(オ)第181号</div>
+      <div class="case-card__title">善意転得者からの悪意転得者と詐害行為取消権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法424条の5</span>
+        <span class="badge badge--law">転得者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>債務者が債権者を害する財産処分を行い、目的財産が受益者から転得者へ、さらに別の転得者へ移転した。中間の転得者には善意と評価され得る者が含まれたが、その後に取得した者は詐害性を知っていた。債権者は、最終的に財産を持っている悪意の転得者を相手に追及できるかを争った。旧法下の判例であり、現行<strong><mark class="kw">民法424条の5</mark></strong>の転得者規律を理解する素材になる。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、詐害行為の目的たる権利の転得者から悪意でさらに転得した者は、たとえ前者が善意であっても、民法424条に基づく債権者の追及を免れないとした。旧法下では、悪意の最終転得者を保護する必要は乏しいと判断されたのである。もっとも、現行法は<strong><mark class="kw">民法424条の5</mark></strong>において、受益者からの直接転得者と、他の転得者からの後続転得者を分け、後続転得者についてはその者および前に転得した全ての転得者の悪意を要求する形に整理している。したがって、本判例の結論をそのまま現行法の条文問題へ機械的に移すと誤る可能性がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、転得者の主観的要件が旧法と現行法で整理し直されたことを学ぶために重要である。行政書士試験では、判例そのものよりも、現行<strong><mark class="kw">民法424条の5</mark></strong>の文言として、直接転得者なら当該転得者の悪意、後続転得者なら前に転得した全員の悪意が必要である点が問われやすい。誤答パターンは、「最終転得者だけが悪意なら、中間転得者が全員善意でも常に取消請求できる」という肢である。現行法の条文では、後続転得者についてはより厳格に読む。</p>
+      <h4>関連条文・関連論点</h4>
+      <p><strong><mark class="kw">民法424条の5</mark></strong>、取引安全、善意者保護、受益者・転得者の主観的要件が関連する。令和2年施行の債権法改正で条文化された点を、旧判例法理との違いとして押さえる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">詐害行為取消権</mark></strong>は、裁判上の請求として行使する。単独の意思表示で取り消す制度ではない。</li>
+        <li><strong><mark class="kw">被保全債権</mark></strong>は、詐害行為前の原因に基づいて生じ、強制執行で実現できるものでなければならない。</li>
+        <li><strong><mark class="kw">財産権を目的としない行為</mark></strong>は対象外であり、相続放棄は対象外、遺産分割協議は対象になり得る。</li>
+        <li><strong><mark class="kw">受益者</mark></strong>が善意なら原則として受益者への取消請求はできない。</li>
+        <li><strong><mark class="kw">転得者</mark></strong>は、取得経路と各転得時の善意悪意を時系列で整理する。</li>
+        <li><strong><mark class="kw">相当対価処分</mark></strong>、偏頗弁済、過大な代物弁済は、一般要件だけでなく特則を確認する。</li>
+        <li><strong><mark class="kw">民法424条の9</mark></strong>により金銭・動産は自己への直接支払・引渡しを求められるが、当然の優先弁済権ではない。</li>
+        <li><strong><mark class="kw">民法426条</mark></strong>の期間は、知った時から2年、行為時から10年である。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「詐害行為取消権は、債権者の意思表示だけで行使できる。」これは誤りである。<strong><mark class="kw">民法424条1項</mark></strong>は、取消しを裁判所に請求できると定める。</p>
+      <p><strong>誤りの選択肢例2：</strong>「債権者は、詐害行為後に初めて発生した債権を被保全債権として取消請求できる。」これは原則として誤りである。<strong><mark class="kw">民法424条3項</mark></strong>により、行為前の原因に基づく債権でなければならない。</p>
+      <p><strong>誤りの選択肢例3：</strong>「相続放棄により責任財産が増えなかった場合、債権者は相続放棄を取り消せる。」これは誤りである。相続放棄は身分行為であり、積極的な財産減少行為ではない。</p>
+      <p><strong>誤りの選択肢例4：</strong>「遺産分割協議は相続に関する行為なので、詐害行為取消権の対象にならない。」これは誤りである。遺産分割協議は財産権を目的とする法律行為として対象になり得る。</p>
+      <p><strong>誤りの選択肢例5：</strong>「不動産を相当価格で売却した場合は、どのような事情があっても取消しの対象にならない。」これは誤りである。<strong><mark class="kw">民法424条の2</mark></strong>の隠匿等のおそれ、債務者の隠匿等意思、受益者の認識を満たせば対象になり得る。</p>
+      <p><strong>誤りの選択肢例6：</strong>「詐害行為取消請求を認容する判決の効力は、取消債権者と受益者の間にだけ及ぶ。」これは誤りである。<strong><mark class="kw">民法425条</mark></strong>により、債務者および全ての債権者にも効力を有する。</p>
+    </div>
+  </div>
+
+  <p>記述式での解答手順は、第一に、債権者、債務者、受益者、転得者を図式化する。第二に、債務者の行為が贈与、代物弁済、担保供与、相当対価売買、遺産分割協議のどれに当たるかを分類する。第三に、被保全債権が行為前の原因に基づくか、債務者が無資力または責任財産不足になったかを確認する。第四に、受益者・転得者の善意悪意を時点ごとに分ける。第五に、「詐害行為取消権に基づき、誰を相手として、何の取消しと何の返還または価額償還を求めるか」を一文にする。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行の債権法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>令和2年施行の債権法改正では、<strong><mark class="kw">詐害行為取消権</mark></strong>について、旧法下の判例・学説で議論されていたルールが大幅に条文化された。<strong><mark class="kw">民法424条の2</mark></strong>は相当対価処分、<strong><mark class="kw">民法424条の3</mark></strong>は既存債務への担保供与等、<strong><mark class="kw">民法424条の5</mark></strong>は転得者、<strong><mark class="kw">民法424条の6</mark></strong>から<strong><mark class="kw">民法424条の9</mark></strong>は返還方法・被告・範囲・直接支払を定める。旧判例だけを暗記していると、現行条文の要件、とくに転得者の主観的要件や債務者への訴訟告知で誤る。</p>
+    </div>
+  </div>
+
+  <p>実務では、<strong><mark class="kw">詐害行為取消権</mark></strong>は債権回収、保証債務、親族間贈与、不動産の名義移転、破産前の偏頗弁済、相続財産の分配で問題になる。もっとも、取引の相手方や転得者を巻き込むため、単純に「債務者が財産を動かしたから取り消せる」とはならない。取引安全を守る必要がある場面では、受益者・転得者の善意、相当対価、支払不能、通謀害意といった制限が働く。</p>
+
+  <p><strong><mark class="kw">債権者代位権</mark></strong>との接点も重要である。債権者代位権は、債務者の第三者に対する権利不行使を補う制度である。詐害行為取消権は、債務者が積極的に財産を流出させた行為を取り消す制度である。どちらも責任財産保全の制度だが、事例の入口が異なる。債務者が「Cに売掛金を請求しない」なら代位、債務者が「Cに不動産を贈与した」なら詐害行為取消しを考える。</p>
+
+  <p>他分野との関係では、相続法の相続放棄・遺産分割、物権法の登記と対抗要件、担保物権の抵当権設定、債権総論の債権譲渡・代物弁済、倒産法的な偏頗弁済の発想と接続する。行政書士試験では倒産法そのものは中心ではないが、<strong><mark class="kw">民法424条の3</mark></strong>の支払不能や通謀害意は、破産法の否認権に近い考え方として理解すると整理しやすい。</p>
+
+  <p>学習上は、条文番号を単独で覚えるよりも、424条が一般要件、424条の2から4が行為類型別の特則、424条の5が転得者、424条の6から9が効果と手続、425条が判決効、426条が期間制限という流れで押さえる。判例は、詐害意思、特定物債権、相続放棄、遺産分割協議、転得者の順に並べると、要件、対象行為、相手方の限界が自然につながる。</p>
+</section>
+
+</body>
+</html>

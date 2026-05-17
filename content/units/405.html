@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行政指導の手続 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+<style>
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw { background: var(--highlight); color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red { background: var(--highlight-red); color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700); font-weight: 700; }
+.em-b { color: var(--orange-600); font-weight: 700; }
+.em-c { color: var(--red-800); font-weight: 700; }
+
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags { display: flex; flex-wrap: wrap; gap: .4rem; }
+.page-title-block .badge--info { background: rgba(255,255,255,0.15); color: #fff; border-color: rgba(255,255,255,0.3); }
+
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd { display: flex; align-items: center; gap: .5rem; padding: .5rem 1rem; }
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label { font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.box__term { font-size: 1rem; font-weight: 700; letter-spacing: .02em; flex: 1; }
+.box__hd-badges { display: flex; align-items: center; gap: .375rem; margin-left: auto; }
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd { background: var(--orange-600); color: #fff; padding: .625rem 1rem; }
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def { background: var(--orange-50); color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam { background: var(--red-100); color: var(--red-800); border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50); color: var(--red-800); border: 1px solid var(--red-400); }
+.badge--info { background: var(--blue-50); color: var(--blue-900); border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+.case-card { border: 1px solid var(--blue-600); border-radius: 8px; overflow: hidden; margin: 1.5rem 0; }
+.case-card__hd { background: var(--blue-700); padding: 1rem 1.25rem .875rem; }
+.case-card__meta { font-size: .75rem; color: var(--blue-200); margin-bottom: .375rem; letter-spacing: .03em; }
+.case-card__title { font-size: 1.05rem; font-weight: 700; color: #fff; line-height: 1.45; margin-bottom: .625rem; }
+.case-card__badges { display: flex; flex-wrap: wrap; gap: .375rem; }
+.case-card__bd { background: var(--blue-50); padding: 1rem 1.25rem; color: var(--blue-900); font-size: .925rem; }
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+.cmp-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 1rem 0 1.5rem; }
+.cmp-table th, .cmp-table td { padding: .6rem .875rem; border: 1px solid var(--blue-200); vertical-align: top; text-align: left; }
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label { background: var(--blue-50); color: var(--text-secondary); font-size: .8rem; font-weight: 700; white-space: nowrap; width: 7rem; }
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 行政手続法</p>
+  <h1 class="page-title-block__main">行政指導の手続</h1>
+  <p class="page-title-block__sub">任意性・不利益取扱い禁止・書面交付・指導指針・中止等の求めを一体で理解する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">行政手続法2条6号</span>
+    <span class="badge badge--info">32条〜36条の2</span>
+    <span class="badge badge--info">行政指導の限界</span>
+    <span class="badge badge--info">品川マンション事件</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">行政指導</mark></strong>は、行政機関が相手方に対して一定の作為または不作為を求めるが、法律上の義務を直接発生させる<strong><mark class="kw">処分</mark></strong>ではない行為である。営業者に改善を促す、事業者に説明会開催を求める、申請者に計画変更を勧める、といった実務上きわめて多い行政活動がここに含まれる。行政指導は柔軟で迅速な行政運営に役立つ一方、相手方から見ると「役所から言われた以上、従わないと許認可で不利になるのではないか」という圧力を感じやすい。そこで行政手続法は、行政指導を完全に禁止するのではなく、任意性を守り、責任者・内容・根拠を明確にし、違法な行政指導には中止等を求められる仕組みを置いている。</p>
+
+  <p>行政書士試験では、行政指導の定義そのものよりも、<strong><mark class="kw">任意の協力によってのみ実現される</mark></strong>という性質がどの条文でどのように具体化されているかが問われる。特に、相手方が従わなかったことを理由とする不利益取扱いの禁止、申請の取下げ・変更を求める場面で申請者の権利行使を妨げてはならないこと、許認可権限をちらつかせて服従を余儀なくさせてはならないこと、行政指導の趣旨・内容・責任者を明確に示すことが頻出である。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">身近な例</span>
+    </div>
+    <div class="box__bd">
+      <p>飲食店が衛生管理について保健所から改善を求められる場面を考える。法令違反が明確であれば、営業停止命令などの<strong><mark class="kw">処分</mark></strong>が問題になる。しかし、違反とまではいえないが改善が望ましい段階では、行政機関は「この管理方法に変更してください」と行政指導を行うことがある。このとき、行政側が「従わなければ次の許可更新で困りますよ」と根拠なく圧力をかければ、任意性を失い、行政指導の限界を超える。行政指導の手続を学ぶ意味は、この「柔軟な行政」と「相手方の自由・権利保護」の境界を判断できるようにする点にある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">行政指導</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">行政指導</mark></strong>とは、行政機関が任務または所掌事務の範囲内で、一定の行政目的を実現するため、特定の者に一定の作為または不作為を求める指導、勧告、助言その他の行為で、<strong class="em-b">処分に該当しないもの</strong>をいう。ここで重要なのは、行政指導が法律上の義務を直接発生させる行為ではない点である。行政庁の命令に見える場合でも、相手方に法的拘束力を及ぼす処分ではなく、事実上の協力を求めるにとどまるなら行政指導に分類される。制度趣旨は、処分に至る前の柔軟な調整、違反予防、公益実現を可能にすることにある。しかし、柔軟性が強制の隠れみのになると、行政の透明性と相手方の権利保護が損なわれる。そのため、行政手続法は行政指導を認めつつ、任意性、明確性、救済手続を条文で補強している。試験では「行政指導は処分ではないから取消訴訟の対象にならないのが原則」という点と、「それでも限界を超えれば国家賠償上違法となり得る」という点を区別して問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">任意性原則</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">任意性原則</mark></strong>とは、行政指導の内容は相手方の任意の協力によってのみ実現されるべきであり、行政機関が強制にわたる手段で従わせてはならないという原則である。行政手続法32条1項は、行政指導に携わる者が任務・所掌事務の範囲を逸脱してはならないことと、行政指導が任意の協力によってのみ実現されることを明記している。行政指導は、公益目的のために相手方へ協力を求める行為であって、相手方の意思を法律上または事実上封じる制度ではない。したがって、形式上は「お願い」「指導」とされていても、許認可の拒否、水道供給の拒否、申請処理の引延ばしなどの制裁を背景に服従を迫る場合は、任意性が失われる。試験では、「行政指導には法的拘束力がない」だけで終わらず、行政機関が不利益を示唆して事実上強制した場合の違法性まで押さえる必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">申請に関連する行政指導</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">申請に関連する行政指導</mark></strong>とは、申請者に対して申請の取下げまたは内容変更を求める行政指導をいう。行政手続法33条は、申請者が行政指導に従う意思がないと表明したにもかかわらず行政指導を継続するなどして、申請者の権利行使を妨げてはならないと定める。ここでいう権利行使とは、申請に対して法定の審査を受け、諾否の応答を受ける利益である。申請処理を止めたまま「話し合いを続けてください」と求め続けると、行政指導は単なる助言ではなく、申請権の行使を妨げる手段に変質する。品川マンション事件の判例法理は、この条文の理解に直結する。試験では、行政指導に応じている間の合理的な留保は直ちに違法とまではいえないが、申請者が不服従の意思を明確にした後も処分を留保することは原則として違法方向に傾く、という段階的判断が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">行政指導の方式と書面交付請求</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">行政指導の方式</mark></strong>とは、行政指導をする際に、相手方に対して趣旨、内容、責任者を明確に示すべきことをいう。行政指導は処分のような厳格な手続を要しないが、相手方が何を、誰の責任で、どの理由で求められているのか分からないままでは任意に判断できない。特に許認可等の権限を行使し得る旨を示す場合には、根拠法令の条項、要件、その要件に適合する理由を示さなければならない。口頭の行政指導について相手方が書面交付を求めたときは、行政上特別の支障がない限り、これを交付しなければならない。ただし、その場で完了する行為を求めるもの、すでに文書または電磁的記録で通知されている事項と同一内容を求めるものは例外である。試験では「行政指導は常に書面でしなければならない」という選択肢は誤りであり、口頭でも可能だが相手方から求められた場合に書面交付義務が問題になる、と整理する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">行政指導指針と中止等の求め</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">行政指導指針</mark></strong>とは、同一の行政目的を実現するため、一定条件に該当する複数の者に対して行政指導をしようとするときに、共通して内容となるべき事項をいう。行政手続法36条は、行政機関があらかじめ事案に応じて行政指導指針を定め、行政上特別の支障がない限り公表すべきことを定める。個別の担当者の裁量だけで多数の事業者に同種の指導がされると、不公平や恣意が生じやすいためである。<strong><mark class="kw">行政指導の中止等の求め</mark></strong>は、法律に根拠を置く是正型の行政指導が法律上の要件に適合しないと思料されるとき、相手方が行政機関に中止その他必要な措置を求める制度である。平成26年改正により設けられ、平成27年4月1日から施行された。試験では、対象が「法令違反行為の是正を求める行政指導」で、かつ根拠規定が法律に置かれているものに限られる点、申出書による必要がある点、意見陳述手続を経た行政指導は除外される点が問われる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 940 430" role="img" aria-label="行政指導の手続構造図">
+      <defs>
+        <marker id="arr-solid" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr-dashed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+        <marker id="arr-thin" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#ea580c"/>
+        </marker>
+      </defs>
+
+      <line x1="470" y1="104" x2="470" y2="145" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="110" y1="145" x2="830" y2="145" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="110" y1="145" x2="110" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="290" y1="145" x2="290" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="470" y1="145" x2="470" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="650" y1="145" x2="650" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <line x1="830" y1="145" x2="830" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-solid)"/>
+      <rect x="415" y="122" width="110" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="470" y="137" text-anchor="middle" font-size="13" fill="#1d4ed8">手続規制へ展開</text>
+
+      <polyline points="290,244 290,295 470,295 470,342" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-dashed)"/>
+      <rect x="330" y="280" width="110" height="22" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="385" y="295" text-anchor="middle" font-size="13" fill="#9f1239">権利行使保護</text>
+
+      <g>
+        <rect x="350" y="40" width="240" height="64" rx="6" fill="#1d4ed8"/>
+        <text x="470" y="67" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">行政指導</text>
+        <text x="470" y="88" text-anchor="middle" font-size="12" fill="#dbeafe">2条6号・第4章</text>
+      </g>
+      <g>
+        <rect x="30" y="180" width="160" height="64" rx="6" fill="#2563eb"/>
+        <text x="110" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">定義</text>
+        <text x="110" y="228" text-anchor="middle" font-size="12" fill="#dbeafe">処分ではない</text>
+      </g>
+      <g>
+        <rect x="210" y="180" width="160" height="64" rx="6" fill="#ea580c"/>
+        <text x="290" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">一般原則</text>
+        <text x="290" y="228" text-anchor="middle" font-size="12" fill="#fff7ed">32条</text>
+      </g>
+      <g>
+        <rect x="390" y="180" width="160" height="64" rx="6" fill="#ea580c"/>
+        <text x="470" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">申請関連</text>
+        <text x="470" y="228" text-anchor="middle" font-size="12" fill="#fff7ed">33条・品川判例</text>
+      </g>
+      <g>
+        <rect x="570" y="180" width="160" height="64" rx="6" fill="#ea580c"/>
+        <text x="650" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">方式</text>
+        <text x="650" y="228" text-anchor="middle" font-size="12" fill="#fff7ed">35条</text>
+      </g>
+      <g>
+        <rect x="750" y="180" width="160" height="64" rx="6" fill="#e11d48"/>
+        <text x="830" y="207" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">救済</text>
+        <text x="830" y="228" text-anchor="middle" font-size="12" fill="#ffe4e6">36条の2</text>
+      </g>
+      <g>
+        <rect x="350" y="350" width="240" height="54" rx="6" fill="#9f1239"/>
+        <text x="470" y="373" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">任意性を失うと違法</text>
+        <text x="470" y="393" text-anchor="middle" font-size="12" fill="#ffe4e6">強制・不利益示唆・処理留保</text>
+      </g>
+    </svg>
+  </div>
+
+  <p>この図は、行政指導を「処分ではない柔軟な行政活動」として出発させ、その柔軟性が濫用されないように行政手続法が段階的に規律していることを示している。2条6号の定義で処分との境界を引き、32条で任意性と不利益取扱い禁止を一般原則として置き、33条・34条で申請や許認可権限と結びつく危険な場面を個別に制限する。35条は、相手方が任意に判断できるように趣旨・内容・責任者・根拠を明確化する手続である。36条の2は、違法な是正型行政指導について相手方から中止等を求める制度であり、行政指導を単なる事実上の働きかけで終わらせず、透明性と救済可能性を高める役割を持つ。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">行政指導</th>
+        <th class="col--b">処分</th>
+        <th class="col--c">事実行為</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>性質</td>
+        <td class="col--a">相手方の<strong class="em-a">任意の協力</strong>を求める非権力的働きかけ</td>
+        <td class="col--b">行政庁が法令に基づき国民の権利義務を<strong class="em-b">直接変動</strong>させる行為</td>
+        <td class="col--c">公権力の発動として身体・財産に直接作用する<strong class="em-c">物理的・実力的行為</strong></td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>強制力</td>
+        <td class="col--a">法律上の強制力はなく、強制にわたれば限界を超える</td>
+        <td class="col--b">法律効果を発生させ、不服申立て・取消訴訟の対象となる</td>
+        <td class="col--c">即時強制などでは現実の力の行使が問題となる</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>手続規制</td>
+        <td class="col--a">行政手続法32条〜36条の2で任意性、方式、指針、中止等の求めを規律</td>
+        <td class="col--b">申請処分・不利益処分として審査基準、理由提示、聴聞等が問題となる</td>
+        <td class="col--c">個別法、比例原則、国家賠償法上の違法性が中心となる</td>
+      </tr>
+      <tr>
+        <td class="col--label"><span class="material-icons-round" style="font-size:15px;vertical-align:middle;margin-right:4px;">compare_arrows</span>試験での迷い</td>
+        <td class="col--a">「指導」「勧告」という名称でも、効果が法的に義務付けなら処分の可能性がある</td>
+        <td class="col--b">名称ではなく<strong class="em-b">法的効果</strong>の有無で判断する</td>
+        <td class="col--c">行政指導と異なり、相手方に協力を求めるだけではなく現実の執行がある</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>試験で迷いやすいのは、行政機関の行為名に「指導」「勧告」と書かれている場合に、直ちに行政指導と決めつけてしまうことである。判断基準は名称ではなく、その行為が相手方の権利義務を法律上直接変動させるかである。行政指導は処分ではないから取消訴訟の対象にならないのが原則だが、強制にわたる、申請処理を不当に留保する、許認可権限を根拠なく示唆して服従を余儀なくさせるといった場合には、国家賠償法上の違法性が問題となる。したがって、行政指導の問題では「処分性の有無」と「行政指導として許される限界」を分けて検討するのが実践的な判断基準である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">行政手続法2条6号・32条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第二条六号　行政指導　行政機関がその任務又は所掌事務の範囲内において一定の行政目的を実現するため特定の者に一定の作為又は不作為を求める指導、勧告、助言その他の行為であって処分に該当しないものをいう。<br>第三十二条　行政指導にあっては、行政指導に携わる者は、いやしくも当該行政機関の任務又は所掌事務の範囲を逸脱してはならないこと及び行政指導の内容があくまでも相手方の任意の協力によってのみ実現されるものであることに留意しなければならない。<br>２　行政指導に携わる者は、その相手方が行政指導に従わなかったことを理由として、不利益な取扱いをしてはならない。</blockquote>
+      <p><strong><mark class="kw">行政手続法2条6号</mark></strong>は、行政指導を「任務・所掌事務の範囲内」「一定の行政目的」「特定の者」「一定の作為又は不作為を求める」「処分に該当しないもの」という要素で定義する。特に「処分に該当しない」という末尾が重要で、行政指導は法的効果を直接発生させる行為ではない。<strong><mark class="kw">行政手続法32条</mark></strong>は一般原則であり、1項は任務・所掌事務の範囲逸脱禁止と任意性、2項は不利益取扱い禁止を定める。典型場面は、行政指導に従わない事業者に対して、根拠なく許可更新を遅らせる、別件の申請で冷遇する、給付や契約で不利に扱うなどである。他条文との関係では、33条・34条が32条の一般原則を危険場面に応じて具体化し、35条が任意の判断を可能にするための明確化手続を置いている。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">行政手続法33条・34条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第三十三条　申請の取下げ又は内容の変更を求める行政指導にあっては、行政指導に携わる者は、申請者が当該行政指導に従う意思がない旨を表明したにもかかわらず当該行政指導を継続すること等により当該申請者の権利の行使を妨げるようなことをしてはならない。<br>第三十四条　許認可等をする権限又は許認可等に基づく処分をする権限を有する行政機関が、当該権限を行使することができない場合又は行使する意思がない場合においてする行政指導にあっては、行政指導に携わる者は、当該権限を行使し得る旨を殊更に示すことにより相手方に当該行政指導に従うことを余儀なくさせるようなことをしてはならない。</blockquote>
+      <p><strong><mark class="kw">行政手続法33条</mark></strong>は、申請者がすでに法令上の申請をしている場面で、行政指導によって申請権の行使が妨げられないようにする規定である。行政庁は申請に対して審査し応答すべき立場にあり、申請者が「指導には従わない」と明確に表明した後も処理を遅らせると、行政指導は事実上の拒否手段になる。<strong><mark class="kw">行政手続法34条</mark></strong>は、許認可権限を背景にした圧力を防ぐ規定である。行政機関が本当は権限を行使できない、または行使する意思がないのに、あたかも権限を行使できるかのように殊更に示すと、相手方は任意に判断できなくなる。両条は、32条の任意性原則を「申請処理」と「権限示唆」という頻出場面に具体化したものと理解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">行政手続法35条・36条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第三十五条　行政指導に携わる者は、その相手方に対して、当該行政指導の趣旨及び内容並びに責任者を明確に示さなければならない。<br>２　行政指導に携わる者は、当該行政指導をする際に、行政機関が許認可等をする権限又は許認可等に基づく処分をする権限を行使し得る旨を示すときは、その相手方に対して、次に掲げる事項を示さなければならない。<br>一　当該権限を行使し得る根拠となる法令の条項<br>二　前号の条項に規定する要件<br>三　当該権限の行使が前号の要件に適合する理由<br>第三十六条　同一の行政目的を実現するため一定の条件に該当する複数の者に対し行政指導をしようとするときは、行政機関は、あらかじめ、事案に応じ、行政指導指針を定め、かつ、行政上特別の支障がない限り、これを公表しなければならない。</blockquote>
+      <p><strong><mark class="kw">行政手続法35条</mark></strong>は、行政指導の透明化規定である。1項により、趣旨、内容、責任者を明確に示す必要がある。2項は許認可等の権限を示す場合の追加規制で、根拠条項、要件、要件適合理由を示させることにより、根拠のない圧力を防ぐ。3項以下では、口頭指導について相手方から書面交付を求められた場合の交付義務と例外が置かれている。<strong><mark class="kw">行政手続法36条</mark></strong>は、複数の者を対象とする行政指導について行政指導指針を定め、公表することを求める。多数の事業者に同じ目的で指導する場面では、担当者ごとのばらつきや恣意を防ぐ必要があるためである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">行政手続法36条の2</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第三十六条の二　法令に違反する行為の是正を求める行政指導（その根拠となる規定が法律に置かれているものに限る。）の相手方は、当該行政指導が当該法律に規定する要件に適合しないと思料するときは、当該行政指導をした行政機関に対し、その旨を申し出て、当該行政指導の中止その他必要な措置をとることを求めることができる。ただし、当該行政指導がその相手方について弁明その他意見陳述のための手続を経てされたものであるときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">行政手続法36条の2</mark></strong>は、違法または要件不適合と思われる行政指導について、相手方から中止等を求められる制度である。対象はすべての行政指導ではなく、法令違反行為の是正を求める行政指導で、その根拠規定が法律に置かれているものに限られる。この限定は試験上重要で、単なる助言や任意の協力依頼、法律根拠のない一般的なお願いには直ちに同条の申出制度は使えない。申出は申出書で行い、氏名・住所、行政指導の内容、根拠法律の条項、その要件、要件に適合しないと思料する理由などを記載する。行政機関は申出があれば必要な調査を行い、要件に適合しないと認めるときは、中止その他必要な措置をとらなければならない。処分等の求めを定める36条の3とは、前者が「自分が受けた行政指導を止める制度」、後者が「法令違反状態に対する処分・行政指導を求める制度」である点で区別する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和60年7月16日　昭和55年（オ）第309号・第310号　民集39巻5号989頁</div>
+      <div class="case-card__title">品川マンション事件（建築確認留保損害賠償請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">行政手続法33条</span>
+        <span class="badge badge--law">申請関連行政指導</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>マンション建築を計画した事業者が建築確認申請をしたところ、周辺住民との紛争が生じたため、行政側は事業者に住民との話合いを求める行政指導を行った。建築主事は、建築確認の要件審査を行う立場にあったが、住民との協議が続いていることを理由に確認処分を留保した。事業者は、申請から長期間応答が得られない状態に置かれ、建築計画の進行が妨げられたとして、確認処分の留保が違法であり国家賠償の対象になると主張した。争点は、行政指導が継続していることを理由に、法律上応答すべき建築確認処分をどこまで留保できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、建築確認は基本的に裁量の余地が乏しい確認的行為であり、要件を満たす場合には速やかに確認処分を行うべきであるとした。他方で、建築主が任意に行政指導に応じ、地域生活環境の調整という公益目的のため、社会通念上合理的な期間に限って処分を留保することは、直ちに違法とはいえないとした。しかし、建築主が確認処分を留保されたままの行政指導には応じられないとの意思を明確に表明している場合には、建築主の不協力が社会通念上正義の観念に反するような特段の事情がない限り、行政指導を理由に確認処分の留保を続けることは<strong class="em-a">違法</strong>であると判断した。つまり、任意協力が前提である間は一定の調整余地があるが、不服従の意思表明後は、行政指導を申請処理の停止手段として使うことは許されないという論理である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、行政手続法33条の理解に直結する最重要判例である。選択肢では「行政指導が行われている間は、申請に対する処分をいつまでも留保できる」「申請者が行政指導に従わない意思を示しても、公益目的があれば当然に留保できる」といった形で誤りが作られる。正しくは、行政指導に任意に応じている間の合理的期間の留保は直ちに違法ではないが、申請者が明確に不服従を示した後は、特段の事情がない限り留保継続は違法となる。関連条文は行政手続法33条であり、行政庁が申請の取下げや内容変更を求める場合に、申請者の権利行使を妨げてはならないという現在の条文化されたルールと結びつけて理解する。</p>
+      <h4>関連判例・条文</h4>
+      <p>武蔵野市教育施設負担金事件は、行政指導が制裁措置を背景にした場合に任意性を失う点を示す。品川マンション事件が「申請処理の留保」の限界を扱うのに対し、武蔵野市事件は「寄付金納付の強制」の限界を扱う。両者を並べると、行政指導の違法性判断では、相手方の任意性、受ける不利益、行政目的の公益性、法的権限の有無を総合して見ることが分かる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　平成5年2月18日　昭和63年（オ）第890号　民集47巻2号574頁</div>
+      <div class="case-card__title">武蔵野市教育施設負担金事件（教育施設負担金返還等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">行政手続法32条</span>
+        <span class="badge badge--law">任意性原則</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>武蔵野市は、宅地開発やマンション建設による生活環境の悪化を防ぐため、宅地開発等に関する指導要綱を定め、事業主に対して教育施設負担金の寄付を求めていた。この指導要綱には、協力しない事業主に対して水道の給水を拒否するなどの制裁的な運用が背景として存在した。マンション建築をしようとする事業主は、工事を進めるには指導要綱に従わざるを得ない状況に置かれ、教育施設負担金を納付した。そこで、この寄付金要求が任意の行政指導の範囲を超え、違法な公権力の行使に当たるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、教育施設の充実のために事業主へ寄付金の納付を求めること自体は、強制にわたるなど事業主の任意性を損なうことがない限り、直ちに違法とはいえないとした。しかし、本件の指導要綱は、従わない事業主に水道の給水拒否などの制裁措置を背景として義務を課す内容であり、当時の運用状況のもとでは、これに従えない事業主は事実上建築等を断念せざるを得ない状態にあった。したがって、教育施設負担金の寄付を求めた行為は、行政指導の限度を超え、<strong class="em-a">違法な公権力の行使</strong>に当たると判断された。裁判所の論理は、行政目的の公益性を一応認めつつも、相手方が実質的に拒否できない状態を作り出した点に違法性を見いだすものである。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、行政指導が強制にわたる場合の代表例である。試験では「行政指導として寄付金を求めることは常に違法である」とする選択肢と、「行政指導である以上、どのような圧力を背景にしても違法ではない」とする選択肢の双方が誤りとなる。正しくは、寄付金を求める行政指導自体は任意性が保たれる限り直ちに違法ではないが、水道給水拒否のような制裁を背景に、従わなければ事業継続が事実上不可能となる状態で行えば違法となる。行政手続法32条2項の「従わなかったことを理由とする不利益取扱い禁止」と対応して理解すると、条文と判例の接続が明確になる。</p>
+      <h4>関連判例・条文</h4>
+      <p>品川マンション事件が申請処理を留保する行政指導の限界を示したのに対し、本判例は制裁的手段を背景とする行政指導の限界を示す。行政手続法32条、34条、35条2項は、こうした権限示唆や不利益圧力を防ぐ方向で読むべきである。地方自治法上の自治事務や行政目的の正当性があっても、法令上認められない不利益を背景に協力を迫ることは許されない。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ1 行政指導の任意性</span></div>
+    <div class="box__bd">
+      <p>行政指導は、相手方の任意の協力によってのみ実現される。したがって「行政指導には強制力がない」という知識だけでなく、<strong class="em-c">不利益取扱いや権限示唆によって事実上強制していないか</strong>を読む必要がある。誤答パターンは、「行政目的が正当なら制裁を背景にしてもよい」「行政指導なので相手方が従わなくても不利益に扱える」というものである。32条1項・2項に戻り、任務範囲、任意性、不利益取扱い禁止を順に確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ2 申請処理の留保</span></div>
+    <div class="box__bd">
+      <p>申請に対する処分では、行政庁は諾否の応答をすべき立場にある。行政指導によって申請内容の変更を求めること自体は可能だが、申請者が従わない意思を示した後も処理を止めると、申請者の権利行使を妨げる。品川マンション事件の判断枠組みとして、任意協力中の合理的期間の留保と、不服従意思表明後の留保を区別する。選択肢で「常に違法」「常に適法」と極端に書かれている場合は、まずこの段階的構造を疑う。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ3 書面交付請求</span></div>
+    <div class="box__bd">
+      <p>行政指導は常に書面で行う必要はない。35条の基本は、趣旨・内容・責任者の明示である。口頭指導について相手方から書面交付を求められた場合には、行政上特別の支障がない限り交付義務が生じる。ただし、その場で完了する行為を求めるもの、すでに文書または電磁的記録で通知済みの同一内容を求めるものは例外である。試験では「口頭指導は不可」「求めがなくても常に書面交付義務がある」「例外はない」という形で誤りが出る。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">横断整理</span></div>
+    <div class="box__bd">
+      <p>行政指導は、行政法総論の<strong class="warn">法律による行政の原理</strong>、行政事件訴訟法の<strong class="warn">処分性</strong>、国家賠償法1条の<strong class="warn">違法な公権力の行使</strong>とつながる。取消訴訟で争えるかという問題と、国家賠償上違法かという問題は別である。行政指導は処分性を欠くのが原則だが、強制にわたる行政運営により損害を与えた場合には国家賠償の問題になり得る。この区別を曖昧にすると、「処分でないから一切違法にならない」という誤った理解に陥る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">history</span><span class="box__label">立法経緯と改正</span></div>
+    <div class="box__bd">
+      <p>行政指導は、日本の行政実務で長く用いられてきた柔軟な調整手法である。行政手続法制定前は、行政指導が法的拘束力を持たない一方で、相手方にとっては行政庁の意向を無視しにくいという不透明さが問題視された。品川マンション事件や武蔵野市教育施設負担金事件のように、行政指導の名の下で申請処理を留保したり、制裁的な措置を背景に寄付を求めたりする事案が現れたことが、任意性と透明性を条文化する必要性を示した。平成26年改正では、行政指導の中止等の求めと処分等の求めが導入され、平成27年4月1日から施行された。これにより、行政指導を受ける側が単に我慢するのではなく、一定の要件のもとで行政機関に中止等を申し出る制度的入口が整備された。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">info</span><span class="box__label">学習の整理ポイント</span></div>
+    <div class="box__bd">
+      <p>この単元は、条文番号順に丸暗記するより、行政指導が強制化しやすい場面を想定して整理すると理解しやすい。第一に、全行政指導に共通するルールとして32条を置く。第二に、申請処理を人質にしやすい場面として33条を見る。第三に、許認可権限を背景に圧力をかけやすい場面として34条と35条2項を見る。第四に、何を求められているのかを明確にするルールとして35条、複数人に同種の指導をする場面として36条、違法な是正型指導を止める制度として36条の2を整理する。判例は、品川マンション事件を「申請処理の留保」、武蔵野市教育施設負担金事件を「制裁を背景にした寄付要求」と位置づけ、どちらも任意性を失う境界を示すものとして比較する。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

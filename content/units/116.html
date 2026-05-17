@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>担保物権各論 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">担保物権各論</h1>
+  <p class="page-title-block__sub">留置権、先取特権、質権、抵当権、根抵当権、非典型担保を効果と要件から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法295条</span>
+    <span class="badge badge--info">民法303条</span>
+    <span class="badge badge--info">民法342条</span>
+    <span class="badge badge--info">民法369条</span>
+    <span class="badge badge--info">民法388条</span>
+    <span class="badge badge--info">民法398条の2</span>
+    <span class="badge badge--info">非典型担保</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">担保物権各論</mark></strong>では、担保物権総論で学んだ付従性、随伴性、不可分性、物上代位性を、個別制度に当てはめて使える形にする。民法上の典型担保物権は、<strong><mark class="kw">留置権</mark></strong>、<strong><mark class="kw">先取特権</mark></strong>、<strong><mark class="kw">質権</mark></strong>、<strong><mark class="kw">抵当権</mark></strong>であり、<strong><mark class="kw">根抵当権</mark></strong>は抵当権の章に置かれた継続取引用の担保である。これらは同じ「債権回収を安全にする制度」でも、成立原因、占有の要否、優先弁済の有無、対抗要件、実行方法が大きく異なる。</p>
+
+  <p>行政書士試験では、とくに<strong><mark class="kw">抵当権</mark></strong>と<strong><mark class="kw">根抵当権</mark></strong>が出題の中心になりやすい。抵当権では、目的物を債務者に使わせたまま担保にできるため、不動産融資、建物賃貸、競売、法定地上権、物上代位が連続して問題になる。根抵当権では、普通抵当権のように特定債権一個を担保するのではなく、一定範囲の不特定債権を極度額の限度で担保するため、元本確定前の随伴性の否定、債権範囲・債務者・極度額の変更、元本確定事由が問われやすい。</p>
+
+  <p>一方、<strong><mark class="kw">留置権</mark></strong>と<strong><mark class="kw">先取特権</mark></strong>は法定担保物権であり、契約で設定するものではない。留置権は物を返さないことで弁済を促す権利で、優先弁済権は原則としてない。先取特権は法律が特定の債権に優先弁済権を与える制度で、一般の先取特権、動産の先取特権、不動産の先取特権を区別する必要がある。<strong><mark class="kw">質権</mark></strong>は約定担保物権でありながら、目的物の引渡しと占有継続を中核とするため、留置権と抵当権の中間に位置する。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る各担保の使い分け</span>
+    </div>
+    <div class="box__bd">
+      <p>AがB所有の自動車を修理し、Bが修理代を払わない場合、Aはその自動車を占有していれば<strong><mark class="kw">留置権</mark></strong>を主張し、代金支払まで返還を拒める余地がある。CがDに商品を売った直後、その商品がDの手元にある場合、Cは<strong><mark class="kw">動産売買の先取特権</mark></strong>を問題にできる。E銀行がFに融資し、F所有の土地に担保を取るなら、Fに土地を使わせたまま交換価値を把握できる<strong><mark class="kw">抵当権</mark></strong>が典型である。Fとの継続的な当座貸越取引のように、将来増減する債権をまとめて担保したいなら<strong><mark class="kw">根抵当権</mark></strong>が適する。物を引き渡して担保に入れるなら質権、所有権移転や留保という形式を使うなら譲渡担保や所有権留保と整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">留置権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">留置権</mark></strong>は、他人の物の占有者が、その物に関して生じた債権を有するとき、弁済を受けるまで物の返還を拒むことができる法定担保物権である。制度趣旨は、物から生じた債権について、物を返させながら債権を未払いにするのは公平に反するという点にある。成立要件は、他人の物を占有していること、その物に関して生じた債権であること、債権が弁済期にあること、占有が不法行為によって始まったものでないことの四つで整理する。効果は留置的効力であり、競売代金から当然に優先弁済を受ける権利ではない。具体例として、修理業者が修理済みの機械を代金支払まで返さない場面が典型である。試験では「占有を失っても留置権は存続する」「債権が弁済期前でも留置できる」「不法占有者も必要費を支出すれば必ず留置できる」という形で誤りにされる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">先取特権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">先取特権</mark></strong>は、法律が特定の債権に対し、債務者の財産から他の債権者に先立って弁済を受ける権利を与える法定担保物権である。契約で自由に作るものではなく、民法その他の法律が認める債権についてだけ成立する。一般の先取特権は債務者の総財産を対象にし、動産の先取特権と不動産の先取特権は特定財産を対象にする。制度趣旨は、共益費用、雇用関係、日用品供給、不動産保存・工事・売買のように、他の債権者や目的物価値の維持に関係する債権を特別に保護する点にある。占有は要件ではないが、動産先取特権は目的動産が第三取得者に引き渡された後は行使できない。試験では、種類と順位、物上代位、動産質権との競合、不動産先取特権の登記の意味が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">質権</span>
+      <div class="box__hd-badges"><span class="badge badge--info">占有型担保</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">質権</mark></strong>は、債権者が債務者または第三者から受け取った物を占有し、その物から他の債権者に先立って弁済を受ける約定担保物権である。質権の成立には目的物の引渡しが必要で、質権者は質権設定者に自己に代わって質物を占有させることができない。これは、設定者の手元に目的物を残すと外部から担保設定が分かりにくくなり、第三者を害するからである。質権は、留置的効力と優先弁済的効力を併せ持つ点が留置権と異なり、占有移転を要する点が抵当権と異なる。目的物には動産、不動産、債権その他の財産権があり、債権質では第三債務者への通知または承諾が対抗要件になる。試験では、「質権は合意だけで成立する」「質権設定者に代理占有させてもよい」「質権者は弁済期前から流質契約を自由に結べる」とする選択肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">抵当権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">抵当権</mark></strong>は、債務者または第三者が占有を移転しないで債務の担保に供した不動産について、抵当権者が他の債権者に先立って弁済を受ける約定担保物権である。抵当権の最大の特徴は、目的不動産を設定者に利用させたまま交換価値を把握できる点にある。設定者は土地や建物を使い続けられ、債権者は登記によって担保順位を確保する。効力は目的不動産に付加して一体となった物に及ぶが、抵当地上の建物には原則及ばない。債務不履行後の果実、賃料債権への物上代位、法定地上権、共同抵当、抵当建物使用者の引渡猶予など、抵当権は第三者関係が多い。試験では、登記順位、物上代位の差押え、法定地上権の成立要件、根抵当権との違いを複合して問う問題が多い。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">根抵当権</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">根抵当権</mark></strong>は、一定の範囲に属する不特定の債権を、極度額の限度で担保する抵当権である。普通抵当権は特定の貸金債権などを担保するため、被担保債権が弁済されれば担保も消える。これに対し根抵当権は、銀行と事業者の継続取引のように債権が発生・消滅を繰り返す場面で、毎回抵当権を設定し直さなくてよいように設計されている。もっとも、無限定にすべての債権を担保できるわけではなく、担保すべき債権の範囲は、特定の継続的取引契約や一定種類の取引などに限定して定めなければならない。元本確定前は付従性・随伴性が普通抵当権より緩和され、債権譲渡があっても譲受人は当然には根抵当権を行使できない。試験では、極度額、元本確定、債権範囲の変更、相続後六箇月の登記、確定前の随伴性否定が頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">非典型担保</span>
+      <div class="box__hd-badges"><span class="badge badge--info">実務接点</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">非典型担保</mark></strong>は、民法の典型担保物権として体系的に置かれてきた留置権、先取特権、質権、抵当権以外に、取引実務と判例・特別法によって発展してきた担保である。代表例は、目的物の所有権を担保目的で移転する<strong><mark class="kw">譲渡担保</mark></strong>、代金完済まで売主側に所有権を留保する<strong><mark class="kw">所有権留保</mark></strong>、代物弁済予約などを仮登記で保全する<strong><mark class="kw">仮登記担保</mark></strong>である。非典型担保は形式上の所有権移転や所有権留保を使うが、実質は債権回収を確保する担保であるため、清算義務、対抗要件、倒産手続での扱いが重要になる。令和七年には<strong><mark class="kw">譲渡担保契約及び所有権留保契約に関する法律</mark></strong>が成立・公布され、動産や債権などを中心とする譲渡担保・所有権留保のルールが成文化される方向にある。行政書士試験では、現行民法の典型担保を軸にしつつ、非典型担保は「形式は所有権、実質は担保」という視点で理解する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 650" role="img" aria-label="担保物権各論の全体構造図">
+      <defs>
+        <marker id="arr16-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr16-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr16-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+      <line x1="540" y1="92" x2="540" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="180" y1="132" x2="900" y2="132" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="180" y1="132" x2="180" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16-blue)"/>
+      <line x1="540" y1="132" x2="540" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16-blue)"/>
+      <line x1="900" y1="132" x2="900" y2="172" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16-blue)"/>
+      <rect x="505" y="110" width="70" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="540" y="124" text-anchor="middle" font-size="13" fill="#1d4ed8">分類</text>
+
+      <line x1="180" y1="254" x2="180" y2="340" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="85" y1="340" x2="275" y2="340" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="85" y1="340" x2="85" y2="378" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr16-orange)"/>
+      <line x1="275" y1="340" x2="275" y2="378" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr16-orange)"/>
+      <rect x="132" y="300" width="96" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="180" y="314" text-anchor="middle" font-size="13" fill="#7c2d12">法律上発生</text>
+
+      <line x1="540" y1="254" x2="540" y2="340" stroke="#e11d48" stroke-width="1.5"/>
+      <line x1="420" y1="340" x2="660" y2="340" stroke="#e11d48" stroke-width="1.5"/>
+      <line x1="420" y1="340" x2="420" y2="378" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr16-red)"/>
+      <line x1="540" y1="340" x2="540" y2="378" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr16-red)"/>
+      <line x1="660" y1="340" x2="660" y2="378" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr16-red)"/>
+      <rect x="495" y="300" width="90" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="540" y="314" text-anchor="middle" font-size="13" fill="#9f1239">契約で設定</text>
+
+      <line x1="900" y1="254" x2="900" y2="378" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16-blue)"/>
+      <rect x="852" y="300" width="96" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="900" y="314" text-anchor="middle" font-size="13" fill="#1d4ed8">判例・特別法</text>
+
+      <rect x="385" y="28" width="310" height="64" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="540" y="55" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">担保物権各論</text>
+      <text x="540" y="76" text-anchor="middle" font-size="12" fill="#dbeafe">成立原因・占有・優先弁済・対抗要件で整理</text>
+
+      <rect x="45" y="180" width="270" height="74" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="180" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">法定担保物権</text>
+      <text x="180" y="232" text-anchor="middle" font-size="12" fill="#7c2d12">当事者の設定契約を要しない</text>
+
+      <rect x="405" y="180" width="270" height="74" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="540" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">約定担保物権</text>
+      <text x="540" y="232" text-anchor="middle" font-size="12" fill="#9f1239">担保設定の合意を基礎にする</text>
+
+      <rect x="775" y="180" width="250" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="900" y="210" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">非典型担保</text>
+      <text x="900" y="232" text-anchor="middle" font-size="12" fill="#1e3a8a">所有権移転・留保形式を利用</text>
+
+      <rect x="40" y="386" width="90" height="66" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="85" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">留置権</text>
+      <text x="85" y="435" text-anchor="middle" font-size="12" fill="#7c2d12">留置的効力</text>
+
+      <rect x="205" y="386" width="140" height="66" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="275" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">先取特権</text>
+      <text x="275" y="435" text-anchor="middle" font-size="12" fill="#7c2d12">法定優先弁済</text>
+
+      <rect x="375" y="386" width="90" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="420" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">質権</text>
+      <text x="420" y="435" text-anchor="middle" font-size="12" fill="#9f1239">引渡しが成立要件</text>
+
+      <rect x="490" y="386" width="100" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="540" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">抵当権</text>
+      <text x="540" y="435" text-anchor="middle" font-size="12" fill="#9f1239">非占有不動産担保</text>
+
+      <rect x="610" y="386" width="100" height="66" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="660" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">根抵当権</text>
+      <text x="660" y="435" text-anchor="middle" font-size="12" fill="#9f1239">不特定債権を担保</text>
+
+      <rect x="785" y="386" width="230" height="66" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="900" y="414" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">譲渡担保・所有権留保</text>
+      <text x="900" y="435" text-anchor="middle" font-size="12" fill="#1e3a8a">形式所有権と実質担保</text>
+
+      <rect x="95" y="540" width="890" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="570" text-anchor="middle" font-size="13" fill="#9f1239">試験では、占有を要するか、優先弁済権があるか、登記・引渡し・差押えが必要かを順に確認する</text>
+    </svg>
+  </div>
+  <p>この図は、担保物権各論を成立原因から三つに分けている。<strong><mark class="kw">留置権</mark></strong>と<strong><mark class="kw">先取特権</mark></strong>は法律上当然に発生する法定担保物権であるが、前者は留置的効力、後者は優先弁済的効力を中心にする。<strong><mark class="kw">質権</mark></strong>、<strong><mark class="kw">抵当権</mark></strong>、<strong><mark class="kw">根抵当権</mark></strong>は契約を基礎にするが、質権は占有移転型、抵当権は非占有型、根抵当権は継続取引用という違いがある。<strong><mark class="kw">非典型担保</mark></strong>は民法典の典型担保とは異なり、所有権移転や所有権留保という形式を使いながら、実質的には債権回収を確保する制度として機能する。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1000 620" role="img" aria-label="抵当権と根抵当権の判断手順図">
+      <defs>
+        <marker id="arr16b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/>
+        </marker>
+        <marker id="arr16b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/>
+        </marker>
+        <marker id="arr16b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/>
+        </marker>
+      </defs>
+
+      <line x1="500" y1="94" x2="500" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="220" y1="136" x2="780" y2="136" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="220" y1="136" x2="220" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16b-blue)"/>
+      <line x1="500" y1="136" x2="500" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16b-blue)"/>
+      <line x1="780" y1="136" x2="780" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr16b-blue)"/>
+      <rect x="464" y="114" width="72" height="20" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="500" y="128" text-anchor="middle" font-size="13" fill="#1d4ed8">まず確認</text>
+
+      <line x1="220" y1="260" x2="220" y2="354" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr16b-orange)"/>
+      <line x1="500" y1="260" x2="500" y2="354" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr16b-orange)"/>
+      <line x1="780" y1="260" x2="780" y2="354" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr16b-red)"/>
+      <rect x="174" y="303" width="92" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="220" y="317" text-anchor="middle" font-size="13" fill="#7c2d12">実行局面</text>
+      <rect x="454" y="303" width="92" height="20" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="500" y="317" text-anchor="middle" font-size="13" fill="#7c2d12">価値変形</text>
+      <rect x="734" y="303" width="92" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="780" y="317" text-anchor="middle" font-size="13" fill="#9f1239">継続取引</text>
+
+      <polyline points="220,436 220,486 500,486 500,508" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr16b-red)"/>
+      <polyline points="780,436 780,486 500,486 500,508" fill="none" stroke="#e11d48" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr16b-red)"/>
+      <rect x="442" y="470" width="116" height="20" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="500" y="484" text-anchor="middle" font-size="13" fill="#9f1239">第三者関係へ</text>
+
+      <rect x="335" y="28" width="330" height="66" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="500" y="56" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">抵当権・根抵当権の判断手順</text>
+      <text x="500" y="78" text-anchor="middle" font-size="12" fill="#dbeafe">目的物・順位・価値変形・確定事由を追う</text>
+
+      <rect x="80" y="186" width="280" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="220" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">目的物と順位</text>
+      <text x="220" y="238" text-anchor="middle" font-size="12" fill="#1e3a8a">不動産・登記前後・付加一体物</text>
+
+      <rect x="380" y="186" width="240" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="500" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">被担保債権</text>
+      <text x="500" y="238" text-anchor="middle" font-size="12" fill="#1e3a8a">特定債権か不特定債権か</text>
+
+      <rect x="660" y="186" width="240" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="780" y="216" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">占有移転の有無</text>
+      <text x="780" y="238" text-anchor="middle" font-size="12" fill="#1e3a8a">抵当権は占有を移さない</text>
+
+      <rect x="80" y="362" width="280" height="74" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="220" y="392" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">競売・第三取得者</text>
+      <text x="220" y="414" text-anchor="middle" font-size="12" fill="#7c2d12">法定地上権・引渡猶予を確認</text>
+
+      <rect x="380" y="362" width="240" height="74" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="500" y="392" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">物上代位</text>
+      <text x="500" y="414" text-anchor="middle" font-size="12" fill="#7c2d12">賃料・保険金は差押えが鍵</text>
+
+      <rect x="660" y="362" width="240" height="74" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="780" y="392" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">元本確定前後</text>
+      <text x="780" y="414" text-anchor="middle" font-size="12" fill="#9f1239">根抵当権の随伴性を分ける</text>
+
+      <rect x="250" y="516" width="500" height="48" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="500" y="546" text-anchor="middle" font-size="13" fill="#9f1239">普通抵当権は特定債権、根抵当権は極度額と元本確定を中心に読む</text>
+    </svg>
+  </div>
+  <p>二つ目の図は、抵当権問題で読む順序を示している。最初に目的物、登記順位、被担保債権を確認し、普通抵当権か<strong><mark class="kw">根抵当権</mark></strong>かを分ける。抵当権の実行局面では、競売により所有者が分かれるため<strong><mark class="kw">法定地上権</mark></strong>や抵当建物使用者の引渡猶予が問題になる。目的物が賃料や保険金に変わると<strong><mark class="kw">物上代位</mark></strong>の差押えが必要になる。根抵当権では、元本確定前と確定後で、債権譲渡や弁済者代位の扱いが変わる点を必ず分けて考える。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">留置権</th>
+        <th class="col--b">先取特権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">性質</td>
+        <td class="col--a"><span class="em-a">法定担保物権</span>。占有者の公平保護を基礎にする。</td>
+        <td class="col--b"><span class="em-b">法定担保物権</span>。法律が特定債権に優先弁済権を与える。</td>
+      </tr>
+      <tr>
+        <td class="col--label">成立要件</td>
+        <td class="col--a">他人の物の占有、その物に関して生じた債権、弁済期到来、不法行為占有でないこと。</td>
+        <td class="col--b">民法その他の法律が認める債権であること。契約だけでは新たに作れない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心効果</td>
+        <td class="col--a"><span class="em-a">留置的効力</span>。弁済まで返還拒絶できるが、当然の優先弁済権はない。</td>
+        <td class="col--b"><span class="em-b">優先弁済的効力</span>。総財産または特定財産から優先回収する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">弱点</td>
+        <td class="col--a">占有を失うと消滅する。留置していても債権の消滅時効は進行する。</td>
+        <td class="col--b">動産は第三取得者へ引き渡されると行使できない。不動産は登記保存が重要。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">「留置権者は競売代金から当然に優先弁済を受ける」は誤り。</td>
+        <td class="col--b">「先取特権は当事者が合意すれば任意に創設できる」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">質権</th>
+        <th class="col--b">抵当権</th>
+        <th class="col--c">根抵当権</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">担保対象</td>
+        <td class="col--a"><span class="em-a">動産・不動産・財産権</span>。目的物の引渡しが成立要件。</td>
+        <td class="col--b"><span class="em-b">不動産、地上権、永小作権</span>。占有を移転しない。</td>
+        <td class="col--c"><span class="em-c">不動産等</span>に設定され、一定範囲の不特定債権を担保する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">被担保債権</td>
+        <td class="col--a">特定債権を担保するのが基本。元本、利息、違約金、実行費用なども担保範囲に入る。</td>
+        <td class="col--b">特定の貸金債権などを担保する。利息等は最後の二年分制限がある。</td>
+        <td class="col--c">一定範囲に属する不特定債権を極度額の限度で担保する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">対抗要件</td>
+        <td class="col--a">動産質は占有継続。債権質は第三債務者への通知または承諾が中心。</td>
+        <td class="col--b">登記の前後で順位が決まる。</td>
+        <td class="col--c">登記により極度額、債権範囲、債務者などを公示する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">付従性・随伴性</td>
+        <td class="col--a">通常の担保物権として被担保債権に従う。</td>
+        <td class="col--b">被担保債権の消滅・譲渡に従う。</td>
+        <td class="col--c">元本確定前は付従性・随伴性が緩和され、債権譲受人は当然に根抵当権を行使できない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の見方</td>
+        <td class="col--a">「引渡し」「代理占有禁止」「流質契約禁止」を見る。</td>
+        <td class="col--b">「登記順位」「物上代位」「法定地上権」「共同抵当」を見る。</td>
+        <td class="col--c">「極度額」「元本確定」「確定前後の違い」を見る。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">譲渡担保</th>
+        <th class="col--b">所有権留保</th>
+        <th class="col--c">仮登記担保</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">基本構造</td>
+        <td class="col--a">担保目的で所有権を債権者に移転する。</td>
+        <td class="col--b">売買代金完済まで所有権を売主側または信販会社側に留保する。</td>
+        <td class="col--c">代物弁済予約などを仮登記で保全する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">制度趣旨</td>
+        <td class="col--a">動産、集合物、債権など、質権や抵当権では扱いにくい財産価値を担保にする。</td>
+        <td class="col--b">買主に目的物を使用させつつ、代金未払いのリスクを売主側に残す。</td>
+        <td class="col--c">不動産の担保目的の所有権移転予約を清算手続で調整する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">注意点</td>
+        <td class="col--a">形式は所有権移転でも、担保目的を超える取得は清算義務で制約される。</td>
+        <td class="col--b">倒産手続では登録などの対抗要件が問題になる。</td>
+        <td class="col--c">仮登記担保法上、通知と清算期間、清算金が重要になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">近年の動向</td>
+        <td class="col--a">令和七年の譲渡担保法により、動産・債権等の譲渡担保の成文化が進む。</td>
+        <td class="col--b">同法により所有権留保の効力、実行、倒産手続での扱いが明文化される方向にある。</td>
+        <td class="col--c">仮登記担保法は従来から特別法として清算型の実行を規律する。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>実践的には、まず「物を占有しているから返さない」のか、「法律上優先弁済を受ける」のか、「契約で担保を設定した」のかを分ける。次に、目的物を設定者の手元に残すかどうかを確認する。質権は占有移転が核心で、抵当権・根抵当権・多くの非典型担保は設定者に使用収益を残す。最後に、第三者に対抗するために何が必要かを確認する。動産なら占有や引渡し、不動産なら登記、債権なら通知・承諾や差押えが問題になる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法295条 留置権の内容</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">他人の物の占有者は、その物に関して生じた債権を有するときは、その債権の弁済を受けるまで、その物を留置することができる。ただし、その債権が弁済期にないときは、この限りでない。<br>２ 前項の規定は、占有が不法行為によって始まった場合には、適用しない。</blockquote>
+      <p><strong><mark class="kw">民法295条</mark></strong>は、<strong><mark class="kw">留置権</mark></strong>の成立要件を凝縮した中心条文である。「他人の物」「占有者」「その物に関して生じた債権」「弁済期」「不法行為占有でないこと」を順番に確認する。ここでいう牽連性は、債権がその物自体から発生したと評価できる関係をいう。修理代金債権と修理物、必要費償還請求権と目的物は典型だが、不動産二重売買で第一買主が売主に対して有する履行不能損害賠償債権と、第二買主の所有物となった不動産との関係は慎重に見る必要がある。ただし書は、弁済期前の留置を否定する。二項は不法行為による占有を排除し、公平を根拠とする留置権を違法な占有の武器に使わせない趣旨である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法296条から302条 留置権の効力と消滅</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">留置権者は、債権の全部の弁済を受けるまでは、留置物の全部についてその権利を行使することができる。<br>留置権者は、留置物から生ずる果実を収取し、他の債権者に先立って、これを自己の債権の弁済に充当することができる。<br>留置権は、留置権者が留置物の占有を失うことによって、消滅する。</blockquote>
+      <p><strong><mark class="kw">民法296条</mark></strong>は不可分性を定め、債権全額の弁済まで留置物全部を留置できるとする。<strong><mark class="kw">民法297条</mark></strong>は果実収取権を定めるが、果実を利息、残余を元本に充当するルールであり、留置物そのものの競売代金から当然に優先弁済を受けるという意味ではない。<strong><mark class="kw">民法298条</mark></strong>は善管注意義務と無断使用・賃貸・担保供与の禁止を置き、違反すれば債務者が消滅請求をできる。<strong><mark class="kw">民法300条</mark></strong>は、留置権を行使しても被担保債権の消滅時効の進行は止まらないとする。<strong><mark class="kw">民法301条</mark></strong>は相当担保提供による消滅請求を認め、<strong><mark class="kw">民法302条</mark></strong>は占有喪失による消滅を定める。試験では、留置しているから時効は完成しない、占有を失っても留置権は消えない、という選択肢が誤りになる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法303条・304条 先取特権の内容と物上代位</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">先取特権者は、この法律その他の法律の規定に従い、その債務者の財産について、他の債権者に先立って自己の債権の弁済を受ける権利を有する。<br>先取特権は、その目的物の売却、賃貸、滅失又は損傷によって債務者が受けるべき金銭その他の物に対しても、行使することができる。ただし、先取特権者は、その払渡し又は引渡しの前に差押えをしなければならない。</blockquote>
+      <p><strong><mark class="kw">民法303条</mark></strong>は、<strong><mark class="kw">先取特権</mark></strong>を「法律その他の法律の規定に従う」優先弁済権として定義する。したがって、先取特権は当事者の合意だけで創設できず、法定された原因によってのみ成立する。<strong><mark class="kw">民法304条</mark></strong>は<strong><mark class="kw">物上代位</mark></strong>を定め、目的物が売却代金、賃料、保険金などの価値に変わっても、担保価値を追跡できるようにする。ただし、払渡しまたは引渡し前の差押えが必要である。この差押え要件は、第三債務者や譲受人との関係で目的債権を特定し、二重払いの危険を避ける機能を持つ。民法304条は質権や抵当権にも準用されるため、先取特権だけでなく抵当権の賃料債権への物上代位でも中心条文になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法306条・311条・325条 先取特権の種類</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">次に掲げる原因によって生じた債権を有する者は、債務者の総財産について先取特権を有する。共益の費用、雇用関係、子の監護の費用、葬式の費用、日用品の供給。<br>次に掲げる原因によって生じた債権を有する者は、債務者の特定の動産について先取特権を有する。<br>次に掲げる原因によって生じた債権を有する者は、債務者の特定の不動産について先取特権を有する。</blockquote>
+      <p><strong><mark class="kw">民法306条</mark></strong>は一般の先取特権、<strong><mark class="kw">民法311条</mark></strong>は動産の先取特権、<strong><mark class="kw">民法325条</mark></strong>は不動産の先取特権を列挙する。一般の先取特権は債務者の総財産に及ぶが、まず不動産以外の財産から弁済を受けるなどの制約がある。動産の先取特権は、不動産賃貸借、旅館宿泊、運輸、動産保存、動産売買など、特定動産と結び付く債権を保護する。不動産の先取特権は、不動産保存、不動産工事、不動産売買を対象とする。試験では、原因と目的財産を取り違える出題が多い。たとえば、動産売買代金債権は特定動産に関する先取特権であり、債務者の総財産に当然に及ぶ一般の先取特権ではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法329条から339条 先取特権の順位と効力保存</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">一般の先取特権と特別の先取特権とが競合する場合には、特別の先取特権は、一般の先取特権に優先する。ただし、共益の費用の先取特権は、その利益を受けたすべての債権者に対して優先する効力を有する。<br>先取特権は、債務者がその目的である動産をその第三取得者に引き渡した後は、その動産について行使することができない。<br>前二条の規定に従って登記をした先取特権は、抵当権に先立って行使することができる。</blockquote>
+      <p><strong><mark class="kw">民法329条</mark></strong>は一般の先取特権相互の順位と、一般・特別の競合を定める。<strong><mark class="kw">民法330条</mark></strong>は同一動産上の特別先取特権の順位を定め、第一順位に不動産賃貸・旅館宿泊・運輸、第二順位に動産保存、第三順位に動産売買などを置く。<strong><mark class="kw">民法333条</mark></strong>は、目的動産が第三取得者に引き渡された後は動産先取特権を行使できないとする。これは動産取引の安全を守る規定である。<strong><mark class="kw">民法334条</mark></strong>は動産質権との競合を定め、動産質権者を第一順位の先取特権者と同一に扱う。<strong><mark class="kw">民法337条</mark></strong>から<strong><mark class="kw">民法339条</mark></strong>は不動産保存・工事・売買の先取特権の登記と抵当権との優劣を扱う。とくに、登記をした不動産保存・工事の先取特権が抵当権に先立つ場面は、単純な登記先後だけで処理しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法342条から350条 質権の成立と効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">質権者は、その債権の担保として債務者又は第三者から受け取った物を占有し、かつ、その物について他の債権者に先立って自己の債権の弁済を受ける権利を有する。<br>質権の設定は、債権者にその目的物を引き渡すことによって、その効力を生ずる。<br>質権者は、質権設定者に、自己に代わって質物の占有をさせることができない。<br>第二百九十六条から第三百条まで及び第三百四条の規定は、質権について準用する。</blockquote>
+      <p><strong><mark class="kw">民法342条</mark></strong>は、<strong><mark class="kw">質権</mark></strong>を占有と優先弁済を組み合わせた権利として定める。<strong><mark class="kw">民法344条</mark></strong>により、質権の設定は目的物の引渡しによって効力を生じるため、合意だけでは成立しない。<strong><mark class="kw">民法345条</mark></strong>は質権設定者による代理占有を禁止する。担保の公示を占有に頼る制度だからである。<strong><mark class="kw">民法346条</mark></strong>は、元本、利息、違約金、実行費用、保存費用、債務不履行や隠れた瑕疵による損害賠償まで担保範囲に含める。<strong><mark class="kw">民法347条</mark></strong>は質物の留置を認めるが、自己より優先する債権者には対抗できない。<strong><mark class="kw">民法349条</mark></strong>は流質契約を弁済期前から予定することを禁止し、質権者による目的物の取り込みを制限する。<strong><mark class="kw">民法350条</mark></strong>は不可分性、果実収取、費用償還、時効進行、物上代位などの規定を質権に準用する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法369条から375条 抵当権の基本効力</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">抵当権者は、債務者又は第三者が占有を移転しないで債務の担保に供した不動産について、他の債権者に先立って自己の債権の弁済を受ける権利を有する。<br>抵当権は、抵当地の上に存する建物を除き、その目的である不動産に付加して一体となっている物に及ぶ。<br>同一の不動産について数個の抵当権が設定されたときは、その抵当権の順位は、登記の前後による。</blockquote>
+      <p><strong><mark class="kw">民法369条</mark></strong>は、<strong><mark class="kw">抵当権</mark></strong>を非占有型の不動産担保として定義する。地上権と永小作権も目的にできる。<strong><mark class="kw">民法370条</mark></strong>は抵当権の効力が付加一体物に及ぶとするが、抵当地上の建物は除かれる。これは土地と建物を別個の不動産として扱う日本法の特徴と結び付く。<strong><mark class="kw">民法371条</mark></strong>は、債務不履行後に生じた抵当不動産の果実に抵当権が及ぶとする。<strong><mark class="kw">民法372条</mark></strong>は不可分性、物上代位、物上保証人の求償に関する規定を抵当権に準用する。<strong><mark class="kw">民法373条</mark></strong>は同一不動産上の抵当権順位を登記の前後で決める。<strong><mark class="kw">民法375条</mark></strong>は利息その他の定期金について、原則として最後の二年分に限り抵当権を行使できるとする。抵当権は強い権利だが、後順位抵当権者や第三取得者との利害調整が細かく規定されている。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法388条・392条・395条 抵当権実行と第三者関係</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">土地及びその上に存する建物が同一の所有者に属する場合において、その土地又は建物につき抵当権が設定され、その実行により所有者を異にするに至ったときは、その建物について、地上権が設定されたものとみなす。<br>債権者が同一の債権の担保として数個の不動産につき抵当権を有する場合において、同時にその代価を配当すべきときは、その各不動産の価額に応じて、その債権の負担を按分する。<br>抵当建物使用者は、その建物の競売における買受人の買受けの時から六箇月を経過するまでは、その建物を買受人に引き渡すことを要しない。</blockquote>
+      <p><strong><mark class="kw">民法388条</mark></strong>は<strong><mark class="kw">法定地上権</mark></strong>を定める。土地と建物が同一所有者に属する状態で土地または建物に抵当権が設定され、抵当権実行により所有者が分かれた場合、建物存続のため法律上地上権を設定したものとみなす。成立要件は、抵当権設定時に土地と建物が存在し同一所有者に属していたこと、土地または建物に抵当権が設定されたこと、実行により所有者が異なるに至ったことと整理する。<strong><mark class="kw">民法392条</mark></strong>は<strong><mark class="kw">共同抵当</mark></strong>の代価配当を定め、同時配当なら価額に応じて按分し、異時配当なら後順位抵当権者の代位を認める。<strong><mark class="kw">民法395条</mark></strong>は抵当権に対抗できない建物使用者にも六箇月の引渡猶予を与え、買受人の利益と居住・営業の急激な喪失を調整する。ただし、買受後の対価支払を催告されても履行しない場合は保護を受けられない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法398条の2から398条の20 根抵当権</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">抵当権は、設定行為で定めるところにより、一定の範囲に属する不特定の債権を極度額の限度において担保するためにも設定することができる。<br>根抵当権者は、確定した元本並びに利息その他の定期金及び債務の不履行によって生じた損害の賠償の全部について、極度額を限度として、その根抵当権を行使することができる。<br>根抵当権設定者は、根抵当権の設定の時から三年を経過したときは、担保すべき元本の確定を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法398条の2</mark></strong>は<strong><mark class="kw">根抵当権</mark></strong>の定義であり、「一定の範囲に属する不特定の債権」と「極度額」が核心である。担保すべき債権の範囲は無制限ではなく、特定の継続的取引契約や一定種類の取引に限定して定める必要がある。<strong><mark class="kw">民法398条の3</mark></strong>は、元本確定後の元本、利息、定期金、損害賠償を極度額の範囲で担保するとする。普通抵当権の利息二年分制限とは違い、根抵当権では極度額が総枠として機能する。<strong><mark class="kw">民法398条の4</mark></strong>は元本確定前の債権範囲・債務者変更を、<strong><mark class="kw">民法398条の5</mark></strong>は極度額変更に利害関係人の承諾を要求する。<strong><mark class="kw">民法398条の8</mark></strong>は相続開始後六箇月以内の合意登記を求め、これをしないと相続開始時に元本確定したものとみなす。<strong><mark class="kw">民法398条の19</mark></strong>と<strong><mark class="kw">民法398条の20</mark></strong>は元本確定請求と法定確定事由を定める。試験では、「設定者は設定後三年を経過すれば確定請求でき、二週間経過で確定」「根抵当権者はいつでも確定請求でき、請求時に確定」という違いを押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">仮登記担保法1条・2条 非典型担保の清算規律</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">この法律は、金銭債務を担保するため、その不履行があるときは債権者に債務者又は第三者に属する所有権その他の権利の移転等をすることを目的としてされた代物弁済の予約、停止条件付代物弁済契約その他の契約で、その契約による権利について仮登記又は仮登録のできるものの効力等に関し、特別の定めをするものとする。<br>債権者が清算金の見積額を通知し、かつ、その通知が到達した日から二月を経過しなければ、その所有権の移転の効力は、生じない。</blockquote>
+      <p><strong><mark class="kw">仮登記担保契約に関する法律</mark></strong>は、代物弁済予約や停止条件付代物弁済契約を担保目的で使う場合に、債権者が目的不動産を丸取りしないよう清算手続を定める特別法である。<strong><mark class="kw">仮登記担保法1条</mark></strong>は、金銭債務を担保するための所有権移転予約等で、仮登記または仮登録ができるものを対象にする。<strong><mark class="kw">仮登記担保法2条</mark></strong>は、債権者が清算金の見積額を通知し、二箇月の清算期間を経過しなければ所有権移転の効力が生じないとする。これは非典型担保を単なる所有権移転として扱わず、実質が担保である以上、担保目的物価額と債権額との差額を債務者側に戻すという清算原理を明文化したものである。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Cases</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和41年3月3日 昭和39年(オ)第654号 民集20巻3号386頁</div>
+      <div class="case-card__title">売買契約解除後の不法占有と留置権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法295条</span>
+        <span class="badge badge--law">留置権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物の売買契約により買主が建物の引渡しを受けたが、その後、売買契約は合意解除された。解除後、買主はもはや建物を占有する権原がないことを知りながら建物の占有を続け、その間に建物について必要費や有益費を支出したとして、売主からの明渡請求に対し、費用償還請求権を被担保債権とする<strong><mark class="kw">留置権</mark></strong>を主張した。問題は、占有開始時は売買契約に基づく適法な占有であったとしても、解除後に権原がないことを知りながら占有を継続した者が、後に支出した費用を理由として留置権を主張できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、建物の売買契約が合意解除された後、買主が売主所有の建物を権原のないことを知りながら不法に占有している間に必要費・有益費を支出したとしても、民法295条2項の趣旨を類推し、その費用償還請求権に基づく留置権を主張することはできないとした。民法295条2項は、不法行為によって占有が始まった場合を除外しているが、その趣旨は違法な占有者に留置という強い手段を与えない点にある。解除後に不法占有であることを知りながら占有を続けた者にも、この趣旨が及ぶと考えられる。留置権は公平を根拠にする制度であり、占有者自身の違法性が強い場合には、その公平の基礎が失われる。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">留置権</mark></strong>の成立要件のうち「占有が不法行為によって始まった場合には適用しない」という民法295条2項の射程を理解するために重要である。試験では、「占有開始時が適法であれば、その後どのような事情で不法占有になっても留置権を主張できる」といった選択肢が誤りになる。必要費・有益費という言葉だけで留置権を肯定せず、占有が公平に保護される性質のものかを確認する。関連条文は民法295条、298条、299条である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和43年11月21日 昭和43年(オ)第586号 民集22巻12号2765頁</div>
+      <div class="case-card__title">不動産二重売買と留置権の牽連性</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法295条</span>
+        <span class="badge badge--law">牽連性</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産が第一買主に売却された後、同じ不動産が第二買主にも売却され、第二買主が先に所有権移転登記を備えた。第一買主は目的不動産の引渡しを受けていたが、登記を備えた第二買主から所有権に基づく明渡請求を受けた。第一買主は、売主が第二買主に登記を移したため自分への所有権移転債務が履行不能になったとして、売主に対する売買契約不履行に基づく損害賠償債権を有すると主張し、その債権を理由に第二買主に対して目的不動産の<strong><mark class="kw">留置権</mark></strong>を主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、不動産の二重売買において第二買主のため所有権移転登記がされた場合、第一買主は、第二買主の所有権に基づく明渡請求に対し、売買契約不履行に基づく損害賠償債権をもって留置権を主張することはできないとした。留置権が成立するためには、債権が「その物に関して生じた」ものであること、すなわち物と債権との牽連性が必要である。この事案で第一買主が有する損害賠償債権は、売主の債務不履行に基づく売主に対する債権であり、登記を備えた第二買主の所有物となった不動産との間に留置権を基礎づけるだけの直接的な牽連性を認めることはできない。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">牽連性</mark></strong>を抽象的な「物に関係がありそう」という程度で広げてはいけないことを示す。行政書士試験では、留置権の要件問題として「売買契約の履行不能による損害賠償債権を理由に、登記を備えた第二買主に目的不動産の留置権を主張できる」とする選択肢が誤りになる。二重譲渡では民法177条の登記対抗関係も絡むため、物権変動単元との接点も大きい。留置権の公平は、第三者の所有権を過度に害する形で広げられない点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成元年10月27日 昭和60年(オ)第1270号 民集43巻9号1070頁</div>
+      <div class="case-card__title">抵当権に基づく賃料債権への物上代位</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法304条</span>
+        <span class="badge badge--law">民法372条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>抵当権が設定された不動産が第三者に賃貸され、賃借人が賃料を供託した。抵当権者は、抵当不動産の競売代金だけでなく、その不動産の賃貸によって生じた賃料の供託金還付請求権にも抵当権の効力を及ぼし、物上代位権を行使できると主張した。抵当権は本来、不動産の交換価値を把握する非占有担保であるため、不動産の使用収益から生じた賃料にまで及ぶかが争点となった。民法304条は「売却、賃貸、滅失又は損傷」によって債務者が受けるべき金銭等に先取特権を行使できるとし、民法372条がこれを抵当権に準用している。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、抵当不動産が賃貸された場合、抵当権者は民法372条、304条の趣旨に従い、賃借人が供託した賃料の還付請求権についても抵当権を行使できるとした。抵当権は不動産の交換価値を把握する権利であり、目的物が賃貸によって賃料債権という金銭価値に変わったとき、その価値にも担保権を及ぼすことが物上代位の趣旨に合う。もっとも、物上代位権の行使には払渡しまたは引渡し前の差押えが必要である。これにより、第三債務者は誰に弁済すべきかを明確にし、抵当権者・設定者・第三者の利害を調整できる。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">抵当権</mark></strong>が賃料債権に物上代位できることを示す基本判例である。試験では、「抵当権は目的不動産の売却代金にだけ及び、賃料には及ばない」とする選択肢が誤りになる。ただし、物上代位を認めることと、差押えなしに当然に回収できることは別である。民法304条ただし書の差押え要件までセットで覚える必要がある。関連判例として、物上代位の目的債権が譲渡された後でも差押えにより行使できるとした平成10年判例を続けて整理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成10年1月30日 平成9年(オ)第419号 民集52巻1号1頁</div>
+      <div class="case-card__title">物上代位の目的債権譲渡後の差押え</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法304条</span>
+        <span class="badge badge--law">民法467条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>抵当不動産から生じる賃料債権など、物上代位の目的となる債権が、抵当権者による差押えの前に第三者へ譲渡され、債権譲渡の第三者対抗要件も備えられていた。債権譲受人は、すでに目的債権が抵当権設定者の責任財産から外れた以上、抵当権者は物上代位権を行使できないと主張した。他方、抵当権者は、抵当権設定登記により物上代位の可能性は公示されており、民法304条の「払渡し又は引渡し」には債権譲渡は含まれないとして、譲渡後でも差押えにより物上代位権を行使できると主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、抵当権者は、物上代位の目的債権が譲渡され第三者に対する対抗要件が備えられた後であっても、自ら目的債権を差し押さえて物上代位権を行使できるとした。民法304条の「払渡し又は引渡し」は当然には債権譲渡を含まない。また、物上代位の目的債権が譲渡された後に抵当権者が差押えをした場合でも、第三債務者は差押命令送達前に譲受人へ弁済した分については抵当権者に対抗でき、未払い分については供託により免責されるため、第三債務者の利益は過度に害されない。さらに、抵当権の効力が物上代位の目的債権に及び得ることは抵当権設定登記により公示されている。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">物上代位</mark></strong>と<strong><mark class="kw">債権譲渡</mark></strong>の優劣を問う頻出論点である。行政書士試験では、「物上代位の目的債権が譲渡され、債権譲渡の対抗要件が備えられた後は、抵当権者は物上代位できない」とする選択肢が誤りになる。正しくは、抵当権者はなお差押えにより物上代位権を行使できる。ただし、差押え前に第三債務者が譲受人へ弁済した部分については処理が異なるため、「譲渡後でも無条件に既払い分まで取り戻せる」と理解してはいけない。民法304条、372条、467条を横断して理解する判例である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 平成11年11月24日 平成8年(オ)第1697号 民集53巻8号1899頁</div>
+      <div class="case-card__title">抵当権者による不法占有者への明渡請求</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">抵当権</span>
+        <span class="badge badge--law">妨害排除</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物に抵当権を有する債権者が、債務不履行を理由に抵当権の実行として競売を申し立てた。しかし、第三者が建物を権原なく占有していたため、買受け希望者が買受申出をためらい、入札がなくなり、競売手続が進まなくなった。抵当権者は、抵当不動産の交換価値の実現が妨げられ、優先弁済請求権の行使が困難になっているとして、所有者が不法占有者に対して有する妨害排除請求権を代位行使し、不法占有者に対して直接自分へ建物を明け渡すよう請求した。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、第三者が抵当不動産を不法占有することにより、競売手続の進行が害され、適正な価額より売却価額が下落するおそれがあるなど、抵当不動産の交換価値の実現が妨げられ抵当権者の優先弁済請求権の行使が困難になる状態があるときは、抵当権者は、抵当不動産の所有者に対して有するその状態を是正し、抵当不動産を適切に維持保存するよう求める請求権を保全するため、所有者の不法占有者に対する妨害排除請求権を代位行使できるとした。さらに、建物を所有者のために管理する目的で、不法占有者に対し直接抵当権者へ明け渡すよう求めることも認めた。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">抵当権</mark></strong>が単なる競売代金からの優先弁済権にとどまらず、抵当不動産の交換価値実現が妨げられる場合に妨害排除の場面へ展開することを示す。試験では、「抵当権は占有を伴わないから、不法占有者によって競売価値が害されても抵当権者は何もできない」とする選択肢が誤りになる。ただし、常に抵当権者自身の所有権に基づく明渡請求が認められるわけではなく、所有者に対する維持保存請求権を保全するための代位行使という構成が重要である。抵当権の効力を所有権と混同しないことがポイントである。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和52年10月11日 昭和52年(オ)第287号 民集31巻6号785頁</div>
+      <div class="case-card__title">再築建物と法定地上権</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法388条</span>
+        <span class="badge badge--law">法定地上権</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>土地とその上の非堅固建物を同一人が所有していたところ、土地について抵当権が設定された。その後、地上建物は取り壊され、堅固建物が建築された。抵当権実行により土地と建物の所有者が異なることになったため、新しい堅固建物のために<strong><mark class="kw">法定地上権</mark></strong>が成立するかが争われた。抵当権者は、抵当権設定後に建物が取り壊され別の建物が建築された以上、当初の建物を前提とする法定地上権をそのまま認めるべきではないと考え得る。他方、抵当権設定当時、近い将来に旧建物が取り壊され堅固建物が建築されることを予定して土地の担保価値が算定されていた事情があった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、土地およびその地上の非堅固建物の所有者が土地につき抵当権を設定した後、地上建物を取り壊して堅固建物を建築した場合において、抵当権者が抵当権設定当時、近い将来地上建物が取り壊され堅固建物が建築されることを予定して土地の担保価値を算定したものであるときは、堅固建物の所有を目的とする法定地上権の成立を妨げないとした。法定地上権は、抵当権設定当事者の合理的意思と建物存続の社会経済的必要性を基礎にする。抵当権者が新建物を予定して担保価値を評価していたなら、新建物のために地上権を認めても抵当権者に不測の損害を与えにくい。</p>
+      <h4>試験上の意義</h4>
+      <p><strong><mark class="kw">民法388条</mark></strong>の法定地上権は、条文上の要件だけでなく、建物の滅失・再築、土地建物の共同抵当、抵当権設定時の所有関係など判例問題として出題される。基本は「抵当権設定時に土地と建物が同一所有者に属し、建物が存在していたか」を見ることだが、再築の場合には抵当権者の担保価値評価を害しない特段の事情が問題になる。この判例は、旧建物が取り壊されたら常に法定地上権が否定されるわけではないことを示す。なお、日付は裁判所公式の昭和52年10月11日で整理する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和46年3月25日 昭和42年(オ)第1279号 民集25巻2号208頁</div>
+      <div class="case-card__title">譲渡担保権者の清算義務</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--law">譲渡担保</span>
+        <span class="badge badge--law">清算義務</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>貸金債権を担保するため、債務者所有の不動産について<strong><mark class="kw">譲渡担保</mark></strong>契約が締結され、債務者が弁済期に債務を弁済すれば不動産を債務者へ返還するが、弁済しないときは不動産を債務の弁済に代えて確定的に債権者の所有に帰属させる旨が合意され、所有権移転登記も経由されていた。債務者が弁済期に弁済しなかったため、譲渡担保権者は担保目的実現の手段として不動産の引渡しまたは明渡しを求めた。これに対し債務者は、不動産価額が債権額を上回るなら、差額である清算金の支払と引換えでなければ明渡しに応じる必要はないと主張した。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、弁済期に債務の弁済がないときは目的不動産を債権者の所有に帰属させる旨の譲渡担保契約であっても、債権者は目的不動産を換価処分するか、または適正に評価することにより具体化する価額から債権額を差し引き、残額を清算金として債務者に支払う必要があるとした。譲渡担保は形式上所有権を債権者に移転するが、実質は債権担保である。したがって、債権額を超える価値まで債権者に取得させると、担保制度の範囲を超えて債務者の財産を奪うことになる。債務者が清算金支払との引換えを主張した場合、特段の事情がなければ、債権者の引渡・明渡請求は清算金支払と引換えにのみ認められる。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">非典型担保</mark></strong>を「形式は所有権移転、実質は担保」と理解するための中心判例である。行政書士試験では非典型担保が深く出る頻度は典型担保ほど高くないが、譲渡担保の実行で清算義務が問題になることは押さえる価値がある。「所有権移転登記がある以上、債務不履行時には債権者が目的物全価値を当然に取得でき、差額清算は不要」とする理解は誤りである。仮登記担保法や令和七年成立の譲渡担保法の背景にも、担保目的を超える丸取りを防ぐ清算原理がある。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成22年6月4日 平成21年(受)第284号 民集64巻4号1107頁</div>
+      <div class="case-card__title">所有権留保と別除権行使の対抗要件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--law">所有権留保</span>
+        <span class="badge badge--law">民法369条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>自動車購入者が販売会社から自動車を購入し、信販会社が売買代金を立替払いした。購入者、販売会社、信販会社の間では、販売会社に留保されていた自動車の所有権が立替払いにより信販会社に移転し、購入者が立替金と手数料を完済するまで信販会社側に所有権が留保される旨の合意があった。しかし、購入者について再生手続が開始した時点で、自動車について信販会社を所有者とする登録はされておらず、販売会社を所有者とする登録にとどまっていた。信販会社が留保所有権を別除権として行使できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、自動車の購入者から委託されて販売会社に売買代金を立替払いした者が、購入者および販売会社との間で、販売会社に留保されている自動車の所有権につき、それが立替払いにより自己に移転し、購入者が立替金および手数料の支払債務を完済するまで留保される旨の合意をしていた場合でも、購入者に係る再生手続開始時点で自動車につき立替払者を所有者とする登録がされていない限り、販売会社を所有者とする登録がされていても、立替払者が合意に基づき留保した所有権を別除権として行使することは許されないとした。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">所有権留保</mark></strong>が形式上所有権を用いる制度であっても、倒産手続では担保としての実質と対抗要件が重要になることを示す。試験では、非典型担保について「所有権」という言葉だけで取戻権のように扱わない姿勢が必要である。自動車のように登録制度がある財産では、誰を所有者として登録しているかが第三者対抗要件として問題になる。令和七年成立の譲渡担保法でも、譲渡担保・所有権留保の効力、実行、倒産手続上の扱いを明確にする方向が示されており、この判例はその前提となる実務上の問題意識を理解する助けになる。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">担保物権各論</mark></strong>では、第一に留置権の成立要件、とくに牽連性・弁済期・不法行為占有の除外、第二に先取特権の種類と順位、第三に質権の引渡し・占有継続・代理占有禁止、第四に抵当権の登記順位・物上代位・法定地上権、第五に根抵当権の極度額と元本確定が頻出である。問題文を読んだら、まず「法定担保か約定担保か」「占有を必要とするか」「優先弁済権があるか」「第三者に対抗するための公示は何か」を順に確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン1 留置権</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例として、「他人の物を占有する者がその物に関する債権を有する場合、債権の弁済期が到来していなくても<strong><mark class="kw">留置権</mark></strong>を行使できる」というものがある。これは民法295条ただし書に反する。留置権は返還拒絶という強い効果を持つため、被担保債権の弁済期が到来している必要がある。また、「占有開始後に権原がなくなったことを知りながら占有を続け、そこで支出した費用について留置権を主張できる」とする肢は、昭和41年判例の射程に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン2 先取特権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">先取特権</mark></strong>は担保物権であるから、当事者が契約で任意に設定できる」という選択肢は誤りである。先取特権は、民法その他の法律が特定の債権に認める法定担保物権である。動産先取特権では、目的動産が第三取得者に引き渡された後は行使できない点も落とし穴になる。さらに、不動産保存・工事の先取特権は、登記を保存すれば抵当権に先立つ場面があり、単純に「抵当権は登記が早ければ常に優先」と処理しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン3 質権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">質権</mark></strong>は担保設定契約があれば目的物を引き渡さなくても成立する」という選択肢は誤りである。民法344条は、質権の設定は債権者に目的物を引き渡すことによって効力を生ずると定める。また、民法345条により、質権者は質権設定者に自己に代わって質物を占有させることができない。占有改定で設定者の手元に残すことは、質権の公示構造に反する。質権は抵当権と違い、目的物の使用を設定者に残す制度ではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン4 抵当権</span>
+    </div>
+    <div class="box__bd">
+      <p>「抵当不動産が賃貸されても、<strong><mark class="kw">抵当権</mark></strong>は賃料債権に物上代位できない」という選択肢は誤りである。平成元年判例は、賃料の供託金還付請求権にも抵当権を行使できるとした。ただし、「物上代位できるから差押えは不要」とする選択肢も誤りである。民法304条ただし書により、払渡しまたは引渡し前の差押えが必要である。さらに、平成10年判例により、目的債権が譲渡され対抗要件が備えられた後でも、抵当権者は差押えによって物上代位できる点まで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン5 根抵当権</span>
+    </div>
+    <div class="box__bd">
+      <p>「<strong><mark class="kw">根抵当権</mark></strong>は、債権者と債務者が決まっていれば、どのような債権でも無限定に担保できる」という選択肢は誤りである。民法398条の2は、担保すべき債権の範囲を、特定の継続的取引契約や一定種類の取引などに限定して定めることを求める。また、「元本確定前に被担保債権が譲渡されれば、その債権について譲受人が当然に根抵当権を行使できる」という選択肢も誤りである。根抵当権は、元本確定前に普通抵当権とは異なる処理をする。</p>
+    </div>
+  </div>
+
+  <p>他分野との接点としては、物権変動の登記、債権譲渡の対抗要件、債権の消滅時効、弁済による代位、賃貸借、相続、倒産手続が重要である。<strong><mark class="kw">留置権</mark></strong>では同時履行の抗弁権との違いが問題になる。<strong><mark class="kw">抵当権</mark></strong>では民法177条の登記対抗関係、賃料債権への物上代位では民法467条の債権譲渡対抗要件が絡む。<strong><mark class="kw">根抵当権</mark></strong>では相続開始後の合意登記や元本確定が相続法・債権法と接続する。非典型担保では、形式的な所有権移転と実質的な担保との違いを、倒産手続における対抗要件や別除権の問題として見る。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">担保物権各論</mark></strong>は、民法の物権法と債権法が最も強く交差する領域である。担保物権は物に対する権利である一方、その目的は債権回収であるため、常に被担保債権の発生、弁済、譲渡、相続、時効、倒産との関係を確認する必要がある。学習上は、まず典型担保物権の条文構造を固める。<strong><mark class="kw">留置権</mark></strong>は民法295条から302条、<strong><mark class="kw">先取特権</mark></strong>は303条から341条、<strong><mark class="kw">質権</mark></strong>は342条から368条、<strong><mark class="kw">抵当権</mark></strong>は369条から398条、<strong><mark class="kw">根抵当権</mark></strong>は398条の2から398条の22である。条文番号を孤立して覚えるのではなく、各章の中で何を規律しているかを階層で押さえる。</p>
+
+  <p>近年の実務では、不動産だけでなく、売掛債権、在庫、機械設備、知的財産、事業全体の価値を利用した担保が重要になっている。従来、<strong><mark class="kw">譲渡担保</mark></strong>や<strong><mark class="kw">所有権留保</mark></strong>は判例法理と実務慣行に支えられてきたが、令和七年五月三十日に<strong><mark class="kw">譲渡担保契約及び所有権留保契約に関する法律</mark></strong>が成立し、同年六月六日に公布された。同法は一部の規定を除き、公布の日から起算して二年六月を超えない範囲内で政令で定める日に施行される。したがって、現時点の学習では民法上の典型担保と既存判例を軸にしつつ、非典型担保については成文化が進んでいるという制度動向を補足として押さえるのが実践的である。</p>
+
+  <p>学習整理の順番は、第一に「成立原因」で分ける。法律上当然発生するなら留置権・先取特権、契約で設定するなら質権・抵当権・根抵当権、所有権形式を使うなら非典型担保である。第二に「占有」で分ける。留置権と質権は占有が重要で、抵当権と根抵当権は占有を移さない。第三に「優先弁済」で分ける。留置権は留置が中心で優先弁済権を持たず、先取特権・質権・抵当権は優先弁済を中心にする。第四に「第三者対抗」で分ける。不動産なら登記、動産なら引渡し・占有、債権なら通知・承諾・差押えを見る。第五に「被担保債権の特定性」で分ける。普通抵当権は特定債権、根抵当権は一定範囲の不特定債権を極度額で担保する。</p>
+
+  <p>行政書士試験で高得点につなげるには、判例の結論だけでなく、どの要件の問題かを分類することが重要である。昭和41年判例は不法占有と留置権、昭和43年判例は牽連性、平成元年判例と平成10年判例は抵当権の物上代位、平成11年大法廷判決は抵当権の妨害排除、昭和52年判例は法定地上権、昭和46年判例は譲渡担保の清算義務、平成22年判例は所有権留保の対抗要件である。判例を「留置権」「抵当権」と大きく覚えるだけでなく、条文のどの文言を補充しているかを対応させると、正誤問題で迷いにくくなる。</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>債権の効力 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">債権の効力</h1>
+  <p class="page-title-block__sub">履行請求、債務不履行、損害賠償を、要件・帰責事由・損害範囲から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法412条</span>
+    <span class="badge badge--info">民法414条</span>
+    <span class="badge badge--info">民法415条</span>
+    <span class="badge badge--info">民法416条</span>
+    <span class="badge badge--info">履行遅滞</span>
+    <span class="badge badge--info">履行不能</span>
+    <span class="badge badge--info">損害賠償</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">債権の効力</mark></strong>とは、債権者が債務者に対してどのような法的手段をとれるかをいう。売買代金を支払わない、約束した建物を引き渡さない、修理工事を不完全な状態で終えた、期限までに商品を納入しないという場面では、債権者は単に「約束を守ってほしい」と言うだけでなく、<strong><mark class="kw">履行の強制</mark></strong>、<strong><mark class="kw">損害賠償</mark></strong>、契約解除などの法的効果を主張できる。</p>
+
+  <p>この単元の中心は、債務不履行を一つの抽象語で覚えるのではなく、<strong><mark class="kw">履行遅滞</mark></strong>、<strong><mark class="kw">履行不能</mark></strong>、<strong><mark class="kw">不完全履行</mark></strong>に分けて、どの時点で、何が、なぜ違法な不履行になるのかを判断することである。履行期に遅れただけならなお履行請求が中心になるが、目的物が滅失して履行不能になれば履行請求はできず、損害賠償や解除の問題に移る。不完全履行では、履行は一応されたが契約の本旨に合っていないため、修補、追完、損害賠償の関係が問題になる。</p>
+
+  <p>行政書士試験では、民法415条の帰責事由、民法416条の通常損害・特別損害、民法419条の金銭債務の特則、民法420条の損害賠償額の予定が頻出である。特に令和2年施行の債権法改正後は、債務不履行責任を「債務者の故意・過失があるか」だけで処理せず、契約その他の債務発生原因と取引上の社会通念に照らして免責されるかという条文構造で読む必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る判断順序</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに、5月末日までに業務用機械を納入する契約をした。5月末日を過ぎてもAが納入しない場合、履行可能であれば<strong><mark class="kw">履行遅滞</mark></strong>として、Bは履行請求と遅延損害賠償を考える。機械がAの責めに帰すべき事由で火災により滅失し、同一機械を引き渡せない場合は<strong><mark class="kw">履行不能</mark></strong>として、履行請求は排除され、損害賠償や解除が中心になる。機械は納入されたが、契約で定めた性能を満たさず営業に使えない場合は<strong><mark class="kw">不完全履行</mark></strong>として、契約不適合責任や債務不履行責任との関係を整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行請求権・履行の強制</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行請求権</mark></strong>は、債権者が債務者に対して約束どおりの給付を求める権利である。民法414条1項は、債務者が任意に履行しないとき、債権者は履行の強制を裁判所に請求できると定める。制度趣旨は、債権を単なる道徳的約束ではなく、国家的強制によって実現できる法的権利にする点にある。もっとも、債務の性質が強制履行を許さないとき、たとえば芸術家本人に作品制作を直接強制するような場合には、直接強制ではなく損害賠償などで処理する。試験では、債務不履行があれば常に損害賠償だけになるという肢が誤りであり、履行が可能なら履行請求が原則的な手段である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">債務不履行</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債務不履行</mark></strong>は、債務者が債務の本旨に従った履行をしないことである。民法415条は、履行しない場合または履行不能の場合に、債権者が損害賠償を請求できると定める。ただし、債務不履行があっても、契約その他の債務発生原因と取引上の社会通念に照らして債務者の責めに帰することができないときは、損害賠償責任を負わない。制度趣旨は、約束違反による損失を債務者へ公平に負担させつつ、不可抗力や債務者にリスクを負わせるべきでない事情まで責任を負わせない点にある。試験では「債務不履行があれば無条件に損害賠償責任を負う」という選択肢と、「故意・過失がなければ常に免責される」という選択肢の両方が危険である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行遅滞</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行遅滞</mark></strong>は、履行が可能であるのに、履行期を過ぎても債務者が履行しない状態である。確定期限がある債務では期限到来時、不確定期限がある債務では債務者が期限到来を知った時、期限の定めのない債務では履行請求を受けた時から遅滞に陥る。遅滞になると、債権者はなお履行を請求できるだけでなく、遅れによって生じた損害の賠償を求められる。履行遅滞は、履行不能と異なり「まだ履行できる」ことが前提である。試験では、期限の種類ごとに遅滞開始時期を入れ替える肢、期限の定めのない債務で請求前から当然に遅滞になるとする肢が典型的な誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">履行不能</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">履行不能</mark></strong>は、債務の履行が契約その他の債務発生原因と取引上の社会通念に照らして不能である状態をいう。物理的に不可能な場合だけでなく、社会通念上実現を求めることができない場合も含む。民法412条の2は、不能かどうかを契約時ではなく履行時点の事情を含めて判断する構造を示している。履行不能になると、債権者はその不能部分について履行請求をすることができず、帰責事由があれば損害賠償を請求する。試験では、後発的不能と原始的不能を混同させる問題がある。現行民法では、契約成立時に不能であったことだけで契約は当然無効とはならず、損害賠償や解除の問題として処理される点が重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不完全履行</span>
+      <div class="box__hd-badges"><span class="badge badge--info">重要論点</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不完全履行</mark></strong>は、履行はされたが、債務の本旨に従った履行とはいえない状態である。数量不足、品質不良、説明義務違反、安全配慮義務違反、付随義務違反などが典型である。履行遅滞が「遅れ」、履行不能が「できないこと」を問題にするのに対し、不完全履行は「された履行の中身」を問題にする。制度趣旨は、契約目的に合わない履行を単に履行済みとして放置せず、債権者の期待利益を保護する点にある。売買では契約不適合責任との関係が問題になるが、契約上の付随義務や安全配慮義務の違反は債務不履行責任として整理される。試験では、履行が一応されたから債務不履行は成立しないという肢が誤りになりやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">損害賠償の範囲</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">損害賠償の範囲</mark></strong>は、債務不履行によって生じた損害のうち、どこまでを債務者に負担させるかという問題である。民法416条1項は通常生ずべき損害を賠償範囲とし、2項は特別の事情によって生じた損害について、当事者がその事情を予見すべきであったときに賠償請求できるとする。通常損害は取引類型から一般的に生じる損害であり、特別損害は債権者側の特殊な事情によって拡大した損害である。試験では、実際に予見していたかではなく、予見すべきであったかが基準になる点、予見の対象は損害額そのものではなく特別事情である点が問われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">金銭債務の特則</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">金銭債務の特則</mark></strong>は、金銭支払債務の不履行について、民法419条が特別な処理を置くものである。金銭は価値の一般的交換手段であり、調達不能を理由に履行不能を主張しにくいため、債務者は不可抗力をもって抗弁とすることができない。金銭債務の損害賠償額は、原則として法定利率によって定められ、約定利率が法定利率を超えるときは約定利率による。債権者は損害の証明を要しない。試験では、金銭債務でも不可抗力で免責される、遅延損害金を請求するには具体的損害を証明しなければならない、という肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">損害賠償額の予定</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">損害賠償額の予定</mark></strong>は、債務不履行があった場合の賠償額を当事者があらかじめ定めておく合意である。民法420条は、当事者が損害賠償額を予定できるとし、裁判所はその額を増減できないと定める。制度趣旨は、損害額の立証困難を避け、紛争解決を迅速にする点にある。もっとも、予定額が公序良俗に反するほど過大な場合には、民法90条による効力制限が問題になる。違約金は損害賠償額の予定と推定されるため、単なる制裁金なのか、賠償額予定なのかを契約内容から判断する。試験では、裁判所が常に相当額へ減額できるという肢、予定があると履行請求や解除が当然に排除されるという肢が誤りになりやすい。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 660" role="img" aria-label="債権の効力の全体構造図">
+      <defs>
+        <marker id="arr18-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr18-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr18-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="98" x2="540" y2="138" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="175" y1="138" x2="905" y2="138" stroke="#2563eb" stroke-width="1.5"/>
+      <line x1="175" y1="138" x2="175" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr18-blue)"/>
+      <line x1="540" y1="138" x2="540" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr18-blue)"/>
+      <line x1="905" y1="138" x2="905" y2="178" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr18-blue)"/>
+      <rect x="488" y="116" width="104" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.5"/>
+      <text x="540" y="132" text-anchor="middle" font-size="13" fill="#1d4ed8">不履行時の手段</text>
+
+      <line x1="540" y1="266" x2="540" y2="310" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="210" y1="310" x2="870" y2="310" stroke="#ea580c" stroke-width="1.5"/>
+      <line x1="210" y1="310" x2="210" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr18-orange)"/>
+      <line x1="540" y1="310" x2="540" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr18-orange)"/>
+      <line x1="870" y1="310" x2="870" y2="350" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr18-orange)"/>
+      <rect x="493" y="288" width="94" height="22" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.5"/>
+      <text x="540" y="304" text-anchor="middle" font-size="13" fill="#7c2d12">不履行類型</text>
+
+      <line x1="540" y1="438" x2="540" y2="490" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr18-red)"/>
+      <rect x="488" y="460" width="104" height="22" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="0.5"/>
+      <text x="540" y="476" text-anchor="middle" font-size="13" fill="#9f1239">損害範囲へ</text>
+
+      <rect x="385" y="28" width="310" height="70" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="540" y="57" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">債権の効力</text>
+      <text x="540" y="79" text-anchor="middle" font-size="12" fill="#dbeafe">債権者がとれる法的手段</text>
+
+      <rect x="55" y="186" width="240" height="80" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="175" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">履行請求</text>
+      <text x="175" y="242" text-anchor="middle" font-size="12" fill="#1e3a8a">履行可能なら原則</text>
+
+      <rect x="400" y="186" width="280" height="80" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="540" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">債務不履行責任</text>
+      <text x="540" y="242" text-anchor="middle" font-size="12" fill="#7c2d12">帰責事由と損害を判断</text>
+
+      <rect x="785" y="186" width="240" height="80" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="905" y="218" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">契約解除へ接続</text>
+      <text x="905" y="242" text-anchor="middle" font-size="12" fill="#1e3a8a">次単元の判断基盤</text>
+
+      <rect x="90" y="358" width="240" height="80" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="210" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">履行遅滞</text>
+      <text x="210" y="414" text-anchor="middle" font-size="12" fill="#7c2d12">可能だが遅れている</text>
+
+      <rect x="420" y="358" width="240" height="80" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="540" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">履行不能</text>
+      <text x="540" y="414" text-anchor="middle" font-size="12" fill="#7c2d12">社会通念上できない</text>
+
+      <rect x="750" y="358" width="240" height="80" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="870" y="390" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">不完全履行</text>
+      <text x="870" y="414" text-anchor="middle" font-size="12" fill="#7c2d12">内容が本旨に合わない</text>
+
+      <rect x="365" y="498" width="350" height="76" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="540" y="529" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">損害賠償の範囲</text>
+      <text x="540" y="552" text-anchor="middle" font-size="12" fill="#9f1239">通常損害と特別損害を区別</text>
+
+      <rect x="70" y="602" width="940" height="40" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="627" text-anchor="middle" font-size="13" fill="#9f1239">試験の基本順序：履行可能性、履行期、債務の本旨、帰責事由、損害範囲の順に読む</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">債権の効力</mark></strong>を、債権者の手段と不履行類型に分けて整理したものである。まず履行が可能であれば、民法414条により<strong><mark class="kw">履行請求</mark></strong>を考える。次に、履行されない理由が遅れなのか、不能なのか、内容の不完全さなのかを分類する。分類ができると、民法415条の<strong><mark class="kw">損害賠償</mark></strong>、民法416条の損害範囲、契約解除との接続が見える。行政書士試験では、この順序を飛ばしていきなり結論を出すと、履行遅滞と履行不能、損害賠償と解除を混同しやすい。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1060 620" role="img" aria-label="債務不履行責任の要件判断図">
+      <defs>
+        <marker id="arr18b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr18b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr18b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="530" y1="90" x2="530" y2="140" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr18b-blue)"/>
+      <line x1="530" y1="226" x2="530" y2="276" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr18b-orange)"/>
+      <line x1="530" y1="362" x2="530" y2="412" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr18b-red)"/>
+
+      <rect x="350" y="24" width="360" height="66" rx="6" fill="#1d4ed8" stroke="#1d4ed8" stroke-width="1"/>
+      <text x="530" y="52" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">債務の本旨に従った履行なし</text>
+      <text x="530" y="73" text-anchor="middle" font-size="12" fill="#dbeafe">遅滞・不能・不完全履行を確認</text>
+
+      <rect x="330" y="148" width="400" height="78" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="1"/>
+      <text x="530" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#1e3a8a">履行不能なら履行請求を排除</text>
+      <text x="530" y="201" text-anchor="middle" font-size="12" fill="#1e3a8a">民法412条の2・414条1項ただし書</text>
+
+      <rect x="330" y="284" width="400" height="78" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="530" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">帰責事由を検討</text>
+      <text x="530" y="337" text-anchor="middle" font-size="12" fill="#7c2d12">契約内容と取引上の社会通念で判断</text>
+
+      <rect x="330" y="420" width="400" height="78" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="530" y="450" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">損害と因果関係を確定</text>
+      <text x="530" y="473" text-anchor="middle" font-size="12" fill="#9f1239">通常損害・特別損害・金銭債務特則</text>
+
+      <line x1="330" y1="323" x2="145" y2="323" stroke="#ea580c" stroke-width="1.5" marker-end="url(#arr18b-orange)"/>
+      <rect x="20" y="282" width="170" height="82" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+      <text x="105" y="314" text-anchor="middle" font-size="15" font-weight="700" fill="#7c2d12">免責</text>
+      <text x="105" y="338" text-anchor="middle" font-size="12" fill="#7c2d12">責めに帰せない</text>
+
+      <line x1="730" y1="459" x2="910" y2="459" stroke="#e11d48" stroke-width="1.5" marker-end="url(#arr18b-red)"/>
+      <rect x="870" y="418" width="170" height="82" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+      <text x="955" y="450" text-anchor="middle" font-size="15" font-weight="700" fill="#9f1239">賠償額予定</text>
+      <text x="955" y="474" text-anchor="middle" font-size="12" fill="#9f1239">民法420条</text>
+
+      <rect x="70" y="542" width="920" height="48" rx="4" fill="#eff6ff" stroke="#2563eb" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="530" y="563" text-anchor="middle" font-size="13" fill="#1e3a8a">民法415条は「不履行があったか」と「免責されるか」を分けて読む</text>
+      <text x="530" y="582" text-anchor="middle" font-size="12" fill="#1e3a8a">故意・過失という言葉だけでなく、契約内容・リスク分配・社会通念を見る</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">債務不履行責任</mark></strong>の要件判断を上から順に示している。最初に債務の本旨に従った履行がないことを確認し、履行不能なら履行請求の可否を切り分ける。次に、債務者の責めに帰することができない事情があるかを、契約内容と取引上の社会通念から判断する。最後に、損害の発生、因果関係、民法416条の損害範囲、民法419条や420条の特則を検討する。この順序は、判例問題でも条文問題でも共通する実践的な読み方である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>履行遅滞・履行不能・不完全履行の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">履行遅滞</th>
+        <th class="col--b">履行不能</th>
+        <th class="col--c">不完全履行</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>定義</th>
+        <td><span class="em-a">履行可能</span>なのに履行期を過ぎて履行しない。</td>
+        <td><span class="em-b">履行が社会通念上不能</span>である。</td>
+        <td><span class="em-c">履行内容が本旨に合わない</span>。</td>
+      </tr>
+      <tr>
+        <th>問題局面</th>
+        <td>納期遅れ、代金支払遅れ、期限後の引渡し。</td>
+        <td>目的物滅失、法律上の移転不能、代替不能な給付の喪失。</td>
+        <td>品質不良、数量不足、説明義務違反、安全配慮義務違反。</td>
+      </tr>
+      <tr>
+        <th>履行請求</th>
+        <td>原則としてなお可能。</td>
+        <td>不能部分についてはできない。</td>
+        <td>追完・修補などが可能なら問題になる。</td>
+      </tr>
+      <tr>
+        <th>損害賠償</th>
+        <td>遅延による損害を請求する。</td>
+        <td>帰責事由があれば填補賠償を請求する。</td>
+        <td>不完全な履行により生じた損害を請求する。</td>
+      </tr>
+      <tr>
+        <th>試験での誤答</th>
+        <td>期限の定めのない債務で請求前から当然遅滞とする。</td>
+        <td>原始的不能なら契約は常に無効とする。</td>
+        <td>一応履行した以上、債務不履行は成立しないとする。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>通常損害・特別損害・金銭債務の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">通常損害</th>
+        <th class="col--b">特別損害</th>
+        <th class="col--c">金銭債務の遅延損害</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>根拠条文</th>
+        <td><span class="em-a">民法416条1項</span></td>
+        <td><span class="em-b">民法416条2項</span></td>
+        <td><span class="em-c">民法419条</span></td>
+      </tr>
+      <tr>
+        <th>内容</th>
+        <td>債務不履行から通常生ずべき損害。</td>
+        <td>特別の事情によって生じた損害。</td>
+        <td>金銭支払の遅れについて利率で算定する損害。</td>
+      </tr>
+      <tr>
+        <th>要件</th>
+        <td>通常性と相当因果関係が中心。</td>
+        <td>当事者が特別事情を予見すべきであったこと。</td>
+        <td>履行遅滞があれば具体的損害の証明を要しない。</td>
+      </tr>
+      <tr>
+        <th>抗弁・免責</th>
+        <td>民法415条の免責判断が問題になる。</td>
+        <td>特別事情の予見可能性がなければ範囲外。</td>
+        <td>債務者は不可抗力をもって抗弁できない。</td>
+      </tr>
+      <tr>
+        <th>誤答パターン</th>
+        <td>実損があればすべて賠償範囲とする。</td>
+        <td>実際に予見していた場合に限るとする。</td>
+        <td>債権者が具体的損害額を証明すべきとする。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践基準は、まず履行がまだ可能かを見ることである。可能なら<strong><mark class="kw">履行遅滞</mark></strong>、不能なら<strong><mark class="kw">履行不能</mark></strong>、履行されたが内容が契約目的に合わなければ<strong><mark class="kw">不完全履行</mark></strong>と考える。損害賠償の範囲では、取引類型から通常発生する損害か、債権者側の特殊事情によって拡大した損害かを分ける。金銭債務は民法419条の特則があるため、一般の債務不履行と同じ免責構造で処理しない。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法412条（履行期と履行遅滞）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務の履行について確定期限があるときは、債務者は、その期限の到来した時から遅滞の責任を負う。<br>債務の履行について不確定期限があるときは、債務者は、その期限の到来した後に履行の請求を受けた時又はその期限の到来したことを知った時のいずれか早い時から遅滞の責任を負う。<br>債務の履行について期限を定めなかったときは、債務者は、履行の請求を受けた時から遅滞の責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法412条</mark></strong>は、<strong><mark class="kw">履行遅滞</mark></strong>の開始時期を期限の種類ごとに定める。確定期限では期限到来が客観的に明らかであるため、請求を待たずに遅滞となる。不確定期限では、期限到来後の請求時または債務者が期限到来を知った時の早い方から遅滞となる。期限の定めのない債務では、債務者にいつ履行すべきかを知らせる必要があるため、履行請求を受けた時から遅滞となる。412条は損害賠償、解除、遅延損害金の出発点になる条文であり、試験では各項の入替えが狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法412条の2・412条の3（履行不能・受領遅滞）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務の履行が契約その他の債務の発生原因及び取引上の社会通念に照らして不能であるときは、債権者は、その債務の履行を請求することができない。<br>契約に基づく債務の履行がその契約の成立の時に不能であったことは、第四百十五条の規定によりその履行の不能によって生じた損害の賠償を請求することを妨げない。<br>債権者が債務の履行を受けることを拒み、又は受けることができない場合において、その債務の目的が特定物の引渡しであるときは、債務者は、履行の提供をした時からその引渡しをするまで、自己の財産に対するのと同一の注意をもって、その物を保存すれば足りる。</blockquote>
+      <p><strong><mark class="kw">民法412条の2</mark></strong>は、履行不能の場合に履行請求ができないことを明文化し、原始的不能でも損害賠償請求が妨げられないことを示す。これは、旧来の「原始的不能は当然無効」という整理を単純には採らない現行法の重要点である。<strong><mark class="kw">民法412条の3</mark></strong>は、債権者が受領を拒み、または受領できない場合の特定物保存義務を軽減する。債務者が履行の提供をした後は、引渡しまで自己の財産に対するのと同一の注意で足りる。債務者側の不履行と債権者側の受領遅滞を混同しないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法414条（履行の強制）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務者が任意に債務の履行をしないときは、債権者は、民事執行法その他強制執行の手続に関する法令の規定に従い、直接強制、代替執行、間接強制その他の方法による履行の強制を裁判所に請求することができる。ただし、債務の性質がこれを許さないときは、この限りでない。<br>前項の規定は、損害賠償の請求を妨げない。</blockquote>
+      <p><strong><mark class="kw">民法414条</mark></strong>は、履行請求を国家的強制で実現するための根拠である。直接強制は目的物引渡しや金銭支払のように債務者の意思を介さず実現できる場合、代替執行は第三者に代わってさせられる場合、間接強制は心理的圧迫により履行を促す場合に機能する。ただし、債務の性質が強制を許さないときは履行の強制ができない。2項は、履行の強制と損害賠償が排他的ではないことを示す。履行請求と損害賠償を常に二者択一とする選択肢は誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法415条（債務不履行による損害賠償）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務者がその債務の本旨に従った履行をしないとき又は債務の履行が不能であるときは、債権者は、これによって生じた損害の賠償を請求することができる。ただし、その債務の不履行が契約その他の債務の発生原因及び取引上の社会通念に照らして債務者の責めに帰することができない事由によるものであるときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法415条</mark></strong>は、債務不履行損害賠償の中心条文である。本文は、債務の本旨に従った履行がない場合と履行不能の場合を対象とし、ただし書で免責を定める。要件は、債務の存在、不履行、損害、因果関係、そして免責事由の有無として整理できる。改正後の文言では「故意・過失」だけでなく、契約内容、債務発生原因、取引上の社会通念からリスク分配を判断する。安全配慮義務のような付随義務違反も、債務の本旨に従った履行がない場合として損害賠償の基礎になり得る。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法416条（損害賠償の範囲）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務の不履行に対する損害賠償の請求は、これによって通常生ずべき損害の賠償をさせることをその目的とする。<br>特別の事情によって生じた損害であっても、当事者がその事情を予見すべきであったときは、債権者は、その賠償を請求することができる。</blockquote>
+      <p><strong><mark class="kw">民法416条</mark></strong>は、損害賠償を無制限に拡張しないための範囲限定規定である。1項の通常損害は、同種の債務不履行から一般に生じる損害である。2項の特別損害は、債権者側の特殊事情や取引状況によって生じる損害であり、当事者がその事情を予見すべきであったときに限って賠償範囲に入る。ここで問われるのは、債務者が実際に予見したかだけではなく、予見すべきであったかである。また、予見対象は損害額そのものではなく、損害を発生させた特別事情である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法419条・420条（金銭債務と賠償額予定）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">金銭の給付を目的とする債務の不履行については、その損害賠償の額は、債務者が遅滞の責任を負った最初の時点における法定利率によって定める。ただし、約定利率が法定利率を超えるときは、約定利率による。<br>前項の損害賠償については、債権者は、損害の証明をすることを要しない。<br>第一項の損害賠償については、債務者は、不可抗力をもって抗弁とすることができない。<br>当事者は、債務の不履行について損害賠償の額を予定することができる。この場合において、裁判所は、その額を増減することができない。</blockquote>
+      <p><strong><mark class="kw">民法419条</mark></strong>は、金銭債務の不履行について、損害額を利率で定型化し、損害証明を不要にし、不可抗力抗弁を排除する。金銭債務は履行不能になりにくく、支払遅延の損害も利息相当額として処理しやすいからである。<strong><mark class="kw">民法420条</mark></strong>は、損害賠償額の予定を認め、裁判所による増減を禁止する。これは当事者の事前のリスク配分を尊重する趣旨である。ただし、予定額が著しく過大で公序良俗に反する場合には、90条による制限が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法422条・422条の2（代償請求権・損益相殺）</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">債務者が、その債務の履行が不能となったのと同一の原因により債務の目的物の代償である権利又は利益を取得したときは、債権者は、その受けた損害の額の限度において、債務者に対し、その権利の移転又はその利益の償還を請求することができる。<br>債権者が、損害を受けたのと同一の原因により利益を受けたときは、裁判所は、損害賠償の額を定めるに当たり、その利益を控除するものとする。</blockquote>
+      <p><strong><mark class="kw">民法422条</mark></strong>は、履行不能と同一原因で債務者が保険金、代替物、補償金などの代償的利益を得た場合に、債権者が損害額の限度で移転または償還を請求できることを定める。<strong><mark class="kw">民法422条の2</mark></strong>は、債権者が同一原因で利益を受けた場合、その利益を損害賠償額から控除する損益相殺を明文化する。どちらも二重取りを避け、損害賠償を実損填補の制度として機能させるための規定である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 昭和50年2月25日 昭和48年(オ)第383号 民集29巻2号143頁</div>
+      <div class="case-card__title">陸上自衛隊八戸車両整備工場事件（安全配慮義務）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法415条</span>
+        <span class="badge badge--law">不完全履行</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>陸上自衛隊の車両整備工場で勤務していた隊員が、公務中に大型車両等の整備作業に関係して生命・身体を害する事故に遭った。隊員側は、国が作業場所、機械設備、作業方法、監督体制について安全を確保すべき立場にあったにもかかわらず、必要な安全措置を尽くさなかったとして損害賠償を求めた。争点は、雇用契約そのものとは異なる公務員関係でも、国が信義則上の付随義務として生命・身体の安全を保護する義務を負うか、その義務違反を<strong><mark class="kw">債務不履行</mark></strong>として構成できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、国と公務員との間の法律関係においても、国は公務員が職務遂行のため設置する場所・施設・器具等を使用し、または国の指示のもとで労務を提供する過程で、生命・健康を危険から保護するよう配慮すべき義務を負うとした。この義務は契約や任用関係の中心的給付そのものではないが、信義則上、法律関係に付随して認められる。裁判所は、当事者がある法律関係に基づいて特別な社会的接触関係に入った以上、その法律関係の内容・危険の性質・支配管理の程度に応じて、相手方の生命身体を保護する義務が生じ得ると考えた。したがって、安全配慮義務違反は<strong><mark class="kw">不完全履行</mark></strong>として債務不履行責任の根拠となる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">債務不履行</mark></strong>が物の引渡しや金銭支払の不履行に限られず、付随義務違反にも及ぶことを示す最重要判例である。行政書士試験では、「安全配慮義務は労働契約に明示されていなければ発生しない」「公務員関係では債務不履行責任を問題にできない」「生命身体の侵害は常に不法行為責任だけで処理する」という形で誤りが作られやすい。正しくは、当事者間に特別な社会的接触関係があり、一方が場所・設備・作業方法を支配管理する場合には、信義則上の付随義務として安全配慮義務を認め得る。不法行為責任との競合も問題になるが、債務不履行構成には消滅時効、立証責任、契約関係の内容把握という独自の意味がある。</p>
+      <h4>関連判例・条文</h4>
+      <p>中心条文は<strong><mark class="kw">民法415条</mark></strong>であり、債務の本旨に従った履行をしない場合の損害賠償責任として読む。安全配慮義務は、民法1条2項の信義則と結びつく付随義務であり、履行遅滞や履行不能だけでは説明できない<strong><mark class="kw">不完全履行</mark></strong>の典型例である。売買の契約不適合責任とは異なり、目的物の品質だけでなく、作業環境、説明、監督、危険防止措置といった法律関係全体の安全設計が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">大審院 大正7年8月27日 民録24輯1658頁</div>
+      <div class="case-card__title">特別事情損害の予見可能性</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法416条</span>
+        <span class="badge badge--law">特別損害</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>売買・運送・引渡しなどの取引関係において、債務者の履行遅滞または不履行により債権者側に通常の取引損害を超える損害が発生した。債権者は、自己の営業計画、転売先との契約、特定時期の価格変動など、通常の不履行から当然には生じない事情に基づく損害も賠償範囲に含めるべきだと主張した。これに対し債務者は、そのような特殊事情までは知らず、また賠償範囲が無制限に拡大することは相当でないと争った。中心争点は、民法416条2項の<strong><mark class="kw">特別損害</mark></strong>について、どの時点でどのような予見可能性が必要かであった。</p>
+      <h4>判旨</h4>
+      <p>大審院は、特別事情によって生じた損害について、当事者がその事情を予見し、または予見し得べきであったときに賠償範囲に含まれるとした。予見の対象は、損害額そのものを細かく知っていたことではなく、その損害を発生させる<strong><mark class="kw">特別事情</mark></strong>である。通常損害は債務不履行の一般的結果として賠償範囲に入るが、特別損害は取引上の公平から、債務者にその事情をリスクとして引き受けさせてよいだけの予見可能性が必要になる。裁判所の判断構造は、まず損害が通常損害か特別損害かを分類し、特別損害に当たる場合には、当事者がその特別事情を予見すべきであったかを検討するという二段階である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法416条</mark></strong>の読み方を決める基本判例である。試験では、「債務者が現実に知っていた場合に限る」「損害額まで具体的に予見していなければならない」「債権者に生じた損害はすべて賠償される」「特別損害は通常損害より大きい損害という意味である」という選択肢が作られやすい。正しくは、通常損害と特別損害の区別は金額の大小ではなく、損害発生の原因が通常の取引経過に含まれるか、特別の事情に依存するかで決まる。また、予見可能性は特別事情について要求され、損害額そのものについての完全な予見までは要求されない。</p>
+      <h4>関連判例・条文</h4>
+      <p>関連条文は<strong><mark class="kw">民法416条1項</mark></strong>と<strong><mark class="kw">民法416条2項</mark></strong>である。1項は通常損害、2項は特別損害を扱う。民法415条で債務不履行責任が成立しても、416条によって賠償範囲が限定されるため、責任成立と賠償範囲を分けて論じる必要がある。金銭債務では民法419条が損害額を利率で定型化するため、416条の一般的な損害範囲論とは処理が異なる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成6年4月21日 平成3年(オ)第621号 民集48巻3号901頁</div>
+      <div class="case-card__title">損害賠償額予定と裁判所の増減禁止</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法420条</span>
+        <span class="badge badge--law">違約金</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>契約当事者が、債務不履行があった場合に一定額を支払う旨の条項を設けていた。債務不履行後、債権者は契約条項どおりの金額を請求したが、債務者は、実際に生じた損害と比べて予定額が過大である、または取引経過に照らしてそのまま認めるのは不当であるとして、裁判所による減額を求めた。争点は、民法420条1項が「裁判所は、その額を増減することができない」と定める以上、裁判所が衡平を理由に予定額を修正できるかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、当事者が債務不履行について損害賠償額を予定した場合、裁判所は民法420条の趣旨に従い、原則としてその予定額を増減できないとした。損害賠償額の予定は、損害額の立証困難を回避し、あらかじめ紛争処理の基準を明確にする制度である。実損額との単純な比較だけで裁判所が自由に減額すれば、当事者が予定したリスク配分と紛争予防機能が失われる。もっとも、予定額が著しく過大で公序良俗に反するような例外場面では、民法90条による効力制限が別途問題になる。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">損害賠償額の予定</mark></strong>を、実損額の推定ではなく、当事者が損害額をあらかじめ確定する合意として理解するために重要である。試験では、「実際の損害が予定額より小さいとき、裁判所は当然に減額できる」「予定額を定めても債権者は常に実損との差額を追加請求できる」「違約金は常に制裁金であり損害賠償額の予定ではない」という肢が誤りになりやすい。民法420条3項は違約金を損害賠償額の予定と推定するため、契約上別段の趣旨が読み取れない限り、賠償額予定として扱う。</p>
+      <h4>関連判例・条文</h4>
+      <p>中心条文は<strong><mark class="kw">民法420条</mark></strong>であり、民法415条の損害賠償責任が発生した後の賠償額を事前に定める規定である。民法416条は通常損害・特別損害によって賠償範囲を限定するが、賠償額予定がある場合は、当事者がその範囲・額をあらかじめ処理している点に特色がある。公序良俗違反による制限は<strong><mark class="kw">民法90条</mark></strong>の問題であり、民法420条の「裁判所は増減できない」という原則とは段階を分けて考える。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出論点と解答アプローチ</span>
+    </div>
+    <div class="box__bd">
+      <p>第一に、<strong><mark class="kw">履行遅滞</mark></strong>の開始時期を期限の種類で分ける。確定期限は期限到来時、不確定期限は期限到来後の請求時または債務者が知った時の早い方、期限の定めがない債務は請求時である。誤りの選択肢例は「期限の定めのない債務は契約成立時から遅滞となる」であり、正しくは履行請求を受けた時からである。</p>
+      <p>第二に、<strong><mark class="kw">履行不能</mark></strong>と契約無効を混同しない。誤りの選択肢例は「契約成立時に目的物の給付が不能であった場合、契約は当然に無効で、損害賠償請求もできない」である。現行民法では、原始的不能でも民法415条による損害賠償請求を妨げない。</p>
+      <p>第三に、<strong><mark class="kw">損害賠償の範囲</mark></strong>では、通常損害と特別損害を分ける。誤りの選択肢例は「特別損害は、債務者が損害額を具体的に予見していた場合に限り賠償される」である。正しくは、特別事情を予見すべきであったかが基準であり、損害額そのものの予見ではない。</p>
+      <p>第四に、<strong><mark class="kw">金銭債務</mark></strong>では不可抗力抗弁が排除される。誤りの選択肢例は「地震で送金システムが停止した場合、金銭債務者は不可抗力を理由に遅延損害金を免れる」である。民法419条3項は、金銭債務の損害賠償について不可抗力を抗弁にできないと定める。</p>
+      <p>第五に、<strong><mark class="kw">損害賠償額の予定</mark></strong>では、裁判所の増減禁止を押さえる。誤りの選択肢例は「予定額が実損より高いとき、裁判所は常に相当額へ減額できる」である。原則は増減禁止であり、公序良俗違反による制限は別の例外問題である。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン1 履行請求と損害賠償</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「債務者が履行期に履行しない場合、債権者は損害賠償を請求できるだけで、履行の強制を求めることはできない」である。正しくは、<strong><mark class="kw">履行請求</mark></strong>は債権の基本的効力であり、履行が可能で債務の性質が強制を許す限り、民法414条により履行の強制を請求できる。損害賠償は履行請求を当然に排除しない。履行遅滞では、履行請求と遅延損害賠償が併存し得る点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン2 履行不能と原始的不能</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「契約成立時にすでに履行不能であった場合、契約は当然に無効であり、債権者は損害賠償を請求できない」である。正しくは、<strong><mark class="kw">民法412条の2</mark></strong>が、契約成立時の不能であっても民法415条の損害賠償請求を妨げないと定める。履行不能は履行請求を排除する理由にはなるが、損害賠償責任まで当然に排除するわけではない。履行請求の可否と損害賠償の可否を分けて読むことが必要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン3 予見可能性の対象</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「<strong><mark class="kw">特別損害</mark></strong>の賠償には、債務者が損害額まで具体的に予見していたことが必要である」である。正しくは、民法416条2項で問題となるのは、損害額そのものではなく、特別の事情を予見すべきであったかである。通常損害か特別損害かは金額の大小ではなく、通常の取引経過から生じるか、特殊事情に依存するかで区別する。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン4 金銭債務と不可抗力</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「金銭債務者は、災害や資金繰り悪化など不可抗力を証明すれば、遅延損害金の支払を免れる」である。正しくは、<strong><mark class="kw">民法419条</mark></strong>が、金銭債務の損害賠償について不可抗力を抗弁にできないと定める。金銭債務では損害額も利率で定型化され、債権者は具体的損害の証明を要しない。一般の特定物債務と同じ感覚で免責を認めると誤る。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤答パターン5 賠償額予定と違約金</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例は「違約金は制裁金であるから、損害賠償額の予定とは推定されない」または「裁判所は実損額に合わせて予定額を自由に増減できる」である。正しくは、<strong><mark class="kw">民法420条</mark></strong>により違約金は損害賠償額の予定と推定され、裁判所は原則として予定額を増減できない。公序良俗違反が問題になる場合でも、それは民法90条による効力制限であって、420条の原則を自由裁量で修正するものではない。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">混同しやすい接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">債権の効力</mark></strong>は、契約解除、危険負担、売買の契約不適合責任、不法行為と横断的につながる。解除は次単元で扱うが、解除できるかを判断する前提として、債務不履行の有無と履行不能の有無を確認する。危険負担では、当事者双方の帰責事由がない場合に反対給付がどうなるかを考えるため、債務不履行による損害賠償とは問題の立て方が異なる。売買の契約不適合責任は、目的物の種類・品質・数量が契約に適合しない場合の特則であり、不完全履行と重なるが、追完請求、代金減額、解除、損害賠償の順序を条文に即して整理する必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <p>令和2年施行の債権法改正は、<strong><mark class="kw">債権の効力</mark></strong>にも大きな影響を与えた。民法415条は、旧法時代に判例・学説で整理されていた債務不履行責任を、契約その他の債務発生原因と取引上の社会通念に照らして債務者の責めに帰することができるかという形で明文化した。これにより、単に故意・過失という言葉を探すのではなく、契約がどのリスクを誰に負わせているかを読む姿勢が必要になった。</p>
+
+  <p>民法412条の2は、履行不能の考え方を現行法に合わせて整理した条文である。契約成立時に不能であった場合でも、そのことだけで契約を当然無効とせず、民法415条の損害賠償請求を妨げないとする。これは、契約締結過程で不能を知りながら契約した者、または不能リスクを引き受けた者に責任を負わせる余地を確保するためである。</p>
+
+  <p>学習上は、まず「履行請求ができるか」を確認し、次に「損害賠償ができるか」を考えると整理しやすい。履行請求は履行不能で排除されるが、損害賠償は履行不能でも帰責事由があれば問題になる。さらに損害賠償では、民法415条で責任の有無、民法416条で範囲、民法419条・420条で特則を確認する。この順序を固定すると、条文番号を暗記するだけでなく、事例問題で論点を落としにくくなる。</p>
+
+  <p>実務では、契約書に納期、検査、追完、遅延損害金、損害賠償額の予定、不可抗力条項を置くことで、債務不履行時の処理をあらかじめ設計する。行政書士試験では実務文書の作成そのものは中心ではないが、契約条項がリスク分配を定めるという発想を持つと、民法415条ただし書の「契約その他の債務の発生原因及び取引上の社会通念」という文言を理解しやすい。債権総論のこの単元は、次の債権消滅、契約解除、売買契約、不法行為の損害賠償を読むための基礎である。</p>
+</section>
+
+</body>
+</html>

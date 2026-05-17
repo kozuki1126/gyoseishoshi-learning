@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無効と取消し | 行政書士試験 民法 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">無効と取消し</h1>
+  <p class="page-title-block__sub">法律行為の効力否定を、当然無効・取消し・追認・期間制限の順に整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法119条から126条</span>
+    <span class="badge badge--info">取消権者</span>
+    <span class="badge badge--info">追認</span>
+    <span class="badge badge--info">法定追認</span>
+    <span class="badge badge--info">原状回復</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">無効</mark></strong>と<strong><mark class="kw">取消し</mark></strong>は、どちらも法律行為の効力を否定する制度である。しかし、両者は同じ結論に見えて、出発点、主張できる者、追認の可否、時間制限、第三者への影響が大きく異なる。行政書士試験では、「初めから効力がないのか」「取り消されるまでは有効なのか」を取り違える選択肢が非常に作られやすい。</p>
+  <p>たとえば、未成年者が法定代理人の同意を得ずに高額な売買契約をした場合、その契約は当然に無効ではない。取り消されるまでは一応有効であり、取消権者が取り消すと、初めから無効であったものとみなされる。これに対し、相手方と通じて仮装した売買や、公序良俗に反する契約は、法律上当然に効力が否定される。</p>
+  <p>本単元の中心は、<strong><mark class="kw">民法119条</mark></strong>から<strong><mark class="kw">民法126条</mark></strong>までの短い条文群である。条文数は少ないが、制限行為能力者、意思表示の瑕疵、無権代理、第三者保護、不当利得、相続・会社法上の追認論まで接続する。択一式では条文の文言を細かく聞かれ、記述式では「取消しの効果」「追認の要件」「法定追認」「取消権の期間制限」を文章で説明できるかが問われる。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る効力否定の分岐</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに甲土地を売る契約をしたとする。AとBが通謀して売買を仮装しただけなら、<strong><mark class="kw">通謀虚偽表示</mark></strong>として原則無効である。Aが未成年者で法定代理人の同意を得ていなかったなら、契約は<strong><mark class="kw">取り消しうる行為</mark></strong>であり、取り消されるまでは有効に扱われる。Aが錯誤・詐欺・強迫によって契約した場合も、要件を満たせば取消しの問題になる。試験では、同じ「売買契約」でも、効力を否定する理由が何かを先に見極める必要がある。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">無効</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">無効</mark></strong>とは、法律行為が成立したように見えても、法律上当然に効力を生じない状態をいう。取消しの意思表示を待たず、初めから権利義務は発生しない。制度趣旨は、公序良俗違反、通謀虚偽表示、意思能力欠如のように、法がその効力を認めるべきでない行為を取引秩序から排除する点にある。</p>
+      <p>無効は、原則として誰でも、いつでも主張できる。ただし、善意の第三者保護規定や信義則により、無効主張が制限される場面はある。典型例は<strong><mark class="kw">民法94条2項</mark></strong>で、通謀虚偽表示の無効は善意の第三者に対抗できない。試験では「無効は追認すれば当然に初めから有効になる」とする選択肢が誤りであり、<strong><mark class="kw">民法119条</mark></strong>の本文とただし書を分けて読む必要がある。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">取消し</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">取消し</mark></strong>とは、いったん有効に成立した法律行為を、取消権者の意思表示によって行為時にさかのぼって効力を失わせる制度である。取り消されるまでは有効なので、契約上の履行請求や権利移転を前提に法律関係が進む。取消しがされると、<strong><mark class="kw">民法121条</mark></strong>により、初めから無効であったものとみなされる。</p>
+      <p>取消しの制度趣旨は、制限行為能力者や瑕疵ある意思表示をした者を保護しつつ、取引の安定も確保することにある。そのため、取消権者は<strong><mark class="kw">民法120条</mark></strong>で限定され、取消権は<strong><mark class="kw">民法126条</mark></strong>で期間制限を受ける。試験では「取り消されるまでは無効である」「誰でも取り消せる」「取消権に期間制限はない」という形で誤答が作られやすい。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">取消権者</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">取消権者</mark></strong>は、取り消すことができる行為について取消しの意思表示をできる者である。行為能力の制限による取消しでは、制限行為能力者本人、代理人、承継人、同意権者が問題になる。錯誤、詐欺、強迫による取消しでは、瑕疵ある意思表示をした者、その代理人、承継人に限られる。</p>
+      <p>この限定は、取消しが一方当事者を保護する制度であることから導かれる。相手方や無関係の第三者が、保護される側の意思に反して自由に取消しを主張できると、かえって取引が不安定になるからである。試験では、制限行為能力者の相手方が「本人の保護のため」と称して取り消すことはできない点、詐欺・強迫では被害者側だけが取消しの主体になる点を確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">追認</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">追認</mark></strong>とは、取り消すことができる行為を、取消権者が有効なものとして確定させる意思表示である。取り消すかどうかの選択権を持つ者が「もう取り消さない」と確定させるため、追認後は以後取り消せない。根拠は<strong><mark class="kw">民法122条</mark></strong>であり、追認権者は民法120条の取消権者と対応する。</p>
+      <p>追認が有効になるには、原則として取消しの原因となっていた状況が消滅し、かつ取消権を有することを知った後でなければならない。未成年者なら成年に達した後、強迫なら強迫状態を脱した後、詐欺なら詐欺に気づいた後が典型である。これは、保護される者が十分な判断状態を回復する前に追認させられることを防ぐためである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法定追認</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法定追認</mark></strong>とは、明示の追認意思表示がなくても、法律が追認したものとみなす制度である。取消権者が、追認できる時以後に、異議をとどめず、履行、履行の請求、更改、担保の供与、取得した権利の譲渡、強制執行をすると、<strong><mark class="kw">民法125条</mark></strong>により追認したものとみなされる。</p>
+      <p>制度趣旨は、取消しうる状態と矛盾する行動をした者に、後から取消しを認めると相手方の信頼を害する点にある。たとえば、未成年者が成年後に代金を支払い続けたのに、後から「未成年者だったから取り消す」と主張するのは信頼保護に反する。試験では、法定追認は「追認をすることができる時以後」でなければならない点と、「異議をとどめたとき」はみなし追認にならない点が狙われる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">無効行為の追認と転換</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">無効行為の追認</mark></strong>は、取り消すことができる行為の追認とは異なる。<strong><mark class="kw">民法119条</mark></strong>本文は、無効な行為は追認によっても効力を生じないとする。ただし、当事者が無効であることを知って追認したときは、その時点で新たな行為をしたものとみなされる。</p>
+      <p>つまり、無効行為の追認は原則として遡及効を持たない。取消しの追認が「初めから有効な状態を確定する」のに対し、無効行為の追認は「追認時から新しい法律行為をしたものと扱う」にとどまる。これと似ているが別の考え方が<strong><mark class="kw">無効行為の転換</mark></strong>であり、無効な行為が別の有効な法律行為の要件を満たす場合に、その別行為として効力を認める処理である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>図1：法律行為の効力判断の全体構造</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-main-8a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-warn-8a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+        <marker id="arr-sub-8a" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L7,3 z" fill="var(--orange-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="490" y1="106" x2="490" y2="154" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="188" y1="154" x2="792" y2="154" stroke="var(--blue-600)" stroke-width="1.7"/>
+      <line x1="188" y1="154" x2="188" y2="208" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-8a)"/>
+      <line x1="490" y1="154" x2="490" y2="208" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-8a)"/>
+      <line x1="792" y1="154" x2="792" y2="208" stroke="var(--blue-600)" stroke-width="1.7" marker-end="url(#arr-main-8a)"/>
+      <rect x="424" y="140" width="132" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="490" y="157" text-anchor="middle" font-size="13" fill="var(--blue-700)">三方向へ分類</text>
+
+      <line x1="188" y1="294" x2="188" y2="388" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-8a)"/>
+      <rect x="124" y="332" width="128" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="188" y="349" text-anchor="middle" font-size="13" fill="var(--orange-600)">初めから不発生</text>
+
+      <line x1="490" y1="294" x2="490" y2="388" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-8a)"/>
+      <rect x="422" y="332" width="136" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="490" y="349" text-anchor="middle" font-size="13" fill="var(--orange-600)">取消しで遡及無効</text>
+
+      <line x1="792" y1="294" x2="792" y2="388" stroke="var(--orange-600)" stroke-width="1.7" marker-end="url(#arr-sub-8a)"/>
+      <rect x="724" y="332" width="136" height="24" rx="3" fill="var(--orange-50)" stroke="var(--orange-200)" stroke-width="0.5"/>
+      <text x="792" y="349" text-anchor="middle" font-size="13" fill="var(--orange-600)">追認で確定有効</text>
+
+      <polyline points="340,254 382,254 382,424 338,424" fill="none" stroke="var(--red-600)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-warn-8a)"/>
+      <rect x="322" y="312" width="120" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="382" y="329" text-anchor="middle" font-size="13" fill="var(--red-800)">追認の効果差</text>
+
+      <polyline points="640,254 682,254 682,424 642,424" fill="none" stroke="var(--red-600)" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-warn-8a)"/>
+      <rect x="622" y="312" width="120" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="682" y="329" text-anchor="middle" font-size="13" fill="var(--red-800)">期間で消滅</text>
+
+      <g>
+        <rect x="320" y="38" width="340" height="68" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="490" y="67" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">法律行為の効力判断</text>
+        <text x="490" y="90" text-anchor="middle" font-size="12" fill="var(--blue-700)">効力発生要件と保護規定を順に確認</text>
+      </g>
+      <g>
+        <rect x="58" y="216" width="260" height="78" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="188" y="247" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">当然無効</text>
+        <text x="188" y="272" text-anchor="middle" font-size="12" fill="var(--orange-900)">公序良俗・虚偽表示・意思能力欠如</text>
+      </g>
+      <g>
+        <rect x="360" y="216" width="260" height="78" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="490" y="247" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">取り消しうる行為</text>
+        <text x="490" y="272" text-anchor="middle" font-size="12" fill="var(--orange-900)">制限行為能力・錯誤・詐欺強迫</text>
+      </g>
+      <g>
+        <rect x="662" y="216" width="260" height="78" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="792" y="247" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">追認・法定追認</text>
+        <text x="792" y="272" text-anchor="middle" font-size="12" fill="var(--orange-900)">取消権を失わせる確定処理</text>
+      </g>
+      <g>
+        <rect x="58" y="396" width="260" height="78" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="188" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">無効行為の追認</text>
+        <text x="188" y="452" text-anchor="middle" font-size="12" fill="var(--blue-700)">民法119条・新たな行為</text>
+      </g>
+      <g>
+        <rect x="360" y="396" width="260" height="78" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="490" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">取消しの効果</text>
+        <text x="490" y="452" text-anchor="middle" font-size="12" fill="var(--blue-700)">民法121条・原状回復へ進む</text>
+      </g>
+      <g>
+        <rect x="662" y="396" width="260" height="78" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="792" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">取消権の期間制限</text>
+        <text x="792" y="452" text-anchor="middle" font-size="12" fill="var(--blue-700)">民法126条・5年と20年</text>
+      </g>
+      <rect x="58" y="532" width="864" height="42" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="490" y="558" text-anchor="middle" font-size="12" fill="var(--red-800)">判断順序：無効原因の有無 → 取消原因の有無 → 追認・法定追認の有無 → 取消権の期間制限</text>
+    </svg>
+  </div>
+  <p>図1は、法律行為の効力を否定する場面を三方向に分けている。まず、公序良俗違反や通謀虚偽表示のように当然無効となる場合は、取消しを待たずに効力が発生しない。次に、制限行為能力や錯誤・詐欺・強迫のように保護される者へ取消権を与える場合は、取り消されるまでは一応有効である。さらに、追認や法定追認があると取消権は失われ、期間制限が経過しても取消権は消滅する。試験では、どの段階の話をしている選択肢なのかを先に分類すると誤りを見抜きやすい。</p>
+
+  <h3>図2：取消し・追認・法定追認の時間軸</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 920 520" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arr-main-8b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-warn-8b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="120" y1="92" x2="808" y2="92" stroke="var(--blue-600)" stroke-width="1.8" marker-end="url(#arr-main-8b)"/>
+      <line x1="120" y1="92" x2="120" y2="338" stroke="var(--blue-600)" stroke-width="1.5"/>
+      <line x1="420" y1="92" x2="420" y2="338" stroke="var(--blue-600)" stroke-width="1.5"/>
+      <line x1="690" y1="92" x2="690" y2="338" stroke="var(--blue-600)" stroke-width="1.5"/>
+
+      <rect x="78" y="106" width="84" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="120" y="123" text-anchor="middle" font-size="13" fill="var(--blue-700)">行為時</text>
+      <rect x="332" y="106" width="176" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="420" y="123" text-anchor="middle" font-size="13" fill="var(--blue-700)">追認可能時</text>
+      <rect x="610" y="106" width="160" height="24" rx="3" fill="var(--blue-50)" stroke="var(--blue-200)" stroke-width="0.5"/>
+      <text x="690" y="123" text-anchor="middle" font-size="13" fill="var(--blue-700)">期間満了</text>
+
+      <line x1="420" y1="194" x2="690" y2="194" stroke="var(--red-600)" stroke-width="1.7" marker-end="url(#arr-warn-8b)"/>
+      <rect x="482" y="180" width="146" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="555" y="197" text-anchor="middle" font-size="13" fill="var(--red-800)">5年間行使なし</text>
+
+      <line x1="120" y1="278" x2="690" y2="278" stroke="var(--red-600)" stroke-width="1.7" stroke-dasharray="5,4" marker-end="url(#arr-warn-8b)"/>
+      <rect x="318" y="264" width="174" height="24" rx="3" fill="var(--red-50)" stroke="var(--red-400)" stroke-width="0.5"/>
+      <text x="405" y="281" text-anchor="middle" font-size="13" fill="var(--red-800)">行為時から20年</text>
+
+      <g>
+        <rect x="42" y="350" width="190" height="70" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="137" y="379" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">一応有効</text>
+        <text x="137" y="402" text-anchor="middle" font-size="12" fill="var(--orange-900)">取消し前は権利義務が動く</text>
+      </g>
+      <g>
+        <rect x="330" y="350" width="220" height="70" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="1.5"/>
+        <text x="440" y="379" text-anchor="middle" font-size="15" font-weight="700" fill="var(--orange-900)">追認・法定追認</text>
+        <text x="440" y="402" text-anchor="middle" font-size="12" fill="var(--orange-900)">以後取り消すことができない</text>
+      </g>
+      <g>
+        <rect x="642" y="350" width="220" height="70" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="1.5"/>
+        <text x="752" y="379" text-anchor="middle" font-size="15" font-weight="700" fill="var(--blue-900)">取消権消滅</text>
+        <text x="752" y="402" text-anchor="middle" font-size="12" fill="var(--blue-700)">5年または20年で確定有効</text>
+      </g>
+
+      <rect x="56" y="454" width="808" height="38" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="460" y="478" text-anchor="middle" font-size="12" fill="var(--red-800)">追認可能時とは、取消原因が消滅し、取消権を有することを知った時をいうのが原則である</text>
+    </svg>
+  </div>
+  <p>図2は、取消しうる行為が時間の経過でどのように確定するかを示している。行為時から取消し前までは一応有効であり、取消権者が取り消せば行為時にさかのぼって無効とみなされる。追認可能時以後に追認や法定追認があると、以後取消しはできなくなる。さらに、追認可能時から5年、または行為時から20年が経過すると、取消権は時効により消滅する。期間制限は「5年と20年のどちらか遅い方」ではなく、どちらかの要件に当たれば消滅する点が重要である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>表1：無効と取消しの基本比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">無効</th>
+        <th class="col--b">取消し</th>
+        <th class="col--c">試験での見分け方</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">定義</th>
+        <td class="col--a"><span class="em-a">初めから当然に効力を生じない</span>状態である。</td>
+        <td class="col--b"><span class="em-b">取り消されるまでは一応有効</span>で、取消しにより遡及的に効力を失う。</td>
+        <td class="col--c">「当然」「初めから効力なし」は<span class="em-c">無効</span>、「取り消すことができる」は取消し。</td>
+      </tr>
+      <tr>
+        <th class="col--label">主張できる者</th>
+        <td class="col--a">原則として利害関係人が主張でき、取消権者のような限定はない。</td>
+        <td class="col--b"><strong><mark class="kw">民法120条</mark></strong>により取消権者に限定される。</td>
+        <td class="col--c">相手方が自由に取り消せる、という選択肢は<span class="em-c">誤り</span>。</td>
+      </tr>
+      <tr>
+        <th class="col--label">追認</th>
+        <td class="col--a"><strong><mark class="kw">民法119条</mark></strong>本文により、追認しても効力を生じないのが原則。</td>
+        <td class="col--b"><strong><mark class="kw">民法122条</mark></strong>により追認すると以後取り消せない。</td>
+        <td class="col--c">無効行為の追認は新たな行為、取消しの追認は確定有効化。</td>
+      </tr>
+      <tr>
+        <th class="col--label">期間制限</th>
+        <td class="col--a">無効主張そのものに<strong><mark class="kw">民法126条</mark></strong>の期間制限はない。</td>
+        <td class="col--b">追認可能時から5年、行為時から20年で取消権が消滅する。</td>
+        <td class="col--c">5年・20年が出たら<span class="em-c">取消権</span>の期間制限を疑う。</td>
+      </tr>
+      <tr>
+        <th class="col--label">第三者保護</th>
+        <td class="col--a"><strong><mark class="kw">民法94条2項</mark></strong>のような個別規定で第三者が保護されることがある。</td>
+        <td class="col--b">錯誤や詐欺では、第三者保護規定の有無・要件を個別に確認する。</td>
+        <td class="col--c">「無効なら常に全第三者へ対抗可」と単純化しない。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>無効と取消しを見分ける実践的な基準は、「誰を保護するための制度か」である。公益や取引秩序上その効力を認めてはいけない場合は無効になりやすい。制限行為能力者や詐欺・強迫の被害者のように、特定の者に選択権を与える趣旨なら取消しになりやすい。条文に「無効とする」とあるのか、「取り消すことができる」とあるのかを最後に確認する。</p>
+
+  <h3>表2：追認に関する三つの処理</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">取り消しうる行為の追認</th>
+        <th class="col--b">無効行為の追認</th>
+        <th class="col--c">法定追認</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col--label">根拠条文</th>
+        <td class="col--a"><strong><mark class="kw">民法122条</mark></strong>・<strong><mark class="kw">民法124条</mark></strong></td>
+        <td class="col--b"><strong><mark class="kw">民法119条</mark></strong></td>
+        <td class="col--c"><strong><mark class="kw">民法125条</mark></strong></td>
+      </tr>
+      <tr>
+        <th class="col--label">効果</th>
+        <td class="col--a"><span class="em-a">以後取り消せない</span>。行為は確定的に有効になる。</td>
+        <td class="col--b">原則効力なし。ただし無効を知って追認すれば<span class="em-b">新たな行為</span>とみなす。</td>
+        <td class="col--c">追認の意思表示がなくても、一定行為により<span class="em-c">追認したものとみなす</span>。</td>
+      </tr>
+      <tr>
+        <th class="col--label">時期要件</th>
+        <td class="col--a">取消原因消滅後かつ取消権を知った後が原則。</td>
+        <td class="col--b">当事者が無効であることを知って追認することが必要。</td>
+        <td class="col--c">追認をすることができる時以後であることが必要。</td>
+      </tr>
+      <tr>
+        <th class="col--label">典型例</th>
+        <td class="col--a">未成年者が成年後に契約を有効と認める。</td>
+        <td class="col--b">無効な契約であると知った当事者が新たに同内容の合意をする。</td>
+        <td class="col--c">取消権者が異議なく履行、履行請求、担保供与などをする。</td>
+      </tr>
+      <tr>
+        <th class="col--label">誤答パターン</th>
+        <td class="col--a">「追認後も取消せる」とする選択肢は誤り。</td>
+        <td class="col--b">「当然に行為時へ遡って有効」とする選択肢は誤り。</td>
+        <td class="col--c">「取消原因消滅前の履行でも法定追認」とする選択肢は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>追認は、同じ言葉でも対象により効果が変わる。取り消しうる行為では、取消権を失わせる確定処理である。無効行為では、原則として効力を発生させず、無効を知った追認でも新たな行為とみなすだけである。法定追認は、追認という言葉を発していなくても、取消権者の行動から追認を擬制する制度である。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法90条・94条・95条・96条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第九十条　公の秩序又は善良の風俗に反する法律行為は、無効とする。</p>
+        <p>第九十四条　相手方と通じてした虚偽の意思表示は、無効とする。<br>2　前項の規定による意思表示の無効は、善意の第三者に対抗することができない。</p>
+        <p>第九十五条　意思表示は、次に掲げる錯誤に基づくものであって、その錯誤が法律行為の目的及び取引上の社会通念に照らして重要なものであるときは、取り消すことができる。</p>
+        <p>第九十六条　詐欺又は強迫による意思表示は、取り消すことができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法90条</mark></strong>と<strong><mark class="kw">民法94条</mark></strong>は無効原因、<strong><mark class="kw">民法95条</mark></strong>と<strong><mark class="kw">民法96条</mark></strong>は取消原因の代表である。錯誤は令和2年施行の改正後、原則として無効ではなく取消しとして整理されている。詐欺取消しは善意無過失の第三者に対抗できないが、強迫取消しには同じ第三者保護規定が置かれていない点も頻出である。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法119条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百十九条　無効な行為は、追認によっても、その効力を生じない。ただし、当事者がその行為の無効であることを知って追認をしたときは、新たな行為をしたものとみなす。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法119条</mark></strong>は、無効行為の追認を扱う中心条文である。本文は、無効な行為は追認しても効力を生じないという原則を示す。ただし書は、当事者が無効を知って追認したときに、追認時から新たな法律行為をしたものとみなす。ここでは、取り消しうる行為の追認のように行為時へ当然に遡るわけではない点を押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法120条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百二十条　行為能力の制限によって取り消すことができる行為は、制限行為能力者又はその代理人、承継人若しくは同意をすることができる者に限り、取り消すことができる。</p>
+        <p>2　錯誤、詐欺又は強迫によって取り消すことができる行為は、瑕疵ある意思表示をした者又はその代理人若しくは承継人に限り、取り消すことができる。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法120条</mark></strong>は取消権者を限定する。行為能力の制限では、本人保護のため、制限行為能力者本人だけでなく、代理人、承継人、同意権者も取消しができる。錯誤・詐欺・強迫では、瑕疵ある意思表示をした者側に主体が限定される。相手方が「不安定だから取り消したい」と考えても、この条文上の取消権者でなければ取り消せない。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法121条・121条の2</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百二十一条　取り消された行為は、初めから無効であったものとみなす。</p>
+        <p>第百二十一条の二　無効な行為に基づく債務の履行として給付を受けた者は、相手方を原状に復させる義務を負う。</p>
+        <p>3　第一項の規定にかかわらず、行為の時に意思能力を有しなかった者は、その行為によって現に利益を受けている限度において、返還の義務を負う。行為の時に制限行為能力者であった者についても、同様とする。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法121条</mark></strong>は取消しの遡及効を定める。取り消されると、法律行為は初めから無効であったものとみなされる。<strong><mark class="kw">民法121条の2</mark></strong>は、その後の原状回復義務を定める。給付を受けた者は原則として相手方を原状に復させるが、意思無能力者や制限行為能力者は現に利益を受けている限度で返還すれば足りる。この現存利益ルールは制限行為能力者保護と結び付けて理解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法122条・124条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百二十二条　取り消すことができる行為は、第百二十条に規定する者が追認したときは、以後、取り消すことができない。</p>
+        <p>第百二十四条　取り消すことができる行為の追認は、取消しの原因となっていた状況が消滅し、かつ、取消権を有することを知った後にしなければ、その効力を生じない。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法122条</mark></strong>は追認の効果、<strong><mark class="kw">民法124条</mark></strong>は追認の要件を定める。追認できる主体は民法120条の取消権者であり、追認後は以後取り消せない。追認の時期は、取消原因が消滅し、取消権を知った後が原則である。したがって、未成年者がまだ未成年の間に単独で追認したという設定や、強迫状態が続いている間に追認したという設定では、追認の効力が問題になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法125条・126条</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">
+        <p>第百二十五条　追認をすることができる時以後に、取り消すことができる行為について次に掲げる事実があったときは、追認をしたものとみなす。ただし、異議をとどめたときは、この限りでない。</p>
+        <p>一　全部又は一部の履行　二　履行の請求　三　更改　四　担保の供与　五　取り消すことができる行為によって取得した権利の全部又は一部の譲渡　六　強制執行</p>
+        <p>第百二十六条　取消権は、追認をすることができる時から五年間行使しないときは、時効によって消滅する。行為の時から二十年を経過したときも、同様とする。</p>
+      </blockquote>
+      <p><strong><mark class="kw">民法125条</mark></strong>は法定追認の列挙規定である。列挙事由は、いずれも有効な行為であることを前提とする行動である。<strong><mark class="kw">民法126条</mark></strong>は取消権の期間制限を定める。追認可能時から5年、行為時から20年という二つの起算点と期間を混同しないことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和37年8月10日　昭和34(オ)504　民集16巻8号1700頁</div>
+      <div class="case-card__title">他人の権利の処分と追認（抵当権設定登記抹消等請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法116条類推</span>
+        <span class="badge badge--law">民法119条</span>
+        <span class="badge badge--law">追認</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>真実の権利者ではない者が、他人の権利を自己の権利であるかのように処分し、抵当権設定登記などの処理が行われた。後に真実の権利者がその処分行為を知り、これを認める態度をとったため、追認の効力が問題になった。争点は、非権利者による処分を真実の権利者が追認した場合、追認の効果が処分時にさかのぼるのか、それとも追認時からだけ効力を生じるのかである。相手方にとっては、担保権や登記の効力がいつから認められるかが取引安全に直結するため、単なる抽象論ではなく不動産取引の帰属を左右する問題であった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、甲が乙の権利を自己の権利であるとして処分した場合に、乙がこれを追認したときは、無権代理行為の追認に関する民法116条の類推適用により、処分の時にさかのぼって乙について効力を生ずると判断した。裁判所は、形式的には無権利者処分であっても、真実の権利者が後から効果帰属を承認する構造が無権代理の追認と類似すると捉えた。これにより、権利者の追認によって取引関係を安定させる余地が認められる。ただし、この判例はすべての無効行為について民法119条ただし書を超える遡及効を認めたものではなく、他人の権利処分という特殊な類型で民法116条類推を用いた点に射程がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例の学習価値は、<strong><mark class="kw">無効行為の追認</mark></strong>と<strong><mark class="kw">無権代理・他人の権利処分の追認</mark></strong>を機械的に同一視しない点にある。民法119条だけを見れば、無効行為の追認は原則として効力を生じず、無効を知った追認でも新たな行為とみなされるにとどまる。ところが、他人の権利を処分した者の行為を真実の権利者が追認する場面では、民法116条類推により遡及効が肯定され得る。試験では「無効行為の追認は常に遡及効なし」と単純化する選択肢と、「民法119条の追認は常に民法116条類推で遡及する」とする選択肢の双方に注意する。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和42年9月26日　昭和38(オ)147　民集21巻7号1870頁</div>
+      <div class="case-card__title">定款に記載のない財産引受と追認（自動車譲渡代金請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">追認の限界</span>
+        <span class="badge badge--law">会社法接続</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>会社設立に関係して、定款に記載されていない財産引受が問題になった。財産引受は、会社設立時に成立後の会社が一定の財産を譲り受ける契約であり、会社財産の基礎や株主・債権者の利益に影響する。ところが、必要な定款記載を欠く財産引受について、成立後の会社が追認すれば有効になるのかが争われた。相手方は、会社が後から承認した以上、契約の効力を認めるべきだと主張したが、定款記載を要求する規律の趣旨を追認で潜脱できるかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、定款に記載のない財産引受は、成立後の会社が追認しても有効とならないと判断した。これは、財産引受について定款記載を要求する制度が、設立時の会社財産の確定、株主・債権者保護、発起人による不透明な財産移転の防止という公的な規律を含むためである。単に当事者が後で承認したというだけで有効化できるなら、定款記載という要式的な保護手段が意味を失う。したがって、追認により有効化できるかは、無効原因の性質と規定の趣旨を見て判断する必要がある。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、追認の限界を理解する補助線になる。民法総則の単元では、無効行為の追認について民法119条を学ぶが、すべての無効行為が当事者の意思で自由に救済されるわけではない。強行的・要式的な規律が置かれている場合、追認による有効化を認めると制度目的を害することがある。試験では、民法総則だけでなく会社法の設立規制と横断して、「追認できる無効」と「追認しても有効にならない無効」を区別する視点が必要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ1 無効と取消しの初期状態</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「取り消すことができる行為は、取消しの意思表示がされる前から当然に無効である。」これは誤りである。正しくは、取り消されるまでは一応有効であり、取消しにより初めから無効であったものとみなされる。</p>
+      <p>誤りの選択肢例：「無効な行為は、取消権者が取り消すことにより初めて効力を失う。」これも誤りである。無効は取消しを待たず当然に効力を生じない。条文の「無効とする」と「取り消すことができる」の文言差を必ず確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ2 取消権者の限定</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「制限行為能力者がした契約は、相手方も自由に取り消すことができる。」正しくは、行為能力の制限による取消しは、制限行為能力者、代理人、承継人、同意権者に限られる。相手方には、不安定な状態を解消するための催告など別制度が問題になることはあっても、民法120条の取消権者そのものではない。</p>
+      <p>誤りの選択肢例：「詐欺による意思表示は、詐欺をした相手方も取り消すことができる。」これは保護の方向を逆にした誤りである。錯誤、詐欺、強迫では、瑕疵ある意思表示をした者側だけが取消権者になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ3 追認の時期と効果</span>
+    </div>
+    <div class="box__bd">
+      <p>誤りの選択肢例：「取り消すことができる行為の追認は、取消しの原因となっていた状況が消滅していなくても常に有効である。」正しくは、民法124条により、取消原因の消滅と取消権を有することの認識が必要であるのが原則である。</p>
+      <p>誤りの選択肢例：「無効な行為を追認すれば、その行為は当然に行為時へさかのぼって有効になる。」正しくは、民法119条本文により追認しても効力を生じないのが原則であり、無効を知って追認したときでも新たな行為をしたものとみなされるにとどまる。無権代理や他人の権利処分の追認と混同しない。</p>
+    </div>
+  </div>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマ4 法定追認と期間制限</span>
+    </div>
+    <div class="box__bd">
+      <p>法定追認では、六つの事由を丸暗記するだけでは足りない。いずれも「有効な契約であることを前提にした行動」と理解すると判断しやすい。履行、履行の請求、更改、担保供与、取得権利の譲渡、強制執行は、取消しうる状態と矛盾する行動である。</p>
+      <p>誤りの選択肢例：「取消権は、追認できる時から20年間、行為時から5年間行使しないと消滅する。」これは数字と起算点を入れ替えた誤りである。正しくは、追認可能時から5年、行為時から20年である。記述式では「追認をすることができる時」という表現を落とさない。</p>
+    </div>
+  </div>
+
+  <h3>他分野との横断的なつながり</h3>
+  <p><strong><mark class="kw">制限行為能力者制度</mark></strong>との関係では、未成年者や成年被後見人などがどの行為を取り消せるか、追認できる時がいつかを確認する。<strong><mark class="kw">意思表示の瑕疵</mark></strong>との関係では、錯誤・詐欺・強迫が無効ではなく取消しとして処理される点が重要である。<strong><mark class="kw">無権代理</mark></strong>との関係では、無権代理行為の追認が民法116条により遡及効を持つ点と、民法119条の無効行為の追認との違いを整理する。<strong><mark class="kw">会社法</mark></strong>との関係では、追認しても有効化できない強行的・要式的規律があることを押さえる。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">令和2年施行 民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年改正・令和2年施行の民法改正では、本単元と接続する重要な変更がある。第一に、錯誤は従来「無効」と説明されてきたが、改正後は<strong><mark class="kw">取り消すことができる</mark></strong>ものとして条文化された。これにより、錯誤は取消権者、追認、期間制限、第三者保護の枠組みで整理する必要がある。</p>
+      <p>第二に、<strong><mark class="kw">民法121条の2</mark></strong>が整備され、取消し・無効後の原状回復義務が明文化された。特に、意思無能力者や制限行為能力者が現に利益を受けている限度で返還義務を負う点は、行為能力制度の保護趣旨と結び付く。単に「返せばよい」と覚えず、誰がどの限度で返還するかを確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">info</span>
+      <span class="box__label">実務で効力判断を急ぐ理由</span>
+    </div>
+    <div class="box__bd">
+      <p>契約実務では、法律行為が無効なのか、取り消しうるにとどまるのかは重要である。無効なら履行請求の基礎がなく、すでに給付があれば原状回復や不当利得の問題になる。取り消しうる行為なら、取消権者が取り消すか追認するか、法定追認に当たる行動があるか、期間制限が経過していないかを確認しなければならない。</p>
+      <p>行政書士の実務に近い場面でも、委任状、契約書、遺産分割協議書、会社設立関係書類などについて、本人の意思能力、行為能力、代理権、錯誤・詐欺・強迫の有無を確認する必要がある。効力判断を誤ると、後に作成書類や申請の前提が崩れるため、総則の知識は実務的にも基礎になる。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">学習整理の注意</span>
+    </div>
+    <div class="box__bd">
+      <p><strong class="warn">無効と取消しは、結論だけでなく、そこへ至るプロセスで区別する。</strong>最初に無効原因か取消原因かを分類し、次に誰が主張できるかを確認する。さらに、追認・法定追認・期間制限の有無を順に見る。最後に、第三者保護規定が個別に置かれているかを確認する。この順序を固定すれば、長い事例問題でも安定して判断できる。</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

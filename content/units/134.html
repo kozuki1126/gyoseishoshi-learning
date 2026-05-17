@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不当利得 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">不当利得</h1>
+  <p class="page-title-block__sub">法律上の原因を欠く財産移転を、要件・返還範囲・特則・類型から整理する</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法703条</span>
+    <span class="badge badge--info">民法704条</span>
+    <span class="badge badge--info">非債弁済</span>
+    <span class="badge badge--info">期限前弁済</span>
+    <span class="badge badge--info">他人の債務の弁済</span>
+    <span class="badge badge--info">不法原因給付</span>
+    <span class="badge badge--info">現存利益</span>
+  </div>
+</div>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">不当利得</mark></strong>は、法律上の正当な理由がないのに、ある人の財産や労務から別の人が利益を受け、そのために前者に損失が生じた場合に、受益者へ返還義務を負わせる制度である。典型例は、支払う必要のない金銭を誤って振り込んだ、契約が無効・取消し・解除になったのに受け取った物や金銭が残っている、他人の物を無断で利用して使用利益を得た、といった場面である。契約責任は「約束を守らなかったこと」、不法行為責任は「違法に損害を与えたこと」を問題にするのに対し、<strong><mark class="kw">不当利得</mark></strong>は「利益をそのまま保持させてよいか」を問題にする。</p>
+
+  <p>行政書士試験では、<strong><mark class="kw">民法703条</mark></strong>の四要件、すなわち受益、損失、因果関係、法律上の原因の欠如を正確に並べられることが出発点である。そのうえで、<strong><mark class="kw">善意の受益者</mark></strong>は利益の存する限度で返還すれば足り、<strong><mark class="kw">悪意の受益者</mark></strong>は<strong><mark class="kw">民法704条</mark></strong>により利息を付して返還し、なお損害があれば損害賠償責任を負う、という返還範囲の違いが問われる。さらに、<strong><mark class="kw">非債弁済</mark></strong>、<strong><mark class="kw">期限前弁済</mark></strong>、<strong><mark class="kw">他人の債務の弁済</mark></strong>、<strong><mark class="kw">不法原因給付</mark></strong>という特則を、条文番号と効果で区別する必要がある。</p>
+
+  <p>この単元が難しいのは、単に「もらいすぎを返す制度」と覚えるだけでは解けない点にある。<strong><mark class="kw">民法705条</mark></strong>のように、債務がないと知って支払った者の返還請求を認めない規定がある。<strong><mark class="kw">民法708条</mark></strong>のように、反社会的な原因で給付した者には返還請求を許さない規定もある。一方で、受益者側にだけ不法原因があるときは返還請求ができる。つまり、<strong><mark class="kw">不当利得</mark></strong>は公平を実現する制度であるが、いつでも機械的に元に戻す制度ではない。財産移転を安定させる要請、取引安全、給付者の自己責任、不法な目的への裁判所の不関与と調整しながら理解する必要がある。</p>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">lightbulb</span>
+      <span class="box__label">具体例で見る不当利得</span>
+    </div>
+    <div class="box__bd">
+      <p>AがBに十万円を送金するつもりで、誤ってCの口座へ十万円を振り込んだ。CはAとの間に売買契約も貸金関係もなく、十万円を受け取る正当な理由がない。この場合、CはAの財産によって十万円の利益を受け、Aには十万円の損失が生じているため、原則として<strong><mark class="kw">民法703条</mark></strong>の<strong><mark class="kw">不当利得返還義務</mark></strong>が問題になる。もっとも、Cが善意で受け取り、生活費として通常の支出に使い切った場合にどこまで返すのか、Cが誤振込みと知りながら使った場合に利息や損害まで負うのかは、<strong><mark class="kw">善意の受益者</mark></strong>と<strong><mark class="kw">悪意の受益者</mark></strong>の区別で判断する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不当利得</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不当利得</mark></strong>とは、法律上の原因なく他人の財産又は労務によって利益を受け、そのために他人に損失を及ぼした者に、利益の返還を命じる制度である。根拠は<strong><mark class="kw">民法703条</mark></strong>である。制度趣旨は、財産移転の形式だけを見ると利益取得が起きているが、その利益を保持させる正当な理由がない場合に、公平の観念から財産状態を調整する点にある。成立要件は、受益者に利益があること、損失者に損失があること、受益と損失の間に因果関係があること、利益保持について法律上の原因がないことである。典型例は、錯誤による振込み、無効な契約に基づく給付、解除後の原状回復、他人の物の無断使用、過払金の返還である。試験では、「利益があれば常に不当利得になる」とする肢が誤りになりやすい。利益があっても、売買契約、弁済、有効な贈与、時効取得、即時取得など、保持を正当化する法律上の原因があれば返還義務は生じない。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法律上の原因</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法律上の原因</mark></strong>とは、受益者がその利益を保持することを正当化する法律関係や制度的理由をいう。売買代金の支払であれば売買契約、借金の返済であれば弁済の対象となる債務、贈与であれば贈与契約が典型である。もっとも、契約があるというだけで常に法律上の原因があるとは限らない。契約が無効であったり、取消しにより初めから無効とみなされたり、解除で原状回復関係に移ったりすれば、その後の利益保持は正当化されないことがある。また、第三者が介在する事案では、形式上は債権者として弁済を受けていても、騙取金や横領金による弁済であることについて悪意又は重大な過失がある場合には、被害者との関係で法律上の原因を欠くとされることがある。試験では、契約名や受領名目だけで判断せず、「その利益をその人に保持させる根拠が現在もあるか」を見る。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">善意の受益者・現存利益</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">善意の受益者</mark></strong>とは、利益を受けた時点又は返還義務が問題となる時点で、法律上の原因がないことを知らない受益者である。<strong><mark class="kw">民法703条</mark></strong>は、受益者が「その利益の存する限度」において返還義務を負うと定める。この「利益の存する限度」が<strong><mark class="kw">現存利益</mark></strong>であり、受けた利益が形を変えて残っている範囲をいう。たとえば誤って十万円を受け取り、その十万円で家電を購入して家電が残っている場合には現存利益がある。逆に、通常の生活費に充てて、支出によって手元財産が増えていない場合には、現存利益が否定される方向で考える。制度趣旨は、法律上の原因がないことを知らなかった者に、受けた利益を超える負担まで課すのは公平でないという点にある。試験では、「善意の受益者も常に受領額全額を返還する」とする肢や、「浪費しても常に現存利益が残る」とする肢に注意する。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">悪意の受益者</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">悪意の受益者</mark></strong>とは、法律上の原因がないことを知って利益を受け、又はその利益を保持している受益者である。<strong><mark class="kw">民法704条</mark></strong>は、悪意の受益者に対し、受けた利益に利息を付して返還する義務を負わせ、なお損害があるときは損害賠償責任を負うと定める。善意の受益者と異なり、現存利益に限定されないのが基本である。たとえば、誤振込みであると知りながら預金を引き出して費消した場合、手元に残っていないことだけで返還を免れることはできない。もっとも、<strong><mark class="kw">民法704条</mark></strong>後段の損害賠償責任は、悪意であるだけで特別の無過失責任を負わせるものではなく、不法行為の要件を充足する限りで損害賠償責任を負う趣旨と判例上整理されている。試験では、「悪意の受益者は利息を付ける」「後段は不法行為責任と接続する」という二段階で押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">非債弁済</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">非債弁済</mark></strong>とは、債務が存在しないのに、債務の弁済として給付することである。通常は、債務がない以上、法律上の原因がない給付であり、<strong><mark class="kw">不当利得</mark></strong>として返還請求できる。しかし、<strong><mark class="kw">民法705条</mark></strong>は、給付者が給付時に債務の不存在を知っていた場合には、返還請求できないとする。これは、債務がないと知りながらあえて支払った者を、後から保護する必要が乏しいからである。反対に、債務があると誤信して支払った場合には、<strong><mark class="kw">民法705条</mark></strong>の返還制限はかからず、原則として<strong><mark class="kw">民法703条</mark></strong>による返還請求が問題になる。試験では、「債務が存在しない場合は、給付者がその不存在を知っていても常に返還請求できる」という肢が誤りである。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">期限前弁済</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">期限前弁済</mark></strong>とは、弁済期がまだ到来していない債務について、債務者が早く給付することである。<strong><mark class="kw">民法706条</mark></strong>本文は、債務者が弁済期にない債務の弁済として給付したときは、その給付したものの返還を請求できないと定める。理由は、弁済期が未到来でも債務自体は存在しており、給付を受けた債権者がまったく理由なく利益を受けたとはいえないからである。ただし、債務者が錯誤によって期限前に給付したときは、債権者はこれによって得た利益を返還しなければならない。ここで返還されるのは、元本全体ではなく、期限前に受け取ったことによる利息相当の利益などである。試験では、<strong><mark class="kw">非債弁済</mark></strong>と混同して「期限前弁済は債務がないから全額返還」としないことが重要である。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">他人の債務の弁済</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">他人の債務の弁済</mark></strong>とは、債務者でない者が、錯誤により他人の債務を自分の債務であるなどと誤って弁済する場面である。<strong><mark class="kw">民法707条</mark></strong>は、債権者が善意で証書を滅失・損傷し、担保を放棄し、又は時効により債権を失った場合には、弁済者は債権者へ返還請求できないと定める。債権者は弁済を有効なものと信じて、債権回収の手段を失っているためである。ただし、弁済者から本来の債務者に対する求償権の行使は妨げられない。つまり、返還請求の相手方が債権者から債務者へ移る構造である。試験では、「善意の債権者保護」と「債務者への求償は残る」をセットで押さえる。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">不法原因給付</span>
+      <div class="box__hd-badges"><span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不法原因給付</mark></strong>とは、不法な原因のために給付をした者が、その給付物の返還を求める場面である。<strong><mark class="kw">民法708条</mark></strong>本文は、このような給付者の返還請求を否定する。制度趣旨は、自ら反社会的な原因に関与した者が、裁判所を利用してその結果を回復することを許さない点にある。典型例は、公序良俗に反する契約の履行として金銭や物を渡した場合である。もっとも、同条ただし書は、不法な原因が受益者についてのみ存在したときは返還請求を認める。給付者側には不法性がなく、受益者側だけが不法な事情を作り出した場合まで給付者を排斥するのは公平でないからである。試験では、「不法原因給付では常に返還請求できない」とする肢も、「契約が無効なら常に返還請求できる」とする肢も誤りになり得る。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 760" role="img" aria-label="不当利得の成立要件と返還範囲の構造">
+      <defs>
+        <marker id="arr34a-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr34a-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr34a-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="112" x2="540" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="945" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="135" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34a-blue)"/>
+      <line x1="405" y1="150" x2="405" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34a-blue)"/>
+      <line x1="675" y1="150" x2="675" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34a-blue)"/>
+      <line x1="945" y1="150" x2="945" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34a-blue)"/>
+      <rect x="470" y="126" width="140" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="540" y="144" text-anchor="middle" font-size="13" fill="#1d4ed8">成立要件</text>
+
+      <line x1="540" y1="326" x2="540" y2="378" stroke="#ea580c" stroke-width="2" marker-end="url(#arr34a-orange)"/>
+      <rect x="466" y="344" width="148" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="540" y="362" text-anchor="middle" font-size="13" fill="#7c2d12">返還範囲を決定</text>
+
+      <line x1="540" y1="488" x2="540" y2="532" stroke="#e11d48" stroke-width="2"/>
+      <line x1="270" y1="532" x2="810" y2="532" stroke="#e11d48" stroke-width="2"/>
+      <line x1="270" y1="532" x2="270" y2="590" stroke="#e11d48" stroke-width="2" marker-end="url(#arr34a-red)"/>
+      <line x1="810" y1="532" x2="810" y2="590" stroke="#e11d48" stroke-width="2" marker-end="url(#arr34a-red)"/>
+      <rect x="452" y="510" width="176" height="26" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="540" y="528" text-anchor="middle" font-size="13" fill="#9f1239">善意・悪意で差が出る</text>
+
+      <rect x="370" y="40" width="340" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="540" y="69" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">不当利得返還請求</text>
+      <text x="540" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">民法703条・公平による財産調整</text>
+
+      <rect x="25" y="226" width="220" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="135" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">受益</text>
+      <text x="135" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">財産・労務から利益</text>
+      <text x="135" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">金銭・物・使用利益</text>
+
+      <rect x="295" y="226" width="220" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="405" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">損失</text>
+      <text x="405" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">他人の財産減少</text>
+      <text x="405" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">支出・利用喪失</text>
+
+      <rect x="565" y="226" width="220" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="675" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">因果関係</text>
+      <text x="675" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">受益と損失の連結</text>
+      <text x="675" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">直接性だけに限定しない</text>
+
+      <rect x="835" y="226" width="220" height="100" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="945" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">原因欠如</text>
+      <text x="945" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">保持を正当化しない</text>
+      <text x="945" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">契約・弁済等を確認</text>
+
+      <rect x="350" y="386" width="380" height="102" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="540" y="420" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">返還義務の発生</text>
+      <text x="540" y="446" text-anchor="middle" font-size="12" fill="#7c2d12">原則は利益返還・金銭なら価額返還</text>
+      <text x="540" y="466" text-anchor="middle" font-size="12" fill="#7c2d12">特則があると返還請求が制限される</text>
+
+      <rect x="110" y="598" width="320" height="94" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="270" y="630" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">善意の受益者</text>
+      <text x="270" y="654" text-anchor="middle" font-size="12" fill="#7c2d12">現存利益の限度で返還</text>
+      <text x="270" y="674" text-anchor="middle" font-size="12" fill="#7c2d12">知らなかった者の過重負担を避ける</text>
+
+      <rect x="650" y="598" width="320" height="94" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="810" y="630" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">悪意の受益者</text>
+      <text x="810" y="654" text-anchor="middle" font-size="12" fill="#9f1239">受けた利益に利息を付す</text>
+      <text x="810" y="674" text-anchor="middle" font-size="12" fill="#9f1239">なお損害があれば賠償責任</text>
+
+      <rect x="60" y="710" width="960" height="34" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="732" text-anchor="middle" font-size="13" fill="#9f1239">判断順序：四要件を確認し、受益者の善意・悪意、民法705条から708条の特則を最後に当てはめる。</text>
+    </svg>
+  </div>
+
+  <p>この図は、<strong><mark class="kw">不当利得</mark></strong>を「成立要件」と「返還範囲」に分けて示している。まず、受益、損失、因果関係、法律上の原因の欠如という四要件がそろうかを確認する。次に返還義務が発生しても、受益者が善意か悪意かで返還範囲が変わる。<strong><mark class="kw">善意の受益者</mark></strong>は<strong><mark class="kw">現存利益</mark></strong>に限られ、<strong><mark class="kw">悪意の受益者</mark></strong>は利息を付して返還する。さらに、四要件がそろいそうに見えても、<strong><mark class="kw">民法705条</mark></strong>から<strong><mark class="kw">民法708条</mark></strong>の特則が返還請求を遮断することがある。</p>
+
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1080 720" role="img" aria-label="不当利得の特則と類型の判断構造">
+      <defs>
+        <marker id="arr34b-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2563eb"/></marker>
+        <marker id="arr34b-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ea580c"/></marker>
+        <marker id="arr34b-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#e11d48"/></marker>
+      </defs>
+
+      <line x1="540" y1="112" x2="540" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="945" y2="150" stroke="#2563eb" stroke-width="2"/>
+      <line x1="135" y1="150" x2="135" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34b-blue)"/>
+      <line x1="405" y1="150" x2="405" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34b-blue)"/>
+      <line x1="675" y1="150" x2="675" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34b-blue)"/>
+      <line x1="945" y1="150" x2="945" y2="218" stroke="#2563eb" stroke-width="2" marker-end="url(#arr34b-blue)"/>
+      <rect x="458" y="126" width="164" height="26" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="540" y="144" text-anchor="middle" font-size="13" fill="#1d4ed8">特則で効果を修正</text>
+
+      <line x1="135" y1="328" x2="135" y2="410" stroke="#ea580c" stroke-width="2" marker-end="url(#arr34b-orange)"/>
+      <line x1="405" y1="328" x2="405" y2="410" stroke="#ea580c" stroke-width="2" marker-end="url(#arr34b-orange)"/>
+      <line x1="675" y1="328" x2="675" y2="410" stroke="#ea580c" stroke-width="2" marker-end="url(#arr34b-orange)"/>
+      <line x1="945" y1="328" x2="945" y2="410" stroke="#ea580c" stroke-width="2" marker-end="url(#arr34b-orange)"/>
+      <rect x="64" y="364" width="142" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="135" y="382" text-anchor="middle" font-size="13" fill="#7c2d12">知っていたか</text>
+      <rect x="330" y="364" width="150" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="405" y="382" text-anchor="middle" font-size="13" fill="#7c2d12">錯誤か</text>
+      <rect x="594" y="364" width="162" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="675" y="382" text-anchor="middle" font-size="13" fill="#7c2d12">債権者保護</text>
+      <rect x="862" y="364" width="166" height="26" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="1"/>
+      <text x="945" y="382" text-anchor="middle" font-size="13" fill="#7c2d12">不法性の所在</text>
+
+      <polyline points="945,510 945,552 770,552 770,590" fill="none" stroke="#e11d48" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arr34b-red)"/>
+      <rect x="820" y="534" width="160" height="26" rx="3" fill="#fff1f2" stroke="#fb7185" stroke-width="1"/>
+      <text x="900" y="552" text-anchor="middle" font-size="13" fill="#9f1239">ただし書で例外</text>
+
+      <rect x="355" y="40" width="370" height="72" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+      <text x="540" y="69" text-anchor="middle" font-size="18" font-weight="700" fill="#1e3a8a">不当利得の特則</text>
+      <text x="540" y="94" text-anchor="middle" font-size="12" fill="#1e3a8a">民法705条から708条で返還可否を調整</text>
+
+      <rect x="25" y="226" width="220" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="135" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">非債弁済</text>
+      <text x="135" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法705条</text>
+      <text x="135" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">不存在を知って弁済</text>
+
+      <rect x="295" y="226" width="220" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="405" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">期限前弁済</text>
+      <text x="405" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法706条</text>
+      <text x="405" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">債務は存在する</text>
+
+      <rect x="565" y="226" width="220" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="675" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">他人の債務弁済</text>
+      <text x="675" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法707条</text>
+      <text x="675" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">善意債権者の信頼</text>
+
+      <rect x="835" y="226" width="220" height="102" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+      <text x="945" y="258" text-anchor="middle" font-size="16" font-weight="700" fill="#1e3a8a">不法原因給付</text>
+      <text x="945" y="282" text-anchor="middle" font-size="12" fill="#1e3a8a">民法708条</text>
+      <text x="945" y="302" text-anchor="middle" font-size="12" fill="#1e3a8a">裁判所は復旧に協力しない</text>
+
+      <rect x="25" y="418" width="220" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="135" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">返還不可</text>
+      <text x="135" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">債務不存在を知る</text>
+      <text x="135" y="492" text-anchor="middle" font-size="12" fill="#7c2d12">あえて支払った自己責任</text>
+
+      <rect x="295" y="418" width="220" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="405" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">元本返還不可</text>
+      <text x="405" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">錯誤なら期限利益分を返還</text>
+      <text x="405" y="492" text-anchor="middle" font-size="12" fill="#7c2d12">債務自体は残っている</text>
+
+      <rect x="565" y="418" width="220" height="92" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="675" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">債権者へ返還不可</text>
+      <text x="675" y="472" text-anchor="middle" font-size="12" fill="#7c2d12">証書滅失・担保放棄等</text>
+      <text x="675" y="492" text-anchor="middle" font-size="12" fill="#7c2d12">債務者への求償は残る</text>
+
+      <rect x="835" y="418" width="220" height="92" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+      <text x="945" y="448" text-anchor="middle" font-size="16" font-weight="700" fill="#9f1239">返還不可が原則</text>
+      <text x="945" y="472" text-anchor="middle" font-size="12" fill="#9f1239">不法目的に関与した給付者</text>
+      <text x="945" y="492" text-anchor="middle" font-size="12" fill="#9f1239">所有権返還請求も制限</text>
+
+      <rect x="610" y="598" width="320" height="70" rx="8" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+      <text x="770" y="626" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">受益者だけに不法原因</text>
+      <text x="770" y="650" text-anchor="middle" font-size="12" fill="#7c2d12">民法708条ただし書により返還請求可</text>
+
+      <rect x="60" y="680" width="960" height="28" rx="4" fill="#fff1f2" stroke="#e11d48" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="540" y="699" text-anchor="middle" font-size="13" fill="#9f1239">同じ「返してほしい」事案でも、給付時の認識、債権者の信頼、不法原因の所在で結論が変わる。</text>
+    </svg>
+  </div>
+
+  <p>二つ目の図は、<strong><mark class="kw">不当利得</mark></strong>の特則を条文ごとに分解したものである。<strong><mark class="kw">民法705条</mark></strong>は、債務がないと知って支払った給付者を保護しない。<strong><mark class="kw">民法706条</mark></strong>は、期限前弁済では債務自体が存在するため、元本全体を取り戻す発想を採らない。<strong><mark class="kw">民法707条</mark></strong>は、善意の債権者が証書や担保を失ったときに債権者を保護し、弁済者には本来の債務者への求償を残す。<strong><mark class="kw">民法708条</mark></strong>は、不法な目的に関与した給付者の返還請求を否定するが、受益者だけに不法原因があるときは例外的に返還請求を認める。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">不当利得</th>
+        <th class="col--b">契約責任</th>
+        <th class="col--c">不法行為</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">制度目的</td>
+        <td class="col--a"><span class="em-a">公平な財産調整</span>。利益保持に正当理由がない場合に返還させる。</td>
+        <td class="col--b"><span class="em-b">合意の実現</span>。契約で定めた給付や損害賠償を求める。</td>
+        <td class="col--c"><span class="em-c">損害の填補</span>。違法な加害行為で生じた損害を賠償させる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">中心要件</td>
+        <td class="col--a">受益、損失、因果関係、<strong><mark class="kw">法律上の原因</mark></strong>の欠如。</td>
+        <td class="col--b">契約の成立、債務内容、債務不履行又は解除等。</td>
+        <td class="col--c">故意・過失、権利又は法律上保護される利益の侵害、損害、因果関係。</td>
+      </tr>
+      <tr>
+        <td class="col--label">効果</td>
+        <td class="col--a">利益返還。善意なら<strong><mark class="kw">現存利益</mark></strong>、悪意なら利息付き返還。</td>
+        <td class="col--b">履行請求、解除、損害賠償、原状回復など契約関係に応じる。</td>
+        <td class="col--c">損害賠償が中心。原則として金銭賠償で処理する。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型場面</td>
+        <td class="col--a">誤振込み、無効・取消し・解除後の返還、過払金、無断使用利益。</td>
+        <td class="col--b">売買代金未払、引渡し遅滞、契約不適合、解除後の処理。</td>
+        <td class="col--c">交通事故、名誉毀損、物の毀損、権利侵害。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の誤答</td>
+        <td class="col--a">利益があれば常に返還、善意でも全額返還、とする誤り。</td>
+        <td class="col--b">契約が無効でも契約責任だけで処理するとする誤り。</td>
+        <td class="col--c">悪意の受益者なら不法行為要件なしに特別賠償責任を負うとする誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践的な判断基準は、まず当事者間に有効な契約があるかを見ることである。有効な契約に基づく履行問題なら契約責任が中心となる。契約が無効・取消し・解除で正当化根拠を失った後の返還なら、<strong><mark class="kw">不当利得</mark></strong>又は特別の原状回復規定が問題になる。違法な加害行為によって損害が発生しているなら不法行為であり、<strong><mark class="kw">民法704条</mark></strong>後段の損害賠償も不法行為要件と接続して理解する。</p>
+
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較軸</th>
+        <th class="col--a">非債弁済</th>
+        <th class="col--b">期限前弁済</th>
+        <th class="col--c">不法原因給付</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">根拠条文</td>
+        <td class="col--a"><strong><mark class="kw">民法705条</mark></strong>。</td>
+        <td class="col--b"><strong><mark class="kw">民法706条</mark></strong>。</td>
+        <td class="col--c"><strong><mark class="kw">民法708条</mark></strong>。</td>
+      </tr>
+      <tr>
+        <td class="col--label">問題局面</td>
+        <td class="col--a">債務が存在しないのに弁済として給付した。</td>
+        <td class="col--b">債務は存在するが、弁済期がまだ来ていない。</td>
+        <td class="col--c">不法な原因のために給付した。</td>
+      </tr>
+      <tr>
+        <td class="col--label">返還制限</td>
+        <td class="col--a">債務不存在を知っていたときは<span class="em-a">返還請求不可</span>。</td>
+        <td class="col--b">原則として<span class="em-b">給付物の返還請求不可</span>。錯誤なら期限前受領による利益を返還。</td>
+        <td class="col--c">原則として<span class="em-c">返還請求不可</span>。ただし受益者だけに不法原因があるときは例外。</td>
+      </tr>
+      <tr>
+        <td class="col--label">制度趣旨</td>
+        <td class="col--a">知りながら支払った給付者の自己責任。</td>
+        <td class="col--b">債務自体は存在するため、全額返還までは認めない。</td>
+        <td class="col--c">反社会的行為をした者に裁判所を使わせない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">誤答パターン</td>
+        <td class="col--a">債務がなければ給付者の認識に関係なく常に返還できる。</td>
+        <td class="col--b">弁済期前なら債務がないのと同じなので全額返還できる。</td>
+        <td class="col--c">契約が公序良俗違反で無効なら給付者は常に返還請求できる。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>特則の見分け方は、最初に「債務が存在したか」を確認することである。債務が存在しなければ<strong><mark class="kw">非債弁済</mark></strong>、債務は存在するが期限が未到来なら<strong><mark class="kw">期限前弁済</mark></strong>である。債務の有無とは別に、給付の原因そのものが公序良俗違反などで不法なら<strong><mark class="kw">不法原因給付</mark></strong>を検討する。さらに、債務者でない第三者が錯誤で支払った場合には、<strong><mark class="kw">民法707条</mark></strong>の善意債権者保護と求償関係を忘れない。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法703条 不当利得の返還義務</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">法律上の原因なく他人の財産又は労務によって利益を受け、そのために他人に損失を及ぼした者（以下この章において「受益者」という。）は、その利益の存する限度において、これを返還する義務を負う。</blockquote>
+      <p><strong><mark class="kw">民法703条</mark></strong>は、<strong><mark class="kw">不当利得</mark></strong>の基本規定である。条文は、受益、損失、因果関係、<strong><mark class="kw">法律上の原因</mark></strong>の欠如を一文の中に含んでいる。「他人の財産又は労務によって」とあるため、金銭や物の移転だけでなく、労務の提供、物の使用利益、価値増加も対象になり得る。「その利益の存する限度」は、善意の受益者の返還範囲を<strong><mark class="kw">現存利益</mark></strong>に限定する趣旨である。違反時の効果は返還義務であり、損害全額を賠償させる不法行為とは構造が異なる。契約無効、取消し、解除の場面では、<strong><mark class="kw">民法121条の2</mark></strong>や<strong><mark class="kw">民法545条</mark></strong>との関係も確認する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法704条 悪意の受益者の返還義務等</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">悪意の受益者は、その受けた利益に利息を付して返還しなければならない。この場合において、なお損害があるときは、その賠償の責任を負う。</blockquote>
+      <p><strong><mark class="kw">民法704条</mark></strong>は、<strong><mark class="kw">悪意の受益者</mark></strong>の返還範囲を定める。前段は、受けた利益に利息を付して返還する義務であり、善意の受益者の<strong><mark class="kw">現存利益</mark></strong>返還より重い。後段は、なお損害があるときの損害賠償責任を定めるが、判例はこれを不法行為の要件を満たす限りで不法行為責任を負うことを注意的に規定したものと位置づける。したがって、悪意であることだけから当然に特別の損害賠償責任が発生すると読むのは危険である。<strong><mark class="kw">民法709条</mark></strong>との接続を意識し、利息付き返還と損害賠償を分けて理解する。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法705条から707条 弁済型の特則</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第七百五条　債務の弁済として給付をした者は、その時において債務の存在しないことを知っていたときは、その給付したものの返還を請求することができない。<br>第七百六条　債務者は、弁済期にない債務の弁済として給付をしたときは、その給付したものの返還を請求することができない。ただし、債務者が錯誤によってその給付をしたときは、債権者は、これによって得た利益を返還しなければならない。<br>第七百七条　債務者でない者が錯誤によって債務の弁済をした場合において、債権者が善意で証書を滅失させ若しくは損傷し、担保を放棄し、又は時効によってその債権を失ったときは、その弁済をした者は、返還の請求をすることができない。前項の規定は、弁済をした者から債務者に対する求償権の行使を妨げない。</blockquote>
+      <p><strong><mark class="kw">民法705条</mark></strong>は、債務がないことを知りながら支払った者の返還請求を否定する。<strong><mark class="kw">民法706条</mark></strong>は、弁済期前の弁済では債務自体が存在するため、給付物全体の返還を認めないが、錯誤による期限前弁済では債権者が期限前受領で得た利益を返還させる。<strong><mark class="kw">民法707条</mark></strong>は、他人の債務を錯誤で弁済した者と善意の債権者との調整規定である。債権者が証書を失ったり担保を放棄したりした場合、返還を認めると債権者が二重に不利益を受けるため、返還請求を制限する。ただし、本来の債務者への求償は妨げられないため、最終的な負担者を債務者へ戻す構造になっている。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法708条 不法原因給付</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">不法な原因のために給付をした者は、その給付したものの返還を請求することができない。ただし、不法な原因が受益者についてのみ存したときは、この限りでない。</blockquote>
+      <p><strong><mark class="kw">民法708条</mark></strong>は、<strong><mark class="kw">不法原因給付</mark></strong>の返還請求を原則として否定する。条文本文の趣旨は、不法な目的に関与した給付者が、裁判所を利用して給付物を取り戻すことを許さない点にある。ここでいう不法は、単なる契約違反ではなく、公序良俗違反など社会倫理に反する程度の不法性をいう。ただし書は、不法原因が受益者についてのみ存するときに返還請求を認める。給付者に不法性がない、又は給付者の不法性が受益者に比べて問題にならないほど弱い場合まで、給付者を排斥するのは公平でないからである。判例は、<strong><mark class="kw">民法708条</mark></strong>によって返還請求ができない場合、所有権に基づく返還請求も制限される方向で処理している。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">gavel</span>
+      <span class="box__label">民法121条の2・545条 原状回復との接点</span>
+    </div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百二十一条の二第一項　無効な行為に基づく債務の履行として給付を受けた者は、相手方を原状に復させる義務を負う。<br>第五百四十五条第一項　当事者の一方がその解除権を行使したときは、各当事者は、その相手方を原状に復させる義務を負う。ただし、第三者の権利を害することはできない。<br>第五百四十五条第二項　前項本文の場合において、金銭を返還するときは、その受領の時から利息を付さなければならない。</blockquote>
+      <p><strong><mark class="kw">民法121条の2</mark></strong>は無効・取消し後の原状回復義務を、<strong><mark class="kw">民法545条</mark></strong>は解除後の原状回復義務を定める。いずれも広い意味では、法律上の原因を失った給付の返還という<strong><mark class="kw">不当利得</mark></strong>的な発想と接続する。ただし、条文上の特別規定がある場面では、その特別規定の効果を優先して確認する。たとえば解除では、金銭返還に受領時からの利息を付すことが明文で定められており、単純に<strong><mark class="kw">民法703条</mark></strong>の善意・悪意だけで処理しない。試験では、無効、取消し、解除、<strong><mark class="kw">不当利得</mark></strong>を別々の箱として暗記するのではなく、「正当化根拠を失った給付をどの規定で戻すか」という視点で整理する。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷 平成7年9月19日 平成4年(オ)第524号 民集49巻8号2805頁</div>
+      <div class="case-card__title">建物修繕工事と所有者の不当利得事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法703条</span>
+        <span class="badge badge--law">三当事者関係</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物の賃借人乙が、建物を利用するために修繕工事を必要とし、工事業者甲との間で請負契約を締結した。甲は乙との契約に基づき、建物に修繕工事を施し、材料や労務を投入した。その結果、建物の価値又は使用可能性は高まり、建物所有者丙にも利益が及んだ。しかし、工事後に乙が無資力となり、甲の乙に対する請負代金債権の全部又は一部が回収不能となった。そこで甲は、直接の契約関係にない建物所有者丙に対し、丙が修繕工事によって法律上の原因なく利益を受けたとして、<strong><mark class="kw">民法703条</mark></strong>に基づく不当利得返還請求をした。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、甲が賃借人乙との請負契約に基づいて建物修繕工事をした場合、建物所有者丙が法律上の原因なく利益を受けたといえるのは、丙と乙との賃貸借契約を全体として見て、丙が対価関係なしにその利益を受けたときに限られるとした。修繕によって物理的には丙所有建物の価値が増しても、賃貸借契約の中で修繕費を乙が負担することが予定され、その代わりに賃料額や使用収益関係が調整されているなら、丙に対価関係のない利得があるとは限らない。裁判所は、三当事者関係で中間者が無資力になったことだけを理由に、所有者へ当然に不当利得返還請求を認めるのではなく、賃貸借契約全体の利益配分を見て、所有者の利益保持を正当化する原因があるかを判断する枠組みを示した。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">不当利得</mark></strong>における「法律上の原因」と「三当事者関係」を理解するための最重要判例である。誤答パターンは、「請負人が修繕工事をし、所有者の建物価値が上がった以上、賃借人が無資力なら所有者は常に不当利得返還義務を負う」という肢である。正しくは、所有者と賃借人の賃貸借契約を全体として評価し、所有者が対価関係なしに利益を受けたといえる場合に限られる。行政書士試験では、契約関係にない第三者へ直接請求できるかという形で問われやすい。単に損失者が回収できないからといって、利益を受けたように見える第三者へ当然に転嫁できるわけではない。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法703条</mark></strong>が中心である。契約責任、賃貸借契約、請負契約、第三者が介在する<strong><mark class="kw">不当利得</mark></strong>の関係を整理する判例として押さえる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷 昭和49年9月26日 昭和45年(オ)第540号 民集28巻6号1243頁</div>
+      <div class="case-card__title">騙取・横領金による弁済と不当利得事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法703条</span>
+        <span class="badge badge--law">因果関係</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>甲が乙から金銭を騙し取り、又は横領し、その金銭を用いて自己の債権者丙に対する債務を弁済した。丙は形式的には甲に対する債権を有しており、甲から弁済を受ける立場にあった。しかし、その弁済原資は乙から不正に取得された金銭であった。問題となったのは、乙が丙に対して、丙が受け取った金銭は乙の財産から生じた利得であり、乙に損失があるとして<strong><mark class="kw">不当利得返還請求</mark></strong>をすることができるかである。特に、騙取・横領された金銭が混同、両替、銀行預入れ、費消後の補填などを経た場合でも、乙の損失と丙の利得との間に因果関係があるか、丙に悪意又は重大な過失がある場合に法律上の原因を欠くといえるかが争点となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、騙取又は横領された金銭が、そのまま債権者丙へ移転した場合だけでなく、甲が自己の金銭と混同させたり、両替したり、銀行に預け入れたり、一部を費消した後に別途工面した金銭で補填したりした場合でも、社会通念上、乙の金銭で丙の利益を図ったと認めるに足りる連結があるときは、乙の損失と丙の利得との間に<strong><mark class="kw">不当利得</mark></strong>成立に必要な因果関係があるとした。また、甲が乙から騙取又は横領した金銭により丙への債務を弁済した場合、丙がその弁済を受けるにつき悪意又は重大な過失があるときは、丙の金銭取得は乙に対する関係で法律上の原因を欠くと判断した。形式的な債権弁済という名目だけで、被害者との関係での公平を排除しない点が重要である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">不当利得</mark></strong>の因果関係を、物理的な同一金銭の追跡だけに限定しないことを示す。誤答パターンは、「騙取金がいったん混同・両替・預入れされれば、被害者と弁済受領者との間の因果関係は常に切断される」という肢である。正しくは、社会通念上、被害者の金銭で債権者の利益を図ったといえる連結があれば足りる。また、債権者が善意無重過失で弁済を受けた場合と、悪意又は重大な過失がある場合で、法律上の原因の判断が変わる点も重要である。行政書士試験では、誤振込み、横領金、詐欺被害金、第三者弁済の事案で応用されやすい。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法703条</mark></strong>が中心であり、受益と損失の因果関係、<strong><mark class="kw">法律上の原因</mark></strong>の欠如、三当事者関係を理解する判例である。<strong><mark class="kw">民法704条</mark></strong>の悪意概念とは異なり、本判例では不当利得の成立段階で弁済受領者の悪意又は重大な過失が問題となる。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所大法廷 昭和45年10月21日 昭和41年(オ)第436号 民集24巻11号1560頁</div>
+      <div class="case-card__title">不法原因給付と建物所有権帰属事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法708条</span>
+        <span class="badge badge--law">不法原因給付</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>建物所有者が、不法な原因に基づいて未登記建物を相手方に贈与し、建物を引き渡した。その後、給付者は、不法な原因による贈与契約は公序良俗違反で無効であり、建物の所有権はなお自分にあるとして、相手方に建物の返還又は明渡しを求めた。これに対し、受贈者側は、給付者の行為は<strong><mark class="kw">民法708条</mark></strong>の<strong><mark class="kw">不法原因給付</mark></strong>に当たるため、給付者は返還請求できないと争った。問題は、未登記建物の引渡しが「給付」に当たるか、返還請求が否定される場合に所有権に基づく返還請求まで制限されるか、さらに建物の所有権が誰に帰属するかであった。</p>
+      <h4>判旨</h4>
+      <p>最高裁大法廷は、不法の原因により未登記建物を贈与した場合、その引渡しは<strong><mark class="kw">民法708条</mark></strong>にいう給付に当たるとした。そして、建物贈与に基づく引渡しが<strong><mark class="kw">不法原因給付</mark></strong>に当たる場合、贈与者は、目的物の所有権が自己にあることを理由として建物返還を請求することはできないとした。さらに、贈与者が給付した物の返還を請求できないことの反射的効果として、建物の所有権は受贈者に帰属するに至ると解するのが相当であると判示した。これは、給付者が不法な目的に基づいて給付したにもかかわらず、所有権構成を使って実質的に返還を実現することを防ぐ判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">不法原因給付</mark></strong>の効果を深く理解するための代表判例である。誤答パターンは、「民法708条は不当利得返還請求だけを制限するので、所有権に基づく返還請求なら常に可能である」という肢である。最高裁はこれを認めず、所有権に基づく返還請求も許されないとした。さらに、返還請求ができないだけでなく、反射的効果として所有権が受贈者に帰属するという構成を示している。試験では、本文の返還請求制限、ただし書の例外、所有権構成による迂回の否定をセットで押さえる必要がある。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法708条</mark></strong>、<strong><mark class="kw">民法90条</mark></strong>、<strong><mark class="kw">民法206条</mark></strong>、<strong><mark class="kw">民法177条</mark></strong>が関連する。公序良俗違反の無効と、給付後の返還制限の関係を整理する判例である。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷 平成21年11月9日 平成21年(受)第247号 民集63巻9号1987頁</div>
+      <div class="case-card__title">民法704条後段の趣旨事件</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round" style="font-size:13px">school</span>頻出</span>
+        <span class="badge badge--law">民法704条</span>
+        <span class="badge badge--law">民法709条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不当利得金の返還請求をめぐる事案で、受益者が<strong><mark class="kw">悪意の受益者</mark></strong>に当たる場合に、<strong><mark class="kw">民法704条</mark></strong>後段の「なお損害があるときは、その賠償の責任を負う」という文言をどのように理解するかが問題となった。損失者側は、悪意の受益者である以上、同条後段により、不法行為とは別個の特別な損害賠償責任を負うと主張する余地があった。他方で、受益者側から見ると、悪意という一事情だけで、不法行為の故意・過失や権利侵害などを離れて広い賠償責任を負うことになれば、<strong><mark class="kw">民法709条</mark></strong>との関係が問題となる。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、<strong><mark class="kw">民法704条</mark></strong>後段の規定は、<strong><mark class="kw">悪意の受益者</mark></strong>が不法行為の要件を充足する限りにおいて不法行為責任を負うことを注意的に規定したものにすぎず、悪意の受益者に対して不法行為責任とは異なる特別の責任を負わせたものではないと判示した。つまり、同条前段の利息付き返還義務と、同条後段の損害賠償責任は区別される。後段の損害賠償を認めるためには、単に悪意の受益者であるだけでなく、<strong><mark class="kw">民法709条</mark></strong>の不法行為要件を満たす必要がある。</p>
+      <h4>試験上の意義</h4>
+      <p>本判例は、<strong><mark class="kw">民法704条</mark></strong>の読み方を正確にするために重要である。誤答パターンは、「悪意の受益者は、民法704条後段により、不法行為の要件を満たさなくても、なお損害があれば常に賠償責任を負う」という肢である。正しくは、利息付き返還義務は同条前段から直接生じるが、損害賠償責任は不法行為の要件を満たす場合に認められる。行政書士試験では、<strong><mark class="kw">不当利得</mark></strong>と<strong><mark class="kw">不法行為</mark></strong>を混同させる選択肢が出やすいため、返還責任と賠償責任を分けて読むことが必要である。</p>
+      <h4>関連判例・条文</h4>
+      <p><strong><mark class="kw">民法704条</mark></strong>後段、<strong><mark class="kw">民法709条</mark></strong>が関連する。<strong><mark class="kw">悪意の受益者</mark></strong>の利息付き返還と、不法行為責任による損害賠償を区別する判例である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Exam Strategy</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">school</span>
+      <span class="box__label">頻出テーマの整理</span>
+    </div>
+    <div class="box__bd">
+      <ul>
+        <li><strong><mark class="kw">不当利得</mark></strong>の四要件は、受益、損失、因果関係、<strong><mark class="kw">法律上の原因</mark></strong>の欠如である。</li>
+        <li><strong><mark class="kw">善意の受益者</mark></strong>は、<strong><mark class="kw">民法703条</mark></strong>により<strong><mark class="kw">現存利益</mark></strong>の限度で返還する。</li>
+        <li><strong><mark class="kw">悪意の受益者</mark></strong>は、<strong><mark class="kw">民法704条</mark></strong>前段により受けた利益に利息を付して返還する。</li>
+        <li><strong><mark class="kw">民法704条</mark></strong>後段は、不法行為要件を満たす限りで損害賠償責任を負う趣旨であり、特別責任ではない。</li>
+        <li><strong><mark class="kw">非債弁済</mark></strong>では、債務不存在を知って支払った者は返還請求できない。</li>
+        <li><strong><mark class="kw">期限前弁済</mark></strong>では、債務自体は存在するため、原則として給付物全体の返還請求はできない。</li>
+        <li><strong><mark class="kw">他人の債務の弁済</mark></strong>では、善意の債権者が証書・担保等を失った場合、債権者への返還請求は制限されるが、債務者への求償は残る。</li>
+        <li><strong><mark class="kw">不法原因給付</mark></strong>では、給付者の返還請求は原則として否定されるが、不法原因が受益者にのみあるときは例外となる。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">誤りの選択肢例と正しい判断理由</span>
+    </div>
+    <div class="box__bd">
+      <p><strong>誤りの選択肢例1：</strong>「受益者に利益が生じ、損失者に損失があれば、法律上の原因の有無にかかわらず不当利得が成立する。」これは誤りである。<strong><mark class="kw">民法703条</mark></strong>は、利益保持について<strong><mark class="kw">法律上の原因</mark></strong>がないことを要求する。</p>
+      <p><strong>誤りの選択肢例2：</strong>「善意の受益者は、受けた利益が残っていなくても、常に受領額全額を返還しなければならない。」これは誤りである。<strong><mark class="kw">善意の受益者</mark></strong>は、原則として<strong><mark class="kw">現存利益</mark></strong>の限度で返還すれば足りる。</p>
+      <p><strong>誤りの選択肢例3：</strong>「悪意の受益者は、民法704条後段により、不法行為の要件を満たさなくても特別の損害賠償責任を負う。」これは誤りである。最高裁平成21年11月9日判決は、同条後段を不法行為責任の注意規定と位置づける。</p>
+      <p><strong>誤りの選択肢例4：</strong>「債務が存在しない弁済であれば、給付者が債務不存在を知っていても返還請求できる。」これは誤りである。<strong><mark class="kw">民法705条</mark></strong>は、債務の不存在を知ってした弁済の返還請求を否定する。</p>
+      <p><strong>誤りの選択肢例5：</strong>「不法原因給付では、給付者は不当利得返還請求はできないが、所有権に基づく返還請求なら常に認められる。」これは誤りである。最高裁昭和45年10月21日判決は、所有権を理由とする返還請求も許されないとした。</p>
+    </div>
+  </div>
+
+  <p>解答アプローチは、第一に、問題文の財産移転がどの法律関係で生じたかを読むことである。契約による給付なのか、誤振込みなのか、弁済なのか、反社会的な給付なのかで条文が変わる。第二に、<strong><mark class="kw">民法703条</mark></strong>の四要件を機械的に確認する。第三に、受益者の主観を確認し、善意なら<strong><mark class="kw">現存利益</mark></strong>、悪意なら利息付き返還を考える。第四に、<strong><mark class="kw">民法705条</mark></strong>から<strong><mark class="kw">民法708条</mark></strong>の特則が返還請求を制限しないかを当てはめる。最後に、判例問題では、直接の契約関係がない第三者への請求を当然に認めないこと、社会通念上の連結や受益者の悪意・重過失が意味を持つことを確認する。</p>
+
+  <div class="box box--caution">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">warning</span>
+      <span class="box__label">他分野との横断的な接点</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">不当利得</mark></strong>は、民法総則の無効・取消し、債権総論の弁済・解除、契約各論の売買・賃貸借・請負、不法行為、物権の所有権返還請求と接続する。契約が取り消された後は<strong><mark class="kw">民法121条の2</mark></strong>、解除後は<strong><mark class="kw">民法545条</mark></strong>、一般的な原因欠如の返還は<strong><mark class="kw">民法703条</mark></strong>というように、どの条文で戻すかを分ける必要がある。行政法では、過誤納金や公金支出の返還、国家賠償との関係で財産移転の正当化根拠が問題になることがある。行政書士実務では、契約書・示談書・返還合意書を作る際、受領金の法的根拠、返還範囲、利息、清算条項を明確にしておくことが重要である。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Notes</p>
+    </div>
+  </header>
+
+  <div class="box box--example">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">history</span>
+      <span class="box__label">平成29年民法改正との関係</span>
+    </div>
+    <div class="box__bd">
+      <p>平成29年民法改正では、<strong><mark class="kw">民法703条</mark></strong>から<strong><mark class="kw">民法708条</mark></strong>の不当利得本体の条文は大きく変えられていない。他方で、無効・取消し後の原状回復について<strong><mark class="kw">民法121条の2</mark></strong>が整備され、解除の効果についても<strong><mark class="kw">民法545条</mark></strong>の規律が重要である。旧法時代には、不当利得の一般規定を使って説明されていた場面でも、現行法では特別の原状回復規定を先に確認する必要がある。試験では、条文番号の引っかけとして、無効・取消し後の返還を常に民法703条だけで処理する肢や、解除後の金銭返還利息を民法704条の悪意要件で処理する肢に注意する。</p>
+    </div>
+  </div>
+
+  <p><strong><mark class="kw">不当利得</mark></strong>の実務的な重要性は、請求原因の予備的構成としてよく使われる点にある。たとえば、原告が売買契約に基づく代金返還を主張する場合でも、裁判所が契約を無効と判断する可能性があるなら、無効を前提に<strong><mark class="kw">不当利得返還請求</mark></strong>を併せて構成することがある。これは、契約に基づく請求と<strong><mark class="kw">不当利得</mark></strong>に基づく請求とでは、要件事実が異なるためである。行政書士試験でも、請求の根拠が契約なのか、不当利得なのか、不法行為なのかを見分けることは、事例問題を読むうえで重要である。</p>
+
+  <p>また、<strong><mark class="kw">現存利益</mark></strong>の判断は、単に「お金が手元に残っているか」だけでは決まらない。受け取った金銭で生活必需品を買った場合、通常の支出を代替したため財産全体として利益が残っていると見る余地がある一方、浪費で消えた場合には善意であれば現存利益が問題になる。制限行為能力者や意思能力を欠く者については、<strong><mark class="kw">民法121条の2</mark></strong>が現存利益に限定する規律を置いており、保護の発想は<strong><mark class="kw">民法703条</mark></strong>と共通する。もっとも、悪意の受益者は、現存利益の有無だけで責任を免れない。</p>
+
+  <p><strong><mark class="kw">不法原因給付</mark></strong>では、「不法」という言葉の強さを誤解しないことが大切である。単に契約違反がある、許認可手続に軽微な不備がある、当事者の動機が好ましくない、というだけで直ちに<strong><mark class="kw">民法708条</mark></strong>が適用されるわけではない。公序良俗違反など、裁判所が給付者の返還請求に協力すべきでないほどの反社会性が問題になる。さらに、不法原因が受益者にのみあるときはただし書で返還請求が認められるため、給付者側と受益者側の不法性の所在と強弱を比較する視点が必要である。</p>
+
+  <p>学習上は、まず<strong><mark class="kw">民法703条</mark></strong>と<strong><mark class="kw">民法704条</mark></strong>を「基本規定」として固める。次に、<strong><mark class="kw">民法705条</mark></strong>から<strong><mark class="kw">民法708条</mark></strong>を「返還制限の特則」として、条文番号、場面、効果を横に並べる。最後に、重要判例を三つの観点で整理する。平成7年9月19日判決は、三当事者関係と対価関係である。昭和49年9月26日判決は、騙取・横領金弁済における社会通念上の連結と悪意・重過失である。昭和45年10月21日判決は、<strong><mark class="kw">不法原因給付</mark></strong>で所有権返還請求による迂回を許さない点である。この三方向を押さえると、単なる条文暗記から事案分析へ進める。</p>
+
+  <p>最後に、問題文で「返還」「過払い」「誤って支払った」「無効な契約」「解除後」「不法な目的」といった語が出たら、すぐに<strong><mark class="kw">不当利得</mark></strong>と決めつけないことが重要である。まず有効な契約に基づく請求か、特別の原状回復規定があるかを確認し、その後に<strong><mark class="kw">民法703条</mark></strong>以下へ進む。返還を求める側が債務不存在を知っていたか、弁済期前か、他人の債務か、不法原因があるか、受益者が善意か悪意かという順序で読むと、選択肢の引っかけを処理しやすい。</p>
+</section>
+
+</body>
+</html>

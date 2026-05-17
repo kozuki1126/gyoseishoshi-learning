@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-store">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>意思表示の構成要素 | 行政書士試験 学習ノート</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style data-source="common-study-note.css">
+:root {
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-600: #2563eb;
+    --blue-700: #1d4ed8;
+    --blue-900: #1e3a8a;
+    --orange-50:  #fff7ed;
+    --orange-200: #fed7aa;
+    --orange-600: #ea580c;
+    --orange-900: #7c2d12;
+    --red-50:  #fff1f2;
+    --red-100: #ffe4e6;
+    --red-400: #fb7185;
+    --red-600: #e11d48;
+    --red-800: #9f1239;
+    --text-primary:   #111827;
+    --text-secondary: #4b5563;
+    --text-muted:     #9ca3af;
+    --highlight:        #fef08a;
+    --highlight-strong: #fde047;
+    --highlight-red:    #ffe4e6;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text-primary);
+    background: #ffffff;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+}
+h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--blue-900);
+    border-bottom: 3px solid var(--blue-600);
+    padding-bottom: .5rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    border-left: 4px solid var(--blue-600);
+    padding-left: .75rem;
+    margin: 0 0 .75rem;
+}
+h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 1rem 0 .5rem;
+}
+h4 {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+p { margin-bottom: .75rem; }
+ul,ol { padding-left: 1.5rem; margin-bottom: .75rem; }
+li { margin-bottom: .3rem; }
+blockquote.legal-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: .9rem;
+    line-height: 2.1;
+    background: var(--blue-100);
+    border-left: 4px solid var(--blue-600);
+    border-radius: 0 4px 4px 0;
+    margin: .75rem 0;
+    padding: .875rem 1.25rem;
+    color: var(--blue-900);
+}
+mark.kw         { background: var(--highlight);        color: inherit; padding: .1em .3em; border-radius: 3px; }
+mark.kw-strong  { background: var(--highlight-strong); color: inherit; padding: .1em .3em; border-radius: 3px; font-weight: 700; }
+mark.kw-red     { background: var(--highlight-red);    color: var(--red-800); padding: .1em .3em; border-radius: 3px; }
+strong.warn { color: var(--red-600); font-weight: 700; }
+.em-a { color: var(--blue-700);    font-weight: 700; }
+.em-b { color: var(--orange-600);  font-weight: 700; }
+.em-c { color: var(--red-800);     font-weight: 700; }
+
+/* Page Title Block */
+.page-title-block {
+    background: var(--blue-900);
+    color: #fff;
+    padding: 2.5rem 1.5rem 2rem;
+    margin: 0 -1.5rem 2.5rem;
+}
+.page-title-block__breadcrumb {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin: 0 0 .75rem;
+    letter-spacing: .04em;
+}
+.page-title-block__main {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.35;
+    border: none;
+    padding: 0;
+    margin: 0 0 .5rem;
+}
+.page-title-block__sub {
+    font-size: .9rem;
+    color: var(--blue-200);
+    margin: 0 0 1.25rem;
+}
+.page-title-block__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+}
+.page-title-block .badge--info {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-color: rgba(255,255,255,0.3);
+}
+
+/* Section Header */
+.sec-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 3rem 0 1.25rem;
+}
+.sec-head__num {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue-600);
+    color: #fff;
+    font-size: .875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    letter-spacing: .04em;
+}
+.sec-head__sub {
+    font-size: .75rem;
+    color: var(--text-muted);
+    margin: .125rem 0 0;
+    letter-spacing: .04em;
+}
+section + section { margin-top: 1rem; }
+
+/* Boxes */
+.box { border-radius: 6px; margin: 1.25rem 0; overflow: hidden; }
+.box__hd {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
+}
+.box__icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.box__label {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.box__term {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    flex: 1;
+}
+.box__hd-badges {
+    display: flex;
+    align-items: center;
+    gap: .375rem;
+    margin-left: auto;
+}
+.box__bd { padding: .875rem 1.25rem; font-size: .925rem; }
+.box--definition { border: 1px solid var(--orange-600); }
+.box--definition .box__hd {
+    background: var(--orange-600);
+    color: #fff;
+    padding: .625rem 1rem;
+}
+.box--definition .box__bd { background: var(--orange-50); color: var(--orange-900); }
+.box--example { border: 1px solid var(--blue-200); }
+.box--example .box__hd { background: var(--blue-600); color: #fff; }
+.box--example .box__bd { background: var(--blue-50); color: var(--blue-900); }
+.box--legal { border: 1px solid var(--blue-600); }
+.box--legal .box__hd { background: var(--blue-900); color: #fff; }
+.box--legal .box__bd { background: var(--blue-100); color: var(--blue-900); }
+.box--caution { border: 1px solid var(--red-400); }
+.box--caution .box__hd { background: var(--red-400); color: #fff; }
+.box--caution .box__bd { background: var(--red-50); color: var(--red-800); }
+.box--exam { border: 1px solid var(--red-600); }
+.box--exam .box__hd { background: var(--red-600); color: #fff; }
+.box--exam .box__bd { background: var(--red-100); color: var(--red-800); }
+.box--definition .badge--freq {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: .68rem;
+    font-weight: 700;
+    padding: .15em .6em;
+    border-radius: 4px;
+    vertical-align: middle;
+    letter-spacing: .05em;
+}
+.badge--def     { background: var(--orange-50);  color: var(--orange-900); border: 1px solid var(--orange-200); }
+.badge--exam    { background: var(--red-100);    color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--caution { background: var(--red-50);     color: var(--red-800);    border: 1px solid var(--red-400); }
+.badge--info    { background: var(--blue-50);    color: var(--blue-900);   border: 1px solid var(--blue-200); }
+.badge--stars { background: var(--highlight); color: var(--orange-900); border: 1px solid var(--highlight-strong); font-weight: 700; }
+.badge--freq { background: var(--red-600); color: #fff; border: none; }
+.badge--law { background: rgba(255,255,255,0.18); color: #fff; border: 1px solid rgba(255,255,255,0.35); }
+
+/* Case Card */
+.case-card {
+    border: 1px solid var(--blue-600);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.case-card__hd {
+    background: var(--blue-700);
+    padding: 1rem 1.25rem .875rem;
+}
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin-bottom: .625rem;
+}
+.case-card__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+}
+.case-card__bd {
+    background: var(--blue-50);
+    padding: 1rem 1.25rem;
+    color: var(--blue-900);
+    font-size: .925rem;
+}
+.case-card__bd h4 { color: var(--blue-700); margin-top: .875rem; }
+
+/* Comparison Table */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table th, .cmp-table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table thead th { font-weight: 700; }
+.cmp-table .col--label {
+    background: var(--blue-50);
+    color: var(--text-secondary);
+    font-size: .8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    width: 7rem;
+}
+.cmp-table thead .col--label { background: var(--blue-100); color: var(--blue-900); }
+.cmp-table .col--a { background: var(--blue-50); }
+.cmp-table .col--b { background: var(--orange-50); }
+.cmp-table .col--c { background: var(--red-50); }
+.cmp-table thead .col--a { background: var(--blue-600); color: #fff; }
+.cmp-table thead .col--b { background: var(--orange-600); color: #fff; }
+.cmp-table thead .col--c { background: var(--red-600); color: #fff; }
+.cmp-table tbody tr:hover td { filter: brightness(.97); }
+
+/* Tables inside cards use the card header color for borders */
+.box .cmp-table,
+.box .cmp-table > table,
+.case-card .cmp-table,
+.case-card .cmp-table > table {
+    border-color: currentColor;
+}
+.box .cmp-table th,
+.box .cmp-table td,
+.box .cmp-table > table th,
+.box .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-width: 1px;
+}
+.box--definition .cmp-table th,
+.box--definition .cmp-table td,
+.box--definition .cmp-table > table th,
+.box--definition .cmp-table > table td {
+    border-color: var(--orange-600);
+}
+.box--example .cmp-table th,
+.box--example .cmp-table td,
+.box--example .cmp-table > table th,
+.box--example .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--legal .cmp-table th,
+.box--legal .cmp-table td,
+.box--legal .cmp-table > table th,
+.box--legal .cmp-table > table td,
+.case-card .cmp-table th,
+.case-card .cmp-table td,
+.case-card .cmp-table > table th,
+.case-card .cmp-table > table td {
+    border-color: var(--blue-600);
+}
+.box--caution .cmp-table th,
+.box--caution .cmp-table td,
+.box--caution .cmp-table > table th,
+.box--caution .cmp-table > table td {
+    border-color: var(--red-400);
+}
+.box--exam .cmp-table th,
+.box--exam .cmp-table td,
+.box--exam .cmp-table > table th,
+.box--exam .cmp-table > table td {
+    border-color: var(--red-600);
+}
+
+/* Diagram */
+.diagram-wrap {
+    background: var(--blue-50);
+    border: 1px solid var(--blue-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+}
+.diagram-wrap svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Compatibility for generated variants */
+.badge--blue,
+.badge--case {
+    background: var(--blue-50);
+    color: var(--blue-900);
+    border: 1px solid var(--blue-200);
+}
+.badge--danger {
+    background: var(--red-50);
+    color: var(--red-800);
+    border: 1px solid var(--red-400);
+}
+.box:not([class*="box--"]) {
+    border: 1px solid var(--blue-200);
+}
+.box:not([class*="box--"]) .box__hd {
+    background: var(--blue-600);
+    color: #fff;
+}
+.box:not([class*="box--"]) .box__bd {
+    background: var(--blue-50);
+    color: var(--blue-900);
+}
+.case-card__hd-citation,
+.case-card__meta {
+    font-size: .75rem;
+    color: var(--blue-200);
+    margin-bottom: .375rem;
+    letter-spacing: .03em;
+}
+.case-card__hd-title,
+h3.case-card__title,
+.case-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.45;
+    margin: 0 0 .625rem;
+}
+.case-card__label,
+.case-card__cat,
+.case-card__hd-label {
+    display: none;
+}
+.case-card__prop {
+    margin: .9rem 0;
+}
+.case-card__prop-label {
+    display: block;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
+.case-card__prop-value {
+    color: var(--blue-900);
+}
+.case-card__data,
+.case-card__dl {
+    margin: 0;
+}
+.case-card__data dt,
+.case-card__dl dt {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--blue-700);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin: .75rem 0 .25rem;
+}
+.case-card__data dd,
+.case-card__dl dd {
+    margin-left: 0;
+    color: var(--blue-900);
+}
+.case-card__fact,
+.case-card__point {
+    margin-bottom: .75rem;
+}
+.cmp-table-wrap {
+    margin: 1rem 0 1.5rem;
+}
+.cmp-table-wrap > .cmp-table,
+.cmp-table > table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+    margin: 0;
+}
+.cmp-table-wrap > .cmp-table th,
+.cmp-table-wrap > .cmp-table td,
+.cmp-table > table th,
+.cmp-table > table td {
+    padding: .6rem .875rem;
+    border: 1px solid var(--blue-200);
+    vertical-align: top;
+    text-align: left;
+}
+.cmp-table-wrap > .cmp-table thead th,
+.cmp-table > table thead th {
+    font-weight: 700;
+}
+.sec-content,
+.sec-body,
+.unit-section__body,
+.page-section,
+.unit-section,
+.unit-article,
+.main-article {
+    display: block;
+}
+.check-list {
+    list-style: none;
+    padding-left: 0;
+}
+.check-list li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+.check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--red-600);
+    font-weight: 700;
+}
+
+</style>
+</head>
+<body>
+<div class="page-title-block">
+  <p class="page-title-block__breadcrumb">行政書士試験 学習ノート / 民法</p>
+  <h1 class="page-title-block__main">意思表示の構成要素</h1>
+  <p class="page-title-block__sub">効果意思と表示行為、内心の意思と表示の不一致</p>
+  <div class="page-title-block__tags">
+    <span class="badge badge--info">民法総則</span>
+    <span class="badge badge--info">法律行為</span>
+    <span class="badge badge--info">意思表示</span>
+    <span class="badge badge--info">心裡留保</span>
+    <span class="badge badge--info">虚偽表示</span>
+    <span class="badge badge--info">錯誤</span>
+  </div>
+</div>
+
+<article class="unit-article">
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">01</div>
+    <div>
+      <h2>単元の概要</h2>
+      <p class="sec-head__sub">Unit Overview</p>
+    </div>
+  </header>
+
+  <p><strong><mark class="kw">意思表示</mark></strong>は、契約・取消し・解除・代理行為など、私法上の法律効果を発生させるために不可欠な基本単位です。民法総則では、まず「人がどのような内心を持ち、それをどのように外部へ示したときに、法が効果を認めるのか」を学びます。売買契約を例にすると、買主の内心に「この土地を買いたい」という意思があるだけでは契約は成立せず、相手方に対して「買います」と表示されて初めて取引の相手方が信頼できる状態になります。</p>
+  <p>この単元の中心は、<strong><mark class="kw">効果意思</mark></strong>、<strong><mark class="kw">表示意思</mark></strong>、<strong><mark class="kw">表示行為</mark></strong>という構成要素を理解し、そのうえで<strong><mark class="kw">内心の意思と表示の不一致</mark></strong>が生じた場合に、どの条文で処理するかを判断することです。具体的には、表意者が不一致を知っている単独の不一致が<strong><mark class="kw">心裡留保</mark></strong>、相手方と通じた虚偽の外観が<strong><mark class="kw">通謀虚偽表示</mark></strong>、不一致を知らないまま表示した場合が<strong><mark class="kw">錯誤</mark></strong>です。</p>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span><span class="box__label">学習の入口</span></div>
+    <div class="box__bd">
+      <p>同じ「本心と表示がずれた」場面でも、民法の結論は大きく変わります。冗談で「売ります」と言っただけなら<strong><mark class="kw">心裡留保</mark></strong>として原則有効、債権者から財産を隠すために相手方と仮装売買をしたなら<strong><mark class="kw">通謀虚偽表示</mark></strong>として当事者間では無効、金額を書き間違えたなら<strong><mark class="kw">錯誤</mark></strong>として要件を満たせば取消しです。試験では、事案の結論を覚えるよりも、誰が不一致を認識していたか、相手方と通じていたか、第三者が現れたかを順番に見ることが得点につながります。</p>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">改正法の注意</span></div>
+    <div class="box__bd">
+      <p>平成二十九年改正により、<strong><mark class="kw">錯誤</mark></strong>の効果は旧法上の「無効」から、現行法上の「取り消すことができる」に整理されました。現在の行政書士試験では、<strong><mark class="kw">民法第九十五条</mark></strong>の「重要な錯誤」「動機の表示」「重過失の例外」「善意無過失の第三者保護」を現行法で判断します。古い問題や解説を読むときは、錯誤の効果が現行法に合わせて読み替えられているかを確認してください。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">02</div>
+    <div>
+      <h2>重要用語の解説</h2>
+      <p class="sec-head__sub">Key Term Explanations</p>
+    </div>
+  </header>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">法律行為</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">法律行為</mark></strong>とは、意思表示を不可欠の要素として、当事者が意図した法律効果を発生させる私法上の行為です。売買、賃貸借、贈与、取消し、解除、遺言などが典型です。制度趣旨は、私的自治のもとで当事者の意思に法的効果を与えることにあります。もっとも、法が保護するのは単なる内心ではなく、外部から認識できる表示を通じて形成された取引関係です。そのため、法律行為の有効性を判断するときは、意思能力、行為能力、公序良俗、意思表示の瑕疵・欠缺、代理権などを順に検討します。試験では「意思表示があるから常に有効」ではなく、表示の背後にある意思と外観の信頼をどう調整するかが問われます。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">意思表示</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">最重要</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">意思表示</mark></strong>とは、一定の法律効果を発生させようとする意思を外部に表示する行為です。たとえば「この土地を一千万円で買います」という発言や、契約書への署名押印は意思表示に当たります。意思表示は、内心にある意思と、外部から認識できる表示行為をつなぐ概念です。民法は、内心の真実だけを保護すると取引相手が不安定になり、表示だけを絶対視すると表意者が不当に害されるため、表意者の帰責性、相手方の善意・過失、第三者の信頼を基準に結論を分けています。行政書士試験では、心裡留保、虚偽表示、錯誤、詐欺・強迫、代理の各単元を横断する基礎概念として出題されます。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">動機</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">動機</mark></strong>とは、意思表示をしようと考えるに至った内心上の理由です。「駅ができると思ったから土地を買う」「転売益が見込めると思ったから株式を買う」といった事情が動機に当たります。動機は通常、本人の内心にとどまるため、相手方に表示されない限り法律行為の内容にはなりません。これは、相手方が知り得ない内心の事情によって契約の効力が左右されると、取引安全が大きく損なわれるからです。もっとも、動機が相手方に表示され、法律行為の基礎とされている場合には、<strong><mark class="kw">動機の錯誤</mark></strong>として民法第九十五条第一項第二号・第二項の問題になります。試験では、動機の錯誤が常に取消しになるわけではない点が狙われます。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">効果意思</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">効果意思</mark></strong>とは、一定の法律効果を発生させようとする内心的意思です。売買なら「所有権を移転し、代金債権を発生させる」という法的効果を欲する意思が中心になります。意思表示の構成要素としては最も内心に近い部分ですが、法的判断では、効果意思そのものを直接観察できないため、契約書、発言、交渉経過、取引慣行などの外部事情から認定されます。<strong><mark class="kw">心裡留保</mark></strong>や<strong><mark class="kw">通謀虚偽表示</mark></strong>では、表示に対応する効果意思がないことを表意者が認識している点が特徴です。試験では「効果意思がないなら常に無効」と短絡せず、民法第九十三条・第九十四条の特則で処理することが重要です。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">表示意思</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">表示意思</mark></strong>とは、効果意思を外部に表示しようとする意思です。学説上は独立した構成要素として説明されることがありますが、試験対策では、表示行為が本人の意思に基づくものか、冗談・誤記・署名の冒用などでどの条文に接続するかを判断する補助概念として使います。たとえば、本人が契約書に署名する意思なく他人に手を取られて署名させられた場合には、そもそも表示行為の帰属が問題になります。一方、本人が自分で表示したが内心とずれている場合には、心裡留保、虚偽表示、錯誤の問題になります。表示意思は、意思表示の成立段階と効力段階を分けるための整理概念です。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">表示行為</span>
+      <div class="box__hd-badges"><span class="badge badge--freq">頻出</span></div>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">表示行為</mark></strong>とは、効果意思を外部から認識できる形にした行為です。口頭での申込み、メール送信、契約書への署名押印、入札、解除通知などが含まれます。民法が表示行為を重視するのは、取引相手や第三者が内心を直接知ることはできず、外部に現れた表示に基づいて行動するからです。表示行為がある場合でも、内心と一致しないことがあります。その場合、表意者の保護をどこまで認めるかは、相手方の信頼と第三者の取引安全との調整になります。試験では、表示行為を作った者の帰責性が強いほど第三者保護が厚くなる、という大きな方向性を押さえると、条文の違いを理解しやすくなります。</p>
+    </div>
+  </div>
+
+  <div class="box box--definition">
+    <div class="box__hd">
+      <span class="material-icons-round box__icon">auto_stories</span>
+      <span class="box__term">意思の欠缺</span>
+    </div>
+    <div class="box__bd">
+      <p><strong><mark class="kw">意思の欠缺</mark></strong>とは、表示行為に対応する内心的効果意思がない状態をいいます。典型は、心裡留保、通謀虚偽表示、錯誤です。これに対し、詐欺・強迫は意思そのものは一応存在するが形成過程に瑕疵があるため、通常は<strong><mark class="kw">意思表示の瑕疵</mark></strong>として区別されます。もっとも、現行民法は錯誤も取消しとして整理しているため、試験では「意思が欠けるか、形成過程がゆがむか」という理論区分と、「無効か取消しか」という条文上の効果を分けて覚える必要があります。特に、心裡留保と虚偽表示は無効の場面でも第三者に対抗できない場合があり、錯誤は取消しで第三者保護要件が善意無過失になる点を比較します。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">03</div>
+    <div>
+      <h2>概念関係図</h2>
+      <p class="sec-head__sub">Concept Relationship Diagram</p>
+    </div>
+  </header>
+
+  <h3>意思表示の成立過程と不一致の発生点</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 1040 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="意思表示の成立過程と不一致の発生点">
+      <defs>
+        <marker id="arr-solid-u5a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-dashed-u5a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="520" y1="86" x2="520" y2="128" stroke="var(--blue-600)" stroke-width="2"/>
+      <line x1="140" y1="128" x2="900" y2="128" stroke="var(--blue-600)" stroke-width="2"/>
+      <line x1="140" y1="128" x2="140" y2="160" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="380" y1="128" x2="380" y2="160" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="620" y1="128" x2="620" y2="160" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="900" y1="128" x2="900" y2="160" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+
+      <line x1="140" y1="246" x2="140" y2="340" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="380" y1="246" x2="380" y2="340" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="620" y1="246" x2="620" y2="340" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+      <line x1="900" y1="246" x2="900" y2="340" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5a)"/>
+
+      <polyline points="260,203 300,203 300,300 370,300" fill="none" stroke="var(--red-600)" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr-dashed-u5a)"/>
+      <polyline points="740,203 790,203 790,300 890,300" fill="none" stroke="var(--red-600)" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr-dashed-u5a)"/>
+
+      <rect x="365" y="20" width="310" height="66" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="520" y="48" text-anchor="middle" font-size="17" font-weight="700" fill="var(--blue-900)">意思表示</text>
+      <text x="520" y="70" text-anchor="middle" font-size="13" fill="var(--blue-900)">内心の意思を外部へ表示する行為</text>
+
+      <rect x="30" y="162" width="220" height="84" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="140" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">動機</text>
+      <text x="140" y="214" text-anchor="middle" font-size="13" fill="var(--blue-900)">意思表示に至る理由</text>
+      <text x="140" y="232" text-anchor="middle" font-size="12" fill="var(--blue-900)">表示されなければ原則非考慮</text>
+
+      <rect x="270" y="162" width="220" height="84" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="2"/>
+      <text x="380" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="var(--orange-900)">効果意思</text>
+      <text x="380" y="214" text-anchor="middle" font-size="13" fill="var(--orange-900)">法律効果を欲する内心</text>
+      <text x="380" y="232" text-anchor="middle" font-size="12" fill="var(--orange-900)">欠けると欠缺類型へ</text>
+
+      <rect x="510" y="162" width="220" height="84" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="2"/>
+      <text x="620" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="var(--orange-900)">表示意思</text>
+      <text x="620" y="214" text-anchor="middle" font-size="13" fill="var(--orange-900)">外部へ示そうとする意思</text>
+      <text x="620" y="232" text-anchor="middle" font-size="12" fill="var(--orange-900)">成立・帰属の判断を補助</text>
+
+      <rect x="790" y="162" width="220" height="84" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="900" y="190" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">表示行為</text>
+      <text x="900" y="214" text-anchor="middle" font-size="13" fill="var(--blue-900)">外部から認識できる行為</text>
+      <text x="900" y="232" text-anchor="middle" font-size="12" fill="var(--blue-900)">相手方・第三者の信頼対象</text>
+
+      <rect x="30" y="342" width="220" height="86" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="140" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">動機の錯誤</text>
+      <text x="140" y="394" text-anchor="middle" font-size="13" fill="var(--blue-900)">基礎事情の認識違い</text>
+      <text x="140" y="412" text-anchor="middle" font-size="12" fill="var(--blue-900)">表示があると取消しへ</text>
+
+      <rect x="270" y="342" width="220" height="86" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="2"/>
+      <text x="380" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="var(--red-800)">心裡留保・虚偽表示</text>
+      <text x="380" y="394" text-anchor="middle" font-size="13" fill="var(--red-800)">効果意思を欠くと知る</text>
+      <text x="380" y="412" text-anchor="middle" font-size="12" fill="var(--red-800)">単独か通謀かで分岐</text>
+
+      <rect x="510" y="342" width="220" height="86" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="2"/>
+      <text x="620" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="var(--red-800)">表示の錯誤</text>
+      <text x="620" y="394" text-anchor="middle" font-size="13" fill="var(--red-800)">表示対応意思を欠く</text>
+      <text x="620" y="412" text-anchor="middle" font-size="12" fill="var(--red-800)">重要性と重過失を確認</text>
+
+      <rect x="790" y="342" width="220" height="86" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="900" y="370" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">外観信頼</text>
+      <text x="900" y="394" text-anchor="middle" font-size="13" fill="var(--blue-900)">相手方・第三者保護</text>
+      <text x="900" y="412" text-anchor="middle" font-size="12" fill="var(--blue-900)">善意・無過失を比較</text>
+
+      <rect x="90" y="500" width="860" height="42" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="520" y="526" text-anchor="middle" font-size="13" fill="var(--red-800)">判断の軸：内心だけでなく、表示を作った帰責性と第三者の信頼を合わせて評価する</text>
+    </svg>
+  </div>
+  <p>この図は、<strong><mark class="kw">意思表示</mark></strong>が内心から外部表示へ進む過程を示しています。<strong><mark class="kw">動機</mark></strong>は意思表示の前提となる理由であり、表示されない限り通常は契約内容になりません。<strong><mark class="kw">効果意思</mark></strong>と<strong><mark class="kw">表示行為</mark></strong>がずれると、表意者が不一致を知っていたか、相手方と通じていたかにより、心裡留保、虚偽表示、錯誤へ分岐します。図の右側の外観信頼は、相手方や第三者が表示を信じて取引に入るため、表意者保護だけで結論を決められないことを示します。</p>
+
+  <h3>内心と表示の不一致の判断フロー</h3>
+  <div class="diagram-wrap">
+    <svg width="100%" viewBox="0 0 980 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="内心と表示の不一致の判断フロー">
+      <defs>
+        <marker id="arr-solid-u5b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--blue-600)"/>
+        </marker>
+        <marker id="arr-dashed-u5b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L8,3 z" fill="var(--red-600)"/>
+        </marker>
+      </defs>
+
+      <line x1="490" y1="86" x2="490" y2="136" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5b)"/>
+      <line x1="490" y1="222" x2="490" y2="272" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5b)"/>
+      <line x1="490" y1="358" x2="490" y2="408" stroke="var(--blue-600)" stroke-width="2" marker-end="url(#arr-solid-u5b)"/>
+
+      <line x1="490" y1="222" x2="250" y2="272" stroke="var(--red-600)" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr-dashed-u5b)"/>
+      <line x1="490" y1="358" x2="250" y2="408" stroke="var(--red-600)" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr-dashed-u5b)"/>
+      <line x1="490" y1="358" x2="735" y2="408" stroke="var(--red-600)" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arr-dashed-u5b)"/>
+
+      <rect x="330" y="20" width="320" height="66" rx="6" fill="var(--blue-100)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="490" y="48" text-anchor="middle" font-size="17" font-weight="700" fill="var(--blue-900)">表示と内心が食い違う</text>
+      <text x="490" y="70" text-anchor="middle" font-size="13" fill="var(--blue-900)">効果意思と表示行為の不一致</text>
+
+      <rect x="330" y="136" width="320" height="86" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="2"/>
+      <text x="490" y="166" text-anchor="middle" font-size="16" font-weight="700" fill="var(--orange-900)">不一致を知っていたか</text>
+      <text x="490" y="191" text-anchor="middle" font-size="13" fill="var(--orange-900)">表意者の認識で分ける</text>
+      <text x="490" y="209" text-anchor="middle" font-size="12" fill="var(--orange-900)">知るなら意識的不一致</text>
+
+      <rect x="90" y="274" width="320" height="84" rx="6" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="2"/>
+      <text x="250" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="var(--red-800)">知らなかった</text>
+      <text x="250" y="328" text-anchor="middle" font-size="13" fill="var(--red-800)">錯誤の入口</text>
+      <text x="250" y="346" text-anchor="middle" font-size="12" fill="var(--red-800)">表示・動機の錯誤を確認</text>
+
+      <rect x="330" y="274" width="320" height="84" rx="6" fill="var(--orange-50)" stroke="var(--orange-600)" stroke-width="2"/>
+      <text x="490" y="304" text-anchor="middle" font-size="16" font-weight="700" fill="var(--orange-900)">相手方と通じていたか</text>
+      <text x="490" y="328" text-anchor="middle" font-size="13" fill="var(--orange-900)">単独表示か共同外観か</text>
+      <text x="490" y="346" text-anchor="middle" font-size="12" fill="var(--orange-900)">通謀の有無で効果が変わる</text>
+
+      <rect x="90" y="410" width="320" height="86" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="250" y="440" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">錯誤</text>
+      <text x="250" y="464" text-anchor="middle" font-size="13" fill="var(--blue-900)">重要なら取消し可能</text>
+      <text x="250" y="482" text-anchor="middle" font-size="12" fill="var(--blue-900)">重過失・第三者保護を確認</text>
+
+      <rect x="330" y="410" width="320" height="86" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="490" y="440" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">心裡留保</text>
+      <text x="490" y="464" text-anchor="middle" font-size="13" fill="var(--blue-900)">単独で真意と違う表示</text>
+      <text x="490" y="482" text-anchor="middle" font-size="12" fill="var(--blue-900)">原則有効・悪意有過失は無効</text>
+
+      <rect x="650" y="410" width="320" height="86" rx="6" fill="var(--blue-50)" stroke="var(--blue-600)" stroke-width="2"/>
+      <text x="810" y="440" text-anchor="middle" font-size="16" font-weight="700" fill="var(--blue-900)">通謀虚偽表示</text>
+      <text x="810" y="464" text-anchor="middle" font-size="13" fill="var(--blue-900)">相手方と仮装外観を作る</text>
+      <text x="810" y="482" text-anchor="middle" font-size="12" fill="var(--blue-900)">当事者間無効・善意第三者保護</text>
+
+      <rect x="95" y="552" width="790" height="42" rx="4" fill="var(--red-50)" stroke="var(--red-600)" stroke-width="1" stroke-dasharray="4,3"/>
+      <text x="490" y="578" text-anchor="middle" font-size="13" fill="var(--red-800)">最終確認：第三者がいる場合は、善意のみか、善意無過失まで必要かを条文ごとに比較する</text>
+    </svg>
+  </div>
+  <p>この判断フローでは、最初に表意者が不一致を知っていたかを確認します。知らなかった場合は<strong><mark class="kw">錯誤</mark></strong>に進み、知っていた場合は相手方との通謀の有無を見ます。単独なら<strong><mark class="kw">心裡留保</mark></strong>、相手方と通じて虚偽の外観を作ったなら<strong><mark class="kw">通謀虚偽表示</mark></strong>です。どの類型でも、第三者が現れたときに表意者が無効・取消しを対抗できるかが試験で問われるため、フローの最後で第三者保護要件を必ず確認します。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">04</div>
+    <div>
+      <h2>比較表</h2>
+      <p class="sec-head__sub">Comparison Tables</p>
+    </div>
+  </header>
+
+  <h3>意思表示の構成要素の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">動機</th>
+        <th class="col--b">効果意思</th>
+        <th class="col--c">表示行為</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">定義</td>
+        <td class="col--a"><span class="em-a">意思表示に至る理由</span>。駅ができると思った、転売益を見込んだ、など。</td>
+        <td class="col--b"><span class="em-b">法律効果を欲する内心</span>。買う、売る、贈与する、解除するなど。</td>
+        <td class="col--c"><span class="em-c">外部から認識できる行為</span>。発言、署名押印、通知、電子メールなど。</td>
+      </tr>
+      <tr>
+        <td class="col--label">法的意味</td>
+        <td class="col--a">原則として内心事情にとどまり、表示されなければ法律行為の内容になりにくい。</td>
+        <td class="col--b">表示に対応する意思として、欠けると心裡留保・虚偽表示・錯誤の判断対象になる。</td>
+        <td class="col--c">相手方や第三者が信頼する対象であり、取引安全の出発点になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">典型問題</td>
+        <td class="col--a">動機の錯誤。表示され、法律行為の基礎とされているかを確認する。</td>
+        <td class="col--b">本心と表示の不一致。表意者が不一致を知っていたかで分岐する。</td>
+        <td class="col--c">表示外観への信頼。善意第三者や相手方の保護が問題になる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">試験の引っかけ</td>
+        <td class="col--a">「動機に錯誤があれば常に取り消せる」は誤り。</td>
+        <td class="col--b">「効果意思がない表示は常に無効を誰にでも主張できる」は誤り。</td>
+        <td class="col--c">「表示した本人の内心が違えば相手方保護は不要」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>内心と表示の不一致三類型の比較</h3>
+  <table class="cmp-table">
+    <thead>
+      <tr>
+        <th class="col--label">比較項目</th>
+        <th class="col--a">心裡留保</th>
+        <th class="col--b">通謀虚偽表示</th>
+        <th class="col--c">錯誤</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="col--label">不一致の認識</td>
+        <td class="col--a"><span class="em-a">表意者は知っている</span>。単独で真意と違う表示をする。</td>
+        <td class="col--b"><span class="em-b">表意者と相手方が通じている</span>。共同で虚偽外観を作る。</td>
+        <td class="col--c"><span class="em-c">表意者は知らない</span>。表示対応意思または基礎事情に誤りがある。</td>
+      </tr>
+      <tr>
+        <td class="col--label">原則効果</td>
+        <td class="col--a">原則有効。表示を作った表意者の帰責性が重い。</td>
+        <td class="col--b">当事者間では無効。当事者双方に保護の必要性が乏しい。</td>
+        <td class="col--c">要件を満たせば取消し可能。旧法の無効とは異なる。</td>
+      </tr>
+      <tr>
+        <td class="col--label">相手方の主観</td>
+        <td class="col--a">相手方が悪意または有過失なら無効。</td>
+        <td class="col--b">相手方は通謀者なので当事者間保護なし。</td>
+        <td class="col--c">表意者重過失なら原則取消し不可。ただし相手方悪意重過失・共通錯誤は例外。</td>
+      </tr>
+      <tr>
+        <td class="col--label">第三者保護</td>
+        <td class="col--a">善意の第三者に無効を対抗できない。</td>
+        <td class="col--b">善意の第三者に無効を対抗できない。判例上、第三者範囲が重要。</td>
+        <td class="col--c">善意かつ無過失の第三者に取消しを対抗できない。</td>
+      </tr>
+      <tr>
+        <td class="col--label">頻出誤答</td>
+        <td class="col--a">「冗談は常に無効」「相手方の過失は関係ない」は誤り。</td>
+        <td class="col--b">「善意第三者にも当然に無効を主張できる」は誤り。</td>
+        <td class="col--c">「錯誤は現行法でも当然無効」「第三者は善意だけでよい」は誤り。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>分類の実践的な判断基準は、第一に「表意者が不一致を認識していたか」、第二に「相手方と通じていたか」、第三に「第三者が現れたか」です。表意者が不一致を知らないなら錯誤、知っていて単独なら心裡留保、知っていて相手方と仮装したなら通謀虚偽表示です。表で整理した効果の違いは、結論だけでなく、なぜその結論になるかを表意者の帰責性と外観信頼の強さから説明できるようにしてください。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">05</div>
+    <div>
+      <h2>関連条文</h2>
+      <p class="sec-head__sub">Legal Provisions</p>
+    </div>
+  </header>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法 第九十三条・第九十四条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第九十三条　意思表示は、表意者がその真意ではないことを知ってしたときであっても、そのためにその効力を妨げられない。ただし、相手方がその意思表示が表意者の真意ではないことを知り、又は知ることができたときは、その意思表示は、無効とする。<br>２　前項ただし書の規定による意思表示の無効は、善意の第三者に対抗することができない。<br>第九十四条　相手方と通じてした虚偽の意思表示は、無効とする。<br>２　前項の規定による意思表示の無効は、善意の第三者に対抗することができない。</blockquote>
+      <p><strong><mark class="kw">民法第九十三条</mark></strong>は、<strong><mark class="kw">心裡留保</mark></strong>の規定です。本文は、表意者が本心と違うことを知って表示した場合でも、原則として表示どおり有効とします。これは、表示を作った表意者より、表示を信頼した相手方を保護する趣旨です。ただし書は、相手方が真意でないことを知り、または知ることができた場合に無効とします。第二項は、無効となる場合でも善意の第三者には対抗できないとし、さらに外観信頼を保護します。</p>
+      <p><strong><mark class="kw">民法第九十四条</mark></strong>は、<strong><mark class="kw">通謀虚偽表示</mark></strong>の規定です。第一項は、相手方と通じてした虚偽の意思表示を無効とします。当事者双方が虚偽外観を作っているため、当事者間で表示どおりの効果を認める必要はありません。第二項は、虚偽外観を信頼して法律上の利害関係に入った善意の第三者を保護します。試験では、この「第三者」に誰が当たるか、転得者が保護されるか、類推適用で本人の帰責性が必要かが重要です。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法 第九十五条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第九十五条　意思表示は、次に掲げる錯誤に基づくものであって、その錯誤が法律行為の目的及び取引上の社会通念に照らして重要なものであるときは、取り消すことができる。<br>一　意思表示に対応する意思を欠く錯誤<br>二　表意者が法律行為の基礎とした事情についてのその認識が真実に反する錯誤<br>２　前項第二号の規定による意思表示の取消しは、その事情が法律行為の基礎とされていることが表示されていたときに限り、することができる。<br>３　錯誤が表意者の重大な過失によるものであった場合には、次に掲げる場合を除き、第一項の規定による意思表示の取消しをすることができない。<br>一　相手方が表意者に錯誤があることを知り、又は重大な過失によって知らなかったとき。<br>二　相手方が表意者と同一の錯誤に陥っていたとき。<br>４　第一項の規定による意思表示の取消しは、善意でかつ過失がない第三者に対抗することができない。</blockquote>
+      <p><strong><mark class="kw">民法第九十五条</mark></strong>は、<strong><mark class="kw">錯誤</mark></strong>の規定です。第一項第一号は、価格や数量を書き間違えたような表示対応意思を欠く錯誤を扱います。第一項第二号は、法律行為の基礎とした事情についての認識が真実に反する錯誤、いわゆる動機の錯誤を扱います。第二項は、動機の錯誤について、その事情が法律行為の基礎とされていることが表示されていた場合に限り取消しを認めます。第三項は、表意者に重大な過失がある場合の原則的な取消し制限と、相手方悪意重過失・共通錯誤という例外を定めます。第四項は、善意無過失の第三者保護を定め、心裡留保・虚偽表示より第三者保護要件が重いことを示します。</p>
+    </div>
+  </div>
+
+  <div class="box box--legal">
+    <div class="box__hd"><span class="material-icons-round box__icon">gavel</span><span class="box__label">民法 第百七条・第百二十条・第百二十一条・第百二十六条</span></div>
+    <div class="box__bd">
+      <blockquote class="legal-text">第百七条　代理人が自己又は第三者の利益を図る目的で代理権の範囲内の行為をした場合において、相手方がその目的を知り、又は知ることができたときは、その行為は、代理権を有しない者がした行為とみなす。<br>第百二十条　錯誤、詐欺又は強迫によって取り消すことができる行為は、瑕疵ある意思表示をした者又はその代理人若しくは承継人に限り、取り消すことができる。<br>第百二十一条　取り消された行為は、初めから無効であったものとみなす。<br>第百二十六条　取消権は、追認をすることができる時から五年間行使しないときは、時効によって消滅する。行為の時から二十年を経過したときも、同様とする。</blockquote>
+      <p><strong><mark class="kw">民法第百七条</mark></strong>は、代理権の濫用を定めます。これは、旧法下で民法第九十三条ただし書の類推適用により処理されていた判例法理を明文化した規定です。代理人が外形上は代理権の範囲内で行為していても、自己または第三者の利益を図る目的があり、相手方がその目的を知り、または知ることができた場合には、無権代理行為とみなされます。<strong><mark class="kw">民法第百二十条</mark></strong>、<strong><mark class="kw">民法第百二十一条</mark></strong>、<strong><mark class="kw">民法第百二十六条</mark></strong>は、錯誤取消しの権利者、取消しの遡及効、期間制限に接続する条文です。錯誤は取り消されるまでは一応有効であり、取消しによって初めから無効とみなされる点を、無効類型と区別して整理します。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">06</div>
+    <div>
+      <h2>重要判例</h2>
+      <p class="sec-head__sub">Important Precedents</p>
+    </div>
+  </header>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第一小法廷　昭和四十二年四月二十日　昭和三十九年（オ）第一〇二五号・民集二十一巻三号六九七頁</div>
+      <div class="case-card__title">代理権濫用と心裡留保類推適用事件（売掛代金請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round">school</span>頻出</span>
+        <span class="badge badge--law">民法93条</span>
+        <span class="badge badge--law">民法107条</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>会社の代理人が、形式的には代理権の範囲内で取引をしたが、その実質は本人である会社の利益ではなく、自己または第三者の利益を図る目的で行われた。相手方は、代理人の権限が外形上存在することを前提に、本人に取引上の責任を求めた。これに対して本人側は、代理人が権限を濫用していたこと、相手方もその事情を知り、または知ることができたことを理由に、本人に効果を帰属させるべきではないと争った。争点は、代理人の行為が権限内であるにもかかわらず、相手方が濫用目的を知り得た場合に、本人が責任を免れるかである。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、代理人が自己または第三者の利益を図るために権限内の行為をした場合、相手方がその代理人の意図を知り、または知ることができたときに限り、民法第九十三条ただし書の規定を類推して、本人はその行為について責任を負わないと判断した。論理の中心は、外形上は代理権の範囲内であっても、代理人の内心的意図が本人の利益に反し、相手方がそれを知り得るなら、相手方の信頼を保護する必要がないという点にある。現行法では、この判例法理は民法第百七条として明文化され、相手方が濫用目的を知り、または知ることができた場合に無権代理行為とみなす構造になっている。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">心裡留保</mark></strong>の考え方が代理権濫用の場面に応用された代表例です。行政書士試験では、現行法の民法第百七条として問われることが多く、「代理人が権限内の行為をした以上、相手方が濫用目的を知っていても常に本人に効果が帰属する」という選択肢は誤りです。他方で、代理人が内心で自己利益を図っていただけで、相手方がその目的を知らず、知ることもできなかった場合には、本人に効果が帰属し得る点も重要です。意思表示単元では、内心と表示の不一致を、本人保護と外観信頼の調整として読む練習になります。</p>
+      <h4>関連判例・条文</h4>
+      <p>関連条文は<strong><mark class="kw">民法第九十三条</mark></strong>と<strong><mark class="kw">民法第百七条</mark></strong>です。心裡留保では表意者本人の真意と表示がずれるのに対し、代理権濫用では代理人の内心的意図と本人への効果帰属が問題になります。いずれも、相手方が事情を知り、または知ることができた場合には相手方保護を後退させるという共通構造を持ちます。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第三小法廷　昭和四十五年九月二十二日　民集二十四巻十号一四二四頁</div>
+      <div class="case-card__title">不実登記放置と民法九十四条二項類推適用事件（所有権移転登記抹消登記手続請求事件）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★★ 最重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round">school</span>頻出</span>
+        <span class="badge badge--law">民法94条2項</span>
+        <span class="badge badge--law">権利外観法理</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産の真の所有者の知らない間に、他人名義への不実の所有権移転登記が経由された。所有者はその登記が真実に反することを知ったが、経費の都合や、後にその名義人と結婚して同居するようになった事情から、抹消登記手続を四年余り見送った。さらに、その間に所有者が金融を受ける際、その債務を担保するため、他人所有名義のまま根抵当権設定登記が経由された。その後、名義人から不動産を買い受けた善意の第三者が現れ、真の所有者が「所有権は移転していない」と主張できるかが争われた。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、真の所有者が不実登記の存在を知りながら長期間これを放置し、その登記名義を担保設定にも利用した事情を重視し、民法第九十四条第二項を類推適用した。その結果、所有者は、不動産の所有権が名義人に移転していないことを、その後に名義人から買い受けた善意の第三者に対抗できないとした。判旨の基礎にあるのは、通謀虚偽表示そのものではなくても、真の権利者が虚偽外観の存続を承認・利用したと評価できる場合には、虚偽外観を信頼した第三者を保護すべきだという権利外観法理である。</p>
+      <h4>試験上の意義</h4>
+      <p>この判例は、<strong><mark class="kw">民法第九十四条第二項</mark></strong>の類推適用を理解するための基本判例です。試験では、「通謀がないから民法九十四条第二項は絶対に使えない」とする選択肢が誤りになります。ただし、単に不実登記が存在するだけで第三者が常に保護されるわけではありません。虚偽外観の存在、真の権利者の帰責性、第三者の善意という要素を確認します。類推適用では、事案によって善意無過失が要求される場面もあるため、直接適用の「善意」と混同しないことが重要です。</p>
+      <h4>関連判例・条文</h4>
+      <p>関連条文は<strong><mark class="kw">民法第九十四条第二項</mark></strong>です。不動産物権変動の対抗要件を定める民法第百七十七条とも実務上接続します。平成十八年二月二十三日最高裁判例は、民法九十四条二項・百十条の類推適用において、真の所有者に積極関与またはあえて放置した場合と同視し得るほど重い帰責性があるかを詳細に判断しており、本判例法理の発展形として整理できます。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-card__hd">
+      <div class="case-card__meta">最高裁判所第二小法廷　昭和四十五年七月二十四日　民集二十四巻七号一一一六頁</div>
+      <div class="case-card__title">虚偽表示の善意転得者事件（民法九十四条二項の第三者）</div>
+      <div class="case-card__badges">
+        <span class="badge badge--stars">★★ 重要</span>
+        <span class="badge badge--freq"><span class="material-icons-round">school</span>頻出</span>
+        <span class="badge badge--law">民法94条2項</span>
+        <span class="badge badge--law">第三者</span>
+      </div>
+    </div>
+    <div class="case-card__bd">
+      <h4>事実の概要</h4>
+      <p>不動産の所有者が、真に所有権を移転する意思がないにもかかわらず、他人名義を用いて所有権移転登記を受けるなど、真実と異なる権利外観を作出した。その後、その外観を基礎に取引関係が進み、直接の取引相手が虚偽表示について悪意であった一方、さらにその者から権利を取得した転得者は善意であった。真の権利者は、直接の取得者が悪意であることを理由に、善意の転得者にも虚偽表示の無効を主張できるかが問題となった。</p>
+      <h4>判旨</h4>
+      <p>最高裁は、民法第九十四条第二項の第三者とは、虚偽表示の当事者またはその一般承継人以外の者で、その表示の目的について法律上利害関係を有するに至った者をいうとした。そして、虚偽表示の相手方と直接取引関係に立った者が悪意であっても、その者からの転得者が善意であるときは、その転得者は同項の善意の第三者に当たると判断した。虚偽外観を作出した者の帰責性と、取引過程で現れた善意者の信頼を重視する判断である。</p>
+      <h4>試験上の意義</h4>
+      <p>行政書士試験では、<strong><mark class="kw">民法第九十四条第二項</mark></strong>の「第三者」の範囲がよく問われます。この判例から、悪意の直接取得者からさらに譲り受けた善意転得者も保護され得ることを押さえます。「前者が悪意なら後者が善意でも保護されない」とする選択肢は誤りです。他方で、単なる一般債権者や事実上の利害関係者は当然には第三者に当たりません。法律上の利害関係を新たに独立して取得したかを確認します。</p>
+      <h4>関連判例・条文</h4>
+      <p>関連条文は<strong><mark class="kw">民法第九十四条第二項</mark></strong>です。第三者の定義については、虚偽表示の当事者・一般承継人を除く者で、表示の目的について法律上利害関係を取得した者という判例法理とセットで整理します。善意の意味は、虚偽表示であることを知らないことです。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">07</div>
+    <div>
+      <h2>試験対策ポイント</h2>
+      <p class="sec-head__sub">Examination Points</p>
+    </div>
+  </header>
+
+  <div class="box box--exam">
+    <div class="box__hd"><span class="material-icons-round box__icon">school</span><span class="box__label">頻出テーマ</span></div>
+    <div class="box__bd">
+      <ol>
+        <li><strong><mark class="kw">意思表示</mark></strong>は、動機、効果意思、表示意思、表示行為の流れで整理する。ただし試験では、構成要素名よりも、どの段階の不一致がどの条文に接続するかが問われる。</li>
+        <li><strong><mark class="kw">心裡留保</mark></strong>は原則有効、相手方が悪意または有過失なら無効、善意第三者に対抗不可。</li>
+        <li><strong><mark class="kw">通謀虚偽表示</mark></strong>は当事者間無効、善意第三者に対抗不可。第三者の範囲と転得者保護が頻出。</li>
+        <li><strong><mark class="kw">錯誤</mark></strong>は現行法では取消し。重要性、動機の表示、表意者重過失、第三者の善意無過失を確認する。</li>
+        <li><strong><mark class="kw">代理権濫用</mark></strong>は民法第百七条で明文化され、相手方が濫用目的を知り、または知ることができた場合に無権代理行為とみなされる。</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box box--caution">
+    <div class="box__hd"><span class="material-icons-round box__icon">warning</span><span class="box__label">誤答パターン</span></div>
+    <div class="box__bd">
+      <ul>
+        <li>誤りの選択肢例：「表意者が真意でないことを知って意思表示をした場合、その意思表示は常に無効である。」<br>正しい判断：<strong><mark class="kw">心裡留保</mark></strong>は原則有効です。相手方が悪意または有過失のときだけ無効になります。</li>
+        <li>誤りの選択肢例：「通謀虚偽表示の無効は、善意の第三者にも当然に対抗できる。」<br>正しい判断：<strong><mark class="kw">民法第九十四条第二項</mark></strong>により、善意の第三者には対抗できません。</li>
+        <li>誤りの選択肢例：「錯誤による意思表示は、現行民法でも当然に無効である。」<br>正しい判断：現行法の<strong><mark class="kw">錯誤</mark></strong>は、要件を満たすと取り消すことができるものです。</li>
+        <li>誤りの選択肢例：「動機に錯誤があれば、その動機が相手方に表示されていなくても取り消すことができる。」<br>正しい判断：<strong><mark class="kw">動機の錯誤</mark></strong>は、その事情が法律行為の基礎とされていることが表示されていた場合に限り取消し得ます。</li>
+        <li>誤りの選択肢例：「虚偽表示の直接取得者が悪意なら、その後の善意転得者も保護されない。」<br>正しい判断：判例は、悪意者からの善意転得者も民法第九十四条第二項の善意の第三者に当たり得るとします。</li>
+      </ul>
+    </div>
+  </div>
+
+  <p>解答手順は、まず法律行為・意思表示があるかを確認し、次に内心と表示の不一致があるかを読むことです。不一致がある場合、表意者が知っていたか、相手方と通じていたかで、心裡留保・通謀虚偽表示・錯誤に分けます。そのうえで、相手方の悪意・過失、第三者の善意・無過失、取消権者と期間制限を確認します。問題文に「第三者」「転得者」「登記」「錯誤の基礎事情」「重過失」という語が出たら、単なる当事者間の効力だけでなく、外観信頼の調整まで問われていると考えます。</p>
+  <p>他分野との接点として、<strong><mark class="kw">代理</mark></strong>では民法第百七条の代理権濫用、<strong><mark class="kw">無効と取消し</mark></strong>では取消しの遡及効と追認、<strong><mark class="kw">物権変動</mark></strong>では虚偽表示・不実登記と第三者保護、<strong><mark class="kw">債権法</mark></strong>では契約不適合や解除通知の意思表示が接続します。意思表示は民法総則だけの単独知識ではなく、民法全体を貫く基礎技術として扱います。</p>
+</section>
+
+<section>
+  <header class="sec-head">
+    <div class="sec-head__num">08</div>
+    <div>
+      <h2>補足情報</h2>
+      <p class="sec-head__sub">Supplementary Information</p>
+    </div>
+  </header>
+
+  <h3>民法改正と錯誤規定の整理</h3>
+  <p>平成二十九年民法改正は、錯誤規定を大きく整理しました。旧法では錯誤の効果は無効とされていましたが、現行法では取り消すことができるものとされています。これにより、錯誤による表意者保護は、取消権者、追認、取消しの効果、取消権の期間制限という取消し一般の規律に接続します。試験では、旧法知識のまま「錯誤は無効」と答えないことが重要です。</p>
+
+  <h3>外観信頼と本人の帰責性</h3>
+  <p><strong><mark class="kw">心裡留保</mark></strong>、<strong><mark class="kw">通謀虚偽表示</mark></strong>、<strong><mark class="kw">民法第九十四条第二項類推適用</mark></strong>に共通するのは、外部に作られた表示・登記・権利外観を第三者が信頼した場合に、真の権利者や表意者がどこまで保護されるかという問題です。本人が虚偽外観を作った、承認した、長期間放置した、または利用した事情があるほど、第三者保護は強くなります。反対に、本人の関与が乏しく、第三者側にも調査不足がある場合には、類推適用が制限されることがあります。</p>
+
+  <div class="box box--example">
+    <div class="box__hd"><span class="material-icons-round box__icon">lightbulb</span><span class="box__label">学習整理</span></div>
+    <div class="box__bd">
+      <p>この単元は、条文ごとに結論を暗記するだけでは混乱しやすい分野です。まず「内心と表示が一致しているか」を見ます。次に、不一致を表意者が知っていたか、相手方と通じていたかを確認します。最後に、表示を信じた相手方・第三者を保護すべきかを判断します。この三段階で整理すると、心裡留保、通謀虚偽表示、錯誤、代理権濫用、九十四条二項類推適用が一つの外観信頼の問題としてつながります。</p>
+    </div>
+  </div>
+
+  <p>実務では、契約書の文言、当事者の発言、メール、登記、委任状、印鑑証明書などの外部資料が、内心を推認する材料になります。行政書士試験では実務証拠の細部までは問われませんが、外部に現れた表示を基礎に相手方が行動するという感覚を持つと、第三者保護の結論を理解しやすくなります。復習では、民法第九十三条、第九十四条、第九十五条、第百七条、第百二十条、第百二十一条、第百二十六条を並べて読み、無効、取消し、対抗不可、無権代理みなしを分類してください。</p>
+</section>
+
+</article>
+</body>
+</html>
